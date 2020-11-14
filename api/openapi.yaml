@@ -1,0 +1,234 @@
+openapi: 3.0.1
+info:
+  description: The currency APIs help you retrieve exchange rates and convert prices
+    between currencies easily.
+  title: currencyapi
+  version: v1
+servers:
+- url: https://api.cloudmersive.com/
+paths:
+  /currency/exchange-rates/list-available:
+    post:
+      description: Enumerates available currencies and the countries that correspond
+        to these currencies.
+      operationId: CurrencyExchange_GetAvailableCurrencies
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AvailableCurrencyResponse'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/AvailableCurrencyResponse'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/AvailableCurrencyResponse'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/AvailableCurrencyResponse'
+          description: OK
+      security:
+      - Apikey: []
+      summary: Get a list of available currencies and corresponding countries
+      tags:
+      - CurrencyExchange
+      x-accepts: application/json
+  /currency/exchange-rates/convert/{source}/to/{destination}:
+    post:
+      description: Automatically converts the price in the source currency into the
+        destination currency using the latest available currency exchange rate data.
+      operationId: CurrencyExchange_ConvertCurrency
+      parameters:
+      - description: Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc.
+        in: path
+        name: source
+        required: true
+        schema:
+          type: string
+      - description: Destination currency three-digit code (ISO 4217), e.g. USD, EUR,
+          etc.
+        in: path
+        name: destination
+        required: true
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              format: double
+              type: number
+          text/json:
+            schema:
+              format: double
+              type: number
+        description: Input price, such as 19.99 in source currency
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConvertedCurrencyResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ConvertedCurrencyResult'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ConvertedCurrencyResult'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ConvertedCurrencyResult'
+          description: OK
+      security:
+      - Apikey: []
+      summary: Converts a price from the source currency into the destination currency
+      tags:
+      - CurrencyExchange
+      x-codegen-request-body-name: sourcePrice
+      x-contentType: application/json
+      x-accepts: application/json
+  /currency/exchange-rates/get/{source}/to/{destination}:
+    post:
+      description: Automatically gets the exchange rate from the source currency into
+        the destination currency using the latest available currency exchange rate
+        data.
+      operationId: CurrencyExchange_GetExchangeRate
+      parameters:
+      - description: Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc.
+        in: path
+        name: source
+        required: true
+        schema:
+          type: string
+      - description: Destination currency three-digit code (ISO 4217), e.g. USD, EUR,
+          etc.
+        in: path
+        name: destination
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeRateResult'
+            text/json:
+              schema:
+                $ref: '#/components/schemas/ExchangeRateResult'
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/ExchangeRateResult'
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ExchangeRateResult'
+          description: OK
+      security:
+      - Apikey: []
+      summary: Gets the exchange rate from the source currency into the destination
+        currency
+      tags:
+      - CurrencyExchange
+      x-accepts: application/json
+components:
+  schemas:
+    AvailableCurrencyResponse:
+      description: Result of performing an enumerate currencies operation
+      example:
+        Currencies:
+        - CountryThreeLetterCode: CountryThreeLetterCode
+          ISOCurrencyCode: ISOCurrencyCode
+          CountryName: CountryName
+          CurrencyEnglishName: CurrencyEnglishName
+          CurrencySymbol: CurrencySymbol
+          IsEuropeanUnionMember: true
+          CountryISOTwoLetterCode: CountryISOTwoLetterCode
+        - CountryThreeLetterCode: CountryThreeLetterCode
+          ISOCurrencyCode: ISOCurrencyCode
+          CountryName: CountryName
+          CurrencyEnglishName: CurrencyEnglishName
+          CurrencySymbol: CurrencySymbol
+          IsEuropeanUnionMember: true
+          CountryISOTwoLetterCode: CountryISOTwoLetterCode
+      properties:
+        Currencies:
+          description: List of available currencies from the API
+          items:
+            $ref: '#/components/schemas/AvailableCurrency'
+          type: array
+      type: object
+    AvailableCurrency:
+      description: Details of a specific currency
+      example:
+        CountryThreeLetterCode: CountryThreeLetterCode
+        ISOCurrencyCode: ISOCurrencyCode
+        CountryName: CountryName
+        CurrencyEnglishName: CurrencyEnglishName
+        CurrencySymbol: CurrencySymbol
+        IsEuropeanUnionMember: true
+        CountryISOTwoLetterCode: CountryISOTwoLetterCode
+      properties:
+        ISOCurrencyCode:
+          description: ISO 4217 currency three-letter code associated with the country
+          type: string
+        CurrencySymbol:
+          description: Symbol associated with the currency
+          type: string
+        CurrencyEnglishName:
+          description: Full name of the currency
+          type: string
+        CountryName:
+          description: Name of the country
+          type: string
+        CountryThreeLetterCode:
+          description: Three-letter ISO 3166-1 country code
+          type: string
+        CountryISOTwoLetterCode:
+          description: Two-letter ISO 3166-1 country code
+          type: string
+        IsEuropeanUnionMember:
+          description: True if this country is currently a member of the European
+            Union (EU), false otherwise
+          type: boolean
+      type: object
+    ConvertedCurrencyResult:
+      description: Result of performing a Convert Currency operation
+      example:
+        FormattedPriceAsString: FormattedPriceAsString
+        ISOCurrencyCode: ISOCurrencyCode
+        ConvertedPrice: 0.8008281904610115
+        CurrencySymbol: CurrencySymbol
+      properties:
+        ConvertedPrice:
+          description: The converted price in the destination currency
+          format: double
+          type: number
+        ISOCurrencyCode:
+          description: ISO 4217 currency three-letter code of destination price
+          type: string
+        CurrencySymbol:
+          description: Destination currency symbol
+          type: string
+        FormattedPriceAsString:
+          description: Formatted price in the destination currency as a string
+          type: string
+      type: object
+    ExchangeRateResult:
+      description: Result of performing a get exchange rate operation
+      example:
+        ExchangeRate: 0.8008281904610115
+      properties:
+        ExchangeRate:
+          description: The exchange rate from the source to the destination currency
+          format: double
+          type: number
+      type: object
+  securitySchemes:
+    Apikey:
+      description: API Key Authentication
+      in: header
+      name: Apikey
+      type: apiKey
+

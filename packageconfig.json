@@ -1,0 +1,10 @@
+{
+    "apiPackage": "com.cloudmersive.client",
+    "modelPackage": "com.cloudmersive.client.model",
+    "invokerPackage": "com.cloudmersive.client.invoker",
+    "groupId": "com.cloudmersive",
+    "artifactId": "cloudmersive-java-api-client",
+    "library": "resttemplate",
+    "artifactVersion": "4.0.1",
+    "useAbstractionForFiles": "true"
+}
