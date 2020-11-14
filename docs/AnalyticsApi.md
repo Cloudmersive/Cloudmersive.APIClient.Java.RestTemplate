@@ -24,12 +24,12 @@ Analyze input text using advanced Hate Speech Analysis to determine if the input
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AnalyticsApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AnalyticsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -96,12 +96,12 @@ Analyze input text using advanced Profanity and Obscene Language Analysis to det
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AnalyticsApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AnalyticsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -168,12 +168,12 @@ Analyze input text using advanced Sentiment Analysis to determine if the input i
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AnalyticsApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AnalyticsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -240,12 +240,12 @@ Analyze two input text strings, typically sentences, and determine the semantic 
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AnalyticsApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AnalyticsApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -312,12 +312,12 @@ Analyze input text using advanced Subjectivity and Objectivity Language Analysis
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AnalyticsApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AnalyticsApi;
 
 public class Example {
     public static void main(String[] args) {

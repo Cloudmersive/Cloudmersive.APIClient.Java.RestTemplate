@@ -23,12 +23,12 @@ Automatically detect audio file format and convert it to AAC format. Supports ma
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AudioApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AudioApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -99,12 +99,12 @@ Automatically detect audio file format and convert it to M4A format. Supports ma
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AudioApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AudioApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -175,12 +175,12 @@ Automatically detect audio file format and convert it to MP3 format. Supports ma
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AudioApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AudioApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -251,12 +251,12 @@ Automatically detect audio file format and convert it to WAV format. Supports ma
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.AudioApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.AudioApi;
 
 public class Example {
     public static void main(String[] args) {

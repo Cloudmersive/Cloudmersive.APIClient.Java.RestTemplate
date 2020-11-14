@@ -27,12 +27,12 @@ Generate an English language text description of the image as a sentence.
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -99,12 +99,12 @@ Detect and unskew a photo of a document (e.g. taken on a cell phone) into a perf
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -173,12 +173,12 @@ Identify the position, size and description of objects in an image, along with a
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -245,12 +245,12 @@ Identify the position, and size of human people in an image, along with a recogn
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -317,12 +317,12 @@ Identify the position, and size of small/fine text within a photograph of a docu
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -389,12 +389,12 @@ Identify the position, and size of large text within a photograph.  Identify the
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -461,12 +461,12 @@ Identify the position, and size, and content of vehicle license plates in an ima
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -533,12 +533,12 @@ Determine if an image contains a symbol, and if so, the location of that symbol 
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.RecognizeApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.RecognizeApi;
 
 public class Example {
     public static void main(String[] args) {

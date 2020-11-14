@@ -23,12 +23,12 @@ Get details from an image such as size, format and MIME type, compression, EXIF 
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.ConvertImageApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.ConvertImageApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -95,12 +95,12 @@ Convert between over 100 file formats, including key formats such as Photoshop (
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.ConvertImageApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.ConvertImageApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -171,12 +171,12 @@ Resize an image to have a different DPI
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.ConvertImageApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.ConvertImageApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -245,12 +245,12 @@ Convert between over 100 file formats, including support for Multiple-Page forma
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.ConvertImageApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.ConvertImageApi;
 
 public class Example {
     public static void main(String[] args) {

@@ -26,12 +26,12 @@ Find the faces in an input image, and compare against a reference image to deter
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -100,12 +100,12 @@ Crop an image to the face (rectangular crop).  If there is more than one face pr
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -172,12 +172,12 @@ Crop an image to the face (circular/round crop).  If there is more than one face
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -244,12 +244,12 @@ Identify the age, position, and size of human faces in an image, along with a re
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -316,12 +316,12 @@ Identify the gender, position, and size of human faces in an image, along with a
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -388,12 +388,12 @@ Locate the positions of all faces in an image
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {
@@ -460,12 +460,12 @@ Locate the positions of all faces in an image, along with the eyes, eye brows, n
 
 ```java
 // Import classes:
-import com.cloudmersive.client.invoker.ApiClient;
-import com.cloudmersive.client.invoker.ApiException;
-import com.cloudmersive.client.invoker.Configuration;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.invoker.models.*;
-import com.cloudmersive.client.FaceApi;
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.FaceApi;
 
 public class Example {
     public static void main(String[] args) {

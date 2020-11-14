@@ -1,10 +1,10 @@
-# cloudmersive-java-api-client
+# cloudmersive-java-api-client-rt
 
 currencyapi
 
 - API version: v1
 
-- Build date: 2020-11-14T13:23:41.415-08:00[America/Los_Angeles]
+- Build date: 2020-11-14T13:47:32.732-08:00[America/Los_Angeles]
 
 The currency APIs help you retrieve exchange rates and convert prices between currencies easily.
 
@@ -40,9 +40,9 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.cloudmersive</groupId>
-  <artifactId>cloudmersive-java-api-client</artifactId>
-  <version>4.0.1</version>
+  <groupId>com.cloudmersive.rt</groupId>
+  <artifactId>cloudmersive-java-api-client-rt</artifactId>
+  <version>4.0.2</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.cloudmersive:cloudmersive-java-api-client:4.0.1"
+compile "com.cloudmersive.rt:cloudmersive-java-api-client-rt:4.0.2"
 ```
 
 ### Others
@@ -65,7 +65,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/cloudmersive-java-api-client-4.0.1.jar`
+- `target/cloudmersive-java-api-client-rt-4.0.2.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -74,10 +74,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.cloudmersive.client.invoker.*;
-import com.cloudmersive.client.invoker.auth.*;
-import com.cloudmersive.client.model.*;
-import com.cloudmersive.client.CurrencyExchangeApi;
+import com.cloudmersive.client.rt.invoker.*;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.model.*;
+import com.cloudmersive.client.rt.CurrencyExchangeApi;
 
 public class CurrencyExchangeApiExample {
 

@@ -1,8 +1,8 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
-group = 'com.cloudmersive'
-version = '4.0.1'
+group = 'com.cloudmersive.rt'
+version = '4.0.2'
 
 buildscript {
     repositories {
@@ -84,7 +84,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'cloudmersive-java-api-client'
+            pom.artifactId = 'cloudmersive-java-api-client-rt'
         }
     }
 
