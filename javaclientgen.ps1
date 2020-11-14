@@ -4,7 +4,7 @@ Remove-Item –path ./docs –recurse -force -ErrorAction Ignore
 Remove-Item –path ./gradle –recurse -force -ErrorAction Ignore
 Remove-Item –path ./scripts –recurse -force -ErrorAction Ignore
 Remove-Item –path ./src –recurse -force -ErrorAction Ignore
-$artifact_version = "4.0.1"
+
 & java -jar openapi-generator-cli-5.0.0-beta2.jar generate   -i https://api.cloudmersive.com/validate/docs/v1/swagger  -g java -c packageconfig.json                      -o . --skip-validate-spec 
 & java -jar openapi-generator-cli-5.0.0-beta2.jar generate    -i https://api.cloudmersive.com/nlp-v2/docs/v1/swagger  -g java -c packageconfig.json                      -o . --skip-validate-spec 
 & java -jar openapi-generator-cli-5.0.0-beta2.jar generate  -i https://api.cloudmersive.com/ocr/docs/v1/swagger  -g java -c packageconfig.json                      -o . --skip-validate-spec 
