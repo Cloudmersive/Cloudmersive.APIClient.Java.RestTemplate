@@ -28,7 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.ZipArchiveApi")
 public class ZipArchiveApi {
     private ApiClient apiClient;
@@ -287,6 +287,72 @@ public class ZipArchiveApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Create an encrypted zip file to quarantine a dangerous file
+     * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
+     * <p><b>200</b> - OK
+     * @param password Password to place on the Zip file; the longer the password, the more secure (required)
+     * @param inputFile1 First input file to perform the operation on. (required)
+     * @param encryptionAlgorithm Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)
+     * @return Object
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public Object zipArchiveZipCreateQuarantine(String password, org.springframework.core.io.Resource inputFile1, String encryptionAlgorithm) throws RestClientException {
+        return zipArchiveZipCreateQuarantineWithHttpInfo(password, inputFile1, encryptionAlgorithm).getBody();
+    }
+
+    /**
+     * Create an encrypted zip file to quarantine a dangerous file
+     * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
+     * <p><b>200</b> - OK
+     * @param password Password to place on the Zip file; the longer the password, the more secure (required)
+     * @param inputFile1 First input file to perform the operation on. (required)
+     * @param encryptionAlgorithm Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. (optional)
+     * @return ResponseEntity&lt;Object&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<Object> zipArchiveZipCreateQuarantineWithHttpInfo(String password, org.springframework.core.io.Resource inputFile1, String encryptionAlgorithm) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'password' is set
+        if (password == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'password' when calling zipArchiveZipCreateQuarantine");
+        }
+        
+        // verify the required parameter 'inputFile1' is set
+        if (inputFile1 == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile1' when calling zipArchiveZipCreateQuarantine");
+        }
+        
+        String path = apiClient.expandPath("/convert/archive/zip/create/quarantine", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (password != null)
+        headerParams.add("password", apiClient.parameterToString(password));
+        if (encryptionAlgorithm != null)
+        headerParams.add("encryptionAlgorithm", apiClient.parameterToString(encryptionAlgorithm));
+
+        if (inputFile1 != null)
+            formParams.add("inputFile1", inputFile1);
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**

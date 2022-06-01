@@ -33,7 +33,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.EditPdfApi")
 public class EditPdfApi {
     private ApiClient apiClient;
@@ -770,11 +770,12 @@ public class EditPdfApi {
      * Reduces the file size and optimizes the content of a PDF to minimize its file size.
      * <p><b>200</b> - OK
      * @param inputFile Input file to perform the operation on. (required)
+     * @param quality Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)
      * @return byte[]
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public byte[] editPdfReduceFileSize(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        return editPdfReduceFileSizeWithHttpInfo(inputFile).getBody();
+    public byte[] editPdfReduceFileSize(org.springframework.core.io.Resource inputFile, BigDecimal quality) throws RestClientException {
+        return editPdfReduceFileSizeWithHttpInfo(inputFile, quality).getBody();
     }
 
     /**
@@ -782,10 +783,11 @@ public class EditPdfApi {
      * Reduces the file size and optimizes the content of a PDF to minimize its file size.
      * <p><b>200</b> - OK
      * @param inputFile Input file to perform the operation on. (required)
+     * @param quality Quality level for the images in the PDF, ranging from 0.0 (low quality) to 1.0 (high quality); default is 0.3 (optional)
      * @return ResponseEntity&lt;byte[]&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<byte[]> editPdfReduceFileSizeWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+    public ResponseEntity<byte[]> editPdfReduceFileSizeWithHttpInfo(org.springframework.core.io.Resource inputFile, BigDecimal quality) throws RestClientException {
         Object postBody = null;
         
         // verify the required parameter 'inputFile' is set
@@ -799,6 +801,9 @@ public class EditPdfApi {
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (quality != null)
+        headerParams.add("quality", apiClient.parameterToString(quality));
 
         if (inputFile != null)
             formParams.add("inputFile", inputFile);

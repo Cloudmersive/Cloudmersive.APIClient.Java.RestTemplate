@@ -16,6 +16,8 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.AutodetectDocumentValidationResult;
 import com.cloudmersive.client.rt.model.DocumentValidationResult;
 import java.io.File;
+import com.cloudmersive.client.rt.model.HtmlSsrfThreatCheckResult;
+import com.cloudmersive.client.rt.model.XxeThreatDetectionResult;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -61,6 +63,22 @@ public class ValidateDocumentApiTest {
     public void validateDocumentCsvValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
         DocumentValidationResult response = api.validateDocumentCsvValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate a Word 97-2003 Legacy document (DOC)
+     *
+     * Validate a Word 97-2003 Legacy document (DOC)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentDocValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentDocValidation(inputFile);
 
         // TODO: test validations
     }
@@ -130,6 +148,22 @@ public class ValidateDocumentApiTest {
     }
     
     /**
+     * Validate an HTML file and checks for SSRF threats
+     *
+     * Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentHtmlSsrfValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        HtmlSsrfThreatCheckResult response = api.validateDocumentHtmlSsrfValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Validate an HTML file
      *
      * Validate an HTML document file; if the document is not valid, identifies the errors in the document
@@ -157,6 +191,22 @@ public class ValidateDocumentApiTest {
     public void validateDocumentImageValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
         DocumentValidationResult response = api.validateDocumentImageValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate a JPG File
+     *
+     * Validate a JPEG image file; if the document is not valid, identifies the errors in the document..
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentJpgValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentJpgValidation(inputFile);
 
         // TODO: test validations
     }
@@ -210,6 +260,38 @@ public class ValidateDocumentApiTest {
     }
     
     /**
+     * Validate a PNG File
+     *
+     * Validate a PNG image file; if the document is not valid, identifies the errors in the document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentPngValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentPngValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+     *
+     * Validate a PowerPoint 97-2003 Legacy presentation (PPT)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentPptValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentPptValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Validate a PowerPoint presentation (PPTX)
      *
      * Validate a PowerPoint presentation (PPTX); if the document is not valid, identifies the errors in the document
@@ -242,6 +324,22 @@ public class ValidateDocumentApiTest {
     }
     
     /**
+     * Validate a Rich Text Format document (RTF)
+     *
+     * Validate a Rich Text Format document (RTF)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentRtfValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentRtfValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Validate a TAR Tarball Archive file (TAR)
      *
      * Validate a TAR tarball archive file (TAR)
@@ -253,6 +351,38 @@ public class ValidateDocumentApiTest {
     public void validateDocumentTarValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
         DocumentValidationResult response = api.validateDocumentTarValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate an TXT file
+     *
+     * Validate an TXT document file; if the document is not valid, identifies the errors in the document
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentTxtValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentTxtValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+     *
+     * Validate a Excel 97-2003 Legacy spreadsheet (XLS)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentXlsValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentValidationResult response = api.validateDocumentXlsValidation(inputFile);
 
         // TODO: test validations
     }
@@ -285,6 +415,22 @@ public class ValidateDocumentApiTest {
     public void validateDocumentXmlValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
         DocumentValidationResult response = api.validateDocumentXmlValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate an XML file for XML External Entity (XXE) threats
+     *
+     * Validate an XML document file for XML External Entity (XXE) threats; if the document is not valid, identifies the errors in the document.  XXE threats are a type of threat that exploits vulnerabilities in the XML standard relating to external or local entity URIs in XML documents.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void validateDocumentXmlXxeThreatValidationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        XxeThreatDetectionResult response = api.validateDocumentXmlXxeThreatValidation(inputFile);
 
         // TODO: test validations
     }

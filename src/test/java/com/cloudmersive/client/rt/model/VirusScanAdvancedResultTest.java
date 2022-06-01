@@ -13,6 +13,7 @@
 
 package com.cloudmersive.client.rt.model;
 
+import com.cloudmersive.client.rt.model.AdditionalAdvancedScanInformation;
 import com.cloudmersive.client.rt.model.VirusFound;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -91,6 +92,38 @@ public class VirusScanAdvancedResultTest {
     }
 
     /**
+     * Test the property 'containsMacros'
+     */
+    @Test
+    public void containsMacrosTest() {
+        // TODO: test containsMacros
+    }
+
+    /**
+     * Test the property 'containsXmlExternalEntities'
+     */
+    @Test
+    public void containsXmlExternalEntitiesTest() {
+        // TODO: test containsXmlExternalEntities
+    }
+
+    /**
+     * Test the property 'containsInsecureDeserialization'
+     */
+    @Test
+    public void containsInsecureDeserializationTest() {
+        // TODO: test containsInsecureDeserialization
+    }
+
+    /**
+     * Test the property 'containsHtml'
+     */
+    @Test
+    public void containsHtmlTest() {
+        // TODO: test containsHtml
+    }
+
+    /**
      * Test the property 'verifiedFileFormat'
      */
     @Test
@@ -104,6 +137,14 @@ public class VirusScanAdvancedResultTest {
     @Test
     public void foundVirusesTest() {
         // TODO: test foundViruses
+    }
+
+    /**
+     * Test the property 'contentInformation'
+     */
+    @Test
+    public void contentInformationTest() {
+        // TODO: test contentInformation
     }
 
 }

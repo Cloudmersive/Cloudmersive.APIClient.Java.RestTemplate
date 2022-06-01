@@ -55,4 +55,12 @@ public class ValidateUrlResponseSyntaxOnlyTest {
         // TODO: test wellFormedURL
     }
 
+    /**
+     * Test the property 'topLevelDomainName'
+     */
+    @Test
+    public void topLevelDomainNameTest() {
+        // TODO: test topLevelDomainName
+    }
+
 }

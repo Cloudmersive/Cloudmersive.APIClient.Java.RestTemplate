@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxTemplateOperation.JSON_PROPERTY_REPLACE_WITH
 })
 @JsonTypeName("DocxTemplateOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 public class DocxTemplateOperation {
   /**
    * Operation action to take; possible values are \&quot;Replace\&quot;

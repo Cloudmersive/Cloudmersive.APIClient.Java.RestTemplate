@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   PdfFormField.JSON_PROPERTY_FIELD_COMBO_BOX_SELECTED_INDEX
 })
 @JsonTypeName("PdfFormField")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 public class PdfFormField {
   public static final String JSON_PROPERTY_FIELD_NAME = "FieldName";
   private String fieldName;

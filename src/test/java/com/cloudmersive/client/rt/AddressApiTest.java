@@ -16,6 +16,7 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.CountryListResult;
 import com.cloudmersive.client.rt.model.GetTimezonesRequest;
 import com.cloudmersive.client.rt.model.GetTimezonesResponse;
+import com.cloudmersive.client.rt.model.NormalizeAddressResponse;
 import com.cloudmersive.client.rt.model.ParseAddressRequest;
 import com.cloudmersive.client.rt.model.ParseAddressResponse;
 import com.cloudmersive.client.rt.model.ReverseGeocodeAddressRequest;
@@ -154,6 +155,22 @@ public class AddressApiTest {
     public void addressGetTimezoneTest() {
         GetTimezonesRequest input = null;
         GetTimezonesResponse response = api.addressGetTimezone(input);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Normalize a street address
+     *
+     * Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void addressNormalizeAddressTest() {
+        ValidateAddressRequest input = null;
+        NormalizeAddressResponse response = api.addressNormalizeAddress(input);
 
         // TODO: test validations
     }

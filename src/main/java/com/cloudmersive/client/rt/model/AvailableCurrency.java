@@ -38,7 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   AvailableCurrency.JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER
 })
 @JsonTypeName("AvailableCurrency")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:32.732-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
 public class AvailableCurrency {
   public static final String JSON_PROPERTY_IS_O_CURRENCY_CODE = "ISOCurrencyCode";
   private String isOCurrencyCode;

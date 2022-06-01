@@ -27,7 +27,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:32.732-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.CurrencyExchangeApi")
 public class CurrencyExchangeApi {
     private ApiClient apiClient;

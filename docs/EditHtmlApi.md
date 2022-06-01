@@ -4,12 +4,96 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**editHtmlHtmlAppendHeaderTag**](EditHtmlApi.md#editHtmlHtmlAppendHeaderTag) | **POST** /convert/edit/html/head/append/tag | Append an HTML tag to the HEAD section of an HTML Document
 [**editHtmlHtmlAppendHeading**](EditHtmlApi.md#editHtmlHtmlAppendHeading) | **POST** /convert/edit/html/append/heading | Append a Heading to an HTML Document
 [**editHtmlHtmlAppendImageFromUrl**](EditHtmlApi.md#editHtmlHtmlAppendImageFromUrl) | **POST** /convert/edit/html/append/image/from-url | Append an Image to an HTML Document from a URL
 [**editHtmlHtmlAppendImageInline**](EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
 [**editHtmlHtmlAppendParagraph**](EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
 [**editHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
+[**editHtmlHtmlGetLanguage**](EditHtmlApi.md#editHtmlHtmlGetLanguage) | **POST** /convert/edit/html/head/get/language | Gets the language for the HTML document
+[**editHtmlHtmlGetLinks**](EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
+[**editHtmlHtmlGetRelCanonical**](EditHtmlApi.md#editHtmlHtmlGetRelCanonical) | **POST** /convert/edit/html/head/get/rel-canonical-url | Gets the rel canonical URL for the HTML document
+[**editHtmlHtmlGetSitemap**](EditHtmlApi.md#editHtmlHtmlGetSitemap) | **POST** /convert/edit/html/head/get/sitemap-url | Gets the sitemap URL for the HTML document
+[**editHtmlHtmlSetLanguage**](EditHtmlApi.md#editHtmlHtmlSetLanguage) | **POST** /convert/edit/html/head/set/language | Sets the language for the HTML document
+[**editHtmlHtmlSetRelCanonical**](EditHtmlApi.md#editHtmlHtmlSetRelCanonical) | **POST** /convert/edit/html/head/set/rel-canonical-url | Sets the rel canonical URL for the HTML document
+[**editHtmlHtmlSetSitemapUrl**](EditHtmlApi.md#editHtmlHtmlSetSitemapUrl) | **POST** /convert/edit/html/head/set/sitemap-url | Sets the sitemap URL for the HTML document
 
+
+
+## editHtmlHtmlAppendHeaderTag
+
+> byte[] editHtmlHtmlAppendHeaderTag(htmlTag, inputFileUrl, inputFile)
+
+Append an HTML tag to the HEAD section of an HTML Document
+
+Appends an HTML tag to the HEAD section of an HTML document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String htmlTag = "htmlTag_example"; // String | The HTML tag to append.
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            byte[] result = apiInstance.editHtmlHtmlAppendHeaderTag(htmlTag, inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlAppendHeaderTag");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **htmlTag** | **String**| The HTML tag to append. |
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 
 ## editHtmlHtmlAppendHeading
@@ -402,6 +486,532 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlGetLanguage
+
+> HtmlGetLanguageResult editHtmlHtmlGetLanguage(inputFileUrl, inputFile)
+
+Gets the language for the HTML document
+
+Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            HtmlGetLanguageResult result = apiInstance.editHtmlHtmlGetLanguage(inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlGetLanguage");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+[**HtmlGetLanguageResult**](HtmlGetLanguageResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlGetLinks
+
+> HtmlGetLinksResponse editHtmlHtmlGetLinks(inputFileUrl, baseUrl, inputFile)
+
+Extract resolved link URLs from HTML File
+
+Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        String baseUrl = "baseUrl_example"; // String | Optional: Base URL of the page, such as https://mydomain.com
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            HtmlGetLinksResponse result = apiInstance.editHtmlHtmlGetLinks(inputFileUrl, baseUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlGetLinks");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **baseUrl** | **String**| Optional: Base URL of the page, such as https://mydomain.com | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+[**HtmlGetLinksResponse**](HtmlGetLinksResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlGetRelCanonical
+
+> HtmlGetRelCanonicalUrlResult editHtmlHtmlGetRelCanonical(inputFileUrl, inputFile)
+
+Gets the rel canonical URL for the HTML document
+
+Gets the rel canonical URL of an HTML document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            HtmlGetRelCanonicalUrlResult result = apiInstance.editHtmlHtmlGetRelCanonical(inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlGetRelCanonical");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+[**HtmlGetRelCanonicalUrlResult**](HtmlGetRelCanonicalUrlResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlGetSitemap
+
+> HtmlGetSitemapUrlResult editHtmlHtmlGetSitemap(inputFileUrl, inputFile)
+
+Gets the sitemap URL for the HTML document
+
+Gets the sitemap link URL of an HTML document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            HtmlGetSitemapUrlResult result = apiInstance.editHtmlHtmlGetSitemap(inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlGetSitemap");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+[**HtmlGetSitemapUrlResult**](HtmlGetSitemapUrlResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlSetLanguage
+
+> byte[] editHtmlHtmlSetLanguage(languageCode, inputFileUrl, inputFile)
+
+Sets the language for the HTML document
+
+Sets the language code of an HTML document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String languageCode = "languageCode_example"; // String | The HTML langauge code to set.
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            byte[] result = apiInstance.editHtmlHtmlSetLanguage(languageCode, inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlSetLanguage");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **languageCode** | **String**| The HTML langauge code to set. |
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlSetRelCanonical
+
+> byte[] editHtmlHtmlSetRelCanonical(canonicalUrl, inputFileUrl, inputFile)
+
+Sets the rel canonical URL for the HTML document
+
+Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String canonicalUrl = "canonicalUrl_example"; // String | The HTML canonical URL to set.
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            byte[] result = apiInstance.editHtmlHtmlSetRelCanonical(canonicalUrl, inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlSetRelCanonical");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **canonicalUrl** | **String**| The HTML canonical URL to set. |
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## editHtmlHtmlSetSitemapUrl
+
+> byte[] editHtmlHtmlSetSitemapUrl(sitemapUrl, inputFileUrl, inputFile)
+
+Sets the sitemap URL for the HTML document
+
+Sets the sitemap URL of an HTML document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.EditHtmlApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        EditHtmlApi apiInstance = new EditHtmlApi(defaultClient);
+        String sitemapUrl = "sitemapUrl_example"; // String | The HTML sitemap URL to set.
+        String inputFileUrl = "inputFileUrl_example"; // String | Optional: URL of a file to operate on as input.
+        File inputFile = new File("/path/to/file"); // File | Optional: Input file to perform the operation on.
+        try {
+            byte[] result = apiInstance.editHtmlHtmlSetSitemapUrl(sitemapUrl, inputFileUrl, inputFile);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling EditHtmlApi#editHtmlHtmlSetSitemapUrl");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **sitemapUrl** | **String**| The HTML sitemap URL to set. |
+ **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
+ **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
 
 ### HTTP response details

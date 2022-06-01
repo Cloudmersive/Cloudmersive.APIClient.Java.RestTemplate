@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   RemoveHtmlFromTextRequest.JSON_PROPERTY_TEXT_CONTAINING_HTML
 })
 @JsonTypeName("RemoveHtmlFromTextRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 public class RemoveHtmlFromTextRequest {
   public static final String JSON_PROPERTY_TEXT_CONTAINING_HTML = "TextContainingHtml";
   private String textContainingHtml;

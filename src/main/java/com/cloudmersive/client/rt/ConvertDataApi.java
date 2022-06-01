@@ -34,7 +34,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.ConvertDataApi")
 public class ConvertDataApi {
     private ApiClient apiClient;
@@ -171,10 +171,59 @@ public class ConvertDataApi {
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
-     * Convert JSON to XML conversion
+     * Convert JSON String to XML conversion
      * Convert a JSON object into XML
      * <p><b>200</b> - OK
-     * @param jsonObject Input JSON to convert to XML (required)
+     * @param jsonString Input JSON String to convert to XML (required)
+     * @return Object
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public Object convertDataJsonStringToXml(String jsonString) throws RestClientException {
+        return convertDataJsonStringToXmlWithHttpInfo(jsonString).getBody();
+    }
+
+    /**
+     * Convert JSON String to XML conversion
+     * Convert a JSON object into XML
+     * <p><b>200</b> - OK
+     * @param jsonString Input JSON String to convert to XML (required)
+     * @return ResponseEntity&lt;Object&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<Object> convertDataJsonStringToXmlWithHttpInfo(String jsonString) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'jsonString' is set
+        if (jsonString == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'jsonString' when calling convertDataJsonStringToXml");
+        }
+        
+        String path = apiClient.expandPath("/convert/json-string/to/xml", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "JsonString", jsonString));
+
+        final String[] localVarAccepts = { 
+            "application/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = {  };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Convert JSON Object to XML conversion
+     * Convert a JSON object into XML
+     * <p><b>200</b> - OK
+     * @param jsonObject Input JSON Object to convert to XML (required)
      * @return byte[]
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
@@ -183,10 +232,10 @@ public class ConvertDataApi {
     }
 
     /**
-     * Convert JSON to XML conversion
+     * Convert JSON Object to XML conversion
      * Convert a JSON object into XML
      * <p><b>200</b> - OK
-     * @param jsonObject Input JSON to convert to XML (required)
+     * @param jsonObject Input JSON Object to convert to XML (required)
      * @return ResponseEntity&lt;byte[]&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */

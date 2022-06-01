@@ -31,14 +31,17 @@ import com.cloudmersive.client.rt.model.DeleteDocxTableRowRequest;
 import com.cloudmersive.client.rt.model.DeleteDocxTableRowResponse;
 import com.cloudmersive.client.rt.model.DisableSharedWorkbookRequest;
 import com.cloudmersive.client.rt.model.DisableSharedWorkbookResponse;
+import com.cloudmersive.client.rt.model.DocumentEditingEditSession;
 import com.cloudmersive.client.rt.model.DocxInsertCommentOnParagraphRequest;
 import com.cloudmersive.client.rt.model.DocxInsertImageRequest;
 import com.cloudmersive.client.rt.model.DocxInsertImageResponse;
 import com.cloudmersive.client.rt.model.DocxRemoveObjectRequest;
 import com.cloudmersive.client.rt.model.DocxRemoveObjectResponse;
+import com.cloudmersive.client.rt.model.DocxSetCustomMetadataPropertiesRequest;
 import com.cloudmersive.client.rt.model.DocxSetFooterAddPageNumberRequest;
 import com.cloudmersive.client.rt.model.DocxSetFooterRequest;
 import com.cloudmersive.client.rt.model.DocxSetFooterResponse;
+import com.cloudmersive.client.rt.model.DocxSetFormFieldsRequest;
 import com.cloudmersive.client.rt.model.DocxSetHeaderRequest;
 import com.cloudmersive.client.rt.model.DocxSetHeaderResponse;
 import com.cloudmersive.client.rt.model.EnableSharedWorkbookRequest;
@@ -51,12 +54,15 @@ import com.cloudmersive.client.rt.model.GetDocxBodyRequest;
 import com.cloudmersive.client.rt.model.GetDocxBodyResponse;
 import com.cloudmersive.client.rt.model.GetDocxCommentsHierarchicalResponse;
 import com.cloudmersive.client.rt.model.GetDocxCommentsResponse;
+import com.cloudmersive.client.rt.model.GetDocxContentControlsResponse;
 import com.cloudmersive.client.rt.model.GetDocxGetCommentsHierarchicalRequest;
 import com.cloudmersive.client.rt.model.GetDocxGetCommentsRequest;
+import com.cloudmersive.client.rt.model.GetDocxGetFormFieldsResponse;
 import com.cloudmersive.client.rt.model.GetDocxHeadersAndFootersRequest;
 import com.cloudmersive.client.rt.model.GetDocxHeadersAndFootersResponse;
 import com.cloudmersive.client.rt.model.GetDocxImagesRequest;
 import com.cloudmersive.client.rt.model.GetDocxImagesResponse;
+import com.cloudmersive.client.rt.model.GetDocxMetadataPropertiesResponse;
 import com.cloudmersive.client.rt.model.GetDocxPagesRequest;
 import com.cloudmersive.client.rt.model.GetDocxPagesResponse;
 import com.cloudmersive.client.rt.model.GetDocxSectionsRequest;
@@ -69,6 +75,7 @@ import com.cloudmersive.client.rt.model.GetDocxTableRowRequest;
 import com.cloudmersive.client.rt.model.GetDocxTableRowResponse;
 import com.cloudmersive.client.rt.model.GetDocxTablesRequest;
 import com.cloudmersive.client.rt.model.GetDocxTablesResponse;
+import com.cloudmersive.client.rt.model.GetMacrosResponse;
 import com.cloudmersive.client.rt.model.GetXlsxCellByIdentifierRequest;
 import com.cloudmersive.client.rt.model.GetXlsxCellByIdentifierResponse;
 import com.cloudmersive.client.rt.model.GetXlsxCellRequest;
@@ -323,6 +330,38 @@ public class EditDocumentApiTest {
     }
     
     /**
+     * Get all content controls (form fields) and values in a Word DOCX document
+     *
+     * Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxGetContentControlsTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        GetDocxContentControlsResponse response = api.editDocumentDocxGetContentControls(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all form fields in a Word DOCX document
+     *
+     * Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxGetFormFieldsTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        GetDocxGetFormFieldsResponse response = api.editDocumentDocxGetFormFields(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get content of a footer from a Word DOCX document
      *
      * Returns the footer content from a Word Document (DOCX) format file
@@ -350,6 +389,38 @@ public class EditDocumentApiTest {
     public void editDocumentDocxGetImagesTest() {
         GetDocxImagesRequest reqConfig = null;
         GetDocxImagesResponse response = api.editDocumentDocxGetImages(reqConfig);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get macro information from a Word DOCX/DOCM document
+     *
+     * Returns information about the Macros (e.g. VBA) defined in the Word Document
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxGetMacroInformationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        GetMacrosResponse response = api.editDocumentDocxGetMacroInformation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get all metadata properties in Word DOCX document
+     *
+     * Returns all the metadata properties in an Office Word Document (docx)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxGetMetadataPropertiesTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        GetDocxMetadataPropertiesResponse response = api.editDocumentDocxGetMetadataProperties(inputFile);
 
         // TODO: test validations
     }
@@ -595,7 +666,7 @@ public class EditDocumentApiTest {
     }
     
     /**
-     * Replace multiple strings in Word DOCX document
+     * Replace multiple strings in Word DOCX document, return result
      *
      * Replace all instances of multiple strings in an Office Word Document (docx)
      *
@@ -606,6 +677,22 @@ public class EditDocumentApiTest {
     public void editDocumentDocxReplaceMultiTest() {
         MultiReplaceStringRequest reqConfig = null;
         byte[] response = api.editDocumentDocxReplaceMulti(reqConfig);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Replace multiple strings in Word DOCX document, return edit session
+     *
+     * Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxReplaceMultiEditSessionTest() {
+        MultiReplaceStringRequest reqConfig = null;
+        DocumentEditingEditSession response = api.editDocumentDocxReplaceMultiEditSession(reqConfig);
 
         // TODO: test validations
     }
@@ -622,6 +709,22 @@ public class EditDocumentApiTest {
     public void editDocumentDocxReplaceParagraphTest() {
         ReplaceDocxParagraphRequest reqConfig = null;
         ReplaceDocxParagraphResponse response = api.editDocumentDocxReplaceParagraph(reqConfig);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set custom property metadata properties in Word DOCX document
+     *
+     * Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxSetCustomMetadataPropertiesTest() {
+        DocxSetCustomMetadataPropertiesRequest input = null;
+        byte[] response = api.editDocumentDocxSetCustomMetadataProperties(input);
 
         // TODO: test validations
     }
@@ -654,6 +757,22 @@ public class EditDocumentApiTest {
     public void editDocumentDocxSetFooterAddPageNumberTest() {
         DocxSetFooterAddPageNumberRequest reqConfig = null;
         DocxSetFooterResponse response = api.editDocumentDocxSetFooterAddPageNumber(reqConfig);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set and fill values for form fields in a Word DOCX document
+     *
+     * Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentDocxSetFormFieldsTest() {
+        DocxSetFormFieldsRequest reqConfig = null;
+        byte[] response = api.editDocumentDocxSetFormFields(reqConfig);
 
         // TODO: test validations
     }
@@ -734,6 +853,22 @@ public class EditDocumentApiTest {
     public void editDocumentPptxDeleteSlidesTest() {
         RemovePptxSlidesRequest reqConfig = null;
         byte[] response = api.editDocumentPptxDeleteSlides(reqConfig);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get macro information from a PowerPoint PPTX/PPTM presentation document
+     *
+     * Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentPptxGetMacroInformationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        GetMacrosResponse response = api.editDocumentPptxGetMacroInformation(inputFile);
 
         // TODO: test validations
     }
@@ -942,6 +1077,22 @@ public class EditDocumentApiTest {
     public void editDocumentXlsxGetImagesTest() {
         GetXlsxImagesRequest input = null;
         GetXlsxImagesResponse response = api.editDocumentXlsxGetImages(input);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+     *
+     * Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editDocumentXlsxGetMacroInformationTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        GetMacrosResponse response = api.editDocumentXlsxGetMacroInformation(inputFile);
 
         // TODO: test validations
     }

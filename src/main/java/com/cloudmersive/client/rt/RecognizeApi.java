@@ -6,6 +6,9 @@ import java.io.File;
 import com.cloudmersive.client.rt.model.FindSymbolResult;
 import com.cloudmersive.client.rt.model.FineTextDetectionResult;
 import com.cloudmersive.client.rt.model.ImageDescriptionResponse;
+import com.cloudmersive.client.rt.model.ImageSimilarityHashDistanceRequest;
+import com.cloudmersive.client.rt.model.ImageSimilarityHashDistanceResponse;
+import com.cloudmersive.client.rt.model.ImageSimilarityHashResponse;
 import com.cloudmersive.client.rt.model.ObjectDetectionResult;
 import com.cloudmersive.client.rt.model.TextDetectionResult;
 import com.cloudmersive.client.rt.model.VehicleLicensePlateDetectionResult;
@@ -31,7 +34,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:16.765-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.RecognizeApi")
 public class RecognizeApi {
     private ApiClient apiClient;
@@ -481,6 +484,178 @@ public class RecognizeApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<FindSymbolResult> returnType = new ParameterizedTypeReference<FindSymbolResult>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Compare two images for similarity
+     * Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+     * <p><b>200</b> - OK
+     * @param baseImage Image file to compare against.  Common file formats such as PNG, JPEG are supported. (required)
+     * @param comparisonImage Image to compare to the base image. (required)
+     * @param recognitionMode Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] recognizeSimilarityCompare(org.springframework.core.io.Resource baseImage, org.springframework.core.io.Resource comparisonImage, String recognitionMode) throws RestClientException {
+        return recognizeSimilarityCompareWithHttpInfo(baseImage, comparisonImage, recognitionMode).getBody();
+    }
+
+    /**
+     * Compare two images for similarity
+     * Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+     * <p><b>200</b> - OK
+     * @param baseImage Image file to compare against.  Common file formats such as PNG, JPEG are supported. (required)
+     * @param comparisonImage Image to compare to the base image. (required)
+     * @param recognitionMode Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> recognizeSimilarityCompareWithHttpInfo(org.springframework.core.io.Resource baseImage, org.springframework.core.io.Resource comparisonImage, String recognitionMode) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'baseImage' is set
+        if (baseImage == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'baseImage' when calling recognizeSimilarityCompare");
+        }
+        
+        // verify the required parameter 'comparisonImage' is set
+        if (comparisonImage == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'comparisonImage' when calling recognizeSimilarityCompare");
+        }
+        
+        String path = apiClient.expandPath("/image/recognize/similarity/compare", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (recognitionMode != null)
+        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+
+        if (baseImage != null)
+            formParams.add("baseImage", baseImage);
+        if (comparisonImage != null)
+            formParams.add("comparisonImage", comparisonImage);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Generate a perceptual image hash
+     * Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+     * <p><b>200</b> - OK
+     * @param imageFile Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
+     * @param recognitionMode Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)
+     * @return ImageSimilarityHashResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ImageSimilarityHashResponse recognizeSimilarityHash(org.springframework.core.io.Resource imageFile, String recognitionMode) throws RestClientException {
+        return recognizeSimilarityHashWithHttpInfo(imageFile, recognitionMode).getBody();
+    }
+
+    /**
+     * Generate a perceptual image hash
+     * Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+     * <p><b>200</b> - OK
+     * @param imageFile Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
+     * @param recognitionMode Optional, specify the recognition mode; possible values are Normal, Basic and Advanced.  Default is Normal. (optional)
+     * @return ResponseEntity&lt;ImageSimilarityHashResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<ImageSimilarityHashResponse> recognizeSimilarityHashWithHttpInfo(org.springframework.core.io.Resource imageFile, String recognitionMode) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'imageFile' is set
+        if (imageFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling recognizeSimilarityHash");
+        }
+        
+        String path = apiClient.expandPath("/image/recognize/similarity/hash", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (recognitionMode != null)
+        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+
+        if (imageFile != null)
+            formParams.add("imageFile", imageFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<ImageSimilarityHashResponse> returnType = new ParameterizedTypeReference<ImageSimilarityHashResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Calculates the similarity between two perceptual image hashes
+     * Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+     * <p><b>200</b> - OK
+     * @param request  (required)
+     * @return ImageSimilarityHashDistanceResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ImageSimilarityHashDistanceResponse recognizeSimilarityHashDistance(ImageSimilarityHashDistanceRequest request) throws RestClientException {
+        return recognizeSimilarityHashDistanceWithHttpInfo(request).getBody();
+    }
+
+    /**
+     * Calculates the similarity between two perceptual image hashes
+     * Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+     * <p><b>200</b> - OK
+     * @param request  (required)
+     * @return ResponseEntity&lt;ImageSimilarityHashDistanceResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<ImageSimilarityHashDistanceResponse> recognizeSimilarityHashDistanceWithHttpInfo(ImageSimilarityHashDistanceRequest request) throws RestClientException {
+        Object postBody = request;
+        
+        // verify the required parameter 'request' is set
+        if (request == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling recognizeSimilarityHashDistance");
+        }
+        
+        String path = apiClient.expandPath("/image/recognize/similarity/hash/distance", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<ImageSimilarityHashDistanceResponse> returnType = new ParameterizedTypeReference<ImageSimilarityHashDistanceResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
 }

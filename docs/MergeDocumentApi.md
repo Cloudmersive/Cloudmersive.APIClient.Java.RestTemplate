@@ -6,6 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**mergeDocumentDocx**](MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
 [**mergeDocumentDocxMulti**](MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
+[**mergeDocumentHtml**](MergeDocumentApi.md#mergeDocumentHtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together
+[**mergeDocumentHtmlMulti**](MergeDocumentApi.md#mergeDocumentHtmlMulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together
 [**mergeDocumentPdf**](MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
 [**mergeDocumentPdfMulti**](MergeDocumentApi.md#mergeDocumentPdfMulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
 [**mergeDocumentPng**](MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
@@ -139,6 +141,170 @@ public class Example {
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling MergeDocumentApi#mergeDocumentDocxMulti");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input file to perform the operation on. |
+ **inputFile2** | **File**| Second input file to perform the operation on. |
+ **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
+ **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
+ **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
+ **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
+ **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
+ **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
+ **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
+ **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/octet-stream
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentHtml
+
+> byte[] mergeDocumentHtml(inputFile1, inputFile2)
+
+Merge Two HTML (HTM) Files Together
+
+Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        File inputFile1 = new File("/path/to/file"); // File | First input file to perform the operation on.
+        File inputFile2 = new File("/path/to/file"); // File | Second input file to perform the operation on (more than 2 can be supplied).
+        try {
+            byte[] result = apiInstance.mergeDocumentHtml(inputFile1, inputFile2);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentHtml");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **inputFile1** | **File**| First input file to perform the operation on. |
+ **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+
+### Return type
+
+**byte[]**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: multipart/form-data
+- **Accept**: application/octet-stream
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentHtmlMulti
+
+> byte[] mergeDocumentHtmlMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10)
+
+Merge Multple HTML (HTM) Files Together
+
+Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        File inputFile1 = new File("/path/to/file"); // File | First input file to perform the operation on.
+        File inputFile2 = new File("/path/to/file"); // File | Second input file to perform the operation on.
+        File inputFile3 = new File("/path/to/file"); // File | Third input file to perform the operation on.
+        File inputFile4 = new File("/path/to/file"); // File | Fourth input file to perform the operation on.
+        File inputFile5 = new File("/path/to/file"); // File | Fifth input file to perform the operation on.
+        File inputFile6 = new File("/path/to/file"); // File | Sixth input file to perform the operation on.
+        File inputFile7 = new File("/path/to/file"); // File | Seventh input file to perform the operation on.
+        File inputFile8 = new File("/path/to/file"); // File | Eighth input file to perform the operation on.
+        File inputFile9 = new File("/path/to/file"); // File | Ninth input file to perform the operation on.
+        File inputFile10 = new File("/path/to/file"); // File | Tenth input file to perform the operation on.
+        try {
+            byte[] result = apiInstance.mergeDocumentHtmlMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentHtmlMulti");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());

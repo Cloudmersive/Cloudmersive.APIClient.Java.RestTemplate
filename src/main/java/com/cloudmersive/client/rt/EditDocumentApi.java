@@ -20,14 +20,17 @@ import com.cloudmersive.client.rt.model.DeleteDocxTableRowRequest;
 import com.cloudmersive.client.rt.model.DeleteDocxTableRowResponse;
 import com.cloudmersive.client.rt.model.DisableSharedWorkbookRequest;
 import com.cloudmersive.client.rt.model.DisableSharedWorkbookResponse;
+import com.cloudmersive.client.rt.model.DocumentEditingEditSession;
 import com.cloudmersive.client.rt.model.DocxInsertCommentOnParagraphRequest;
 import com.cloudmersive.client.rt.model.DocxInsertImageRequest;
 import com.cloudmersive.client.rt.model.DocxInsertImageResponse;
 import com.cloudmersive.client.rt.model.DocxRemoveObjectRequest;
 import com.cloudmersive.client.rt.model.DocxRemoveObjectResponse;
+import com.cloudmersive.client.rt.model.DocxSetCustomMetadataPropertiesRequest;
 import com.cloudmersive.client.rt.model.DocxSetFooterAddPageNumberRequest;
 import com.cloudmersive.client.rt.model.DocxSetFooterRequest;
 import com.cloudmersive.client.rt.model.DocxSetFooterResponse;
+import com.cloudmersive.client.rt.model.DocxSetFormFieldsRequest;
 import com.cloudmersive.client.rt.model.DocxSetHeaderRequest;
 import com.cloudmersive.client.rt.model.DocxSetHeaderResponse;
 import com.cloudmersive.client.rt.model.EnableSharedWorkbookRequest;
@@ -40,12 +43,15 @@ import com.cloudmersive.client.rt.model.GetDocxBodyRequest;
 import com.cloudmersive.client.rt.model.GetDocxBodyResponse;
 import com.cloudmersive.client.rt.model.GetDocxCommentsHierarchicalResponse;
 import com.cloudmersive.client.rt.model.GetDocxCommentsResponse;
+import com.cloudmersive.client.rt.model.GetDocxContentControlsResponse;
 import com.cloudmersive.client.rt.model.GetDocxGetCommentsHierarchicalRequest;
 import com.cloudmersive.client.rt.model.GetDocxGetCommentsRequest;
+import com.cloudmersive.client.rt.model.GetDocxGetFormFieldsResponse;
 import com.cloudmersive.client.rt.model.GetDocxHeadersAndFootersRequest;
 import com.cloudmersive.client.rt.model.GetDocxHeadersAndFootersResponse;
 import com.cloudmersive.client.rt.model.GetDocxImagesRequest;
 import com.cloudmersive.client.rt.model.GetDocxImagesResponse;
+import com.cloudmersive.client.rt.model.GetDocxMetadataPropertiesResponse;
 import com.cloudmersive.client.rt.model.GetDocxPagesRequest;
 import com.cloudmersive.client.rt.model.GetDocxPagesResponse;
 import com.cloudmersive.client.rt.model.GetDocxSectionsRequest;
@@ -58,6 +64,7 @@ import com.cloudmersive.client.rt.model.GetDocxTableRowRequest;
 import com.cloudmersive.client.rt.model.GetDocxTableRowResponse;
 import com.cloudmersive.client.rt.model.GetDocxTablesRequest;
 import com.cloudmersive.client.rt.model.GetDocxTablesResponse;
+import com.cloudmersive.client.rt.model.GetMacrosResponse;
 import com.cloudmersive.client.rt.model.GetXlsxCellByIdentifierRequest;
 import com.cloudmersive.client.rt.model.GetXlsxCellByIdentifierResponse;
 import com.cloudmersive.client.rt.model.GetXlsxCellRequest;
@@ -124,7 +131,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.EditDocumentApi")
 public class EditDocumentApi {
     private ApiClient apiClient;
@@ -747,6 +754,110 @@ public class EditDocumentApi {
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
+     * Get all content controls (form fields) and values in a Word DOCX document
+     * Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return GetDocxContentControlsResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public GetDocxContentControlsResponse editDocumentDocxGetContentControls(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editDocumentDocxGetContentControlsWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Get all content controls (form fields) and values in a Word DOCX document
+     * Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;GetDocxContentControlsResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<GetDocxContentControlsResponse> editDocumentDocxGetContentControlsWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editDocumentDocxGetContentControls");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/get-content-controls", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<GetDocxContentControlsResponse> returnType = new ParameterizedTypeReference<GetDocxContentControlsResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Get all form fields in a Word DOCX document
+     * Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return GetDocxGetFormFieldsResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public GetDocxGetFormFieldsResponse editDocumentDocxGetFormFields(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editDocumentDocxGetFormFieldsWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Get all form fields in a Word DOCX document
+     * Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;GetDocxGetFormFieldsResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<GetDocxGetFormFieldsResponse> editDocumentDocxGetFormFieldsWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editDocumentDocxGetFormFields");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/get-form-fields", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<GetDocxGetFormFieldsResponse> returnType = new ParameterizedTypeReference<GetDocxGetFormFieldsResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
      * Get content of a footer from a Word DOCX document
      * Returns the footer content from a Word Document (DOCX) format file
      * <p><b>200</b> - OK
@@ -842,6 +953,110 @@ public class EditDocumentApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<GetDocxImagesResponse> returnType = new ParameterizedTypeReference<GetDocxImagesResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Get macro information from a Word DOCX/DOCM document
+     * Returns information about the Macros (e.g. VBA) defined in the Word Document
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return GetMacrosResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public GetMacrosResponse editDocumentDocxGetMacroInformation(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editDocumentDocxGetMacroInformationWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Get macro information from a Word DOCX/DOCM document
+     * Returns information about the Macros (e.g. VBA) defined in the Word Document
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;GetMacrosResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<GetMacrosResponse> editDocumentDocxGetMacroInformationWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editDocumentDocxGetMacroInformation");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/get-macros", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<GetMacrosResponse> returnType = new ParameterizedTypeReference<GetMacrosResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Get all metadata properties in Word DOCX document
+     * Returns all the metadata properties in an Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return GetDocxMetadataPropertiesResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public GetDocxMetadataPropertiesResponse editDocumentDocxGetMetadataProperties(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editDocumentDocxGetMetadataPropertiesWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Get all metadata properties in Word DOCX document
+     * Returns all the metadata properties in an Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;GetDocxMetadataPropertiesResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<GetDocxMetadataPropertiesResponse> editDocumentDocxGetMetadataPropertiesWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editDocumentDocxGetMetadataProperties");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/get-metadata", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<GetDocxMetadataPropertiesResponse> returnType = new ParameterizedTypeReference<GetDocxMetadataPropertiesResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
@@ -1583,7 +1798,7 @@ public class EditDocumentApi {
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
-     * Replace multiple strings in Word DOCX document
+     * Replace multiple strings in Word DOCX document, return result
      * Replace all instances of multiple strings in an Office Word Document (docx)
      * <p><b>200</b> - OK
      * @param reqConfig Document string replacement configuration input (required)
@@ -1595,7 +1810,7 @@ public class EditDocumentApi {
     }
 
     /**
-     * Replace multiple strings in Word DOCX document
+     * Replace multiple strings in Word DOCX document, return result
      * Replace all instances of multiple strings in an Office Word Document (docx)
      * <p><b>200</b> - OK
      * @param reqConfig Document string replacement configuration input (required)
@@ -1629,6 +1844,55 @@ public class EditDocumentApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Replace multiple strings in Word DOCX document, return edit session
+     * Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+     * <p><b>200</b> - OK
+     * @param reqConfig Document string replacement configuration input (required)
+     * @return DocumentEditingEditSession
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public DocumentEditingEditSession editDocumentDocxReplaceMultiEditSession(MultiReplaceStringRequest reqConfig) throws RestClientException {
+        return editDocumentDocxReplaceMultiEditSessionWithHttpInfo(reqConfig).getBody();
+    }
+
+    /**
+     * Replace multiple strings in Word DOCX document, return edit session
+     * Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+     * <p><b>200</b> - OK
+     * @param reqConfig Document string replacement configuration input (required)
+     * @return ResponseEntity&lt;DocumentEditingEditSession&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<DocumentEditingEditSession> editDocumentDocxReplaceMultiEditSessionWithHttpInfo(MultiReplaceStringRequest reqConfig) throws RestClientException {
+        Object postBody = reqConfig;
+        
+        // verify the required parameter 'reqConfig' is set
+        if (reqConfig == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'reqConfig' when calling editDocumentDocxReplaceMultiEditSession");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/replace-all/multi/edit-session", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<DocumentEditingEditSession> returnType = new ParameterizedTypeReference<DocumentEditingEditSession>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
@@ -1678,6 +1942,55 @@ public class EditDocumentApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<ReplaceDocxParagraphResponse> returnType = new ParameterizedTypeReference<ReplaceDocxParagraphResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Set custom property metadata properties in Word DOCX document
+     * Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param input  (required)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] editDocumentDocxSetCustomMetadataProperties(DocxSetCustomMetadataPropertiesRequest input) throws RestClientException {
+        return editDocumentDocxSetCustomMetadataPropertiesWithHttpInfo(input).getBody();
+    }
+
+    /**
+     * Set custom property metadata properties in Word DOCX document
+     * Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
+     * <p><b>200</b> - OK
+     * @param input  (required)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> editDocumentDocxSetCustomMetadataPropertiesWithHttpInfo(DocxSetCustomMetadataPropertiesRequest input) throws RestClientException {
+        Object postBody = input;
+        
+        // verify the required parameter 'input' is set
+        if (input == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'input' when calling editDocumentDocxSetCustomMetadataProperties");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/set-metadata/custom-property", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
@@ -1776,6 +2089,55 @@ public class EditDocumentApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<DocxSetFooterResponse> returnType = new ParameterizedTypeReference<DocxSetFooterResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Set and fill values for form fields in a Word DOCX document
+     * Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+     * <p><b>200</b> - OK
+     * @param reqConfig  (required)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] editDocumentDocxSetFormFields(DocxSetFormFieldsRequest reqConfig) throws RestClientException {
+        return editDocumentDocxSetFormFieldsWithHttpInfo(reqConfig).getBody();
+    }
+
+    /**
+     * Set and fill values for form fields in a Word DOCX document
+     * Modifies a Office Word Document (docx) by filling in form fields using the provided values.
+     * <p><b>200</b> - OK
+     * @param reqConfig  (required)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> editDocumentDocxSetFormFieldsWithHttpInfo(DocxSetFormFieldsRequest reqConfig) throws RestClientException {
+        Object postBody = reqConfig;
+        
+        // verify the required parameter 'reqConfig' is set
+        if (reqConfig == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'reqConfig' when calling editDocumentDocxSetFormFields");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/docx/set-form-fields", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
@@ -2021,6 +2383,58 @@ public class EditDocumentApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Get macro information from a PowerPoint PPTX/PPTM presentation document
+     * Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return GetMacrosResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public GetMacrosResponse editDocumentPptxGetMacroInformation(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editDocumentPptxGetMacroInformationWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Get macro information from a PowerPoint PPTX/PPTM presentation document
+     * Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;GetMacrosResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<GetMacrosResponse> editDocumentPptxGetMacroInformationWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editDocumentPptxGetMacroInformation");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/pptx/get-macros", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<GetMacrosResponse> returnType = new ParameterizedTypeReference<GetMacrosResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**
@@ -2658,6 +3072,58 @@ public class EditDocumentApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<GetXlsxImagesResponse> returnType = new ParameterizedTypeReference<GetXlsxImagesResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+     * Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return GetMacrosResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public GetMacrosResponse editDocumentXlsxGetMacroInformation(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editDocumentXlsxGetMacroInformationWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
+     * Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;GetMacrosResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<GetMacrosResponse> editDocumentXlsxGetMacroInformationWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editDocumentXlsxGetMacroInformation");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/xlsx/get-macros", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<GetMacrosResponse> returnType = new ParameterizedTypeReference<GetMacrosResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**

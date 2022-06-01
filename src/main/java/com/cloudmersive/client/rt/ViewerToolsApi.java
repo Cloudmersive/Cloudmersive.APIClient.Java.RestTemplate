@@ -26,7 +26,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.ViewerToolsApi")
 public class ViewerToolsApi {
     private ApiClient apiClient;
@@ -53,11 +53,13 @@ public class ViewerToolsApi {
      * Creates an HTML embed code for a simple web-based viewer of a document; supports Office document types and PDF.
      * <p><b>200</b> - OK
      * @param inputFile Input file to perform the operation on. (required)
+     * @param width Optional; width of the output viewer in pixels (optional)
+     * @param height Optional; height of the output viewer in pixels (optional)
      * @return ViewerResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ViewerResponse viewerToolsCreateSimple(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        return viewerToolsCreateSimpleWithHttpInfo(inputFile).getBody();
+    public ViewerResponse viewerToolsCreateSimple(org.springframework.core.io.Resource inputFile, Integer width, Integer height) throws RestClientException {
+        return viewerToolsCreateSimpleWithHttpInfo(inputFile, width, height).getBody();
     }
 
     /**
@@ -65,10 +67,12 @@ public class ViewerToolsApi {
      * Creates an HTML embed code for a simple web-based viewer of a document; supports Office document types and PDF.
      * <p><b>200</b> - OK
      * @param inputFile Input file to perform the operation on. (required)
+     * @param width Optional; width of the output viewer in pixels (optional)
+     * @param height Optional; height of the output viewer in pixels (optional)
      * @return ResponseEntity&lt;ViewerResponse&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<ViewerResponse> viewerToolsCreateSimpleWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+    public ResponseEntity<ViewerResponse> viewerToolsCreateSimpleWithHttpInfo(org.springframework.core.io.Resource inputFile, Integer width, Integer height) throws RestClientException {
         Object postBody = null;
         
         // verify the required parameter 'inputFile' is set
@@ -82,6 +86,11 @@ public class ViewerToolsApi {
         final HttpHeaders headerParams = new HttpHeaders();
         final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (width != null)
+        headerParams.add("width", apiClient.parameterToString(width));
+        if (height != null)
+        headerParams.add("height", apiClient.parameterToString(height));
 
         if (inputFile != null)
             formParams.add("inputFile", inputFile);

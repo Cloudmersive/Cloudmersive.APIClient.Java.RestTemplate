@@ -14,6 +14,10 @@
 package com.cloudmersive.client.rt;
 
 import java.io.File;
+import com.cloudmersive.client.rt.model.HtmlGetLanguageResult;
+import com.cloudmersive.client.rt.model.HtmlGetLinksResponse;
+import com.cloudmersive.client.rt.model.HtmlGetRelCanonicalUrlResult;
+import com.cloudmersive.client.rt.model.HtmlGetSitemapUrlResult;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -30,6 +34,24 @@ public class EditHtmlApiTest {
 
     private final EditHtmlApi api = new EditHtmlApi();
 
+    
+    /**
+     * Append an HTML tag to the HEAD section of an HTML Document
+     *
+     * Appends an HTML tag to the HEAD section of an HTML document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlAppendHeaderTagTest() {
+        String htmlTag = null;
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        byte[] response = api.editHtmlHtmlAppendHeaderTag(htmlTag, inputFileUrl, inputFile);
+
+        // TODO: test validations
+    }
     
     /**
      * Append a Heading to an HTML Document
@@ -126,6 +148,129 @@ public class EditHtmlApiTest {
         String javascriptUrl = null;
         String javascriptInline = null;
         byte[] response = api.editHtmlHtmlCreateBlankDocument(title, cssUrl, cssInline, javascriptUrl, javascriptInline);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Gets the language for the HTML document
+     *
+     * Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlGetLanguageTest() {
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        HtmlGetLanguageResult response = api.editHtmlHtmlGetLanguage(inputFileUrl, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Extract resolved link URLs from HTML File
+     *
+     * Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlGetLinksTest() {
+        String inputFileUrl = null;
+        String baseUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        HtmlGetLinksResponse response = api.editHtmlHtmlGetLinks(inputFileUrl, baseUrl, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Gets the rel canonical URL for the HTML document
+     *
+     * Gets the rel canonical URL of an HTML document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlGetRelCanonicalTest() {
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        HtmlGetRelCanonicalUrlResult response = api.editHtmlHtmlGetRelCanonical(inputFileUrl, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Gets the sitemap URL for the HTML document
+     *
+     * Gets the sitemap link URL of an HTML document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlGetSitemapTest() {
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        HtmlGetSitemapUrlResult response = api.editHtmlHtmlGetSitemap(inputFileUrl, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Sets the language for the HTML document
+     *
+     * Sets the language code of an HTML document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlSetLanguageTest() {
+        String languageCode = null;
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        byte[] response = api.editHtmlHtmlSetLanguage(languageCode, inputFileUrl, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Sets the rel canonical URL for the HTML document
+     *
+     * Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlSetRelCanonicalTest() {
+        String canonicalUrl = null;
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        byte[] response = api.editHtmlHtmlSetRelCanonical(canonicalUrl, inputFileUrl, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Sets the sitemap URL for the HTML document
+     *
+     * Sets the sitemap URL of an HTML document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void editHtmlHtmlSetSitemapUrlTest() {
+        String sitemapUrl = null;
+        String inputFileUrl = null;
+        org.springframework.core.io.Resource inputFile = null;
+        byte[] response = api.editHtmlHtmlSetSitemapUrl(sitemapUrl, inputFileUrl, inputFile);
 
         // TODO: test validations
     }

@@ -57,7 +57,7 @@ import java.util.TimeZone;
 import com.cloudmersive.client.rt.invoker.auth.Authentication;
 import com.cloudmersive.client.rt.invoker.auth.ApiKeyAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:32.732-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.invoker.ApiClient")
 public class ApiClient {
     public enum CollectionFormat {

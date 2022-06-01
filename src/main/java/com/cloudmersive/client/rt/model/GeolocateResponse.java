@@ -25,9 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 /**
- * Geolocation result
+ * Geolocation result of performing an IP address geolocation operation.  This product includes GeoLite2 data created by MaxMind, available from www.maxmind.com.
  */
-@ApiModel(description = "Geolocation result")
+@ApiModel(description = "Geolocation result of performing an IP address geolocation operation.  This product includes GeoLite2 data created by MaxMind, available from www.maxmind.com.")
 @JsonPropertyOrder({
   GeolocateResponse.JSON_PROPERTY_COUNTRY_CODE,
   GeolocateResponse.JSON_PROPERTY_COUNTRY_NAME,
@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   GeolocateResponse.JSON_PROPERTY_LONGITUDE
 })
 @JsonTypeName("GeolocateResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:06.593-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
 public class GeolocateResponse {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "CountryCode";
   private String countryCode;

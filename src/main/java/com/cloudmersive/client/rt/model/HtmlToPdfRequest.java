@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   HtmlToPdfRequest.JSON_PROPERTY_SCALE_FACTOR
 })
 @JsonTypeName("HtmlToPdfRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 public class HtmlToPdfRequest {
   public static final String JSON_PROPERTY_HTML = "Html";
   private String html;

@@ -30,16 +30,20 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @ApiModel(description = "Result of validating a URL with syntax only")
 @JsonPropertyOrder({
   ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_VALID_U_R_L,
-  ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_WELL_FORMED_U_R_L
+  ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_WELL_FORMED_U_R_L,
+  ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME
 })
 @JsonTypeName("ValidateUrlResponseSyntaxOnly")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:06.593-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
 public class ValidateUrlResponseSyntaxOnly {
   public static final String JSON_PROPERTY_VALID_U_R_L = "ValidURL";
   private Boolean validURL;
 
   public static final String JSON_PROPERTY_WELL_FORMED_U_R_L = "WellFormedURL";
   private String wellFormedURL;
+
+  public static final String JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME = "TopLevelDomainName";
+  private String topLevelDomainName;
 
 
   public ValidateUrlResponseSyntaxOnly validURL(Boolean validURL) {
@@ -92,6 +96,31 @@ public class ValidateUrlResponseSyntaxOnly {
   }
 
 
+  public ValidateUrlResponseSyntaxOnly topLevelDomainName(String topLevelDomainName) {
+    
+    this.topLevelDomainName = topLevelDomainName;
+    return this;
+  }
+
+   /**
+   * The top-level domain name of the URL, e.g. mydomain.com
+   * @return topLevelDomainName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The top-level domain name of the URL, e.g. mydomain.com")
+  @JsonProperty(JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getTopLevelDomainName() {
+    return topLevelDomainName;
+  }
+
+
+  public void setTopLevelDomainName(String topLevelDomainName) {
+    this.topLevelDomainName = topLevelDomainName;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -102,12 +131,13 @@ public class ValidateUrlResponseSyntaxOnly {
     }
     ValidateUrlResponseSyntaxOnly validateUrlResponseSyntaxOnly = (ValidateUrlResponseSyntaxOnly) o;
     return Objects.equals(this.validURL, validateUrlResponseSyntaxOnly.validURL) &&
-        Objects.equals(this.wellFormedURL, validateUrlResponseSyntaxOnly.wellFormedURL);
+        Objects.equals(this.wellFormedURL, validateUrlResponseSyntaxOnly.wellFormedURL) &&
+        Objects.equals(this.topLevelDomainName, validateUrlResponseSyntaxOnly.topLevelDomainName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(validURL, wellFormedURL);
+    return Objects.hash(validURL, wellFormedURL, topLevelDomainName);
   }
 
 
@@ -117,6 +147,7 @@ public class ValidateUrlResponseSyntaxOnly {
     sb.append("class ValidateUrlResponseSyntaxOnly {\n");
     sb.append("    validURL: ").append(toIndentedString(validURL)).append("\n");
     sb.append("    wellFormedURL: ").append(toIndentedString(wellFormedURL)).append("\n");
+    sb.append("    topLevelDomainName: ").append(toIndentedString(topLevelDomainName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -3,6 +3,10 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.invoker.ApiClient;
 
 import java.io.File;
+import com.cloudmersive.client.rt.model.HtmlGetLanguageResult;
+import com.cloudmersive.client.rt.model.HtmlGetLinksResponse;
+import com.cloudmersive.client.rt.model.HtmlGetRelCanonicalUrlResult;
+import com.cloudmersive.client.rt.model.HtmlGetSitemapUrlResult;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -25,7 +29,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.EditHtmlApi")
 public class EditHtmlApi {
     private ApiClient apiClient;
@@ -47,6 +51,67 @@ public class EditHtmlApi {
         this.apiClient = apiClient;
     }
 
+    /**
+     * Append an HTML tag to the HEAD section of an HTML Document
+     * Appends an HTML tag to the HEAD section of an HTML document.
+     * <p><b>200</b> - OK
+     * @param htmlTag The HTML tag to append. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] editHtmlHtmlAppendHeaderTag(String htmlTag, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlAppendHeaderTagWithHttpInfo(htmlTag, inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Append an HTML tag to the HEAD section of an HTML Document
+     * Appends an HTML tag to the HEAD section of an HTML document.
+     * <p><b>200</b> - OK
+     * @param htmlTag The HTML tag to append. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> editHtmlHtmlAppendHeaderTagWithHttpInfo(String htmlTag, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'htmlTag' is set
+        if (htmlTag == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'htmlTag' when calling editHtmlHtmlAppendHeaderTag");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/append/tag", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        if (htmlTag != null)
+        headerParams.add("htmlTag", apiClient.parameterToString(htmlTag));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
     /**
      * Append a Heading to an HTML Document
      * Appends a heading to the end of an HTML document.
@@ -368,6 +433,401 @@ public class EditHtmlApi {
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = {  };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Gets the language for the HTML document
+     * Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return HtmlGetLanguageResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public HtmlGetLanguageResult editHtmlHtmlGetLanguage(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlGetLanguageWithHttpInfo(inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Gets the language for the HTML document
+     * Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;HtmlGetLanguageResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<HtmlGetLanguageResult> editHtmlHtmlGetLanguageWithHttpInfo(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/get/language", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<HtmlGetLanguageResult> returnType = new ParameterizedTypeReference<HtmlGetLanguageResult>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Extract resolved link URLs from HTML File
+     * Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param baseUrl Optional: Base URL of the page, such as https://mydomain.com (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return HtmlGetLinksResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public HtmlGetLinksResponse editHtmlHtmlGetLinks(String inputFileUrl, String baseUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlGetLinksWithHttpInfo(inputFileUrl, baseUrl, inputFile).getBody();
+    }
+
+    /**
+     * Extract resolved link URLs from HTML File
+     * Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param baseUrl Optional: Base URL of the page, such as https://mydomain.com (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;HtmlGetLinksResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<HtmlGetLinksResponse> editHtmlHtmlGetLinksWithHttpInfo(String inputFileUrl, String baseUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        String path = apiClient.expandPath("/convert/edit/html/extract/links", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        if (baseUrl != null)
+        headerParams.add("baseUrl", apiClient.parameterToString(baseUrl));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<HtmlGetLinksResponse> returnType = new ParameterizedTypeReference<HtmlGetLinksResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Gets the rel canonical URL for the HTML document
+     * Gets the rel canonical URL of an HTML document.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return HtmlGetRelCanonicalUrlResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public HtmlGetRelCanonicalUrlResult editHtmlHtmlGetRelCanonical(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlGetRelCanonicalWithHttpInfo(inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Gets the rel canonical URL for the HTML document
+     * Gets the rel canonical URL of an HTML document.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;HtmlGetRelCanonicalUrlResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<HtmlGetRelCanonicalUrlResult> editHtmlHtmlGetRelCanonicalWithHttpInfo(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/get/rel-canonical-url", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<HtmlGetRelCanonicalUrlResult> returnType = new ParameterizedTypeReference<HtmlGetRelCanonicalUrlResult>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Gets the sitemap URL for the HTML document
+     * Gets the sitemap link URL of an HTML document.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return HtmlGetSitemapUrlResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public HtmlGetSitemapUrlResult editHtmlHtmlGetSitemap(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlGetSitemapWithHttpInfo(inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Gets the sitemap URL for the HTML document
+     * Gets the sitemap link URL of an HTML document.
+     * <p><b>200</b> - OK
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;HtmlGetSitemapUrlResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<HtmlGetSitemapUrlResult> editHtmlHtmlGetSitemapWithHttpInfo(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/get/sitemap-url", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<HtmlGetSitemapUrlResult> returnType = new ParameterizedTypeReference<HtmlGetSitemapUrlResult>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Sets the language for the HTML document
+     * Sets the language code of an HTML document.
+     * <p><b>200</b> - OK
+     * @param languageCode The HTML langauge code to set. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] editHtmlHtmlSetLanguage(String languageCode, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlSetLanguageWithHttpInfo(languageCode, inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Sets the language for the HTML document
+     * Sets the language code of an HTML document.
+     * <p><b>200</b> - OK
+     * @param languageCode The HTML langauge code to set. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> editHtmlHtmlSetLanguageWithHttpInfo(String languageCode, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'languageCode' is set
+        if (languageCode == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'languageCode' when calling editHtmlHtmlSetLanguage");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/set/language", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        if (languageCode != null)
+        headerParams.add("languageCode", apiClient.parameterToString(languageCode));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Sets the rel canonical URL for the HTML document
+     * Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+     * <p><b>200</b> - OK
+     * @param canonicalUrl The HTML canonical URL to set. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] editHtmlHtmlSetRelCanonical(String canonicalUrl, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlSetRelCanonicalWithHttpInfo(canonicalUrl, inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Sets the rel canonical URL for the HTML document
+     * Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
+     * <p><b>200</b> - OK
+     * @param canonicalUrl The HTML canonical URL to set. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> editHtmlHtmlSetRelCanonicalWithHttpInfo(String canonicalUrl, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'canonicalUrl' is set
+        if (canonicalUrl == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'canonicalUrl' when calling editHtmlHtmlSetRelCanonical");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/set/rel-canonical-url", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        if (canonicalUrl != null)
+        headerParams.add("canonicalUrl", apiClient.parameterToString(canonicalUrl));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Sets the sitemap URL for the HTML document
+     * Sets the sitemap URL of an HTML document.
+     * <p><b>200</b> - OK
+     * @param sitemapUrl The HTML sitemap URL to set. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] editHtmlHtmlSetSitemapUrl(String sitemapUrl, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editHtmlHtmlSetSitemapUrlWithHttpInfo(sitemapUrl, inputFileUrl, inputFile).getBody();
+    }
+
+    /**
+     * Sets the sitemap URL for the HTML document
+     * Sets the sitemap URL of an HTML document.
+     * <p><b>200</b> - OK
+     * @param sitemapUrl The HTML sitemap URL to set. (required)
+     * @param inputFileUrl Optional: URL of a file to operate on as input. (optional)
+     * @param inputFile Optional: Input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> editHtmlHtmlSetSitemapUrlWithHttpInfo(String sitemapUrl, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'sitemapUrl' is set
+        if (sitemapUrl == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'sitemapUrl' when calling editHtmlHtmlSetSitemapUrl");
+        }
+        
+        String path = apiClient.expandPath("/convert/edit/html/head/set/sitemap-url", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFileUrl != null)
+        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        if (sitemapUrl != null)
+        headerParams.add("sitemapUrl", apiClient.parameterToString(sitemapUrl));
+
+        if (inputFile != null)
+            formParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
         final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
 
         String[] authNames = new String[] { "Apikey" };

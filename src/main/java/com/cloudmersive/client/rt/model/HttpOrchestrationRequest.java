@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   HttpOrchestrationRequest.JSON_PROPERTY_HTTP_TASKS
 })
 @JsonTypeName("HttpOrchestrationRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:26.703-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
 public class HttpOrchestrationRequest {
   public static final String JSON_PROPERTY_HTTP_TASKS = "HttpTasks";
   private List<HttpOrchestrationTask> httpTasks = null;

@@ -74,6 +74,48 @@ public class MergeDocumentApiTest {
     }
     
     /**
+     * Merge Two HTML (HTM) Files Together
+     *
+     * Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mergeDocumentHtmlTest() {
+        org.springframework.core.io.Resource inputFile1 = null;
+        org.springframework.core.io.Resource inputFile2 = null;
+        byte[] response = api.mergeDocumentHtml(inputFile1, inputFile2);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple HTML (HTM) Files Together
+     *
+     * Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void mergeDocumentHtmlMultiTest() {
+        org.springframework.core.io.Resource inputFile1 = null;
+        org.springframework.core.io.Resource inputFile2 = null;
+        org.springframework.core.io.Resource inputFile3 = null;
+        org.springframework.core.io.Resource inputFile4 = null;
+        org.springframework.core.io.Resource inputFile5 = null;
+        org.springframework.core.io.Resource inputFile6 = null;
+        org.springframework.core.io.Resource inputFile7 = null;
+        org.springframework.core.io.Resource inputFile8 = null;
+        org.springframework.core.io.Resource inputFile9 = null;
+        org.springframework.core.io.Resource inputFile10 = null;
+        byte[] response = api.mergeDocumentHtmlMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Merge Two PDF Files Together
      *
      * Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document

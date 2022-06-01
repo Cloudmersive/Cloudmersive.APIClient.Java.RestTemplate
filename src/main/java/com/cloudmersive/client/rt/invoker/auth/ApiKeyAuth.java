@@ -3,7 +3,7 @@ package com.cloudmersive.client.rt.invoker.auth;
 import org.springframework.http.HttpHeaders;
 import org.springframework.util.MultiValueMap;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:32.732-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
 public class ApiKeyAuth implements Authentication {
     private final String location;
     private final String paramName;

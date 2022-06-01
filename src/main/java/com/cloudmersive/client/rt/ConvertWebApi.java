@@ -35,7 +35,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.ConvertWebApi")
 public class ConvertWebApi {
     private ApiClient apiClient;
@@ -93,7 +93,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -142,7 +142,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -191,7 +191,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -240,7 +240,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -292,7 +292,7 @@ public class ConvertWebApi {
             formParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -341,7 +341,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -390,7 +390,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 
@@ -439,7 +439,7 @@ public class ConvertWebApi {
         final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
-            "application/octet-stream"
+            "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
         final String[] contentTypes = { 

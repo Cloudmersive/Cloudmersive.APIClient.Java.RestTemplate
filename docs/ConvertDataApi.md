@@ -6,7 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**convertDataCsvToJson**](ConvertDataApi.md#convertDataCsvToJson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion
 [**convertDataCsvToXml**](ConvertDataApi.md#convertDataCsvToXml) | **POST** /convert/csv/to/xml | Convert CSV to XML conversion
-[**convertDataJsonToXml**](ConvertDataApi.md#convertDataJsonToXml) | **POST** /convert/json/to/xml | Convert JSON to XML conversion
+[**convertDataJsonStringToXml**](ConvertDataApi.md#convertDataJsonStringToXml) | **POST** /convert/json-string/to/xml | Convert JSON String to XML conversion
+[**convertDataJsonToXml**](ConvertDataApi.md#convertDataJsonToXml) | **POST** /convert/json/to/xml | Convert JSON Object to XML conversion
 [**convertDataXlsToJson**](ConvertDataApi.md#convertDataXlsToJson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
 [**convertDataXlsxToJson**](ConvertDataApi.md#convertDataXlsxToJson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
 [**convertDataXlsxToXml**](ConvertDataApi.md#convertDataXlsxToXml) | **POST** /convert/xlsx/to/xml | Convert Excel XLSX to XML conversion
@@ -172,11 +173,11 @@ Name | Type | Description  | Notes
 | **200** | OK |  -  |
 
 
-## convertDataJsonToXml
+## convertDataJsonStringToXml
 
-> byte[] convertDataJsonToXml(jsonObject)
+> Object convertDataJsonStringToXml(jsonString)
 
-Convert JSON to XML conversion
+Convert JSON String to XML conversion
 
 Convert a JSON object into XML
 
@@ -203,7 +204,79 @@ public class Example {
         //Apikey.setApiKeyPrefix("Token");
 
         ConvertDataApi apiInstance = new ConvertDataApi(defaultClient);
-        Object jsonObject = null; // Object | Input JSON to convert to XML
+        String jsonString = "jsonString_example"; // String | Input JSON String to convert to XML
+        try {
+            Object result = apiInstance.convertDataJsonStringToXml(jsonString);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling ConvertDataApi#convertDataJsonStringToXml");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **jsonString** | **String**| Input JSON String to convert to XML |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/xml
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## convertDataJsonToXml
+
+> byte[] convertDataJsonToXml(jsonObject)
+
+Convert JSON Object to XML conversion
+
+Convert a JSON object into XML
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.ConvertDataApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        ConvertDataApi apiInstance = new ConvertDataApi(defaultClient);
+        Object jsonObject = null; // Object | Input JSON Object to convert to XML
         try {
             byte[] result = apiInstance.convertDataJsonToXml(jsonObject);
             System.out.println(result);
@@ -223,7 +296,7 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jsonObject** | **Object**| Input JSON to convert to XML |
+ **jsonObject** | **Object**| Input JSON Object to convert to XML |
 
 ### Return type
 

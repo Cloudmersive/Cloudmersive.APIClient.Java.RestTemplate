@@ -17,6 +17,9 @@ import java.io.File;
 import com.cloudmersive.client.rt.model.FindSymbolResult;
 import com.cloudmersive.client.rt.model.FineTextDetectionResult;
 import com.cloudmersive.client.rt.model.ImageDescriptionResponse;
+import com.cloudmersive.client.rt.model.ImageSimilarityHashDistanceRequest;
+import com.cloudmersive.client.rt.model.ImageSimilarityHashDistanceResponse;
+import com.cloudmersive.client.rt.model.ImageSimilarityHashResponse;
 import com.cloudmersive.client.rt.model.ObjectDetectionResult;
 import com.cloudmersive.client.rt.model.TextDetectionResult;
 import com.cloudmersive.client.rt.model.VehicleLicensePlateDetectionResult;
@@ -163,6 +166,57 @@ public class RecognizeApiTest {
         org.springframework.core.io.Resource inputImage = null;
         org.springframework.core.io.Resource targetImage = null;
         FindSymbolResult response = api.recognizeFindSymbol(inputImage, targetImage);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Compare two images for similarity
+     *
+     * Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void recognizeSimilarityCompareTest() {
+        org.springframework.core.io.Resource baseImage = null;
+        org.springframework.core.io.Resource comparisonImage = null;
+        String recognitionMode = null;
+        byte[] response = api.recognizeSimilarityCompare(baseImage, comparisonImage, recognitionMode);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Generate a perceptual image hash
+     *
+     * Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void recognizeSimilarityHashTest() {
+        org.springframework.core.io.Resource imageFile = null;
+        String recognitionMode = null;
+        ImageSimilarityHashResponse response = api.recognizeSimilarityHash(imageFile, recognitionMode);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Calculates the similarity between two perceptual image hashes
+     *
+     * Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void recognizeSimilarityHashDistanceTest() {
+        ImageSimilarityHashDistanceRequest request = null;
+        ImageSimilarityHashDistanceResponse response = api.recognizeSimilarityHashDistance(request);
 
         // TODO: test validations
     }

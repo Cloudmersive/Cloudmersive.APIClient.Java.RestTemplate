@@ -2,6 +2,7 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
 
+import com.cloudmersive.client.rt.model.EmailLead;
 import com.cloudmersive.client.rt.model.LeadEnrichmentRequest;
 import com.cloudmersive.client.rt.model.LeadEnrichmentResponse;
 
@@ -26,7 +27,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:06.593-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.LeadEnrichmentApi")
 public class LeadEnrichmentApi {
     private ApiClient apiClient;
@@ -77,6 +78,55 @@ public class LeadEnrichmentApi {
         }
         
         String path = apiClient.expandPath("/validate/lead-enrichment/lead/enrich", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "application/json", "text/json"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<LeadEnrichmentResponse> returnType = new ParameterizedTypeReference<LeadEnrichmentResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Get company information from email address
+     * 
+     * <p><b>200</b> - OK
+     * @param request Input email address lead (required)
+     * @return LeadEnrichmentResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public LeadEnrichmentResponse leadEnrichmentGetCompanyInformation(EmailLead request) throws RestClientException {
+        return leadEnrichmentGetCompanyInformationWithHttpInfo(request).getBody();
+    }
+
+    /**
+     * Get company information from email address
+     * 
+     * <p><b>200</b> - OK
+     * @param request Input email address lead (required)
+     * @return ResponseEntity&lt;LeadEnrichmentResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<LeadEnrichmentResponse> leadEnrichmentGetCompanyInformationWithHttpInfo(EmailLead request) throws RestClientException {
+        Object postBody = request;
+        
+        // verify the required parameter 'request' is set
+        if (request == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling leadEnrichmentGetCompanyInformation");
+        }
+        
+        String path = apiClient.expandPath("/validate/lead-enrichment/lead/email/company-information", Collections.<String, Object>emptyMap());
 
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();

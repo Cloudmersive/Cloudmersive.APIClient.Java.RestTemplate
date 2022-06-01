@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ProductMatch.JSON_PROPERTY_TITLE
 })
 @JsonTypeName("ProductMatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:14.526-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:34.231-07:00[America/Los_Angeles]")
 public class ProductMatch {
   public static final String JSON_PROPERTY_E_A_N = "EAN";
   private String EAN;

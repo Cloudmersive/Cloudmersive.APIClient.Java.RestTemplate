@@ -25,7 +25,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:19.979-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.MergeDocumentApi")
 public class MergeDocumentApi {
     private ApiClient apiClient;
@@ -160,6 +160,160 @@ public class MergeDocumentApi {
         }
         
         String path = apiClient.expandPath("/convert/merge/docx/multi", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile1 != null)
+            formParams.add("inputFile1", inputFile1);
+        if (inputFile2 != null)
+            formParams.add("inputFile2", inputFile2);
+        if (inputFile3 != null)
+            formParams.add("inputFile3", inputFile3);
+        if (inputFile4 != null)
+            formParams.add("inputFile4", inputFile4);
+        if (inputFile5 != null)
+            formParams.add("inputFile5", inputFile5);
+        if (inputFile6 != null)
+            formParams.add("inputFile6", inputFile6);
+        if (inputFile7 != null)
+            formParams.add("inputFile7", inputFile7);
+        if (inputFile8 != null)
+            formParams.add("inputFile8", inputFile8);
+        if (inputFile9 != null)
+            formParams.add("inputFile9", inputFile9);
+        if (inputFile10 != null)
+            formParams.add("inputFile10", inputFile10);
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Merge Two HTML (HTM) Files Together
+     * Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * <p><b>200</b> - OK
+     * @param inputFile1 First input file to perform the operation on. (required)
+     * @param inputFile2 Second input file to perform the operation on (more than 2 can be supplied). (required)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] mergeDocumentHtml(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2) throws RestClientException {
+        return mergeDocumentHtmlWithHttpInfo(inputFile1, inputFile2).getBody();
+    }
+
+    /**
+     * Merge Two HTML (HTM) Files Together
+     * Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * <p><b>200</b> - OK
+     * @param inputFile1 First input file to perform the operation on. (required)
+     * @param inputFile2 Second input file to perform the operation on (more than 2 can be supplied). (required)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> mergeDocumentHtmlWithHttpInfo(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile1' is set
+        if (inputFile1 == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile1' when calling mergeDocumentHtml");
+        }
+        
+        // verify the required parameter 'inputFile2' is set
+        if (inputFile2 == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile2' when calling mergeDocumentHtml");
+        }
+        
+        String path = apiClient.expandPath("/convert/merge/html", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile1 != null)
+            formParams.add("inputFile1", inputFile1);
+        if (inputFile2 != null)
+            formParams.add("inputFile2", inputFile2);
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Merge Multple HTML (HTM) Files Together
+     * Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * <p><b>200</b> - OK
+     * @param inputFile1 First input file to perform the operation on. (required)
+     * @param inputFile2 Second input file to perform the operation on. (required)
+     * @param inputFile3 Third input file to perform the operation on. (optional)
+     * @param inputFile4 Fourth input file to perform the operation on. (optional)
+     * @param inputFile5 Fifth input file to perform the operation on. (optional)
+     * @param inputFile6 Sixth input file to perform the operation on. (optional)
+     * @param inputFile7 Seventh input file to perform the operation on. (optional)
+     * @param inputFile8 Eighth input file to perform the operation on. (optional)
+     * @param inputFile9 Ninth input file to perform the operation on. (optional)
+     * @param inputFile10 Tenth input file to perform the operation on. (optional)
+     * @return byte[]
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public byte[] mergeDocumentHtmlMulti(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2, org.springframework.core.io.Resource inputFile3, org.springframework.core.io.Resource inputFile4, org.springframework.core.io.Resource inputFile5, org.springframework.core.io.Resource inputFile6, org.springframework.core.io.Resource inputFile7, org.springframework.core.io.Resource inputFile8, org.springframework.core.io.Resource inputFile9, org.springframework.core.io.Resource inputFile10) throws RestClientException {
+        return mergeDocumentHtmlMultiWithHttpInfo(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10).getBody();
+    }
+
+    /**
+     * Merge Multple HTML (HTM) Files Together
+     * Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     * <p><b>200</b> - OK
+     * @param inputFile1 First input file to perform the operation on. (required)
+     * @param inputFile2 Second input file to perform the operation on. (required)
+     * @param inputFile3 Third input file to perform the operation on. (optional)
+     * @param inputFile4 Fourth input file to perform the operation on. (optional)
+     * @param inputFile5 Fifth input file to perform the operation on. (optional)
+     * @param inputFile6 Sixth input file to perform the operation on. (optional)
+     * @param inputFile7 Seventh input file to perform the operation on. (optional)
+     * @param inputFile8 Eighth input file to perform the operation on. (optional)
+     * @param inputFile9 Ninth input file to perform the operation on. (optional)
+     * @param inputFile10 Tenth input file to perform the operation on. (optional)
+     * @return ResponseEntity&lt;byte[]&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<byte[]> mergeDocumentHtmlMultiWithHttpInfo(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2, org.springframework.core.io.Resource inputFile3, org.springframework.core.io.Resource inputFile4, org.springframework.core.io.Resource inputFile5, org.springframework.core.io.Resource inputFile6, org.springframework.core.io.Resource inputFile7, org.springframework.core.io.Resource inputFile8, org.springframework.core.io.Resource inputFile9, org.springframework.core.io.Resource inputFile10) throws RestClientException {
+        Object postBody = null;
+        
+        // verify the required parameter 'inputFile1' is set
+        if (inputFile1 == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile1' when calling mergeDocumentHtmlMulti");
+        }
+        
+        // verify the required parameter 'inputFile2' is set
+        if (inputFile2 == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile2' when calling mergeDocumentHtmlMulti");
+        }
+        
+        String path = apiClient.expandPath("/convert/merge/html/multi", Collections.<String, Object>emptyMap());
 
         final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
         final HttpHeaders headerParams = new HttpHeaders();

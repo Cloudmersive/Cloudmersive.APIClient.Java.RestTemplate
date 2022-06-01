@@ -13,6 +13,9 @@
 
 package com.cloudmersive.client.rt;
 
+import com.cloudmersive.client.rt.model.DocumentTransformEditSession;
+import com.cloudmersive.client.rt.model.DocxTableTableFillMultiRequest;
+import com.cloudmersive.client.rt.model.DocxTableTableFillRequest;
 import java.io.File;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -32,7 +35,7 @@ public class TransformDocumentApiTest {
 
     
     /**
-     * Replace string in Word DOCX document
+     * Replace string in Word DOCX document, return result
      *
      * Replace all instances of a string in an Office Word Document (docx)
      *
@@ -52,7 +55,75 @@ public class TransformDocumentApiTest {
     }
     
     /**
-     * Replace string in PowerPoint PPTX presentation
+     * Replace string in Word DOCX document, return edit session
+     *
+     * Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void transformDocumentDocxReplaceEditSessionTest() {
+        String matchString = null;
+        String replaceString = null;
+        String inputFileUrl = null;
+        Boolean matchCase = null;
+        org.springframework.core.io.Resource inputFile = null;
+        DocumentTransformEditSession response = api.transformDocumentDocxReplaceEditSession(matchString, replaceString, inputFileUrl, matchCase, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Fill in data in a table in a Word DOCX document, return result
+     *
+     * Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void transformDocumentDocxTableFillInTest() {
+        DocxTableTableFillRequest request = null;
+        byte[] response = api.transformDocumentDocxTableFillIn(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Fill in data in a table in a Word DOCX document, return edit session
+     *
+     * Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void transformDocumentDocxTableFillInEditSessionTest() {
+        DocxTableTableFillRequest request = null;
+        DocumentTransformEditSession response = api.transformDocumentDocxTableFillInEditSession(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Fill in data in multiple tables in a Word DOCX document, return result
+     *
+     * Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void transformDocumentDocxTableFillInMultiTest() {
+        DocxTableTableFillMultiRequest request = null;
+        byte[] response = api.transformDocumentDocxTableFillInMulti(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Replace string in PowerPoint PPTX presentation, return result
      *
      * Replace all instances of a string in an Office PowerPoint Document (pptx)
      *

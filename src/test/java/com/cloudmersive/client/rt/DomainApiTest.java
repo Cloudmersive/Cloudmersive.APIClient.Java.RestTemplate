@@ -15,6 +15,17 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.CheckResponse;
 import com.cloudmersive.client.rt.model.DomainQualityResponse;
+import com.cloudmersive.client.rt.model.IsAdminPathResponse;
+import com.cloudmersive.client.rt.model.PhishingCheckRequest;
+import com.cloudmersive.client.rt.model.PhishingCheckResponse;
+import com.cloudmersive.client.rt.model.UrlHtmlSsrfRequestFull;
+import com.cloudmersive.client.rt.model.UrlHtmlSsrfResponseFull;
+import com.cloudmersive.client.rt.model.UrlSafetyCheckRequestFull;
+import com.cloudmersive.client.rt.model.UrlSafetyCheckResponseFull;
+import com.cloudmersive.client.rt.model.UrlSsrfRequestBatch;
+import com.cloudmersive.client.rt.model.UrlSsrfRequestFull;
+import com.cloudmersive.client.rt.model.UrlSsrfResponseBatch;
+import com.cloudmersive.client.rt.model.UrlSsrfResponseFull;
 import com.cloudmersive.client.rt.model.ValidateUrlRequestFull;
 import com.cloudmersive.client.rt.model.ValidateUrlRequestSyntaxOnly;
 import com.cloudmersive.client.rt.model.ValidateUrlResponseFull;
@@ -54,6 +65,54 @@ public class DomainApiTest {
     }
     
     /**
+     * Get top-level domain name from URL
+     *
+     * Gets the top-level domain name from a URL, such as mydomain.com.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainGetTopLevelDomainFromUrlTest() {
+        ValidateUrlRequestSyntaxOnly request = null;
+        ValidateUrlResponseSyntaxOnly response = api.domainGetTopLevelDomainFromUrl(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Check if path is a high-risk or vulnerable server administration path
+     *
+     * Check if the input URL or relative path is a server Administration Path, and therefore a risk or vulnerability for remote access.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainIsAdminPathTest() {
+        String value = null;
+        IsAdminPathResponse response = api.domainIsAdminPath(value);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Check a URL for Phishing threats
+     *
+     * Checks if an input URL is at risk of being an Phishing (fake login page, or other page designed to collect information via social engineering) threat or attack.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainPhishingCheckTest() {
+        PhishingCheckRequest request = null;
+        PhishingCheckResponse response = api.domainPhishingCheck(request);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Get WHOIS information for a domain
      *
      * Validate whether a domain name exists, and also return the full WHOIS record for that domain name.  WHOIS records include all the registration details of the domain name, such as information about the domain&#39;s owners.
@@ -86,6 +145,54 @@ public class DomainApiTest {
     }
     
     /**
+     * Check a URL for safety threats
+     *
+     * Checks if an input URL is at risk of being a safety threat through malware, unwanted software, or social engineering threats.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainSafetyCheckTest() {
+        UrlSafetyCheckRequestFull request = null;
+        UrlSafetyCheckResponseFull response = api.domainSafetyCheck(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Check a URL for SSRF threats
+     *
+     * Checks if an input URL is at risk of being an SSRF (Server-side request forgery) threat or attack.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainSsrfCheckTest() {
+        UrlSsrfRequestFull request = null;
+        UrlSsrfResponseFull response = api.domainSsrfCheck(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Check a URL for SSRF threats in batches
+     *
+     * Batch-checks if input URLs are at risk of being an SSRF (Server-side request forgery) threat or attack.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainSsrfCheckBatchTest() {
+        UrlSsrfRequestBatch request = null;
+        UrlSsrfResponseBatch response = api.domainSsrfCheckBatch(request);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Validate a URL fully
      *
      * Validate whether a URL is syntactically valid (does not check endpoint for validity), whether it exists, and whether the endpoint is up and passes virus scan checks.  Accepts various types of input and produces a well-formed URL as output.
@@ -97,6 +204,22 @@ public class DomainApiTest {
     public void domainUrlFullTest() {
         ValidateUrlRequestFull request = null;
         ValidateUrlResponseFull response = api.domainUrlFull(request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Check a URL for HTML embedded SSRF threats
+     *
+     * Checks if an input URL HTML is at risk of containing one or more embedded SSRF (Server-side request forgery) threats or attacks.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void domainUrlHtmlSsrfCheckTest() {
+        UrlHtmlSsrfRequestFull request = null;
+        UrlHtmlSsrfResponseFull response = api.domainUrlHtmlSsrfCheck(request);
 
         // TODO: test validations
     }

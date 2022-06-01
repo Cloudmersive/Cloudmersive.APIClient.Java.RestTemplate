@@ -5,6 +5,7 @@ import com.cloudmersive.client.rt.invoker.ApiClient;
 import com.cloudmersive.client.rt.model.CountryListResult;
 import com.cloudmersive.client.rt.model.GetTimezonesRequest;
 import com.cloudmersive.client.rt.model.GetTimezonesResponse;
+import com.cloudmersive.client.rt.model.NormalizeAddressResponse;
 import com.cloudmersive.client.rt.model.ParseAddressRequest;
 import com.cloudmersive.client.rt.model.ParseAddressResponse;
 import com.cloudmersive.client.rt.model.ReverseGeocodeAddressRequest;
@@ -41,7 +42,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:06.593-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
 @Component("com.cloudmersive.client.rt.AddressApi")
 public class AddressApi {
     private ApiClient apiClient;
@@ -395,6 +396,55 @@ public class AddressApi {
         String[] authNames = new String[] { "Apikey" };
 
         ParameterizedTypeReference<GetTimezonesResponse> returnType = new ParameterizedTypeReference<GetTimezonesResponse>() {};
+        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+    }
+    /**
+     * Normalize a street address
+     * Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+     * <p><b>200</b> - OK
+     * @param input Input parse request (required)
+     * @return NormalizeAddressResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public NormalizeAddressResponse addressNormalizeAddress(ValidateAddressRequest input) throws RestClientException {
+        return addressNormalizeAddressWithHttpInfo(input).getBody();
+    }
+
+    /**
+     * Normalize a street address
+     * Normalizes an input structured street address is valid or invalid.  If the address is valid, also returns the latitude and longitude of the address.  Supports all major international addresses.
+     * <p><b>200</b> - OK
+     * @param input Input parse request (required)
+     * @return ResponseEntity&lt;NormalizeAddressResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<NormalizeAddressResponse> addressNormalizeAddressWithHttpInfo(ValidateAddressRequest input) throws RestClientException {
+        Object postBody = input;
+        
+        // verify the required parameter 'input' is set
+        if (input == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'input' when calling addressNormalizeAddress");
+        }
+        
+        String path = apiClient.expandPath("/validate/address/street-address/normalize", Collections.<String, Object>emptyMap());
+
+        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders headerParams = new HttpHeaders();
+        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] contentTypes = { 
+            "application/json", "text/json"
+         };
+        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+
+        String[] authNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<NormalizeAddressResponse> returnType = new ParameterizedTypeReference<NormalizeAddressResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
     }
     /**

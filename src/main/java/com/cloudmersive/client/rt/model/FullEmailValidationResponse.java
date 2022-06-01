@@ -40,7 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FullEmailValidationResponse.JSON_PROPERTY_IS_DISPOSABLE
 })
 @JsonTypeName("FullEmailValidationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:06.593-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
 public class FullEmailValidationResponse {
   public static final String JSON_PROPERTY_VALID_ADDRESS = "ValidAddress";
   private Boolean validAddress;

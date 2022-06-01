@@ -45,7 +45,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   LeadEnrichmentRequest.JSON_PROPERTY_COMPANY_V_A_T_NUMBER
 })
 @JsonTypeName("LeadEnrichmentRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-14T13:47:06.593-08:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
 public class LeadEnrichmentRequest {
   public static final String JSON_PROPERTY_CONTACT_BUSINESS_EMAIL = "ContactBusinessEmail";
   private String contactBusinessEmail;
