@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for Thumbnail
  */
-public class ThumbnailTest {
+class ThumbnailTest {
     private final Thumbnail model = new Thumbnail();
 
     /**
      * Model tests for Thumbnail
      */
     @Test
-    public void testThumbnail() {
+    void testThumbnail() {
         // TODO: test Thumbnail
     }
 
@@ -43,7 +40,7 @@ public class ThumbnailTest {
      * Test the property 'index'
      */
     @Test
-    public void indexTest() {
+    void indexTest() {
         // TODO: test index
     }
 
@@ -51,7 +48,7 @@ public class ThumbnailTest {
      * Test the property 'content'
      */
     @Test
-    public void contentTest() {
+    void contentTest() {
         // TODO: test content
     }
 

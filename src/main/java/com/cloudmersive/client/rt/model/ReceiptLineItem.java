@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Receipt line item, comprised of a product or item and a price (if available)
  */
-@ApiModel(description = "Receipt line item, comprised of a product or item and a price (if available)")
 @JsonPropertyOrder({
   ReceiptLineItem.JSON_PROPERTY_ITEM_DESCRIPTION,
   ReceiptLineItem.JSON_PROPERTY_ITEM_PRICE
 })
-@JsonTypeName("ReceiptLineItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ReceiptLineItem {
   public static final String JSON_PROPERTY_ITEM_DESCRIPTION = "ItemDescription";
   private String itemDescription;
@@ -41,6 +38,8 @@ public class ReceiptLineItem {
   public static final String JSON_PROPERTY_ITEM_PRICE = "ItemPrice";
   private Double itemPrice;
 
+  public ReceiptLineItem() {
+  }
 
   public ReceiptLineItem itemDescription(String itemDescription) {
     
@@ -48,12 +47,11 @@ public class ReceiptLineItem {
     return this;
   }
 
-   /**
+  /**
    * Description of the item
    * @return itemDescription
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Description of the item")
   @JsonProperty(JSON_PROPERTY_ITEM_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ReceiptLineItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ITEM_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setItemDescription(String itemDescription) {
     this.itemDescription = itemDescription;
   }
-
 
   public ReceiptLineItem itemPrice(Double itemPrice) {
     
@@ -73,12 +72,11 @@ public class ReceiptLineItem {
     return this;
   }
 
-   /**
+  /**
    * Price of the item if available
    * @return itemPrice
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Price of the item if available")
   @JsonProperty(JSON_PROPERTY_ITEM_PRICE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ReceiptLineItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ITEM_PRICE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setItemPrice(Double itemPrice) {
     this.itemPrice = itemPrice;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ReceiptLineItem {
   public int hashCode() {
     return Objects.hash(itemDescription, itemPrice);
   }
-
 
   @Override
   public String toString() {

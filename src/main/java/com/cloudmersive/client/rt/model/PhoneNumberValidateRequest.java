@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to validate a phone number
  */
-@ApiModel(description = "Request to validate a phone number")
 @JsonPropertyOrder({
   PhoneNumberValidateRequest.JSON_PROPERTY_PHONE_NUMBER,
   PhoneNumberValidateRequest.JSON_PROPERTY_DEFAULT_COUNTRY_CODE
 })
-@JsonTypeName("PhoneNumberValidateRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneNumberValidateRequest {
   public static final String JSON_PROPERTY_PHONE_NUMBER = "PhoneNumber";
   private String phoneNumber;
@@ -41,6 +38,8 @@ public class PhoneNumberValidateRequest {
   public static final String JSON_PROPERTY_DEFAULT_COUNTRY_CODE = "DefaultCountryCode";
   private String defaultCountryCode;
 
+  public PhoneNumberValidateRequest() {
+  }
 
   public PhoneNumberValidateRequest phoneNumber(String phoneNumber) {
     
@@ -48,12 +47,11 @@ public class PhoneNumberValidateRequest {
     return this;
   }
 
-   /**
+  /**
    * Raw phone number string to parse as input for validation
    * @return phoneNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Raw phone number string to parse as input for validation")
   @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class PhoneNumberValidateRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
-
 
   public PhoneNumberValidateRequest defaultCountryCode(String defaultCountryCode) {
     
@@ -73,12 +72,11 @@ public class PhoneNumberValidateRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional, default country code.  If left blank, will default to \&quot;US\&quot;.
    * @return defaultCountryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional, default country code.  If left blank, will default to \"US\".")
   @JsonProperty(JSON_PROPERTY_DEFAULT_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class PhoneNumberValidateRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DEFAULT_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDefaultCountryCode(String defaultCountryCode) {
     this.defaultCountryCode = defaultCountryCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class PhoneNumberValidateRequest {
   public int hashCode() {
     return Objects.hash(phoneNumber, defaultCountryCode);
   }
-
 
   @Override
   public String toString() {

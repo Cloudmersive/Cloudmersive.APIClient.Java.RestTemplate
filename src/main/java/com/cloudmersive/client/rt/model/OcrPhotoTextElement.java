@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single text in an OCR document
  */
-@ApiModel(description = "A single text in an OCR document")
 @JsonPropertyOrder({
   OcrPhotoTextElement.JSON_PROPERTY_TEXT,
   OcrPhotoTextElement.JSON_PROPERTY_XLEFT,
@@ -40,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   OcrPhotoTextElement.JSON_PROPERTY_BOUNDING_POINTS,
   OcrPhotoTextElement.JSON_PROPERTY_CONFIDENCE_LEVEL
 })
-@JsonTypeName("OcrPhotoTextElement")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class OcrPhotoTextElement {
   public static final String JSON_PROPERTY_TEXT = "Text";
   private String text;
@@ -59,11 +57,13 @@ public class OcrPhotoTextElement {
   private Integer height;
 
   public static final String JSON_PROPERTY_BOUNDING_POINTS = "BoundingPoints";
-  private List<Point> boundingPoints = null;
+  private List<Point> boundingPoints = new ArrayList<>();
 
   public static final String JSON_PROPERTY_CONFIDENCE_LEVEL = "ConfidenceLevel";
   private Double confidenceLevel;
 
+  public OcrPhotoTextElement() {
+  }
 
   public OcrPhotoTextElement text(String text) {
     
@@ -71,12 +71,11 @@ public class OcrPhotoTextElement {
     return this;
   }
 
-   /**
+  /**
    * Text of the word
    * @return text
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text of the word")
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -85,10 +84,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setText(String text) {
     this.text = text;
   }
-
 
   public OcrPhotoTextElement xleft(Integer xleft) {
     
@@ -96,12 +96,11 @@ public class OcrPhotoTextElement {
     return this;
   }
 
-   /**
+  /**
    * X location of the left edge of the word in pixels
    * @return xleft
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location of the left edge of the word in pixels")
   @JsonProperty(JSON_PROPERTY_XLEFT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,10 +109,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_XLEFT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXleft(Integer xleft) {
     this.xleft = xleft;
   }
-
 
   public OcrPhotoTextElement ytop(Integer ytop) {
     
@@ -121,12 +121,11 @@ public class OcrPhotoTextElement {
     return this;
   }
 
-   /**
+  /**
    * Y location of the top edge of the word in pixels
    * @return ytop
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location of the top edge of the word in pixels")
   @JsonProperty(JSON_PROPERTY_YTOP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,10 +134,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_YTOP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setYtop(Integer ytop) {
     this.ytop = ytop;
   }
-
 
   public OcrPhotoTextElement width(Integer width) {
     
@@ -146,12 +146,11 @@ public class OcrPhotoTextElement {
     return this;
   }
 
-   /**
+  /**
    * Width of the word in pixels
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the word in pixels")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,10 +159,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public OcrPhotoTextElement height(Integer height) {
     
@@ -171,12 +171,11 @@ public class OcrPhotoTextElement {
     return this;
   }
 
-   /**
+  /**
    * Height of the word in pixels
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the word in pixels")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +184,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public OcrPhotoTextElement boundingPoints(List<Point> boundingPoints) {
     
@@ -198,18 +198,17 @@ public class OcrPhotoTextElement {
 
   public OcrPhotoTextElement addBoundingPointsItem(Point boundingPointsItem) {
     if (this.boundingPoints == null) {
-      this.boundingPoints = new ArrayList<Point>();
+      this.boundingPoints = new ArrayList<>();
     }
     this.boundingPoints.add(boundingPointsItem);
     return this;
   }
 
-   /**
+  /**
    * Points that form the bounding polygon around the text
    * @return boundingPoints
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Points that form the bounding polygon around the text")
   @JsonProperty(JSON_PROPERTY_BOUNDING_POINTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -218,10 +217,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOUNDING_POINTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBoundingPoints(List<Point> boundingPoints) {
     this.boundingPoints = boundingPoints;
   }
-
 
   public OcrPhotoTextElement confidenceLevel(Double confidenceLevel) {
     
@@ -229,12 +229,11 @@ public class OcrPhotoTextElement {
     return this;
   }
 
-   /**
+  /**
    * Confidence level of the machine learning result; possible values are 0.0 (lowest accuracy) - 1.0 (highest accuracy)
    * @return confidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence level of the machine learning result; possible values are 0.0 (lowest accuracy) - 1.0 (highest accuracy)")
   @JsonProperty(JSON_PROPERTY_CONFIDENCE_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -243,10 +242,11 @@ public class OcrPhotoTextElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIDENCE_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfidenceLevel(Double confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -270,7 +270,6 @@ public class OcrPhotoTextElement {
   public int hashCode() {
     return Objects.hash(text, xleft, ytop, width, height, boundingPoints, confidenceLevel);
   }
-
 
   @Override
   public String toString() {

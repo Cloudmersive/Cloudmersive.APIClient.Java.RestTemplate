@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result from validating a phone number
  */
-@ApiModel(description = "Result from validating a phone number")
 @JsonPropertyOrder({
   PhoneNumberValidationResponse.JSON_PROPERTY_IS_VALID,
   PhoneNumberValidationResponse.JSON_PROPERTY_SUCCESSFUL,
@@ -38,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   PhoneNumberValidationResponse.JSON_PROPERTY_COUNTRY_CODE,
   PhoneNumberValidationResponse.JSON_PROPERTY_COUNTRY_NAME
 })
-@JsonTypeName("PhoneNumberValidationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhoneNumberValidationResponse {
   public static final String JSON_PROPERTY_IS_VALID = "IsValid";
   private Boolean isValid;
@@ -65,6 +62,8 @@ public class PhoneNumberValidationResponse {
   public static final String JSON_PROPERTY_COUNTRY_NAME = "CountryName";
   private String countryName;
 
+  public PhoneNumberValidationResponse() {
+  }
 
   public PhoneNumberValidationResponse isValid(Boolean isValid) {
     
@@ -72,12 +71,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the phone number is valid, false otherwise
    * @return isValid
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the phone number is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_VALID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,10 +84,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_VALID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsValid(Boolean isValid) {
     this.isValid = isValid;
   }
-
 
   public PhoneNumberValidationResponse successful(Boolean successful) {
     
@@ -97,12 +96,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false if there was an error during validation.  See IsValid for validation result.
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false if there was an error during validation.  See IsValid for validation result.")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,10 +109,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PhoneNumberValidationResponse phoneNumberType(String phoneNumberType) {
     
@@ -122,12 +121,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Type of phone number; possible values are: FixedLine, Mobile, FixedLineOrMobile, TollFree, PremiumRate,   SharedCost, Voip, PersonalNumber, Pager, Uan, Voicemail, Unknown
    * @return phoneNumberType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of phone number; possible values are: FixedLine, Mobile, FixedLineOrMobile, TollFree, PremiumRate,   SharedCost, Voip, PersonalNumber, Pager, Uan, Voicemail, Unknown")
   @JsonProperty(JSON_PROPERTY_PHONE_NUMBER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,10 +134,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PHONE_NUMBER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPhoneNumberType(String phoneNumberType) {
     this.phoneNumberType = phoneNumberType;
   }
-
 
   public PhoneNumberValidationResponse e164Format(String e164Format) {
     
@@ -147,12 +146,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * E.164 format of the phone number
    * @return e164Format
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "E.164 format of the phone number")
   @JsonProperty(JSON_PROPERTY_E164_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,10 +159,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_E164_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setE164Format(String e164Format) {
     this.e164Format = e164Format;
   }
-
 
   public PhoneNumberValidationResponse internationalFormat(String internationalFormat) {
     
@@ -172,12 +171,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Internaltional format of the phone number
    * @return internationalFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Internaltional format of the phone number")
   @JsonProperty(JSON_PROPERTY_INTERNATIONAL_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,10 +184,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INTERNATIONAL_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInternationalFormat(String internationalFormat) {
     this.internationalFormat = internationalFormat;
   }
-
 
   public PhoneNumberValidationResponse nationalFormat(String nationalFormat) {
     
@@ -197,12 +196,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * National format of the phone number
    * @return nationalFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "National format of the phone number")
   @JsonProperty(JSON_PROPERTY_NATIONAL_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,10 +209,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NATIONAL_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNationalFormat(String nationalFormat) {
     this.nationalFormat = nationalFormat;
   }
-
 
   public PhoneNumberValidationResponse countryCode(String countryCode) {
     
@@ -222,12 +221,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Two digit country code of the phone number
    * @return countryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two digit country code of the phone number")
   @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -236,10 +234,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   public PhoneNumberValidationResponse countryName(String countryName) {
     
@@ -247,12 +246,11 @@ public class PhoneNumberValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * User-friendly long name of the country for the phone number
    * @return countryName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User-friendly long name of the country for the phone number")
   @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -261,10 +259,11 @@ public class PhoneNumberValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryName(String countryName) {
     this.countryName = countryName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -289,7 +288,6 @@ public class PhoneNumberValidationResponse {
   public int hashCode() {
     return Objects.hash(isValid, successful, phoneNumberType, e164Format, internationalFormat, nationalFormat, countryCode, countryName);
   }
-
 
   @Override
   public String toString() {

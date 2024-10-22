@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PdfFormField
  */
-public class PdfFormFieldTest {
+class PdfFormFieldTest {
     private final PdfFormField model = new PdfFormField();
 
     /**
      * Model tests for PdfFormField
      */
     @Test
-    public void testPdfFormField() {
+    void testPdfFormField() {
         // TODO: test PdfFormField
     }
 
@@ -43,7 +40,7 @@ public class PdfFormFieldTest {
      * Test the property 'fieldName'
      */
     @Test
-    public void fieldNameTest() {
+    void fieldNameTest() {
         // TODO: test fieldName
     }
 
@@ -51,7 +48,7 @@ public class PdfFormFieldTest {
      * Test the property 'fieldType'
      */
     @Test
-    public void fieldTypeTest() {
+    void fieldTypeTest() {
         // TODO: test fieldType
     }
 
@@ -59,7 +56,7 @@ public class PdfFormFieldTest {
      * Test the property 'fieldValue'
      */
     @Test
-    public void fieldValueTest() {
+    void fieldValueTest() {
         // TODO: test fieldValue
     }
 
@@ -67,7 +64,7 @@ public class PdfFormFieldTest {
      * Test the property 'fieldComboBoxSelectedIndex'
      */
     @Test
-    public void fieldComboBoxSelectedIndexTest() {
+    void fieldComboBoxSelectedIndexTest() {
         // TODO: test fieldComboBoxSelectedIndex
     }
 

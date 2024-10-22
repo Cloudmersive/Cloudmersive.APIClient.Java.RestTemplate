@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for InsertXlsxWorksheetRequest
  */
-public class InsertXlsxWorksheetRequestTest {
+class InsertXlsxWorksheetRequestTest {
     private final InsertXlsxWorksheetRequest model = new InsertXlsxWorksheetRequest();
 
     /**
      * Model tests for InsertXlsxWorksheetRequest
      */
     @Test
-    public void testInsertXlsxWorksheetRequest() {
+    void testInsertXlsxWorksheetRequest() {
         // TODO: test InsertXlsxWorksheetRequest
     }
 
@@ -44,7 +41,7 @@ public class InsertXlsxWorksheetRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class InsertXlsxWorksheetRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class InsertXlsxWorksheetRequestTest {
      * Test the property 'worksheetToInsert'
      */
     @Test
-    public void worksheetToInsertTest() {
+    void worksheetToInsertTest() {
         // TODO: test worksheetToInsert
     }
 

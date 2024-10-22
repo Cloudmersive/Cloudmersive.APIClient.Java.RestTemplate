@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxMetadataPropertiesResponse
  */
-public class GetDocxMetadataPropertiesResponseTest {
+class GetDocxMetadataPropertiesResponseTest {
     private final GetDocxMetadataPropertiesResponse model = new GetDocxMetadataPropertiesResponse();
 
     /**
      * Model tests for GetDocxMetadataPropertiesResponse
      */
     @Test
-    public void testGetDocxMetadataPropertiesResponse() {
+    void testGetDocxMetadataPropertiesResponse() {
         // TODO: test GetDocxMetadataPropertiesResponse
     }
 
@@ -46,7 +44,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'company'
      */
     @Test
-    public void companyTest() {
+    void companyTest() {
         // TODO: test company
     }
 
@@ -54,7 +52,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'manager'
      */
     @Test
-    public void managerTest() {
+    void managerTest() {
         // TODO: test manager
     }
 
@@ -62,7 +60,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'applicationVersion'
      */
     @Test
-    public void applicationVersionTest() {
+    void applicationVersionTest() {
         // TODO: test applicationVersion
     }
 
@@ -70,7 +68,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'wordCount'
      */
     @Test
-    public void wordCountTest() {
+    void wordCountTest() {
         // TODO: test wordCount
     }
 
@@ -78,7 +76,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'lineCount'
      */
     @Test
-    public void lineCountTest() {
+    void lineCountTest() {
         // TODO: test lineCount
     }
 
@@ -86,7 +84,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'paragraphCount'
      */
     @Test
-    public void paragraphCountTest() {
+    void paragraphCountTest() {
         // TODO: test paragraphCount
     }
 
@@ -94,7 +92,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'pageCount'
      */
     @Test
-    public void pageCountTest() {
+    void pageCountTest() {
         // TODO: test pageCount
     }
 
@@ -102,7 +100,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'customProperties'
      */
     @Test
-    public void customPropertiesTest() {
+    void customPropertiesTest() {
         // TODO: test customProperties
     }
 
@@ -110,7 +108,7 @@ public class GetDocxMetadataPropertiesResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 

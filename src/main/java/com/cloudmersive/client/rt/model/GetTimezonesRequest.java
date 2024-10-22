@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to get time zones for a country
  */
-@ApiModel(description = "Request to get time zones for a country")
 @JsonPropertyOrder({
   GetTimezonesRequest.JSON_PROPERTY_COUNTRY_CODE_OR_NAME
 })
-@JsonTypeName("GetTimezonesRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetTimezonesRequest {
   public static final String JSON_PROPERTY_COUNTRY_CODE_OR_NAME = "CountryCodeOrName";
   private String countryCodeOrName;
 
+  public GetTimezonesRequest() {
+  }
 
   public GetTimezonesRequest countryCodeOrName(String countryCodeOrName) {
     
@@ -44,12 +43,11 @@ public class GetTimezonesRequest {
     return this;
   }
 
-   /**
+  /**
    * Can be the two-letter, three-letter country codes or country name
    * @return countryCodeOrName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Can be the two-letter, three-letter country codes or country name")
   @JsonProperty(JSON_PROPERTY_COUNTRY_CODE_OR_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class GetTimezonesRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE_OR_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryCodeOrName(String countryCodeOrName) {
     this.countryCodeOrName = countryCodeOrName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class GetTimezonesRequest {
   public int hashCode() {
     return Objects.hash(countryCodeOrName);
   }
-
 
   @Override
   public String toString() {

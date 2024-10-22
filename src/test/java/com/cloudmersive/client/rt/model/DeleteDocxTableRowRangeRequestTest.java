@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DeleteDocxTableRowRangeRequest
  */
-public class DeleteDocxTableRowRangeRequestTest {
+class DeleteDocxTableRowRangeRequestTest {
     private final DeleteDocxTableRowRangeRequest model = new DeleteDocxTableRowRangeRequest();
 
     /**
      * Model tests for DeleteDocxTableRowRangeRequest
      */
     @Test
-    public void testDeleteDocxTableRowRangeRequest() {
+    void testDeleteDocxTableRowRangeRequest() {
         // TODO: test DeleteDocxTableRowRangeRequest
     }
 
@@ -43,7 +40,7 @@ public class DeleteDocxTableRowRangeRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class DeleteDocxTableRowRangeRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class DeleteDocxTableRowRangeRequestTest {
      * Test the property 'tablePath'
      */
     @Test
-    public void tablePathTest() {
+    void tablePathTest() {
         // TODO: test tablePath
     }
 
@@ -67,7 +64,7 @@ public class DeleteDocxTableRowRangeRequestTest {
      * Test the property 'tableRowRowIndexStart'
      */
     @Test
-    public void tableRowRowIndexStartTest() {
+    void tableRowRowIndexStartTest() {
         // TODO: test tableRowRowIndexStart
     }
 
@@ -75,7 +72,7 @@ public class DeleteDocxTableRowRangeRequestTest {
      * Test the property 'tableRowRowIndexEnd'
      */
     @Test
-    public void tableRowRowIndexEndTest() {
+    void tableRowRowIndexEndTest() {
         // TODO: test tableRowRowIndexEnd
     }
 

@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpFormDataParameter
  */
-public class HttpFormDataParameterTest {
+class HttpFormDataParameterTest {
     private final HttpFormDataParameter model = new HttpFormDataParameter();
 
     /**
      * Model tests for HttpFormDataParameter
      */
     @Test
-    public void testHttpFormDataParameter() {
+    void testHttpFormDataParameter() {
         // TODO: test HttpFormDataParameter
     }
 
@@ -44,7 +41,7 @@ public class HttpFormDataParameterTest {
      * Test the property 'parameterName'
      */
     @Test
-    public void parameterNameTest() {
+    void parameterNameTest() {
         // TODO: test parameterName
     }
 
@@ -52,7 +49,7 @@ public class HttpFormDataParameterTest {
      * Test the property 'parameterTextValue'
      */
     @Test
-    public void parameterTextValueTest() {
+    void parameterTextValueTest() {
         // TODO: test parameterTextValue
     }
 
@@ -60,7 +57,7 @@ public class HttpFormDataParameterTest {
      * Test the property 'parameterFileContents'
      */
     @Test
-    public void parameterFileContentsTest() {
+    void parameterFileContentsTest() {
         // TODO: test parameterFileContents
     }
 
@@ -68,7 +65,7 @@ public class HttpFormDataParameterTest {
      * Test the property 'useOutputFromPreviousTask'
      */
     @Test
-    public void useOutputFromPreviousTaskTest() {
+    void useOutputFromPreviousTaskTest() {
         // TODO: test useOutputFromPreviousTask
     }
 

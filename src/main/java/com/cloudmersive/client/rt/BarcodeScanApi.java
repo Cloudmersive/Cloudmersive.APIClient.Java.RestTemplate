@@ -1,7 +1,9 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
+import com.cloudmersive.client.rt.model.BarcodeScanQRAdvancedResult;
 import com.cloudmersive.client.rt.model.BarcodeScanResult;
 import java.io.File;
 
@@ -26,26 +28,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:34.231-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.BarcodeScanApi")
-public class BarcodeScanApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:12.746969900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class BarcodeScanApi extends BaseApi {
 
     public BarcodeScanApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public BarcodeScanApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -69,35 +60,115 @@ public class BarcodeScanApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<BarcodeScanResult> barcodeScanImageWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling barcodeScanImage");
         }
         
-        String path = apiClient.expandPath("/barcode/scan/image", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<BarcodeScanResult> returnType = new ParameterizedTypeReference<BarcodeScanResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<BarcodeScanResult> localReturnType = new ParameterizedTypeReference<BarcodeScanResult>() {};
+        return apiClient.invokeAPI("/barcode/scan/image", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Advanced AI scan and recognition of an image of one or more QR barcodes
+     * Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+     * <p><b>200</b> - OK
+     * @param imageFile Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
+     * @param preprocessing Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)
+     * @return BarcodeScanQRAdvancedResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public BarcodeScanQRAdvancedResult barcodeScanImageAdvancedQR(org.springframework.core.io.Resource imageFile, String preprocessing) throws RestClientException {
+        return barcodeScanImageAdvancedQRWithHttpInfo(imageFile, preprocessing).getBody();
+    }
+
+    /**
+     * Advanced AI scan and recognition of an image of one or more QR barcodes
+     * Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+     * <p><b>200</b> - OK
+     * @param imageFile Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. (required)
+     * @param preprocessing Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)
+     * @return ResponseEntity&lt;BarcodeScanQRAdvancedResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<BarcodeScanQRAdvancedResult> barcodeScanImageAdvancedQRWithHttpInfo(org.springframework.core.io.Resource imageFile, String preprocessing) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'imageFile' is set
+        if (imageFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling barcodeScanImageAdvancedQR");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (preprocessing != null)
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+
+        if (imageFile != null)
+            localVarFormParams.add("imageFile", imageFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<BarcodeScanQRAdvancedResult> localReturnType = new ParameterizedTypeReference<BarcodeScanQRAdvancedResult>() {};
+        return apiClient.invokeAPI("/barcode/scan/image/advanced/qr", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

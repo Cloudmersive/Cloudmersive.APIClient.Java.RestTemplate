@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single line of a Text document
  */
-@ApiModel(description = "A single line of a Text document")
 @JsonPropertyOrder({
   TextDocumentLine.JSON_PROPERTY_LINE_NUMBER,
   TextDocumentLine.JSON_PROPERTY_LINE_CONTENTS
 })
-@JsonTypeName("TextDocumentLine")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TextDocumentLine {
   public static final String JSON_PROPERTY_LINE_NUMBER = "LineNumber";
   private Integer lineNumber;
@@ -41,6 +38,8 @@ public class TextDocumentLine {
   public static final String JSON_PROPERTY_LINE_CONTENTS = "LineContents";
   private String lineContents;
 
+  public TextDocumentLine() {
+  }
 
   public TextDocumentLine lineNumber(Integer lineNumber) {
     
@@ -48,12 +47,11 @@ public class TextDocumentLine {
     return this;
   }
 
-   /**
+  /**
    * The 1-based line index of the line
    * @return lineNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The 1-based line index of the line")
   @JsonProperty(JSON_PROPERTY_LINE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class TextDocumentLine {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLineNumber(Integer lineNumber) {
     this.lineNumber = lineNumber;
   }
-
 
   public TextDocumentLine lineContents(String lineContents) {
     
@@ -73,12 +72,11 @@ public class TextDocumentLine {
     return this;
   }
 
-   /**
+  /**
    * The text contents of a single line of a text file
    * @return lineContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The text contents of a single line of a text file")
   @JsonProperty(JSON_PROPERTY_LINE_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class TextDocumentLine {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINE_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLineContents(String lineContents) {
     this.lineContents = lineContents;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class TextDocumentLine {
   public int hashCode() {
     return Objects.hash(lineNumber, lineContents);
   }
-
 
   @Override
   public String toString() {

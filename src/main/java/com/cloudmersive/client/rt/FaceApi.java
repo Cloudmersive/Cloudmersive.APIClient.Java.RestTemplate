@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import com.cloudmersive.client.rt.model.AgeDetectionResult;
 import com.cloudmersive.client.rt.model.FaceCompareResponse;
@@ -30,26 +31,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.FaceApi")
-public class FaceApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class FaceApi extends BaseApi {
 
     public FaceApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public FaceApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -75,7 +65,7 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<FaceCompareResponse> faceCompareWithHttpInfo(org.springframework.core.io.Resource inputImage, org.springframework.core.io.Resource matchFace) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputImage' is set
         if (inputImage == null) {
@@ -87,31 +77,30 @@ public class FaceApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'matchFace' when calling faceCompare");
         }
         
-        String path = apiClient.expandPath("/image/face/compare-and-match", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputImage != null)
-            formParams.add("inputImage", inputImage);
+            localVarFormParams.add("inputImage", inputImage);
         if (matchFace != null)
-            formParams.add("matchFace", matchFace);
+            localVarFormParams.add("matchFace", matchFace);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<FaceCompareResponse> returnType = new ParameterizedTypeReference<FaceCompareResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<FaceCompareResponse> localReturnType = new ParameterizedTypeReference<FaceCompareResponse>() {};
+        return apiClient.invokeAPI("/image/face/compare-and-match", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Crop image to face with square crop
@@ -134,36 +123,35 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> faceCropFirstWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling faceCropFirst");
         }
         
-        String path = apiClient.expandPath("/image/face/crop/first", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/image/face/crop/first", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Crop image to face with round crop
@@ -186,36 +174,35 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> faceCropFirstRoundWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling faceCropFirstRound");
         }
         
-        String path = apiClient.expandPath("/image/face/crop/first/round", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/image/face/crop/first/round", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Detect the age of people in an image
@@ -238,36 +225,35 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AgeDetectionResult> faceDetectAgeWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling faceDetectAge");
         }
         
-        String path = apiClient.expandPath("/image/face/detect-age", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<AgeDetectionResult> returnType = new ParameterizedTypeReference<AgeDetectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<AgeDetectionResult> localReturnType = new ParameterizedTypeReference<AgeDetectionResult>() {};
+        return apiClient.invokeAPI("/image/face/detect-age", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Detect the gender of people in an image
@@ -290,36 +276,35 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<GenderDetectionResult> faceDetectGenderWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling faceDetectGender");
         }
         
-        String path = apiClient.expandPath("/image/face/detect-gender", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<GenderDetectionResult> returnType = new ParameterizedTypeReference<GenderDetectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<GenderDetectionResult> localReturnType = new ParameterizedTypeReference<GenderDetectionResult>() {};
+        return apiClient.invokeAPI("/image/face/detect-gender", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Detect and find faces in an image
@@ -342,36 +327,35 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<FaceLocateResponse> faceLocateWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling faceLocate");
         }
         
-        String path = apiClient.expandPath("/image/face/locate", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<FaceLocateResponse> returnType = new ParameterizedTypeReference<FaceLocateResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<FaceLocateResponse> localReturnType = new ParameterizedTypeReference<FaceLocateResponse>() {};
+        return apiClient.invokeAPI("/image/face/locate", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Detect and find faces and landmarks eyes and nose and mouth in image
@@ -394,35 +378,59 @@ public class FaceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<FaceLocateWithLandmarksResponse> faceLocateWithLandmarksWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling faceLocateWithLandmarks");
         }
         
-        String path = apiClient.expandPath("/image/face/locate-with-landmarks", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<FaceLocateWithLandmarksResponse> returnType = new ParameterizedTypeReference<FaceLocateWithLandmarksResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<FaceLocateWithLandmarksResponse> localReturnType = new ParameterizedTypeReference<FaceLocateWithLandmarksResponse>() {};
+        return apiClient.invokeAPI("/image/face/locate-with-landmarks", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

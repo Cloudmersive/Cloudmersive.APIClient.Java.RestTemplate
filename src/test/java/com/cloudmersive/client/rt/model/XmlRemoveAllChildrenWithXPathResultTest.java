@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XmlRemoveAllChildrenWithXPathResult
  */
-public class XmlRemoveAllChildrenWithXPathResultTest {
+class XmlRemoveAllChildrenWithXPathResultTest {
     private final XmlRemoveAllChildrenWithXPathResult model = new XmlRemoveAllChildrenWithXPathResult();
 
     /**
      * Model tests for XmlRemoveAllChildrenWithXPathResult
      */
     @Test
-    public void testXmlRemoveAllChildrenWithXPathResult() {
+    void testXmlRemoveAllChildrenWithXPathResult() {
         // TODO: test XmlRemoveAllChildrenWithXPathResult
     }
 
@@ -43,7 +40,7 @@ public class XmlRemoveAllChildrenWithXPathResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class XmlRemoveAllChildrenWithXPathResultTest {
      * Test the property 'resultingXmlDocument'
      */
     @Test
-    public void resultingXmlDocumentTest() {
+    void resultingXmlDocumentTest() {
         // TODO: test resultingXmlDocument
     }
 
@@ -59,7 +56,7 @@ public class XmlRemoveAllChildrenWithXPathResultTest {
      * Test the property 'nodesEditedCount'
      */
     @Test
-    public void nodesEditedCountTest() {
+    void nodesEditedCountTest() {
         // TODO: test nodesEditedCount
     }
 

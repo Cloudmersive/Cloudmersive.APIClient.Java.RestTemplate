@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PhoneNumberValidationResponse
  */
-public class PhoneNumberValidationResponseTest {
+class PhoneNumberValidationResponseTest {
     private final PhoneNumberValidationResponse model = new PhoneNumberValidationResponse();
 
     /**
      * Model tests for PhoneNumberValidationResponse
      */
     @Test
-    public void testPhoneNumberValidationResponse() {
+    void testPhoneNumberValidationResponse() {
         // TODO: test PhoneNumberValidationResponse
     }
 
@@ -43,7 +40,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'isValid'
      */
     @Test
-    public void isValidTest() {
+    void isValidTest() {
         // TODO: test isValid
     }
 
@@ -51,7 +48,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -59,7 +56,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'phoneNumberType'
      */
     @Test
-    public void phoneNumberTypeTest() {
+    void phoneNumberTypeTest() {
         // TODO: test phoneNumberType
     }
 
@@ -67,7 +64,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'e164Format'
      */
     @Test
-    public void e164FormatTest() {
+    void e164FormatTest() {
         // TODO: test e164Format
     }
 
@@ -75,7 +72,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'internationalFormat'
      */
     @Test
-    public void internationalFormatTest() {
+    void internationalFormatTest() {
         // TODO: test internationalFormat
     }
 
@@ -83,7 +80,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'nationalFormat'
      */
     @Test
-    public void nationalFormatTest() {
+    void nationalFormatTest() {
         // TODO: test nationalFormat
     }
 
@@ -91,7 +88,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 
@@ -99,7 +96,7 @@ public class PhoneNumberValidationResponseTest {
      * Test the property 'countryName'
      */
     @Test
-    public void countryNameTest() {
+    void countryNameTest() {
         // TODO: test countryName
     }
 

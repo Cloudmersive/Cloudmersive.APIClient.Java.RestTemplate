@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import com.cloudmersive.client.rt.model.AvailableCurrencyResponse;
 import com.cloudmersive.client.rt.model.ConvertedCurrencyResult;
@@ -27,26 +28,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.CurrencyExchangeApi")
-public class CurrencyExchangeApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:08.451112300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CurrencyExchangeApi extends BaseApi {
 
     public CurrencyExchangeApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public CurrencyExchangeApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -74,7 +64,7 @@ public class CurrencyExchangeApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ConvertedCurrencyResult> currencyExchangeConvertCurrencyWithHttpInfo(String source, String destination, Double sourcePrice) throws RestClientException {
-        Object postBody = sourcePrice;
+        Object localVarPostBody = sourcePrice;
         
         // verify the required parameter 'source' is set
         if (source == null) {
@@ -95,26 +85,25 @@ public class CurrencyExchangeApi {
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("source", source);
         uriVariables.put("destination", destination);
-        String path = apiClient.expandPath("/currency/exchange-rates/convert/{source}/to/{destination}", uriVariables);
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ConvertedCurrencyResult> returnType = new ParameterizedTypeReference<ConvertedCurrencyResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ConvertedCurrencyResult> localReturnType = new ParameterizedTypeReference<ConvertedCurrencyResult>() {};
+        return apiClient.invokeAPI("/currency/exchange-rates/convert/{source}/to/{destination}", HttpMethod.POST, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Get a list of available currencies and corresponding countries
@@ -135,26 +124,25 @@ public class CurrencyExchangeApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AvailableCurrencyResponse> currencyExchangeGetAvailableCurrenciesWithHttpInfo() throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/currency/exchange-rates/list-available", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = {  };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<AvailableCurrencyResponse> returnType = new ParameterizedTypeReference<AvailableCurrencyResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<AvailableCurrencyResponse> localReturnType = new ParameterizedTypeReference<AvailableCurrencyResponse>() {};
+        return apiClient.invokeAPI("/currency/exchange-rates/list-available", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Gets the exchange rate from the source currency into the destination currency
@@ -179,7 +167,7 @@ public class CurrencyExchangeApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ExchangeRateResult> currencyExchangeGetExchangeRateWithHttpInfo(String source, String destination) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'source' is set
         if (source == null) {
@@ -195,23 +183,45 @@ public class CurrencyExchangeApi {
         final Map<String, Object> uriVariables = new HashMap<String, Object>();
         uriVariables.put("source", source);
         uriVariables.put("destination", destination);
-        String path = apiClient.expandPath("/currency/exchange-rates/get/{source}/to/{destination}", uriVariables);
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = {  };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ExchangeRateResult> returnType = new ParameterizedTypeReference<ExchangeRateResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ExchangeRateResult> localReturnType = new ParameterizedTypeReference<ExchangeRateResult>() {};
+        return apiClient.invokeAPI("/currency/exchange-rates/get/{source}/to/{destination}", HttpMethod.POST, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

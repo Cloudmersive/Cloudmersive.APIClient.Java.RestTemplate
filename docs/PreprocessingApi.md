@@ -2,14 +2,14 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**preprocessingBinarize**](PreprocessingApi.md#preprocessingBinarize) | **POST** /ocr/preprocessing/image/binarize | Convert an image of text into a binarized (light and dark) view
-[**preprocessingBinarizeAdvanced**](PreprocessingApi.md#preprocessingBinarizeAdvanced) | **POST** /ocr/preprocessing/image/binarize/advanced | Convert an image of text into a binary (light and dark) view with ML
-[**preprocessingGetPageAngle**](PreprocessingApi.md#preprocessingGetPageAngle) | **POST** /ocr/preprocessing/image/get-page-angle | Get the angle of the page / document / receipt
-[**preprocessingUnrotate**](PreprocessingApi.md#preprocessingUnrotate) | **POST** /ocr/preprocessing/image/unrotate | Detect and unrotate a document image
-[**preprocessingUnrotateAdvanced**](PreprocessingApi.md#preprocessingUnrotateAdvanced) | **POST** /ocr/preprocessing/image/unrotate/advanced | Detect and unrotate a document image (advanced)
-[**preprocessingUnskew**](PreprocessingApi.md#preprocessingUnskew) | **POST** /ocr/preprocessing/image/unskew | Detect and unskew a photo of a document
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**preprocessingBinarize**](PreprocessingApi.md#preprocessingBinarize) | **POST** /ocr/preprocessing/image/binarize | Convert an image of text into a binarized (light and dark) view |
+| [**preprocessingBinarizeAdvanced**](PreprocessingApi.md#preprocessingBinarizeAdvanced) | **POST** /ocr/preprocessing/image/binarize/advanced | Convert an image of text into a binary (light and dark) view with ML |
+| [**preprocessingGetPageAngle**](PreprocessingApi.md#preprocessingGetPageAngle) | **POST** /ocr/preprocessing/image/get-page-angle | Get the angle of the page / document / receipt |
+| [**preprocessingUnrotate**](PreprocessingApi.md#preprocessingUnrotate) | **POST** /ocr/preprocessing/image/unrotate | Detect and unrotate a document image |
+| [**preprocessingUnrotateAdvanced**](PreprocessingApi.md#preprocessingUnrotateAdvanced) | **POST** /ocr/preprocessing/image/unrotate/advanced | Detect and unrotate a document image (advanced) |
+| [**preprocessingUnskew**](PreprocessingApi.md#preprocessingUnskew) | **POST** /ocr/preprocessing/image/unskew | Detect and unskew a photo of a document |
 
 
 
@@ -62,9 +62,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -78,6 +78,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -134,9 +135,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -150,6 +151,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -206,9 +208,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -222,6 +224,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -278,9 +281,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -294,6 +297,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -350,9 +354,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -366,6 +370,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -422,9 +427,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -438,6 +443,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

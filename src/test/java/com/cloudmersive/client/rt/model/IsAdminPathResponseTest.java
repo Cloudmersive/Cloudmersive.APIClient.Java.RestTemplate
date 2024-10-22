@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for IsAdminPathResponse
  */
-public class IsAdminPathResponseTest {
+class IsAdminPathResponseTest {
     private final IsAdminPathResponse model = new IsAdminPathResponse();
 
     /**
      * Model tests for IsAdminPathResponse
      */
     @Test
-    public void testIsAdminPathResponse() {
+    void testIsAdminPathResponse() {
         // TODO: test IsAdminPathResponse
     }
 
@@ -43,7 +40,7 @@ public class IsAdminPathResponseTest {
      * Test the property 'isAdminPathNode'
      */
     @Test
-    public void isAdminPathNodeTest() {
+    void isAdminPathNodeTest() {
         // TODO: test isAdminPathNode
     }
 
@@ -51,7 +48,7 @@ public class IsAdminPathResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 

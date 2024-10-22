@@ -17,9 +17,12 @@ import com.cloudmersive.client.rt.model.GetWordsRequest;
 import com.cloudmersive.client.rt.model.GetWordsResponse;
 import com.cloudmersive.client.rt.model.SentenceSegmentationRequest;
 import com.cloudmersive.client.rt.model.SentenceSegmentationResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +31,8 @@ import java.util.Map;
 /**
  * API tests for SegmentationApi
  */
-@Ignore
-public class SegmentationApiTest {
+@Disabled
+class SegmentationApiTest {
 
     private final SegmentationApi api = new SegmentationApi();
 
@@ -39,12 +42,13 @@ public class SegmentationApiTest {
      *
      * Segment an input string into separate sentences, output result as a string.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void segmentationGetSentencesTest() {
+    void segmentationGetSentencesTest() {
         SentenceSegmentationRequest input = null;
+
         SentenceSegmentationResponse response = api.segmentationGetSentences(input);
 
         // TODO: test validations
@@ -55,12 +59,13 @@ public class SegmentationApiTest {
      *
      * Get the component words in an input string
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void segmentationGetWordsTest() {
+    void segmentationGetWordsTest() {
         GetWordsRequest input = null;
+
         GetWordsResponse response = api.segmentationGetWords(input);
 
         // TODO: test validations

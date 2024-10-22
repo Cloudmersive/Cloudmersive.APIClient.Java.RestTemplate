@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of base 64 encoding
  */
-@ApiModel(description = "Result of base 64 encoding")
 @JsonPropertyOrder({
   Base64EncodeResponse.JSON_PROPERTY_SUCCESSFUL,
   Base64EncodeResponse.JSON_PROPERTY_BASE64_TEXT_CONTENT_RESULT
 })
-@JsonTypeName("Base64EncodeResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Base64EncodeResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class Base64EncodeResponse {
   public static final String JSON_PROPERTY_BASE64_TEXT_CONTENT_RESULT = "Base64TextContentResult";
   private String base64TextContentResult;
 
+  public Base64EncodeResponse() {
+  }
 
   public Base64EncodeResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class Base64EncodeResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class Base64EncodeResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public Base64EncodeResponse base64TextContentResult(String base64TextContentResult) {
     
@@ -73,12 +72,11 @@ public class Base64EncodeResponse {
     return this;
   }
 
-   /**
+  /**
    * Result of performing a base 64 encoding operation, a text string representing the encoded original file content
    * @return base64TextContentResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result of performing a base 64 encoding operation, a text string representing the encoded original file content")
   @JsonProperty(JSON_PROPERTY_BASE64_TEXT_CONTENT_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class Base64EncodeResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BASE64_TEXT_CONTENT_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBase64TextContentResult(String base64TextContentResult) {
     this.base64TextContentResult = base64TextContentResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class Base64EncodeResponse {
   public int hashCode() {
     return Objects.hash(successful, base64TextContentResult);
   }
-
 
   @Override
   public String toString() {

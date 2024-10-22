@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PersonWithGender
  */
-public class PersonWithGenderTest {
+class PersonWithGenderTest {
     private final PersonWithGender model = new PersonWithGender();
 
     /**
      * Model tests for PersonWithGender
      */
     @Test
-    public void testPersonWithGender() {
+    void testPersonWithGender() {
         // TODO: test PersonWithGender
     }
 
@@ -44,7 +41,7 @@ public class PersonWithGenderTest {
      * Test the property 'faceLocation'
      */
     @Test
-    public void faceLocationTest() {
+    void faceLocationTest() {
         // TODO: test faceLocation
     }
 
@@ -52,7 +49,7 @@ public class PersonWithGenderTest {
      * Test the property 'genderClassificationConfidence'
      */
     @Test
-    public void genderClassificationConfidenceTest() {
+    void genderClassificationConfidenceTest() {
         // TODO: test genderClassificationConfidence
     }
 
@@ -60,7 +57,7 @@ public class PersonWithGenderTest {
      * Test the property 'genderClass'
      */
     @Test
-    public void genderClassTest() {
+    void genderClassTest() {
         // TODO: test genderClass
     }
 

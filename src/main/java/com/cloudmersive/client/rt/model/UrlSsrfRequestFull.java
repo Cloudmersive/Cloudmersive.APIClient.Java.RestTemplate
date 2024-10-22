@@ -20,29 +20,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to determine if a URL is an SSRF threat check
  */
-@ApiModel(description = "Request to determine if a URL is an SSRF threat check")
 @JsonPropertyOrder({
   UrlSsrfRequestFull.JSON_PROPERTY_U_R_L,
   UrlSsrfRequestFull.JSON_PROPERTY_BLOCKED_DOMAINS
 })
-@JsonTypeName("UrlSsrfRequestFull")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UrlSsrfRequestFull {
   public static final String JSON_PROPERTY_U_R_L = "URL";
   private String URL;
 
   public static final String JSON_PROPERTY_BLOCKED_DOMAINS = "BlockedDomains";
-  private List<String> blockedDomains = null;
+  private List<String> blockedDomains = new ArrayList<>();
 
+  public UrlSsrfRequestFull() {
+  }
 
   public UrlSsrfRequestFull URL(String URL) {
     
@@ -50,12 +50,11 @@ public class UrlSsrfRequestFull {
     return this;
   }
 
-   /**
+  /**
    * URL to validate
    * @return URL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to validate")
   @JsonProperty(JSON_PROPERTY_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -64,10 +63,11 @@ public class UrlSsrfRequestFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setURL(String URL) {
     this.URL = URL;
   }
-
 
   public UrlSsrfRequestFull blockedDomains(List<String> blockedDomains) {
     
@@ -77,18 +77,17 @@ public class UrlSsrfRequestFull {
 
   public UrlSsrfRequestFull addBlockedDomainsItem(String blockedDomainsItem) {
     if (this.blockedDomains == null) {
-      this.blockedDomains = new ArrayList<String>();
+      this.blockedDomains = new ArrayList<>();
     }
     this.blockedDomains.add(blockedDomainsItem);
     return this;
   }
 
-   /**
+  /**
    * Top level domains that you do not want to allow access to, e.g. mydomain.com - will block all subdomains as well
    * @return blockedDomains
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Top level domains that you do not want to allow access to, e.g. mydomain.com - will block all subdomains as well")
   @JsonProperty(JSON_PROPERTY_BLOCKED_DOMAINS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +96,11 @@ public class UrlSsrfRequestFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BLOCKED_DOMAINS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBlockedDomains(List<String> blockedDomains) {
     this.blockedDomains = blockedDomains;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -119,7 +119,6 @@ public class UrlSsrfRequestFull {
   public int hashCode() {
     return Objects.hash(URL, blockedDomains);
   }
-
 
   @Override
   public String toString() {

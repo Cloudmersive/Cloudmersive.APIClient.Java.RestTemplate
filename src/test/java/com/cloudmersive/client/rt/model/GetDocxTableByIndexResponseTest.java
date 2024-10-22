@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxTableByIndexResponse
  */
-public class GetDocxTableByIndexResponseTest {
+class GetDocxTableByIndexResponseTest {
     private final GetDocxTableByIndexResponse model = new GetDocxTableByIndexResponse();
 
     /**
      * Model tests for GetDocxTableByIndexResponse
      */
     @Test
-    public void testGetDocxTableByIndexResponse() {
+    void testGetDocxTableByIndexResponse() {
         // TODO: test GetDocxTableByIndexResponse
     }
 
@@ -44,7 +41,7 @@ public class GetDocxTableByIndexResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -52,7 +49,7 @@ public class GetDocxTableByIndexResponseTest {
      * Test the property 'table'
      */
     @Test
-    public void tableTest() {
+    void tableTest() {
         // TODO: test table
     }
 

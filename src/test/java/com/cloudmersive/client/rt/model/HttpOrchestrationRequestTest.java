@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpOrchestrationRequest
  */
-public class HttpOrchestrationRequestTest {
+class HttpOrchestrationRequestTest {
     private final HttpOrchestrationRequest model = new HttpOrchestrationRequest();
 
     /**
      * Model tests for HttpOrchestrationRequest
      */
     @Test
-    public void testHttpOrchestrationRequest() {
+    void testHttpOrchestrationRequest() {
         // TODO: test HttpOrchestrationRequest
     }
 
@@ -46,7 +44,7 @@ public class HttpOrchestrationRequestTest {
      * Test the property 'httpTasks'
      */
     @Test
-    public void httpTasksTest() {
+    void httpTasksTest() {
         // TODO: test httpTasks
     }
 

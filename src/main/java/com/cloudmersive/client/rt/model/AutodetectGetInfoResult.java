@@ -21,17 +21,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of an autodetect/get-info operation
  */
-@ApiModel(description = "Result of an autodetect/get-info operation")
 @JsonPropertyOrder({
   AutodetectGetInfoResult.JSON_PROPERTY_SUCCESSFUL,
   AutodetectGetInfoResult.JSON_PROPERTY_DETECTED_FILE_EXTENSION,
@@ -41,8 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   AutodetectGetInfoResult.JSON_PROPERTY_DATE_MODIFIED,
   AutodetectGetInfoResult.JSON_PROPERTY_ALTERNATE_FILE_TYPE_CANDIDATES
 })
-@JsonTypeName("AutodetectGetInfoResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AutodetectGetInfoResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -63,8 +61,10 @@ public class AutodetectGetInfoResult {
   private OffsetDateTime dateModified;
 
   public static final String JSON_PROPERTY_ALTERNATE_FILE_TYPE_CANDIDATES = "AlternateFileTypeCandidates";
-  private List<AlternateFileFormatCandidate> alternateFileTypeCandidates = null;
+  private List<AlternateFileFormatCandidate> alternateFileTypeCandidates = new ArrayList<>();
 
+  public AutodetectGetInfoResult() {
+  }
 
   public AutodetectGetInfoResult successful(Boolean successful) {
     
@@ -72,12 +72,11 @@ public class AutodetectGetInfoResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,10 +85,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public AutodetectGetInfoResult detectedFileExtension(String detectedFileExtension) {
     
@@ -97,12 +97,11 @@ public class AutodetectGetInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Detected file extension of the file format, with a leading period
    * @return detectedFileExtension
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Detected file extension of the file format, with a leading period")
   @JsonProperty(JSON_PROPERTY_DETECTED_FILE_EXTENSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,10 +110,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_FILE_EXTENSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedFileExtension(String detectedFileExtension) {
     this.detectedFileExtension = detectedFileExtension;
   }
-
 
   public AutodetectGetInfoResult detectedMimeType(String detectedMimeType) {
     
@@ -122,12 +122,11 @@ public class AutodetectGetInfoResult {
     return this;
   }
 
-   /**
+  /**
    * MIME type of this file extension
    * @return detectedMimeType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "MIME type of this file extension")
   @JsonProperty(JSON_PROPERTY_DETECTED_MIME_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,10 +135,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_MIME_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedMimeType(String detectedMimeType) {
     this.detectedMimeType = detectedMimeType;
   }
-
 
   public AutodetectGetInfoResult pageCount(Long pageCount) {
     
@@ -147,12 +147,11 @@ public class AutodetectGetInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Number of pages in a page-based document; for presentations, this is the number of slides and for a spreadsheet this is the number of worksheets.  Contains 0 when the page count cannot be determined, or if the concept of page count does not apply (e.g. for an image)
    * @return pageCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of pages in a page-based document; for presentations, this is the number of slides and for a spreadsheet this is the number of worksheets.  Contains 0 when the page count cannot be determined, or if the concept of page count does not apply (e.g. for an image)")
   @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,10 +160,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageCount(Long pageCount) {
     this.pageCount = pageCount;
   }
-
 
   public AutodetectGetInfoResult author(String author) {
     
@@ -172,12 +172,11 @@ public class AutodetectGetInfoResult {
     return this;
   }
 
-   /**
+  /**
    * User name of the creator/author of the document, if available, null if not available
    * @return author
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User name of the creator/author of the document, if available, null if not available")
   @JsonProperty(JSON_PROPERTY_AUTHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,10 +185,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAuthor(String author) {
     this.author = author;
   }
-
 
   public AutodetectGetInfoResult dateModified(OffsetDateTime dateModified) {
     
@@ -197,12 +197,11 @@ public class AutodetectGetInfoResult {
     return this;
   }
 
-   /**
+  /**
    * The timestamp that the document was last modified, if available, null if not available
    * @return dateModified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The timestamp that the document was last modified, if available, null if not available")
   @JsonProperty(JSON_PROPERTY_DATE_MODIFIED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,10 +210,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_MODIFIED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateModified(OffsetDateTime dateModified) {
     this.dateModified = dateModified;
   }
-
 
   public AutodetectGetInfoResult alternateFileTypeCandidates(List<AlternateFileFormatCandidate> alternateFileTypeCandidates) {
     
@@ -224,18 +224,17 @@ public class AutodetectGetInfoResult {
 
   public AutodetectGetInfoResult addAlternateFileTypeCandidatesItem(AlternateFileFormatCandidate alternateFileTypeCandidatesItem) {
     if (this.alternateFileTypeCandidates == null) {
-      this.alternateFileTypeCandidates = new ArrayList<AlternateFileFormatCandidate>();
+      this.alternateFileTypeCandidates = new ArrayList<>();
     }
     this.alternateFileTypeCandidates.add(alternateFileTypeCandidatesItem);
     return this;
   }
 
-   /**
+  /**
    * Alternate file type options and their probability
    * @return alternateFileTypeCandidates
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Alternate file type options and their probability")
   @JsonProperty(JSON_PROPERTY_ALTERNATE_FILE_TYPE_CANDIDATES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -244,10 +243,11 @@ public class AutodetectGetInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALTERNATE_FILE_TYPE_CANDIDATES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAlternateFileTypeCandidates(List<AlternateFileFormatCandidate> alternateFileTypeCandidates) {
     this.alternateFileTypeCandidates = alternateFileTypeCandidates;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -271,7 +271,6 @@ public class AutodetectGetInfoResult {
   public int hashCode() {
     return Objects.hash(successful, detectedFileExtension, detectedMimeType, pageCount, author, dateModified, alternateFileTypeCandidates);
   }
-
 
   @Override
   public String toString() {

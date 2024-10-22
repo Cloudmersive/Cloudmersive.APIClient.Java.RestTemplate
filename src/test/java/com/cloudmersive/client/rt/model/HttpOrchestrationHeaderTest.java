@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpOrchestrationHeader
  */
-public class HttpOrchestrationHeaderTest {
+class HttpOrchestrationHeaderTest {
     private final HttpOrchestrationHeader model = new HttpOrchestrationHeader();
 
     /**
      * Model tests for HttpOrchestrationHeader
      */
     @Test
-    public void testHttpOrchestrationHeader() {
+    void testHttpOrchestrationHeader() {
         // TODO: test HttpOrchestrationHeader
     }
 
@@ -44,7 +41,7 @@ public class HttpOrchestrationHeaderTest {
      * Test the property 'headerName'
      */
     @Test
-    public void headerNameTest() {
+    void headerNameTest() {
         // TODO: test headerName
     }
 
@@ -52,7 +49,7 @@ public class HttpOrchestrationHeaderTest {
      * Test the property 'headerValue'
      */
     @Test
-    public void headerValueTest() {
+    void headerValueTest() {
         // TODO: test headerValue
     }
 
@@ -60,7 +57,7 @@ public class HttpOrchestrationHeaderTest {
      * Test the property 'useOutputFromPreviousTask'
      */
     @Test
-    public void useOutputFromPreviousTaskTest() {
+    void useOutputFromPreviousTaskTest() {
         // TODO: test useOutputFromPreviousTask
     }
 

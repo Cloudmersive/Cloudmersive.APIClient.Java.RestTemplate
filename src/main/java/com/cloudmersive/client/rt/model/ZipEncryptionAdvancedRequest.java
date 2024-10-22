@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to encrypt an existing Zip Archive file and protect it with a password
  */
-@ApiModel(description = "Request to encrypt an existing Zip Archive file and protect it with a password")
 @JsonPropertyOrder({
   ZipEncryptionAdvancedRequest.JSON_PROPERTY_INPUT_FILE_CONTENTS,
   ZipEncryptionAdvancedRequest.JSON_PROPERTY_PASSWORD,
   ZipEncryptionAdvancedRequest.JSON_PROPERTY_ENCRYPTION_ALGORITHM
 })
-@JsonTypeName("ZipEncryptionAdvancedRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ZipEncryptionAdvancedRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_CONTENTS = "InputFileContents";
   private byte[] inputFileContents;
@@ -45,6 +42,8 @@ public class ZipEncryptionAdvancedRequest {
   public static final String JSON_PROPERTY_ENCRYPTION_ALGORITHM = "EncryptionAlgorithm";
   private String encryptionAlgorithm;
 
+  public ZipEncryptionAdvancedRequest() {
+  }
 
   public ZipEncryptionAdvancedRequest inputFileContents(byte[] inputFileContents) {
     
@@ -52,12 +51,11 @@ public class ZipEncryptionAdvancedRequest {
     return this;
   }
 
-   /**
+  /**
    * Input Zip File archive contents in bytes
    * @return inputFileContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Input Zip File archive contents in bytes")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ZipEncryptionAdvancedRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileContents(byte[] inputFileContents) {
     this.inputFileContents = inputFileContents;
   }
-
 
   public ZipEncryptionAdvancedRequest password(String password) {
     
@@ -77,12 +76,11 @@ public class ZipEncryptionAdvancedRequest {
     return this;
   }
 
-   /**
+  /**
    * Password to place on the Zip file; the longer the password, the more secure
    * @return password
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Password to place on the Zip file; the longer the password, the more secure")
   @JsonProperty(JSON_PROPERTY_PASSWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ZipEncryptionAdvancedRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PASSWORD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPassword(String password) {
     this.password = password;
   }
-
 
   public ZipEncryptionAdvancedRequest encryptionAlgorithm(String encryptionAlgorithm) {
     
@@ -102,12 +101,11 @@ public class ZipEncryptionAdvancedRequest {
     return this;
   }
 
-   /**
+  /**
    * Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm).  Default is AES-256.
    * @return encryptionAlgorithm
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm).  Default is AES-256.")
   @JsonProperty(JSON_PROPERTY_ENCRYPTION_ALGORITHM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ZipEncryptionAdvancedRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENCRYPTION_ALGORITHM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEncryptionAlgorithm(String encryptionAlgorithm) {
     this.encryptionAlgorithm = encryptionAlgorithm;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ZipEncryptionAdvancedRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileContents), password, encryptionAlgorithm);
   }
-
 
   @Override
   public String toString() {

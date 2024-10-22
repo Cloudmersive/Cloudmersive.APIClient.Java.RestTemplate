@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for VirusScanResult
  */
-public class VirusScanResultTest {
+class VirusScanResultTest {
     private final VirusScanResult model = new VirusScanResult();
 
     /**
      * Model tests for VirusScanResult
      */
     @Test
-    public void testVirusScanResult() {
+    void testVirusScanResult() {
         // TODO: test VirusScanResult
     }
 
@@ -46,7 +44,7 @@ public class VirusScanResultTest {
      * Test the property 'cleanResult'
      */
     @Test
-    public void cleanResultTest() {
+    void cleanResultTest() {
         // TODO: test cleanResult
     }
 
@@ -54,7 +52,7 @@ public class VirusScanResultTest {
      * Test the property 'foundViruses'
      */
     @Test
-    public void foundVirusesTest() {
+    void foundVirusesTest() {
         // TODO: test foundViruses
     }
 

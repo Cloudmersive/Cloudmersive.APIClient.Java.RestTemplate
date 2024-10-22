@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for UserAgentValidateResponse
  */
-public class UserAgentValidateResponseTest {
+class UserAgentValidateResponseTest {
     private final UserAgentValidateResponse model = new UserAgentValidateResponse();
 
     /**
      * Model tests for UserAgentValidateResponse
      */
     @Test
-    public void testUserAgentValidateResponse() {
+    void testUserAgentValidateResponse() {
         // TODO: test UserAgentValidateResponse
     }
 
@@ -43,7 +40,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'isBot'
      */
     @Test
-    public void isBotTest() {
+    void isBotTest() {
         // TODO: test isBot
     }
 
@@ -59,7 +56,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'botName'
      */
     @Test
-    public void botNameTest() {
+    void botNameTest() {
         // TODO: test botName
     }
 
@@ -67,7 +64,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'botURL'
      */
     @Test
-    public void botURLTest() {
+    void botURLTest() {
         // TODO: test botURL
     }
 
@@ -75,7 +72,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'operatingSystem'
      */
     @Test
-    public void operatingSystemTest() {
+    void operatingSystemTest() {
         // TODO: test operatingSystem
     }
 
@@ -83,7 +80,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'operatingSystemCPUPlatform'
      */
     @Test
-    public void operatingSystemCPUPlatformTest() {
+    void operatingSystemCPUPlatformTest() {
         // TODO: test operatingSystemCPUPlatform
     }
 
@@ -91,7 +88,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'operatingSystemVersion'
      */
     @Test
-    public void operatingSystemVersionTest() {
+    void operatingSystemVersionTest() {
         // TODO: test operatingSystemVersion
     }
 
@@ -99,7 +96,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'deviceType'
      */
     @Test
-    public void deviceTypeTest() {
+    void deviceTypeTest() {
         // TODO: test deviceType
     }
 
@@ -107,7 +104,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'deviceBrandName'
      */
     @Test
-    public void deviceBrandNameTest() {
+    void deviceBrandNameTest() {
         // TODO: test deviceBrandName
     }
 
@@ -115,7 +112,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'deviceModel'
      */
     @Test
-    public void deviceModelTest() {
+    void deviceModelTest() {
         // TODO: test deviceModel
     }
 
@@ -123,7 +120,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'browserName'
      */
     @Test
-    public void browserNameTest() {
+    void browserNameTest() {
         // TODO: test browserName
     }
 
@@ -131,7 +128,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'browserVersion'
      */
     @Test
-    public void browserVersionTest() {
+    void browserVersionTest() {
         // TODO: test browserVersion
     }
 
@@ -139,7 +136,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'browserEngineName'
      */
     @Test
-    public void browserEngineNameTest() {
+    void browserEngineNameTest() {
         // TODO: test browserEngineName
     }
 
@@ -147,7 +144,7 @@ public class UserAgentValidateResponseTest {
      * Test the property 'browserEngineVersion'
      */
     @Test
-    public void browserEngineVersionTest() {
+    void browserEngineVersionTest() {
         // TODO: test browserEngineVersion
     }
 

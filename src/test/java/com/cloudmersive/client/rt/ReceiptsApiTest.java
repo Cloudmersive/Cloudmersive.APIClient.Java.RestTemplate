@@ -14,9 +14,12 @@
 package com.cloudmersive.client.rt;
 
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +28,8 @@ import java.util.Map;
 /**
  * API tests for ReceiptsApi
  */
-@Ignore
-public class ReceiptsApiTest {
+@Disabled
+class ReceiptsApiTest {
 
     private final ReceiptsApi api = new ReceiptsApi();
 
@@ -36,12 +39,13 @@ public class ReceiptsApiTest {
      *
      * Leverage Deep Learning to automatically turn a photo of a receipt into a CSV file containing the structured information from the receipt.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void receiptsPhotoToCSVTest() {
+    void receiptsPhotoToCSVTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         Object response = api.receiptsPhotoToCSV(imageFile);
 
         // TODO: test validations

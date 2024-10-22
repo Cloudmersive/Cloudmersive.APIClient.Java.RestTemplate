@@ -2,10 +2,10 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**convertTemplateApplyDocxTemplate**](ConvertTemplateApi.md#convertTemplateApplyDocxTemplate) | **POST** /convert/template/docx/apply | Apply Word DOCX template
-[**convertTemplateApplyHtmlTemplate**](ConvertTemplateApi.md#convertTemplateApplyHtmlTemplate) | **POST** /convert/template/html/apply | Apply HTML template
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**convertTemplateApplyDocxTemplate**](ConvertTemplateApi.md#convertTemplateApplyDocxTemplate) | **POST** /convert/template/docx/apply | Apply Word DOCX template |
+| [**convertTemplateApplyHtmlTemplate**](ConvertTemplateApi.md#convertTemplateApplyHtmlTemplate) | **POST** /convert/template/html/apply | Apply HTML template |
 
 
 
@@ -59,10 +59,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
- **templateDefinition** | [**Object**](.md)| Template definition for the document, including what values to replace | [optional] [default to null]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
+| **templateDefinition** | [**Object**](.md)| Template definition for the document, including what values to replace | [optional] |
 
 ### Return type
 
@@ -76,6 +76,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -132,9 +133,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | [**HtmlTemplateApplicationRequest**](HtmlTemplateApplicationRequest.md)| Operations to apply to template |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | [**HtmlTemplateApplicationRequest**](HtmlTemplateApplicationRequest.md)| Operations to apply to template | |
 
 ### Return type
 
@@ -148,6 +149,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

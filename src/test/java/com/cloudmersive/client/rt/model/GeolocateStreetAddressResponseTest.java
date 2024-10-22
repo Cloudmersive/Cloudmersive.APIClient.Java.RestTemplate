@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GeolocateStreetAddressResponse
  */
-public class GeolocateStreetAddressResponseTest {
+class GeolocateStreetAddressResponseTest {
     private final GeolocateStreetAddressResponse model = new GeolocateStreetAddressResponse();
 
     /**
      * Model tests for GeolocateStreetAddressResponse
      */
     @Test
-    public void testGeolocateStreetAddressResponse() {
+    void testGeolocateStreetAddressResponse() {
         // TODO: test GeolocateStreetAddressResponse
     }
 
@@ -43,7 +40,7 @@ public class GeolocateStreetAddressResponseTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 
@@ -51,7 +48,7 @@ public class GeolocateStreetAddressResponseTest {
      * Test the property 'countryName'
      */
     @Test
-    public void countryNameTest() {
+    void countryNameTest() {
         // TODO: test countryName
     }
 
@@ -59,7 +56,7 @@ public class GeolocateStreetAddressResponseTest {
      * Test the property 'streetAddress'
      */
     @Test
-    public void streetAddressTest() {
+    void streetAddressTest() {
         // TODO: test streetAddress
     }
 
@@ -67,7 +64,7 @@ public class GeolocateStreetAddressResponseTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -75,7 +72,7 @@ public class GeolocateStreetAddressResponseTest {
      * Test the property 'regionName'
      */
     @Test
-    public void regionNameTest() {
+    void regionNameTest() {
         // TODO: test regionName
     }
 
@@ -83,7 +80,7 @@ public class GeolocateStreetAddressResponseTest {
      * Test the property 'zipCode'
      */
     @Test
-    public void zipCodeTest() {
+    void zipCodeTest() {
         // TODO: test zipCode
     }
 

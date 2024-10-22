@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for BusinessCardRecognitionResult
  */
-public class BusinessCardRecognitionResultTest {
+class BusinessCardRecognitionResultTest {
     private final BusinessCardRecognitionResult model = new BusinessCardRecognitionResult();
 
     /**
      * Model tests for BusinessCardRecognitionResult
      */
     @Test
-    public void testBusinessCardRecognitionResult() {
+    void testBusinessCardRecognitionResult() {
         // TODO: test BusinessCardRecognitionResult
     }
 
@@ -44,7 +41,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -52,7 +49,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'personName'
      */
     @Test
-    public void personNameTest() {
+    void personNameTest() {
         // TODO: test personName
     }
 
@@ -60,7 +57,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'personTitle'
      */
     @Test
-    public void personTitleTest() {
+    void personTitleTest() {
         // TODO: test personTitle
     }
 
@@ -68,7 +65,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'businessName'
      */
     @Test
-    public void businessNameTest() {
+    void businessNameTest() {
         // TODO: test businessName
     }
 
@@ -76,7 +73,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'addressString'
      */
     @Test
-    public void addressStringTest() {
+    void addressStringTest() {
         // TODO: test addressString
     }
 
@@ -84,7 +81,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'phoneNumber'
      */
     @Test
-    public void phoneNumberTest() {
+    void phoneNumberTest() {
         // TODO: test phoneNumber
     }
 
@@ -92,7 +89,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'emailAddress'
      */
     @Test
-    public void emailAddressTest() {
+    void emailAddressTest() {
         // TODO: test emailAddress
     }
 
@@ -100,7 +97,7 @@ public class BusinessCardRecognitionResultTest {
      * Test the property 'timestamp'
      */
     @Test
-    public void timestampTest() {
+    void timestampTest() {
         // TODO: test timestamp
     }
 

@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Rectangle instance to draw on an image
  */
-@ApiModel(description = "Rectangle instance to draw on an image")
 @JsonPropertyOrder({
   DrawRectangleInstance.JSON_PROPERTY_BORDER_COLOR,
   DrawRectangleInstance.JSON_PROPERTY_BORDER_WIDTH,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DrawRectangleInstance.JSON_PROPERTY_WIDTH,
   DrawRectangleInstance.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("DrawRectangleInstance")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DrawRectangleInstance {
   public static final String JSON_PROPERTY_BORDER_COLOR = "BorderColor";
   private String borderColor;
@@ -61,6 +58,8 @@ public class DrawRectangleInstance {
   public static final String JSON_PROPERTY_HEIGHT = "Height";
   private Double height;
 
+  public DrawRectangleInstance() {
+  }
 
   public DrawRectangleInstance borderColor(String borderColor) {
     
@@ -68,12 +67,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Border Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.
    * @return borderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Border Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.")
   @JsonProperty(JSON_PROPERTY_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,10 +80,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBorderColor(String borderColor) {
     this.borderColor = borderColor;
   }
-
 
   public DrawRectangleInstance borderWidth(Double borderWidth) {
     
@@ -93,12 +92,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the border.  Pass in 0 to draw a rectangle with no border
    * @return borderWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the border.  Pass in 0 to draw a rectangle with no border")
   @JsonProperty(JSON_PROPERTY_BORDER_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +105,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BORDER_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBorderWidth(Double borderWidth) {
     this.borderWidth = borderWidth;
   }
-
 
   public DrawRectangleInstance fillColor(String fillColor) {
     
@@ -118,12 +117,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Fill Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.  Leave blank to not fill the rectangle.
    * @return fillColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fill Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.  Leave blank to not fill the rectangle.")
   @JsonProperty(JSON_PROPERTY_FILL_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,10 +130,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILL_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFillColor(String fillColor) {
     this.fillColor = fillColor;
   }
-
 
   public DrawRectangleInstance X(Double X) {
     
@@ -143,12 +142,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Pixel location of the left edge of the rectangle location
    * @return X
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pixel location of the left edge of the rectangle location")
   @JsonProperty(JSON_PROPERTY_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,10 +155,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setX(Double X) {
     this.X = X;
   }
-
 
   public DrawRectangleInstance Y(Double Y) {
     
@@ -168,12 +167,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Pixel location of the top edge of the rectangle location
    * @return Y
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pixel location of the top edge of the rectangle location")
   @JsonProperty(JSON_PROPERTY_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,10 +180,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setY(Double Y) {
     this.Y = Y;
   }
-
 
   public DrawRectangleInstance width(Double width) {
     
@@ -193,12 +192,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the rectangle
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the rectangle")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,10 +205,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Double width) {
     this.width = width;
   }
-
 
   public DrawRectangleInstance height(Double height) {
     
@@ -218,12 +217,11 @@ public class DrawRectangleInstance {
     return this;
   }
 
-   /**
+  /**
    * Height in pixels of the rectangle
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height in pixels of the rectangle")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,10 +230,11 @@ public class DrawRectangleInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Double height) {
     this.height = height;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -259,7 +258,6 @@ public class DrawRectangleInstance {
   public int hashCode() {
     return Objects.hash(borderColor, borderWidth, fillColor, X, Y, width, height);
   }
-
 
   @Override
   public String toString() {

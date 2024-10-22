@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ZipFile
  */
-public class ZipFileTest {
+class ZipFileTest {
     private final ZipFile model = new ZipFile();
 
     /**
      * Model tests for ZipFile
      */
     @Test
-    public void testZipFile() {
+    void testZipFile() {
         // TODO: test ZipFile
     }
 
@@ -43,7 +40,7 @@ public class ZipFileTest {
      * Test the property 'fileName'
      */
     @Test
-    public void fileNameTest() {
+    void fileNameTest() {
         // TODO: test fileName
     }
 
@@ -51,7 +48,7 @@ public class ZipFileTest {
      * Test the property 'fileContents'
      */
     @Test
-    public void fileContentsTest() {
+    void fileContentsTest() {
         // TODO: test fileContents
     }
 

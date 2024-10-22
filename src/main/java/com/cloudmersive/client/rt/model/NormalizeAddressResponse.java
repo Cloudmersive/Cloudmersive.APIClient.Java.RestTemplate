@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of validating a street address
  */
-@ApiModel(description = "Result of validating a street address")
 @JsonPropertyOrder({
   NormalizeAddressResponse.JSON_PROPERTY_VALID_ADDRESS,
   NormalizeAddressResponse.JSON_PROPERTY_BUILDING,
@@ -41,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   NormalizeAddressResponse.JSON_PROPERTY_LATITUDE,
   NormalizeAddressResponse.JSON_PROPERTY_LONGITUDE
 })
-@JsonTypeName("NormalizeAddressResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NormalizeAddressResponse {
   public static final String JSON_PROPERTY_VALID_ADDRESS = "ValidAddress";
   private Boolean validAddress;
@@ -77,6 +74,8 @@ public class NormalizeAddressResponse {
   public static final String JSON_PROPERTY_LONGITUDE = "Longitude";
   private Double longitude;
 
+  public NormalizeAddressResponse() {
+  }
 
   public NormalizeAddressResponse validAddress(Boolean validAddress) {
     
@@ -84,12 +83,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the address is valid, false otherwise
    * @return validAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the address is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +96,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidAddress(Boolean validAddress) {
     this.validAddress = validAddress;
   }
-
 
   public NormalizeAddressResponse building(String building) {
     
@@ -109,12 +108,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the building, house or structure if applicable, such as \&quot;Cloudmersive Building 2\&quot;.  This will often by null.
    * @return building
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the building, house or structure if applicable, such as \"Cloudmersive Building 2\".  This will often by null.")
   @JsonProperty(JSON_PROPERTY_BUILDING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,10 +121,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUILDING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBuilding(String building) {
     this.building = building;
   }
-
 
   public NormalizeAddressResponse streetNumber(String streetNumber) {
     
@@ -134,12 +133,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The street number or house number of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;1600\&quot;.  This value will typically be populated for most addresses.
    * @return streetNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The street number or house number of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"1600\".  This value will typically be populated for most addresses.")
   @JsonProperty(JSON_PROPERTY_STREET_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,10 +146,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STREET_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStreetNumber(String streetNumber) {
     this.streetNumber = streetNumber;
   }
-
 
   public NormalizeAddressResponse street(String street) {
     
@@ -159,12 +158,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the street or road of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;Pennsylvania Avenue NW\&quot;.
    * @return street
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the street or road of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"Pennsylvania Avenue NW\".")
   @JsonProperty(JSON_PROPERTY_STREET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -173,10 +171,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STREET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStreet(String street) {
     this.street = street;
   }
-
 
   public NormalizeAddressResponse city(String city) {
     
@@ -184,12 +183,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The city of the address.
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The city of the address.")
   @JsonProperty(JSON_PROPERTY_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,10 +196,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCity(String city) {
     this.city = city;
   }
-
 
   public NormalizeAddressResponse stateOrProvince(String stateOrProvince) {
     
@@ -209,12 +208,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The state or province of the address.
    * @return stateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The state or province of the address.")
   @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,10 +221,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   public NormalizeAddressResponse postalCode(String postalCode) {
     
@@ -234,12 +233,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The postal code or zip code of the address.
    * @return postalCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The postal code or zip code of the address.")
   @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,10 +246,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
-
 
   public NormalizeAddressResponse countryFullName(String countryFullName) {
     
@@ -259,12 +258,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Country of the address, if present in the address.  If not included in the address it will be null.
    * @return countryFullName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Country of the address, if present in the address.  If not included in the address it will be null.")
   @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -273,10 +271,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryFullName(String countryFullName) {
     this.countryFullName = countryFullName;
   }
-
 
   public NormalizeAddressResponse isOTwoLetterCode(String isOTwoLetterCode) {
     
@@ -284,12 +283,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Two-letter ISO 3166-1 country code
    * @return isOTwoLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -298,10 +296,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsOTwoLetterCode(String isOTwoLetterCode) {
     this.isOTwoLetterCode = isOTwoLetterCode;
   }
-
 
   public NormalizeAddressResponse latitude(Double latitude) {
     
@@ -309,12 +308,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * If the address is valid, the degrees latitude of the validated address, null otherwise
    * @return latitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the address is valid, the degrees latitude of the validated address, null otherwise")
   @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -323,10 +321,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
-
 
   public NormalizeAddressResponse longitude(Double longitude) {
     
@@ -334,12 +333,11 @@ public class NormalizeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * If the address is valid, the degrees longitude of the validated address, null otherwise
    * @return longitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the address is valid, the degrees longitude of the validated address, null otherwise")
   @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -348,10 +346,11 @@ public class NormalizeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -379,7 +378,6 @@ public class NormalizeAddressResponse {
   public int hashCode() {
     return Objects.hash(validAddress, building, streetNumber, street, city, stateOrProvince, postalCode, countryFullName, isOTwoLetterCode, latitude, longitude);
   }
-
 
   @Override
   public String toString() {

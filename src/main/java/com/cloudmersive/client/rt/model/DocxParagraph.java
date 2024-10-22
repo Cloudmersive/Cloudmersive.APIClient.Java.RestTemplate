@@ -21,24 +21,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A paragraph in a Word Document (DOCX) file; there is where text, content and formatting are stored - similar to the paragraph tag in HTML
  */
-@ApiModel(description = "A paragraph in a Word Document (DOCX) file; there is where text, content and formatting are stored - similar to the paragraph tag in HTML")
 @JsonPropertyOrder({
   DocxParagraph.JSON_PROPERTY_PARAGRAPH_INDEX,
   DocxParagraph.JSON_PROPERTY_PATH,
   DocxParagraph.JSON_PROPERTY_CONTENT_RUNS,
   DocxParagraph.JSON_PROPERTY_STYLE_I_D
 })
-@JsonTypeName("DocxParagraph")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxParagraph {
   public static final String JSON_PROPERTY_PARAGRAPH_INDEX = "ParagraphIndex";
   private Integer paragraphIndex;
@@ -47,11 +45,13 @@ public class DocxParagraph {
   private String path;
 
   public static final String JSON_PROPERTY_CONTENT_RUNS = "ContentRuns";
-  private List<DocxRun> contentRuns = null;
+  private List<DocxRun> contentRuns = new ArrayList<>();
 
   public static final String JSON_PROPERTY_STYLE_I_D = "StyleID";
   private String styleID;
 
+  public DocxParagraph() {
+  }
 
   public DocxParagraph paragraphIndex(Integer paragraphIndex) {
     
@@ -59,12 +59,11 @@ public class DocxParagraph {
     return this;
   }
 
-   /**
+  /**
    * The index of the paragraph; 0-based
    * @return paragraphIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The index of the paragraph; 0-based")
   @JsonProperty(JSON_PROPERTY_PARAGRAPH_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class DocxParagraph {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAGRAPH_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParagraphIndex(Integer paragraphIndex) {
     this.paragraphIndex = paragraphIndex;
   }
-
 
   public DocxParagraph path(String path) {
     
@@ -84,12 +84,11 @@ public class DocxParagraph {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this Paragraph object; leave blank during creation
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this Paragraph object; leave blank during creation")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class DocxParagraph {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxParagraph contentRuns(List<DocxRun> contentRuns) {
     
@@ -111,18 +111,17 @@ public class DocxParagraph {
 
   public DocxParagraph addContentRunsItem(DocxRun contentRunsItem) {
     if (this.contentRuns == null) {
-      this.contentRuns = new ArrayList<DocxRun>();
+      this.contentRuns = new ArrayList<>();
     }
     this.contentRuns.add(contentRunsItem);
     return this;
   }
 
-   /**
+  /**
    * The content runs in the paragraph - this is where text is stored; similar to a span in HTML
    * @return contentRuns
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The content runs in the paragraph - this is where text is stored; similar to a span in HTML")
   @JsonProperty(JSON_PROPERTY_CONTENT_RUNS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,10 +130,11 @@ public class DocxParagraph {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT_RUNS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContentRuns(List<DocxRun> contentRuns) {
     this.contentRuns = contentRuns;
   }
-
 
   public DocxParagraph styleID(String styleID) {
     
@@ -142,12 +142,11 @@ public class DocxParagraph {
     return this;
   }
 
-   /**
+  /**
    * Style ID of the style applied to the paragraph; null if no style is applied
    * @return styleID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Style ID of the style applied to the paragraph; null if no style is applied")
   @JsonProperty(JSON_PROPERTY_STYLE_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,10 +155,11 @@ public class DocxParagraph {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STYLE_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStyleID(String styleID) {
     this.styleID = styleID;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -180,7 +180,6 @@ public class DocxParagraph {
   public int hashCode() {
     return Objects.hash(paragraphIndex, path, contentRuns, styleID);
   }
-
 
   @Override
   public String toString() {

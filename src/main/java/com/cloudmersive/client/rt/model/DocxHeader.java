@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Header of a Word Document (DOCX)
  */
-@ApiModel(description = "Header of a Word Document (DOCX)")
 @JsonPropertyOrder({
   DocxHeader.JSON_PROPERTY_PATH,
   DocxHeader.JSON_PROPERTY_PARAGRAPHS,
   DocxHeader.JSON_PROPERTY_SECTIONS_WITH_HEADER
 })
-@JsonTypeName("DocxHeader")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxHeader {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
 
   public static final String JSON_PROPERTY_PARAGRAPHS = "Paragraphs";
-  private List<DocxParagraph> paragraphs = null;
+  private List<DocxParagraph> paragraphs = new ArrayList<>();
 
   public static final String JSON_PROPERTY_SECTIONS_WITH_HEADER = "SectionsWithHeader";
-  private List<DocxSection> sectionsWithHeader = null;
+  private List<DocxSection> sectionsWithHeader = new ArrayList<>();
 
+  public DocxHeader() {
+  }
 
   public DocxHeader path(String path) {
     
@@ -56,12 +56,11 @@ public class DocxHeader {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +69,11 @@ public class DocxHeader {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxHeader paragraphs(List<DocxParagraph> paragraphs) {
     
@@ -83,18 +83,17 @@ public class DocxHeader {
 
   public DocxHeader addParagraphsItem(DocxParagraph paragraphsItem) {
     if (this.paragraphs == null) {
-      this.paragraphs = new ArrayList<DocxParagraph>();
+      this.paragraphs = new ArrayList<>();
     }
     this.paragraphs.add(paragraphsItem);
     return this;
   }
 
-   /**
+  /**
    * Paragraphs in this header
    * @return paragraphs
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Paragraphs in this header")
   @JsonProperty(JSON_PROPERTY_PARAGRAPHS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +102,11 @@ public class DocxHeader {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAGRAPHS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParagraphs(List<DocxParagraph> paragraphs) {
     this.paragraphs = paragraphs;
   }
-
 
   public DocxHeader sectionsWithHeader(List<DocxSection> sectionsWithHeader) {
     
@@ -116,18 +116,17 @@ public class DocxHeader {
 
   public DocxHeader addSectionsWithHeaderItem(DocxSection sectionsWithHeaderItem) {
     if (this.sectionsWithHeader == null) {
-      this.sectionsWithHeader = new ArrayList<DocxSection>();
+      this.sectionsWithHeader = new ArrayList<>();
     }
     this.sectionsWithHeader.add(sectionsWithHeaderItem);
     return this;
   }
 
-   /**
+  /**
    * Sections that the header is applied to
    * @return sectionsWithHeader
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sections that the header is applied to")
   @JsonProperty(JSON_PROPERTY_SECTIONS_WITH_HEADER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,10 +135,11 @@ public class DocxHeader {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SECTIONS_WITH_HEADER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSectionsWithHeader(List<DocxSection> sectionsWithHeader) {
     this.sectionsWithHeader = sectionsWithHeader;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -159,7 +159,6 @@ public class DocxHeader {
   public int hashCode() {
     return Objects.hash(path, paragraphs, sectionsWithHeader);
   }
-
 
   @Override
   public String toString() {

@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DrawRectangleRequest
  */
-public class DrawRectangleRequestTest {
+class DrawRectangleRequestTest {
     private final DrawRectangleRequest model = new DrawRectangleRequest();
 
     /**
      * Model tests for DrawRectangleRequest
      */
     @Test
-    public void testDrawRectangleRequest() {
+    void testDrawRectangleRequest() {
         // TODO: test DrawRectangleRequest
     }
 
@@ -46,7 +44,7 @@ public class DrawRectangleRequestTest {
      * Test the property 'baseImageBytes'
      */
     @Test
-    public void baseImageBytesTest() {
+    void baseImageBytesTest() {
         // TODO: test baseImageBytes
     }
 
@@ -54,7 +52,7 @@ public class DrawRectangleRequestTest {
      * Test the property 'baseImageUrl'
      */
     @Test
-    public void baseImageUrlTest() {
+    void baseImageUrlTest() {
         // TODO: test baseImageUrl
     }
 
@@ -62,7 +60,7 @@ public class DrawRectangleRequestTest {
      * Test the property 'rectanglesToDraw'
      */
     @Test
-    public void rectanglesToDrawTest() {
+    void rectanglesToDrawTest() {
         // TODO: test rectanglesToDraw
     }
 

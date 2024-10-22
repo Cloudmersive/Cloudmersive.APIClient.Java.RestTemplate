@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxParagraph
  */
-public class DocxParagraphTest {
+class DocxParagraphTest {
     private final DocxParagraph model = new DocxParagraph();
 
     /**
      * Model tests for DocxParagraph
      */
     @Test
-    public void testDocxParagraph() {
+    void testDocxParagraph() {
         // TODO: test DocxParagraph
     }
 
@@ -46,7 +44,7 @@ public class DocxParagraphTest {
      * Test the property 'paragraphIndex'
      */
     @Test
-    public void paragraphIndexTest() {
+    void paragraphIndexTest() {
         // TODO: test paragraphIndex
     }
 
@@ -54,7 +52,7 @@ public class DocxParagraphTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -62,7 +60,7 @@ public class DocxParagraphTest {
      * Test the property 'contentRuns'
      */
     @Test
-    public void contentRunsTest() {
+    void contentRunsTest() {
         // TODO: test contentRuns
     }
 
@@ -70,7 +68,7 @@ public class DocxParagraphTest {
      * Test the property 'styleID'
      */
     @Test
-    public void styleIDTest() {
+    void styleIDTest() {
         // TODO: test styleID
     }
 

@@ -21,22 +21,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of recognizing an image
  */
-@ApiModel(description = "Result of recognizing an image")
 @JsonPropertyOrder({
   ImageDescriptionResponse.JSON_PROPERTY_SUCCESSFUL,
   ImageDescriptionResponse.JSON_PROPERTY_HIGHCONFIDENCE,
   ImageDescriptionResponse.JSON_PROPERTY_BEST_OUTCOME,
   ImageDescriptionResponse.JSON_PROPERTY_RUNNER_UP_OUTCOME
 })
-@JsonTypeName("ImageDescriptionResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageDescriptionResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -50,6 +47,8 @@ public class ImageDescriptionResponse {
   public static final String JSON_PROPERTY_RUNNER_UP_OUTCOME = "RunnerUpOutcome";
   private RecognitionOutcome runnerUpOutcome;
 
+  public ImageDescriptionResponse() {
+  }
 
   public ImageDescriptionResponse successful(Boolean successful) {
     
@@ -57,12 +56,11 @@ public class ImageDescriptionResponse {
     return this;
   }
 
-   /**
+  /**
    * Was the image processed successfully?
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Was the image processed successfully?")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -71,10 +69,11 @@ public class ImageDescriptionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ImageDescriptionResponse highconfidence(Boolean highconfidence) {
     
@@ -82,12 +81,11 @@ public class ImageDescriptionResponse {
     return this;
   }
 
-   /**
+  /**
    * Is the resulting best outcome recognition a high confidence outcome?
    * @return highconfidence
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Is the resulting best outcome recognition a high confidence outcome?")
   @JsonProperty(JSON_PROPERTY_HIGHCONFIDENCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +94,11 @@ public class ImageDescriptionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HIGHCONFIDENCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHighconfidence(Boolean highconfidence) {
     this.highconfidence = highconfidence;
   }
-
 
   public ImageDescriptionResponse bestOutcome(RecognitionOutcome bestOutcome) {
     
@@ -107,12 +106,11 @@ public class ImageDescriptionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get bestOutcome
    * @return bestOutcome
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_BEST_OUTCOME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +119,11 @@ public class ImageDescriptionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BEST_OUTCOME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBestOutcome(RecognitionOutcome bestOutcome) {
     this.bestOutcome = bestOutcome;
   }
-
 
   public ImageDescriptionResponse runnerUpOutcome(RecognitionOutcome runnerUpOutcome) {
     
@@ -132,12 +131,11 @@ public class ImageDescriptionResponse {
     return this;
   }
 
-   /**
+  /**
    * Get runnerUpOutcome
    * @return runnerUpOutcome
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_RUNNER_UP_OUTCOME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +144,11 @@ public class ImageDescriptionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RUNNER_UP_OUTCOME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRunnerUpOutcome(RecognitionOutcome runnerUpOutcome) {
     this.runnerUpOutcome = runnerUpOutcome;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -170,7 +169,6 @@ public class ImageDescriptionResponse {
   public int hashCode() {
     return Objects.hash(successful, highconfidence, bestOutcome, runnerUpOutcome);
   }
-
 
   @Override
   public String toString() {

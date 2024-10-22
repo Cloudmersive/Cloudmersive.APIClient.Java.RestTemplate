@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual field value to set in a PDF form
  */
-@ApiModel(description = "Individual field value to set in a PDF form")
 @JsonPropertyOrder({
   SetFormFieldValue.JSON_PROPERTY_FIELD_NAME,
   SetFormFieldValue.JSON_PROPERTY_TEXT_VALUE,
   SetFormFieldValue.JSON_PROPERTY_CHECKBOX_VALUE,
   SetFormFieldValue.JSON_PROPERTY_COMBO_BOX_SELECTED_INDEX
 })
-@JsonTypeName("SetFormFieldValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SetFormFieldValue {
   public static final String JSON_PROPERTY_FIELD_NAME = "FieldName";
   private String fieldName;
@@ -49,6 +46,8 @@ public class SetFormFieldValue {
   public static final String JSON_PROPERTY_COMBO_BOX_SELECTED_INDEX = "ComboBoxSelectedIndex";
   private Integer comboBoxSelectedIndex;
 
+  public SetFormFieldValue() {
+  }
 
   public SetFormFieldValue fieldName(String fieldName) {
     
@@ -56,12 +55,11 @@ public class SetFormFieldValue {
     return this;
   }
 
-   /**
+  /**
    * Name of the field to set; you can call /convert/edit/pdf/form/get-fields to enumerate field names in a form
    * @return fieldName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the field to set; you can call /convert/edit/pdf/form/get-fields to enumerate field names in a form")
   @JsonProperty(JSON_PROPERTY_FIELD_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class SetFormFieldValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldName(String fieldName) {
     this.fieldName = fieldName;
   }
-
 
   public SetFormFieldValue textValue(String textValue) {
     
@@ -81,12 +80,11 @@ public class SetFormFieldValue {
     return this;
   }
 
-   /**
+  /**
    * For fields of type Text, the text value to put into the field
    * @return textValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For fields of type Text, the text value to put into the field")
   @JsonProperty(JSON_PROPERTY_TEXT_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class SetFormFieldValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextValue(String textValue) {
     this.textValue = textValue;
   }
-
 
   public SetFormFieldValue checkboxValue(Boolean checkboxValue) {
     
@@ -106,12 +105,11 @@ public class SetFormFieldValue {
     return this;
   }
 
-   /**
+  /**
    * For fields of type Checkbox, the value to put into the field
    * @return checkboxValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For fields of type Checkbox, the value to put into the field")
   @JsonProperty(JSON_PROPERTY_CHECKBOX_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class SetFormFieldValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CHECKBOX_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCheckboxValue(Boolean checkboxValue) {
     this.checkboxValue = checkboxValue;
   }
-
 
   public SetFormFieldValue comboBoxSelectedIndex(Integer comboBoxSelectedIndex) {
     
@@ -131,12 +130,11 @@ public class SetFormFieldValue {
     return this;
   }
 
-   /**
+  /**
    * For fields of type ComboBox; specifies the selected index of the combo box selection
    * @return comboBoxSelectedIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For fields of type ComboBox; specifies the selected index of the combo box selection")
   @JsonProperty(JSON_PROPERTY_COMBO_BOX_SELECTED_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class SetFormFieldValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMBO_BOX_SELECTED_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setComboBoxSelectedIndex(Integer comboBoxSelectedIndex) {
     this.comboBoxSelectedIndex = comboBoxSelectedIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class SetFormFieldValue {
   public int hashCode() {
     return Objects.hash(fieldName, textValue, checkboxValue, comboBoxSelectedIndex);
   }
-
 
   @Override
   public String toString() {

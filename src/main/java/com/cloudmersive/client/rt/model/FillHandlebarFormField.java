@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Handlebar style form fields to fill in; form field that is handlebar style, such as \&quot;{{FieldName}}\&quot;
  */
-@ApiModel(description = "Handlebar style form fields to fill in; form field that is handlebar style, such as \"{{FieldName}}\"")
 @JsonPropertyOrder({
   FillHandlebarFormField.JSON_PROPERTY_FIELD_NAME,
   FillHandlebarFormField.JSON_PROPERTY_VALUE_TO_FILL
 })
-@JsonTypeName("FillHandlebarFormField")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FillHandlebarFormField {
   public static final String JSON_PROPERTY_FIELD_NAME = "FieldName";
   private String fieldName;
@@ -41,6 +38,8 @@ public class FillHandlebarFormField {
   public static final String JSON_PROPERTY_VALUE_TO_FILL = "ValueToFill";
   private String valueToFill;
 
+  public FillHandlebarFormField() {
+  }
 
   public FillHandlebarFormField fieldName(String fieldName) {
     
@@ -48,12 +47,11 @@ public class FillHandlebarFormField {
     return this;
   }
 
-   /**
+  /**
    * Name of the field without the curly braces, e.g. \&quot;FieldName\&quot; for a field that is included in the text of the DOCX as \&quot;{{FieldName}}\&quot;
    * @return fieldName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the field without the curly braces, e.g. \"FieldName\" for a field that is included in the text of the DOCX as \"{{FieldName}}\"")
   @JsonProperty(JSON_PROPERTY_FIELD_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class FillHandlebarFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldName(String fieldName) {
     this.fieldName = fieldName;
   }
-
 
   public FillHandlebarFormField valueToFill(String valueToFill) {
     
@@ -73,12 +72,11 @@ public class FillHandlebarFormField {
     return this;
   }
 
-   /**
+  /**
    * Text value to fill in for the field in the resulting document
    * @return valueToFill
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text value to fill in for the field in the resulting document")
   @JsonProperty(JSON_PROPERTY_VALUE_TO_FILL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class FillHandlebarFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALUE_TO_FILL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValueToFill(String valueToFill) {
     this.valueToFill = valueToFill;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class FillHandlebarFormField {
   public int hashCode() {
     return Objects.hash(fieldName, valueToFill);
   }
-
 
   @Override
   public String toString() {

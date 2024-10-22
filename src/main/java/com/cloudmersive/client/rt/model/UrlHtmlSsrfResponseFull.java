@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of checking a URL for HTML-embedded SSRF threats
  */
-@ApiModel(description = "Result of checking a URL for HTML-embedded SSRF threats")
 @JsonPropertyOrder({
   UrlHtmlSsrfResponseFull.JSON_PROPERTY_CLEAN_U_R_L,
   UrlHtmlSsrfResponseFull.JSON_PROPERTY_HTTP_RESPONSE_CODE
 })
-@JsonTypeName("UrlHtmlSsrfResponseFull")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UrlHtmlSsrfResponseFull {
   public static final String JSON_PROPERTY_CLEAN_U_R_L = "CleanURL";
   private Boolean cleanURL;
@@ -41,6 +38,8 @@ public class UrlHtmlSsrfResponseFull {
   public static final String JSON_PROPERTY_HTTP_RESPONSE_CODE = "HttpResponseCode";
   private Integer httpResponseCode;
 
+  public UrlHtmlSsrfResponseFull() {
+  }
 
   public UrlHtmlSsrfResponseFull cleanURL(Boolean cleanURL) {
     
@@ -48,12 +47,11 @@ public class UrlHtmlSsrfResponseFull {
     return this;
   }
 
-   /**
+  /**
    * True if the URL is clean, false if it is at risk of containing an SSRF threat or attack
    * @return cleanURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the URL is clean, false if it is at risk of containing an SSRF threat or attack")
   @JsonProperty(JSON_PROPERTY_CLEAN_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class UrlHtmlSsrfResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanURL(Boolean cleanURL) {
     this.cleanURL = cleanURL;
   }
-
 
   public UrlHtmlSsrfResponseFull httpResponseCode(Integer httpResponseCode) {
     
@@ -73,12 +72,11 @@ public class UrlHtmlSsrfResponseFull {
     return this;
   }
 
-   /**
+  /**
    * HTTP response code from the URL
    * @return httpResponseCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTTP response code from the URL")
   @JsonProperty(JSON_PROPERTY_HTTP_RESPONSE_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class UrlHtmlSsrfResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTTP_RESPONSE_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHttpResponseCode(Integer httpResponseCode) {
     this.httpResponseCode = httpResponseCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class UrlHtmlSsrfResponseFull {
   public int hashCode() {
     return Objects.hash(cleanURL, httpResponseCode);
   }
-
 
   @Override
   public String toString() {

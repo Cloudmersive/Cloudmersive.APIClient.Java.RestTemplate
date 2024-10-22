@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a get dominant color operation
  */
-@ApiModel(description = "Result of performing a get dominant color operation")
 @JsonPropertyOrder({
   DominantColorResult.JSON_PROPERTY_SUCCESSFUL,
   DominantColorResult.JSON_PROPERTY_DOMINANT_COLORS
 })
-@JsonTypeName("DominantColorResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DominantColorResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_DOMINANT_COLORS = "DominantColors";
-  private List<ColorResult> dominantColors = null;
+  private List<ColorResult> dominantColors = new ArrayList<>();
 
+  public DominantColorResult() {
+  }
 
   public DominantColorResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class DominantColorResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class DominantColorResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public DominantColorResult dominantColors(List<ColorResult> dominantColors) {
     
@@ -78,18 +78,17 @@ public class DominantColorResult {
 
   public DominantColorResult addDominantColorsItem(ColorResult dominantColorsItem) {
     if (this.dominantColors == null) {
-      this.dominantColors = new ArrayList<ColorResult>();
+      this.dominantColors = new ArrayList<>();
     }
     this.dominantColors.add(dominantColorsItem);
     return this;
   }
 
-   /**
+  /**
    * Dominant colors in the image, in order where most dominant color is in the first index position (0), the second most-dominant color is in index position 1 and so on
    * @return dominantColors
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Dominant colors in the image, in order where most dominant color is in the first index position (0), the second most-dominant color is in index position 1 and so on")
   @JsonProperty(JSON_PROPERTY_DOMINANT_COLORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class DominantColorResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOMINANT_COLORS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDominantColors(List<ColorResult> dominantColors) {
     this.dominantColors = dominantColors;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class DominantColorResult {
   public int hashCode() {
     return Objects.hash(successful, dominantColors);
   }
-
 
   @Override
   public String toString() {

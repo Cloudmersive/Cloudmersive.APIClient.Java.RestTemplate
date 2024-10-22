@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of converting an EML file to HTML string
  */
-@ApiModel(description = "Result of converting an EML file to HTML string")
 @JsonPropertyOrder({
   EmlToHtmlResult.JSON_PROPERTY_SUCCESSFUL,
   EmlToHtmlResult.JSON_PROPERTY_CONTENT,
@@ -42,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   EmlToHtmlResult.JSON_PROPERTY_SUBJECT,
   EmlToHtmlResult.JSON_PROPERTY_ATTACHMENTS
 })
-@JsonTypeName("EmlToHtmlResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EmlToHtmlResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -70,8 +68,10 @@ public class EmlToHtmlResult {
   private String subject;
 
   public static final String JSON_PROPERTY_ATTACHMENTS = "Attachments";
-  private List<EmlAttachment> attachments = null;
+  private List<EmlAttachment> attachments = new ArrayList<>();
 
+  public EmlToHtmlResult() {
+  }
 
   public EmlToHtmlResult successful(Boolean successful) {
     
@@ -79,12 +79,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,10 +92,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public EmlToHtmlResult content(String content) {
     
@@ -104,12 +104,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * An HTML string version of the EML file
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An HTML string version of the EML file")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,10 +117,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(String content) {
     this.content = content;
   }
-
 
   public EmlToHtmlResult body(String body) {
     
@@ -129,12 +129,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The main body of the EML file&#39;s email as an HTML string
    * @return body
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The main body of the EML file's email as an HTML string")
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -143,10 +142,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BODY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBody(String body) {
     this.body = body;
   }
-
 
   public EmlToHtmlResult from(String from) {
     
@@ -154,12 +154,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The From sender of the EML file&#39;s email
    * @return from
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The From sender of the EML file's email")
   @JsonProperty(JSON_PROPERTY_FROM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,10 +167,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FROM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFrom(String from) {
     this.from = from;
   }
-
 
   public EmlToHtmlResult to(String to) {
     
@@ -179,12 +179,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The To recipients of the EML file&#39;s email
    * @return to
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The To recipients of the EML file's email")
   @JsonProperty(JSON_PROPERTY_TO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -193,10 +192,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTo(String to) {
     this.to = to;
   }
-
 
   public EmlToHtmlResult cc(String cc) {
     
@@ -204,12 +204,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The CC recipients of the EML file&#39;s email
    * @return cc
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The CC recipients of the EML file's email")
   @JsonProperty(JSON_PROPERTY_CC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -218,10 +217,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCc(String cc) {
     this.cc = cc;
   }
-
 
   public EmlToHtmlResult dateSent(String dateSent) {
     
@@ -229,12 +229,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The date and time that the EML file&#39;s email was sent
    * @return dateSent
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date and time that the EML file's email was sent")
   @JsonProperty(JSON_PROPERTY_DATE_SENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -243,10 +242,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_SENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateSent(String dateSent) {
     this.dateSent = dateSent;
   }
-
 
   public EmlToHtmlResult subject(String subject) {
     
@@ -254,12 +254,11 @@ public class EmlToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The subject of the EML file&#39;s email
    * @return subject
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The subject of the EML file's email")
   @JsonProperty(JSON_PROPERTY_SUBJECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -268,10 +267,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBJECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   public EmlToHtmlResult attachments(List<EmlAttachment> attachments) {
     
@@ -281,18 +281,17 @@ public class EmlToHtmlResult {
 
   public EmlToHtmlResult addAttachmentsItem(EmlAttachment attachmentsItem) {
     if (this.attachments == null) {
-      this.attachments = new ArrayList<EmlAttachment>();
+      this.attachments = new ArrayList<>();
     }
     this.attachments.add(attachmentsItem);
     return this;
   }
 
-   /**
+  /**
    * List of all attachments for the EML file
    * @return attachments
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of all attachments for the EML file")
   @JsonProperty(JSON_PROPERTY_ATTACHMENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -301,10 +300,11 @@ public class EmlToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ATTACHMENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAttachments(List<EmlAttachment> attachments) {
     this.attachments = attachments;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -330,7 +330,6 @@ public class EmlToHtmlResult {
   public int hashCode() {
     return Objects.hash(successful, content, body, from, to, cc, dateSent, subject, attachments);
   }
-
 
   @Override
   public String toString() {

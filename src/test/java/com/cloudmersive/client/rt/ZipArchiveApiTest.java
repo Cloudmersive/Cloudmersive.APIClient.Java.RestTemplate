@@ -17,9 +17,12 @@ import com.cloudmersive.client.rt.model.CreateZipArchiveRequest;
 import java.io.File;
 import com.cloudmersive.client.rt.model.ZipEncryptionAdvancedRequest;
 import com.cloudmersive.client.rt.model.ZipExtractResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +31,8 @@ import java.util.Map;
 /**
  * API tests for ZipArchiveApi
  */
-@Ignore
-public class ZipArchiveApiTest {
+@Disabled
+class ZipArchiveApiTest {
 
     private final ZipArchiveApi api = new ZipArchiveApi();
 
@@ -39,11 +42,11 @@ public class ZipArchiveApiTest {
      *
      * Create a new zip archive by compressing input files.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipCreateTest() {
+    void zipArchiveZipCreateTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -54,6 +57,7 @@ public class ZipArchiveApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.zipArchiveZipCreate(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
 
         // TODO: test validations
@@ -64,12 +68,13 @@ public class ZipArchiveApiTest {
      *
      * Create a new zip archive by compressing input files, folders and leverage advanced options to control the structure of the resulting zip archive.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipCreateAdvancedTest() {
+    void zipArchiveZipCreateAdvancedTest() {
         CreateZipArchiveRequest request = null;
+
         Object response = api.zipArchiveZipCreateAdvanced(request);
 
         // TODO: test validations
@@ -80,11 +85,11 @@ public class ZipArchiveApiTest {
      *
      * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipCreateEncryptedTest() {
+    void zipArchiveZipCreateEncryptedTest() {
         String password = null;
         org.springframework.core.io.Resource inputFile1 = null;
         String encryptionAlgorithm = null;
@@ -97,6 +102,7 @@ public class ZipArchiveApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.zipArchiveZipCreateEncrypted(password, inputFile1, encryptionAlgorithm, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
 
         // TODO: test validations
@@ -107,14 +113,15 @@ public class ZipArchiveApiTest {
      *
      * Create a new zip archive by compressing input files, and also applies encryption and password protection to the zip, for the purposes of quarantining the underlyikng file.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipCreateQuarantineTest() {
+    void zipArchiveZipCreateQuarantineTest() {
         String password = null;
         org.springframework.core.io.Resource inputFile1 = null;
         String encryptionAlgorithm = null;
+
         Object response = api.zipArchiveZipCreateQuarantine(password, inputFile1, encryptionAlgorithm);
 
         // TODO: test validations
@@ -125,13 +132,14 @@ public class ZipArchiveApiTest {
      *
      * Decrypts and removes password protection from an encrypted zip file with the specified password
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipDecryptTest() {
+    void zipArchiveZipDecryptTest() {
         String zipPassword = null;
         org.springframework.core.io.Resource inputFile = null;
+
         Object response = api.zipArchiveZipDecrypt(zipPassword, inputFile);
 
         // TODO: test validations
@@ -142,12 +150,13 @@ public class ZipArchiveApiTest {
      *
      * Encrypts and password protects an existing zip file with the specified password and encryption algorithm
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipEncryptAdvancedTest() {
+    void zipArchiveZipEncryptAdvancedTest() {
         ZipEncryptionAdvancedRequest encryptionRequest = null;
+
         Object response = api.zipArchiveZipEncryptAdvanced(encryptionRequest);
 
         // TODO: test validations
@@ -158,12 +167,13 @@ public class ZipArchiveApiTest {
      *
      * Extracts a zip archive by decompressing files, and folders.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void zipArchiveZipExtractTest() {
+    void zipArchiveZipExtractTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         ZipExtractResponse response = api.zipArchiveZipExtract(inputFile);
 
         // TODO: test validations

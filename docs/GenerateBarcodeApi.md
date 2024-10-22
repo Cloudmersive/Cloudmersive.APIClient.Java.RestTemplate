@@ -2,13 +2,13 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**generateBarcodeEAN13**](GenerateBarcodeApi.md#generateBarcodeEAN13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file
-[**generateBarcodeEAN8**](GenerateBarcodeApi.md#generateBarcodeEAN8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file
-[**generateBarcodeQRCode**](GenerateBarcodeApi.md#generateBarcodeQRCode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file
-[**generateBarcodeUPCA**](GenerateBarcodeApi.md#generateBarcodeUPCA) | **POST** /barcode/generate/upc-a | Generate a UPC-A code barcode as PNG file
-[**generateBarcodeUPCE**](GenerateBarcodeApi.md#generateBarcodeUPCE) | **POST** /barcode/generate/upc-e | Generate a UPC-E code barcode as PNG file
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**generateBarcodeEAN13**](GenerateBarcodeApi.md#generateBarcodeEAN13) | **POST** /barcode/generate/ean-13 | Generate a EAN-13 code barcode as PNG file |
+| [**generateBarcodeEAN8**](GenerateBarcodeApi.md#generateBarcodeEAN8) | **POST** /barcode/generate/ean-8 | Generate a EAN-8 code barcode as PNG file |
+| [**generateBarcodeQRCode**](GenerateBarcodeApi.md#generateBarcodeQRCode) | **POST** /barcode/generate/qrcode | Generate a QR code barcode as PNG file |
+| [**generateBarcodeUPCA**](GenerateBarcodeApi.md#generateBarcodeUPCA) | **POST** /barcode/generate/upc-a | Generate a UPC-A code barcode as PNG file |
+| [**generateBarcodeUPCE**](GenerateBarcodeApi.md#generateBarcodeUPCE) | **POST** /barcode/generate/upc-e | Generate a UPC-E code barcode as PNG file |
 
 
 
@@ -61,9 +61,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| Barcode value to generate from |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| Barcode value to generate from | |
 
 ### Return type
 
@@ -77,6 +77,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -133,9 +134,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| Barcode value to generate from |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| Barcode value to generate from | |
 
 ### Return type
 
@@ -149,6 +150,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -205,9 +207,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| QR code text to convert into the QR code barcode |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| QR code text to convert into the QR code barcode | |
 
 ### Return type
 
@@ -221,6 +223,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -277,9 +280,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| UPC-A barcode value to generate from |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| UPC-A barcode value to generate from | |
 
 ### Return type
 
@@ -293,6 +296,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -349,9 +353,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| UPC-E barcode value to generate from |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| UPC-E barcode value to generate from | |
 
 ### Return type
 
@@ -365,6 +369,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

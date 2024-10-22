@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DateTimeNowResult
  */
-public class DateTimeNowResultTest {
+class DateTimeNowResultTest {
     private final DateTimeNowResult model = new DateTimeNowResult();
 
     /**
      * Model tests for DateTimeNowResult
      */
     @Test
-    public void testDateTimeNowResult() {
+    void testDateTimeNowResult() {
         // TODO: test DateTimeNowResult
     }
 
@@ -44,7 +41,7 @@ public class DateTimeNowResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -52,7 +49,7 @@ public class DateTimeNowResultTest {
      * Test the property 'now'
      */
     @Test
-    public void nowTest() {
+    void nowTest() {
         // TODO: test now
     }
 
@@ -60,7 +57,7 @@ public class DateTimeNowResultTest {
      * Test the property 'nowGmt'
      */
     @Test
-    public void nowGmtTest() {
+    void nowGmtTest() {
         // TODO: test nowGmt
     }
 

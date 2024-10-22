@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetXlsxCellRequest
  */
-public class GetXlsxCellRequestTest {
+class GetXlsxCellRequestTest {
     private final GetXlsxCellRequest model = new GetXlsxCellRequest();
 
     /**
      * Model tests for GetXlsxCellRequest
      */
     @Test
-    public void testGetXlsxCellRequest() {
+    void testGetXlsxCellRequest() {
         // TODO: test GetXlsxCellRequest
     }
 
@@ -44,7 +41,7 @@ public class GetXlsxCellRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class GetXlsxCellRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class GetXlsxCellRequestTest {
      * Test the property 'worksheetToQuery'
      */
     @Test
-    public void worksheetToQueryTest() {
+    void worksheetToQueryTest() {
         // TODO: test worksheetToQuery
     }
 
@@ -68,7 +65,7 @@ public class GetXlsxCellRequestTest {
      * Test the property 'rowIndex'
      */
     @Test
-    public void rowIndexTest() {
+    void rowIndexTest() {
         // TODO: test rowIndex
     }
 
@@ -76,7 +73,7 @@ public class GetXlsxCellRequestTest {
      * Test the property 'cellIndex'
      */
     @Test
-    public void cellIndexTest() {
+    void cellIndexTest() {
         // TODO: test cellIndex
     }
 

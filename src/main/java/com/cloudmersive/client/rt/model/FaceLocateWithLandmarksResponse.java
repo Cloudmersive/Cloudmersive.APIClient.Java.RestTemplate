@@ -21,30 +21,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Results of locating faces in an image
  */
-@ApiModel(description = "Results of locating faces in an image")
 @JsonPropertyOrder({
   FaceLocateWithLandmarksResponse.JSON_PROPERTY_SUCCESSFUL,
   FaceLocateWithLandmarksResponse.JSON_PROPERTY_FACES,
   FaceLocateWithLandmarksResponse.JSON_PROPERTY_FACE_COUNT,
   FaceLocateWithLandmarksResponse.JSON_PROPERTY_ERROR_DETAILS
 })
-@JsonTypeName("FaceLocateWithLandmarksResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FaceLocateWithLandmarksResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_FACES = "Faces";
-  private List<FaceWithLandmarks> faces = null;
+  private List<FaceWithLandmarks> faces = new ArrayList<>();
 
   public static final String JSON_PROPERTY_FACE_COUNT = "FaceCount";
   private Integer faceCount;
@@ -52,6 +50,8 @@ public class FaceLocateWithLandmarksResponse {
   public static final String JSON_PROPERTY_ERROR_DETAILS = "ErrorDetails";
   private String errorDetails;
 
+  public FaceLocateWithLandmarksResponse() {
+  }
 
   public FaceLocateWithLandmarksResponse successful(Boolean successful) {
     
@@ -59,12 +59,11 @@ public class FaceLocateWithLandmarksResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class FaceLocateWithLandmarksResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public FaceLocateWithLandmarksResponse faces(List<FaceWithLandmarks> faces) {
     
@@ -86,18 +86,17 @@ public class FaceLocateWithLandmarksResponse {
 
   public FaceLocateWithLandmarksResponse addFacesItem(FaceWithLandmarks facesItem) {
     if (this.faces == null) {
-      this.faces = new ArrayList<FaceWithLandmarks>();
+      this.faces = new ArrayList<>();
     }
     this.faces.add(facesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of faces found in the image
    * @return faces
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of faces found in the image")
   @JsonProperty(JSON_PROPERTY_FACES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,10 +105,11 @@ public class FaceLocateWithLandmarksResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FACES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFaces(List<FaceWithLandmarks> faces) {
     this.faces = faces;
   }
-
 
   public FaceLocateWithLandmarksResponse faceCount(Integer faceCount) {
     
@@ -117,12 +117,11 @@ public class FaceLocateWithLandmarksResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of faces found in the image
    * @return faceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of faces found in the image")
   @JsonProperty(JSON_PROPERTY_FACE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,10 +130,11 @@ public class FaceLocateWithLandmarksResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FACE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFaceCount(Integer faceCount) {
     this.faceCount = faceCount;
   }
-
 
   public FaceLocateWithLandmarksResponse errorDetails(String errorDetails) {
     
@@ -142,12 +142,11 @@ public class FaceLocateWithLandmarksResponse {
     return this;
   }
 
-   /**
+  /**
    * Details of any errors that occurred
    * @return errorDetails
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Details of any errors that occurred")
   @JsonProperty(JSON_PROPERTY_ERROR_DETAILS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,10 +155,11 @@ public class FaceLocateWithLandmarksResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorDetails(String errorDetails) {
     this.errorDetails = errorDetails;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -180,7 +180,6 @@ public class FaceLocateWithLandmarksResponse {
   public int hashCode() {
     return Objects.hash(successful, faces, faceCount, errorDetails);
   }
-
 
   @Override
   public String toString() {

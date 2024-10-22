@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CreateBlankDocxRequest
  */
-public class CreateBlankDocxRequestTest {
+class CreateBlankDocxRequestTest {
     private final CreateBlankDocxRequest model = new CreateBlankDocxRequest();
 
     /**
      * Model tests for CreateBlankDocxRequest
      */
     @Test
-    public void testCreateBlankDocxRequest() {
+    void testCreateBlankDocxRequest() {
         // TODO: test CreateBlankDocxRequest
     }
 
@@ -43,7 +40,7 @@ public class CreateBlankDocxRequestTest {
      * Test the property 'initialText'
      */
     @Test
-    public void initialTextTest() {
+    void initialTextTest() {
         // TODO: test initialText
     }
 

@@ -21,14 +21,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to set-footer command
  */
-@ApiModel(description = "Input to set-footer command")
 @JsonPropertyOrder({
   DocxInsertImageRequest.JSON_PROPERTY_INPUT_DOCUMENT_FILE_BYTES,
   DocxInsertImageRequest.JSON_PROPERTY_INPUT_DOCUMENT_FILE_URL,
@@ -40,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxInsertImageRequest.JSON_PROPERTY_WIDTH_IN_E_M_US,
   DocxInsertImageRequest.JSON_PROPERTY_HEIGHT_IN_E_M_US
 })
-@JsonTypeName("DocxInsertImageRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxInsertImageRequest {
   public static final String JSON_PROPERTY_INPUT_DOCUMENT_FILE_BYTES = "InputDocumentFileBytes";
   private byte[] inputDocumentFileBytes;
@@ -70,6 +67,8 @@ public class DocxInsertImageRequest {
   public static final String JSON_PROPERTY_HEIGHT_IN_E_M_US = "HeightInEMUs";
   private Long heightInEMUs;
 
+  public DocxInsertImageRequest() {
+  }
 
   public DocxInsertImageRequest inputDocumentFileBytes(byte[] inputDocumentFileBytes) {
     
@@ -77,12 +76,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputDocumentFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_DOCUMENT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_DOCUMENT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputDocumentFileBytes(byte[] inputDocumentFileBytes) {
     this.inputDocumentFileBytes = inputDocumentFileBytes;
   }
-
 
   public DocxInsertImageRequest inputDocumentFileUrl(String inputDocumentFileUrl) {
     
@@ -102,12 +101,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputDocumentFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_DOCUMENT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_DOCUMENT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputDocumentFileUrl(String inputDocumentFileUrl) {
     this.inputDocumentFileUrl = inputDocumentFileUrl;
   }
-
 
   public DocxInsertImageRequest inputImageFileBytes(byte[] inputImageFileBytes) {
     
@@ -127,12 +126,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input image file to operate on; if you supply this value do not supply InputImageFileUrl or ImageToAdd.
    * @return inputImageFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input image file to operate on; if you supply this value do not supply InputImageFileUrl or ImageToAdd.")
   @JsonProperty(JSON_PROPERTY_INPUT_IMAGE_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,10 +139,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_IMAGE_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputImageFileBytes(byte[] inputImageFileBytes) {
     this.inputImageFileBytes = inputImageFileBytes;
   }
-
 
   public DocxInsertImageRequest inputImageFileUrl(String inputImageFileUrl) {
     
@@ -152,12 +151,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of an image file to operate on as input; if you supply this value do not supply InputImageFileBytes or ImageToAdd.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputImageFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of an image file to operate on as input; if you supply this value do not supply InputImageFileBytes or ImageToAdd.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_IMAGE_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,10 +164,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_IMAGE_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputImageFileUrl(String inputImageFileUrl) {
     this.inputImageFileUrl = inputImageFileUrl;
   }
-
 
   public DocxInsertImageRequest imageToAdd(DocxImage imageToAdd) {
     
@@ -177,12 +176,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Get imageToAdd
    * @return imageToAdd
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_IMAGE_TO_ADD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,10 +189,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_TO_ADD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageToAdd(DocxImage imageToAdd) {
     this.imageToAdd = imageToAdd;
   }
-
 
   public DocxInsertImageRequest insertPlacement(String insertPlacement) {
     
@@ -202,12 +201,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)
    * @return insertPlacement
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; default is DocumentEnd.  Placement Type of the insert; possible values are: DocumentStart (very beginning of the document), DocumentEnd (very end of the document), BeforeExistingObject (right before an existing object - fill in the InsertPath field using the Path value from an existing object), AfterExistingObject (right after an existing object - fill in the InsertPath field using the Path value from an existing object)")
   @JsonProperty(JSON_PROPERTY_INSERT_PLACEMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,10 +214,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INSERT_PLACEMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInsertPlacement(String insertPlacement) {
     this.insertPlacement = insertPlacement;
   }
-
 
   public DocxInsertImageRequest insertPath(String insertPath) {
     
@@ -227,12 +226,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject
    * @return insertPath
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; location within the document to insert the object; fill in the InsertPath field using the Path value from an existing object.  Used with InsertPlacement of BeforeExistingObject or AfterExistingObject")
   @JsonProperty(JSON_PROPERTY_INSERT_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,10 +239,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INSERT_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInsertPath(String insertPath) {
     this.insertPath = insertPath;
   }
-
 
   public DocxInsertImageRequest widthInEMUs(Long widthInEMUs) {
     
@@ -252,12 +251,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: The width of the image in EMUs
    * @return widthInEMUs
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: The width of the image in EMUs")
   @JsonProperty(JSON_PROPERTY_WIDTH_IN_E_M_US)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,10 +264,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH_IN_E_M_US)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidthInEMUs(Long widthInEMUs) {
     this.widthInEMUs = widthInEMUs;
   }
-
 
   public DocxInsertImageRequest heightInEMUs(Long heightInEMUs) {
     
@@ -277,12 +276,11 @@ public class DocxInsertImageRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: The height of the image in EMUs
    * @return heightInEMUs
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: The height of the image in EMUs")
   @JsonProperty(JSON_PROPERTY_HEIGHT_IN_E_M_US)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,10 +289,11 @@ public class DocxInsertImageRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT_IN_E_M_US)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeightInEMUs(Long heightInEMUs) {
     this.heightInEMUs = heightInEMUs;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -320,7 +319,6 @@ public class DocxInsertImageRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputDocumentFileBytes), inputDocumentFileUrl, Arrays.hashCode(inputImageFileBytes), inputImageFileUrl, imageToAdd, insertPlacement, insertPath, widthInEMUs, heightInEMUs);
   }
-
 
   @Override
   public String toString() {

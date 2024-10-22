@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Output of a language translation operation
  */
-@ApiModel(description = "Output of a language translation operation")
 @JsonPropertyOrder({
   LanguageTranslationResponse.JSON_PROPERTY_SUCCESSFUL,
   LanguageTranslationResponse.JSON_PROPERTY_TRANSLATED_TEXT_RESULT,
   LanguageTranslationResponse.JSON_PROPERTY_SENTENCE_COUNT
 })
-@JsonTypeName("LanguageTranslationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class LanguageTranslationResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class LanguageTranslationResponse {
   public static final String JSON_PROPERTY_SENTENCE_COUNT = "SentenceCount";
   private Integer sentenceCount;
 
+  public LanguageTranslationResponse() {
+  }
 
   public LanguageTranslationResponse successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class LanguageTranslationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the language detection operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the language detection operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class LanguageTranslationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public LanguageTranslationResponse translatedTextResult(String translatedTextResult) {
     
@@ -77,12 +76,11 @@ public class LanguageTranslationResponse {
     return this;
   }
 
-   /**
+  /**
    * Translated text in target language
    * @return translatedTextResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Translated text in target language")
   @JsonProperty(JSON_PROPERTY_TRANSLATED_TEXT_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class LanguageTranslationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TRANSLATED_TEXT_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTranslatedTextResult(String translatedTextResult) {
     this.translatedTextResult = translatedTextResult;
   }
-
 
   public LanguageTranslationResponse sentenceCount(Integer sentenceCount) {
     
@@ -102,12 +101,11 @@ public class LanguageTranslationResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of sentences in input text
    * @return sentenceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of sentences in input text")
   @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class LanguageTranslationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceCount(Integer sentenceCount) {
     this.sentenceCount = sentenceCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class LanguageTranslationResponse {
   public int hashCode() {
     return Objects.hash(successful, translatedTextResult, sentenceCount);
   }
-
 
   @Override
   public String toString() {

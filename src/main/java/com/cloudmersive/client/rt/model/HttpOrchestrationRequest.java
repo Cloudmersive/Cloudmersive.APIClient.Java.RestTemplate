@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * HTTP Orchestration request
  */
-@ApiModel(description = "HTTP Orchestration request")
 @JsonPropertyOrder({
   HttpOrchestrationRequest.JSON_PROPERTY_HTTP_TASKS
 })
-@JsonTypeName("HttpOrchestrationRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpOrchestrationRequest {
   public static final String JSON_PROPERTY_HTTP_TASKS = "HttpTasks";
-  private List<HttpOrchestrationTask> httpTasks = null;
+  private List<HttpOrchestrationTask> httpTasks = new ArrayList<>();
 
+  public HttpOrchestrationRequest() {
+  }
 
   public HttpOrchestrationRequest httpTasks(List<HttpOrchestrationTask> httpTasks) {
     
@@ -49,18 +49,17 @@ public class HttpOrchestrationRequest {
 
   public HttpOrchestrationRequest addHttpTasksItem(HttpOrchestrationTask httpTasksItem) {
     if (this.httpTasks == null) {
-      this.httpTasks = new ArrayList<HttpOrchestrationTask>();
+      this.httpTasks = new ArrayList<>();
     }
     this.httpTasks.add(httpTasksItem);
     return this;
   }
 
-   /**
+  /**
    * Tasks to perform, in the order you wish to perform them
    * @return httpTasks
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tasks to perform, in the order you wish to perform them")
   @JsonProperty(JSON_PROPERTY_HTTP_TASKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class HttpOrchestrationRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTTP_TASKS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHttpTasks(List<HttpOrchestrationTask> httpTasks) {
     this.httpTasks = httpTasks;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class HttpOrchestrationRequest {
   public int hashCode() {
     return Objects.hash(httpTasks);
   }
-
 
   @Override
   public String toString() {

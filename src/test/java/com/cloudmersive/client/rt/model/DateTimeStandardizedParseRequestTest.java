@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DateTimeStandardizedParseRequest
  */
-public class DateTimeStandardizedParseRequestTest {
+class DateTimeStandardizedParseRequestTest {
     private final DateTimeStandardizedParseRequest model = new DateTimeStandardizedParseRequest();
 
     /**
      * Model tests for DateTimeStandardizedParseRequest
      */
     @Test
-    public void testDateTimeStandardizedParseRequest() {
+    void testDateTimeStandardizedParseRequest() {
         // TODO: test DateTimeStandardizedParseRequest
     }
 
@@ -43,7 +40,7 @@ public class DateTimeStandardizedParseRequestTest {
      * Test the property 'rawDateTimeInput'
      */
     @Test
-    public void rawDateTimeInputTest() {
+    void rawDateTimeInputTest() {
         // TODO: test rawDateTimeInput
     }
 
@@ -51,7 +48,7 @@ public class DateTimeStandardizedParseRequestTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 

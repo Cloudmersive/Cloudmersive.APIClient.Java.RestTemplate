@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a batch XSS protection operation
  */
-@ApiModel(description = "Result of performing a batch XSS protection operation")
 @JsonPropertyOrder({
   XssProtectionBatchResponse.JSON_PROPERTY_RESULT_ITEMS
 })
-@JsonTypeName("XssProtectionBatchResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XssProtectionBatchResponse {
   public static final String JSON_PROPERTY_RESULT_ITEMS = "ResultItems";
-  private List<XssProtectionResult> resultItems = null;
+  private List<XssProtectionResult> resultItems = new ArrayList<>();
 
+  public XssProtectionBatchResponse() {
+  }
 
   public XssProtectionBatchResponse resultItems(List<XssProtectionResult> resultItems) {
     
@@ -49,18 +49,17 @@ public class XssProtectionBatchResponse {
 
   public XssProtectionBatchResponse addResultItemsItem(XssProtectionResult resultItemsItem) {
     if (this.resultItems == null) {
-      this.resultItems = new ArrayList<XssProtectionResult>();
+      this.resultItems = new ArrayList<>();
     }
     this.resultItems.add(resultItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Results from performing a batch XSS protection operation
    * @return resultItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Results from performing a batch XSS protection operation")
   @JsonProperty(JSON_PROPERTY_RESULT_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class XssProtectionBatchResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULT_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultItems(List<XssProtectionResult> resultItems) {
     this.resultItems = resultItems;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class XssProtectionBatchResponse {
   public int hashCode() {
     return Objects.hash(resultItems);
   }
-
 
   @Override
   public String toString() {

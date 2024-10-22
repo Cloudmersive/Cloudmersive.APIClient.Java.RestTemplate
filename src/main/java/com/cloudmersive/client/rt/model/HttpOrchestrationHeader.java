@@ -21,21 +21,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * HTTP header to add to the HTTP request
  */
-@ApiModel(description = "HTTP header to add to the HTTP request")
 @JsonPropertyOrder({
   HttpOrchestrationHeader.JSON_PROPERTY_HEADER_NAME,
   HttpOrchestrationHeader.JSON_PROPERTY_HEADER_VALUE,
   HttpOrchestrationHeader.JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK
 })
-@JsonTypeName("HttpOrchestrationHeader")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpOrchestrationHeader {
   public static final String JSON_PROPERTY_HEADER_NAME = "HeaderName";
   private String headerName;
@@ -46,6 +43,8 @@ public class HttpOrchestrationHeader {
   public static final String JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK = "UseOutputFromPreviousTask";
   private TaskOutputReference useOutputFromPreviousTask;
 
+  public HttpOrchestrationHeader() {
+  }
 
   public HttpOrchestrationHeader headerName(String headerName) {
     
@@ -53,12 +52,11 @@ public class HttpOrchestrationHeader {
     return this;
   }
 
-   /**
+  /**
    * Name of the HTTP header, e.g. \&quot;Content-Type\&quot;
    * @return headerName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the HTTP header, e.g. \"Content-Type\"")
   @JsonProperty(JSON_PROPERTY_HEADER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class HttpOrchestrationHeader {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEADER_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeaderName(String headerName) {
     this.headerName = headerName;
   }
-
 
   public HttpOrchestrationHeader headerValue(String headerValue) {
     
@@ -78,12 +77,11 @@ public class HttpOrchestrationHeader {
     return this;
   }
 
-   /**
+  /**
    * Value of the HTTP header
    * @return headerValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value of the HTTP header")
   @JsonProperty(JSON_PROPERTY_HEADER_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class HttpOrchestrationHeader {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEADER_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeaderValue(String headerValue) {
     this.headerValue = headerValue;
   }
-
 
   public HttpOrchestrationHeader useOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     
@@ -103,12 +102,11 @@ public class HttpOrchestrationHeader {
     return this;
   }
 
-   /**
+  /**
    * Get useOutputFromPreviousTask
    * @return useOutputFromPreviousTask
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class HttpOrchestrationHeader {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUseOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     this.useOutputFromPreviousTask = useOutputFromPreviousTask;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class HttpOrchestrationHeader {
   public int hashCode() {
     return Objects.hash(headerName, headerValue, useOutputFromPreviousTask);
   }
-
 
   @Override
   public String toString() {

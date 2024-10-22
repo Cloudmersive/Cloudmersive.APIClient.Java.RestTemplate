@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for LanguageDetectionRequest
  */
-public class LanguageDetectionRequestTest {
+class LanguageDetectionRequestTest {
     private final LanguageDetectionRequest model = new LanguageDetectionRequest();
 
     /**
      * Model tests for LanguageDetectionRequest
      */
     @Test
-    public void testLanguageDetectionRequest() {
+    void testLanguageDetectionRequest() {
         // TODO: test LanguageDetectionRequest
     }
 
@@ -43,7 +40,7 @@ public class LanguageDetectionRequestTest {
      * Test the property 'textToDetect'
      */
     @Test
-    public void textToDetectTest() {
+    void textToDetectTest() {
         // TODO: test textToDetect
     }
 

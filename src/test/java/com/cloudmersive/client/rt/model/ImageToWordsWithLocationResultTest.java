@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ImageToWordsWithLocationResult
  */
-public class ImageToWordsWithLocationResultTest {
+class ImageToWordsWithLocationResultTest {
     private final ImageToWordsWithLocationResult model = new ImageToWordsWithLocationResult();
 
     /**
      * Model tests for ImageToWordsWithLocationResult
      */
     @Test
-    public void testImageToWordsWithLocationResult() {
+    void testImageToWordsWithLocationResult() {
         // TODO: test ImageToWordsWithLocationResult
     }
 
@@ -46,7 +44,7 @@ public class ImageToWordsWithLocationResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class ImageToWordsWithLocationResultTest {
      * Test the property 'words'
      */
     @Test
-    public void wordsTest() {
+    void wordsTest() {
         // TODO: test words
     }
 

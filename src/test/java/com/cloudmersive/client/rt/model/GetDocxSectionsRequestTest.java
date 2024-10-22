@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxSectionsRequest
  */
-public class GetDocxSectionsRequestTest {
+class GetDocxSectionsRequestTest {
     private final GetDocxSectionsRequest model = new GetDocxSectionsRequest();
 
     /**
      * Model tests for GetDocxSectionsRequest
      */
     @Test
-    public void testGetDocxSectionsRequest() {
+    void testGetDocxSectionsRequest() {
         // TODO: test GetDocxSectionsRequest
     }
 
@@ -43,7 +40,7 @@ public class GetDocxSectionsRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class GetDocxSectionsRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 

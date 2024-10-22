@@ -21,24 +21,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Polygon instance to draw on an image
  */
-@ApiModel(description = "Polygon instance to draw on an image")
 @JsonPropertyOrder({
   DrawPolygonInstance.JSON_PROPERTY_BORDER_COLOR,
   DrawPolygonInstance.JSON_PROPERTY_BORDER_WIDTH,
   DrawPolygonInstance.JSON_PROPERTY_FILL_COLOR,
   DrawPolygonInstance.JSON_PROPERTY_POINTS
 })
-@JsonTypeName("DrawPolygonInstance")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DrawPolygonInstance {
   public static final String JSON_PROPERTY_BORDER_COLOR = "BorderColor";
   private String borderColor;
@@ -50,8 +48,10 @@ public class DrawPolygonInstance {
   private String fillColor;
 
   public static final String JSON_PROPERTY_POINTS = "Points";
-  private List<PolygonPoint> points = null;
+  private List<PolygonPoint> points = new ArrayList<>();
 
+  public DrawPolygonInstance() {
+  }
 
   public DrawPolygonInstance borderColor(String borderColor) {
     
@@ -59,12 +59,11 @@ public class DrawPolygonInstance {
     return this;
   }
 
-   /**
+  /**
    * Border Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.
    * @return borderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Border Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.")
   @JsonProperty(JSON_PROPERTY_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class DrawPolygonInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBorderColor(String borderColor) {
     this.borderColor = borderColor;
   }
-
 
   public DrawPolygonInstance borderWidth(Double borderWidth) {
     
@@ -84,12 +84,11 @@ public class DrawPolygonInstance {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the border.  Pass in 0 to draw a polygon with no border
    * @return borderWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the border.  Pass in 0 to draw a polygon with no border")
   @JsonProperty(JSON_PROPERTY_BORDER_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class DrawPolygonInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BORDER_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBorderWidth(Double borderWidth) {
     this.borderWidth = borderWidth;
   }
-
 
   public DrawPolygonInstance fillColor(String fillColor) {
     
@@ -109,12 +109,11 @@ public class DrawPolygonInstance {
     return this;
   }
 
-   /**
+  /**
    * Fill Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.  Leave blank to not fill the polygon.
    * @return fillColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fill Color to use - can be a hex value (with #) or HTML common color name.  Transparent colors are supported.  Leave blank to not fill the polygon.")
   @JsonProperty(JSON_PROPERTY_FILL_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,10 +122,11 @@ public class DrawPolygonInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILL_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFillColor(String fillColor) {
     this.fillColor = fillColor;
   }
-
 
   public DrawPolygonInstance points(List<PolygonPoint> points) {
     
@@ -136,18 +136,17 @@ public class DrawPolygonInstance {
 
   public DrawPolygonInstance addPointsItem(PolygonPoint pointsItem) {
     if (this.points == null) {
-      this.points = new ArrayList<PolygonPoint>();
+      this.points = new ArrayList<>();
     }
     this.points.add(pointsItem);
     return this;
   }
 
-   /**
+  /**
    * Points (vertices) which comprise the polygon; valid polygons must have at least 3 points
    * @return points
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Points (vertices) which comprise the polygon; valid polygons must have at least 3 points")
   @JsonProperty(JSON_PROPERTY_POINTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,10 +155,11 @@ public class DrawPolygonInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_POINTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPoints(List<PolygonPoint> points) {
     this.points = points;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -180,7 +180,6 @@ public class DrawPolygonInstance {
   public int hashCode() {
     return Objects.hash(borderColor, borderWidth, fillColor, points);
   }
-
 
   @Override
   public String toString() {

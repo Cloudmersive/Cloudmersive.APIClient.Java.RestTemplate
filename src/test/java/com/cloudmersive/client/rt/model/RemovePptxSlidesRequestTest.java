@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for RemovePptxSlidesRequest
  */
-public class RemovePptxSlidesRequestTest {
+class RemovePptxSlidesRequestTest {
     private final RemovePptxSlidesRequest model = new RemovePptxSlidesRequest();
 
     /**
      * Model tests for RemovePptxSlidesRequest
      */
     @Test
-    public void testRemovePptxSlidesRequest() {
+    void testRemovePptxSlidesRequest() {
         // TODO: test RemovePptxSlidesRequest
     }
 
@@ -43,7 +40,7 @@ public class RemovePptxSlidesRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class RemovePptxSlidesRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class RemovePptxSlidesRequestTest {
      * Test the property 'startDeleteSlideNumber'
      */
     @Test
-    public void startDeleteSlideNumberTest() {
+    void startDeleteSlideNumberTest() {
         // TODO: test startDeleteSlideNumber
     }
 
@@ -67,7 +64,7 @@ public class RemovePptxSlidesRequestTest {
      * Test the property 'endDeleteSlideNumber'
      */
     @Test
-    public void endDeleteSlideNumberTest() {
+    void endDeleteSlideNumberTest() {
         // TODO: test endDeleteSlideNumber
     }
 

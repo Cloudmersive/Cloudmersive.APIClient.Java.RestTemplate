@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ColorResult
  */
-public class ColorResultTest {
+class ColorResultTest {
     private final ColorResult model = new ColorResult();
 
     /**
      * Model tests for ColorResult
      */
     @Test
-    public void testColorResult() {
+    void testColorResult() {
         // TODO: test ColorResult
     }
 
@@ -43,7 +40,7 @@ public class ColorResultTest {
      * Test the property 'R'
      */
     @Test
-    public void RTest() {
+    void RTest() {
         // TODO: test R
     }
 
@@ -51,7 +48,7 @@ public class ColorResultTest {
      * Test the property 'G'
      */
     @Test
-    public void GTest() {
+    void GTest() {
         // TODO: test G
     }
 
@@ -59,7 +56,7 @@ public class ColorResultTest {
      * Test the property 'B'
      */
     @Test
-    public void BTest() {
+    void BTest() {
         // TODO: test B
     }
 

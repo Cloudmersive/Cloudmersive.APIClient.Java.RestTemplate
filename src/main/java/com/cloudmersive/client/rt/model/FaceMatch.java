@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Location of one face in an image, along with match results
  */
-@ApiModel(description = "Location of one face in an image, along with match results")
 @JsonPropertyOrder({
   FaceMatch.JSON_PROPERTY_LEFT_X,
   FaceMatch.JSON_PROPERTY_TOP_Y,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FaceMatch.JSON_PROPERTY_HIGH_CONFIDENCE_MATCH,
   FaceMatch.JSON_PROPERTY_MATCH_SCORE
 })
-@JsonTypeName("FaceMatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FaceMatch {
   public static final String JSON_PROPERTY_LEFT_X = "LeftX";
   private Integer leftX;
@@ -57,6 +54,8 @@ public class FaceMatch {
   public static final String JSON_PROPERTY_MATCH_SCORE = "MatchScore";
   private Double matchScore;
 
+  public FaceMatch() {
+  }
 
   public FaceMatch leftX(Integer leftX) {
     
@@ -64,12 +63,11 @@ public class FaceMatch {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the left side of the face
    * @return leftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the left side of the face")
   @JsonProperty(JSON_PROPERTY_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -78,10 +76,11 @@ public class FaceMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftX(Integer leftX) {
     this.leftX = leftX;
   }
-
 
   public FaceMatch topY(Integer topY) {
     
@@ -89,12 +88,11 @@ public class FaceMatch {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the top side of the face
    * @return topY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the top side of the face")
   @JsonProperty(JSON_PROPERTY_TOP_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +101,11 @@ public class FaceMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopY(Integer topY) {
     this.topY = topY;
   }
-
 
   public FaceMatch rightX(Integer rightX) {
     
@@ -114,12 +113,11 @@ public class FaceMatch {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the right side of the face
    * @return rightX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the right side of the face")
   @JsonProperty(JSON_PROPERTY_RIGHT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +126,11 @@ public class FaceMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightX(Integer rightX) {
     this.rightX = rightX;
   }
-
 
   public FaceMatch bottomY(Integer bottomY) {
     
@@ -139,12 +138,11 @@ public class FaceMatch {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the bottom side of the face
    * @return bottomY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the bottom side of the face")
   @JsonProperty(JSON_PROPERTY_BOTTOM_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +151,11 @@ public class FaceMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomY(Integer bottomY) {
     this.bottomY = bottomY;
   }
-
 
   public FaceMatch highConfidenceMatch(Boolean highConfidenceMatch) {
     
@@ -164,12 +163,11 @@ public class FaceMatch {
     return this;
   }
 
-   /**
+  /**
    * True if there is a high confidence match, false otherwise
    * @return highConfidenceMatch
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if there is a high confidence match, false otherwise")
   @JsonProperty(JSON_PROPERTY_HIGH_CONFIDENCE_MATCH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +176,11 @@ public class FaceMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HIGH_CONFIDENCE_MATCH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHighConfidenceMatch(Boolean highConfidenceMatch) {
     this.highConfidenceMatch = highConfidenceMatch;
   }
-
 
   public FaceMatch matchScore(Double matchScore) {
     
@@ -189,12 +188,11 @@ public class FaceMatch {
     return this;
   }
 
-   /**
+  /**
    * Match score from 0.0 to 1.0 with higher scores indicating a greater match; scores above 0.7 indicate a match
    * @return matchScore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Match score from 0.0 to 1.0 with higher scores indicating a greater match; scores above 0.7 indicate a match")
   @JsonProperty(JSON_PROPERTY_MATCH_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +201,11 @@ public class FaceMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchScore(Double matchScore) {
     this.matchScore = matchScore;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -229,7 +228,6 @@ public class FaceMatch {
   public int hashCode() {
     return Objects.hash(leftX, topY, rightX, bottomY, highConfidenceMatch, matchScore);
   }
-
 
   @Override
   public String toString() {

@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The recognition result of one cell in one row in a table of a form
  */
-@ApiModel(description = "The recognition result of one cell in one row in a table of a form")
 @JsonPropertyOrder({
   TableCellResult.JSON_PROPERTY_COLUMN_I_D,
   TableCellResult.JSON_PROPERTY_CELL_VALUES
 })
-@JsonTypeName("TableCellResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TableCellResult {
   public static final String JSON_PROPERTY_COLUMN_I_D = "ColumnID";
   private String columnID;
 
   public static final String JSON_PROPERTY_CELL_VALUES = "CellValues";
-  private List<OcrPhotoTextElement> cellValues = null;
+  private List<OcrPhotoTextElement> cellValues = new ArrayList<>();
 
+  public TableCellResult() {
+  }
 
   public TableCellResult columnID(String columnID) {
     
@@ -51,12 +51,11 @@ public class TableCellResult {
     return this;
   }
 
-   /**
+  /**
    * The ID of the column
    * @return columnID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The ID of the column")
   @JsonProperty(JSON_PROPERTY_COLUMN_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class TableCellResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLUMN_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColumnID(String columnID) {
     this.columnID = columnID;
   }
-
 
   public TableCellResult cellValues(List<OcrPhotoTextElement> cellValues) {
     
@@ -78,18 +78,17 @@ public class TableCellResult {
 
   public TableCellResult addCellValuesItem(OcrPhotoTextElement cellValuesItem) {
     if (this.cellValues == null) {
-      this.cellValues = new ArrayList<OcrPhotoTextElement>();
+      this.cellValues = new ArrayList<>();
     }
     this.cellValues.add(cellValuesItem);
     return this;
   }
 
-   /**
+  /**
    * Result cell value(s) extracted
    * @return cellValues
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result cell value(s) extracted")
   @JsonProperty(JSON_PROPERTY_CELL_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class TableCellResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_VALUES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellValues(List<OcrPhotoTextElement> cellValues) {
     this.cellValues = cellValues;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class TableCellResult {
   public int hashCode() {
     return Objects.hash(columnID, cellValues);
   }
-
 
   @Override
   public String toString() {

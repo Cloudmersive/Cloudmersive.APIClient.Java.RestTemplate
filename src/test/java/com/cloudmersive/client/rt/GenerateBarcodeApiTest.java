@@ -13,9 +13,12 @@
 
 package com.cloudmersive.client.rt;
 
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +27,8 @@ import java.util.Map;
 /**
  * API tests for GenerateBarcodeApi
  */
-@Ignore
-public class GenerateBarcodeApiTest {
+@Disabled
+class GenerateBarcodeApiTest {
 
     private final GenerateBarcodeApi api = new GenerateBarcodeApi();
 
@@ -35,12 +38,13 @@ public class GenerateBarcodeApiTest {
      *
      * Validates and generate a EAN-13 barcode as a PNG file, a type of 1D barcode
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void generateBarcodeEAN13Test() {
+    void generateBarcodeEAN13Test() {
         String value = null;
+
         byte[] response = api.generateBarcodeEAN13(value);
 
         // TODO: test validations
@@ -51,12 +55,13 @@ public class GenerateBarcodeApiTest {
      *
      * Validates and generate a EAN-8 barcode as a PNG file, a type of 1D barcode
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void generateBarcodeEAN8Test() {
+    void generateBarcodeEAN8Test() {
         String value = null;
+
         byte[] response = api.generateBarcodeEAN8(value);
 
         // TODO: test validations
@@ -67,12 +72,13 @@ public class GenerateBarcodeApiTest {
      *
      * Generate a QR code barcode as a PNG file, a type of 2D barcode which can encode free-form text information
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void generateBarcodeQRCodeTest() {
+    void generateBarcodeQRCodeTest() {
         String value = null;
+
         byte[] response = api.generateBarcodeQRCode(value);
 
         // TODO: test validations
@@ -83,12 +89,13 @@ public class GenerateBarcodeApiTest {
      *
      * Validate and generate a UPC-A barcode as a PNG file, a type of 1D barcode
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void generateBarcodeUPCATest() {
+    void generateBarcodeUPCATest() {
         String value = null;
+
         byte[] response = api.generateBarcodeUPCA(value);
 
         // TODO: test validations
@@ -99,12 +106,13 @@ public class GenerateBarcodeApiTest {
      *
      * Validates and generate a UPC-E barcode as a PNG file, a type of 1D barcode
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void generateBarcodeUPCETest() {
+    void generateBarcodeUPCETest() {
         String value = null;
+
         byte[] response = api.generateBarcodeUPCE(value);
 
         // TODO: test validations

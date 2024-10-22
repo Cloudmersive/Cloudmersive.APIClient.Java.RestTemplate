@@ -4,7 +4,9 @@ currencyapi
 
 - API version: v1
 
-- Build date: 2022-06-01T10:55:15.479-07:00[America/Los_Angeles]
+- Build date: 2024-10-22T03:17:08.451112300Z[Etc/UTC]
+
+- Generator version: 7.9.0
 
 The currency APIs help you retrieve exchange rates and convert prices between currencies easily.
 
@@ -15,7 +17,7 @@ The currency APIs help you retrieve exchange rates and convert prices between cu
 
 Building the API client library requires:
 
-1. Java 1.7+
+1. Java 1.8+
 2. Maven/Gradle
 
 ## Installation
@@ -42,7 +44,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.cloudmersive.rt</groupId>
   <artifactId>cloudmersive-java-api-client-rt</artifactId>
-  <version>4.1.1</version>
+  <version>5.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -52,7 +54,14 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.cloudmersive.rt:cloudmersive-java-api-client-rt:4.1.1"
+  repositories {
+    mavenCentral()     // Needed if the 'cloudmersive-java-api-client-rt' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'cloudmersive-java-api-client-rt' jar has been published to the local maven repo.
+  }
+
+  dependencies {
+     implementation "com.cloudmersive.rt:cloudmersive-java-api-client-rt:5.0.0"
+  }
 ```
 
 ### Others
@@ -65,7 +74,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/cloudmersive-java-api-client-rt-4.1.1.jar`
+- `target/cloudmersive-java-api-client-rt-5.0.0.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
@@ -129,9 +138,12 @@ Class | Method | HTTP request | Description
  - [ExchangeRateResult](docs/ExchangeRateResult.md)
 
 
+<a id="documentation-for-authorization"></a>
 ## Documentation for Authorization
 
+
 Authentication schemes defined for the API:
+<a id="Apikey"></a>
 ### Apikey
 
 

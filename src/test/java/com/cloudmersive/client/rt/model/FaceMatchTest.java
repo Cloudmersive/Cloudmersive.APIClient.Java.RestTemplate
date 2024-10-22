@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FaceMatch
  */
-public class FaceMatchTest {
+class FaceMatchTest {
     private final FaceMatch model = new FaceMatch();
 
     /**
      * Model tests for FaceMatch
      */
     @Test
-    public void testFaceMatch() {
+    void testFaceMatch() {
         // TODO: test FaceMatch
     }
 
@@ -43,7 +40,7 @@ public class FaceMatchTest {
      * Test the property 'leftX'
      */
     @Test
-    public void leftXTest() {
+    void leftXTest() {
         // TODO: test leftX
     }
 
@@ -51,7 +48,7 @@ public class FaceMatchTest {
      * Test the property 'topY'
      */
     @Test
-    public void topYTest() {
+    void topYTest() {
         // TODO: test topY
     }
 
@@ -59,7 +56,7 @@ public class FaceMatchTest {
      * Test the property 'rightX'
      */
     @Test
-    public void rightXTest() {
+    void rightXTest() {
         // TODO: test rightX
     }
 
@@ -67,7 +64,7 @@ public class FaceMatchTest {
      * Test the property 'bottomY'
      */
     @Test
-    public void bottomYTest() {
+    void bottomYTest() {
         // TODO: test bottomY
     }
 
@@ -75,7 +72,7 @@ public class FaceMatchTest {
      * Test the property 'highConfidenceMatch'
      */
     @Test
-    public void highConfidenceMatchTest() {
+    void highConfidenceMatchTest() {
         // TODO: test highConfidenceMatch
     }
 
@@ -83,7 +80,7 @@ public class FaceMatchTest {
      * Test the property 'matchScore'
      */
     @Test
-    public void matchScoreTest() {
+    void matchScoreTest() {
         // TODO: test matchScore
     }
 

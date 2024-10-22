@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single string replacement request
  */
-@ApiModel(description = "A single string replacement request")
 @JsonPropertyOrder({
   SingleReplaceString.JSON_PROPERTY_MATCH_STRING,
   SingleReplaceString.JSON_PROPERTY_REPLACE_STRING,
   SingleReplaceString.JSON_PROPERTY_MATCH_CASE
 })
-@JsonTypeName("SingleReplaceString")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SingleReplaceString {
   public static final String JSON_PROPERTY_MATCH_STRING = "MatchString";
   private String matchString;
@@ -45,6 +42,8 @@ public class SingleReplaceString {
   public static final String JSON_PROPERTY_MATCH_CASE = "MatchCase";
   private Boolean matchCase;
 
+  public SingleReplaceString() {
+  }
 
   public SingleReplaceString matchString(String matchString) {
     
@@ -52,12 +51,11 @@ public class SingleReplaceString {
     return this;
   }
 
-   /**
+  /**
    * String to search for and match against, to be replaced
    * @return matchString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "String to search for and match against, to be replaced")
   @JsonProperty(JSON_PROPERTY_MATCH_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class SingleReplaceString {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchString(String matchString) {
     this.matchString = matchString;
   }
-
 
   public SingleReplaceString replaceString(String replaceString) {
     
@@ -77,12 +76,11 @@ public class SingleReplaceString {
     return this;
   }
 
-   /**
+  /**
    * String to replace the matched values with
    * @return replaceString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "String to replace the matched values with")
   @JsonProperty(JSON_PROPERTY_REPLACE_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class SingleReplaceString {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPLACE_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReplaceString(String replaceString) {
     this.replaceString = replaceString;
   }
-
 
   public SingleReplaceString matchCase(Boolean matchCase) {
     
@@ -102,12 +101,11 @@ public class SingleReplaceString {
     return this;
   }
 
-   /**
+  /**
    * True if the case should be matched, false for case insensitive match
    * @return matchCase
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the case should be matched, false for case insensitive match")
   @JsonProperty(JSON_PROPERTY_MATCH_CASE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class SingleReplaceString {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_CASE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchCase(Boolean matchCase) {
     this.matchCase = matchCase;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class SingleReplaceString {
   public int hashCode() {
     return Objects.hash(matchString, replaceString, matchCase);
   }
-
 
   @Override
   public String toString() {

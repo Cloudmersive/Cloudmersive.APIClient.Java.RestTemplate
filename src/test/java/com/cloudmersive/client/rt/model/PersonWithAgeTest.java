@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PersonWithAge
  */
-public class PersonWithAgeTest {
+class PersonWithAgeTest {
     private final PersonWithAge model = new PersonWithAge();
 
     /**
      * Model tests for PersonWithAge
      */
     @Test
-    public void testPersonWithAge() {
+    void testPersonWithAge() {
         // TODO: test PersonWithAge
     }
 
@@ -44,7 +41,7 @@ public class PersonWithAgeTest {
      * Test the property 'faceLocation'
      */
     @Test
-    public void faceLocationTest() {
+    void faceLocationTest() {
         // TODO: test faceLocation
     }
 
@@ -52,7 +49,7 @@ public class PersonWithAgeTest {
      * Test the property 'ageClassificationConfidence'
      */
     @Test
-    public void ageClassificationConfidenceTest() {
+    void ageClassificationConfidenceTest() {
         // TODO: test ageClassificationConfidence
     }
 
@@ -60,7 +57,7 @@ public class PersonWithAgeTest {
      * Test the property 'ageClass'
      */
     @Test
-    public void ageClassTest() {
+    void ageClassTest() {
         // TODO: test ageClass
     }
 
@@ -68,7 +65,7 @@ public class PersonWithAgeTest {
      * Test the property 'age'
      */
     @Test
-    public void ageTest() {
+    void ageTest() {
         // TODO: test age
     }
 

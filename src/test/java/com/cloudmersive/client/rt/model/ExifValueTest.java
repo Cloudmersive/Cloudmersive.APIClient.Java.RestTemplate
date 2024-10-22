@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ExifValue
  */
-public class ExifValueTest {
+class ExifValueTest {
     private final ExifValue model = new ExifValue();
 
     /**
      * Model tests for ExifValue
      */
     @Test
-    public void testExifValue() {
+    void testExifValue() {
         // TODO: test ExifValue
     }
 
@@ -43,7 +40,7 @@ public class ExifValueTest {
      * Test the property 'tag'
      */
     @Test
-    public void tagTest() {
+    void tagTest() {
         // TODO: test tag
     }
 
@@ -51,7 +48,7 @@ public class ExifValueTest {
      * Test the property 'dataType'
      */
     @Test
-    public void dataTypeTest() {
+    void dataTypeTest() {
         // TODO: test dataType
     }
 
@@ -59,7 +56,7 @@ public class ExifValueTest {
      * Test the property 'dataValue'
      */
     @Test
-    public void dataValueTest() {
+    void dataValueTest() {
         // TODO: test dataValue
     }
 

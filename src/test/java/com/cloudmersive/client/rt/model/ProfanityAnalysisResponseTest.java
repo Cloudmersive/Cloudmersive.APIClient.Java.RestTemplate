@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ProfanityAnalysisResponse
  */
-public class ProfanityAnalysisResponseTest {
+class ProfanityAnalysisResponseTest {
     private final ProfanityAnalysisResponse model = new ProfanityAnalysisResponse();
 
     /**
      * Model tests for ProfanityAnalysisResponse
      */
     @Test
-    public void testProfanityAnalysisResponse() {
+    void testProfanityAnalysisResponse() {
         // TODO: test ProfanityAnalysisResponse
     }
 
@@ -43,7 +40,7 @@ public class ProfanityAnalysisResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class ProfanityAnalysisResponseTest {
      * Test the property 'profanityScoreResult'
      */
     @Test
-    public void profanityScoreResultTest() {
+    void profanityScoreResultTest() {
         // TODO: test profanityScoreResult
     }
 
@@ -59,7 +56,7 @@ public class ProfanityAnalysisResponseTest {
      * Test the property 'sentenceCount'
      */
     @Test
-    public void sentenceCountTest() {
+    void sentenceCountTest() {
         // TODO: test sentenceCount
     }
 

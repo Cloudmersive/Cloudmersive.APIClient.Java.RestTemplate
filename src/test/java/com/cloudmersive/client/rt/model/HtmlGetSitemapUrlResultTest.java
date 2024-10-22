@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HtmlGetSitemapUrlResult
  */
-public class HtmlGetSitemapUrlResultTest {
+class HtmlGetSitemapUrlResultTest {
     private final HtmlGetSitemapUrlResult model = new HtmlGetSitemapUrlResult();
 
     /**
      * Model tests for HtmlGetSitemapUrlResult
      */
     @Test
-    public void testHtmlGetSitemapUrlResult() {
+    void testHtmlGetSitemapUrlResult() {
         // TODO: test HtmlGetSitemapUrlResult
     }
 
@@ -43,7 +40,7 @@ public class HtmlGetSitemapUrlResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class HtmlGetSitemapUrlResultTest {
      * Test the property 'canonicalUrl'
      */
     @Test
-    public void canonicalUrlTest() {
+    void canonicalUrlTest() {
         // TODO: test canonicalUrl
     }
 

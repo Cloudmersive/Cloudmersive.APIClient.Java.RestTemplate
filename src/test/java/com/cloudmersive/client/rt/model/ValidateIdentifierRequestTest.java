@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateIdentifierRequest
  */
-public class ValidateIdentifierRequestTest {
+class ValidateIdentifierRequestTest {
     private final ValidateIdentifierRequest model = new ValidateIdentifierRequest();
 
     /**
      * Model tests for ValidateIdentifierRequest
      */
     @Test
-    public void testValidateIdentifierRequest() {
+    void testValidateIdentifierRequest() {
         // TODO: test ValidateIdentifierRequest
     }
 
@@ -43,7 +40,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'input'
      */
     @Test
-    public void inputTest() {
+    void inputTest() {
         // TODO: test input
     }
 
@@ -51,7 +48,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'allowWhitespace'
      */
     @Test
-    public void allowWhitespaceTest() {
+    void allowWhitespaceTest() {
         // TODO: test allowWhitespace
     }
 
@@ -59,7 +56,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'allowHyphens'
      */
     @Test
-    public void allowHyphensTest() {
+    void allowHyphensTest() {
         // TODO: test allowHyphens
     }
 
@@ -67,7 +64,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'allowUnderscore'
      */
     @Test
-    public void allowUnderscoreTest() {
+    void allowUnderscoreTest() {
         // TODO: test allowUnderscore
     }
 
@@ -75,7 +72,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'allowNumbers'
      */
     @Test
-    public void allowNumbersTest() {
+    void allowNumbersTest() {
         // TODO: test allowNumbers
     }
 
@@ -83,7 +80,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'allowPeriods'
      */
     @Test
-    public void allowPeriodsTest() {
+    void allowPeriodsTest() {
         // TODO: test allowPeriods
     }
 
@@ -91,7 +88,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'maxLength'
      */
     @Test
-    public void maxLengthTest() {
+    void maxLengthTest() {
         // TODO: test maxLength
     }
 
@@ -99,7 +96,7 @@ public class ValidateIdentifierRequestTest {
      * Test the property 'minLength'
      */
     @Test
-    public void minLengthTest() {
+    void minLengthTest() {
         // TODO: test minLength
     }
 

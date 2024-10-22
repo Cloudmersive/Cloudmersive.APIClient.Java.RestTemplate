@@ -21,26 +21,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of splitting a Text document into separate elements
  */
-@ApiModel(description = "The result of splitting a Text document into separate elements")
 @JsonPropertyOrder({
   SplitTextDocumentByStringResult.JSON_PROPERTY_RESULT_ELEMENTS,
   SplitTextDocumentByStringResult.JSON_PROPERTY_SUCCESSFUL,
   SplitTextDocumentByStringResult.JSON_PROPERTY_ELEMENT_COUNT
 })
-@JsonTypeName("SplitTextDocumentByStringResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SplitTextDocumentByStringResult {
   public static final String JSON_PROPERTY_RESULT_ELEMENTS = "ResultElements";
-  private List<TextDocumentElement> resultElements = null;
+  private List<TextDocumentElement> resultElements = new ArrayList<>();
 
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -48,6 +46,8 @@ public class SplitTextDocumentByStringResult {
   public static final String JSON_PROPERTY_ELEMENT_COUNT = "ElementCount";
   private Integer elementCount;
 
+  public SplitTextDocumentByStringResult() {
+  }
 
   public SplitTextDocumentByStringResult resultElements(List<TextDocumentElement> resultElements) {
     
@@ -57,18 +57,17 @@ public class SplitTextDocumentByStringResult {
 
   public SplitTextDocumentByStringResult addResultElementsItem(TextDocumentElement resultElementsItem) {
     if (this.resultElements == null) {
-      this.resultElements = new ArrayList<TextDocumentElement>();
+      this.resultElements = new ArrayList<>();
     }
     this.resultElements.add(resultElementsItem);
     return this;
   }
 
-   /**
+  /**
    * Get resultElements
    * @return resultElements
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_RESULT_ELEMENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,10 +76,11 @@ public class SplitTextDocumentByStringResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULT_ELEMENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultElements(List<TextDocumentElement> resultElements) {
     this.resultElements = resultElements;
   }
-
 
   public SplitTextDocumentByStringResult successful(Boolean successful) {
     
@@ -88,12 +88,11 @@ public class SplitTextDocumentByStringResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class SplitTextDocumentByStringResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public SplitTextDocumentByStringResult elementCount(Integer elementCount) {
     
@@ -113,12 +113,11 @@ public class SplitTextDocumentByStringResult {
     return this;
   }
 
-   /**
+  /**
    * The count of elements in the text file
    * @return elementCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The count of elements in the text file")
   @JsonProperty(JSON_PROPERTY_ELEMENT_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class SplitTextDocumentByStringResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ELEMENT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setElementCount(Integer elementCount) {
     this.elementCount = elementCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class SplitTextDocumentByStringResult {
   public int hashCode() {
     return Objects.hash(resultElements, successful, elementCount);
   }
-
 
   @Override
   public String toString() {

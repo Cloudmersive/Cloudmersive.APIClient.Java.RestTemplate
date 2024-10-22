@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**orchestratorHttpSimple**](OrchestratorApi.md#orchestratorHttpSimple) | **POST** /config/orchestrator/http/simple | Orchestrate multiple HTTP API calls with a single API call in the order specified.  Call other Cloudmersive APIs or third party APIs.  For Cloudmersive APIs, the API Key will automatically propogate to the child calls without needing to be set explicitly.  Name each task and reference the output of a previous task in the inputs to a given task.
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**orchestratorHttpSimple**](OrchestratorApi.md#orchestratorHttpSimple) | **POST** /config/orchestrator/http/simple | Orchestrate multiple HTTP API calls with a single API call in the order specified.  Call other Cloudmersive APIs or third party APIs.  For Cloudmersive APIs, the API Key will automatically propogate to the child calls without needing to be set explicitly.  Name each task and reference the output of a previous task in the inputs to a given task. |
 
 
 
@@ -55,9 +55,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**HttpOrchestrationRequest**](HttpOrchestrationRequest.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**HttpOrchestrationRequest**](HttpOrchestrationRequest.md)|  | |
 
 ### Return type
 
@@ -71,6 +71,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

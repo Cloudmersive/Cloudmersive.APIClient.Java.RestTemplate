@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FindStringRegexRequest
  */
-public class FindStringRegexRequestTest {
+class FindStringRegexRequestTest {
     private final FindStringRegexRequest model = new FindStringRegexRequest();
 
     /**
      * Model tests for FindStringRegexRequest
      */
     @Test
-    public void testFindStringRegexRequest() {
+    void testFindStringRegexRequest() {
         // TODO: test FindStringRegexRequest
     }
 
@@ -43,7 +40,7 @@ public class FindStringRegexRequestTest {
      * Test the property 'textContent'
      */
     @Test
-    public void textContentTest() {
+    void textContentTest() {
         // TODO: test textContent
     }
 
@@ -51,7 +48,7 @@ public class FindStringRegexRequestTest {
      * Test the property 'targetRegex'
      */
     @Test
-    public void targetRegexTest() {
+    void targetRegexTest() {
         // TODO: test targetRegex
     }
 
@@ -59,7 +56,7 @@ public class FindStringRegexRequestTest {
      * Test the property 'matchCase'
      */
     @Test
-    public void matchCaseTest() {
+    void matchCaseTest() {
         // TODO: test matchCase
     }
 

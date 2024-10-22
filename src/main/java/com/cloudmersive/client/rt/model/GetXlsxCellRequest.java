@@ -21,14 +21,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Get Cell request
  */
-@ApiModel(description = "Input to a Get Cell request")
 @JsonPropertyOrder({
   GetXlsxCellRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   GetXlsxCellRequest.JSON_PROPERTY_INPUT_FILE_URL,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   GetXlsxCellRequest.JSON_PROPERTY_ROW_INDEX,
   GetXlsxCellRequest.JSON_PROPERTY_CELL_INDEX
 })
-@JsonTypeName("GetXlsxCellRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxCellRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -54,6 +51,8 @@ public class GetXlsxCellRequest {
   public static final String JSON_PROPERTY_CELL_INDEX = "CellIndex";
   private Integer cellIndex;
 
+  public GetXlsxCellRequest() {
+  }
 
   public GetXlsxCellRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -61,12 +60,11 @@ public class GetXlsxCellRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -75,10 +73,11 @@ public class GetXlsxCellRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public GetXlsxCellRequest inputFileUrl(String inputFileUrl) {
     
@@ -86,12 +85,11 @@ public class GetXlsxCellRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,10 +98,11 @@ public class GetXlsxCellRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public GetXlsxCellRequest worksheetToQuery(XlsxWorksheet worksheetToQuery) {
     
@@ -111,12 +110,11 @@ public class GetXlsxCellRequest {
     return this;
   }
 
-   /**
+  /**
    * Get worksheetToQuery
    * @return worksheetToQuery
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_QUERY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,10 +123,11 @@ public class GetXlsxCellRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_QUERY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetToQuery(XlsxWorksheet worksheetToQuery) {
     this.worksheetToQuery = worksheetToQuery;
   }
-
 
   public GetXlsxCellRequest rowIndex(Integer rowIndex) {
     
@@ -136,12 +135,11 @@ public class GetXlsxCellRequest {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the row, 0, 1, 2, ... to retrieve
    * @return rowIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the row, 0, 1, 2, ... to retrieve")
   @JsonProperty(JSON_PROPERTY_ROW_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,10 +148,11 @@ public class GetXlsxCellRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRowIndex(Integer rowIndex) {
     this.rowIndex = rowIndex;
   }
-
 
   public GetXlsxCellRequest cellIndex(Integer cellIndex) {
     
@@ -161,12 +160,11 @@ public class GetXlsxCellRequest {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the cell, 0, 1, 2, ... in the row to retrieve
    * @return cellIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the cell, 0, 1, 2, ... in the row to retrieve")
   @JsonProperty(JSON_PROPERTY_CELL_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,10 +173,11 @@ public class GetXlsxCellRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellIndex(Integer cellIndex) {
     this.cellIndex = cellIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -200,7 +199,6 @@ public class GetXlsxCellRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, worksheetToQuery, rowIndex, cellIndex);
   }
-
 
   @Override
   public String toString() {

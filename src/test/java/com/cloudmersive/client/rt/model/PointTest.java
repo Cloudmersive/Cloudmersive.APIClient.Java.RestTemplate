@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for Point
  */
-public class PointTest {
+class PointTest {
     private final Point model = new Point();
 
     /**
      * Model tests for Point
      */
     @Test
-    public void testPoint() {
+    void testPoint() {
         // TODO: test Point
     }
 
@@ -43,7 +40,7 @@ public class PointTest {
      * Test the property 'X'
      */
     @Test
-    public void XTest() {
+    void XTest() {
         // TODO: test X
     }
 
@@ -51,7 +48,7 @@ public class PointTest {
      * Test the property 'Y'
      */
     @Test
-    public void YTest() {
+    void YTest() {
         // TODO: test Y
     }
 

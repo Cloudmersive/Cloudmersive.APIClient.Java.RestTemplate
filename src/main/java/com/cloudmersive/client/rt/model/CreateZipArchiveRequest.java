@@ -22,29 +22,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to create a Zip Archive
  */
-@ApiModel(description = "Request to create a Zip Archive")
 @JsonPropertyOrder({
   CreateZipArchiveRequest.JSON_PROPERTY_FILES_IN_ZIP,
   CreateZipArchiveRequest.JSON_PROPERTY_DIRECTORIES_IN_ZIP
 })
-@JsonTypeName("CreateZipArchiveRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateZipArchiveRequest {
   public static final String JSON_PROPERTY_FILES_IN_ZIP = "FilesInZip";
-  private List<ZipFile> filesInZip = null;
+  private List<ZipFile> filesInZip = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DIRECTORIES_IN_ZIP = "DirectoriesInZip";
-  private List<ZipDirectory> directoriesInZip = null;
+  private List<ZipDirectory> directoriesInZip = new ArrayList<>();
 
+  public CreateZipArchiveRequest() {
+  }
 
   public CreateZipArchiveRequest filesInZip(List<ZipFile> filesInZip) {
     
@@ -54,18 +54,17 @@ public class CreateZipArchiveRequest {
 
   public CreateZipArchiveRequest addFilesInZipItem(ZipFile filesInZipItem) {
     if (this.filesInZip == null) {
-      this.filesInZip = new ArrayList<ZipFile>();
+      this.filesInZip = new ArrayList<>();
     }
     this.filesInZip.add(filesInZipItem);
     return this;
   }
 
-   /**
+  /**
    * Top-level files in the root directory fo the zip file
    * @return filesInZip
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Top-level files in the root directory fo the zip file")
   @JsonProperty(JSON_PROPERTY_FILES_IN_ZIP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +73,11 @@ public class CreateZipArchiveRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILES_IN_ZIP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFilesInZip(List<ZipFile> filesInZip) {
     this.filesInZip = filesInZip;
   }
-
 
   public CreateZipArchiveRequest directoriesInZip(List<ZipDirectory> directoriesInZip) {
     
@@ -87,18 +87,17 @@ public class CreateZipArchiveRequest {
 
   public CreateZipArchiveRequest addDirectoriesInZipItem(ZipDirectory directoriesInZipItem) {
     if (this.directoriesInZip == null) {
-      this.directoriesInZip = new ArrayList<ZipDirectory>();
+      this.directoriesInZip = new ArrayList<>();
     }
     this.directoriesInZip.add(directoriesInZipItem);
     return this;
   }
 
-   /**
+  /**
    * Top-level directories in the root directory of the zip; directories can contain sub-directories and files
    * @return directoriesInZip
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Top-level directories in the root directory of the zip; directories can contain sub-directories and files")
   @JsonProperty(JSON_PROPERTY_DIRECTORIES_IN_ZIP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +106,11 @@ public class CreateZipArchiveRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DIRECTORIES_IN_ZIP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDirectoriesInZip(List<ZipDirectory> directoriesInZip) {
     this.directoriesInZip = directoriesInZip;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -129,7 +129,6 @@ public class CreateZipArchiveRequest {
   public int hashCode() {
     return Objects.hash(filesInZip, directoriesInZip);
   }
-
 
   @Override
   public String toString() {

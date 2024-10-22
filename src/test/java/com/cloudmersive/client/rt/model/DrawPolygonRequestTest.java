@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DrawPolygonRequest
  */
-public class DrawPolygonRequestTest {
+class DrawPolygonRequestTest {
     private final DrawPolygonRequest model = new DrawPolygonRequest();
 
     /**
      * Model tests for DrawPolygonRequest
      */
     @Test
-    public void testDrawPolygonRequest() {
+    void testDrawPolygonRequest() {
         // TODO: test DrawPolygonRequest
     }
 
@@ -46,7 +44,7 @@ public class DrawPolygonRequestTest {
      * Test the property 'baseImageBytes'
      */
     @Test
-    public void baseImageBytesTest() {
+    void baseImageBytesTest() {
         // TODO: test baseImageBytes
     }
 
@@ -54,7 +52,7 @@ public class DrawPolygonRequestTest {
      * Test the property 'baseImageUrl'
      */
     @Test
-    public void baseImageUrlTest() {
+    void baseImageUrlTest() {
         // TODO: test baseImageUrl
     }
 
@@ -62,7 +60,7 @@ public class DrawPolygonRequestTest {
      * Test the property 'polygonsToDraw'
      */
     @Test
-    public void polygonsToDrawTest() {
+    void polygonsToDrawTest() {
         // TODO: test polygonsToDraw
     }
 

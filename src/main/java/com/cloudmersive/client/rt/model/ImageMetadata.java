@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Metadata from an image
  */
-@ApiModel(description = "Metadata from an image")
 @JsonPropertyOrder({
   ImageMetadata.JSON_PROPERTY_SUCCESSFUL,
   ImageMetadata.JSON_PROPERTY_IS_VALID_IMAGE,
@@ -43,8 +42,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ImageMetadata.JSON_PROPERTY_EXIF_PROFILE_NAME,
   ImageMetadata.JSON_PROPERTY_EXIF_VALUES
 })
-@JsonTypeName("ImageMetadata")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageMetadata {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -74,8 +72,10 @@ public class ImageMetadata {
   private String exifProfileName;
 
   public static final String JSON_PROPERTY_EXIF_VALUES = "ExifValues";
-  private List<ImageMetadataExifValue> exifValues = null;
+  private List<ImageMetadataExifValue> exifValues = new ArrayList<>();
 
+  public ImageMetadata() {
+  }
 
   public ImageMetadata successful(Boolean successful) {
     
@@ -83,12 +83,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +96,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ImageMetadata isValidImage(Boolean isValidImage) {
     
@@ -108,12 +108,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * True if the input image is a valid image file, false otherwise
    * @return isValidImage
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input image is a valid image file, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_VALID_IMAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,10 +121,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_VALID_IMAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsValidImage(Boolean isValidImage) {
     this.isValidImage = isValidImage;
   }
-
 
   public ImageMetadata fileFormat(String fileFormat) {
     
@@ -133,12 +133,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * File format of the image
    * @return fileFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "File format of the image")
   @JsonProperty(JSON_PROPERTY_FILE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -147,10 +146,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileFormat(String fileFormat) {
     this.fileFormat = fileFormat;
   }
-
 
   public ImageMetadata width(Integer width) {
     
@@ -158,12 +158,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * Width of the image in pixels
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the image in pixels")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,10 +171,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public ImageMetadata height(Integer height) {
     
@@ -183,12 +183,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * Height of the image in pixels
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the image in pixels")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,10 +196,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public ImageMetadata bitDepth(Integer bitDepth) {
     
@@ -208,12 +208,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * Bits per pixel
    * @return bitDepth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Bits per pixel")
   @JsonProperty(JSON_PROPERTY_BIT_DEPTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,10 +221,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BIT_DEPTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBitDepth(Integer bitDepth) {
     this.bitDepth = bitDepth;
   }
-
 
   public ImageMetadata hasTransparency(Boolean hasTransparency) {
     
@@ -233,12 +233,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * True if the image has transaprency in the form of an alpha channel, false otherwise
    * @return hasTransparency
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the image has transaprency in the form of an alpha channel, false otherwise")
   @JsonProperty(JSON_PROPERTY_HAS_TRANSPARENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -247,10 +246,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_TRANSPARENCY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHasTransparency(Boolean hasTransparency) {
     this.hasTransparency = hasTransparency;
   }
-
 
   public ImageMetadata colorSpace(String colorSpace) {
     
@@ -258,12 +258,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * Color space of the image
    * @return colorSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Color space of the image")
   @JsonProperty(JSON_PROPERTY_COLOR_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -272,10 +271,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLOR_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColorSpace(String colorSpace) {
     this.colorSpace = colorSpace;
   }
-
 
   public ImageMetadata exifProfileName(String exifProfileName) {
     
@@ -283,12 +283,11 @@ public class ImageMetadata {
     return this;
   }
 
-   /**
+  /**
    * Name of the EXIF profile used
    * @return exifProfileName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the EXIF profile used")
   @JsonProperty(JSON_PROPERTY_EXIF_PROFILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -297,10 +296,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXIF_PROFILE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExifProfileName(String exifProfileName) {
     this.exifProfileName = exifProfileName;
   }
-
 
   public ImageMetadata exifValues(List<ImageMetadataExifValue> exifValues) {
     
@@ -310,18 +310,17 @@ public class ImageMetadata {
 
   public ImageMetadata addExifValuesItem(ImageMetadataExifValue exifValuesItem) {
     if (this.exifValues == null) {
-      this.exifValues = new ArrayList<ImageMetadataExifValue>();
+      this.exifValues = new ArrayList<>();
     }
     this.exifValues.add(exifValuesItem);
     return this;
   }
 
-   /**
+  /**
    * EXIF tags and values embedded in the image
    * @return exifValues
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "EXIF tags and values embedded in the image")
   @JsonProperty(JSON_PROPERTY_EXIF_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,10 +329,11 @@ public class ImageMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXIF_VALUES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExifValues(List<ImageMetadataExifValue> exifValues) {
     this.exifValues = exifValues;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -360,7 +360,6 @@ public class ImageMetadata {
   public int hashCode() {
     return Objects.hash(successful, isValidImage, fileFormat, width, height, bitDepth, hasTransparency, colorSpace, exifProfileName, exifValues);
   }
-
 
   @Override
   public String toString() {

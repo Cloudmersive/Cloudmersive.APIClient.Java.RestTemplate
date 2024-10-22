@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import java.io.File;
 import com.cloudmersive.client.rt.model.HtmlTemplateApplicationRequest;
 import com.cloudmersive.client.rt.model.HtmlTemplateApplicationResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for ConvertTemplateApi
  */
-@Ignore
-public class ConvertTemplateApiTest {
+@Disabled
+class ConvertTemplateApiTest {
 
     private final ConvertTemplateApi api = new ConvertTemplateApi();
 
@@ -38,13 +41,14 @@ public class ConvertTemplateApiTest {
      *
      * Apply operations to fill in a Word DOCX template by replacing target template/placeholder strings in the DOCX with values, generating a final Word DOCX result.  For example, you could create a Word Document invoice containing strings such as \&quot;{FirstName}\&quot; and \&quot;{LastName}\&quot; and then replace these values with \&quot;John\&quot; and \&quot;Smith\&quot;.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertTemplateApplyDocxTemplateTest() {
+    void convertTemplateApplyDocxTemplateTest() {
         org.springframework.core.io.Resource inputFile = null;
         Object templateDefinition = null;
+
         byte[] response = api.convertTemplateApplyDocxTemplate(inputFile, templateDefinition);
 
         // TODO: test validations
@@ -55,12 +59,13 @@ public class ConvertTemplateApiTest {
      *
      * Apply operations to fill in an HTML template, generating a final HTML result
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertTemplateApplyHtmlTemplateTest() {
+    void convertTemplateApplyHtmlTemplateTest() {
         HtmlTemplateApplicationRequest value = null;
+
         HtmlTemplateApplicationResponse response = api.convertTemplateApplyHtmlTemplate(value);
 
         // TODO: test validations

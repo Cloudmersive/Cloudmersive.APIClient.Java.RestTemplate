@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ReceiptLineItem
  */
-public class ReceiptLineItemTest {
+class ReceiptLineItemTest {
     private final ReceiptLineItem model = new ReceiptLineItem();
 
     /**
      * Model tests for ReceiptLineItem
      */
     @Test
-    public void testReceiptLineItem() {
+    void testReceiptLineItem() {
         // TODO: test ReceiptLineItem
     }
 
@@ -43,7 +40,7 @@ public class ReceiptLineItemTest {
      * Test the property 'itemDescription'
      */
     @Test
-    public void itemDescriptionTest() {
+    void itemDescriptionTest() {
         // TODO: test itemDescription
     }
 
@@ -51,7 +48,7 @@ public class ReceiptLineItemTest {
      * Test the property 'itemPrice'
      */
     @Test
-    public void itemPriceTest() {
+    void itemPriceTest() {
         // TODO: test itemPrice
     }
 

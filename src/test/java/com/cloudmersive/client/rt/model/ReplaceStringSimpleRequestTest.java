@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ReplaceStringSimpleRequest
  */
-public class ReplaceStringSimpleRequestTest {
+class ReplaceStringSimpleRequestTest {
     private final ReplaceStringSimpleRequest model = new ReplaceStringSimpleRequest();
 
     /**
      * Model tests for ReplaceStringSimpleRequest
      */
     @Test
-    public void testReplaceStringSimpleRequest() {
+    void testReplaceStringSimpleRequest() {
         // TODO: test ReplaceStringSimpleRequest
     }
 
@@ -43,7 +40,7 @@ public class ReplaceStringSimpleRequestTest {
      * Test the property 'textContent'
      */
     @Test
-    public void textContentTest() {
+    void textContentTest() {
         // TODO: test textContent
     }
 
@@ -51,7 +48,7 @@ public class ReplaceStringSimpleRequestTest {
      * Test the property 'targetString'
      */
     @Test
-    public void targetStringTest() {
+    void targetStringTest() {
         // TODO: test targetString
     }
 
@@ -59,7 +56,7 @@ public class ReplaceStringSimpleRequestTest {
      * Test the property 'replaceWithString'
      */
     @Test
-    public void replaceWithStringTest() {
+    void replaceWithStringTest() {
         // TODO: test replaceWithString
     }
 

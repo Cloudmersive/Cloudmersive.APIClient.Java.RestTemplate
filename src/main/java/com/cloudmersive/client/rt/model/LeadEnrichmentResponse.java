@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of the lead enrichment process
  */
-@ApiModel(description = "Result of the lead enrichment process")
 @JsonPropertyOrder({
   LeadEnrichmentResponse.JSON_PROPERTY_SUCCESSFUL,
   LeadEnrichmentResponse.JSON_PROPERTY_LEAD_TYPE,
@@ -48,8 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   LeadEnrichmentResponse.JSON_PROPERTY_COMPANY_V_A_T_NUMBER,
   LeadEnrichmentResponse.JSON_PROPERTY_EMPLOYEE_COUNT
 })
-@JsonTypeName("LeadEnrichmentResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class LeadEnrichmentResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -105,6 +102,8 @@ public class LeadEnrichmentResponse {
   public static final String JSON_PROPERTY_EMPLOYEE_COUNT = "EmployeeCount";
   private Integer employeeCount;
 
+  public LeadEnrichmentResponse() {
+  }
 
   public LeadEnrichmentResponse successful(Boolean successful) {
     
@@ -112,12 +111,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,10 +124,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public LeadEnrichmentResponse leadType(String leadType) {
     
@@ -137,12 +136,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The type of the lead; possible types are Junk (a single individual using a disposable/throwaway email address); Individual (a single individual, typically a consumer, not purchasing on behalf of a business); SmallBusiness (a small business, typically with fewer than 100 employees); MediumBusiness (a medium business, larger than 100 employees but fewer than 1000 employees); Enterprise (a large business with greater than 1000 employees); Business (a business customer of unknown size)
    * @return leadType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of the lead; possible types are Junk (a single individual using a disposable/throwaway email address); Individual (a single individual, typically a consumer, not purchasing on behalf of a business); SmallBusiness (a small business, typically with fewer than 100 employees); MediumBusiness (a medium business, larger than 100 employees but fewer than 1000 employees); Enterprise (a large business with greater than 1000 employees); Business (a business customer of unknown size)")
   @JsonProperty(JSON_PROPERTY_LEAD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -151,10 +149,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEAD_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeadType(String leadType) {
     this.leadType = leadType;
   }
-
 
   public LeadEnrichmentResponse contactBusinessEmail(String contactBusinessEmail) {
     
@@ -162,12 +161,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The person&#39;s business email address for the lead
    * @return contactBusinessEmail
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The person's business email address for the lead")
   @JsonProperty(JSON_PROPERTY_CONTACT_BUSINESS_EMAIL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,10 +174,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTACT_BUSINESS_EMAIL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContactBusinessEmail(String contactBusinessEmail) {
     this.contactBusinessEmail = contactBusinessEmail;
   }
-
 
   public LeadEnrichmentResponse contactFirstName(String contactFirstName) {
     
@@ -187,12 +186,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The person&#39;s first name for the lead
    * @return contactFirstName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The person's first name for the lead")
   @JsonProperty(JSON_PROPERTY_CONTACT_FIRST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -201,10 +199,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTACT_FIRST_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContactFirstName(String contactFirstName) {
     this.contactFirstName = contactFirstName;
   }
-
 
   public LeadEnrichmentResponse contactLastName(String contactLastName) {
     
@@ -212,12 +211,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * The person&#39;s last name for the lead
    * @return contactLastName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The person's last name for the lead")
   @JsonProperty(JSON_PROPERTY_CONTACT_LAST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -226,10 +224,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTACT_LAST_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContactLastName(String contactLastName) {
     this.contactLastName = contactLastName;
   }
-
 
   public LeadEnrichmentResponse contactGender(String contactGender) {
     
@@ -237,12 +236,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Gender for contact name; possible values are Male, Female, and Neutral (can be applied to Male or Female).  Requires ContactFirstName.
    * @return contactGender
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Gender for contact name; possible values are Male, Female, and Neutral (can be applied to Male or Female).  Requires ContactFirstName.")
   @JsonProperty(JSON_PROPERTY_CONTACT_GENDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -251,10 +249,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTACT_GENDER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContactGender(String contactGender) {
     this.contactGender = contactGender;
   }
-
 
   public LeadEnrichmentResponse companyName(String companyName) {
     
@@ -262,12 +261,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the company for the lead
    * @return companyName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,10 +274,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyName(String companyName) {
     this.companyName = companyName;
   }
-
 
   public LeadEnrichmentResponse companyDomainName(String companyDomainName) {
     
@@ -287,12 +286,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Domain name / website for the lead
    * @return companyDomainName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Domain name / website for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_DOMAIN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -301,10 +299,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_DOMAIN_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyDomainName(String companyDomainName) {
     this.companyDomainName = companyDomainName;
   }
-
 
   public LeadEnrichmentResponse companyHouseNumber(String companyHouseNumber) {
     
@@ -312,12 +311,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * House number of the address of the company for the lead
    * @return companyHouseNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "House number of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_HOUSE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -326,10 +324,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_HOUSE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyHouseNumber(String companyHouseNumber) {
     this.companyHouseNumber = companyHouseNumber;
   }
-
 
   public LeadEnrichmentResponse companyStreet(String companyStreet) {
     
@@ -337,12 +336,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Street name of the address of the company for the lead
    * @return companyStreet
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Street name of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_STREET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -351,10 +349,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_STREET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyStreet(String companyStreet) {
     this.companyStreet = companyStreet;
   }
-
 
   public LeadEnrichmentResponse companyCity(String companyCity) {
     
@@ -362,12 +361,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * City of the address of the company for the lead
    * @return companyCity
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "City of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -376,10 +374,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyCity(String companyCity) {
     this.companyCity = companyCity;
   }
-
 
   public LeadEnrichmentResponse companyStateOrProvince(String companyStateOrProvince) {
     
@@ -387,12 +386,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * State or Province of the address of the company for the lead
    * @return companyStateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "State or Province of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -401,10 +399,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyStateOrProvince(String companyStateOrProvince) {
     this.companyStateOrProvince = companyStateOrProvince;
   }
-
 
   public LeadEnrichmentResponse companyPostalCode(String companyPostalCode) {
     
@@ -412,12 +411,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Postal Code of the address of the company for the lead
    * @return companyPostalCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Postal Code of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_POSTAL_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -426,10 +424,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_POSTAL_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyPostalCode(String companyPostalCode) {
     this.companyPostalCode = companyPostalCode;
   }
-
 
   public LeadEnrichmentResponse companyCountry(String companyCountry) {
     
@@ -437,12 +436,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Country Name of the address of the company for the lead
    * @return companyCountry
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Country Name of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_COUNTRY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -451,10 +449,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_COUNTRY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyCountry(String companyCountry) {
     this.companyCountry = companyCountry;
   }
-
 
   public LeadEnrichmentResponse companyCountryCode(String companyCountryCode) {
     
@@ -462,12 +461,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Country Code (2-letter ISO 3166-1) of the address of the company for the lead
    * @return companyCountryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Country Code (2-letter ISO 3166-1) of the address of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -476,10 +474,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyCountryCode(String companyCountryCode) {
     this.companyCountryCode = companyCountryCode;
   }
-
 
   public LeadEnrichmentResponse companyTelephone(String companyTelephone) {
     
@@ -487,12 +486,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Telephone of the company office for the lead
    * @return companyTelephone
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Telephone of the company office for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_TELEPHONE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -501,10 +499,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_TELEPHONE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyTelephone(String companyTelephone) {
     this.companyTelephone = companyTelephone;
   }
-
 
   public LeadEnrichmentResponse companyVATNumber(String companyVATNumber) {
     
@@ -512,12 +511,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * VAT number of the company for the lead
    * @return companyVATNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "VAT number of the company for the lead")
   @JsonProperty(JSON_PROPERTY_COMPANY_V_A_T_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -526,10 +524,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY_V_A_T_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompanyVATNumber(String companyVATNumber) {
     this.companyVATNumber = companyVATNumber;
   }
-
 
   public LeadEnrichmentResponse employeeCount(Integer employeeCount) {
     
@@ -537,12 +536,11 @@ public class LeadEnrichmentResponse {
     return this;
   }
 
-   /**
+  /**
    * Count of employees at the company (estimated), if available
    * @return employeeCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of employees at the company (estimated), if available")
   @JsonProperty(JSON_PROPERTY_EMPLOYEE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -551,10 +549,11 @@ public class LeadEnrichmentResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EMPLOYEE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEmployeeCount(Integer employeeCount) {
     this.employeeCount = employeeCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -589,7 +588,6 @@ public class LeadEnrichmentResponse {
   public int hashCode() {
     return Objects.hash(successful, leadType, contactBusinessEmail, contactFirstName, contactLastName, contactGender, companyName, companyDomainName, companyHouseNumber, companyStreet, companyCity, companyStateOrProvince, companyPostalCode, companyCountry, companyCountryCode, companyTelephone, companyVATNumber, employeeCount);
   }
-
 
   @Override
   public String toString() {

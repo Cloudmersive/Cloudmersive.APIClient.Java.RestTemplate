@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of getting the language of the input HTML document
  */
-@ApiModel(description = "Result of getting the language of the input HTML document")
 @JsonPropertyOrder({
   HtmlGetLanguageResult.JSON_PROPERTY_SUCCESSFUL,
   HtmlGetLanguageResult.JSON_PROPERTY_LANGUAGE_CODE
 })
-@JsonTypeName("HtmlGetLanguageResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlGetLanguageResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class HtmlGetLanguageResult {
   public static final String JSON_PROPERTY_LANGUAGE_CODE = "LanguageCode";
   private String languageCode;
 
+  public HtmlGetLanguageResult() {
+  }
 
   public HtmlGetLanguageResult successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class HtmlGetLanguageResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class HtmlGetLanguageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public HtmlGetLanguageResult languageCode(String languageCode) {
     
@@ -73,12 +72,11 @@ public class HtmlGetLanguageResult {
     return this;
   }
 
-   /**
+  /**
    * HTML language code of the HTML document, e.g. \&quot;en\&quot; or \&quot;de\&quot;
    * @return languageCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML language code of the HTML document, e.g. \"en\" or \"de\"")
   @JsonProperty(JSON_PROPERTY_LANGUAGE_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class HtmlGetLanguageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LANGUAGE_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLanguageCode(String languageCode) {
     this.languageCode = languageCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class HtmlGetLanguageResult {
   public int hashCode() {
     return Objects.hash(successful, languageCode);
   }
-
 
   @Override
   public String toString() {

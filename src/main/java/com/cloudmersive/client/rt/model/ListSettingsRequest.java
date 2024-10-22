@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to enumerate settings
  */
-@ApiModel(description = "Request to enumerate settings")
 @JsonPropertyOrder({
   ListSettingsRequest.JSON_PROPERTY_BUCKET_I_D,
   ListSettingsRequest.JSON_PROPERTY_BUCKET_SECRET_KEY
 })
-@JsonTypeName("ListSettingsRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ListSettingsRequest {
   public static final String JSON_PROPERTY_BUCKET_I_D = "BucketID";
   private String bucketID;
@@ -41,6 +38,8 @@ public class ListSettingsRequest {
   public static final String JSON_PROPERTY_BUCKET_SECRET_KEY = "BucketSecretKey";
   private String bucketSecretKey;
 
+  public ListSettingsRequest() {
+  }
 
   public ListSettingsRequest bucketID(String bucketID) {
     
@@ -48,12 +47,11 @@ public class ListSettingsRequest {
     return this;
   }
 
-   /**
+  /**
    * BucketID of the bucket to enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket
    * @return bucketID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "BucketID of the bucket to enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &gt; API Configuration &gt; Create Bucket")
   @JsonProperty(JSON_PROPERTY_BUCKET_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ListSettingsRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUCKET_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBucketID(String bucketID) {
     this.bucketID = bucketID;
   }
-
 
   public ListSettingsRequest bucketSecretKey(String bucketSecretKey) {
     
@@ -73,12 +72,11 @@ public class ListSettingsRequest {
     return this;
   }
 
-   /**
+  /**
    * SecretKey of the bucket enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket
    * @return bucketSecretKey
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SecretKey of the bucket enumerate the settings of; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &gt; API Configuration &gt; Create Bucket")
   @JsonProperty(JSON_PROPERTY_BUCKET_SECRET_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ListSettingsRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUCKET_SECRET_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBucketSecretKey(String bucketSecretKey) {
     this.bucketSecretKey = bucketSecretKey;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ListSettingsRequest {
   public int hashCode() {
     return Objects.hash(bucketID, bucketSecretKey);
   }
-
 
   @Override
   public String toString() {

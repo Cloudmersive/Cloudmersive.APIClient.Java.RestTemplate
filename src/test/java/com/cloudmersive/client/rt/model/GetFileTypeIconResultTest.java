@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetFileTypeIconResult
  */
-public class GetFileTypeIconResultTest {
+class GetFileTypeIconResultTest {
     private final GetFileTypeIconResult model = new GetFileTypeIconResult();
 
     /**
      * Model tests for GetFileTypeIconResult
      */
     @Test
-    public void testGetFileTypeIconResult() {
+    void testGetFileTypeIconResult() {
         // TODO: test GetFileTypeIconResult
     }
 
@@ -43,7 +40,7 @@ public class GetFileTypeIconResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class GetFileTypeIconResultTest {
      * Test the property 'icon'
      */
     @Test
-    public void iconTest() {
+    void iconTest() {
         // TODO: test icon
     }
 
@@ -59,7 +56,7 @@ public class GetFileTypeIconResultTest {
      * Test the property 'extension'
      */
     @Test
-    public void extensionTest() {
+    void extensionTest() {
         // TODO: test extension
     }
 

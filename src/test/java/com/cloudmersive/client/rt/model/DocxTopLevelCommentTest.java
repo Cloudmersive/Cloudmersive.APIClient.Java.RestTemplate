@@ -19,27 +19,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxTopLevelComment
  */
-public class DocxTopLevelCommentTest {
+class DocxTopLevelCommentTest {
     private final DocxTopLevelComment model = new DocxTopLevelComment();
 
     /**
      * Model tests for DocxTopLevelComment
      */
     @Test
-    public void testDocxTopLevelComment() {
+    void testDocxTopLevelComment() {
         // TODO: test DocxTopLevelComment
     }
 
@@ -47,7 +45,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -55,7 +53,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'author'
      */
     @Test
-    public void authorTest() {
+    void authorTest() {
         // TODO: test author
     }
 
@@ -63,7 +61,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'authorInitials'
      */
     @Test
-    public void authorInitialsTest() {
+    void authorInitialsTest() {
         // TODO: test authorInitials
     }
 
@@ -71,7 +69,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'commentText'
      */
     @Test
-    public void commentTextTest() {
+    void commentTextTest() {
         // TODO: test commentText
     }
 
@@ -79,7 +77,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'commentDate'
      */
     @Test
-    public void commentDateTest() {
+    void commentDateTest() {
         // TODO: test commentDate
     }
 
@@ -87,7 +85,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'replyChildComments'
      */
     @Test
-    public void replyChildCommentsTest() {
+    void replyChildCommentsTest() {
         // TODO: test replyChildComments
     }
 
@@ -95,7 +93,7 @@ public class DocxTopLevelCommentTest {
      * Test the property 'done'
      */
     @Test
-    public void doneTest() {
+    void doneTest() {
         // TODO: test done
     }
 

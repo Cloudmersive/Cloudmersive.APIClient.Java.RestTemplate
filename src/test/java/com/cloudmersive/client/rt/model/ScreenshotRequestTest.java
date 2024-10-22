@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ScreenshotRequest
  */
-public class ScreenshotRequestTest {
+class ScreenshotRequestTest {
     private final ScreenshotRequest model = new ScreenshotRequest();
 
     /**
      * Model tests for ScreenshotRequest
      */
     @Test
-    public void testScreenshotRequest() {
+    void testScreenshotRequest() {
         // TODO: test ScreenshotRequest
     }
 
@@ -43,7 +40,7 @@ public class ScreenshotRequestTest {
      * Test the property 'url'
      */
     @Test
-    public void urlTest() {
+    void urlTest() {
         // TODO: test url
     }
 
@@ -51,7 +48,7 @@ public class ScreenshotRequestTest {
      * Test the property 'extraLoadingWait'
      */
     @Test
-    public void extraLoadingWaitTest() {
+    void extraLoadingWaitTest() {
         // TODO: test extraLoadingWait
     }
 
@@ -59,7 +56,7 @@ public class ScreenshotRequestTest {
      * Test the property 'screenshotWidth'
      */
     @Test
-    public void screenshotWidthTest() {
+    void screenshotWidthTest() {
         // TODO: test screenshotWidth
     }
 
@@ -67,7 +64,7 @@ public class ScreenshotRequestTest {
      * Test the property 'screenshotHeight'
      */
     @Test
-    public void screenshotHeightTest() {
+    void screenshotHeightTest() {
         // TODO: test screenshotHeight
     }
 

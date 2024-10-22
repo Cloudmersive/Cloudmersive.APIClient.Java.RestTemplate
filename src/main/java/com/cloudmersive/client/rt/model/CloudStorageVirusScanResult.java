@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a virus scan on cloud storage
  */
-@ApiModel(description = "Result of running a virus scan on cloud storage")
 @JsonPropertyOrder({
   CloudStorageVirusScanResult.JSON_PROPERTY_SUCCESSFUL,
   CloudStorageVirusScanResult.JSON_PROPERTY_CLEAN_RESULT,
@@ -39,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CloudStorageVirusScanResult.JSON_PROPERTY_FILE_SIZE,
   CloudStorageVirusScanResult.JSON_PROPERTY_CONTAINS_CONTENT_MODERATION_REJECTION
 })
-@JsonTypeName("CloudStorageVirusScanResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CloudStorageVirusScanResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -49,7 +47,7 @@ public class CloudStorageVirusScanResult {
   private Boolean cleanResult;
 
   public static final String JSON_PROPERTY_FOUND_VIRUSES = "FoundViruses";
-  private List<CloudStorageVirusFound> foundViruses = null;
+  private List<CloudStorageVirusFound> foundViruses = new ArrayList<>();
 
   public static final String JSON_PROPERTY_ERROR_DETAILED_DESCRIPTION = "ErrorDetailedDescription";
   private String errorDetailedDescription;
@@ -60,6 +58,8 @@ public class CloudStorageVirusScanResult {
   public static final String JSON_PROPERTY_CONTAINS_CONTENT_MODERATION_REJECTION = "ContainsContentModerationRejection";
   private Boolean containsContentModerationRejection;
 
+  public CloudStorageVirusScanResult() {
+  }
 
   public CloudStorageVirusScanResult successful(Boolean successful) {
     
@@ -67,12 +67,11 @@ public class CloudStorageVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation of retrieving the file, and scanning it were successfully completed, false if the file could not be downloaded from cloud storage, or if the file could not be scanned.  Note that successful completion does not mean the file is clean; for the output of the virus scanning operation itself, use the CleanResult and FoundViruses parameters.
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation of retrieving the file, and scanning it were successfully completed, false if the file could not be downloaded from cloud storage, or if the file could not be scanned.  Note that successful completion does not mean the file is clean; for the output of the virus scanning operation itself, use the CleanResult and FoundViruses parameters.")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -81,10 +80,11 @@ public class CloudStorageVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public CloudStorageVirusScanResult cleanResult(Boolean cleanResult) {
     
@@ -92,12 +92,11 @@ public class CloudStorageVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained no viruses, false otherwise
    * @return cleanResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained no viruses, false otherwise")
   @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,10 +105,11 @@ public class CloudStorageVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanResult(Boolean cleanResult) {
     this.cleanResult = cleanResult;
   }
-
 
   public CloudStorageVirusScanResult foundViruses(List<CloudStorageVirusFound> foundViruses) {
     
@@ -119,18 +119,17 @@ public class CloudStorageVirusScanResult {
 
   public CloudStorageVirusScanResult addFoundVirusesItem(CloudStorageVirusFound foundVirusesItem) {
     if (this.foundViruses == null) {
-      this.foundViruses = new ArrayList<CloudStorageVirusFound>();
+      this.foundViruses = new ArrayList<>();
     }
     this.foundViruses.add(foundVirusesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of viruses found, if any
    * @return foundViruses
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of viruses found, if any")
   @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,10 +138,11 @@ public class CloudStorageVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFoundViruses(List<CloudStorageVirusFound> foundViruses) {
     this.foundViruses = foundViruses;
   }
-
 
   public CloudStorageVirusScanResult errorDetailedDescription(String errorDetailedDescription) {
     
@@ -150,12 +150,11 @@ public class CloudStorageVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * Detailed error message if the operation was not successful
    * @return errorDetailedDescription
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Detailed error message if the operation was not successful")
   @JsonProperty(JSON_PROPERTY_ERROR_DETAILED_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -164,10 +163,11 @@ public class CloudStorageVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_DETAILED_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorDetailedDescription(String errorDetailedDescription) {
     this.errorDetailedDescription = errorDetailedDescription;
   }
-
 
   public CloudStorageVirusScanResult fileSize(Long fileSize) {
     
@@ -175,12 +175,11 @@ public class CloudStorageVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * Size in bytes of the file that was retrieved and scanned
    * @return fileSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Size in bytes of the file that was retrieved and scanned")
   @JsonProperty(JSON_PROPERTY_FILE_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,10 +188,11 @@ public class CloudStorageVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileSize(Long fileSize) {
     this.fileSize = fileSize;
   }
-
 
   public CloudStorageVirusScanResult containsContentModerationRejection(Boolean containsContentModerationRejection) {
     
@@ -200,12 +200,11 @@ public class CloudStorageVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * Set to true when using NSFW Content Moderation in the Cloudmersive Storage Protect product (disabled by default)
    * @return containsContentModerationRejection
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Set to true when using NSFW Content Moderation in the Cloudmersive Storage Protect product (disabled by default)")
   @JsonProperty(JSON_PROPERTY_CONTAINS_CONTENT_MODERATION_REJECTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -214,10 +213,11 @@ public class CloudStorageVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_CONTENT_MODERATION_REJECTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsContentModerationRejection(Boolean containsContentModerationRejection) {
     this.containsContentModerationRejection = containsContentModerationRejection;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -240,7 +240,6 @@ public class CloudStorageVirusScanResult {
   public int hashCode() {
     return Objects.hash(successful, cleanResult, foundViruses, errorDetailedDescription, fileSize, containsContentModerationRejection);
   }
-
 
   @Override
   public String toString() {

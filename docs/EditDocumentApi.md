@@ -2,76 +2,76 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**editDocumentBeginEditing**](EditDocumentApi.md#editDocumentBeginEditing) | **POST** /convert/edit/begin-editing | Begin editing a document
-[**editDocumentDocxAcceptAllTrackChanges**](EditDocumentApi.md#editDocumentDocxAcceptAllTrackChanges) | **POST** /convert/edit/docx/track-changes/accept-all | Accept all tracked changes, revisions in a Word DOCX document
-[**editDocumentDocxBody**](EditDocumentApi.md#editDocumentDocxBody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document
-[**editDocumentDocxCreateBlankDocument**](EditDocumentApi.md#editDocumentDocxCreateBlankDocument) | **POST** /convert/edit/docx/create/blank | Create a blank Word DOCX document
-[**editDocumentDocxDeletePages**](EditDocumentApi.md#editDocumentDocxDeletePages) | **POST** /convert/edit/docx/delete-pages | Delete, remove pages from a Word DOCX document
-[**editDocumentDocxDeleteTableRow**](EditDocumentApi.md#editDocumentDocxDeleteTableRow) | **POST** /convert/edit/docx/delete-table-row | Deletes a table row in an existing table in a Word DOCX document
-[**editDocumentDocxDeleteTableRowRange**](EditDocumentApi.md#editDocumentDocxDeleteTableRowRange) | **POST** /convert/edit/docx/delete-table-row/range | Deletes a range of multiple table rows in an existing table in a Word DOCX document
-[**editDocumentDocxDisableTrackChanges**](EditDocumentApi.md#editDocumentDocxDisableTrackChanges) | **POST** /convert/edit/docx/track-changes/disable | Disable track changes, revisions in a Word DOCX document
-[**editDocumentDocxEnableTrackChanges**](EditDocumentApi.md#editDocumentDocxEnableTrackChanges) | **POST** /convert/edit/docx/track-changes/enable | Enable track changes, revisions in a Word DOCX document
-[**editDocumentDocxFindParagraph**](EditDocumentApi.md#editDocumentDocxFindParagraph) | **POST** /convert/edit/docx/find/paragraph | Find matching paragraphs in a Word DOCX document
-[**editDocumentDocxGetComments**](EditDocumentApi.md#editDocumentDocxGetComments) | **POST** /convert/edit/docx/get-comments/flat-list | Get comments from a Word DOCX document as a flat list
-[**editDocumentDocxGetCommentsHierarchical**](EditDocumentApi.md#editDocumentDocxGetCommentsHierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically
-[**editDocumentDocxGetContentControls**](EditDocumentApi.md#editDocumentDocxGetContentControls) | **POST** /convert/edit/docx/get-content-controls | Get all content controls (form fields) and values in a Word DOCX document
-[**editDocumentDocxGetFormFields**](EditDocumentApi.md#editDocumentDocxGetFormFields) | **POST** /convert/edit/docx/get-form-fields | Get all form fields in a Word DOCX document
-[**editDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document
-[**editDocumentDocxGetImages**](EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document
-[**editDocumentDocxGetMacroInformation**](EditDocumentApi.md#editDocumentDocxGetMacroInformation) | **POST** /convert/edit/docx/get-macros | Get macro information from a Word DOCX/DOCM document
-[**editDocumentDocxGetMetadataProperties**](EditDocumentApi.md#editDocumentDocxGetMetadataProperties) | **POST** /convert/edit/docx/get-metadata | Get all metadata properties in Word DOCX document
-[**editDocumentDocxGetSections**](EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document
-[**editDocumentDocxGetStyles**](EditDocumentApi.md#editDocumentDocxGetStyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document
-[**editDocumentDocxGetTableByIndex**](EditDocumentApi.md#editDocumentDocxGetTableByIndex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document
-[**editDocumentDocxGetTableRow**](EditDocumentApi.md#editDocumentDocxGetTableRow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document
-[**editDocumentDocxGetTables**](EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document
-[**editDocumentDocxInsertCommentOnParagraph**](EditDocumentApi.md#editDocumentDocxInsertCommentOnParagraph) | **POST** /convert/edit/docx/insert-comment/on/paragraph | Insert a new comment into a Word DOCX document attached to a paragraph
-[**editDocumentDocxInsertImage**](EditDocumentApi.md#editDocumentDocxInsertImage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document
-[**editDocumentDocxInsertParagraph**](EditDocumentApi.md#editDocumentDocxInsertParagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document
-[**editDocumentDocxInsertTable**](EditDocumentApi.md#editDocumentDocxInsertTable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document
-[**editDocumentDocxInsertTableRow**](EditDocumentApi.md#editDocumentDocxInsertTableRow) | **POST** /convert/edit/docx/insert-table-row | Insert a new row into an existing table in a Word DOCX document
-[**editDocumentDocxPages**](EditDocumentApi.md#editDocumentDocxPages) | **POST** /convert/edit/docx/get-pages | Get pages and content from a Word DOCX document
-[**editDocumentDocxRemoveAllComments**](EditDocumentApi.md#editDocumentDocxRemoveAllComments) | **POST** /convert/edit/docx/comments/remove-all | Remove all comments from a Word DOCX document
-[**editDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxRemoveHeadersAndFooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from Word DOCX document
-[**editDocumentDocxRemoveObject**](EditDocumentApi.md#editDocumentDocxRemoveObject) | **POST** /convert/edit/docx/remove-object | Delete any object in a Word DOCX document
-[**editDocumentDocxReplace**](EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document
-[**editDocumentDocxReplaceMulti**](EditDocumentApi.md#editDocumentDocxReplaceMulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document, return result
-[**editDocumentDocxReplaceMultiEditSession**](EditDocumentApi.md#editDocumentDocxReplaceMultiEditSession) | **POST** /convert/edit/docx/replace-all/multi/edit-session | Replace multiple strings in Word DOCX document, return edit session
-[**editDocumentDocxReplaceParagraph**](EditDocumentApi.md#editDocumentDocxReplaceParagraph) | **POST** /convert/edit/docx/replace/paragraph | Replace matching paragraphs in a Word DOCX document
-[**editDocumentDocxSetCustomMetadataProperties**](EditDocumentApi.md#editDocumentDocxSetCustomMetadataProperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document
-[**editDocumentDocxSetFooter**](EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document
-[**editDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document
-[**editDocumentDocxSetFormFields**](EditDocumentApi.md#editDocumentDocxSetFormFields) | **POST** /convert/edit/docx/set-form-fields | Set and fill values for form fields in a Word DOCX document
-[**editDocumentDocxSetHeader**](EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document
-[**editDocumentDocxUpdateTableCell**](EditDocumentApi.md#editDocumentDocxUpdateTableCell) | **POST** /convert/edit/docx/update-table-cell | Update, set contents of a table cell in an existing table in a Word DOCX document
-[**editDocumentDocxUpdateTableRow**](EditDocumentApi.md#editDocumentDocxUpdateTableRow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document
-[**editDocumentFinishEditing**](EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing
-[**editDocumentPptxDeleteSlides**](EditDocumentApi.md#editDocumentPptxDeleteSlides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document
-[**editDocumentPptxGetMacroInformation**](EditDocumentApi.md#editDocumentPptxGetMacroInformation) | **POST** /convert/edit/pptx/get-macros | Get macro information from a PowerPoint PPTX/PPTM presentation document
-[**editDocumentPptxReplace**](EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation
-[**editDocumentXlsxAppendRow**](EditDocumentApi.md#editDocumentXlsxAppendRow) | **POST** /convert/edit/xlsx/append-row | Append row to a Excel XLSX spreadsheet, worksheet
-[**editDocumentXlsxClearCellByIndex**](EditDocumentApi.md#editDocumentXlsxClearCellByIndex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index
-[**editDocumentXlsxClearRow**](EditDocumentApi.md#editDocumentXlsxClearRow) | **POST** /convert/edit/xlsx/clear-row | Clear row from a Excel XLSX spreadsheet, worksheet
-[**editDocumentXlsxCreateBlankSpreadsheet**](EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet
-[**editDocumentXlsxCreateSpreadsheetFromData**](EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data
-[**editDocumentXlsxDeleteWorksheet**](EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document
-[**editDocumentXlsxDisableSharedWorkbook**](EditDocumentApi.md#editDocumentXlsxDisableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/disable-shared-workbook | Disable Shared Workbook (legacy) in Excel XLSX spreadsheet
-[**editDocumentXlsxEnableSharedWorkbook**](EditDocumentApi.md#editDocumentXlsxEnableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/enable-shared-workbook | Enable Shared Workbook (legacy) in Excel XLSX spreadsheet
-[**editDocumentXlsxGetCellByIdentifier**](EditDocumentApi.md#editDocumentXlsxGetCellByIdentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier
-[**editDocumentXlsxGetCellByIndex**](EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index
-[**editDocumentXlsxGetColumns**](EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet
-[**editDocumentXlsxGetImages**](EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet
-[**editDocumentXlsxGetMacroInformation**](EditDocumentApi.md#editDocumentXlsxGetMacroInformation) | **POST** /convert/edit/xlsx/get-macros | Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet
-[**editDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editDocumentXlsxGetRowsAndCells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet
-[**editDocumentXlsxGetSpecificRow**](EditDocumentApi.md#editDocumentXlsxGetSpecificRow) | **POST** /convert/edit/xlsx/get-specific-row | Get a specific row from a Excel XLSX spreadsheet, worksheet by path
-[**editDocumentXlsxGetStyles**](EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet
-[**editDocumentXlsxGetWorksheets**](EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet
-[**editDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet
-[**editDocumentXlsxRenameWorksheet**](EditDocumentApi.md#editDocumentXlsxRenameWorksheet) | **POST** /convert/edit/xlsx/rename-worksheet | Rename a specific worksheet in a Excel XLSX spreadsheet
-[**editDocumentXlsxSetCellByIdentifier**](EditDocumentApi.md#editDocumentXlsxSetCellByIdentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier
-[**editDocumentXlsxSetCellByIndex**](EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**editDocumentBeginEditing**](EditDocumentApi.md#editDocumentBeginEditing) | **POST** /convert/edit/begin-editing | Begin editing a document |
+| [**editDocumentDocxAcceptAllTrackChanges**](EditDocumentApi.md#editDocumentDocxAcceptAllTrackChanges) | **POST** /convert/edit/docx/track-changes/accept-all | Accept all tracked changes, revisions in a Word DOCX document |
+| [**editDocumentDocxBody**](EditDocumentApi.md#editDocumentDocxBody) | **POST** /convert/edit/docx/get-body | Get body from a Word DOCX document |
+| [**editDocumentDocxCreateBlankDocument**](EditDocumentApi.md#editDocumentDocxCreateBlankDocument) | **POST** /convert/edit/docx/create/blank | Create a blank Word DOCX document |
+| [**editDocumentDocxDeletePages**](EditDocumentApi.md#editDocumentDocxDeletePages) | **POST** /convert/edit/docx/delete-pages | Delete, remove pages from a Word DOCX document |
+| [**editDocumentDocxDeleteTableRow**](EditDocumentApi.md#editDocumentDocxDeleteTableRow) | **POST** /convert/edit/docx/delete-table-row | Deletes a table row in an existing table in a Word DOCX document |
+| [**editDocumentDocxDeleteTableRowRange**](EditDocumentApi.md#editDocumentDocxDeleteTableRowRange) | **POST** /convert/edit/docx/delete-table-row/range | Deletes a range of multiple table rows in an existing table in a Word DOCX document |
+| [**editDocumentDocxDisableTrackChanges**](EditDocumentApi.md#editDocumentDocxDisableTrackChanges) | **POST** /convert/edit/docx/track-changes/disable | Disable track changes, revisions in a Word DOCX document |
+| [**editDocumentDocxEnableTrackChanges**](EditDocumentApi.md#editDocumentDocxEnableTrackChanges) | **POST** /convert/edit/docx/track-changes/enable | Enable track changes, revisions in a Word DOCX document |
+| [**editDocumentDocxFindParagraph**](EditDocumentApi.md#editDocumentDocxFindParagraph) | **POST** /convert/edit/docx/find/paragraph | Find matching paragraphs in a Word DOCX document |
+| [**editDocumentDocxGetComments**](EditDocumentApi.md#editDocumentDocxGetComments) | **POST** /convert/edit/docx/get-comments/flat-list | Get comments from a Word DOCX document as a flat list |
+| [**editDocumentDocxGetCommentsHierarchical**](EditDocumentApi.md#editDocumentDocxGetCommentsHierarchical) | **POST** /convert/edit/docx/get-comments/hierarchical | Get comments from a Word DOCX document hierarchically |
+| [**editDocumentDocxGetContentControls**](EditDocumentApi.md#editDocumentDocxGetContentControls) | **POST** /convert/edit/docx/get-content-controls | Get all content controls (form fields) and values in a Word DOCX document |
+| [**editDocumentDocxGetFormFields**](EditDocumentApi.md#editDocumentDocxGetFormFields) | **POST** /convert/edit/docx/get-form-fields | Get all form fields in a Word DOCX document |
+| [**editDocumentDocxGetHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxGetHeadersAndFooters) | **POST** /convert/edit/docx/get-headers-and-footers | Get content of a footer from a Word DOCX document |
+| [**editDocumentDocxGetImages**](EditDocumentApi.md#editDocumentDocxGetImages) | **POST** /convert/edit/docx/get-images | Get images from a Word DOCX document |
+| [**editDocumentDocxGetMacroInformation**](EditDocumentApi.md#editDocumentDocxGetMacroInformation) | **POST** /convert/edit/docx/get-macros | Get macro information from a Word DOCX/DOCM document |
+| [**editDocumentDocxGetMetadataProperties**](EditDocumentApi.md#editDocumentDocxGetMetadataProperties) | **POST** /convert/edit/docx/get-metadata | Get all metadata properties in Word DOCX document |
+| [**editDocumentDocxGetSections**](EditDocumentApi.md#editDocumentDocxGetSections) | **POST** /convert/edit/docx/get-sections | Get sections from a Word DOCX document |
+| [**editDocumentDocxGetStyles**](EditDocumentApi.md#editDocumentDocxGetStyles) | **POST** /convert/edit/docx/get-styles | Get styles from a Word DOCX document |
+| [**editDocumentDocxGetTableByIndex**](EditDocumentApi.md#editDocumentDocxGetTableByIndex) | **POST** /convert/edit/docx/get-table/by-index | Get a specific table by index in a Word DOCX document |
+| [**editDocumentDocxGetTableRow**](EditDocumentApi.md#editDocumentDocxGetTableRow) | **POST** /convert/edit/docx/get-table-row | Gets the contents of an existing table row in an existing table in a Word DOCX document |
+| [**editDocumentDocxGetTables**](EditDocumentApi.md#editDocumentDocxGetTables) | **POST** /convert/edit/docx/get-tables | Get all tables in Word DOCX document |
+| [**editDocumentDocxInsertCommentOnParagraph**](EditDocumentApi.md#editDocumentDocxInsertCommentOnParagraph) | **POST** /convert/edit/docx/insert-comment/on/paragraph | Insert a new comment into a Word DOCX document attached to a paragraph |
+| [**editDocumentDocxInsertImage**](EditDocumentApi.md#editDocumentDocxInsertImage) | **POST** /convert/edit/docx/insert-image | Insert image into a Word DOCX document |
+| [**editDocumentDocxInsertParagraph**](EditDocumentApi.md#editDocumentDocxInsertParagraph) | **POST** /convert/edit/docx/insert-paragraph | Insert a new paragraph into a Word DOCX document |
+| [**editDocumentDocxInsertTable**](EditDocumentApi.md#editDocumentDocxInsertTable) | **POST** /convert/edit/docx/insert-table | Insert a new table into a Word DOCX document |
+| [**editDocumentDocxInsertTableRow**](EditDocumentApi.md#editDocumentDocxInsertTableRow) | **POST** /convert/edit/docx/insert-table-row | Insert a new row into an existing table in a Word DOCX document |
+| [**editDocumentDocxPages**](EditDocumentApi.md#editDocumentDocxPages) | **POST** /convert/edit/docx/get-pages | Get pages and content from a Word DOCX document |
+| [**editDocumentDocxRemoveAllComments**](EditDocumentApi.md#editDocumentDocxRemoveAllComments) | **POST** /convert/edit/docx/comments/remove-all | Remove all comments from a Word DOCX document |
+| [**editDocumentDocxRemoveHeadersAndFooters**](EditDocumentApi.md#editDocumentDocxRemoveHeadersAndFooters) | **POST** /convert/edit/docx/remove-headers-and-footers | Remove headers and footers from Word DOCX document |
+| [**editDocumentDocxRemoveObject**](EditDocumentApi.md#editDocumentDocxRemoveObject) | **POST** /convert/edit/docx/remove-object | Delete any object in a Word DOCX document |
+| [**editDocumentDocxReplace**](EditDocumentApi.md#editDocumentDocxReplace) | **POST** /convert/edit/docx/replace-all | Replace string in Word DOCX document |
+| [**editDocumentDocxReplaceMulti**](EditDocumentApi.md#editDocumentDocxReplaceMulti) | **POST** /convert/edit/docx/replace-all/multi | Replace multiple strings in Word DOCX document, return result |
+| [**editDocumentDocxReplaceMultiEditSession**](EditDocumentApi.md#editDocumentDocxReplaceMultiEditSession) | **POST** /convert/edit/docx/replace-all/multi/edit-session | Replace multiple strings in Word DOCX document, return edit session |
+| [**editDocumentDocxReplaceParagraph**](EditDocumentApi.md#editDocumentDocxReplaceParagraph) | **POST** /convert/edit/docx/replace/paragraph | Replace matching paragraphs in a Word DOCX document |
+| [**editDocumentDocxSetCustomMetadataProperties**](EditDocumentApi.md#editDocumentDocxSetCustomMetadataProperties) | **POST** /convert/edit/docx/set-metadata/custom-property | Set custom property metadata properties in Word DOCX document |
+| [**editDocumentDocxSetFooter**](EditDocumentApi.md#editDocumentDocxSetFooter) | **POST** /convert/edit/docx/set-footer | Set the footer in a Word DOCX document |
+| [**editDocumentDocxSetFooterAddPageNumber**](EditDocumentApi.md#editDocumentDocxSetFooterAddPageNumber) | **POST** /convert/edit/docx/set-footer/add-page-number | Add page number to footer in a Word DOCX document |
+| [**editDocumentDocxSetFormFields**](EditDocumentApi.md#editDocumentDocxSetFormFields) | **POST** /convert/edit/docx/set-form-fields | Set and fill values for form fields in a Word DOCX document |
+| [**editDocumentDocxSetHeader**](EditDocumentApi.md#editDocumentDocxSetHeader) | **POST** /convert/edit/docx/set-header | Set the header in a Word DOCX document |
+| [**editDocumentDocxUpdateTableCell**](EditDocumentApi.md#editDocumentDocxUpdateTableCell) | **POST** /convert/edit/docx/update-table-cell | Update, set contents of a table cell in an existing table in a Word DOCX document |
+| [**editDocumentDocxUpdateTableRow**](EditDocumentApi.md#editDocumentDocxUpdateTableRow) | **POST** /convert/edit/docx/update-table-row | Update, set contents of a table row in an existing table in a Word DOCX document |
+| [**editDocumentFinishEditing**](EditDocumentApi.md#editDocumentFinishEditing) | **POST** /convert/edit/finish-editing | Finish editing document, and download result from document editing |
+| [**editDocumentPptxDeleteSlides**](EditDocumentApi.md#editDocumentPptxDeleteSlides) | **POST** /convert/edit/pptx/delete-slides | Delete, remove slides from a PowerPoint PPTX presentation document |
+| [**editDocumentPptxGetMacroInformation**](EditDocumentApi.md#editDocumentPptxGetMacroInformation) | **POST** /convert/edit/pptx/get-macros | Get macro information from a PowerPoint PPTX/PPTM presentation document |
+| [**editDocumentPptxReplace**](EditDocumentApi.md#editDocumentPptxReplace) | **POST** /convert/edit/pptx/replace-all | Replace string in PowerPoint PPTX presentation |
+| [**editDocumentXlsxAppendRow**](EditDocumentApi.md#editDocumentXlsxAppendRow) | **POST** /convert/edit/xlsx/append-row | Append row to a Excel XLSX spreadsheet, worksheet |
+| [**editDocumentXlsxClearCellByIndex**](EditDocumentApi.md#editDocumentXlsxClearCellByIndex) | **POST** /convert/edit/xlsx/clear-cell/by-index | Clear cell contents in an Excel XLSX spreadsheet, worksheet by index |
+| [**editDocumentXlsxClearRow**](EditDocumentApi.md#editDocumentXlsxClearRow) | **POST** /convert/edit/xlsx/clear-row | Clear row from a Excel XLSX spreadsheet, worksheet |
+| [**editDocumentXlsxCreateBlankSpreadsheet**](EditDocumentApi.md#editDocumentXlsxCreateBlankSpreadsheet) | **POST** /convert/edit/xlsx/create/blank | Create a blank Excel XLSX spreadsheet |
+| [**editDocumentXlsxCreateSpreadsheetFromData**](EditDocumentApi.md#editDocumentXlsxCreateSpreadsheetFromData) | **POST** /convert/edit/xlsx/create/from/data | Create a new Excel XLSX spreadsheet from column and row data |
+| [**editDocumentXlsxDeleteWorksheet**](EditDocumentApi.md#editDocumentXlsxDeleteWorksheet) | **POST** /convert/edit/xlsx/delete-worksheet | Delete, remove worksheet from an Excel XLSX spreadsheet document |
+| [**editDocumentXlsxDisableSharedWorkbook**](EditDocumentApi.md#editDocumentXlsxDisableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/disable-shared-workbook | Disable Shared Workbook (legacy) in Excel XLSX spreadsheet |
+| [**editDocumentXlsxEnableSharedWorkbook**](EditDocumentApi.md#editDocumentXlsxEnableSharedWorkbook) | **POST** /convert/edit/xlsx/configuration/enable-shared-workbook | Enable Shared Workbook (legacy) in Excel XLSX spreadsheet |
+| [**editDocumentXlsxGetCellByIdentifier**](EditDocumentApi.md#editDocumentXlsxGetCellByIdentifier) | **POST** /convert/edit/xlsx/get-cell/by-identifier | Get cell from an Excel XLSX spreadsheet, worksheet by cell identifier |
+| [**editDocumentXlsxGetCellByIndex**](EditDocumentApi.md#editDocumentXlsxGetCellByIndex) | **POST** /convert/edit/xlsx/get-cell/by-index | Get cell from an Excel XLSX spreadsheet, worksheet by index |
+| [**editDocumentXlsxGetColumns**](EditDocumentApi.md#editDocumentXlsxGetColumns) | **POST** /convert/edit/xlsx/get-columns | Get columns from a Excel XLSX spreadsheet, worksheet |
+| [**editDocumentXlsxGetImages**](EditDocumentApi.md#editDocumentXlsxGetImages) | **POST** /convert/edit/xlsx/get-images | Get images from a Excel XLSX spreadsheet, worksheet |
+| [**editDocumentXlsxGetMacroInformation**](EditDocumentApi.md#editDocumentXlsxGetMacroInformation) | **POST** /convert/edit/xlsx/get-macros | Get macro information from a Excel XLSX/XLSM spreadsheet, worksheet |
+| [**editDocumentXlsxGetRowsAndCells**](EditDocumentApi.md#editDocumentXlsxGetRowsAndCells) | **POST** /convert/edit/xlsx/get-rows-and-cells | Get rows and cells from a Excel XLSX spreadsheet, worksheet |
+| [**editDocumentXlsxGetSpecificRow**](EditDocumentApi.md#editDocumentXlsxGetSpecificRow) | **POST** /convert/edit/xlsx/get-specific-row | Get a specific row from a Excel XLSX spreadsheet, worksheet by path |
+| [**editDocumentXlsxGetStyles**](EditDocumentApi.md#editDocumentXlsxGetStyles) | **POST** /convert/edit/xlsx/get-styles | Get styles from a Excel XLSX spreadsheet, worksheet |
+| [**editDocumentXlsxGetWorksheets**](EditDocumentApi.md#editDocumentXlsxGetWorksheets) | **POST** /convert/edit/xlsx/get-worksheets | Get worksheets from a Excel XLSX spreadsheet |
+| [**editDocumentXlsxInsertWorksheet**](EditDocumentApi.md#editDocumentXlsxInsertWorksheet) | **POST** /convert/edit/xlsx/insert-worksheet | Insert a new worksheet into an Excel XLSX spreadsheet |
+| [**editDocumentXlsxRenameWorksheet**](EditDocumentApi.md#editDocumentXlsxRenameWorksheet) | **POST** /convert/edit/xlsx/rename-worksheet | Rename a specific worksheet in a Excel XLSX spreadsheet |
+| [**editDocumentXlsxSetCellByIdentifier**](EditDocumentApi.md#editDocumentXlsxSetCellByIdentifier) | **POST** /convert/edit/xlsx/set-cell/by-identifier | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by cell identifier |
+| [**editDocumentXlsxSetCellByIndex**](EditDocumentApi.md#editDocumentXlsxSetCellByIndex) | **POST** /convert/edit/xlsx/set-cell/by-index | Set, update cell contents in an Excel XLSX spreadsheet, worksheet by index |
 
 
 
@@ -124,9 +124,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -141,6 +141,7 @@ Name | Type | Description  | Notes
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
@@ -149,7 +150,7 @@ Name | Type | Description  | Notes
 
 ## editDocumentDocxAcceptAllTrackChanges
 
-> byte[] editDocumentDocxAcceptAllTrackChanges(inputFile)
+> byte[] editDocumentDocxAcceptAllTrackChanges(inputFile, autorepair)
 
 Accept all tracked changes, revisions in a Word DOCX document
 
@@ -179,8 +180,9 @@ public class Example {
 
         EditDocumentApi apiInstance = new EditDocumentApi(defaultClient);
         File inputFile = new File("/path/to/file"); // File | Input file to perform the operation on.
+        Boolean autorepair = true; // Boolean | Optional; automatically repair input documents that have errors (default is true)
         try {
-            byte[] result = apiInstance.editDocumentDocxAcceptAllTrackChanges(inputFile);
+            byte[] result = apiInstance.editDocumentDocxAcceptAllTrackChanges(inputFile, autorepair);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling EditDocumentApi#editDocumentDocxAcceptAllTrackChanges");
@@ -196,9 +198,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
+| **autorepair** | **Boolean**| Optional; automatically repair input documents that have errors (default is true) | [optional] |
 
 ### Return type
 
@@ -212,6 +215,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -268,9 +272,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxBodyRequest**](GetDocxBodyRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxBodyRequest**](GetDocxBodyRequest.md)| Document input request | |
 
 ### Return type
 
@@ -284,6 +288,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -340,9 +345,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**CreateBlankDocxRequest**](CreateBlankDocxRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**CreateBlankDocxRequest**](CreateBlankDocxRequest.md)| Document input request | |
 
 ### Return type
 
@@ -356,6 +361,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -412,9 +418,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**RemoveDocxPagesRequest**](RemoveDocxPagesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**RemoveDocxPagesRequest**](RemoveDocxPagesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -428,6 +434,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -484,9 +491,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DeleteDocxTableRowRequest**](DeleteDocxTableRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DeleteDocxTableRowRequest**](DeleteDocxTableRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -500,6 +507,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -556,9 +564,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DeleteDocxTableRowRangeRequest**](DeleteDocxTableRowRangeRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DeleteDocxTableRowRangeRequest**](DeleteDocxTableRowRangeRequest.md)| Document input request | |
 
 ### Return type
 
@@ -572,6 +580,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -628,9 +637,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -644,6 +653,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -700,9 +710,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -716,6 +726,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -772,9 +783,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**FindDocxParagraphRequest**](FindDocxParagraphRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**FindDocxParagraphRequest**](FindDocxParagraphRequest.md)| Document input request | |
 
 ### Return type
 
@@ -788,6 +799,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -844,9 +856,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxGetCommentsRequest**](GetDocxGetCommentsRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxGetCommentsRequest**](GetDocxGetCommentsRequest.md)| Document input request | |
 
 ### Return type
 
@@ -860,6 +872,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -916,9 +929,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxGetCommentsHierarchicalRequest**](GetDocxGetCommentsHierarchicalRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxGetCommentsHierarchicalRequest**](GetDocxGetCommentsHierarchicalRequest.md)| Document input request | |
 
 ### Return type
 
@@ -932,6 +945,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -988,9 +1002,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -1004,6 +1018,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1060,9 +1075,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -1076,6 +1091,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1132,9 +1148,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxHeadersAndFootersRequest**](GetDocxHeadersAndFootersRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxHeadersAndFootersRequest**](GetDocxHeadersAndFootersRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1148,6 +1164,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1204,9 +1221,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxImagesRequest**](GetDocxImagesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxImagesRequest**](GetDocxImagesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1220,6 +1237,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1276,9 +1294,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -1292,6 +1310,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1348,9 +1367,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -1364,6 +1383,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1420,9 +1440,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxSectionsRequest**](GetDocxSectionsRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxSectionsRequest**](GetDocxSectionsRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1436,6 +1456,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1492,9 +1513,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxStylesRequest**](GetDocxStylesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxStylesRequest**](GetDocxStylesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1508,6 +1529,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1564,9 +1586,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxTableByIndexRequest**](GetDocxTableByIndexRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxTableByIndexRequest**](GetDocxTableByIndexRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1580,6 +1602,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1636,9 +1659,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxTableRowRequest**](GetDocxTableRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxTableRowRequest**](GetDocxTableRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1652,6 +1675,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1708,9 +1732,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxTablesRequest**](GetDocxTablesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxTablesRequest**](GetDocxTablesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1724,6 +1748,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1780,9 +1805,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxInsertCommentOnParagraphRequest**](DocxInsertCommentOnParagraphRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxInsertCommentOnParagraphRequest**](DocxInsertCommentOnParagraphRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1796,6 +1821,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1852,9 +1878,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxInsertImageRequest**](DocxInsertImageRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxInsertImageRequest**](DocxInsertImageRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1868,6 +1894,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1924,9 +1951,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxInsertParagraphRequest**](InsertDocxInsertParagraphRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**InsertDocxInsertParagraphRequest**](InsertDocxInsertParagraphRequest.md)| Document input request | |
 
 ### Return type
 
@@ -1940,6 +1967,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1996,9 +2024,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxTablesRequest**](InsertDocxTablesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**InsertDocxTablesRequest**](InsertDocxTablesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2012,6 +2040,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2068,9 +2097,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**InsertDocxTableRowRequest**](InsertDocxTableRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**InsertDocxTableRowRequest**](InsertDocxTableRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2084,6 +2113,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2140,9 +2170,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**GetDocxPagesRequest**](GetDocxPagesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**GetDocxPagesRequest**](GetDocxPagesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2156,6 +2186,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2212,9 +2243,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -2228,6 +2259,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2284,9 +2316,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**RemoveDocxHeadersAndFootersRequest**](RemoveDocxHeadersAndFootersRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**RemoveDocxHeadersAndFootersRequest**](RemoveDocxHeadersAndFootersRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2300,6 +2332,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2356,9 +2389,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxRemoveObjectRequest**](DocxRemoveObjectRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxRemoveObjectRequest**](DocxRemoveObjectRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2372,6 +2405,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2428,9 +2462,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Document string replacement configuration input |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Document string replacement configuration input | |
 
 ### Return type
 
@@ -2444,6 +2478,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2500,9 +2535,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**MultiReplaceStringRequest**](MultiReplaceStringRequest.md)| Document string replacement configuration input |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**MultiReplaceStringRequest**](MultiReplaceStringRequest.md)| Document string replacement configuration input | |
 
 ### Return type
 
@@ -2516,6 +2551,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2572,9 +2608,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**MultiReplaceStringRequest**](MultiReplaceStringRequest.md)| Document string replacement configuration input |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**MultiReplaceStringRequest**](MultiReplaceStringRequest.md)| Document string replacement configuration input | |
 
 ### Return type
 
@@ -2588,6 +2624,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2644,9 +2681,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceDocxParagraphRequest**](ReplaceDocxParagraphRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**ReplaceDocxParagraphRequest**](ReplaceDocxParagraphRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2660,6 +2697,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2716,9 +2754,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**DocxSetCustomMetadataPropertiesRequest**](DocxSetCustomMetadataPropertiesRequest.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocxSetCustomMetadataPropertiesRequest**](DocxSetCustomMetadataPropertiesRequest.md)|  | |
 
 ### Return type
 
@@ -2732,6 +2770,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2788,9 +2827,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxSetFooterRequest**](DocxSetFooterRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2804,6 +2843,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2860,9 +2900,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxSetFooterAddPageNumberRequest**](DocxSetFooterAddPageNumberRequest.md)| Document input request | |
 
 ### Return type
 
@@ -2876,6 +2916,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -2932,9 +2973,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetFormFieldsRequest**](DocxSetFormFieldsRequest.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxSetFormFieldsRequest**](DocxSetFormFieldsRequest.md)|  | |
 
 ### Return type
 
@@ -2948,6 +2989,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3004,9 +3046,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**DocxSetHeaderRequest**](DocxSetHeaderRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**DocxSetHeaderRequest**](DocxSetHeaderRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3020,6 +3062,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3076,9 +3119,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**UpdateDocxTableCellRequest**](UpdateDocxTableCellRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**UpdateDocxTableCellRequest**](UpdateDocxTableCellRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3092,6 +3135,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3148,9 +3192,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**UpdateDocxTableRowRequest**](UpdateDocxTableRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**UpdateDocxTableRowRequest**](UpdateDocxTableRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3164,6 +3208,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3220,9 +3265,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**FinishEditingRequest**](FinishEditingRequest.md)| Cloudmersive Document URL to complete editing on |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**FinishEditingRequest**](FinishEditingRequest.md)| Cloudmersive Document URL to complete editing on | |
 
 ### Return type
 
@@ -3236,6 +3281,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3292,9 +3338,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**RemovePptxSlidesRequest**](RemovePptxSlidesRequest.md)| Presentation input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**RemovePptxSlidesRequest**](RemovePptxSlidesRequest.md)| Presentation input request | |
 
 ### Return type
 
@@ -3308,6 +3354,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3364,9 +3411,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -3380,6 +3427,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3436,9 +3484,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Replacement document configuration input |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**ReplaceStringRequest**](ReplaceStringRequest.md)| Replacement document configuration input | |
 
 ### Return type
 
@@ -3452,6 +3500,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3508,9 +3557,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**AppendXlsxRowRequest**](AppendXlsxRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**AppendXlsxRowRequest**](AppendXlsxRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3524,6 +3573,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3580,9 +3630,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**ClearXlsxCellRequest**](ClearXlsxCellRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**ClearXlsxCellRequest**](ClearXlsxCellRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3596,6 +3646,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3652,9 +3703,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**ClearXlsxRowRequest**](ClearXlsxRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**ClearXlsxRowRequest**](ClearXlsxRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3668,6 +3719,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3724,9 +3776,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**CreateBlankSpreadsheetRequest**](CreateBlankSpreadsheetRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**CreateBlankSpreadsheetRequest**](CreateBlankSpreadsheetRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3740,6 +3792,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3796,9 +3849,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**CreateSpreadsheetFromDataRequest**](CreateSpreadsheetFromDataRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**CreateSpreadsheetFromDataRequest**](CreateSpreadsheetFromDataRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3812,6 +3865,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3868,9 +3922,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **reqConfig** | [**RemoveXlsxWorksheetRequest**](RemoveXlsxWorksheetRequest.md)| Spreadsheet input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **reqConfig** | [**RemoveXlsxWorksheetRequest**](RemoveXlsxWorksheetRequest.md)| Spreadsheet input request | |
 
 ### Return type
 
@@ -3884,6 +3938,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -3940,9 +3995,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**DisableSharedWorkbookRequest**](DisableSharedWorkbookRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DisableSharedWorkbookRequest**](DisableSharedWorkbookRequest.md)| Document input request | |
 
 ### Return type
 
@@ -3956,6 +4011,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4012,9 +4068,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**EnableSharedWorkbookRequest**](EnableSharedWorkbookRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**EnableSharedWorkbookRequest**](EnableSharedWorkbookRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4028,6 +4084,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4084,9 +4141,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxCellByIdentifierRequest**](GetXlsxCellByIdentifierRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxCellByIdentifierRequest**](GetXlsxCellByIdentifierRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4100,6 +4157,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4156,9 +4214,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxCellRequest**](GetXlsxCellRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxCellRequest**](GetXlsxCellRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4172,6 +4230,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4228,9 +4287,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxColumnsRequest**](GetXlsxColumnsRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxColumnsRequest**](GetXlsxColumnsRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4244,6 +4303,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4300,9 +4360,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxImagesRequest**](GetXlsxImagesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxImagesRequest**](GetXlsxImagesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4316,6 +4376,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4372,9 +4433,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -4388,6 +4449,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4444,9 +4506,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxRowsAndCellsRequest**](GetXlsxRowsAndCellsRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxRowsAndCellsRequest**](GetXlsxRowsAndCellsRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4460,6 +4522,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4516,9 +4579,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxSpecificRowRequest**](GetXlsxSpecificRowRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxSpecificRowRequest**](GetXlsxSpecificRowRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4532,6 +4595,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4588,9 +4652,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxStylesRequest**](GetXlsxStylesRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxStylesRequest**](GetXlsxStylesRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4604,6 +4668,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4660,9 +4725,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**GetXlsxWorksheetsRequest**](GetXlsxWorksheetsRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**GetXlsxWorksheetsRequest**](GetXlsxWorksheetsRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4676,6 +4741,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4732,9 +4798,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**InsertXlsxWorksheetRequest**](InsertXlsxWorksheetRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**InsertXlsxWorksheetRequest**](InsertXlsxWorksheetRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4748,6 +4814,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4804,9 +4871,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**RenameXlsxWorksheetRequest**](RenameXlsxWorksheetRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**RenameXlsxWorksheetRequest**](RenameXlsxWorksheetRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4820,6 +4887,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4876,9 +4944,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**SetXlsxCellByIdentifierRequest**](SetXlsxCellByIdentifierRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**SetXlsxCellByIdentifierRequest**](SetXlsxCellByIdentifierRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4892,6 +4960,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -4948,9 +5017,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**SetXlsxCellRequest**](SetXlsxCellRequest.md)| Document input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**SetXlsxCellRequest**](SetXlsxCellRequest.md)| Document input request | |
 
 ### Return type
 
@@ -4964,6 +5033,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

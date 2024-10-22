@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for EnableSharedWorkbookRequest
  */
-public class EnableSharedWorkbookRequestTest {
+class EnableSharedWorkbookRequestTest {
     private final EnableSharedWorkbookRequest model = new EnableSharedWorkbookRequest();
 
     /**
      * Model tests for EnableSharedWorkbookRequest
      */
     @Test
-    public void testEnableSharedWorkbookRequest() {
+    void testEnableSharedWorkbookRequest() {
         // TODO: test EnableSharedWorkbookRequest
     }
 
@@ -43,7 +40,7 @@ public class EnableSharedWorkbookRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class EnableSharedWorkbookRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 

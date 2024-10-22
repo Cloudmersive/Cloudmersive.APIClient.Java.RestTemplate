@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Document validation result
  */
-@ApiModel(description = "Document validation result")
 @JsonPropertyOrder({
   AutodetectDocumentValidationResult.JSON_PROPERTY_FILE_FORMAT_EXTENSION,
   AutodetectDocumentValidationResult.JSON_PROPERTY_DOCUMENT_IS_VALID,
@@ -38,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   AutodetectDocumentValidationResult.JSON_PROPERTY_WARNING_COUNT,
   AutodetectDocumentValidationResult.JSON_PROPERTY_ERRORS_AND_WARNINGS
 })
-@JsonTypeName("AutodetectDocumentValidationResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AutodetectDocumentValidationResult {
   public static final String JSON_PROPERTY_FILE_FORMAT_EXTENSION = "FileFormatExtension";
   private String fileFormatExtension;
@@ -54,8 +52,10 @@ public class AutodetectDocumentValidationResult {
   private Integer warningCount;
 
   public static final String JSON_PROPERTY_ERRORS_AND_WARNINGS = "ErrorsAndWarnings";
-  private List<DocumentValidationError> errorsAndWarnings = null;
+  private List<DocumentValidationError> errorsAndWarnings = new ArrayList<>();
 
+  public AutodetectDocumentValidationResult() {
+  }
 
   public AutodetectDocumentValidationResult fileFormatExtension(String fileFormatExtension) {
     
@@ -63,12 +63,11 @@ public class AutodetectDocumentValidationResult {
     return this;
   }
 
-   /**
+  /**
    * Get fileFormatExtension
    * @return fileFormatExtension
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_FILE_FORMAT_EXTENSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,10 +76,11 @@ public class AutodetectDocumentValidationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_FORMAT_EXTENSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileFormatExtension(String fileFormatExtension) {
     this.fileFormatExtension = fileFormatExtension;
   }
-
 
   public AutodetectDocumentValidationResult documentIsValid(Boolean documentIsValid) {
     
@@ -88,12 +88,11 @@ public class AutodetectDocumentValidationResult {
     return this;
   }
 
-   /**
+  /**
    * True if the document is valid and has no errors, false otherwise
    * @return documentIsValid
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the document is valid and has no errors, false otherwise")
   @JsonProperty(JSON_PROPERTY_DOCUMENT_IS_VALID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class AutodetectDocumentValidationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOCUMENT_IS_VALID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDocumentIsValid(Boolean documentIsValid) {
     this.documentIsValid = documentIsValid;
   }
-
 
   public AutodetectDocumentValidationResult errorCount(Integer errorCount) {
     
@@ -113,12 +113,11 @@ public class AutodetectDocumentValidationResult {
     return this;
   }
 
-   /**
+  /**
    * Number of validation errors found in the document
    * @return errorCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of validation errors found in the document")
   @JsonProperty(JSON_PROPERTY_ERROR_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class AutodetectDocumentValidationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorCount(Integer errorCount) {
     this.errorCount = errorCount;
   }
-
 
   public AutodetectDocumentValidationResult warningCount(Integer warningCount) {
     
@@ -138,12 +138,11 @@ public class AutodetectDocumentValidationResult {
     return this;
   }
 
-   /**
+  /**
    * Number of validation warnings found in the document
    * @return warningCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of validation warnings found in the document")
   @JsonProperty(JSON_PROPERTY_WARNING_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -152,10 +151,11 @@ public class AutodetectDocumentValidationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WARNING_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWarningCount(Integer warningCount) {
     this.warningCount = warningCount;
   }
-
 
   public AutodetectDocumentValidationResult errorsAndWarnings(List<DocumentValidationError> errorsAndWarnings) {
     
@@ -165,18 +165,17 @@ public class AutodetectDocumentValidationResult {
 
   public AutodetectDocumentValidationResult addErrorsAndWarningsItem(DocumentValidationError errorsAndWarningsItem) {
     if (this.errorsAndWarnings == null) {
-      this.errorsAndWarnings = new ArrayList<DocumentValidationError>();
+      this.errorsAndWarnings = new ArrayList<>();
     }
     this.errorsAndWarnings.add(errorsAndWarningsItem);
     return this;
   }
 
-   /**
+  /**
    * Details of errors and warnings found
    * @return errorsAndWarnings
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Details of errors and warnings found")
   @JsonProperty(JSON_PROPERTY_ERRORS_AND_WARNINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +184,11 @@ public class AutodetectDocumentValidationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERRORS_AND_WARNINGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorsAndWarnings(List<DocumentValidationError> errorsAndWarnings) {
     this.errorsAndWarnings = errorsAndWarnings;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -210,7 +210,6 @@ public class AutodetectDocumentValidationResult {
   public int hashCode() {
     return Objects.hash(fileFormatExtension, documentIsValid, errorCount, warningCount, errorsAndWarnings);
   }
-
 
   @Override
   public String toString() {

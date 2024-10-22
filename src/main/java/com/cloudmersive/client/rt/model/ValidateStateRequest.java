@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to Validate a State or Province in a country
  */
-@ApiModel(description = "Request to Validate a State or Province in a country")
 @JsonPropertyOrder({
   ValidateStateRequest.JSON_PROPERTY_STATE_OR_PROVINCE,
   ValidateStateRequest.JSON_PROPERTY_COUNTRY_FULL_NAME,
   ValidateStateRequest.JSON_PROPERTY_COUNTRY_CODE
 })
-@JsonTypeName("ValidateStateRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateStateRequest {
   public static final String JSON_PROPERTY_STATE_OR_PROVINCE = "StateOrProvince";
   private String stateOrProvince;
@@ -45,6 +42,8 @@ public class ValidateStateRequest {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "CountryCode";
   private String countryCode;
 
+  public ValidateStateRequest() {
+  }
 
   public ValidateStateRequest stateOrProvince(String stateOrProvince) {
     
@@ -52,12 +51,11 @@ public class ValidateStateRequest {
     return this;
   }
 
-   /**
+  /**
    * Required: State or province of the address to validate, such as &#39;California&#39; or &#39;CA&#39;
    * @return stateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Required: State or province of the address to validate, such as 'California' or 'CA'")
   @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ValidateStateRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   public ValidateStateRequest countryFullName(String countryFullName) {
     
@@ -77,12 +76,11 @@ public class ValidateStateRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional (recommended); Name of the country, such as &#39;United States&#39;.  If left blank, and CountryCode is also left blank, will default to United States.  Global countries are supported.
    * @return countryFullName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional (recommended); Name of the country, such as 'United States'.  If left blank, and CountryCode is also left blank, will default to United States.  Global countries are supported.")
   @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ValidateStateRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryFullName(String countryFullName) {
     this.countryFullName = countryFullName;
   }
-
 
   public ValidateStateRequest countryCode(String countryCode) {
     
@@ -102,12 +101,11 @@ public class ValidateStateRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; two-letter country code (Two-letter ISO 3166-1 country code) of the country.  If left blank, and CountryFullName is also left blank, will default to United States.  Global countries are supported.
    * @return countryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; two-letter country code (Two-letter ISO 3166-1 country code) of the country.  If left blank, and CountryFullName is also left blank, will default to United States.  Global countries are supported.")
   @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ValidateStateRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ValidateStateRequest {
   public int hashCode() {
     return Objects.hash(stateOrProvince, countryFullName, countryCode);
   }
-
 
   @Override
   public String toString() {

@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of converting a multi-page image into individual pages with a different format
  */
-@ApiModel(description = "Result of converting a multi-page image into individual pages with a different format")
 @JsonPropertyOrder({
   MultipageImageFormatConversionResult.JSON_PROPERTY_SUCCESSFUL,
   MultipageImageFormatConversionResult.JSON_PROPERTY_PAGE_COUNT,
   MultipageImageFormatConversionResult.JSON_PROPERTY_PAGES
 })
-@JsonTypeName("MultipageImageFormatConversionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultipageImageFormatConversionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -46,8 +44,10 @@ public class MultipageImageFormatConversionResult {
   private Integer pageCount;
 
   public static final String JSON_PROPERTY_PAGES = "Pages";
-  private List<PageConversionResult> pages = null;
+  private List<PageConversionResult> pages = new ArrayList<>();
 
+  public MultipageImageFormatConversionResult() {
+  }
 
   public MultipageImageFormatConversionResult successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class MultipageImageFormatConversionResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class MultipageImageFormatConversionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public MultipageImageFormatConversionResult pageCount(Integer pageCount) {
     
@@ -80,12 +80,11 @@ public class MultipageImageFormatConversionResult {
     return this;
   }
 
-   /**
+  /**
    * The number of pages in the converted output
    * @return pageCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of pages in the converted output")
   @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class MultipageImageFormatConversionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageCount(Integer pageCount) {
     this.pageCount = pageCount;
   }
-
 
   public MultipageImageFormatConversionResult pages(List<PageConversionResult> pages) {
     
@@ -107,18 +107,17 @@ public class MultipageImageFormatConversionResult {
 
   public MultipageImageFormatConversionResult addPagesItem(PageConversionResult pagesItem) {
     if (this.pages == null) {
-      this.pages = new ArrayList<PageConversionResult>();
+      this.pages = new ArrayList<>();
     }
     this.pages.add(pagesItem);
     return this;
   }
 
-   /**
+  /**
    * Converted page results
    * @return pages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Converted page results")
   @JsonProperty(JSON_PROPERTY_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class MultipageImageFormatConversionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPages(List<PageConversionResult> pages) {
     this.pages = pages;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class MultipageImageFormatConversionResult {
   public int hashCode() {
     return Objects.hash(successful, pageCount, pages);
   }
-
 
   @Override
   public String toString() {

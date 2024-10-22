@@ -19,9 +19,12 @@ import com.cloudmersive.client.rt.model.DateTimeStandardizedParseRequest;
 import com.cloudmersive.client.rt.model.DateTimeStandardizedParseResponse;
 import com.cloudmersive.client.rt.model.GetPublicHolidaysRequest;
 import com.cloudmersive.client.rt.model.PublicHolidaysResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,8 +33,8 @@ import java.util.Map;
 /**
  * API tests for DateTimeApi
  */
-@Ignore
-public class DateTimeApiTest {
+@Disabled
+class DateTimeApiTest {
 
     private final DateTimeApi api = new DateTimeApi();
 
@@ -41,11 +44,12 @@ public class DateTimeApiTest {
      *
      * Gets the current date and time.  Response time is syncronized with atomic clocks, and represents a monotonic, centrally available, consistent clock.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void dateTimeGetNowSimpleTest() {
+    void dateTimeGetNowSimpleTest() {
+
         DateTimeNowResult response = api.dateTimeGetNowSimple();
 
         // TODO: test validations
@@ -56,12 +60,13 @@ public class DateTimeApiTest {
      *
      * Enumerates all public holidays in a given country for a given year.  Supports over 100 countries.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void dateTimeGetPublicHolidaysTest() {
+    void dateTimeGetPublicHolidaysTest() {
         GetPublicHolidaysRequest input = null;
+
         PublicHolidaysResponse response = api.dateTimeGetPublicHolidays(input);
 
         // TODO: test validations
@@ -72,12 +77,13 @@ public class DateTimeApiTest {
      *
      * Parses an unstructured, free-form, natural language date and time string into a date time object.  This is intended for lightweight human-entered input, such as \&quot;tomorrow at 3pm\&quot; or \&quot;tuesday\&quot;.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void dateTimeParseNaturalLanguageDateTimeTest() {
+    void dateTimeParseNaturalLanguageDateTimeTest() {
         DateTimeNaturalLanguageParseRequest input = null;
+
         DateTimeStandardizedParseResponse response = api.dateTimeParseNaturalLanguageDateTime(input);
 
         // TODO: test validations
@@ -88,12 +94,13 @@ public class DateTimeApiTest {
      *
      * Parses a structured date and time string into a date time object.  This is intended for standardized date strings that adhere to formatting conventions, rather than natural language input.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void dateTimeParseStandardDateTimeTest() {
+    void dateTimeParseStandardDateTimeTest() {
         DateTimeStandardizedParseRequest input = null;
+
         DateTimeStandardizedParseResponse response = api.dateTimeParseStandardDateTime(input);
 
         // TODO: test validations

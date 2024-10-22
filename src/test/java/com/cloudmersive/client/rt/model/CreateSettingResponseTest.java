@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CreateSettingResponse
  */
-public class CreateSettingResponseTest {
+class CreateSettingResponseTest {
     private final CreateSettingResponse model = new CreateSettingResponse();
 
     /**
      * Model tests for CreateSettingResponse
      */
     @Test
-    public void testCreateSettingResponse() {
+    void testCreateSettingResponse() {
         // TODO: test CreateSettingResponse
     }
 
@@ -43,7 +40,7 @@ public class CreateSettingResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class CreateSettingResponseTest {
      * Test the property 'settingDefinitionID'
      */
     @Test
-    public void settingDefinitionIDTest() {
+    void settingDefinitionIDTest() {
         // TODO: test settingDefinitionID
     }
 
@@ -59,7 +56,7 @@ public class CreateSettingResponseTest {
      * Test the property 'settingValueID'
      */
     @Test
-    public void settingValueIDTest() {
+    void settingValueIDTest() {
         // TODO: test settingValueID
     }
 
@@ -67,7 +64,7 @@ public class CreateSettingResponseTest {
      * Test the property 'errorMessage'
      */
     @Test
-    public void errorMessageTest() {
+    void errorMessageTest() {
         // TODO: test errorMessage
     }
 

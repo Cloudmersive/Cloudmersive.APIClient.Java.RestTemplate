@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Alternate file format possibility
  */
-@ApiModel(description = "Alternate file format possibility")
 @JsonPropertyOrder({
   AlternateFileFormatCandidate.JSON_PROPERTY_PROBABILITY,
   AlternateFileFormatCandidate.JSON_PROPERTY_DETECTED_FILE_EXTENSION,
   AlternateFileFormatCandidate.JSON_PROPERTY_DETECTED_MIME_TYPE
 })
-@JsonTypeName("AlternateFileFormatCandidate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AlternateFileFormatCandidate {
   public static final String JSON_PROPERTY_PROBABILITY = "Probability";
   private Double probability;
@@ -45,6 +42,8 @@ public class AlternateFileFormatCandidate {
   public static final String JSON_PROPERTY_DETECTED_MIME_TYPE = "DetectedMimeType";
   private String detectedMimeType;
 
+  public AlternateFileFormatCandidate() {
+  }
 
   public AlternateFileFormatCandidate probability(Double probability) {
     
@@ -52,12 +51,11 @@ public class AlternateFileFormatCandidate {
     return this;
   }
 
-   /**
+  /**
    * Probability that this extension is the right one; possible values are between 0.0 (lowest confidence) and 1.0 (highest confidence)
    * @return probability
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Probability that this extension is the right one; possible values are between 0.0 (lowest confidence) and 1.0 (highest confidence)")
   @JsonProperty(JSON_PROPERTY_PROBABILITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class AlternateFileFormatCandidate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROBABILITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setProbability(Double probability) {
     this.probability = probability;
   }
-
 
   public AlternateFileFormatCandidate detectedFileExtension(String detectedFileExtension) {
     
@@ -77,12 +76,11 @@ public class AlternateFileFormatCandidate {
     return this;
   }
 
-   /**
+  /**
    * Detected file extension of the file format, with a leading period
    * @return detectedFileExtension
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Detected file extension of the file format, with a leading period")
   @JsonProperty(JSON_PROPERTY_DETECTED_FILE_EXTENSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class AlternateFileFormatCandidate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_FILE_EXTENSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedFileExtension(String detectedFileExtension) {
     this.detectedFileExtension = detectedFileExtension;
   }
-
 
   public AlternateFileFormatCandidate detectedMimeType(String detectedMimeType) {
     
@@ -102,12 +101,11 @@ public class AlternateFileFormatCandidate {
     return this;
   }
 
-   /**
+  /**
    * MIME type of this file extension
    * @return detectedMimeType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "MIME type of this file extension")
   @JsonProperty(JSON_PROPERTY_DETECTED_MIME_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class AlternateFileFormatCandidate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_MIME_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedMimeType(String detectedMimeType) {
     this.detectedMimeType = detectedMimeType;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class AlternateFileFormatCandidate {
   public int hashCode() {
     return Objects.hash(probability, detectedFileExtension, detectedMimeType);
   }
-
 
   @Override
   public String toString() {

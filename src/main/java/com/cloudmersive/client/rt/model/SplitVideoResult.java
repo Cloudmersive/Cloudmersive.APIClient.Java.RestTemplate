@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of splitting a video
  */
-@ApiModel(description = "The result of splitting a video")
 @JsonPropertyOrder({
   SplitVideoResult.JSON_PROPERTY_SUCCESSFUL,
   SplitVideoResult.JSON_PROPERTY_VIDEOS
 })
-@JsonTypeName("SplitVideoResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SplitVideoResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_VIDEOS = "Videos";
-  private List<VideoFile> videos = null;
+  private List<VideoFile> videos = new ArrayList<>();
 
+  public SplitVideoResult() {
+  }
 
   public SplitVideoResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class SplitVideoResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class SplitVideoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public SplitVideoResult videos(List<VideoFile> videos) {
     
@@ -78,18 +78,17 @@ public class SplitVideoResult {
 
   public SplitVideoResult addVideosItem(VideoFile videosItem) {
     if (this.videos == null) {
-      this.videos = new ArrayList<VideoFile>();
+      this.videos = new ArrayList<>();
     }
     this.videos.add(videosItem);
     return this;
   }
 
-   /**
+  /**
    * Individual video files resulting from the split operation
    * @return videos
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Individual video files resulting from the split operation")
   @JsonProperty(JSON_PROPERTY_VIDEOS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class SplitVideoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VIDEOS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVideos(List<VideoFile> videos) {
     this.videos = videos;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class SplitVideoResult {
   public int hashCode() {
     return Objects.hash(successful, videos);
   }
-
 
   @Override
   public String toString() {

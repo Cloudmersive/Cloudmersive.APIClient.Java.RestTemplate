@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a batch XSS protection operation
  */
-@ApiModel(description = "Input to a batch XSS protection operation")
 @JsonPropertyOrder({
   XssProtectionBatchRequest.JSON_PROPERTY_REQUEST_ITEMS
 })
-@JsonTypeName("XssProtectionBatchRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XssProtectionBatchRequest {
   public static final String JSON_PROPERTY_REQUEST_ITEMS = "RequestItems";
-  private List<XssProtectionRequestItem> requestItems = null;
+  private List<XssProtectionRequestItem> requestItems = new ArrayList<>();
 
+  public XssProtectionBatchRequest() {
+  }
 
   public XssProtectionBatchRequest requestItems(List<XssProtectionRequestItem> requestItems) {
     
@@ -49,18 +49,17 @@ public class XssProtectionBatchRequest {
 
   public XssProtectionBatchRequest addRequestItemsItem(XssProtectionRequestItem requestItemsItem) {
     if (this.requestItems == null) {
-      this.requestItems = new ArrayList<XssProtectionRequestItem>();
+      this.requestItems = new ArrayList<>();
     }
     this.requestItems.add(requestItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Multiple items to protect for XSS
    * @return requestItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Multiple items to protect for XSS")
   @JsonProperty(JSON_PROPERTY_REQUEST_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class XssProtectionBatchRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REQUEST_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRequestItems(List<XssProtectionRequestItem> requestItems) {
     this.requestItems = requestItems;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class XssProtectionBatchRequest {
   public int hashCode() {
     return Objects.hash(requestItems);
   }
-
 
   @Override
   public String toString() {

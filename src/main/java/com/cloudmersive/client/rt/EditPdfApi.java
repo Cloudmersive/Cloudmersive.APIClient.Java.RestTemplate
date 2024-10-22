@@ -1,9 +1,12 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import com.cloudmersive.client.rt.model.AddPdfAnnotationRequest;
 import java.math.BigDecimal;
+import com.cloudmersive.client.rt.model.EditPdfBatchJobCreateResult;
+import com.cloudmersive.client.rt.model.EditPdfJobStatusResult;
 import java.io.File;
 import com.cloudmersive.client.rt.model.GetPdfAnnotationsResult;
 import com.cloudmersive.client.rt.model.PdfFormFields;
@@ -33,26 +36,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.EditPdfApi")
-public class EditPdfApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EditPdfApi extends BaseApi {
 
     public EditPdfApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public EditPdfApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -76,33 +68,32 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfAddAnnotationsWithHttpInfo(AddPdfAnnotationRequest request) throws RestClientException {
-        Object postBody = request;
+        Object localVarPostBody = request;
         
         // verify the required parameter 'request' is set
         if (request == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling editPdfAddAnnotations");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/annotations/add-item", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/annotations/add-item", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Convert a PDF file to PDF/A
@@ -127,39 +118,38 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfConvertToPdfAWithHttpInfo(org.springframework.core.io.Resource inputFile, String conformanceLevel) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfConvertToPdfA");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/optimize/pdf-a", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (conformanceLevel != null)
-        headerParams.add("conformanceLevel", apiClient.parameterToString(conformanceLevel));
+        localVarHeaderParams.add("conformanceLevel", apiClient.parameterToString(conformanceLevel));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/optimize/pdf-a", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Decrypt and password-protect a PDF
@@ -184,7 +174,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfDecryptWithHttpInfo(String password, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'password' is set
         if (password == null) {
@@ -196,32 +186,31 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfDecrypt");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/decrypt", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (password != null)
-        headerParams.add("password", apiClient.parameterToString(password));
+        localVarHeaderParams.add("password", apiClient.parameterToString(password));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/decrypt", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Remove, delete pages from a PDF document
@@ -248,7 +237,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfDeletePagesWithHttpInfo(Integer pageStart, Integer pageEnd, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'pageStart' is set
         if (pageStart == null) {
@@ -265,34 +254,103 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfDeletePages");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/pages/delete", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (pageStart != null)
-        headerParams.add("pageStart", apiClient.parameterToString(pageStart));
+        localVarHeaderParams.add("pageStart", apiClient.parameterToString(pageStart));
         if (pageEnd != null)
-        headerParams.add("pageEnd", apiClient.parameterToString(pageEnd));
+        localVarHeaderParams.add("pageEnd", apiClient.parameterToString(pageEnd));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/delete", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Remove, delete pages from a PDF document as Batch Job
+     * Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     * <p><b>200</b> - OK
+     * @param pageStart Page number (1 based) to start deleting pages from (inclusive). (required)
+     * @param pageEnd Page number (1 based) to stop deleting pages from (inclusive). (required)
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return EditPdfBatchJobCreateResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public EditPdfBatchJobCreateResult editPdfDeletePagesBatchJob(Integer pageStart, Integer pageEnd, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editPdfDeletePagesBatchJobWithHttpInfo(pageStart, pageEnd, inputFile).getBody();
+    }
+
+    /**
+     * Remove, delete pages from a PDF document as Batch Job
+     * Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     * <p><b>200</b> - OK
+     * @param pageStart Page number (1 based) to start deleting pages from (inclusive). (required)
+     * @param pageEnd Page number (1 based) to stop deleting pages from (inclusive). (required)
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;EditPdfBatchJobCreateResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<EditPdfBatchJobCreateResult> editPdfDeletePagesBatchJobWithHttpInfo(Integer pageStart, Integer pageEnd, org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'pageStart' is set
+        if (pageStart == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'pageStart' when calling editPdfDeletePagesBatchJob");
+        }
+        
+        // verify the required parameter 'pageEnd' is set
+        if (pageEnd == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'pageEnd' when calling editPdfDeletePagesBatchJob");
+        }
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfDeletePagesBatchJob");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (pageStart != null)
+        localVarHeaderParams.add("pageStart", apiClient.parameterToString(pageStart));
+        if (pageEnd != null)
+        localVarHeaderParams.add("pageEnd", apiClient.parameterToString(pageEnd));
+
+        if (inputFile != null)
+            localVarFormParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<EditPdfBatchJobCreateResult> localReturnType = new ParameterizedTypeReference<EditPdfBatchJobCreateResult>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/delete/batch-job", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Encrypt and password-protect a PDF
@@ -321,43 +379,42 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfEncryptWithHttpInfo(org.springframework.core.io.Resource inputFile, String userPassword, String ownerPassword, String encryptionKeyLength) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfEncrypt");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/encrypt", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (userPassword != null)
-        headerParams.add("userPassword", apiClient.parameterToString(userPassword));
+        localVarHeaderParams.add("userPassword", apiClient.parameterToString(userPassword));
         if (ownerPassword != null)
-        headerParams.add("ownerPassword", apiClient.parameterToString(ownerPassword));
+        localVarHeaderParams.add("ownerPassword", apiClient.parameterToString(ownerPassword));
         if (encryptionKeyLength != null)
-        headerParams.add("encryptionKeyLength", apiClient.parameterToString(encryptionKeyLength));
+        localVarHeaderParams.add("encryptionKeyLength", apiClient.parameterToString(encryptionKeyLength));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/encrypt", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Get PDF annotations, including comments in the document
@@ -380,36 +437,84 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<GetPdfAnnotationsResult> editPdfGetAnnotationsWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfGetAnnotations");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/annotations/list", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<GetPdfAnnotationsResult> returnType = new ParameterizedTypeReference<GetPdfAnnotationsResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<GetPdfAnnotationsResult> localReturnType = new ParameterizedTypeReference<GetPdfAnnotationsResult>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/annotations/list", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Get the status and result of a PDF Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * <p><b>200</b> - OK
+     * @param asyncJobID  (required)
+     * @return EditPdfJobStatusResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public EditPdfJobStatusResult editPdfGetAsyncJobStatus(String asyncJobID) throws RestClientException {
+        return editPdfGetAsyncJobStatusWithHttpInfo(asyncJobID).getBody();
+    }
+
+    /**
+     * Get the status and result of a PDF Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * <p><b>200</b> - OK
+     * @param asyncJobID  (required)
+     * @return ResponseEntity&lt;EditPdfJobStatusResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<EditPdfJobStatusResult> editPdfGetAsyncJobStatusWithHttpInfo(String asyncJobID) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'asyncJobID' is set
+        if (asyncJobID == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'asyncJobID' when calling editPdfGetAsyncJobStatus");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "AsyncJobID", asyncJobID));
+        
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<EditPdfJobStatusResult> localReturnType = new ParameterizedTypeReference<EditPdfJobStatusResult>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/batch-job/status", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Gets PDF Form fields and values
@@ -432,36 +537,35 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PdfFormFields> editPdfGetFormFieldsWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfGetFormFields");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/form/get-fields", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PdfFormFields> returnType = new ParameterizedTypeReference<PdfFormFields>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PdfFormFields> localReturnType = new ParameterizedTypeReference<PdfFormFields>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/form/get-fields", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Get PDF document metadata
@@ -484,36 +588,35 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PdfMetadata> editPdfGetMetadataWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfGetMetadata");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/get-metadata", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PdfMetadata> returnType = new ParameterizedTypeReference<PdfMetadata>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PdfMetadata> localReturnType = new ParameterizedTypeReference<PdfMetadata>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/get-metadata", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Get text in a PDF document by page
@@ -538,39 +641,38 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PdfTextByPageResult> editPdfGetPdfTextByPagesWithHttpInfo(org.springframework.core.io.Resource inputFile, String textFormattingMode) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfGetPdfTextByPages");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/pages/get-text", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (textFormattingMode != null)
-        headerParams.add("textFormattingMode", apiClient.parameterToString(textFormattingMode));
+        localVarHeaderParams.add("textFormattingMode", apiClient.parameterToString(textFormattingMode));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PdfTextByPageResult> returnType = new ParameterizedTypeReference<PdfTextByPageResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PdfTextByPageResult> localReturnType = new ParameterizedTypeReference<PdfTextByPageResult>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/get-text", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Insert, copy pages from one PDF document into another
@@ -601,7 +703,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfInsertPagesWithHttpInfo(Integer pageStartSource, Integer pageEndSource, Integer pageInsertBeforeDesitnation, org.springframework.core.io.Resource sourceFile, org.springframework.core.io.Resource destinationFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'pageStartSource' is set
         if (pageStartSource == null) {
@@ -628,38 +730,125 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'destinationFile' when calling editPdfInsertPages");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/pages/insert", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (pageStartSource != null)
-        headerParams.add("pageStartSource", apiClient.parameterToString(pageStartSource));
+        localVarHeaderParams.add("pageStartSource", apiClient.parameterToString(pageStartSource));
         if (pageEndSource != null)
-        headerParams.add("pageEndSource", apiClient.parameterToString(pageEndSource));
+        localVarHeaderParams.add("pageEndSource", apiClient.parameterToString(pageEndSource));
         if (pageInsertBeforeDesitnation != null)
-        headerParams.add("pageInsertBeforeDesitnation", apiClient.parameterToString(pageInsertBeforeDesitnation));
+        localVarHeaderParams.add("pageInsertBeforeDesitnation", apiClient.parameterToString(pageInsertBeforeDesitnation));
 
         if (sourceFile != null)
-            formParams.add("sourceFile", sourceFile);
+            localVarFormParams.add("sourceFile", sourceFile);
         if (destinationFile != null)
-            formParams.add("destinationFile", destinationFile);
+            localVarFormParams.add("destinationFile", destinationFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/insert", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Insert, copy pages from one PDF document into another as a batch job
+     * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     * <p><b>200</b> - OK
+     * @param pageStartSource Page number (1 based) to start copying pages from (inclusive) in the Source file. (required)
+     * @param pageEndSource Page number (1 based) to stop copying pages pages from (inclusive) in the Source file. (required)
+     * @param pageInsertBeforeDesitnation Page number (1 based) to insert the pages before in the Destination file. (required)
+     * @param sourceFile Source PDF file to copy pages from. (required)
+     * @param destinationFile Destination PDF file to copy pages into. (required)
+     * @return EditPdfBatchJobCreateResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public EditPdfBatchJobCreateResult editPdfInsertPagesBatchJob(Integer pageStartSource, Integer pageEndSource, Integer pageInsertBeforeDesitnation, org.springframework.core.io.Resource sourceFile, org.springframework.core.io.Resource destinationFile) throws RestClientException {
+        return editPdfInsertPagesBatchJobWithHttpInfo(pageStartSource, pageEndSource, pageInsertBeforeDesitnation, sourceFile, destinationFile).getBody();
+    }
+
+    /**
+     * Insert, copy pages from one PDF document into another as a batch job
+     * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     * <p><b>200</b> - OK
+     * @param pageStartSource Page number (1 based) to start copying pages from (inclusive) in the Source file. (required)
+     * @param pageEndSource Page number (1 based) to stop copying pages pages from (inclusive) in the Source file. (required)
+     * @param pageInsertBeforeDesitnation Page number (1 based) to insert the pages before in the Destination file. (required)
+     * @param sourceFile Source PDF file to copy pages from. (required)
+     * @param destinationFile Destination PDF file to copy pages into. (required)
+     * @return ResponseEntity&lt;EditPdfBatchJobCreateResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<EditPdfBatchJobCreateResult> editPdfInsertPagesBatchJobWithHttpInfo(Integer pageStartSource, Integer pageEndSource, Integer pageInsertBeforeDesitnation, org.springframework.core.io.Resource sourceFile, org.springframework.core.io.Resource destinationFile) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'pageStartSource' is set
+        if (pageStartSource == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'pageStartSource' when calling editPdfInsertPagesBatchJob");
+        }
+        
+        // verify the required parameter 'pageEndSource' is set
+        if (pageEndSource == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'pageEndSource' when calling editPdfInsertPagesBatchJob");
+        }
+        
+        // verify the required parameter 'pageInsertBeforeDesitnation' is set
+        if (pageInsertBeforeDesitnation == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'pageInsertBeforeDesitnation' when calling editPdfInsertPagesBatchJob");
+        }
+        
+        // verify the required parameter 'sourceFile' is set
+        if (sourceFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'sourceFile' when calling editPdfInsertPagesBatchJob");
+        }
+        
+        // verify the required parameter 'destinationFile' is set
+        if (destinationFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'destinationFile' when calling editPdfInsertPagesBatchJob");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (pageStartSource != null)
+        localVarHeaderParams.add("pageStartSource", apiClient.parameterToString(pageStartSource));
+        if (pageEndSource != null)
+        localVarHeaderParams.add("pageEndSource", apiClient.parameterToString(pageEndSource));
+        if (pageInsertBeforeDesitnation != null)
+        localVarHeaderParams.add("pageInsertBeforeDesitnation", apiClient.parameterToString(pageInsertBeforeDesitnation));
+
+        if (sourceFile != null)
+            localVarFormParams.add("sourceFile", sourceFile);
+        if (destinationFile != null)
+            localVarFormParams.add("destinationFile", destinationFile);
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<EditPdfBatchJobCreateResult> localReturnType = new ParameterizedTypeReference<EditPdfBatchJobCreateResult>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/insert/batch-job", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Linearize and optimize a PDF for streaming download
@@ -682,47 +871,47 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfLinearizeWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfLinearize");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/optimize/linearize", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/optimize/linearize", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Rasterize a PDF to an image-based PDF
      * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
      * <p><b>200</b> - OK
      * @param inputFile Input file to perform the operation on. (required)
+     * @param dpi Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)
      * @return byte[]
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public byte[] editPdfRasterize(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        return editPdfRasterizeWithHttpInfo(inputFile).getBody();
+    public byte[] editPdfRasterize(org.springframework.core.io.Resource inputFile, Integer dpi) throws RestClientException {
+        return editPdfRasterizeWithHttpInfo(inputFile, dpi).getBody();
     }
 
     /**
@@ -730,40 +919,94 @@ public class EditPdfApi {
      * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
      * <p><b>200</b> - OK
      * @param inputFile Input file to perform the operation on. (required)
+     * @param dpi Optional; configures the pixel density in Dots per Inch (DPI) (default is 300).  This parameter can only be used with Cloudmersive Managed Instance and Private Cloud. (optional)
      * @return ResponseEntity&lt;byte[]&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<byte[]> editPdfRasterizeWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+    public ResponseEntity<byte[]> editPdfRasterizeWithHttpInfo(org.springframework.core.io.Resource inputFile, Integer dpi) throws RestClientException {
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfRasterize");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/rasterize", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (dpi != null)
+        localVarHeaderParams.add("dpi", apiClient.parameterToString(dpi));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/rasterize", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Rasterize a PDF to an image-based PDF as Batch Job
+     * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return EditPdfBatchJobCreateResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public EditPdfBatchJobCreateResult editPdfRasterizeBatchJob(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        return editPdfRasterizeBatchJobWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Rasterize a PDF to an image-based PDF as Batch Job
+     * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @return ResponseEntity&lt;EditPdfBatchJobCreateResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<EditPdfBatchJobCreateResult> editPdfRasterizeBatchJobWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfRasterizeBatchJob");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (inputFile != null)
+            localVarFormParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<EditPdfBatchJobCreateResult> localReturnType = new ParameterizedTypeReference<EditPdfBatchJobCreateResult>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/rasterize/batch-job", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Reduce the file size and optimize a PDF
@@ -788,39 +1031,38 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfReduceFileSizeWithHttpInfo(org.springframework.core.io.Resource inputFile, BigDecimal quality) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfReduceFileSize");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/optimize/reduce-file-size", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (quality != null)
-        headerParams.add("quality", apiClient.parameterToString(quality));
+        localVarHeaderParams.add("quality", apiClient.parameterToString(quality));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/optimize/reduce-file-size", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Remove all PDF annotations, including comments in the document
@@ -843,36 +1085,35 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfRemoveAllAnnotationsWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfRemoveAllAnnotations");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/annotations/remove-all", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/annotations/remove-all", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Remove a specific PDF annotation, comment in the document
@@ -897,7 +1138,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfRemoveAnnotationItemWithHttpInfo(Integer annotationIndex, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'annotationIndex' is set
         if (annotationIndex == null) {
@@ -909,32 +1150,31 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfRemoveAnnotationItem");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/annotations/remove-item", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (annotationIndex != null)
-        headerParams.add("annotationIndex", apiClient.parameterToString(annotationIndex));
+        localVarHeaderParams.add("annotationIndex", apiClient.parameterToString(annotationIndex));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/annotations/remove-item", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Change PDF Document&#39;s Paper Size
@@ -959,7 +1199,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfResizeWithHttpInfo(String paperSize, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'paperSize' is set
         if (paperSize == null) {
@@ -971,32 +1211,31 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfResize");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/resize", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (paperSize != null)
-        headerParams.add("paperSize", apiClient.parameterToString(paperSize));
+        localVarHeaderParams.add("paperSize", apiClient.parameterToString(paperSize));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/resize", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Rotate all pages in a PDF document
@@ -1021,7 +1260,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfRotateAllPagesWithHttpInfo(Integer rotationAngle, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'rotationAngle' is set
         if (rotationAngle == null) {
@@ -1033,32 +1272,31 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfRotateAllPages");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/pages/rotate/all", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (rotationAngle != null)
-        headerParams.add("rotationAngle", apiClient.parameterToString(rotationAngle));
+        localVarHeaderParams.add("rotationAngle", apiClient.parameterToString(rotationAngle));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/rotate/all", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Rotate a range, subset of pages in a PDF document
@@ -1087,7 +1325,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfRotatePageRangeWithHttpInfo(Integer rotationAngle, Integer pageStart, Integer pageEnd, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'rotationAngle' is set
         if (rotationAngle == null) {
@@ -1109,36 +1347,35 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfRotatePageRange");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/pages/rotate/page-range", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (rotationAngle != null)
-        headerParams.add("rotationAngle", apiClient.parameterToString(rotationAngle));
+        localVarHeaderParams.add("rotationAngle", apiClient.parameterToString(rotationAngle));
         if (pageStart != null)
-        headerParams.add("pageStart", apiClient.parameterToString(pageStart));
+        localVarHeaderParams.add("pageStart", apiClient.parameterToString(pageStart));
         if (pageEnd != null)
-        headerParams.add("pageEnd", apiClient.parameterToString(pageEnd));
+        localVarHeaderParams.add("pageEnd", apiClient.parameterToString(pageEnd));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/pages/rotate/page-range", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Sets ands fills PDF Form field values
@@ -1161,33 +1398,32 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfSetFormFieldsWithHttpInfo(SetPdfFormFieldsRequest fieldValues) throws RestClientException {
-        Object postBody = fieldValues;
+        Object localVarPostBody = fieldValues;
         
         // verify the required parameter 'fieldValues' is set
         if (fieldValues == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'fieldValues' when calling editPdfSetFormFields");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/form/set-fields", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/form/set-fields", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Sets PDF document metadata
@@ -1210,33 +1446,32 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfSetMetadataWithHttpInfo(SetPdfMetadataRequest request) throws RestClientException {
-        Object postBody = request;
+        Object localVarPostBody = request;
         
         // verify the required parameter 'request' is set
         if (request == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling editPdfSetMetadata");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/set-metadata", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/set-metadata", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Encrypt, password-protect and set restricted permissions on a PDF
@@ -1279,7 +1514,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfSetPermissionsWithHttpInfo(String ownerPassword, String userPassword, org.springframework.core.io.Resource inputFile, String encryptionKeyLength, Boolean allowPrinting, Boolean allowDocumentAssembly, Boolean allowContentExtraction, Boolean allowFormFilling, Boolean allowEditing, Boolean allowAnnotations, Boolean allowDegradedPrinting) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'ownerPassword' is set
         if (ownerPassword == null) {
@@ -1296,50 +1531,49 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfSetPermissions");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/encrypt/set-permissions", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (ownerPassword != null)
-        headerParams.add("ownerPassword", apiClient.parameterToString(ownerPassword));
+        localVarHeaderParams.add("ownerPassword", apiClient.parameterToString(ownerPassword));
         if (userPassword != null)
-        headerParams.add("userPassword", apiClient.parameterToString(userPassword));
+        localVarHeaderParams.add("userPassword", apiClient.parameterToString(userPassword));
         if (encryptionKeyLength != null)
-        headerParams.add("encryptionKeyLength", apiClient.parameterToString(encryptionKeyLength));
+        localVarHeaderParams.add("encryptionKeyLength", apiClient.parameterToString(encryptionKeyLength));
         if (allowPrinting != null)
-        headerParams.add("allowPrinting", apiClient.parameterToString(allowPrinting));
+        localVarHeaderParams.add("allowPrinting", apiClient.parameterToString(allowPrinting));
         if (allowDocumentAssembly != null)
-        headerParams.add("allowDocumentAssembly", apiClient.parameterToString(allowDocumentAssembly));
+        localVarHeaderParams.add("allowDocumentAssembly", apiClient.parameterToString(allowDocumentAssembly));
         if (allowContentExtraction != null)
-        headerParams.add("allowContentExtraction", apiClient.parameterToString(allowContentExtraction));
+        localVarHeaderParams.add("allowContentExtraction", apiClient.parameterToString(allowContentExtraction));
         if (allowFormFilling != null)
-        headerParams.add("allowFormFilling", apiClient.parameterToString(allowFormFilling));
+        localVarHeaderParams.add("allowFormFilling", apiClient.parameterToString(allowFormFilling));
         if (allowEditing != null)
-        headerParams.add("allowEditing", apiClient.parameterToString(allowEditing));
+        localVarHeaderParams.add("allowEditing", apiClient.parameterToString(allowEditing));
         if (allowAnnotations != null)
-        headerParams.add("allowAnnotations", apiClient.parameterToString(allowAnnotations));
+        localVarHeaderParams.add("allowAnnotations", apiClient.parameterToString(allowAnnotations));
         if (allowDegradedPrinting != null)
-        headerParams.add("allowDegradedPrinting", apiClient.parameterToString(allowDegradedPrinting));
+        localVarHeaderParams.add("allowDegradedPrinting", apiClient.parameterToString(allowDegradedPrinting));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/encrypt/set-permissions", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Add a text watermark to a PDF
@@ -1372,7 +1606,7 @@ public class EditPdfApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editPdfWatermarkTextWithHttpInfo(String watermarkText, org.springframework.core.io.Resource inputFile, String fontName, BigDecimal fontSize, String fontColor, BigDecimal fontTransparency) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'watermarkText' is set
         if (watermarkText == null) {
@@ -1384,39 +1618,63 @@ public class EditPdfApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling editPdfWatermarkText");
         }
         
-        String path = apiClient.expandPath("/convert/edit/pdf/watermark/text", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (watermarkText != null)
-        headerParams.add("watermarkText", apiClient.parameterToString(watermarkText));
+        localVarHeaderParams.add("watermarkText", apiClient.parameterToString(watermarkText));
         if (fontName != null)
-        headerParams.add("fontName", apiClient.parameterToString(fontName));
+        localVarHeaderParams.add("fontName", apiClient.parameterToString(fontName));
         if (fontSize != null)
-        headerParams.add("fontSize", apiClient.parameterToString(fontSize));
+        localVarHeaderParams.add("fontSize", apiClient.parameterToString(fontSize));
         if (fontColor != null)
-        headerParams.add("fontColor", apiClient.parameterToString(fontColor));
+        localVarHeaderParams.add("fontColor", apiClient.parameterToString(fontColor));
         if (fontTransparency != null)
-        headerParams.add("fontTransparency", apiClient.parameterToString(fontTransparency));
+        localVarHeaderParams.add("fontTransparency", apiClient.parameterToString(fontTransparency));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/pdf/watermark/text", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

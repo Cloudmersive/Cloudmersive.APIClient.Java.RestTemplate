@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Batch operation to perform SSRF threat checks on multiple URLs
  */
-@ApiModel(description = "Batch operation to perform SSRF threat checks on multiple URLs")
 @JsonPropertyOrder({
   UrlSsrfRequestBatch.JSON_PROPERTY_INPUT_ITEMS
 })
-@JsonTypeName("UrlSsrfRequestBatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UrlSsrfRequestBatch {
   public static final String JSON_PROPERTY_INPUT_ITEMS = "InputItems";
-  private List<UrlSsrfRequestFull> inputItems = null;
+  private List<UrlSsrfRequestFull> inputItems = new ArrayList<>();
 
+  public UrlSsrfRequestBatch() {
+  }
 
   public UrlSsrfRequestBatch inputItems(List<UrlSsrfRequestFull> inputItems) {
     
@@ -49,18 +49,17 @@ public class UrlSsrfRequestBatch {
 
   public UrlSsrfRequestBatch addInputItemsItem(UrlSsrfRequestFull inputItemsItem) {
     if (this.inputItems == null) {
-      this.inputItems = new ArrayList<UrlSsrfRequestFull>();
+      this.inputItems = new ArrayList<>();
     }
     this.inputItems.add(inputItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Input URLs to check for SSRF threats
    * @return inputItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Input URLs to check for SSRF threats")
   @JsonProperty(JSON_PROPERTY_INPUT_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class UrlSsrfRequestBatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputItems(List<UrlSsrfRequestFull> inputItems) {
     this.inputItems = inputItems;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class UrlSsrfRequestBatch {
   public int hashCode() {
     return Objects.hash(inputItems);
   }
-
 
   @Override
   public String toString() {

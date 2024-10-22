@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.HttpOrchestrationRequest;
 import com.cloudmersive.client.rt.model.HttpOrchestrationResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for OrchestratorApi
  */
-@Ignore
-public class OrchestratorApiTest {
+@Disabled
+class OrchestratorApiTest {
 
     private final OrchestratorApi api = new OrchestratorApi();
 
@@ -37,12 +40,13 @@ public class OrchestratorApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void orchestratorHttpSimpleTest() {
+    void orchestratorHttpSimpleTest() {
         HttpOrchestrationRequest request = null;
+
         HttpOrchestrationResponse response = api.orchestratorHttpSimple(request);
 
         // TODO: test validations

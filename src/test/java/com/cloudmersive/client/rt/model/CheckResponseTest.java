@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CheckResponse
  */
-public class CheckResponseTest {
+class CheckResponseTest {
     private final CheckResponse model = new CheckResponse();
 
     /**
      * Model tests for CheckResponse
      */
     @Test
-    public void testCheckResponse() {
+    void testCheckResponse() {
         // TODO: test CheckResponse
     }
 
@@ -43,7 +40,7 @@ public class CheckResponseTest {
      * Test the property 'validDomain'
      */
     @Test
-    public void validDomainTest() {
+    void validDomainTest() {
         // TODO: test validDomain
     }
 

@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * CheckWordRequest
@@ -30,12 +29,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   CheckWordRequest.JSON_PROPERTY_WORD
 })
-@JsonTypeName("CheckWordRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CheckWordRequest {
   public static final String JSON_PROPERTY_WORD = "Word";
   private String word;
 
+  public CheckWordRequest() {
+  }
 
   public CheckWordRequest word(String word) {
     
@@ -43,12 +43,11 @@ public class CheckWordRequest {
     return this;
   }
 
-   /**
+  /**
    * Get word
    * @return word
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_WORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -57,10 +56,11 @@ public class CheckWordRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWord(String word) {
     this.word = word;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -78,7 +78,6 @@ public class CheckWordRequest {
   public int hashCode() {
     return Objects.hash(word);
   }
-
 
   @Override
   public String toString() {

@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A word in a sentence
  */
-@ApiModel(description = "A word in a sentence")
 @JsonPropertyOrder({
   CorrectWordInSentence.JSON_PROPERTY_WORD,
   CorrectWordInSentence.JSON_PROPERTY_CORRECT,
   CorrectWordInSentence.JSON_PROPERTY_SUGGESTIONS
 })
-@JsonTypeName("CorrectWordInSentence")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CorrectWordInSentence {
   public static final String JSON_PROPERTY_WORD = "Word";
   private WordPosition word;
@@ -46,8 +44,10 @@ public class CorrectWordInSentence {
   private Boolean correct;
 
   public static final String JSON_PROPERTY_SUGGESTIONS = "Suggestions";
-  private List<String> suggestions = null;
+  private List<String> suggestions = new ArrayList<>();
 
+  public CorrectWordInSentence() {
+  }
 
   public CorrectWordInSentence word(WordPosition word) {
     
@@ -55,12 +55,11 @@ public class CorrectWordInSentence {
     return this;
   }
 
-   /**
+  /**
    * Get word
    * @return word
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_WORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class CorrectWordInSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWord(WordPosition word) {
     this.word = word;
   }
-
 
   public CorrectWordInSentence correct(Boolean correct) {
     
@@ -80,12 +80,11 @@ public class CorrectWordInSentence {
     return this;
   }
 
-   /**
+  /**
    * True if the word is spelled correctly, false otherwise
    * @return correct
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the word is spelled correctly, false otherwise")
   @JsonProperty(JSON_PROPERTY_CORRECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class CorrectWordInSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CORRECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCorrect(Boolean correct) {
     this.correct = correct;
   }
-
 
   public CorrectWordInSentence suggestions(List<String> suggestions) {
     
@@ -107,18 +107,17 @@ public class CorrectWordInSentence {
 
   public CorrectWordInSentence addSuggestionsItem(String suggestionsItem) {
     if (this.suggestions == null) {
-      this.suggestions = new ArrayList<String>();
+      this.suggestions = new ArrayList<>();
     }
     this.suggestions.add(suggestionsItem);
     return this;
   }
 
-   /**
+  /**
    * Suggested spelling improvements
    * @return suggestions
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Suggested spelling improvements")
   @JsonProperty(JSON_PROPERTY_SUGGESTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class CorrectWordInSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUGGESTIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuggestions(List<String> suggestions) {
     this.suggestions = suggestions;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class CorrectWordInSentence {
   public int hashCode() {
     return Objects.hash(word, correct, suggestions);
   }
-
 
   @Override
   public String toString() {

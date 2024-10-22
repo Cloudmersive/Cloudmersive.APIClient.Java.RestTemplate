@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * XlsxImage
@@ -34,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   XlsxImage.JSON_PROPERTY_IMAGE_INTERNAL_FILE_NAME,
   XlsxImage.JSON_PROPERTY_IMAGE_CONTENTS_U_R_L
 })
-@JsonTypeName("XlsxImage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XlsxImage {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
@@ -52,6 +50,8 @@ public class XlsxImage {
   public static final String JSON_PROPERTY_IMAGE_CONTENTS_U_R_L = "ImageContentsURL";
   private String imageContentsURL;
 
+  public XlsxImage() {
+  }
 
   public XlsxImage path(String path) {
     
@@ -59,12 +59,11 @@ public class XlsxImage {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new rows
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new rows")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class XlsxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public XlsxImage imageDataEmbedId(String imageDataEmbedId) {
     
@@ -84,12 +84,11 @@ public class XlsxImage {
     return this;
   }
 
-   /**
+  /**
    * Read-only; internal ID for the image contents
    * @return imageDataEmbedId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Read-only; internal ID for the image contents")
   @JsonProperty(JSON_PROPERTY_IMAGE_DATA_EMBED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class XlsxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_DATA_EMBED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageDataEmbedId(String imageDataEmbedId) {
     this.imageDataEmbedId = imageDataEmbedId;
   }
-
 
   public XlsxImage imageDataContentType(String imageDataContentType) {
     
@@ -109,12 +109,11 @@ public class XlsxImage {
     return this;
   }
 
-   /**
+  /**
    * Read-only; image data MIME content-type
    * @return imageDataContentType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Read-only; image data MIME content-type")
   @JsonProperty(JSON_PROPERTY_IMAGE_DATA_CONTENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,10 +122,11 @@ public class XlsxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_DATA_CONTENT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageDataContentType(String imageDataContentType) {
     this.imageDataContentType = imageDataContentType;
   }
-
 
   public XlsxImage imageInternalFileName(String imageInternalFileName) {
     
@@ -134,12 +134,11 @@ public class XlsxImage {
     return this;
   }
 
-   /**
+  /**
    * Read-only; internal file name/path for the image
    * @return imageInternalFileName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Read-only; internal file name/path for the image")
   @JsonProperty(JSON_PROPERTY_IMAGE_INTERNAL_FILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,10 +147,11 @@ public class XlsxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_INTERNAL_FILE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageInternalFileName(String imageInternalFileName) {
     this.imageInternalFileName = imageInternalFileName;
   }
-
 
   public XlsxImage imageContentsURL(String imageContentsURL) {
     
@@ -159,12 +159,11 @@ public class XlsxImage {
     return this;
   }
 
-   /**
+  /**
    * URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents.
    * @return imageContentsURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents.")
   @JsonProperty(JSON_PROPERTY_IMAGE_CONTENTS_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -173,10 +172,11 @@ public class XlsxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_CONTENTS_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageContentsURL(String imageContentsURL) {
     this.imageContentsURL = imageContentsURL;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -198,7 +198,6 @@ public class XlsxImage {
   public int hashCode() {
     return Objects.hash(path, imageDataEmbedId, imageDataContentType, imageInternalFileName, imageContentsURL);
   }
-
 
   @Override
   public String toString() {

@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Style in an Excel spreadsheet
  */
-@ApiModel(description = "Style in an Excel spreadsheet")
 @JsonPropertyOrder({
   DocxCellStyle.JSON_PROPERTY_PATH,
   DocxCellStyle.JSON_PROPERTY_NAME,
   DocxCellStyle.JSON_PROPERTY_FORMAT_I_D,
   DocxCellStyle.JSON_PROPERTY_BUILT_IN_I_D
 })
-@JsonTypeName("DocxCellStyle")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxCellStyle {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
@@ -49,6 +46,8 @@ public class DocxCellStyle {
   public static final String JSON_PROPERTY_BUILT_IN_I_D = "BuiltInID";
   private Integer builtInID;
 
+  public DocxCellStyle() {
+  }
 
   public DocxCellStyle path(String path) {
     
@@ -56,12 +55,11 @@ public class DocxCellStyle {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new rows
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new rows")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class DocxCellStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxCellStyle name(String name) {
     
@@ -81,12 +80,11 @@ public class DocxCellStyle {
     return this;
   }
 
-   /**
+  /**
    * Name of the style
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the style")
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class DocxCellStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setName(String name) {
     this.name = name;
   }
-
 
   public DocxCellStyle formatID(Integer formatID) {
     
@@ -106,12 +105,11 @@ public class DocxCellStyle {
     return this;
   }
 
-   /**
+  /**
    * Format ID of the cell style
    * @return formatID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Format ID of the cell style")
   @JsonProperty(JSON_PROPERTY_FORMAT_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class DocxCellStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FORMAT_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFormatID(Integer formatID) {
     this.formatID = formatID;
   }
-
 
   public DocxCellStyle builtInID(Integer builtInID) {
     
@@ -131,12 +130,11 @@ public class DocxCellStyle {
     return this;
   }
 
-   /**
+  /**
    * Built&#x3D;in ID of the cell style
    * @return builtInID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Built=in ID of the cell style")
   @JsonProperty(JSON_PROPERTY_BUILT_IN_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class DocxCellStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUILT_IN_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBuiltInID(Integer builtInID) {
     this.builtInID = builtInID;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class DocxCellStyle {
   public int hashCode() {
     return Objects.hash(path, name, formatID, builtInID);
   }
-
 
   @Override
   public String toString() {

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for Entity
  */
-public class EntityTest {
+class EntityTest {
     private final Entity model = new Entity();
 
     /**
      * Model tests for Entity
      */
     @Test
-    public void testEntity() {
+    void testEntity() {
         // TODO: test Entity
     }
 
@@ -43,7 +40,7 @@ public class EntityTest {
      * Test the property 'entityType'
      */
     @Test
-    public void entityTypeTest() {
+    void entityTypeTest() {
         // TODO: test entityType
     }
 
@@ -51,7 +48,7 @@ public class EntityTest {
      * Test the property 'entityText'
      */
     @Test
-    public void entityTextTest() {
+    void entityTextTest() {
         // TODO: test entityText
     }
 

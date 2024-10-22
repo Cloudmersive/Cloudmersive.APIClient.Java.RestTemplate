@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for TextConversionResult
  */
-public class TextConversionResultTest {
+class TextConversionResultTest {
     private final TextConversionResult model = new TextConversionResult();
 
     /**
      * Model tests for TextConversionResult
      */
     @Test
-    public void testTextConversionResult() {
+    void testTextConversionResult() {
         // TODO: test TextConversionResult
     }
 
@@ -43,7 +40,7 @@ public class TextConversionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class TextConversionResultTest {
      * Test the property 'textResult'
      */
     @Test
-    public void textResultTest() {
+    void textResultTest() {
         // TODO: test textResult
     }
 

@@ -2,21 +2,21 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**editHtmlHtmlAppendHeaderTag**](EditHtmlApi.md#editHtmlHtmlAppendHeaderTag) | **POST** /convert/edit/html/head/append/tag | Append an HTML tag to the HEAD section of an HTML Document
-[**editHtmlHtmlAppendHeading**](EditHtmlApi.md#editHtmlHtmlAppendHeading) | **POST** /convert/edit/html/append/heading | Append a Heading to an HTML Document
-[**editHtmlHtmlAppendImageFromUrl**](EditHtmlApi.md#editHtmlHtmlAppendImageFromUrl) | **POST** /convert/edit/html/append/image/from-url | Append an Image to an HTML Document from a URL
-[**editHtmlHtmlAppendImageInline**](EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document
-[**editHtmlHtmlAppendParagraph**](EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document
-[**editHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document
-[**editHtmlHtmlGetLanguage**](EditHtmlApi.md#editHtmlHtmlGetLanguage) | **POST** /convert/edit/html/head/get/language | Gets the language for the HTML document
-[**editHtmlHtmlGetLinks**](EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File
-[**editHtmlHtmlGetRelCanonical**](EditHtmlApi.md#editHtmlHtmlGetRelCanonical) | **POST** /convert/edit/html/head/get/rel-canonical-url | Gets the rel canonical URL for the HTML document
-[**editHtmlHtmlGetSitemap**](EditHtmlApi.md#editHtmlHtmlGetSitemap) | **POST** /convert/edit/html/head/get/sitemap-url | Gets the sitemap URL for the HTML document
-[**editHtmlHtmlSetLanguage**](EditHtmlApi.md#editHtmlHtmlSetLanguage) | **POST** /convert/edit/html/head/set/language | Sets the language for the HTML document
-[**editHtmlHtmlSetRelCanonical**](EditHtmlApi.md#editHtmlHtmlSetRelCanonical) | **POST** /convert/edit/html/head/set/rel-canonical-url | Sets the rel canonical URL for the HTML document
-[**editHtmlHtmlSetSitemapUrl**](EditHtmlApi.md#editHtmlHtmlSetSitemapUrl) | **POST** /convert/edit/html/head/set/sitemap-url | Sets the sitemap URL for the HTML document
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**editHtmlHtmlAppendHeaderTag**](EditHtmlApi.md#editHtmlHtmlAppendHeaderTag) | **POST** /convert/edit/html/head/append/tag | Append an HTML tag to the HEAD section of an HTML Document |
+| [**editHtmlHtmlAppendHeading**](EditHtmlApi.md#editHtmlHtmlAppendHeading) | **POST** /convert/edit/html/append/heading | Append a Heading to an HTML Document |
+| [**editHtmlHtmlAppendImageFromUrl**](EditHtmlApi.md#editHtmlHtmlAppendImageFromUrl) | **POST** /convert/edit/html/append/image/from-url | Append an Image to an HTML Document from a URL |
+| [**editHtmlHtmlAppendImageInline**](EditHtmlApi.md#editHtmlHtmlAppendImageInline) | **POST** /convert/edit/html/append/image/inline | Append a Base64 Inline Image to an HTML Document |
+| [**editHtmlHtmlAppendParagraph**](EditHtmlApi.md#editHtmlHtmlAppendParagraph) | **POST** /convert/edit/html/append/paragraph | Append a Paragraph to an HTML Document |
+| [**editHtmlHtmlCreateBlankDocument**](EditHtmlApi.md#editHtmlHtmlCreateBlankDocument) | **POST** /convert/edit/html/create/blank | Create a Blank HTML Document |
+| [**editHtmlHtmlGetLanguage**](EditHtmlApi.md#editHtmlHtmlGetLanguage) | **POST** /convert/edit/html/head/get/language | Gets the language for the HTML document |
+| [**editHtmlHtmlGetLinks**](EditHtmlApi.md#editHtmlHtmlGetLinks) | **POST** /convert/edit/html/extract/links | Extract resolved link URLs from HTML File |
+| [**editHtmlHtmlGetRelCanonical**](EditHtmlApi.md#editHtmlHtmlGetRelCanonical) | **POST** /convert/edit/html/head/get/rel-canonical-url | Gets the rel canonical URL for the HTML document |
+| [**editHtmlHtmlGetSitemap**](EditHtmlApi.md#editHtmlHtmlGetSitemap) | **POST** /convert/edit/html/head/get/sitemap-url | Gets the sitemap URL for the HTML document |
+| [**editHtmlHtmlSetLanguage**](EditHtmlApi.md#editHtmlHtmlSetLanguage) | **POST** /convert/edit/html/head/set/language | Sets the language for the HTML document |
+| [**editHtmlHtmlSetRelCanonical**](EditHtmlApi.md#editHtmlHtmlSetRelCanonical) | **POST** /convert/edit/html/head/set/rel-canonical-url | Sets the rel canonical URL for the HTML document |
+| [**editHtmlHtmlSetSitemapUrl**](EditHtmlApi.md#editHtmlHtmlSetSitemapUrl) | **POST** /convert/edit/html/head/set/sitemap-url | Sets the sitemap URL for the HTML document |
 
 
 
@@ -71,11 +71,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **htmlTag** | **String**| The HTML tag to append. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **htmlTag** | **String**| The HTML tag to append. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -89,6 +89,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -149,13 +150,13 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **headingText** | **String**| The text content to be used in the header. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **headingSize** | **Integer**| Optional: The heading size number. Default is 1. Accepts values between 1 and 6. | [optional]
- **cssStyle** | **String**| Optional: The CSS style for the heading. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **headingText** | **String**| The text content to be used in the header. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **headingSize** | **Integer**| Optional: The heading size number. Default is 1. Accepts values between 1 and 6. | [optional] |
+| **cssStyle** | **String**| Optional: The CSS style for the heading. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -169,6 +170,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -228,12 +230,12 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageUrl** | **String**| The URL for the image. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **cssStyle** | **String**| Optional: CSS style for the image. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageUrl** | **String**| The URL for the image. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **cssStyle** | **String**| Optional: CSS style for the image. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -247,6 +249,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -308,14 +311,14 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **imageUrl** | **String**| Optional: Image URL to be appended as base64 inline image. | [optional]
- **cssStyle** | **String**| Optional: CSS style for the image. | [optional]
- **imageExtension** | **String**| Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
- **imageFile** | **File**| Optional: Image file to be appended as base64 inline image. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **imageUrl** | **String**| Optional: Image URL to be appended as base64 inline image. | [optional] |
+| **cssStyle** | **String**| Optional: CSS style for the image. | [optional] |
+| **imageExtension** | **String**| Optional: The extension (JPG, PNG, GIF, etc.) of the image file. Recommended if uploading an imageFile directly, instead of using imageUrl. If no extension can be determined, will default to JPG. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
+| **imageFile** | **File**| Optional: Image file to be appended as base64 inline image. | [optional] |
 
 ### Return type
 
@@ -329,6 +332,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -388,12 +392,12 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **paragraphText** | **String**| The text content to be used in the paragraph. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **cssStyle** | **String**| Optional: The CSS style for the paragraph. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **paragraphText** | **String**| The text content to be used in the paragraph. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **cssStyle** | **String**| Optional: The CSS style for the paragraph. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -407,6 +411,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -467,13 +472,13 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **title** | **String**| Optional: The title of the HTML document | [optional]
- **cssUrl** | **String**| Optional: A CSS style URL to be added to the document. | [optional]
- **cssInline** | **String**| Optional: An inline CSS style to be added to the document. | [optional]
- **javascriptUrl** | **String**| Optional: Javascript URL to be added to the document. | [optional]
- **javascriptInline** | **String**| Optional: Inline Javascript to be added to the document. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **title** | **String**| Optional: The title of the HTML document | [optional] |
+| **cssUrl** | **String**| Optional: A CSS style URL to be added to the document. | [optional] |
+| **cssInline** | **String**| Optional: An inline CSS style to be added to the document. | [optional] |
+| **javascriptUrl** | **String**| Optional: Javascript URL to be added to the document. | [optional] |
+| **javascriptInline** | **String**| Optional: Inline Javascript to be added to the document. | [optional] |
 
 ### Return type
 
@@ -487,6 +492,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -544,10 +550,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -561,6 +567,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -619,11 +626,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **baseUrl** | **String**| Optional: Base URL of the page, such as https://mydomain.com | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **baseUrl** | **String**| Optional: Base URL of the page, such as https://mydomain.com | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -637,6 +644,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -694,10 +702,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -711,6 +719,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -768,10 +777,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -785,6 +794,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -843,11 +853,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **languageCode** | **String**| The HTML langauge code to set. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **String**| The HTML langauge code to set. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -861,6 +871,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -919,11 +930,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **canonicalUrl** | **String**| The HTML canonical URL to set. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **canonicalUrl** | **String**| The HTML canonical URL to set. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -937,6 +948,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -995,11 +1007,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sitemapUrl** | **String**| The HTML sitemap URL to set. |
- **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional]
- **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sitemapUrl** | **String**| The HTML sitemap URL to set. | |
+| **inputFileUrl** | **String**| Optional: URL of a file to operate on as input. | [optional] |
+| **inputFile** | **File**| Optional: Input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -1013,6 +1025,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**vatVatLookup**](VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Validate a VAT number
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**vatVatLookup**](VatApi.md#vatVatLookup) | **POST** /validate/vat/lookup | Validate a VAT number |
 
 
 
@@ -57,9 +57,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**VatLookupRequest**](VatLookupRequest.md)| Input VAT code |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**VatLookupRequest**](VatLookupRequest.md)| Input VAT code | |
 
 ### Return type
 
@@ -73,6 +73,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

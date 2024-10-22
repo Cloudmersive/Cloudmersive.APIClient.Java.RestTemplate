@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxInsertCommentOnParagraphRequest
  */
-public class DocxInsertCommentOnParagraphRequestTest {
+class DocxInsertCommentOnParagraphRequestTest {
     private final DocxInsertCommentOnParagraphRequest model = new DocxInsertCommentOnParagraphRequest();
 
     /**
      * Model tests for DocxInsertCommentOnParagraphRequest
      */
     @Test
-    public void testDocxInsertCommentOnParagraphRequest() {
+    void testDocxInsertCommentOnParagraphRequest() {
         // TODO: test DocxInsertCommentOnParagraphRequest
     }
 
@@ -44,7 +41,7 @@ public class DocxInsertCommentOnParagraphRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class DocxInsertCommentOnParagraphRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class DocxInsertCommentOnParagraphRequestTest {
      * Test the property 'paragraphPath'
      */
     @Test
-    public void paragraphPathTest() {
+    void paragraphPathTest() {
         // TODO: test paragraphPath
     }
 
@@ -68,7 +65,7 @@ public class DocxInsertCommentOnParagraphRequestTest {
      * Test the property 'commentToInsert'
      */
     @Test
-    public void commentToInsertTest() {
+    void commentToInsertTest() {
         // TODO: test commentToInsert
     }
 

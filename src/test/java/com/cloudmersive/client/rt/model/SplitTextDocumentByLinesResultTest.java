@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SplitTextDocumentByLinesResult
  */
-public class SplitTextDocumentByLinesResultTest {
+class SplitTextDocumentByLinesResultTest {
     private final SplitTextDocumentByLinesResult model = new SplitTextDocumentByLinesResult();
 
     /**
      * Model tests for SplitTextDocumentByLinesResult
      */
     @Test
-    public void testSplitTextDocumentByLinesResult() {
+    void testSplitTextDocumentByLinesResult() {
         // TODO: test SplitTextDocumentByLinesResult
     }
 
@@ -46,7 +44,7 @@ public class SplitTextDocumentByLinesResultTest {
      * Test the property 'resultLines'
      */
     @Test
-    public void resultLinesTest() {
+    void resultLinesTest() {
         // TODO: test resultLines
     }
 
@@ -54,7 +52,7 @@ public class SplitTextDocumentByLinesResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -62,7 +60,7 @@ public class SplitTextDocumentByLinesResultTest {
      * Test the property 'lineCount'
      */
     @Test
-    public void lineCountTest() {
+    void lineCountTest() {
         // TODO: test lineCount
     }
 

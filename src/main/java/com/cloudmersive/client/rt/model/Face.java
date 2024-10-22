@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Location of one face in an image
  */
-@ApiModel(description = "Location of one face in an image")
 @JsonPropertyOrder({
   Face.JSON_PROPERTY_LEFT_X,
   Face.JSON_PROPERTY_TOP_Y,
   Face.JSON_PROPERTY_RIGHT_X,
   Face.JSON_PROPERTY_BOTTOM_Y
 })
-@JsonTypeName("Face")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Face {
   public static final String JSON_PROPERTY_LEFT_X = "LeftX";
   private Integer leftX;
@@ -49,6 +46,8 @@ public class Face {
   public static final String JSON_PROPERTY_BOTTOM_Y = "BottomY";
   private Integer bottomY;
 
+  public Face() {
+  }
 
   public Face leftX(Integer leftX) {
     
@@ -56,12 +55,11 @@ public class Face {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the left side of the face
    * @return leftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the left side of the face")
   @JsonProperty(JSON_PROPERTY_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class Face {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftX(Integer leftX) {
     this.leftX = leftX;
   }
-
 
   public Face topY(Integer topY) {
     
@@ -81,12 +80,11 @@ public class Face {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the top side of the face
    * @return topY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the top side of the face")
   @JsonProperty(JSON_PROPERTY_TOP_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class Face {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopY(Integer topY) {
     this.topY = topY;
   }
-
 
   public Face rightX(Integer rightX) {
     
@@ -106,12 +105,11 @@ public class Face {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the right side of the face
    * @return rightX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the right side of the face")
   @JsonProperty(JSON_PROPERTY_RIGHT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class Face {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightX(Integer rightX) {
     this.rightX = rightX;
   }
-
 
   public Face bottomY(Integer bottomY) {
     
@@ -131,12 +130,11 @@ public class Face {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the bottom side of the face
    * @return bottomY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the bottom side of the face")
   @JsonProperty(JSON_PROPERTY_BOTTOM_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class Face {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomY(Integer bottomY) {
     this.bottomY = bottomY;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class Face {
   public int hashCode() {
     return Objects.hash(leftX, topY, rightX, bottomY);
   }
-
 
   @Override
   public String toString() {

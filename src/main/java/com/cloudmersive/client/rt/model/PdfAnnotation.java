@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * PDF Annotation details
  */
-@ApiModel(description = "PDF Annotation details")
 @JsonPropertyOrder({
   PdfAnnotation.JSON_PROPERTY_TITLE,
   PdfAnnotation.JSON_PROPERTY_ANNOTATION_TYPE,
@@ -43,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   PdfAnnotation.JSON_PROPERTY_WIDTH,
   PdfAnnotation.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("PdfAnnotation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfAnnotation {
   public static final String JSON_PROPERTY_TITLE = "Title";
   private String title;
@@ -82,6 +79,8 @@ public class PdfAnnotation {
   public static final String JSON_PROPERTY_HEIGHT = "Height";
   private Double height;
 
+  public PdfAnnotation() {
+  }
 
   public PdfAnnotation title(String title) {
     
@@ -89,12 +88,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Title of the annotation; this is often the author of the annotation in Acrobat-created PDF files
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Title of the annotation; this is often the author of the annotation in Acrobat-created PDF files")
   @JsonProperty(JSON_PROPERTY_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +101,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   public PdfAnnotation annotationType(String annotationType) {
     
@@ -114,12 +113,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Type of the annotation; possible values are Text
    * @return annotationType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of the annotation; possible values are Text")
   @JsonProperty(JSON_PROPERTY_ANNOTATION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +126,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANNOTATION_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAnnotationType(String annotationType) {
     this.annotationType = annotationType;
   }
-
 
   public PdfAnnotation pageNumber(Integer pageNumber) {
     
@@ -139,12 +138,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * The 1-based index of the page containing the annotation
    * @return pageNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The 1-based index of the page containing the annotation")
   @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +151,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   public PdfAnnotation annotationIndex(Integer annotationIndex) {
     
@@ -164,12 +163,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * The 0-based index of the annotation in the document
    * @return annotationIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The 0-based index of the annotation in the document")
   @JsonProperty(JSON_PROPERTY_ANNOTATION_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +176,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANNOTATION_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAnnotationIndex(Integer annotationIndex) {
     this.annotationIndex = annotationIndex;
   }
-
 
   public PdfAnnotation subject(String subject) {
     
@@ -189,12 +188,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Subject of the annotation
    * @return subject
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Subject of the annotation")
   @JsonProperty(JSON_PROPERTY_SUBJECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +201,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBJECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   public PdfAnnotation textContents(String textContents) {
     
@@ -214,12 +213,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Text contents of the annotation
    * @return textContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text contents of the annotation")
   @JsonProperty(JSON_PROPERTY_TEXT_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -228,10 +226,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextContents(String textContents) {
     this.textContents = textContents;
   }
-
 
   public PdfAnnotation creationDate(OffsetDateTime creationDate) {
     
@@ -239,12 +238,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Date that the annotation was created
    * @return creationDate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Date that the annotation was created")
   @JsonProperty(JSON_PROPERTY_CREATION_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -253,10 +251,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CREATION_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCreationDate(OffsetDateTime creationDate) {
     this.creationDate = creationDate;
   }
-
 
   public PdfAnnotation modifiedDate(OffsetDateTime modifiedDate) {
     
@@ -264,12 +263,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Date that the annotation was last modified
    * @return modifiedDate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Date that the annotation was last modified")
   @JsonProperty(JSON_PROPERTY_MODIFIED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -278,10 +276,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MODIFIED_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setModifiedDate(OffsetDateTime modifiedDate) {
     this.modifiedDate = modifiedDate;
   }
-
 
   public PdfAnnotation leftX(Double leftX) {
     
@@ -289,12 +288,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Left X coordinate for the location of the annotation
    * @return leftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Left X coordinate for the location of the annotation")
   @JsonProperty(JSON_PROPERTY_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,10 +301,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftX(Double leftX) {
     this.leftX = leftX;
   }
-
 
   public PdfAnnotation topY(Double topY) {
     
@@ -314,12 +313,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Top Y coordination of the location of the annotation
    * @return topY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Top Y coordination of the location of the annotation")
   @JsonProperty(JSON_PROPERTY_TOP_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -328,10 +326,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopY(Double topY) {
     this.topY = topY;
   }
-
 
   public PdfAnnotation width(Double width) {
     
@@ -339,12 +338,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Width of the annotation
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the annotation")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -353,10 +351,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Double width) {
     this.width = width;
   }
-
 
   public PdfAnnotation height(Double height) {
     
@@ -364,12 +363,11 @@ public class PdfAnnotation {
     return this;
   }
 
-   /**
+  /**
    * Height of the annotation
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the annotation")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -378,10 +376,11 @@ public class PdfAnnotation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Double height) {
     this.height = height;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -410,7 +409,6 @@ public class PdfAnnotation {
   public int hashCode() {
     return Objects.hash(title, annotationType, pageNumber, annotationIndex, subject, textContents, creationDate, modifiedDate, leftX, topY, width, height);
   }
-
 
   @Override
   public String toString() {

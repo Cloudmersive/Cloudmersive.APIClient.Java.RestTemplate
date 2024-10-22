@@ -22,16 +22,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running an advanced virus scan on cloud storage
  */
-@ApiModel(description = "Result of running an advanced virus scan on cloud storage")
 @JsonPropertyOrder({
   CloudStorageAdvancedVirusScanResult.JSON_PROPERTY_SUCCESSFUL,
   CloudStorageAdvancedVirusScanResult.JSON_PROPERTY_CLEAN_RESULT,
@@ -47,8 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CloudStorageAdvancedVirusScanResult.JSON_PROPERTY_FILE_SIZE,
   CloudStorageAdvancedVirusScanResult.JSON_PROPERTY_CONTENT_INFORMATION
 })
-@JsonTypeName("CloudStorageAdvancedVirusScanResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CloudStorageAdvancedVirusScanResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -78,7 +76,7 @@ public class CloudStorageAdvancedVirusScanResult {
   private String verifiedFileFormat;
 
   public static final String JSON_PROPERTY_FOUND_VIRUSES = "FoundViruses";
-  private List<CloudStorageVirusFound> foundViruses = null;
+  private List<CloudStorageVirusFound> foundViruses = new ArrayList<>();
 
   public static final String JSON_PROPERTY_ERROR_DETAILED_DESCRIPTION = "ErrorDetailedDescription";
   private String errorDetailedDescription;
@@ -89,6 +87,8 @@ public class CloudStorageAdvancedVirusScanResult {
   public static final String JSON_PROPERTY_CONTENT_INFORMATION = "ContentInformation";
   private AdditionalAdvancedScanInformation contentInformation;
 
+  public CloudStorageAdvancedVirusScanResult() {
+  }
 
   public CloudStorageAdvancedVirusScanResult successful(Boolean successful) {
     
@@ -96,12 +96,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation of retrieving the file, and scanning it were successfully completed, false if the file could not be downloaded from cloud storage, or if the file could not be scanned.  Note that successful completion does not mean the file is clean; for the output of the virus scanning operation itself, use the CleanResult and FoundViruses parameters.
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation of retrieving the file, and scanning it were successfully completed, false if the file could not be downloaded from cloud storage, or if the file could not be scanned.  Note that successful completion does not mean the file is clean; for the output of the virus scanning operation itself, use the CleanResult and FoundViruses parameters.")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,10 +109,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public CloudStorageAdvancedVirusScanResult cleanResult(Boolean cleanResult) {
     
@@ -121,12 +121,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained no viruses, false otherwise
    * @return cleanResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained no viruses, false otherwise")
   @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,10 +134,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanResult(Boolean cleanResult) {
     this.cleanResult = cleanResult;
   }
-
 
   public CloudStorageAdvancedVirusScanResult containsExecutable(Boolean containsExecutable) {
     
@@ -146,12 +146,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained an executable (application code), which can be a significant risk factor
    * @return containsExecutable
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained an executable (application code), which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_EXECUTABLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,10 +159,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_EXECUTABLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsExecutable(Boolean containsExecutable) {
     this.containsExecutable = containsExecutable;
   }
-
 
   public CloudStorageAdvancedVirusScanResult containsInvalidFile(Boolean containsInvalidFile) {
     
@@ -171,12 +171,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained an invalid file (such as a PDF that is not a valid PDF, Word Document that is not a valid Word Document, etc.), which can be a significant risk factor
    * @return containsInvalidFile
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained an invalid file (such as a PDF that is not a valid PDF, Word Document that is not a valid Word Document, etc.), which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_INVALID_FILE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +184,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_INVALID_FILE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsInvalidFile(Boolean containsInvalidFile) {
     this.containsInvalidFile = containsInvalidFile;
   }
-
 
   public CloudStorageAdvancedVirusScanResult containsScript(Boolean containsScript) {
     
@@ -196,12 +196,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained a script (such as a PHP script, Python script, etc.) which can be a significant risk factor
    * @return containsScript
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained a script (such as a PHP script, Python script, etc.) which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_SCRIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,10 +209,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_SCRIPT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsScript(Boolean containsScript) {
     this.containsScript = containsScript;
   }
-
 
   public CloudStorageAdvancedVirusScanResult containsPasswordProtectedFile(Boolean containsPasswordProtectedFile) {
     
@@ -221,12 +221,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained a password protected or encrypted file, which can be a significant risk factor
    * @return containsPasswordProtectedFile
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained a password protected or encrypted file, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_PASSWORD_PROTECTED_FILE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -235,10 +234,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_PASSWORD_PROTECTED_FILE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsPasswordProtectedFile(Boolean containsPasswordProtectedFile) {
     this.containsPasswordProtectedFile = containsPasswordProtectedFile;
   }
-
 
   public CloudStorageAdvancedVirusScanResult containsRestrictedFileFormat(Boolean containsRestrictedFileFormat) {
     
@@ -246,12 +246,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file is of a type that is not allowed based on the optional restrictFileTypes parameter, false otherwise; if restrictFileTypes is not set, this will always be false
    * @return containsRestrictedFileFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file is of a type that is not allowed based on the optional restrictFileTypes parameter, false otherwise; if restrictFileTypes is not set, this will always be false")
   @JsonProperty(JSON_PROPERTY_CONTAINS_RESTRICTED_FILE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -260,10 +259,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_RESTRICTED_FILE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsRestrictedFileFormat(Boolean containsRestrictedFileFormat) {
     this.containsRestrictedFileFormat = containsRestrictedFileFormat;
   }
-
 
   public CloudStorageAdvancedVirusScanResult containsMacros(Boolean containsMacros) {
     
@@ -271,12 +271,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file contains embedded Macros of other embedded threats within the document, which can be a significant risk factor
    * @return containsMacros
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file contains embedded Macros of other embedded threats within the document, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_MACROS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -285,10 +284,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_MACROS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsMacros(Boolean containsMacros) {
     this.containsMacros = containsMacros;
   }
-
 
   public CloudStorageAdvancedVirusScanResult verifiedFileFormat(String verifiedFileFormat) {
     
@@ -296,12 +296,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * For file format verification-supported file formats, the contents-verified file format of the file.  Null indicates that the file format is not supported for contents verification.  If a Virus or Malware is found, this field will always be set to Null.
    * @return verifiedFileFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For file format verification-supported file formats, the contents-verified file format of the file.  Null indicates that the file format is not supported for contents verification.  If a Virus or Malware is found, this field will always be set to Null.")
   @JsonProperty(JSON_PROPERTY_VERIFIED_FILE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,10 +309,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VERIFIED_FILE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVerifiedFileFormat(String verifiedFileFormat) {
     this.verifiedFileFormat = verifiedFileFormat;
   }
-
 
   public CloudStorageAdvancedVirusScanResult foundViruses(List<CloudStorageVirusFound> foundViruses) {
     
@@ -323,18 +323,17 @@ public class CloudStorageAdvancedVirusScanResult {
 
   public CloudStorageAdvancedVirusScanResult addFoundVirusesItem(CloudStorageVirusFound foundVirusesItem) {
     if (this.foundViruses == null) {
-      this.foundViruses = new ArrayList<CloudStorageVirusFound>();
+      this.foundViruses = new ArrayList<>();
     }
     this.foundViruses.add(foundVirusesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of viruses found, if any
    * @return foundViruses
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of viruses found, if any")
   @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -343,10 +342,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFoundViruses(List<CloudStorageVirusFound> foundViruses) {
     this.foundViruses = foundViruses;
   }
-
 
   public CloudStorageAdvancedVirusScanResult errorDetailedDescription(String errorDetailedDescription) {
     
@@ -354,12 +354,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * Detailed error message if the operation was not successful
    * @return errorDetailedDescription
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Detailed error message if the operation was not successful")
   @JsonProperty(JSON_PROPERTY_ERROR_DETAILED_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -368,10 +367,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_DETAILED_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorDetailedDescription(String errorDetailedDescription) {
     this.errorDetailedDescription = errorDetailedDescription;
   }
-
 
   public CloudStorageAdvancedVirusScanResult fileSize(Long fileSize) {
     
@@ -379,12 +379,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * Size in bytes of the file that was retrieved and scanned
    * @return fileSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Size in bytes of the file that was retrieved and scanned")
   @JsonProperty(JSON_PROPERTY_FILE_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -393,10 +392,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileSize(Long fileSize) {
     this.fileSize = fileSize;
   }
-
 
   public CloudStorageAdvancedVirusScanResult contentInformation(AdditionalAdvancedScanInformation contentInformation) {
     
@@ -404,12 +404,11 @@ public class CloudStorageAdvancedVirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * Get contentInformation
    * @return contentInformation
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_CONTENT_INFORMATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -418,10 +417,11 @@ public class CloudStorageAdvancedVirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT_INFORMATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContentInformation(AdditionalAdvancedScanInformation contentInformation) {
     this.contentInformation = contentInformation;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -451,7 +451,6 @@ public class CloudStorageAdvancedVirusScanResult {
   public int hashCode() {
     return Objects.hash(successful, cleanResult, containsExecutable, containsInvalidFile, containsScript, containsPasswordProtectedFile, containsRestrictedFileFormat, containsMacros, verifiedFileFormat, foundViruses, errorDetailedDescription, fileSize, contentInformation);
   }
-
 
   @Override
   public String toString() {

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DrawRectangleInstance
  */
-public class DrawRectangleInstanceTest {
+class DrawRectangleInstanceTest {
     private final DrawRectangleInstance model = new DrawRectangleInstance();
 
     /**
      * Model tests for DrawRectangleInstance
      */
     @Test
-    public void testDrawRectangleInstance() {
+    void testDrawRectangleInstance() {
         // TODO: test DrawRectangleInstance
     }
 
@@ -43,7 +40,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'borderColor'
      */
     @Test
-    public void borderColorTest() {
+    void borderColorTest() {
         // TODO: test borderColor
     }
 
@@ -51,7 +48,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'borderWidth'
      */
     @Test
-    public void borderWidthTest() {
+    void borderWidthTest() {
         // TODO: test borderWidth
     }
 
@@ -59,7 +56,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'fillColor'
      */
     @Test
-    public void fillColorTest() {
+    void fillColorTest() {
         // TODO: test fillColor
     }
 
@@ -67,7 +64,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'X'
      */
     @Test
-    public void XTest() {
+    void XTest() {
         // TODO: test X
     }
 
@@ -75,7 +72,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'Y'
      */
     @Test
-    public void YTest() {
+    void YTest() {
         // TODO: test Y
     }
 
@@ -83,7 +80,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -91,7 +88,7 @@ public class DrawRectangleInstanceTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 

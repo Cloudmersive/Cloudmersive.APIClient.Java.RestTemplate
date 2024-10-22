@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AdditionalAdvancedScanInformation
  */
-public class AdditionalAdvancedScanInformationTest {
+class AdditionalAdvancedScanInformationTest {
     private final AdditionalAdvancedScanInformation model = new AdditionalAdvancedScanInformation();
 
     /**
      * Model tests for AdditionalAdvancedScanInformation
      */
     @Test
-    public void testAdditionalAdvancedScanInformation() {
+    void testAdditionalAdvancedScanInformation() {
         // TODO: test AdditionalAdvancedScanInformation
     }
 
@@ -43,7 +40,7 @@ public class AdditionalAdvancedScanInformationTest {
      * Test the property 'containsJSON'
      */
     @Test
-    public void containsJSONTest() {
+    void containsJSONTest() {
         // TODO: test containsJSON
     }
 
@@ -51,7 +48,7 @@ public class AdditionalAdvancedScanInformationTest {
      * Test the property 'containsXML'
      */
     @Test
-    public void containsXMLTest() {
+    void containsXMLTest() {
         // TODO: test containsXML
     }
 
@@ -59,8 +56,16 @@ public class AdditionalAdvancedScanInformationTest {
      * Test the property 'containsImage'
      */
     @Test
-    public void containsImageTest() {
+    void containsImageTest() {
         // TODO: test containsImage
+    }
+
+    /**
+     * Test the property 'relevantSubfileName'
+     */
+    @Test
+    void relevantSubfileNameTest() {
+        // TODO: test relevantSubfileName
     }
 
 }

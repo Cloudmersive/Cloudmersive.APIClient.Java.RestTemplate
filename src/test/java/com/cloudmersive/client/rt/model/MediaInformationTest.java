@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for MediaInformation
  */
-public class MediaInformationTest {
+class MediaInformationTest {
     private final MediaInformation model = new MediaInformation();
 
     /**
      * Model tests for MediaInformation
      */
     @Test
-    public void testMediaInformation() {
+    void testMediaInformation() {
         // TODO: test MediaInformation
     }
 
@@ -45,7 +43,7 @@ public class MediaInformationTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -53,7 +51,7 @@ public class MediaInformationTest {
      * Test the property 'fileFormat'
      */
     @Test
-    public void fileFormatTest() {
+    void fileFormatTest() {
         // TODO: test fileFormat
     }
 
@@ -61,7 +59,7 @@ public class MediaInformationTest {
      * Test the property 'fileFormatFull'
      */
     @Test
-    public void fileFormatFullTest() {
+    void fileFormatFullTest() {
         // TODO: test fileFormatFull
     }
 
@@ -69,7 +67,7 @@ public class MediaInformationTest {
      * Test the property 'validFileFormats'
      */
     @Test
-    public void validFileFormatsTest() {
+    void validFileFormatsTest() {
         // TODO: test validFileFormats
     }
 
@@ -77,7 +75,7 @@ public class MediaInformationTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -85,7 +83,7 @@ public class MediaInformationTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 
@@ -93,7 +91,7 @@ public class MediaInformationTest {
      * Test the property 'size'
      */
     @Test
-    public void sizeTest() {
+    void sizeTest() {
         // TODO: test size
     }
 
@@ -101,7 +99,7 @@ public class MediaInformationTest {
      * Test the property 'bitRate'
      */
     @Test
-    public void bitRateTest() {
+    void bitRateTest() {
         // TODO: test bitRate
     }
 
@@ -109,7 +107,7 @@ public class MediaInformationTest {
      * Test the property 'duration'
      */
     @Test
-    public void durationTest() {
+    void durationTest() {
         // TODO: test duration
     }
 
@@ -117,7 +115,7 @@ public class MediaInformationTest {
      * Test the property 'startTime'
      */
     @Test
-    public void startTimeTest() {
+    void startTimeTest() {
         // TODO: test startTime
     }
 

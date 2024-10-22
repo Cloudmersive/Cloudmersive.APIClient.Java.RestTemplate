@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a DocxGetMetadataProperties command
  */
-@ApiModel(description = "Result of running a DocxGetMetadataProperties command")
 @JsonPropertyOrder({
   GetDocxMetadataPropertiesResponse.JSON_PROPERTY_COMPANY,
   GetDocxMetadataPropertiesResponse.JSON_PROPERTY_MANAGER,
@@ -42,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   GetDocxMetadataPropertiesResponse.JSON_PROPERTY_CUSTOM_PROPERTIES,
   GetDocxMetadataPropertiesResponse.JSON_PROPERTY_SUCCESSFUL
 })
-@JsonTypeName("GetDocxMetadataPropertiesResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxMetadataPropertiesResponse {
   public static final String JSON_PROPERTY_COMPANY = "Company";
   private String company;
@@ -67,11 +65,13 @@ public class GetDocxMetadataPropertiesResponse {
   private Long pageCount;
 
   public static final String JSON_PROPERTY_CUSTOM_PROPERTIES = "CustomProperties";
-  private List<DocxMetadataCustomProperty> customProperties = null;
+  private List<DocxMetadataCustomProperty> customProperties = new ArrayList<>();
 
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
+  public GetDocxMetadataPropertiesResponse() {
+  }
 
   public GetDocxMetadataPropertiesResponse company(String company) {
     
@@ -79,12 +79,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the Company that authored the document, if available
    * @return company
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the Company that authored the document, if available")
   @JsonProperty(JSON_PROPERTY_COMPANY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,10 +92,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPANY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompany(String company) {
     this.company = company;
   }
-
 
   public GetDocxMetadataPropertiesResponse manager(String manager) {
     
@@ -104,12 +104,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the Manager that authored the document, if available
    * @return manager
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the Manager that authored the document, if available")
   @JsonProperty(JSON_PROPERTY_MANAGER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,10 +117,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MANAGER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setManager(String manager) {
     this.manager = manager;
   }
-
 
   public GetDocxMetadataPropertiesResponse applicationVersion(String applicationVersion) {
     
@@ -129,12 +129,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Application version that authored the document, if available
    * @return applicationVersion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Application version that authored the document, if available")
   @JsonProperty(JSON_PROPERTY_APPLICATION_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -143,10 +142,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_APPLICATION_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setApplicationVersion(String applicationVersion) {
     this.applicationVersion = applicationVersion;
   }
-
 
   public GetDocxMetadataPropertiesResponse wordCount(Long wordCount) {
     
@@ -154,12 +154,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Word count of the document
    * @return wordCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word count of the document")
   @JsonProperty(JSON_PROPERTY_WORD_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,10 +167,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWordCount(Long wordCount) {
     this.wordCount = wordCount;
   }
-
 
   public GetDocxMetadataPropertiesResponse lineCount(Long lineCount) {
     
@@ -179,12 +179,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Line count of the document
    * @return lineCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Line count of the document")
   @JsonProperty(JSON_PROPERTY_LINE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -193,10 +192,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLineCount(Long lineCount) {
     this.lineCount = lineCount;
   }
-
 
   public GetDocxMetadataPropertiesResponse paragraphCount(Long paragraphCount) {
     
@@ -204,12 +204,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Paragraph count of the document
    * @return paragraphCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Paragraph count of the document")
   @JsonProperty(JSON_PROPERTY_PARAGRAPH_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -218,10 +217,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAGRAPH_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParagraphCount(Long paragraphCount) {
     this.paragraphCount = paragraphCount;
   }
-
 
   public GetDocxMetadataPropertiesResponse pageCount(Long pageCount) {
     
@@ -229,12 +229,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * Page count of the document
    * @return pageCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Page count of the document")
   @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -243,10 +242,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageCount(Long pageCount) {
     this.pageCount = pageCount;
   }
-
 
   public GetDocxMetadataPropertiesResponse customProperties(List<DocxMetadataCustomProperty> customProperties) {
     
@@ -256,18 +256,17 @@ public class GetDocxMetadataPropertiesResponse {
 
   public GetDocxMetadataPropertiesResponse addCustomPropertiesItem(DocxMetadataCustomProperty customPropertiesItem) {
     if (this.customProperties == null) {
-      this.customProperties = new ArrayList<DocxMetadataCustomProperty>();
+      this.customProperties = new ArrayList<>();
     }
     this.customProperties.add(customPropertiesItem);
     return this;
   }
 
-   /**
+  /**
    * Custom properties applied to the document
    * @return customProperties
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Custom properties applied to the document")
   @JsonProperty(JSON_PROPERTY_CUSTOM_PROPERTIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,10 +275,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CUSTOM_PROPERTIES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCustomProperties(List<DocxMetadataCustomProperty> customProperties) {
     this.customProperties = customProperties;
   }
-
 
   public GetDocxMetadataPropertiesResponse successful(Boolean successful) {
     
@@ -287,12 +287,11 @@ public class GetDocxMetadataPropertiesResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -301,10 +300,11 @@ public class GetDocxMetadataPropertiesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -330,7 +330,6 @@ public class GetDocxMetadataPropertiesResponse {
   public int hashCode() {
     return Objects.hash(company, manager, applicationVersion, wordCount, lineCount, paragraphCount, pageCount, customProperties, successful);
   }
-
 
   @Override
   public String toString() {

@@ -1,3 +1,4 @@
+.github/workflows/maven.yml
 .gitignore
 .travis.yml
 README.md
@@ -20,7 +21,8 @@ settings.gradle
 src/main/AndroidManifest.xml
 src/main/java/com/cloudmersive/client/rt/CurrencyExchangeApi.java
 src/main/java/com/cloudmersive/client/rt/invoker/ApiClient.java
-src/main/java/com/cloudmersive/client/rt/invoker/CustomInstantDeserializer.java
+src/main/java/com/cloudmersive/client/rt/invoker/BaseApi.java
+src/main/java/com/cloudmersive/client/rt/invoker/JavaTimeFormatter.java
 src/main/java/com/cloudmersive/client/rt/invoker/RFC3339DateFormat.java
 src/main/java/com/cloudmersive/client/rt/invoker/ServerConfiguration.java
 src/main/java/com/cloudmersive/client/rt/invoker/ServerVariable.java

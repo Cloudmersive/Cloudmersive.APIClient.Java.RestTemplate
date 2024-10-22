@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for BotCheckResponse
  */
-public class BotCheckResponseTest {
+class BotCheckResponseTest {
     private final BotCheckResponse model = new BotCheckResponse();
 
     /**
      * Model tests for BotCheckResponse
      */
     @Test
-    public void testBotCheckResponse() {
+    void testBotCheckResponse() {
         // TODO: test BotCheckResponse
     }
 
@@ -43,7 +40,7 @@ public class BotCheckResponseTest {
      * Test the property 'isBot'
      */
     @Test
-    public void isBotTest() {
+    void isBotTest() {
         // TODO: test isBot
     }
 

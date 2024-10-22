@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for EmlToHtmlResult
  */
-public class EmlToHtmlResultTest {
+class EmlToHtmlResultTest {
     private final EmlToHtmlResult model = new EmlToHtmlResult();
 
     /**
      * Model tests for EmlToHtmlResult
      */
     @Test
-    public void testEmlToHtmlResult() {
+    void testEmlToHtmlResult() {
         // TODO: test EmlToHtmlResult
     }
 
@@ -46,7 +44,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'content'
      */
     @Test
-    public void contentTest() {
+    void contentTest() {
         // TODO: test content
     }
 
@@ -62,7 +60,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'body'
      */
     @Test
-    public void bodyTest() {
+    void bodyTest() {
         // TODO: test body
     }
 
@@ -70,7 +68,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'from'
      */
     @Test
-    public void fromTest() {
+    void fromTest() {
         // TODO: test from
     }
 
@@ -78,7 +76,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'to'
      */
     @Test
-    public void toTest() {
+    void toTest() {
         // TODO: test to
     }
 
@@ -86,7 +84,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'cc'
      */
     @Test
-    public void ccTest() {
+    void ccTest() {
         // TODO: test cc
     }
 
@@ -94,7 +92,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'dateSent'
      */
     @Test
-    public void dateSentTest() {
+    void dateSentTest() {
         // TODO: test dateSent
     }
 
@@ -102,7 +100,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'subject'
      */
     @Test
-    public void subjectTest() {
+    void subjectTest() {
         // TODO: test subject
     }
 
@@ -110,7 +108,7 @@ public class EmlToHtmlResultTest {
      * Test the property 'attachments'
      */
     @Test
-    public void attachmentsTest() {
+    void attachmentsTest() {
         // TODO: test attachments
     }
 

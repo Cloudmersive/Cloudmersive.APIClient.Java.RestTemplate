@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a Tor node check on an IP address
  */
-@ApiModel(description = "Result of performing a Tor node check on an IP address")
 @JsonPropertyOrder({
   TorNodeResponse.JSON_PROPERTY_IS_TOR_NODE
 })
-@JsonTypeName("TorNodeResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TorNodeResponse {
   public static final String JSON_PROPERTY_IS_TOR_NODE = "IsTorNode";
   private Boolean isTorNode;
 
+  public TorNodeResponse() {
+  }
 
   public TorNodeResponse isTorNode(Boolean isTorNode) {
     
@@ -44,12 +43,11 @@ public class TorNodeResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the input IP address is a Tor exit node, false otherwise
    * @return isTorNode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input IP address is a Tor exit node, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_TOR_NODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class TorNodeResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_TOR_NODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsTorNode(Boolean isTorNode) {
     this.isTorNode = isTorNode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class TorNodeResponse {
   public int hashCode() {
     return Objects.hash(isTorNode);
   }
-
 
   @Override
   public String toString() {

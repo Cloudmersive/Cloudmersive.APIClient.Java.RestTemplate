@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A row in a Word Document (DOCX) file
  */
-@ApiModel(description = "A row in a Word Document (DOCX) file")
 @JsonPropertyOrder({
   DocxTableRow.JSON_PROPERTY_ROW_INDEX,
   DocxTableRow.JSON_PROPERTY_PATH,
   DocxTableRow.JSON_PROPERTY_ROW_CELLS
 })
-@JsonTypeName("DocxTableRow")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableRow {
   public static final String JSON_PROPERTY_ROW_INDEX = "RowIndex";
   private Integer rowIndex;
@@ -46,8 +44,10 @@ public class DocxTableRow {
   private String path;
 
   public static final String JSON_PROPERTY_ROW_CELLS = "RowCells";
-  private List<DocxTableCell> rowCells = null;
+  private List<DocxTableCell> rowCells = new ArrayList<>();
 
+  public DocxTableRow() {
+  }
 
   public DocxTableRow rowIndex(Integer rowIndex) {
     
@@ -55,12 +55,11 @@ public class DocxTableRow {
     return this;
   }
 
-   /**
+  /**
    * Index of the row, 0-based
    * @return rowIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the row, 0-based")
   @JsonProperty(JSON_PROPERTY_ROW_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class DocxTableRow {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRowIndex(Integer rowIndex) {
     this.rowIndex = rowIndex;
   }
-
 
   public DocxTableRow path(String path) {
     
@@ -80,12 +80,11 @@ public class DocxTableRow {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this table row object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this table row object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class DocxTableRow {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxTableRow rowCells(List<DocxTableCell> rowCells) {
     
@@ -107,18 +107,17 @@ public class DocxTableRow {
 
   public DocxTableRow addRowCellsItem(DocxTableCell rowCellsItem) {
     if (this.rowCells == null) {
-      this.rowCells = new ArrayList<DocxTableCell>();
+      this.rowCells = new ArrayList<>();
     }
     this.rowCells.add(rowCellsItem);
     return this;
   }
 
-   /**
+  /**
    * Cells in the row; this is where the contents of the row is stored
    * @return rowCells
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Cells in the row; this is where the contents of the row is stored")
   @JsonProperty(JSON_PROPERTY_ROW_CELLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class DocxTableRow {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW_CELLS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRowCells(List<DocxTableCell> rowCells) {
     this.rowCells = rowCells;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class DocxTableRow {
   public int hashCode() {
     return Objects.hash(rowIndex, path, rowCells);
   }
-
 
   @Override
   public String toString() {

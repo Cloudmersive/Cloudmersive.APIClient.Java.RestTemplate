@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a get time zones operation
  */
-@ApiModel(description = "Result of performing a get time zones operation")
 @JsonPropertyOrder({
   GetTimezonesResponse.JSON_PROPERTY_SUCCESSFUL,
   GetTimezonesResponse.JSON_PROPERTY_COUNTRY_FULL_NAME,
@@ -39,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   GetTimezonesResponse.JSON_PROPERTY_THREE_LETTER_CODE,
   GetTimezonesResponse.JSON_PROPERTY_TIMEZONES
 })
-@JsonTypeName("GetTimezonesResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetTimezonesResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -58,8 +56,10 @@ public class GetTimezonesResponse {
   private String threeLetterCode;
 
   public static final String JSON_PROPERTY_TIMEZONES = "Timezones";
-  private List<Timezone> timezones = null;
+  private List<Timezone> timezones = new ArrayList<>();
 
+  public GetTimezonesResponse() {
+  }
 
   public GetTimezonesResponse successful(Boolean successful) {
     
@@ -67,12 +67,11 @@ public class GetTimezonesResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -81,10 +80,11 @@ public class GetTimezonesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetTimezonesResponse countryFullName(String countryFullName) {
     
@@ -92,12 +92,11 @@ public class GetTimezonesResponse {
     return this;
   }
 
-   /**
+  /**
    * Full name of the country
    * @return countryFullName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Full name of the country")
   @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,10 +105,11 @@ public class GetTimezonesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryFullName(String countryFullName) {
     this.countryFullName = countryFullName;
   }
-
 
   public GetTimezonesResponse isOTwoLetterCode(String isOTwoLetterCode) {
     
@@ -117,12 +117,11 @@ public class GetTimezonesResponse {
     return this;
   }
 
-   /**
+  /**
    * Two-letter ISO 3166-1 country code
    * @return isOTwoLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,10 +130,11 @@ public class GetTimezonesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsOTwoLetterCode(String isOTwoLetterCode) {
     this.isOTwoLetterCode = isOTwoLetterCode;
   }
-
 
   public GetTimezonesResponse fiPSTwoLetterCode(String fiPSTwoLetterCode) {
     
@@ -142,12 +142,11 @@ public class GetTimezonesResponse {
     return this;
   }
 
-   /**
+  /**
    * Two-letter FIPS 10-4 country code
    * @return fiPSTwoLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter FIPS 10-4 country code")
   @JsonProperty(JSON_PROPERTY_FI_P_S_TWO_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,10 +155,11 @@ public class GetTimezonesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FI_P_S_TWO_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFiPSTwoLetterCode(String fiPSTwoLetterCode) {
     this.fiPSTwoLetterCode = fiPSTwoLetterCode;
   }
-
 
   public GetTimezonesResponse threeLetterCode(String threeLetterCode) {
     
@@ -167,12 +167,11 @@ public class GetTimezonesResponse {
     return this;
   }
 
-   /**
+  /**
    * Three-letter ISO 3166-1 country code
    * @return threeLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Three-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_THREE_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,10 +180,11 @@ public class GetTimezonesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_THREE_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setThreeLetterCode(String threeLetterCode) {
     this.threeLetterCode = threeLetterCode;
   }
-
 
   public GetTimezonesResponse timezones(List<Timezone> timezones) {
     
@@ -194,18 +194,17 @@ public class GetTimezonesResponse {
 
   public GetTimezonesResponse addTimezonesItem(Timezone timezonesItem) {
     if (this.timezones == null) {
-      this.timezones = new ArrayList<Timezone>();
+      this.timezones = new ArrayList<>();
     }
     this.timezones.add(timezonesItem);
     return this;
   }
 
-   /**
+  /**
    * Time zones (IANA/Olsen) in the country
    * @return timezones
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Time zones (IANA/Olsen) in the country")
   @JsonProperty(JSON_PROPERTY_TIMEZONES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -214,10 +213,11 @@ public class GetTimezonesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIMEZONES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimezones(List<Timezone> timezones) {
     this.timezones = timezones;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -240,7 +240,6 @@ public class GetTimezonesResponse {
   public int hashCode() {
     return Objects.hash(successful, countryFullName, isOTwoLetterCode, fiPSTwoLetterCode, threeLetterCode, timezones);
   }
-
 
   @Override
   public String toString() {

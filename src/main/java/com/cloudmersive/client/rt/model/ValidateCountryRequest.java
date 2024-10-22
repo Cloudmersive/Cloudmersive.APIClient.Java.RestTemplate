@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input parameter to a country validation request
  */
-@ApiModel(description = "Input parameter to a country validation request")
 @JsonPropertyOrder({
   ValidateCountryRequest.JSON_PROPERTY_RAW_COUNTRY_INPUT
 })
-@JsonTypeName("ValidateCountryRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateCountryRequest {
   public static final String JSON_PROPERTY_RAW_COUNTRY_INPUT = "RawCountryInput";
   private String rawCountryInput;
 
+  public ValidateCountryRequest() {
+  }
 
   public ValidateCountryRequest rawCountryInput(String rawCountryInput) {
     
@@ -44,12 +43,11 @@ public class ValidateCountryRequest {
     return this;
   }
 
-   /**
+  /**
    * Raw country input - can be a two-letter code (FIPS 10-4 or ISO 3166-1), three-letter code (ISO 3166-1) or country name
    * @return rawCountryInput
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Raw country input - can be a two-letter code (FIPS 10-4 or ISO 3166-1), three-letter code (ISO 3166-1) or country name")
   @JsonProperty(JSON_PROPERTY_RAW_COUNTRY_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class ValidateCountryRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RAW_COUNTRY_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRawCountryInput(String rawCountryInput) {
     this.rawCountryInput = rawCountryInput;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class ValidateCountryRequest {
   public int hashCode() {
     return Objects.hash(rawCountryInput);
   }
-
 
   @Override
   public String toString() {

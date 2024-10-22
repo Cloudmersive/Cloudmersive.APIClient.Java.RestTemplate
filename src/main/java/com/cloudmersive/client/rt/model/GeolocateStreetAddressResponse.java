@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Geolocation street address result
  */
-@ApiModel(description = "Geolocation street address result")
 @JsonPropertyOrder({
   GeolocateStreetAddressResponse.JSON_PROPERTY_COUNTRY_CODE,
   GeolocateStreetAddressResponse.JSON_PROPERTY_COUNTRY_NAME,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   GeolocateStreetAddressResponse.JSON_PROPERTY_REGION_NAME,
   GeolocateStreetAddressResponse.JSON_PROPERTY_ZIP_CODE
 })
-@JsonTypeName("GeolocateStreetAddressResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GeolocateStreetAddressResponse {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "CountryCode";
   private String countryCode;
@@ -57,6 +54,8 @@ public class GeolocateStreetAddressResponse {
   public static final String JSON_PROPERTY_ZIP_CODE = "ZipCode";
   private String zipCode;
 
+  public GeolocateStreetAddressResponse() {
+  }
 
   public GeolocateStreetAddressResponse countryCode(String countryCode) {
     
@@ -64,12 +63,11 @@ public class GeolocateStreetAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Two-letter country code of IP address
    * @return countryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter country code of IP address")
   @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -78,10 +76,11 @@ public class GeolocateStreetAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   public GeolocateStreetAddressResponse countryName(String countryName) {
     
@@ -89,12 +88,11 @@ public class GeolocateStreetAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Country name of IP address
    * @return countryName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Country name of IP address")
   @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +101,11 @@ public class GeolocateStreetAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryName(String countryName) {
     this.countryName = countryName;
   }
-
 
   public GeolocateStreetAddressResponse streetAddress(String streetAddress) {
     
@@ -114,12 +113,11 @@ public class GeolocateStreetAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Street address of IP address
    * @return streetAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Street address of IP address")
   @JsonProperty(JSON_PROPERTY_STREET_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +126,11 @@ public class GeolocateStreetAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STREET_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStreetAddress(String streetAddress) {
     this.streetAddress = streetAddress;
   }
-
 
   public GeolocateStreetAddressResponse city(String city) {
     
@@ -139,12 +138,11 @@ public class GeolocateStreetAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * City of IP address
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "City of IP address")
   @JsonProperty(JSON_PROPERTY_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +151,11 @@ public class GeolocateStreetAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCity(String city) {
     this.city = city;
   }
-
 
   public GeolocateStreetAddressResponse regionName(String regionName) {
     
@@ -164,12 +163,11 @@ public class GeolocateStreetAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * State/region of IP address
    * @return regionName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "State/region of IP address")
   @JsonProperty(JSON_PROPERTY_REGION_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +176,11 @@ public class GeolocateStreetAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REGION_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRegionName(String regionName) {
     this.regionName = regionName;
   }
-
 
   public GeolocateStreetAddressResponse zipCode(String zipCode) {
     
@@ -189,12 +188,11 @@ public class GeolocateStreetAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Zip or postal code of IP address
    * @return zipCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Zip or postal code of IP address")
   @JsonProperty(JSON_PROPERTY_ZIP_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +201,11 @@ public class GeolocateStreetAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ZIP_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setZipCode(String zipCode) {
     this.zipCode = zipCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -229,7 +228,6 @@ public class GeolocateStreetAddressResponse {
   public int hashCode() {
     return Objects.hash(countryCode, countryName, streetAddress, city, regionName, zipCode);
   }
-
 
   @Override
   public String toString() {

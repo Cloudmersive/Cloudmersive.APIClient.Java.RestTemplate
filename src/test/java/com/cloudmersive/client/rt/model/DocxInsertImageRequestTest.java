@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxInsertImageRequest
  */
-public class DocxInsertImageRequestTest {
+class DocxInsertImageRequestTest {
     private final DocxInsertImageRequest model = new DocxInsertImageRequest();
 
     /**
      * Model tests for DocxInsertImageRequest
      */
     @Test
-    public void testDocxInsertImageRequest() {
+    void testDocxInsertImageRequest() {
         // TODO: test DocxInsertImageRequest
     }
 
@@ -44,7 +41,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'inputDocumentFileBytes'
      */
     @Test
-    public void inputDocumentFileBytesTest() {
+    void inputDocumentFileBytesTest() {
         // TODO: test inputDocumentFileBytes
     }
 
@@ -52,7 +49,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'inputDocumentFileUrl'
      */
     @Test
-    public void inputDocumentFileUrlTest() {
+    void inputDocumentFileUrlTest() {
         // TODO: test inputDocumentFileUrl
     }
 
@@ -60,7 +57,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'inputImageFileBytes'
      */
     @Test
-    public void inputImageFileBytesTest() {
+    void inputImageFileBytesTest() {
         // TODO: test inputImageFileBytes
     }
 
@@ -68,7 +65,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'inputImageFileUrl'
      */
     @Test
-    public void inputImageFileUrlTest() {
+    void inputImageFileUrlTest() {
         // TODO: test inputImageFileUrl
     }
 
@@ -76,7 +73,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'imageToAdd'
      */
     @Test
-    public void imageToAddTest() {
+    void imageToAddTest() {
         // TODO: test imageToAdd
     }
 
@@ -84,7 +81,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'insertPlacement'
      */
     @Test
-    public void insertPlacementTest() {
+    void insertPlacementTest() {
         // TODO: test insertPlacement
     }
 
@@ -92,7 +89,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'insertPath'
      */
     @Test
-    public void insertPathTest() {
+    void insertPathTest() {
         // TODO: test insertPath
     }
 
@@ -100,7 +97,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'widthInEMUs'
      */
     @Test
-    public void widthInEMUsTest() {
+    void widthInEMUsTest() {
         // TODO: test widthInEMUs
     }
 
@@ -108,7 +105,7 @@ public class DocxInsertImageRequestTest {
      * Test the property 'heightInEMUs'
      */
     @Test
-    public void heightInEMUsTest() {
+    void heightInEMUsTest() {
         // TODO: test heightInEMUs
     }
 

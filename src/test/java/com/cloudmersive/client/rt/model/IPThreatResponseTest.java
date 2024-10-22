@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for IPThreatResponse
  */
-public class IPThreatResponseTest {
+class IPThreatResponseTest {
     private final IPThreatResponse model = new IPThreatResponse();
 
     /**
      * Model tests for IPThreatResponse
      */
     @Test
-    public void testIPThreatResponse() {
+    void testIPThreatResponse() {
         // TODO: test IPThreatResponse
     }
 
@@ -43,7 +40,7 @@ public class IPThreatResponseTest {
      * Test the property 'isThreat'
      */
     @Test
-    public void isThreatTest() {
+    void isThreatTest() {
         // TODO: test isThreat
     }
 
@@ -51,7 +48,7 @@ public class IPThreatResponseTest {
      * Test the property 'threatType'
      */
     @Test
-    public void threatTypeTest() {
+    void threatTypeTest() {
         // TODO: test threatType
     }
 

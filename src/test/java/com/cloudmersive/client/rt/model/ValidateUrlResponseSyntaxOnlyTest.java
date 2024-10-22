@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateUrlResponseSyntaxOnly
  */
-public class ValidateUrlResponseSyntaxOnlyTest {
+class ValidateUrlResponseSyntaxOnlyTest {
     private final ValidateUrlResponseSyntaxOnly model = new ValidateUrlResponseSyntaxOnly();
 
     /**
      * Model tests for ValidateUrlResponseSyntaxOnly
      */
     @Test
-    public void testValidateUrlResponseSyntaxOnly() {
+    void testValidateUrlResponseSyntaxOnly() {
         // TODO: test ValidateUrlResponseSyntaxOnly
     }
 
@@ -43,7 +40,7 @@ public class ValidateUrlResponseSyntaxOnlyTest {
      * Test the property 'validURL'
      */
     @Test
-    public void validURLTest() {
+    void validURLTest() {
         // TODO: test validURL
     }
 
@@ -51,7 +48,7 @@ public class ValidateUrlResponseSyntaxOnlyTest {
      * Test the property 'wellFormedURL'
      */
     @Test
-    public void wellFormedURLTest() {
+    void wellFormedURLTest() {
         // TODO: test wellFormedURL
     }
 
@@ -59,7 +56,7 @@ public class ValidateUrlResponseSyntaxOnlyTest {
      * Test the property 'topLevelDomainName'
      */
     @Test
-    public void topLevelDomainNameTest() {
+    void topLevelDomainNameTest() {
         // TODO: test topLevelDomainName
     }
 

@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an HTTP orchestration
  */
-@ApiModel(description = "Result of performing an HTTP orchestration")
 @JsonPropertyOrder({
   HttpOrchestrationResponse.JSON_PROPERTY_SUCCESSFUL,
   HttpOrchestrationResponse.JSON_PROPERTY_TASKS_COMPLETED,
   HttpOrchestrationResponse.JSON_PROPERTY_OUTPUT_STRING_TYPE,
   HttpOrchestrationResponse.JSON_PROPERTY_OUTPUT_BINARY_TYPE
 })
-@JsonTypeName("HttpOrchestrationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpOrchestrationResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -49,6 +46,8 @@ public class HttpOrchestrationResponse {
   public static final String JSON_PROPERTY_OUTPUT_BINARY_TYPE = "Output_BinaryType";
   private byte[] outputBinaryType;
 
+  public HttpOrchestrationResponse() {
+  }
 
   public HttpOrchestrationResponse successful(Boolean successful) {
     
@@ -56,12 +55,11 @@ public class HttpOrchestrationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class HttpOrchestrationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public HttpOrchestrationResponse tasksCompleted(Integer tasksCompleted) {
     
@@ -81,12 +80,11 @@ public class HttpOrchestrationResponse {
     return this;
   }
 
-   /**
+  /**
    * Count of the number of tasks that were completed
    * @return tasksCompleted
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of the number of tasks that were completed")
   @JsonProperty(JSON_PROPERTY_TASKS_COMPLETED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class HttpOrchestrationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TASKS_COMPLETED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTasksCompleted(Integer tasksCompleted) {
     this.tasksCompleted = tasksCompleted;
   }
-
 
   public HttpOrchestrationResponse outputStringType(String outputStringType) {
     
@@ -106,12 +105,11 @@ public class HttpOrchestrationResponse {
     return this;
   }
 
-   /**
+  /**
    * Result output in string format
    * @return outputStringType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result output in string format")
   @JsonProperty(JSON_PROPERTY_OUTPUT_STRING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class HttpOrchestrationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OUTPUT_STRING_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOutputStringType(String outputStringType) {
     this.outputStringType = outputStringType;
   }
-
 
   public HttpOrchestrationResponse outputBinaryType(byte[] outputBinaryType) {
     
@@ -131,12 +130,11 @@ public class HttpOrchestrationResponse {
     return this;
   }
 
-   /**
+  /**
    * Result output in binary format
    * @return outputBinaryType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result output in binary format")
   @JsonProperty(JSON_PROPERTY_OUTPUT_BINARY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class HttpOrchestrationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OUTPUT_BINARY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOutputBinaryType(byte[] outputBinaryType) {
     this.outputBinaryType = outputBinaryType;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class HttpOrchestrationResponse {
   public int hashCode() {
     return Objects.hash(successful, tasksCompleted, outputStringType, Arrays.hashCode(outputBinaryType));
   }
-
 
   @Override
   public String toString() {

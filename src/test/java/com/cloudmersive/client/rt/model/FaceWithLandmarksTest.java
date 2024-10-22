@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FaceWithLandmarks
  */
-public class FaceWithLandmarksTest {
+class FaceWithLandmarksTest {
     private final FaceWithLandmarks model = new FaceWithLandmarks();
 
     /**
      * Model tests for FaceWithLandmarks
      */
     @Test
-    public void testFaceWithLandmarks() {
+    void testFaceWithLandmarks() {
         // TODO: test FaceWithLandmarks
     }
 
@@ -46,7 +44,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'leftX'
      */
     @Test
-    public void leftXTest() {
+    void leftXTest() {
         // TODO: test leftX
     }
 
@@ -54,7 +52,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'topY'
      */
     @Test
-    public void topYTest() {
+    void topYTest() {
         // TODO: test topY
     }
 
@@ -62,7 +60,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'rightX'
      */
     @Test
-    public void rightXTest() {
+    void rightXTest() {
         // TODO: test rightX
     }
 
@@ -70,7 +68,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'bottomY'
      */
     @Test
-    public void bottomYTest() {
+    void bottomYTest() {
         // TODO: test bottomY
     }
 
@@ -78,7 +76,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'leftEyebrow'
      */
     @Test
-    public void leftEyebrowTest() {
+    void leftEyebrowTest() {
         // TODO: test leftEyebrow
     }
 
@@ -86,7 +84,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'rightEyebrow'
      */
     @Test
-    public void rightEyebrowTest() {
+    void rightEyebrowTest() {
         // TODO: test rightEyebrow
     }
 
@@ -94,7 +92,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'leftEye'
      */
     @Test
-    public void leftEyeTest() {
+    void leftEyeTest() {
         // TODO: test leftEye
     }
 
@@ -102,7 +100,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'rightEye'
      */
     @Test
-    public void rightEyeTest() {
+    void rightEyeTest() {
         // TODO: test rightEye
     }
 
@@ -110,7 +108,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'bottomAndSidesOfFace'
      */
     @Test
-    public void bottomAndSidesOfFaceTest() {
+    void bottomAndSidesOfFaceTest() {
         // TODO: test bottomAndSidesOfFace
     }
 
@@ -118,7 +116,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'noseBridge'
      */
     @Test
-    public void noseBridgeTest() {
+    void noseBridgeTest() {
         // TODO: test noseBridge
     }
 
@@ -126,7 +124,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'noseBottom'
      */
     @Test
-    public void noseBottomTest() {
+    void noseBottomTest() {
         // TODO: test noseBottom
     }
 
@@ -134,7 +132,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'lipsInnerOutline'
      */
     @Test
-    public void lipsInnerOutlineTest() {
+    void lipsInnerOutlineTest() {
         // TODO: test lipsInnerOutline
     }
 
@@ -142,7 +140,7 @@ public class FaceWithLandmarksTest {
      * Test the property 'lipsOuterOutline'
      */
     @Test
-    public void lipsOuterOutlineTest() {
+    void lipsOuterOutlineTest() {
         // TODO: test lipsOuterOutline
     }
 

@@ -19,27 +19,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ReceiptRecognitionResult
  */
-public class ReceiptRecognitionResultTest {
+class ReceiptRecognitionResultTest {
     private final ReceiptRecognitionResult model = new ReceiptRecognitionResult();
 
     /**
      * Model tests for ReceiptRecognitionResult
      */
     @Test
-    public void testReceiptRecognitionResult() {
+    void testReceiptRecognitionResult() {
         // TODO: test ReceiptRecognitionResult
     }
 
@@ -47,7 +45,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -55,7 +53,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'timestamp'
      */
     @Test
-    public void timestampTest() {
+    void timestampTest() {
         // TODO: test timestamp
     }
 
@@ -63,7 +61,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'businessName'
      */
     @Test
-    public void businessNameTest() {
+    void businessNameTest() {
         // TODO: test businessName
     }
 
@@ -71,7 +69,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'businessWebsite'
      */
     @Test
-    public void businessWebsiteTest() {
+    void businessWebsiteTest() {
         // TODO: test businessWebsite
     }
 
@@ -79,7 +77,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'addressString'
      */
     @Test
-    public void addressStringTest() {
+    void addressStringTest() {
         // TODO: test addressString
     }
 
@@ -87,7 +85,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'phoneNumber'
      */
     @Test
-    public void phoneNumberTest() {
+    void phoneNumberTest() {
         // TODO: test phoneNumber
     }
 
@@ -95,7 +93,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'receiptItems'
      */
     @Test
-    public void receiptItemsTest() {
+    void receiptItemsTest() {
         // TODO: test receiptItems
     }
 
@@ -103,7 +101,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'receiptSubTotal'
      */
     @Test
-    public void receiptSubTotalTest() {
+    void receiptSubTotalTest() {
         // TODO: test receiptSubTotal
     }
 
@@ -111,7 +109,7 @@ public class ReceiptRecognitionResultTest {
      * Test the property 'receiptTotal'
      */
     @Test
-    public void receiptTotalTest() {
+    void receiptTotalTest() {
         // TODO: test receiptTotal
     }
 

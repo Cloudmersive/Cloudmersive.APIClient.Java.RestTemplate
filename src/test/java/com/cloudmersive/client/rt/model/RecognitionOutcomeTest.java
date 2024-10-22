@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for RecognitionOutcome
  */
-public class RecognitionOutcomeTest {
+class RecognitionOutcomeTest {
     private final RecognitionOutcome model = new RecognitionOutcome();
 
     /**
      * Model tests for RecognitionOutcome
      */
     @Test
-    public void testRecognitionOutcome() {
+    void testRecognitionOutcome() {
         // TODO: test RecognitionOutcome
     }
 
@@ -43,7 +40,7 @@ public class RecognitionOutcomeTest {
      * Test the property 'confidenceScore'
      */
     @Test
-    public void confidenceScoreTest() {
+    void confidenceScoreTest() {
         // TODO: test confidenceScore
     }
 
@@ -51,7 +48,7 @@ public class RecognitionOutcomeTest {
      * Test the property 'description'
      */
     @Test
-    public void descriptionTest() {
+    void descriptionTest() {
         // TODO: test description
     }
 

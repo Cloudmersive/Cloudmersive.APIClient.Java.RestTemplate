@@ -21,29 +21,37 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Response from an OCR to text operation.  Includes the confidence rating and converted text result.
  */
-@ApiModel(description = "Response from an OCR to text operation.  Includes the confidence rating and converted text result.")
 @JsonPropertyOrder({
   PdfToTextResponse.JSON_PROPERTY_SUCCESSFUL,
-  PdfToTextResponse.JSON_PROPERTY_OCR_PAGES
+  PdfToTextResponse.JSON_PROPERTY_OCR_PAGES,
+  PdfToTextResponse.JSON_PROPERTY_ASYNC_JOB_I_D,
+  PdfToTextResponse.JSON_PROPERTY_ASYNC_JOB_STATUS
 })
-@JsonTypeName("PdfToTextResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfToTextResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_OCR_PAGES = "OcrPages";
-  private List<OcrPageResult> ocrPages = null;
+  private List<OcrPageResult> ocrPages = new ArrayList<>();
 
+  public static final String JSON_PROPERTY_ASYNC_JOB_I_D = "AsyncJobID";
+  private String asyncJobID;
+
+  public static final String JSON_PROPERTY_ASYNC_JOB_STATUS = "AsyncJobStatus";
+  private String asyncJobStatus;
+
+  public PdfToTextResponse() {
+  }
 
   public PdfToTextResponse successful(Boolean successful) {
     
@@ -51,12 +59,11 @@ public class PdfToTextResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +72,11 @@ public class PdfToTextResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PdfToTextResponse ocrPages(List<OcrPageResult> ocrPages) {
     
@@ -78,18 +86,17 @@ public class PdfToTextResponse {
 
   public PdfToTextResponse addOcrPagesItem(OcrPageResult ocrPagesItem) {
     if (this.ocrPages == null) {
-      this.ocrPages = new ArrayList<OcrPageResult>();
+      this.ocrPages = new ArrayList<>();
     }
     this.ocrPages.add(ocrPagesItem);
     return this;
   }
 
-   /**
+  /**
    * Page OCR results
    * @return ocrPages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Page OCR results")
   @JsonProperty(JSON_PROPERTY_OCR_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +105,61 @@ public class PdfToTextResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OCR_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOcrPages(List<OcrPageResult> ocrPages) {
     this.ocrPages = ocrPages;
   }
 
+  public PdfToTextResponse asyncJobID(String asyncJobID) {
+    
+    this.asyncJobID = asyncJobID;
+    return this;
+  }
+
+  /**
+   * When the job exceeds 25 pages, an Async Job ID is returned.  Use the CheckPdfOcrJobStatus API to check on the status of this job using the AsyncJobID and get the result when it finishes
+   * @return asyncJobID
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ASYNC_JOB_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getAsyncJobID() {
+    return asyncJobID;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ASYNC_JOB_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAsyncJobID(String asyncJobID) {
+    this.asyncJobID = asyncJobID;
+  }
+
+  public PdfToTextResponse asyncJobStatus(String asyncJobStatus) {
+    
+    this.asyncJobStatus = asyncJobStatus;
+    return this;
+  }
+
+  /**
+   * Returns the job status of the Async Job, if applicable.  Possible states are STARTED and COMPLETED
+   * @return asyncJobStatus
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ASYNC_JOB_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getAsyncJobStatus() {
+    return asyncJobStatus;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ASYNC_JOB_STATUS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setAsyncJobStatus(String asyncJobStatus) {
+    this.asyncJobStatus = asyncJobStatus;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -113,14 +171,15 @@ public class PdfToTextResponse {
     }
     PdfToTextResponse pdfToTextResponse = (PdfToTextResponse) o;
     return Objects.equals(this.successful, pdfToTextResponse.successful) &&
-        Objects.equals(this.ocrPages, pdfToTextResponse.ocrPages);
+        Objects.equals(this.ocrPages, pdfToTextResponse.ocrPages) &&
+        Objects.equals(this.asyncJobID, pdfToTextResponse.asyncJobID) &&
+        Objects.equals(this.asyncJobStatus, pdfToTextResponse.asyncJobStatus);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(successful, ocrPages);
+    return Objects.hash(successful, ocrPages, asyncJobID, asyncJobStatus);
   }
-
 
   @Override
   public String toString() {
@@ -128,6 +187,8 @@ public class PdfToTextResponse {
     sb.append("class PdfToTextResponse {\n");
     sb.append("    successful: ").append(toIndentedString(successful)).append("\n");
     sb.append("    ocrPages: ").append(toIndentedString(ocrPages)).append("\n");
+    sb.append("    asyncJobID: ").append(toIndentedString(asyncJobID)).append("\n");
+    sb.append("    asyncJobStatus: ").append(toIndentedString(asyncJobStatus)).append("\n");
     sb.append("}");
     return sb.toString();
   }

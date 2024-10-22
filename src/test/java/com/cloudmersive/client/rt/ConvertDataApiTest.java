@@ -23,9 +23,12 @@ import com.cloudmersive.client.rt.model.XmlRemoveAllChildrenWithXPathResult;
 import com.cloudmersive.client.rt.model.XmlRemoveWithXPathResult;
 import com.cloudmersive.client.rt.model.XmlReplaceWithXPathResult;
 import com.cloudmersive.client.rt.model.XmlSetValueWithXPathResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,8 +37,8 @@ import java.util.Map;
 /**
  * API tests for ConvertDataApi
  */
-@Ignore
-public class ConvertDataApiTest {
+@Disabled
+class ConvertDataApiTest {
 
     private final ConvertDataApi api = new ConvertDataApi();
 
@@ -45,13 +48,14 @@ public class ConvertDataApiTest {
      *
      * Convert a CSV file to a JSON object array
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataCsvToJsonTest() {
+    void convertDataCsvToJsonTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean columnNamesFromFirstRow = null;
+
         Object response = api.convertDataCsvToJson(inputFile, columnNamesFromFirstRow);
 
         // TODO: test validations
@@ -62,13 +66,14 @@ public class ConvertDataApiTest {
      *
      * Convert a CSV file to a XML file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataCsvToXmlTest() {
+    void convertDataCsvToXmlTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean columnNamesFromFirstRow = null;
+
         byte[] response = api.convertDataCsvToXml(inputFile, columnNamesFromFirstRow);
 
         // TODO: test validations
@@ -79,12 +84,13 @@ public class ConvertDataApiTest {
      *
      * Convert a JSON object into XML
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataJsonStringToXmlTest() {
+    void convertDataJsonStringToXmlTest() {
         String jsonString = null;
+
         Object response = api.convertDataJsonStringToXml(jsonString);
 
         // TODO: test validations
@@ -95,12 +101,13 @@ public class ConvertDataApiTest {
      *
      * Convert a JSON object into XML
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataJsonToXmlTest() {
+    void convertDataJsonToXmlTest() {
         Object jsonObject = null;
+
         byte[] response = api.convertDataJsonToXml(jsonObject);
 
         // TODO: test validations
@@ -111,12 +118,13 @@ public class ConvertDataApiTest {
      *
      * Convert an Excel (97-2003) XLS file to a JSON object array
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXlsToJsonTest() {
+    void convertDataXlsToJsonTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         Object response = api.convertDataXlsToJson(inputFile);
 
         // TODO: test validations
@@ -127,12 +135,13 @@ public class ConvertDataApiTest {
      *
      * Convert an Excel XLSX file to a JSON object array
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXlsxToJsonTest() {
+    void convertDataXlsxToJsonTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDataXlsxToJson(inputFile);
 
         // TODO: test validations
@@ -143,12 +152,13 @@ public class ConvertDataApiTest {
      *
      * Convert an Excel XLSX file to a XML file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXlsxToXmlTest() {
+    void convertDataXlsxToXmlTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDataXlsxToXml(inputFile);
 
         // TODO: test validations
@@ -159,15 +169,16 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of editing an XML document by adding an attribute to all of the nodes that match an input XPath expression.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlEditAddAttributeWithXPathTest() {
+    void convertDataXmlEditAddAttributeWithXPathTest() {
         String xpathExpression = null;
         String xmlAttributeName = null;
         String xmlAttributeValue = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlAddAttributeWithXPathResult response = api.convertDataXmlEditAddAttributeWithXPath(xpathExpression, xmlAttributeName, xmlAttributeValue, inputFile);
 
         // TODO: test validations
@@ -178,14 +189,15 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of editing an XML document by adding an XML node as a child to all of the nodes that match an input XPath expression.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlEditAddChildWithXPathTest() {
+    void convertDataXmlEditAddChildWithXPathTest() {
         String xpathExpression = null;
         String xmlNodeToAdd = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlAddChildWithXPathResult response = api.convertDataXmlEditAddChildWithXPath(xpathExpression, xmlNodeToAdd, inputFile);
 
         // TODO: test validations
@@ -196,13 +208,14 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of editing an XML document by removing all child nodes of the nodes that match an input XPath expression.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlEditRemoveAllChildNodesWithXPathTest() {
+    void convertDataXmlEditRemoveAllChildNodesWithXPathTest() {
         String xpathExpression = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlRemoveAllChildrenWithXPathResult response = api.convertDataXmlEditRemoveAllChildNodesWithXPath(xpathExpression, inputFile);
 
         // TODO: test validations
@@ -213,14 +226,15 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of editing an XML document by replacing all of the nodes that match an input XPath expression with a new XML node expression.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlEditReplaceWithXPathTest() {
+    void convertDataXmlEditReplaceWithXPathTest() {
         String xpathExpression = null;
         String xmlNodeReplacement = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlReplaceWithXPathResult response = api.convertDataXmlEditReplaceWithXPath(xpathExpression, xmlNodeReplacement, inputFile);
 
         // TODO: test validations
@@ -231,14 +245,15 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of editing an XML document by setting the contents of all of the nodes that match an input XPath expression.  Supports elements and attributes.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlEditSetValueWithXPathTest() {
+    void convertDataXmlEditSetValueWithXPathTest() {
         String xpathExpression = null;
         String xmlValue = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlSetValueWithXPathResult response = api.convertDataXmlEditSetValueWithXPath(xpathExpression, xmlValue, inputFile);
 
         // TODO: test validations
@@ -249,13 +264,14 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of filtering, selecting an XML document with an XPath expression
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlFilterWithXPathTest() {
+    void convertDataXmlFilterWithXPathTest() {
         String xpathExpression = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlFilterWithXPathResult response = api.convertDataXmlFilterWithXPath(xpathExpression, inputFile);
 
         // TODO: test validations
@@ -266,13 +282,14 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of querying a single XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for a single XML document as input.  Provided XML document is automatically loaded as the default context; to access elements in the document, simply refer to them without a document reference, such as bookstore/book
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlQueryWithXQueryTest() {
+    void convertDataXmlQueryWithXQueryTest() {
         String xquery = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlQueryWithXQueryResult response = api.convertDataXmlQueryWithXQuery(xquery, inputFile);
 
         // TODO: test validations
@@ -283,11 +300,11 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of querying an XML document with an XQuery expression.  Supports XQuery 3.1 and earlier.  This API is optimized for multiple XML documents as input.  You can refer to the contents of a given document by name, for example doc(\&quot;books.xml\&quot;) or doc(\&quot;restaurants.xml\&quot;) if you included two input files named books.xml and restaurants.xml.  If input files contain no file name, they will default to file names input1.xml, input2.xml and so on.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlQueryWithXQueryMultiTest() {
+    void convertDataXmlQueryWithXQueryMultiTest() {
         String xquery = null;
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
@@ -299,6 +316,7 @@ public class ConvertDataApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         XmlQueryWithXQueryMultiResult response = api.convertDataXmlQueryWithXQueryMulti(xquery, inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
 
         // TODO: test validations
@@ -309,13 +327,14 @@ public class ConvertDataApiTest {
      *
      * Return the reuslts of editing an XML document by removing all of the nodes that match an input XPath expression
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlRemoveWithXPathTest() {
+    void convertDataXmlRemoveWithXPathTest() {
         String xpathExpression = null;
         org.springframework.core.io.Resource inputFile = null;
+
         XmlRemoveWithXPathResult response = api.convertDataXmlRemoveWithXPath(xpathExpression, inputFile);
 
         // TODO: test validations
@@ -326,12 +345,13 @@ public class ConvertDataApiTest {
      *
      * Convert an XML string or file into JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlToJsonTest() {
+    void convertDataXmlToJsonTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         Object response = api.convertDataXmlToJson(inputFile);
 
         // TODO: test validations
@@ -342,13 +362,14 @@ public class ConvertDataApiTest {
      *
      * Convert an XML string or file into JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDataXmlTransformWithXsltToXmlTest() {
+    void convertDataXmlTransformWithXsltToXmlTest() {
         org.springframework.core.io.Resource inputFile = null;
         org.springframework.core.io.Resource transformFile = null;
+
         byte[] response = api.convertDataXmlTransformWithXsltToXml(inputFile, transformFile);
 
         // TODO: test validations

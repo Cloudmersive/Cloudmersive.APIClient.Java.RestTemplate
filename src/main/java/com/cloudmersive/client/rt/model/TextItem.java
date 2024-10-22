@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual instance of text occuring in an image; one piece of text
  */
-@ApiModel(description = "Individual instance of text occuring in an image; one piece of text")
 @JsonPropertyOrder({
   TextItem.JSON_PROPERTY_LEFT_X,
   TextItem.JSON_PROPERTY_TOP_Y,
   TextItem.JSON_PROPERTY_WIDTH,
   TextItem.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("TextItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TextItem {
   public static final String JSON_PROPERTY_LEFT_X = "LeftX";
   private Integer leftX;
@@ -49,6 +46,8 @@ public class TextItem {
   public static final String JSON_PROPERTY_HEIGHT = "Height";
   private Integer height;
 
+  public TextItem() {
+  }
 
   public TextItem leftX(Integer leftX) {
     
@@ -56,12 +55,11 @@ public class TextItem {
     return this;
   }
 
-   /**
+  /**
    * Left X coordinate of the text location; 0 represents the left edge of the input image
    * @return leftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Left X coordinate of the text location; 0 represents the left edge of the input image")
   @JsonProperty(JSON_PROPERTY_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class TextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftX(Integer leftX) {
     this.leftX = leftX;
   }
-
 
   public TextItem topY(Integer topY) {
     
@@ -81,12 +80,11 @@ public class TextItem {
     return this;
   }
 
-   /**
+  /**
    * Top Y coordinate of the text location; 0 represents the top edge of the input image
    * @return topY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Top Y coordinate of the text location; 0 represents the top edge of the input image")
   @JsonProperty(JSON_PROPERTY_TOP_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class TextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopY(Integer topY) {
     this.topY = topY;
   }
-
 
   public TextItem width(Integer width) {
     
@@ -106,12 +105,11 @@ public class TextItem {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the text item
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the text item")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class TextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public TextItem height(Integer height) {
     
@@ -131,12 +130,11 @@ public class TextItem {
     return this;
   }
 
-   /**
+  /**
    * Height in pixels of the text item
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height in pixels of the text item")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class TextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class TextItem {
   public int hashCode() {
     return Objects.hash(leftX, topY, width, height);
   }
-
 
   @Override
   public String toString() {

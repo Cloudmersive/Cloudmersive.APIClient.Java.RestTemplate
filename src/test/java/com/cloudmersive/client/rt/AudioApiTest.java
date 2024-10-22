@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import java.math.BigDecimal;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for AudioApi
  */
-@Ignore
-public class AudioApiTest {
+@Disabled
+class AudioApiTest {
 
     private final AudioApi api = new AudioApi();
 
@@ -37,14 +40,15 @@ public class AudioApiTest {
      *
      * Automatically detect audio file format and convert it to AAC format. Supports many input audio formats, including AAC, FLAC, M4A, MP2, MP3, OGG, WMA, and WAV. Uses 1 API call per 10 MB of file size. Also uses 1 API call per additional minute of processing time over 5 minutes, up to a maximum of 25 minutes total processing time. Maximum output file size is 50GB.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void audioConvertToAacTest() {
+    void audioConvertToAacTest() {
         String fileUrl = null;
         Integer bitRate = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.audioConvertToAac(fileUrl, bitRate, inputFile);
 
         // TODO: test validations
@@ -55,14 +59,15 @@ public class AudioApiTest {
      *
      * Automatically detect audio file format and convert it to M4A format. Supports many input audio formats, including AAC, FLAC, M4A, MP2, MP3, OGG, WMA, and WAV. Uses 1 API call per 10 MB of file size. Also uses 1 API call per additional minute of processing time over 5 minutes, up to a maximum of 25 minutes total processing time. Maximum output file size is 50GB.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void audioConvertToM4aTest() {
+    void audioConvertToM4aTest() {
         String fileUrl = null;
         Integer bitRate = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.audioConvertToM4a(fileUrl, bitRate, inputFile);
 
         // TODO: test validations
@@ -73,14 +78,15 @@ public class AudioApiTest {
      *
      * Automatically detect audio file format and convert it to MP3 format. Supports many input audio formats, including AAC, FLAC, M4A, MP2, MP3, OGG, WMA, and WAV. Uses 1 API call per 10 MB of file size. Also uses 1 API call per additional minute of processing time over 5 minutes, up to a maximum of 25 minutes total processing time. Maximum output file size is 50GB.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void audioConvertToMp3Test() {
+    void audioConvertToMp3Test() {
         String fileUrl = null;
         Integer bitRate = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.audioConvertToMp3(fileUrl, bitRate, inputFile);
 
         // TODO: test validations
@@ -91,14 +97,15 @@ public class AudioApiTest {
      *
      * Automatically detect audio file format and convert it to WAV format. Supports many input audio formats, including AAC, FLAC, M4A, MP2, MP3, OGG, WMA, and WAV. Uses 1 API call per 10 MB of file size. Also uses 1 API call per additional minute of processing time over 5 minutes, up to a maximum of 25 minutes total processing time. Maximum output file size is 50GB.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void audioConvertToWavTest() {
+    void audioConvertToWavTest() {
         String fileUrl = null;
         BigDecimal sampleRate = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.audioConvertToWav(fileUrl, sampleRate, inputFile);
 
         // TODO: test validations

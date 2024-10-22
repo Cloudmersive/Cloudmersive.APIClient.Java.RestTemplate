@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ConvertedPngPage
  */
-public class ConvertedPngPageTest {
+class ConvertedPngPageTest {
     private final ConvertedPngPage model = new ConvertedPngPage();
 
     /**
      * Model tests for ConvertedPngPage
      */
     @Test
-    public void testConvertedPngPage() {
+    void testConvertedPngPage() {
         // TODO: test ConvertedPngPage
     }
 
@@ -43,7 +40,7 @@ public class ConvertedPngPageTest {
      * Test the property 'pageNumber'
      */
     @Test
-    public void pageNumberTest() {
+    void pageNumberTest() {
         // TODO: test pageNumber
     }
 
@@ -51,7 +48,7 @@ public class ConvertedPngPageTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 

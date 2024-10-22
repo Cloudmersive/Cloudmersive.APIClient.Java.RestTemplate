@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for LeadEnrichmentRequest
  */
-public class LeadEnrichmentRequestTest {
+class LeadEnrichmentRequestTest {
     private final LeadEnrichmentRequest model = new LeadEnrichmentRequest();
 
     /**
      * Model tests for LeadEnrichmentRequest
      */
     @Test
-    public void testLeadEnrichmentRequest() {
+    void testLeadEnrichmentRequest() {
         // TODO: test LeadEnrichmentRequest
     }
 
@@ -43,7 +40,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'contactBusinessEmail'
      */
     @Test
-    public void contactBusinessEmailTest() {
+    void contactBusinessEmailTest() {
         // TODO: test contactBusinessEmail
     }
 
@@ -51,7 +48,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'contactFirstName'
      */
     @Test
-    public void contactFirstNameTest() {
+    void contactFirstNameTest() {
         // TODO: test contactFirstName
     }
 
@@ -59,7 +56,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'contactLastName'
      */
     @Test
-    public void contactLastNameTest() {
+    void contactLastNameTest() {
         // TODO: test contactLastName
     }
 
@@ -67,7 +64,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyName'
      */
     @Test
-    public void companyNameTest() {
+    void companyNameTest() {
         // TODO: test companyName
     }
 
@@ -75,7 +72,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyDomainName'
      */
     @Test
-    public void companyDomainNameTest() {
+    void companyDomainNameTest() {
         // TODO: test companyDomainName
     }
 
@@ -83,7 +80,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyHouseNumber'
      */
     @Test
-    public void companyHouseNumberTest() {
+    void companyHouseNumberTest() {
         // TODO: test companyHouseNumber
     }
 
@@ -91,7 +88,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyStreet'
      */
     @Test
-    public void companyStreetTest() {
+    void companyStreetTest() {
         // TODO: test companyStreet
     }
 
@@ -99,7 +96,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyCity'
      */
     @Test
-    public void companyCityTest() {
+    void companyCityTest() {
         // TODO: test companyCity
     }
 
@@ -107,7 +104,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyStateOrProvince'
      */
     @Test
-    public void companyStateOrProvinceTest() {
+    void companyStateOrProvinceTest() {
         // TODO: test companyStateOrProvince
     }
 
@@ -115,7 +112,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyPostalCode'
      */
     @Test
-    public void companyPostalCodeTest() {
+    void companyPostalCodeTest() {
         // TODO: test companyPostalCode
     }
 
@@ -123,7 +120,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyCountry'
      */
     @Test
-    public void companyCountryTest() {
+    void companyCountryTest() {
         // TODO: test companyCountry
     }
 
@@ -131,7 +128,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyCountryCode'
      */
     @Test
-    public void companyCountryCodeTest() {
+    void companyCountryCodeTest() {
         // TODO: test companyCountryCode
     }
 
@@ -139,7 +136,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyTelephone'
      */
     @Test
-    public void companyTelephoneTest() {
+    void companyTelephoneTest() {
         // TODO: test companyTelephone
     }
 
@@ -147,7 +144,7 @@ public class LeadEnrichmentRequestTest {
      * Test the property 'companyVATNumber'
      */
     @Test
-    public void companyVATNumberTest() {
+    void companyVATNumberTest() {
         // TODO: test companyVATNumber
     }
 

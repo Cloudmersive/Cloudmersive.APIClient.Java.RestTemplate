@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Sentence in a POS tag result
  */
-@ApiModel(description = "Sentence in a POS tag result")
 @JsonPropertyOrder({
   PosSentence.JSON_PROPERTY_WORDS
 })
-@JsonTypeName("PosSentence")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PosSentence {
   public static final String JSON_PROPERTY_WORDS = "Words";
-  private List<PosTaggedWord> words = null;
+  private List<PosTaggedWord> words = new ArrayList<>();
 
+  public PosSentence() {
+  }
 
   public PosSentence words(List<PosTaggedWord> words) {
     
@@ -49,18 +49,17 @@ public class PosSentence {
 
   public PosSentence addWordsItem(PosTaggedWord wordsItem) {
     if (this.words == null) {
-      this.words = new ArrayList<PosTaggedWord>();
+      this.words = new ArrayList<>();
     }
     this.words.add(wordsItem);
     return this;
   }
 
-   /**
+  /**
    * Words in the sentence
    * @return words
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Words in the sentence")
   @JsonProperty(JSON_PROPERTY_WORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class PosSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWords(List<PosTaggedWord> words) {
     this.words = words;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class PosSentence {
   public int hashCode() {
     return Objects.hash(words);
   }
-
 
   @Override
   public String toString() {

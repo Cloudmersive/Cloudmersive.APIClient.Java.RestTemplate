@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of validating a state
  */
-@ApiModel(description = "Result of validating a state")
 @JsonPropertyOrder({
   ValidateStateResponse.JSON_PROPERTY_VALID_STATE,
   ValidateStateResponse.JSON_PROPERTY_STATE_OR_PROVINCE,
   ValidateStateResponse.JSON_PROPERTY_LATITUDE,
   ValidateStateResponse.JSON_PROPERTY_LONGITUDE
 })
-@JsonTypeName("ValidateStateResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateStateResponse {
   public static final String JSON_PROPERTY_VALID_STATE = "ValidState";
   private Boolean validState;
@@ -49,6 +46,8 @@ public class ValidateStateResponse {
   public static final String JSON_PROPERTY_LONGITUDE = "Longitude";
   private Double longitude;
 
+  public ValidateStateResponse() {
+  }
 
   public ValidateStateResponse validState(Boolean validState) {
     
@@ -56,12 +55,11 @@ public class ValidateStateResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the address is valid, false otherwise
    * @return validState
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the address is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_STATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class ValidateStateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_STATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidState(Boolean validState) {
     this.validState = validState;
   }
-
 
   public ValidateStateResponse stateOrProvince(String stateOrProvince) {
     
@@ -81,12 +80,11 @@ public class ValidateStateResponse {
     return this;
   }
 
-   /**
+  /**
    * If valid; State or province corresponding to the input state name, such as &#39;CA&#39; or &#39;California&#39;
    * @return stateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If valid; State or province corresponding to the input state name, such as 'CA' or 'California'")
   @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class ValidateStateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   public ValidateStateResponse latitude(Double latitude) {
     
@@ -106,12 +105,11 @@ public class ValidateStateResponse {
     return this;
   }
 
-   /**
+  /**
    * If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise
    * @return latitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise")
   @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class ValidateStateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
-
 
   public ValidateStateResponse longitude(Double longitude) {
     
@@ -131,12 +130,11 @@ public class ValidateStateResponse {
     return this;
   }
 
-   /**
+  /**
    * If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise
    * @return longitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise")
   @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class ValidateStateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class ValidateStateResponse {
   public int hashCode() {
     return Objects.hash(validState, stateOrProvince, latitude, longitude);
   }
-
 
   @Override
   public String toString() {

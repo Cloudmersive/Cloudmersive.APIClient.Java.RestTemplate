@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an image similarity operation
  */
-@ApiModel(description = "Result of performing an image similarity operation")
 @JsonPropertyOrder({
   ImageSimilarityComparisonResponse.JSON_PROPERTY_SUCCESSFUL,
   ImageSimilarityComparisonResponse.JSON_PROPERTY_ARE_IMAGES_SIMILAR,
   ImageSimilarityComparisonResponse.JSON_PROPERTY_IMAGE_SIMILARITY_SCORE
 })
-@JsonTypeName("ImageSimilarityComparisonResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageSimilarityComparisonResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class ImageSimilarityComparisonResponse {
   public static final String JSON_PROPERTY_IMAGE_SIMILARITY_SCORE = "ImageSimilarityScore";
   private Double imageSimilarityScore;
 
+  public ImageSimilarityComparisonResponse() {
+  }
 
   public ImageSimilarityComparisonResponse successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class ImageSimilarityComparisonResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ImageSimilarityComparisonResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ImageSimilarityComparisonResponse areImagesSimilar(Boolean areImagesSimilar) {
     
@@ -77,12 +76,11 @@ public class ImageSimilarityComparisonResponse {
     return this;
   }
 
-   /**
+  /**
    * True if images are similar, false otherwise
    * @return areImagesSimilar
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if images are similar, false otherwise")
   @JsonProperty(JSON_PROPERTY_ARE_IMAGES_SIMILAR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ImageSimilarityComparisonResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ARE_IMAGES_SIMILAR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAreImagesSimilar(Boolean areImagesSimilar) {
     this.areImagesSimilar = areImagesSimilar;
   }
-
 
   public ImageSimilarityComparisonResponse imageSimilarityScore(Double imageSimilarityScore) {
     
@@ -102,12 +101,11 @@ public class ImageSimilarityComparisonResponse {
     return this;
   }
 
-   /**
+  /**
    * Similarity score between 0.0 and 1.0, with 1.0 meaning highly similar and 0.0 meaning highly dissimilar
    * @return imageSimilarityScore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Similarity score between 0.0 and 1.0, with 1.0 meaning highly similar and 0.0 meaning highly dissimilar")
   @JsonProperty(JSON_PROPERTY_IMAGE_SIMILARITY_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ImageSimilarityComparisonResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_SIMILARITY_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageSimilarityScore(Double imageSimilarityScore) {
     this.imageSimilarityScore = imageSimilarityScore;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ImageSimilarityComparisonResponse {
   public int hashCode() {
     return Objects.hash(successful, areImagesSimilar, imageSimilarityScore);
   }
-
 
   @Override
   public String toString() {

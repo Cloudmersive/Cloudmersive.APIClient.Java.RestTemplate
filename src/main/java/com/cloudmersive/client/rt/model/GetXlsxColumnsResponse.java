@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Columns command
  */
-@ApiModel(description = "Result of running a Get-Columns command")
 @JsonPropertyOrder({
   GetXlsxColumnsResponse.JSON_PROPERTY_SUCCESSFUL,
   GetXlsxColumnsResponse.JSON_PROPERTY_COLUMNS
 })
-@JsonTypeName("GetXlsxColumnsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxColumnsResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_COLUMNS = "Columns";
-  private List<XlsxSpreadsheetColumn> columns = null;
+  private List<XlsxSpreadsheetColumn> columns = new ArrayList<>();
 
+  public GetXlsxColumnsResponse() {
+  }
 
   public GetXlsxColumnsResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class GetXlsxColumnsResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class GetXlsxColumnsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetXlsxColumnsResponse columns(List<XlsxSpreadsheetColumn> columns) {
     
@@ -78,18 +78,17 @@ public class GetXlsxColumnsResponse {
 
   public GetXlsxColumnsResponse addColumnsItem(XlsxSpreadsheetColumn columnsItem) {
     if (this.columns == null) {
-      this.columns = new ArrayList<XlsxSpreadsheetColumn>();
+      this.columns = new ArrayList<>();
     }
     this.columns.add(columnsItem);
     return this;
   }
 
-   /**
+  /**
    * Spreadsheet Columns in the XLSX document
    * @return columns
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spreadsheet Columns in the XLSX document")
   @JsonProperty(JSON_PROPERTY_COLUMNS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class GetXlsxColumnsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLUMNS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColumns(List<XlsxSpreadsheetColumn> columns) {
     this.columns = columns;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class GetXlsxColumnsResponse {
   public int hashCode() {
     return Objects.hash(successful, columns);
   }
-
 
   @Override
   public String toString() {

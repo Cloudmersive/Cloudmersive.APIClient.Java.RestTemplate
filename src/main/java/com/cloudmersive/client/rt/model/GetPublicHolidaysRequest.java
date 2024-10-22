@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input parameter to a country validation request
  */
-@ApiModel(description = "Input parameter to a country validation request")
 @JsonPropertyOrder({
   GetPublicHolidaysRequest.JSON_PROPERTY_RAW_COUNTRY_INPUT,
   GetPublicHolidaysRequest.JSON_PROPERTY_YEAR
 })
-@JsonTypeName("GetPublicHolidaysRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetPublicHolidaysRequest {
   public static final String JSON_PROPERTY_RAW_COUNTRY_INPUT = "RawCountryInput";
   private String rawCountryInput;
@@ -41,6 +38,8 @@ public class GetPublicHolidaysRequest {
   public static final String JSON_PROPERTY_YEAR = "Year";
   private Integer year;
 
+  public GetPublicHolidaysRequest() {
+  }
 
   public GetPublicHolidaysRequest rawCountryInput(String rawCountryInput) {
     
@@ -48,12 +47,11 @@ public class GetPublicHolidaysRequest {
     return this;
   }
 
-   /**
+  /**
    * Two-letter code (FIPS 10-4 or ISO 3166-1) of the country; if not specified, defaults to United States
    * @return rawCountryInput
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter code (FIPS 10-4 or ISO 3166-1) of the country; if not specified, defaults to United States")
   @JsonProperty(JSON_PROPERTY_RAW_COUNTRY_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class GetPublicHolidaysRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RAW_COUNTRY_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRawCountryInput(String rawCountryInput) {
     this.rawCountryInput = rawCountryInput;
   }
-
 
   public GetPublicHolidaysRequest year(Integer year) {
     
@@ -73,12 +72,11 @@ public class GetPublicHolidaysRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional - the year in which to retrieve the holidays; if left blank (0) it will default to the current year
    * @return year
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the year in which to retrieve the holidays; if left blank (0) it will default to the current year")
   @JsonProperty(JSON_PROPERTY_YEAR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class GetPublicHolidaysRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_YEAR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setYear(Integer year) {
     this.year = year;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class GetPublicHolidaysRequest {
   public int hashCode() {
     return Objects.hash(rawCountryInput, year);
   }
-
 
   @Override
   public String toString() {

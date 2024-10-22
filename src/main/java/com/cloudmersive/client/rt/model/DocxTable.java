@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A table in a Word Document (DOCX) file
  */
-@ApiModel(description = "A table in a Word Document (DOCX) file")
 @JsonPropertyOrder({
   DocxTable.JSON_PROPERTY_TABLE_I_D,
   DocxTable.JSON_PROPERTY_PATH,
@@ -72,8 +71,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxTable.JSON_PROPERTY_TABLE_INDENTATION_MODE,
   DocxTable.JSON_PROPERTY_TABLE_INDENTATION_WIDTH
 })
-@JsonTypeName("DocxTable")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTable {
   public static final String JSON_PROPERTY_TABLE_I_D = "TableID";
   private String tableID;
@@ -88,7 +86,7 @@ public class DocxTable {
   private String widthType;
 
   public static final String JSON_PROPERTY_TABLE_ROWS = "TableRows";
-  private List<DocxTableRow> tableRows = null;
+  private List<DocxTableRow> tableRows = new ArrayList<>();
 
   public static final String JSON_PROPERTY_TOP_BORDER_TYPE = "TopBorderType";
   private String topBorderType;
@@ -192,6 +190,8 @@ public class DocxTable {
   public static final String JSON_PROPERTY_TABLE_INDENTATION_WIDTH = "TableIndentationWidth";
   private Integer tableIndentationWidth;
 
+  public DocxTable() {
+  }
 
   public DocxTable tableID(String tableID) {
     
@@ -199,12 +199,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * The ID of the table; leave blank for new tables
    * @return tableID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The ID of the table; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_TABLE_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,10 +212,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableID(String tableID) {
     this.tableID = tableID;
   }
-
 
   public DocxTable path(String path) {
     
@@ -224,12 +224,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this table object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this table object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -238,10 +237,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxTable width(String width) {
     
@@ -249,12 +249,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * The Width of the table, or 0 if not specified
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Width of the table, or 0 if not specified")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -263,10 +262,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(String width) {
     this.width = width;
   }
-
 
   public DocxTable widthType(String widthType) {
     
@@ -274,12 +274,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * The Width configuration type of the table
    * @return widthType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Width configuration type of the table")
   @JsonProperty(JSON_PROPERTY_WIDTH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -288,10 +287,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidthType(String widthType) {
     this.widthType = widthType;
   }
-
 
   public DocxTable tableRows(List<DocxTableRow> tableRows) {
     
@@ -301,18 +301,17 @@ public class DocxTable {
 
   public DocxTable addTableRowsItem(DocxTableRow tableRowsItem) {
     if (this.tableRows == null) {
-      this.tableRows = new ArrayList<DocxTableRow>();
+      this.tableRows = new ArrayList<>();
     }
     this.tableRows.add(tableRowsItem);
     return this;
   }
 
-   /**
+  /**
    * Rows in the table; this is where the contents is located
    * @return tableRows
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Rows in the table; this is where the contents is located")
   @JsonProperty(JSON_PROPERTY_TABLE_ROWS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -321,10 +320,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_ROWS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableRows(List<DocxTableRow> tableRows) {
     this.tableRows = tableRows;
   }
-
 
   public DocxTable topBorderType(String topBorderType) {
     
@@ -332,12 +332,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the top border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return topBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the top border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_TOP_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -346,10 +345,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopBorderType(String topBorderType) {
     this.topBorderType = topBorderType;
   }
-
 
   public DocxTable topBorderSize(Integer topBorderSize) {
     
@@ -357,12 +357,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return topBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_TOP_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -371,10 +370,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopBorderSize(Integer topBorderSize) {
     this.topBorderSize = topBorderSize;
   }
-
 
   public DocxTable topBorderSpace(Integer topBorderSpace) {
     
@@ -382,12 +382,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return topBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_TOP_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -396,10 +395,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopBorderSpace(Integer topBorderSpace) {
     this.topBorderSpace = topBorderSpace;
   }
-
 
   public DocxTable topBorderColor(String topBorderColor) {
     
@@ -407,12 +407,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return topBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_TOP_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -421,10 +420,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopBorderColor(String topBorderColor) {
     this.topBorderColor = topBorderColor;
   }
-
 
   public DocxTable bottomBorderType(String bottomBorderType) {
     
@@ -432,12 +432,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the bottom border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return bottomBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the bottom border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -446,10 +445,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomBorderType(String bottomBorderType) {
     this.bottomBorderType = bottomBorderType;
   }
-
 
   public DocxTable bottomBorderSize(Integer bottomBorderSize) {
     
@@ -457,12 +457,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return bottomBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -471,10 +470,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomBorderSize(Integer bottomBorderSize) {
     this.bottomBorderSize = bottomBorderSize;
   }
-
 
   public DocxTable bottomBorderSpace(Integer bottomBorderSpace) {
     
@@ -482,12 +482,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return bottomBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -496,10 +495,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomBorderSpace(Integer bottomBorderSpace) {
     this.bottomBorderSpace = bottomBorderSpace;
   }
-
 
   public DocxTable bottomBorderColor(String bottomBorderColor) {
     
@@ -507,12 +507,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return bottomBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -521,10 +520,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomBorderColor(String bottomBorderColor) {
     this.bottomBorderColor = bottomBorderColor;
   }
-
 
   public DocxTable leftBorderType(String leftBorderType) {
     
@@ -532,12 +532,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the left border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return leftBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the left border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_LEFT_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -546,10 +545,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftBorderType(String leftBorderType) {
     this.leftBorderType = leftBorderType;
   }
-
 
   public DocxTable leftBorderSize(Integer leftBorderSize) {
     
@@ -557,12 +557,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return leftBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_LEFT_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -571,10 +570,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftBorderSize(Integer leftBorderSize) {
     this.leftBorderSize = leftBorderSize;
   }
-
 
   public DocxTable leftBorderSpace(Integer leftBorderSpace) {
     
@@ -582,12 +582,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return leftBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_LEFT_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -596,10 +595,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftBorderSpace(Integer leftBorderSpace) {
     this.leftBorderSpace = leftBorderSpace;
   }
-
 
   public DocxTable leftBorderColor(String leftBorderColor) {
     
@@ -607,12 +607,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return leftBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_LEFT_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -621,10 +620,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftBorderColor(String leftBorderColor) {
     this.leftBorderColor = leftBorderColor;
   }
-
 
   public DocxTable rightBorderType(String rightBorderType) {
     
@@ -632,12 +632,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the right border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return rightBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the right border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -646,10 +645,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightBorderType(String rightBorderType) {
     this.rightBorderType = rightBorderType;
   }
-
 
   public DocxTable rightBorderSize(Integer rightBorderSize) {
     
@@ -657,12 +657,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return rightBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -671,10 +670,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightBorderSize(Integer rightBorderSize) {
     this.rightBorderSize = rightBorderSize;
   }
-
 
   public DocxTable rightBorderSpace(Integer rightBorderSpace) {
     
@@ -682,12 +682,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return rightBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -696,10 +695,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightBorderSpace(Integer rightBorderSpace) {
     this.rightBorderSpace = rightBorderSpace;
   }
-
 
   public DocxTable rightBorderColor(String rightBorderColor) {
     
@@ -707,12 +707,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return rightBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -721,10 +720,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightBorderColor(String rightBorderColor) {
     this.rightBorderColor = rightBorderColor;
   }
-
 
   public DocxTable cellHorizontalBorderType(String cellHorizontalBorderType) {
     
@@ -732,12 +732,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the cell horizontal border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return cellHorizontalBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the cell horizontal border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -746,10 +745,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellHorizontalBorderType(String cellHorizontalBorderType) {
     this.cellHorizontalBorderType = cellHorizontalBorderType;
   }
-
 
   public DocxTable cellHorizontalBorderSize(Integer cellHorizontalBorderSize) {
     
@@ -757,12 +757,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return cellHorizontalBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -771,10 +770,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellHorizontalBorderSize(Integer cellHorizontalBorderSize) {
     this.cellHorizontalBorderSize = cellHorizontalBorderSize;
   }
-
 
   public DocxTable cellHorizontalBorderSpace(Integer cellHorizontalBorderSpace) {
     
@@ -782,12 +782,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return cellHorizontalBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -796,10 +795,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellHorizontalBorderSpace(Integer cellHorizontalBorderSpace) {
     this.cellHorizontalBorderSpace = cellHorizontalBorderSpace;
   }
-
 
   public DocxTable cellHorizontalBorderColor(String cellHorizontalBorderColor) {
     
@@ -807,12 +807,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return cellHorizontalBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -821,10 +820,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_HORIZONTAL_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellHorizontalBorderColor(String cellHorizontalBorderColor) {
     this.cellHorizontalBorderColor = cellHorizontalBorderColor;
   }
-
 
   public DocxTable cellVerticalBorderType(String cellVerticalBorderType) {
     
@@ -832,12 +832,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the cell vertical border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return cellVerticalBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the cell vertical border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -846,10 +845,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellVerticalBorderType(String cellVerticalBorderType) {
     this.cellVerticalBorderType = cellVerticalBorderType;
   }
-
 
   public DocxTable cellVerticalBorderSize(Integer cellVerticalBorderSize) {
     
@@ -857,12 +857,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return cellVerticalBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -871,10 +870,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellVerticalBorderSize(Integer cellVerticalBorderSize) {
     this.cellVerticalBorderSize = cellVerticalBorderSize;
   }
-
 
   public DocxTable cellVerticalBorderSpace(Integer cellVerticalBorderSpace) {
     
@@ -882,12 +882,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return cellVerticalBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -896,10 +895,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellVerticalBorderSpace(Integer cellVerticalBorderSpace) {
     this.cellVerticalBorderSpace = cellVerticalBorderSpace;
   }
-
 
   public DocxTable cellVerticalBorderColor(String cellVerticalBorderColor) {
     
@@ -907,12 +907,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return cellVerticalBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -921,10 +920,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_VERTICAL_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellVerticalBorderColor(String cellVerticalBorderColor) {
     this.cellVerticalBorderColor = cellVerticalBorderColor;
   }
-
 
   public DocxTable startBorderType(String startBorderType) {
     
@@ -932,12 +932,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the start border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return startBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the start border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_START_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -946,10 +945,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_START_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStartBorderType(String startBorderType) {
     this.startBorderType = startBorderType;
   }
-
 
   public DocxTable startBorderSize(Integer startBorderSize) {
     
@@ -957,12 +957,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return startBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_START_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -971,10 +970,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_START_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStartBorderSize(Integer startBorderSize) {
     this.startBorderSize = startBorderSize;
   }
-
 
   public DocxTable startBorderSpace(Integer startBorderSpace) {
     
@@ -982,12 +982,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return startBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_START_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -996,10 +995,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_START_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStartBorderSpace(Integer startBorderSpace) {
     this.startBorderSpace = startBorderSpace;
   }
-
 
   public DocxTable startBorderColor(String startBorderColor) {
     
@@ -1007,12 +1007,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return startBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_START_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1021,10 +1020,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_START_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStartBorderColor(String startBorderColor) {
     this.startBorderColor = startBorderColor;
   }
-
 
   public DocxTable endBorderType(String endBorderType) {
     
@@ -1032,12 +1032,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Type for the end border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave
    * @return endBorderType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type for the end border - can be a Single, DashDotStroked, Dashed, DashSmallGap, DotDash, DotDotDash, Dotted, Double, DoubleWave, Inset, Nil, None, Outset, Thick, ThickThinLargeGap, ThickThinMediumGap, ThickThinSmallGap, ThinThickLargeGap, ThinThickMediumGap, ThinThickSmallGap, ThinThickThinLargeGap, ThinThickThinMediumGap, ThinThickThinSmallGap, ThreeDEmboss, ThreeDEngrave, Triple, Wave")
   @JsonProperty(JSON_PROPERTY_END_BORDER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1046,10 +1045,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_END_BORDER_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEndBorderType(String endBorderType) {
     this.endBorderType = endBorderType;
   }
-
 
   public DocxTable endBorderSize(Integer endBorderSize) {
     
@@ -1057,12 +1057,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Width of the border in points (1/72nd of an inch)
    * @return endBorderSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_END_BORDER_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1071,10 +1070,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_END_BORDER_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEndBorderSize(Integer endBorderSize) {
     this.endBorderSize = endBorderSize;
   }
-
 
   public DocxTable endBorderSpace(Integer endBorderSpace) {
     
@@ -1082,12 +1082,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Spacing around the border in points (1/72nd of an inch)
    * @return endBorderSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spacing around the border in points (1/72nd of an inch)")
   @JsonProperty(JSON_PROPERTY_END_BORDER_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1096,10 +1095,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_END_BORDER_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEndBorderSpace(Integer endBorderSpace) {
     this.endBorderSpace = endBorderSpace;
   }
-
 
   public DocxTable endBorderColor(String endBorderColor) {
     
@@ -1107,12 +1107,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * HTML-style color hex value (do not include a #)
    * @return endBorderColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML-style color hex value (do not include a #)")
   @JsonProperty(JSON_PROPERTY_END_BORDER_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1121,10 +1120,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_END_BORDER_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEndBorderColor(String endBorderColor) {
     this.endBorderColor = endBorderColor;
   }
-
 
   public DocxTable tableIndentationMode(String tableIndentationMode) {
     
@@ -1132,12 +1132,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Table indentation type
    * @return tableIndentationMode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Table indentation type")
   @JsonProperty(JSON_PROPERTY_TABLE_INDENTATION_MODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1146,10 +1145,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_INDENTATION_MODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableIndentationMode(String tableIndentationMode) {
     this.tableIndentationMode = tableIndentationMode;
   }
-
 
   public DocxTable tableIndentationWidth(Integer tableIndentationWidth) {
     
@@ -1157,12 +1157,11 @@ public class DocxTable {
     return this;
   }
 
-   /**
+  /**
    * Table indentation width
    * @return tableIndentationWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Table indentation width")
   @JsonProperty(JSON_PROPERTY_TABLE_INDENTATION_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1171,10 +1170,11 @@ public class DocxTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_INDENTATION_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableIndentationWidth(Integer tableIndentationWidth) {
     this.tableIndentationWidth = tableIndentationWidth;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -1230,7 +1230,6 @@ public class DocxTable {
   public int hashCode() {
     return Objects.hash(tableID, path, width, widthType, tableRows, topBorderType, topBorderSize, topBorderSpace, topBorderColor, bottomBorderType, bottomBorderSize, bottomBorderSpace, bottomBorderColor, leftBorderType, leftBorderSize, leftBorderSpace, leftBorderColor, rightBorderType, rightBorderSize, rightBorderSpace, rightBorderColor, cellHorizontalBorderType, cellHorizontalBorderSize, cellHorizontalBorderSpace, cellHorizontalBorderColor, cellVerticalBorderType, cellVerticalBorderSize, cellVerticalBorderSpace, cellVerticalBorderColor, startBorderType, startBorderSize, startBorderSpace, startBorderColor, endBorderType, endBorderSize, endBorderSpace, endBorderColor, tableIndentationMode, tableIndentationWidth);
   }
-
 
   @Override
   public String toString() {

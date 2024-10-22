@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single word in an OCR document
  */
-@ApiModel(description = "A single word in an OCR document")
 @JsonPropertyOrder({
   OcrWordElement.JSON_PROPERTY_WORD_TEXT,
   OcrWordElement.JSON_PROPERTY_LINE_NUMBER,
@@ -41,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   OcrWordElement.JSON_PROPERTY_PARAGRAPH_NUMBER,
   OcrWordElement.JSON_PROPERTY_PAGE_NUMBER
 })
-@JsonTypeName("OcrWordElement")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class OcrWordElement {
   public static final String JSON_PROPERTY_WORD_TEXT = "WordText";
   private String wordText;
@@ -77,6 +74,8 @@ public class OcrWordElement {
   public static final String JSON_PROPERTY_PAGE_NUMBER = "PageNumber";
   private Integer pageNumber;
 
+  public OcrWordElement() {
+  }
 
   public OcrWordElement wordText(String wordText) {
     
@@ -84,12 +83,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Text of the word
    * @return wordText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text of the word")
   @JsonProperty(JSON_PROPERTY_WORD_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +96,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWordText(String wordText) {
     this.wordText = wordText;
   }
-
 
   public OcrWordElement lineNumber(Integer lineNumber) {
     
@@ -109,12 +108,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Line number of the word
    * @return lineNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Line number of the word")
   @JsonProperty(JSON_PROPERTY_LINE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,10 +121,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLineNumber(Integer lineNumber) {
     this.lineNumber = lineNumber;
   }
-
 
   public OcrWordElement wordNumber(Integer wordNumber) {
     
@@ -134,12 +133,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Index of the word in the line
    * @return wordNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the word in the line")
   @JsonProperty(JSON_PROPERTY_WORD_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,10 +146,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWordNumber(Integer wordNumber) {
     this.wordNumber = wordNumber;
   }
-
 
   public OcrWordElement xleft(Integer xleft) {
     
@@ -159,12 +158,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * X location of the left edge of the word in pixels
    * @return xleft
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location of the left edge of the word in pixels")
   @JsonProperty(JSON_PROPERTY_XLEFT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -173,10 +171,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_XLEFT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXleft(Integer xleft) {
     this.xleft = xleft;
   }
-
 
   public OcrWordElement ytop(Integer ytop) {
     
@@ -184,12 +183,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Y location of the top edge of the word in pixels
    * @return ytop
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location of the top edge of the word in pixels")
   @JsonProperty(JSON_PROPERTY_YTOP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,10 +196,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_YTOP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setYtop(Integer ytop) {
     this.ytop = ytop;
   }
-
 
   public OcrWordElement width(Integer width) {
     
@@ -209,12 +208,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Width of the word in pixels
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the word in pixels")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,10 +221,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public OcrWordElement height(Integer height) {
     
@@ -234,12 +233,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Height of the word in pixels
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the word in pixels")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,10 +246,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public OcrWordElement confidenceLevel(Double confidenceLevel) {
     
@@ -259,12 +258,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Confidence level of the machine learning result; possible values are 0.0 (lowest accuracy) - 1.0 (highest accuracy)
    * @return confidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence level of the machine learning result; possible values are 0.0 (lowest accuracy) - 1.0 (highest accuracy)")
   @JsonProperty(JSON_PROPERTY_CONFIDENCE_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -273,10 +271,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIDENCE_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfidenceLevel(Double confidenceLevel) {
     this.confidenceLevel = confidenceLevel;
   }
-
 
   public OcrWordElement blockNumber(Integer blockNumber) {
     
@@ -284,12 +283,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Index of the containing block
    * @return blockNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the containing block")
   @JsonProperty(JSON_PROPERTY_BLOCK_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -298,10 +296,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BLOCK_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBlockNumber(Integer blockNumber) {
     this.blockNumber = blockNumber;
   }
-
 
   public OcrWordElement paragraphNumber(Integer paragraphNumber) {
     
@@ -309,12 +308,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Index of the containing paragraph
    * @return paragraphNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the containing paragraph")
   @JsonProperty(JSON_PROPERTY_PARAGRAPH_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -323,10 +321,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAGRAPH_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParagraphNumber(Integer paragraphNumber) {
     this.paragraphNumber = paragraphNumber;
   }
-
 
   public OcrWordElement pageNumber(Integer pageNumber) {
     
@@ -334,12 +333,11 @@ public class OcrWordElement {
     return this;
   }
 
-   /**
+  /**
    * Index of the containing page
    * @return pageNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the containing page")
   @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -348,10 +346,11 @@ public class OcrWordElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -379,7 +378,6 @@ public class OcrWordElement {
   public int hashCode() {
     return Objects.hash(wordText, lineNumber, wordNumber, xleft, ytop, width, height, confidenceLevel, blockNumber, paragraphNumber, pageNumber);
   }
-
 
   @Override
   public String toString() {

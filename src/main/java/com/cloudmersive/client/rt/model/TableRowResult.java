@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * One row of data in the resulting table
  */
-@ApiModel(description = "One row of data in the resulting table")
 @JsonPropertyOrder({
   TableRowResult.JSON_PROPERTY_TABLE_ROW_CELLS_RESULT
 })
-@JsonTypeName("TableRowResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TableRowResult {
   public static final String JSON_PROPERTY_TABLE_ROW_CELLS_RESULT = "TableRowCellsResult";
-  private List<TableCellResult> tableRowCellsResult = null;
+  private List<TableCellResult> tableRowCellsResult = new ArrayList<>();
 
+  public TableRowResult() {
+  }
 
   public TableRowResult tableRowCellsResult(List<TableCellResult> tableRowCellsResult) {
     
@@ -49,18 +49,17 @@ public class TableRowResult {
 
   public TableRowResult addTableRowCellsResultItem(TableCellResult tableRowCellsResultItem) {
     if (this.tableRowCellsResult == null) {
-      this.tableRowCellsResult = new ArrayList<TableCellResult>();
+      this.tableRowCellsResult = new ArrayList<>();
     }
     this.tableRowCellsResult.add(tableRowCellsResultItem);
     return this;
   }
 
-   /**
+  /**
    * Table cells in this row result
    * @return tableRowCellsResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Table cells in this row result")
   @JsonProperty(JSON_PROPERTY_TABLE_ROW_CELLS_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class TableRowResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_ROW_CELLS_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableRowCellsResult(List<TableCellResult> tableRowCellsResult) {
     this.tableRowCellsResult = tableRowCellsResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class TableRowResult {
   public int hashCode() {
     return Objects.hash(tableRowCellsResult);
   }
-
 
   @Override
   public String toString() {

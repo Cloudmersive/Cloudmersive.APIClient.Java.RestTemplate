@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Get Tables by Index request
  */
-@ApiModel(description = "Input to a Get Tables by Index request")
 @JsonPropertyOrder({
   GetDocxTableByIndexRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   GetDocxTableByIndexRequest.JSON_PROPERTY_INPUT_FILE_URL,
   GetDocxTableByIndexRequest.JSON_PROPERTY_TABLE_INDEX
 })
-@JsonTypeName("GetDocxTableByIndexRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxTableByIndexRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -45,6 +42,8 @@ public class GetDocxTableByIndexRequest {
   public static final String JSON_PROPERTY_TABLE_INDEX = "TableIndex";
   private Integer tableIndex;
 
+  public GetDocxTableByIndexRequest() {
+  }
 
   public GetDocxTableByIndexRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -52,12 +51,11 @@ public class GetDocxTableByIndexRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class GetDocxTableByIndexRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public GetDocxTableByIndexRequest inputFileUrl(String inputFileUrl) {
     
@@ -77,12 +76,11 @@ public class GetDocxTableByIndexRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class GetDocxTableByIndexRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public GetDocxTableByIndexRequest tableIndex(Integer tableIndex) {
     
@@ -102,12 +101,11 @@ public class GetDocxTableByIndexRequest {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the table to retrieve from the Word Document
    * @return tableIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the table to retrieve from the Word Document")
   @JsonProperty(JSON_PROPERTY_TABLE_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class GetDocxTableByIndexRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableIndex(Integer tableIndex) {
     this.tableIndex = tableIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class GetDocxTableByIndexRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, tableIndex);
   }
-
 
   @Override
   public String toString() {

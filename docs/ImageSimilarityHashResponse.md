@@ -3,12 +3,13 @@
 # ImageSimilarityHashResponse
 
 Result of performing an image hash operation
+
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**successful** | **Boolean** | True if successful, false otherwise |  [optional]
-**imageHash** | **String** | String representing image perceptual hash value; values with smaller Hamming Distances are more similar than ones with large Hamming Distances |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**successful** | **Boolean** | True if successful, false otherwise |  [optional] |
+|**imageHash** | **String** | String representing image perceptual hash value; values with smaller Hamming Distances are more similar than ones with large Hamming Distances |  [optional] |
 
 
 

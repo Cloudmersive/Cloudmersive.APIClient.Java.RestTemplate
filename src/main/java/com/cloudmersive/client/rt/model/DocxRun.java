@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A content run in a Word Document (DOCX) file
  */
-@ApiModel(description = "A content run in a Word Document (DOCX) file")
 @JsonPropertyOrder({
   DocxRun.JSON_PROPERTY_RUN_INDEX,
   DocxRun.JSON_PROPERTY_PATH,
@@ -41,8 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxRun.JSON_PROPERTY_FONT_FAMILY,
   DocxRun.JSON_PROPERTY_FONT_SIZE
 })
-@JsonTypeName("DocxRun")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxRun {
   public static final String JSON_PROPERTY_RUN_INDEX = "RunIndex";
   private Integer runIndex;
@@ -51,7 +49,7 @@ public class DocxRun {
   private String path;
 
   public static final String JSON_PROPERTY_TEXT_ITEMS = "TextItems";
-  private List<DocxText> textItems = null;
+  private List<DocxText> textItems = new ArrayList<>();
 
   public static final String JSON_PROPERTY_BOLD = "Bold";
   private Boolean bold;
@@ -68,6 +66,8 @@ public class DocxRun {
   public static final String JSON_PROPERTY_FONT_SIZE = "FontSize";
   private String fontSize;
 
+  public DocxRun() {
+  }
 
   public DocxRun runIndex(Integer runIndex) {
     
@@ -75,12 +75,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * Index of the run, 0-based
    * @return runIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the run, 0-based")
   @JsonProperty(JSON_PROPERTY_RUN_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -89,10 +88,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RUN_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRunIndex(Integer runIndex) {
     this.runIndex = runIndex;
   }
-
 
   public DocxRun path(String path) {
     
@@ -100,12 +100,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this Run object; leave blank for creation
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this Run object; leave blank for creation")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,10 +113,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxRun textItems(List<DocxText> textItems) {
     
@@ -127,18 +127,17 @@ public class DocxRun {
 
   public DocxRun addTextItemsItem(DocxText textItemsItem) {
     if (this.textItems == null) {
-      this.textItems = new ArrayList<DocxText>();
+      this.textItems = new ArrayList<>();
     }
     this.textItems.add(textItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Text items inside the run; this is where the actual text content is stored
    * @return textItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text items inside the run; this is where the actual text content is stored")
   @JsonProperty(JSON_PROPERTY_TEXT_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -147,10 +146,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextItems(List<DocxText> textItems) {
     this.textItems = textItems;
   }
-
 
   public DocxRun bold(Boolean bold) {
     
@@ -158,12 +158,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * True to make the text bold, false otherwise
    * @return bold
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True to make the text bold, false otherwise")
   @JsonProperty(JSON_PROPERTY_BOLD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,10 +171,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOLD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBold(Boolean bold) {
     this.bold = bold;
   }
-
 
   public DocxRun italic(Boolean italic) {
     
@@ -183,12 +183,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * True to make the text italic, false otherwise
    * @return italic
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True to make the text italic, false otherwise")
   @JsonProperty(JSON_PROPERTY_ITALIC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,10 +196,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ITALIC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setItalic(Boolean italic) {
     this.italic = italic;
   }
-
 
   public DocxRun underline(String underline) {
     
@@ -208,12 +208,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * Underline mode for the text; possible values are: Words, Double, Thick, Dotted, DottedHeavy, Dash, DashedHeavy, DashLong, DashLongHeavy, DotDash, DashDotHeavy, DotDotDash, DashDotDotHeavy, Wave, WavyHeavy, WavyDouble, None
    * @return underline
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Underline mode for the text; possible values are: Words, Double, Thick, Dotted, DottedHeavy, Dash, DashedHeavy, DashLong, DashLongHeavy, DotDash, DashDotHeavy, DotDotDash, DashDotDotHeavy, Wave, WavyHeavy, WavyDouble, None")
   @JsonProperty(JSON_PROPERTY_UNDERLINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,10 +221,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_UNDERLINE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUnderline(String underline) {
     this.underline = underline;
   }
-
 
   public DocxRun fontFamily(String fontFamily) {
     
@@ -233,12 +233,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * Font Family name for the text, e.g. \&quot;Arial\&quot; or \&quot;Times New Roman\&quot;
    * @return fontFamily
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Font Family name for the text, e.g. \"Arial\" or \"Times New Roman\"")
   @JsonProperty(JSON_PROPERTY_FONT_FAMILY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -247,10 +246,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FONT_FAMILY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFontFamily(String fontFamily) {
     this.fontFamily = fontFamily;
   }
-
 
   public DocxRun fontSize(String fontSize) {
     
@@ -258,12 +258,11 @@ public class DocxRun {
     return this;
   }
 
-   /**
+  /**
    * Font size in font points (e.g. \&quot;24\&quot;)
    * @return fontSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Font size in font points (e.g. \"24\")")
   @JsonProperty(JSON_PROPERTY_FONT_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -272,10 +271,11 @@ public class DocxRun {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FONT_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -300,7 +300,6 @@ public class DocxRun {
   public int hashCode() {
     return Objects.hash(runIndex, path, textItems, bold, italic, underline, fontFamily, fontSize);
   }
-
 
   @Override
   public String toString() {

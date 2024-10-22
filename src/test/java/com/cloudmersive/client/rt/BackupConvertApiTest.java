@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import java.io.File;
 import com.cloudmersive.client.rt.model.MssqlBakEnumerateTablesResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for BackupConvertApi
  */
-@Ignore
-public class BackupConvertApiTest {
+@Disabled
+class BackupConvertApiTest {
 
     private final BackupConvertApi api = new BackupConvertApi();
 
@@ -37,12 +40,13 @@ public class BackupConvertApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void dataintegrationBackupConvertMssqlBakGetTablesPostTest() {
+    void dataintegrationBackupConvertMssqlBakGetTablesPostTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         MssqlBakEnumerateTablesResult response = api.dataintegrationBackupConvertMssqlBakGetTablesPost(inputFile);
 
         // TODO: test validations
@@ -53,14 +57,15 @@ public class BackupConvertApiTest {
      *
      * Input the target table to extract the data as a CSV format file.  Supports a wide array of SQL Server .BAK files and SQL Server backup file versions.  Consumes 1 API call per MB of input data.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void dataintegrationBackupConvertMssqlBakToCsvPostTest() {
+    void dataintegrationBackupConvertMssqlBakToCsvPostTest() {
         String tableName = null;
         org.springframework.core.io.Resource inputFile = null;
-        File response = api.dataintegrationBackupConvertMssqlBakToCsvPost(tableName, inputFile);
+
+        org.springframework.core.io.Resource response = api.dataintegrationBackupConvertMssqlBakToCsvPost(tableName, inputFile);
 
         // TODO: test validations
     }

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CreateSettingRequest
  */
-public class CreateSettingRequestTest {
+class CreateSettingRequestTest {
     private final CreateSettingRequest model = new CreateSettingRequest();
 
     /**
      * Model tests for CreateSettingRequest
      */
     @Test
-    public void testCreateSettingRequest() {
+    void testCreateSettingRequest() {
         // TODO: test CreateSettingRequest
     }
 
@@ -43,7 +40,7 @@ public class CreateSettingRequestTest {
      * Test the property 'bucketID'
      */
     @Test
-    public void bucketIDTest() {
+    void bucketIDTest() {
         // TODO: test bucketID
     }
 
@@ -51,7 +48,7 @@ public class CreateSettingRequestTest {
      * Test the property 'bucketSecretKey'
      */
     @Test
-    public void bucketSecretKeyTest() {
+    void bucketSecretKeyTest() {
         // TODO: test bucketSecretKey
     }
 
@@ -59,7 +56,7 @@ public class CreateSettingRequestTest {
      * Test the property 'settingName'
      */
     @Test
-    public void settingNameTest() {
+    void settingNameTest() {
         // TODO: test settingName
     }
 
@@ -67,7 +64,7 @@ public class CreateSettingRequestTest {
      * Test the property 'settingType'
      */
     @Test
-    public void settingTypeTest() {
+    void settingTypeTest() {
         // TODO: test settingType
     }
 
@@ -75,7 +72,7 @@ public class CreateSettingRequestTest {
      * Test the property 'settingValue'
      */
     @Test
-    public void settingValueTest() {
+    void settingValueTest() {
         // TODO: test settingValue
     }
 
@@ -83,7 +80,7 @@ public class CreateSettingRequestTest {
      * Test the property 'settingDescription'
      */
     @Test
-    public void settingDescriptionTest() {
+    void settingDescriptionTest() {
         // TODO: test settingDescription
     }
 
@@ -91,7 +88,7 @@ public class CreateSettingRequestTest {
      * Test the property 'settingTags'
      */
     @Test
-    public void settingTagsTest() {
+    void settingTagsTest() {
         // TODO: test settingTags
     }
 

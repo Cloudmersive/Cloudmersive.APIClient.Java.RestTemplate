@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Matching product for the input barcode
  */
-@ApiModel(description = "Matching product for the input barcode")
 @JsonPropertyOrder({
   ProductMatch.JSON_PROPERTY_E_A_N,
   ProductMatch.JSON_PROPERTY_TITLE
 })
-@JsonTypeName("ProductMatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:34.231-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:12.746969900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ProductMatch {
   public static final String JSON_PROPERTY_E_A_N = "EAN";
   private String EAN;
@@ -41,6 +38,8 @@ public class ProductMatch {
   public static final String JSON_PROPERTY_TITLE = "Title";
   private String title;
 
+  public ProductMatch() {
+  }
 
   public ProductMatch EAN(String EAN) {
     
@@ -48,12 +47,11 @@ public class ProductMatch {
     return this;
   }
 
-   /**
+  /**
    * EAN code for the product
    * @return EAN
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "EAN code for the product")
   @JsonProperty(JSON_PROPERTY_E_A_N)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ProductMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_E_A_N)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEAN(String EAN) {
     this.EAN = EAN;
   }
-
 
   public ProductMatch title(String title) {
     
@@ -73,12 +72,11 @@ public class ProductMatch {
     return this;
   }
 
-   /**
+  /**
    * Title of the product
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Title of the product")
   @JsonProperty(JSON_PROPERTY_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ProductMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ProductMatch {
   public int hashCode() {
     return Objects.hash(EAN, title);
   }
-
 
   @Override
   public String toString() {

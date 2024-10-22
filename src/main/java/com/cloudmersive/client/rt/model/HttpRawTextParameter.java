@@ -21,20 +21,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Raw text parameter that defines the entire body of the HTTP payload; cannot be used with other parameter types
  */
-@ApiModel(description = "Raw text parameter that defines the entire body of the HTTP payload; cannot be used with other parameter types")
 @JsonPropertyOrder({
   HttpRawTextParameter.JSON_PROPERTY_PARAMETER_VALUE,
   HttpRawTextParameter.JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK
 })
-@JsonTypeName("HttpRawTextParameter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpRawTextParameter {
   public static final String JSON_PROPERTY_PARAMETER_VALUE = "ParameterValue";
   private String parameterValue;
@@ -42,6 +39,8 @@ public class HttpRawTextParameter {
   public static final String JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK = "UseOutputFromPreviousTask";
   private TaskOutputReference useOutputFromPreviousTask;
 
+  public HttpRawTextParameter() {
+  }
 
   public HttpRawTextParameter parameterValue(String parameterValue) {
     
@@ -49,12 +48,11 @@ public class HttpRawTextParameter {
     return this;
   }
 
-   /**
+  /**
    * Text value of the parameter
    * @return parameterValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text value of the parameter")
   @JsonProperty(JSON_PROPERTY_PARAMETER_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -63,10 +61,11 @@ public class HttpRawTextParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAMETER_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParameterValue(String parameterValue) {
     this.parameterValue = parameterValue;
   }
-
 
   public HttpRawTextParameter useOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     
@@ -74,12 +73,11 @@ public class HttpRawTextParameter {
     return this;
   }
 
-   /**
+  /**
    * Get useOutputFromPreviousTask
    * @return useOutputFromPreviousTask
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,10 +86,11 @@ public class HttpRawTextParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUseOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     this.useOutputFromPreviousTask = useOutputFromPreviousTask;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -110,7 +109,6 @@ public class HttpRawTextParameter {
   public int hashCode() {
     return Objects.hash(parameterValue, useOutputFromPreviousTask);
   }
-
 
   @Override
   public String toString() {

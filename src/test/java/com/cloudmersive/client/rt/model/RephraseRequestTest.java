@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for RephraseRequest
  */
-public class RephraseRequestTest {
+class RephraseRequestTest {
     private final RephraseRequest model = new RephraseRequest();
 
     /**
      * Model tests for RephraseRequest
      */
     @Test
-    public void testRephraseRequest() {
+    void testRephraseRequest() {
         // TODO: test RephraseRequest
     }
 
@@ -43,7 +40,7 @@ public class RephraseRequestTest {
      * Test the property 'textToTranslate'
      */
     @Test
-    public void textToTranslateTest() {
+    void textToTranslateTest() {
         // TODO: test textToTranslate
     }
 
@@ -51,7 +48,7 @@ public class RephraseRequestTest {
      * Test the property 'targetRephrasingCount'
      */
     @Test
-    public void targetRephrasingCountTest() {
+    void targetRephrasingCountTest() {
         // TODO: test targetRephrasingCount
     }
 

@@ -21,22 +21,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A person identified in an image age classification operation
  */
-@ApiModel(description = "A person identified in an image age classification operation")
 @JsonPropertyOrder({
   PersonWithAge.JSON_PROPERTY_FACE_LOCATION,
   PersonWithAge.JSON_PROPERTY_AGE_CLASSIFICATION_CONFIDENCE,
   PersonWithAge.JSON_PROPERTY_AGE_CLASS,
   PersonWithAge.JSON_PROPERTY_AGE
 })
-@JsonTypeName("PersonWithAge")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PersonWithAge {
   public static final String JSON_PROPERTY_FACE_LOCATION = "FaceLocation";
   private Face faceLocation;
@@ -50,6 +47,8 @@ public class PersonWithAge {
   public static final String JSON_PROPERTY_AGE = "Age";
   private Double age;
 
+  public PersonWithAge() {
+  }
 
   public PersonWithAge faceLocation(Face faceLocation) {
     
@@ -57,12 +56,11 @@ public class PersonWithAge {
     return this;
   }
 
-   /**
+  /**
    * Get faceLocation
    * @return faceLocation
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_FACE_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -71,10 +69,11 @@ public class PersonWithAge {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FACE_LOCATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFaceLocation(Face faceLocation) {
     this.faceLocation = faceLocation;
   }
-
 
   public PersonWithAge ageClassificationConfidence(Double ageClassificationConfidence) {
     
@@ -82,12 +81,11 @@ public class PersonWithAge {
     return this;
   }
 
-   /**
+  /**
    * Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results
    * @return ageClassificationConfidence
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence level of age classification; possible values are between 0.0 and 1.0; higher is better, with values &gt; 0.50 being high confidence results")
   @JsonProperty(JSON_PROPERTY_AGE_CLASSIFICATION_CONFIDENCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +94,11 @@ public class PersonWithAge {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AGE_CLASSIFICATION_CONFIDENCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAgeClassificationConfidence(Double ageClassificationConfidence) {
     this.ageClassificationConfidence = ageClassificationConfidence;
   }
-
 
   public PersonWithAge ageClass(String ageClass) {
     
@@ -107,12 +106,11 @@ public class PersonWithAge {
     return this;
   }
 
-   /**
+  /**
    * The person&#39;s age range classification result in years; possible values are \&quot;0-2\&quot;, \&quot;4-6\&quot;, \&quot;8-13\&quot;, \&quot;15-20\&quot;, \&quot;25-32\&quot;, \&quot;38-43\&quot;, \&quot;48-53\&quot;, \&quot;60+\&quot;
    * @return ageClass
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The person's age range classification result in years; possible values are \"0-2\", \"4-6\", \"8-13\", \"15-20\", \"25-32\", \"38-43\", \"48-53\", \"60+\"")
   @JsonProperty(JSON_PROPERTY_AGE_CLASS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +119,11 @@ public class PersonWithAge {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AGE_CLASS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAgeClass(String ageClass) {
     this.ageClass = ageClass;
   }
-
 
   public PersonWithAge age(Double age) {
     
@@ -132,12 +131,11 @@ public class PersonWithAge {
     return this;
   }
 
-   /**
+  /**
    * Get age
    * @return age
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_AGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +144,11 @@ public class PersonWithAge {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAge(Double age) {
     this.age = age;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -170,7 +169,6 @@ public class PersonWithAge {
   public int hashCode() {
     return Objects.hash(faceLocation, ageClassificationConfidence, ageClass, age);
   }
-
 
   @Override
   public String toString() {

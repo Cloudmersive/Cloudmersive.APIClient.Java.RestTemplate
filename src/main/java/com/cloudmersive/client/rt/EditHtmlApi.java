@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import java.io.File;
 import com.cloudmersive.client.rt.model.HtmlGetLanguageResult;
@@ -29,26 +30,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.EditHtmlApi")
-public class EditHtmlApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class EditHtmlApi extends BaseApi {
 
     public EditHtmlApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public EditHtmlApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -76,41 +66,40 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlAppendHeaderTagWithHttpInfo(String htmlTag, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'htmlTag' is set
         if (htmlTag == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'htmlTag' when calling editHtmlHtmlAppendHeaderTag");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/head/append/tag", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (htmlTag != null)
-        headerParams.add("htmlTag", apiClient.parameterToString(htmlTag));
+        localVarHeaderParams.add("htmlTag", apiClient.parameterToString(htmlTag));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/append/tag", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Append a Heading to an HTML Document
@@ -141,45 +130,44 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlAppendHeadingWithHttpInfo(String headingText, String inputFileUrl, Integer headingSize, String cssStyle, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'headingText' is set
         if (headingText == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'headingText' when calling editHtmlHtmlAppendHeading");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/append/heading", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (headingText != null)
-        headerParams.add("headingText", apiClient.parameterToString(headingText));
+        localVarHeaderParams.add("headingText", apiClient.parameterToString(headingText));
         if (headingSize != null)
-        headerParams.add("headingSize", apiClient.parameterToString(headingSize));
+        localVarHeaderParams.add("headingSize", apiClient.parameterToString(headingSize));
         if (cssStyle != null)
-        headerParams.add("cssStyle", apiClient.parameterToString(cssStyle));
+        localVarHeaderParams.add("cssStyle", apiClient.parameterToString(cssStyle));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/append/heading", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Append an Image to an HTML Document from a URL
@@ -208,43 +196,42 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlAppendImageFromUrlWithHttpInfo(String imageUrl, String inputFileUrl, String cssStyle, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageUrl' is set
         if (imageUrl == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageUrl' when calling editHtmlHtmlAppendImageFromUrl");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/append/image/from-url", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (imageUrl != null)
-        headerParams.add("imageUrl", apiClient.parameterToString(imageUrl));
+        localVarHeaderParams.add("imageUrl", apiClient.parameterToString(imageUrl));
         if (cssStyle != null)
-        headerParams.add("cssStyle", apiClient.parameterToString(cssStyle));
+        localVarHeaderParams.add("cssStyle", apiClient.parameterToString(cssStyle));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/append/image/from-url", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Append a Base64 Inline Image to an HTML Document
@@ -277,42 +264,41 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlAppendImageInlineWithHttpInfo(String inputFileUrl, String imageUrl, String cssStyle, String imageExtension, org.springframework.core.io.Resource inputFile, org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/convert/edit/html/append/image/inline", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (imageUrl != null)
-        headerParams.add("imageUrl", apiClient.parameterToString(imageUrl));
+        localVarHeaderParams.add("imageUrl", apiClient.parameterToString(imageUrl));
         if (cssStyle != null)
-        headerParams.add("cssStyle", apiClient.parameterToString(cssStyle));
+        localVarHeaderParams.add("cssStyle", apiClient.parameterToString(cssStyle));
         if (imageExtension != null)
-        headerParams.add("imageExtension", apiClient.parameterToString(imageExtension));
+        localVarHeaderParams.add("imageExtension", apiClient.parameterToString(imageExtension));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/append/image/inline", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Append a Paragraph to an HTML Document
@@ -341,43 +327,42 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlAppendParagraphWithHttpInfo(String paragraphText, String inputFileUrl, String cssStyle, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'paragraphText' is set
         if (paragraphText == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'paragraphText' when calling editHtmlHtmlAppendParagraph");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/append/paragraph", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (paragraphText != null)
-        headerParams.add("paragraphText", apiClient.parameterToString(paragraphText));
+        localVarHeaderParams.add("paragraphText", apiClient.parameterToString(paragraphText));
         if (cssStyle != null)
-        headerParams.add("cssStyle", apiClient.parameterToString(cssStyle));
+        localVarHeaderParams.add("cssStyle", apiClient.parameterToString(cssStyle));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/append/paragraph", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Create a Blank HTML Document
@@ -408,37 +393,36 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlCreateBlankDocumentWithHttpInfo(String title, String cssUrl, String cssInline, String javascriptUrl, String javascriptInline) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/convert/edit/html/create/blank", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (title != null)
-        headerParams.add("title", apiClient.parameterToString(title));
+        localVarHeaderParams.add("title", apiClient.parameterToString(title));
         if (cssUrl != null)
-        headerParams.add("cssUrl", apiClient.parameterToString(cssUrl));
+        localVarHeaderParams.add("cssUrl", apiClient.parameterToString(cssUrl));
         if (cssInline != null)
-        headerParams.add("cssInline", apiClient.parameterToString(cssInline));
+        localVarHeaderParams.add("cssInline", apiClient.parameterToString(cssInline));
         if (javascriptUrl != null)
-        headerParams.add("javascriptUrl", apiClient.parameterToString(javascriptUrl));
+        localVarHeaderParams.add("javascriptUrl", apiClient.parameterToString(javascriptUrl));
         if (javascriptInline != null)
-        headerParams.add("javascriptInline", apiClient.parameterToString(javascriptInline));
+        localVarHeaderParams.add("javascriptInline", apiClient.parameterToString(javascriptInline));
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = {  };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/create/blank", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Gets the language for the HTML document
@@ -463,34 +447,33 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<HtmlGetLanguageResult> editHtmlHtmlGetLanguageWithHttpInfo(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/convert/edit/html/head/get/language", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<HtmlGetLanguageResult> returnType = new ParameterizedTypeReference<HtmlGetLanguageResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<HtmlGetLanguageResult> localReturnType = new ParameterizedTypeReference<HtmlGetLanguageResult>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/get/language", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Extract resolved link URLs from HTML File
@@ -517,36 +500,35 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<HtmlGetLinksResponse> editHtmlHtmlGetLinksWithHttpInfo(String inputFileUrl, String baseUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/convert/edit/html/extract/links", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (baseUrl != null)
-        headerParams.add("baseUrl", apiClient.parameterToString(baseUrl));
+        localVarHeaderParams.add("baseUrl", apiClient.parameterToString(baseUrl));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<HtmlGetLinksResponse> returnType = new ParameterizedTypeReference<HtmlGetLinksResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<HtmlGetLinksResponse> localReturnType = new ParameterizedTypeReference<HtmlGetLinksResponse>() {};
+        return apiClient.invokeAPI("/convert/edit/html/extract/links", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Gets the rel canonical URL for the HTML document
@@ -571,34 +553,33 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<HtmlGetRelCanonicalUrlResult> editHtmlHtmlGetRelCanonicalWithHttpInfo(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/convert/edit/html/head/get/rel-canonical-url", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<HtmlGetRelCanonicalUrlResult> returnType = new ParameterizedTypeReference<HtmlGetRelCanonicalUrlResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<HtmlGetRelCanonicalUrlResult> localReturnType = new ParameterizedTypeReference<HtmlGetRelCanonicalUrlResult>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/get/rel-canonical-url", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Gets the sitemap URL for the HTML document
@@ -623,34 +604,33 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<HtmlGetSitemapUrlResult> editHtmlHtmlGetSitemapWithHttpInfo(String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
-        String path = apiClient.expandPath("/convert/edit/html/head/get/sitemap-url", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<HtmlGetSitemapUrlResult> returnType = new ParameterizedTypeReference<HtmlGetSitemapUrlResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<HtmlGetSitemapUrlResult> localReturnType = new ParameterizedTypeReference<HtmlGetSitemapUrlResult>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/get/sitemap-url", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Sets the language for the HTML document
@@ -677,41 +657,40 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlSetLanguageWithHttpInfo(String languageCode, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'languageCode' is set
         if (languageCode == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'languageCode' when calling editHtmlHtmlSetLanguage");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/head/set/language", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (languageCode != null)
-        headerParams.add("languageCode", apiClient.parameterToString(languageCode));
+        localVarHeaderParams.add("languageCode", apiClient.parameterToString(languageCode));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/set/language", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Sets the rel canonical URL for the HTML document
@@ -738,41 +717,40 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlSetRelCanonicalWithHttpInfo(String canonicalUrl, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'canonicalUrl' is set
         if (canonicalUrl == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'canonicalUrl' when calling editHtmlHtmlSetRelCanonical");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/head/set/rel-canonical-url", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (canonicalUrl != null)
-        headerParams.add("canonicalUrl", apiClient.parameterToString(canonicalUrl));
+        localVarHeaderParams.add("canonicalUrl", apiClient.parameterToString(canonicalUrl));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/set/rel-canonical-url", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Sets the sitemap URL for the HTML document
@@ -799,40 +777,64 @@ public class EditHtmlApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> editHtmlHtmlSetSitemapUrlWithHttpInfo(String sitemapUrl, String inputFileUrl, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'sitemapUrl' is set
         if (sitemapUrl == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'sitemapUrl' when calling editHtmlHtmlSetSitemapUrl");
         }
         
-        String path = apiClient.expandPath("/convert/edit/html/head/set/sitemap-url", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFileUrl != null)
-        headerParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
+        localVarHeaderParams.add("inputFileUrl", apiClient.parameterToString(inputFileUrl));
         if (sitemapUrl != null)
-        headerParams.add("sitemapUrl", apiClient.parameterToString(sitemapUrl));
+        localVarHeaderParams.add("sitemapUrl", apiClient.parameterToString(sitemapUrl));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/edit/html/head/set/sitemap-url", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

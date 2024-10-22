@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateUrlResponseFull
  */
-public class ValidateUrlResponseFullTest {
+class ValidateUrlResponseFullTest {
     private final ValidateUrlResponseFull model = new ValidateUrlResponseFull();
 
     /**
      * Model tests for ValidateUrlResponseFull
      */
     @Test
-    public void testValidateUrlResponseFull() {
+    void testValidateUrlResponseFull() {
         // TODO: test ValidateUrlResponseFull
     }
 
@@ -43,7 +40,7 @@ public class ValidateUrlResponseFullTest {
      * Test the property 'validURL'
      */
     @Test
-    public void validURLTest() {
+    void validURLTest() {
         // TODO: test validURL
     }
 
@@ -51,7 +48,7 @@ public class ValidateUrlResponseFullTest {
      * Test the property 'validSyntax'
      */
     @Test
-    public void validSyntaxTest() {
+    void validSyntaxTest() {
         // TODO: test validSyntax
     }
 
@@ -59,7 +56,7 @@ public class ValidateUrlResponseFullTest {
      * Test the property 'validDomain'
      */
     @Test
-    public void validDomainTest() {
+    void validDomainTest() {
         // TODO: test validDomain
     }
 
@@ -67,7 +64,7 @@ public class ValidateUrlResponseFullTest {
      * Test the property 'validEndpoint'
      */
     @Test
-    public void validEndpointTest() {
+    void validEndpointTest() {
         // TODO: test validEndpoint
     }
 
@@ -75,7 +72,7 @@ public class ValidateUrlResponseFullTest {
      * Test the property 'wellFormedURL'
      */
     @Test
-    public void wellFormedURLTest() {
+    void wellFormedURLTest() {
         // TODO: test wellFormedURL
     }
 

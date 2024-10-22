@@ -2,16 +2,16 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**filterBlackAndWhite**](FilterApi.md#filterBlackAndWhite) | **POST** /image/filter/black-and-white | Convert image to black-and-white grayscale
-[**filterDespeckle**](FilterApi.md#filterDespeckle) | **POST** /image/filter/despeckle | Despeckle to remove point noise from the image
-[**filterEdgeDetect**](FilterApi.md#filterEdgeDetect) | **POST** /image/filter/edge-detect/{radius} | Detect and highlight edges in an image
-[**filterEmboss**](FilterApi.md#filterEmboss) | **POST** /image/filter/emboss/{radius}/{sigma} | Emboss an image
-[**filterGaussianBlur**](FilterApi.md#filterGaussianBlur) | **POST** /image/filter/blur/guassian/{radius}/{sigma} | Perform a guassian blur on the input image
-[**filterMotionBlur**](FilterApi.md#filterMotionBlur) | **POST** /image/filter/blur/motion/{radius}/{sigma}/{angle} | Perform a motion blur on the input image
-[**filterPosterize**](FilterApi.md#filterPosterize) | **POST** /image/filter/posterize | Posterize the image by reducing distinct colors
-[**filterSwirl**](FilterApi.md#filterSwirl) | **POST** /image/filter/swirl | Swirl distort the image
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**filterBlackAndWhite**](FilterApi.md#filterBlackAndWhite) | **POST** /image/filter/black-and-white | Convert image to black-and-white grayscale |
+| [**filterDespeckle**](FilterApi.md#filterDespeckle) | **POST** /image/filter/despeckle | Despeckle to remove point noise from the image |
+| [**filterEdgeDetect**](FilterApi.md#filterEdgeDetect) | **POST** /image/filter/edge-detect/{radius} | Detect and highlight edges in an image |
+| [**filterEmboss**](FilterApi.md#filterEmboss) | **POST** /image/filter/emboss/{radius}/{sigma} | Emboss an image |
+| [**filterGaussianBlur**](FilterApi.md#filterGaussianBlur) | **POST** /image/filter/blur/guassian/{radius}/{sigma} | Perform a guassian blur on the input image |
+| [**filterMotionBlur**](FilterApi.md#filterMotionBlur) | **POST** /image/filter/blur/motion/{radius}/{sigma}/{angle} | Perform a motion blur on the input image |
+| [**filterPosterize**](FilterApi.md#filterPosterize) | **POST** /image/filter/posterize | Posterize the image by reducing distinct colors |
+| [**filterSwirl**](FilterApi.md#filterSwirl) | **POST** /image/filter/swirl | Swirl distort the image |
 
 
 
@@ -64,9 +64,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -80,6 +80,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -136,9 +137,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -152,6 +153,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -209,10 +211,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **radius** | **Integer**| Radius in pixels of the edge detection operation; a larger radius will produce a greater effect |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **radius** | **Integer**| Radius in pixels of the edge detection operation; a larger radius will produce a greater effect | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -226,6 +228,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -284,11 +287,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **radius** | **Integer**| Radius in pixels of the emboss operation; a larger radius will produce a greater effect |
- **sigma** | **Integer**| Sigma, or variance, of the emboss operation |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **radius** | **Integer**| Radius in pixels of the emboss operation; a larger radius will produce a greater effect | |
+| **sigma** | **Integer**| Sigma, or variance, of the emboss operation | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -302,6 +305,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -360,11 +364,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **radius** | **Integer**| Radius in pixels of the blur operation; a larger radius will produce a greater blur effect |
- **sigma** | **Integer**| Sigma, or variance, of the gaussian blur operation |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **radius** | **Integer**| Radius in pixels of the blur operation; a larger radius will produce a greater blur effect | |
+| **sigma** | **Integer**| Sigma, or variance, of the gaussian blur operation | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -378,6 +382,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -437,12 +442,12 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **radius** | **Integer**| Radius in pixels of the blur operation; a larger radius will produce a greater blur effect |
- **sigma** | **Integer**| Sigma, or variance, of the motion blur operation |
- **angle** | **Integer**| Angle of the motion blur in degrees |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **radius** | **Integer**| Radius in pixels of the blur operation; a larger radius will produce a greater blur effect | |
+| **sigma** | **Integer**| Sigma, or variance, of the motion blur operation | |
+| **angle** | **Integer**| Angle of the motion blur in degrees | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -456,6 +461,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -513,10 +519,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **levels** | **Integer**| Number of unique colors to retain in the output image |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **levels** | **Integer**| Number of unique colors to retain in the output image | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -530,6 +536,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -587,10 +594,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **degrees** | **Integer**| Degrees of swirl |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **degrees** | **Integer**| Degrees of swirl | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -604,6 +611,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

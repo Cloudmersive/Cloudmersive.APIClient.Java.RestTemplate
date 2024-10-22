@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * License plate found in the image
  */
-@ApiModel(description = "License plate found in the image")
 @JsonPropertyOrder({
   DetectedLicensePlate.JSON_PROPERTY_LICENSE_PLATE_TEXT_BEST_MATCH,
   DetectedLicensePlate.JSON_PROPERTY_LICENSE_PLATE_TEXT_RUNNER_UP,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetectedLicensePlate.JSON_PROPERTY_HEIGHT,
   DetectedLicensePlate.JSON_PROPERTY_LICENSE_PLATE_RECOGNITION_CONFIDENCE_LEVEL
 })
-@JsonTypeName("DetectedLicensePlate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DetectedLicensePlate {
   public static final String JSON_PROPERTY_LICENSE_PLATE_TEXT_BEST_MATCH = "LicensePlateText_BestMatch";
   private String licensePlateTextBestMatch;
@@ -61,6 +58,8 @@ public class DetectedLicensePlate {
   public static final String JSON_PROPERTY_LICENSE_PLATE_RECOGNITION_CONFIDENCE_LEVEL = "LicensePlateRecognitionConfidenceLevel";
   private Double licensePlateRecognitionConfidenceLevel;
 
+  public DetectedLicensePlate() {
+  }
 
   public DetectedLicensePlate licensePlateTextBestMatch(String licensePlateTextBestMatch) {
     
@@ -68,12 +67,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * Text from the license plate, highest-confidence result
    * @return licensePlateTextBestMatch
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text from the license plate, highest-confidence result")
   @JsonProperty(JSON_PROPERTY_LICENSE_PLATE_TEXT_BEST_MATCH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,10 +80,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LICENSE_PLATE_TEXT_BEST_MATCH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLicensePlateTextBestMatch(String licensePlateTextBestMatch) {
     this.licensePlateTextBestMatch = licensePlateTextBestMatch;
   }
-
 
   public DetectedLicensePlate licensePlateTextRunnerUp(String licensePlateTextRunnerUp) {
     
@@ -93,12 +92,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * Alternate text from the license plate, based on second-highest-confidence result
    * @return licensePlateTextRunnerUp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Alternate text from the license plate, based on second-highest-confidence result")
   @JsonProperty(JSON_PROPERTY_LICENSE_PLATE_TEXT_RUNNER_UP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +105,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LICENSE_PLATE_TEXT_RUNNER_UP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLicensePlateTextRunnerUp(String licensePlateTextRunnerUp) {
     this.licensePlateTextRunnerUp = licensePlateTextRunnerUp;
   }
-
 
   public DetectedLicensePlate locationX(Integer locationX) {
     
@@ -118,12 +117,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * X location of the left edge of the license plate, starting from the left edge of the photo (X &#x3D; 0)
    * @return locationX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location of the left edge of the license plate, starting from the left edge of the photo (X = 0)")
   @JsonProperty(JSON_PROPERTY_LOCATION_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,10 +130,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LOCATION_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocationX(Integer locationX) {
     this.locationX = locationX;
   }
-
 
   public DetectedLicensePlate locationY(Integer locationY) {
     
@@ -143,12 +142,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * Y location of the top edge of the license plate, starting from the top edge of the photo (Y &#x3D; 0)
    * @return locationY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location of the top edge of the license plate, starting from the top edge of the photo (Y = 0)")
   @JsonProperty(JSON_PROPERTY_LOCATION_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,10 +155,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LOCATION_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocationY(Integer locationY) {
     this.locationY = locationY;
   }
-
 
   public DetectedLicensePlate width(Integer width) {
     
@@ -168,12 +167,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * Width of the license plate&#39;s location in pixels
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the license plate's location in pixels")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,10 +180,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public DetectedLicensePlate height(Integer height) {
     
@@ -193,12 +192,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * Height of the license plate&#39;s location in pixels
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the license plate's location in pixels")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,10 +205,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public DetectedLicensePlate licensePlateRecognitionConfidenceLevel(Double licensePlateRecognitionConfidenceLevel) {
     
@@ -218,12 +217,11 @@ public class DetectedLicensePlate {
     return this;
   }
 
-   /**
+  /**
    * Confidence score on a range of 0.0 - 1.0 of the accuracy of the detected license plate, with higher scores being better; values about 0.75 are high confidence
    * @return licensePlateRecognitionConfidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence score on a range of 0.0 - 1.0 of the accuracy of the detected license plate, with higher scores being better; values about 0.75 are high confidence")
   @JsonProperty(JSON_PROPERTY_LICENSE_PLATE_RECOGNITION_CONFIDENCE_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,10 +230,11 @@ public class DetectedLicensePlate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LICENSE_PLATE_RECOGNITION_CONFIDENCE_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLicensePlateRecognitionConfidenceLevel(Double licensePlateRecognitionConfidenceLevel) {
     this.licensePlateRecognitionConfidenceLevel = licensePlateRecognitionConfidenceLevel;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -259,7 +258,6 @@ public class DetectedLicensePlate {
   public int hashCode() {
     return Objects.hash(licensePlateTextBestMatch, licensePlateTextRunnerUp, locationX, locationY, width, height, licensePlateRecognitionConfidenceLevel);
   }
-
 
   @Override
   public String toString() {

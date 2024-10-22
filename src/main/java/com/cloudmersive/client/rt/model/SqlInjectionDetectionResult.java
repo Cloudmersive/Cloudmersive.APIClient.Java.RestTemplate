@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an SQL Injection protection operation
  */
-@ApiModel(description = "Result of performing an SQL Injection protection operation")
 @JsonPropertyOrder({
   SqlInjectionDetectionResult.JSON_PROPERTY_SUCCESSFUL,
   SqlInjectionDetectionResult.JSON_PROPERTY_CONTAINED_SQL_INJECTION_ATTACK,
   SqlInjectionDetectionResult.JSON_PROPERTY_ORIGINAL_INPUT
 })
-@JsonTypeName("SqlInjectionDetectionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SqlInjectionDetectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class SqlInjectionDetectionResult {
   public static final String JSON_PROPERTY_ORIGINAL_INPUT = "OriginalInput";
   private String originalInput;
 
+  public SqlInjectionDetectionResult() {
+  }
 
   public SqlInjectionDetectionResult successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class SqlInjectionDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class SqlInjectionDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public SqlInjectionDetectionResult containedSqlInjectionAttack(Boolean containedSqlInjectionAttack) {
     
@@ -77,12 +76,11 @@ public class SqlInjectionDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the input contained SQL Injection attacks, false otherwise
    * @return containedSqlInjectionAttack
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input contained SQL Injection attacks, false otherwise")
   @JsonProperty(JSON_PROPERTY_CONTAINED_SQL_INJECTION_ATTACK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class SqlInjectionDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINED_SQL_INJECTION_ATTACK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainedSqlInjectionAttack(Boolean containedSqlInjectionAttack) {
     this.containedSqlInjectionAttack = containedSqlInjectionAttack;
   }
-
 
   public SqlInjectionDetectionResult originalInput(String originalInput) {
     
@@ -102,12 +101,11 @@ public class SqlInjectionDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * Original input string
    * @return originalInput
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Original input string")
   @JsonProperty(JSON_PROPERTY_ORIGINAL_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class SqlInjectionDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORIGINAL_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOriginalInput(String originalInput) {
     this.originalInput = originalInput;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class SqlInjectionDetectionResult {
   public int hashCode() {
     return Objects.hash(successful, containedSqlInjectionAttack, originalInput);
   }
-
 
   @Override
   public String toString() {

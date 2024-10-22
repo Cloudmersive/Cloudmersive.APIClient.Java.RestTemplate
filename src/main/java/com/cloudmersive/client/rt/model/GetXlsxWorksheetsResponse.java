@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Worksheets command
  */
-@ApiModel(description = "Result of running a Get-Worksheets command")
 @JsonPropertyOrder({
   GetXlsxWorksheetsResponse.JSON_PROPERTY_SUCCESSFUL,
   GetXlsxWorksheetsResponse.JSON_PROPERTY_WORKSHEETS
 })
-@JsonTypeName("GetXlsxWorksheetsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxWorksheetsResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_WORKSHEETS = "Worksheets";
-  private List<XlsxWorksheet> worksheets = null;
+  private List<XlsxWorksheet> worksheets = new ArrayList<>();
 
+  public GetXlsxWorksheetsResponse() {
+  }
 
   public GetXlsxWorksheetsResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class GetXlsxWorksheetsResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class GetXlsxWorksheetsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetXlsxWorksheetsResponse worksheets(List<XlsxWorksheet> worksheets) {
     
@@ -78,18 +78,17 @@ public class GetXlsxWorksheetsResponse {
 
   public GetXlsxWorksheetsResponse addWorksheetsItem(XlsxWorksheet worksheetsItem) {
     if (this.worksheets == null) {
-      this.worksheets = new ArrayList<XlsxWorksheet>();
+      this.worksheets = new ArrayList<>();
     }
     this.worksheets.add(worksheetsItem);
     return this;
   }
 
-   /**
+  /**
    * Worksheets in the Excel XLSX spreadsheet
    * @return worksheets
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Worksheets in the Excel XLSX spreadsheet")
   @JsonProperty(JSON_PROPERTY_WORKSHEETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class GetXlsxWorksheetsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEETS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheets(List<XlsxWorksheet> worksheets) {
     this.worksheets = worksheets;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class GetXlsxWorksheetsResponse {
   public int hashCode() {
     return Objects.hash(successful, worksheets);
   }
-
 
   @Override
   public String toString() {

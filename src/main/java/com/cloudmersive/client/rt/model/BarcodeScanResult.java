@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of the barcode scan
  */
-@ApiModel(description = "Result of the barcode scan")
 @JsonPropertyOrder({
   BarcodeScanResult.JSON_PROPERTY_SUCCESSFUL,
   BarcodeScanResult.JSON_PROPERTY_BARCODE_TYPE,
   BarcodeScanResult.JSON_PROPERTY_RAW_TEXT
 })
-@JsonTypeName("BarcodeScanResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:34.231-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:12.746969900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BarcodeScanResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class BarcodeScanResult {
   public static final String JSON_PROPERTY_RAW_TEXT = "RawText";
   private String rawText;
 
+  public BarcodeScanResult() {
+  }
 
   public BarcodeScanResult successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class BarcodeScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class BarcodeScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public BarcodeScanResult barcodeType(String barcodeType) {
     
@@ -77,12 +76,11 @@ public class BarcodeScanResult {
     return this;
   }
 
-   /**
+  /**
    * The type of the barcode; possible values are AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
    * @return barcodeType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of the barcode; possible values are AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB")
   @JsonProperty(JSON_PROPERTY_BARCODE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class BarcodeScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BARCODE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBarcodeType(String barcodeType) {
     this.barcodeType = barcodeType;
   }
-
 
   public BarcodeScanResult rawText(String rawText) {
     
@@ -102,12 +101,11 @@ public class BarcodeScanResult {
     return this;
   }
 
-   /**
+  /**
    * The barcode text
    * @return rawText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The barcode text")
   @JsonProperty(JSON_PROPERTY_RAW_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class BarcodeScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RAW_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRawText(String rawText) {
     this.rawText = rawText;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class BarcodeScanResult {
   public int hashCode() {
     return Objects.hash(successful, barcodeType, rawText);
   }
-
 
   @Override
   public String toString() {

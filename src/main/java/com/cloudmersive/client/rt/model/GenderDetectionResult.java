@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result from classifying the Gender of people in an image
  */
-@ApiModel(description = "Result from classifying the Gender of people in an image")
 @JsonPropertyOrder({
   GenderDetectionResult.JSON_PROPERTY_SUCCESSFUL,
   GenderDetectionResult.JSON_PROPERTY_PERSON_WITH_GENDER,
   GenderDetectionResult.JSON_PROPERTY_PEOPLE_IDENTIFIED
 })
-@JsonTypeName("GenderDetectionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GenderDetectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_PERSON_WITH_GENDER = "PersonWithGender";
-  private List<PersonWithGender> personWithGender = null;
+  private List<PersonWithGender> personWithGender = new ArrayList<>();
 
   public static final String JSON_PROPERTY_PEOPLE_IDENTIFIED = "PeopleIdentified";
   private Integer peopleIdentified;
 
+  public GenderDetectionResult() {
+  }
 
   public GenderDetectionResult successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class GenderDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class GenderDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GenderDetectionResult personWithGender(List<PersonWithGender> personWithGender) {
     
@@ -82,18 +82,17 @@ public class GenderDetectionResult {
 
   public GenderDetectionResult addPersonWithGenderItem(PersonWithGender personWithGenderItem) {
     if (this.personWithGender == null) {
-      this.personWithGender = new ArrayList<PersonWithGender>();
+      this.personWithGender = new ArrayList<>();
     }
     this.personWithGender.add(personWithGenderItem);
     return this;
   }
 
-   /**
+  /**
    * People in the image annotated with gender information
    * @return personWithGender
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "People in the image annotated with gender information")
   @JsonProperty(JSON_PROPERTY_PERSON_WITH_GENDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class GenderDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PERSON_WITH_GENDER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPersonWithGender(List<PersonWithGender> personWithGender) {
     this.personWithGender = personWithGender;
   }
-
 
   public GenderDetectionResult peopleIdentified(Integer peopleIdentified) {
     
@@ -113,12 +113,11 @@ public class GenderDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * Number of people identified in the image with a gender
    * @return peopleIdentified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of people identified in the image with a gender")
   @JsonProperty(JSON_PROPERTY_PEOPLE_IDENTIFIED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class GenderDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PEOPLE_IDENTIFIED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPeopleIdentified(Integer peopleIdentified) {
     this.peopleIdentified = peopleIdentified;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class GenderDetectionResult {
   public int hashCode() {
     return Objects.hash(successful, personWithGender, peopleIdentified);
   }
-
 
   @Override
   public String toString() {

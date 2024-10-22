@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Value of a setting
  */
-@ApiModel(description = "Value of a setting")
 @JsonPropertyOrder({
   SettingValue.JSON_PROPERTY_CONFIG_SETTING_VALUE_I_D,
   SettingValue.JSON_PROPERTY_CONFIG_SETTING_DEFINITION_I_D,
@@ -39,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   SettingValue.JSON_PROPERTY_CONFIG_SETTING_TAGS,
   SettingValue.JSON_PROPERTY_CONFIG_SETTING_TYPE
 })
-@JsonTypeName("SettingValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SettingValue {
   public static final String JSON_PROPERTY_CONFIG_SETTING_VALUE_I_D = "ConfigSettingValueID";
   private String configSettingValueID;
@@ -66,6 +63,8 @@ public class SettingValue {
   public static final String JSON_PROPERTY_CONFIG_SETTING_TYPE = "ConfigSettingType";
   private String configSettingType;
 
+  public SettingValue() {
+  }
 
   public SettingValue configSettingValueID(String configSettingValueID) {
     
@@ -73,12 +72,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * The ID of the setting value
    * @return configSettingValueID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The ID of the setting value")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_VALUE_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_VALUE_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingValueID(String configSettingValueID) {
     this.configSettingValueID = configSettingValueID;
   }
-
 
   public SettingValue configSettingDefinitionID(String configSettingDefinitionID) {
     
@@ -98,12 +97,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * The ID of the definition of the setting
    * @return configSettingDefinitionID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The ID of the definition of the setting")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_DEFINITION_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -112,10 +110,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_DEFINITION_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingDefinitionID(String configSettingDefinitionID) {
     this.configSettingDefinitionID = configSettingDefinitionID;
   }
-
 
   public SettingValue configSettingValue(Object configSettingValue) {
     
@@ -123,12 +122,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * The value of the setting
    * @return configSettingValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The value of the setting")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -137,10 +135,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingValue(Object configSettingValue) {
     this.configSettingValue = configSettingValue;
   }
-
 
   public SettingValue configSettingLastModified(OffsetDateTime configSettingLastModified) {
     
@@ -148,12 +147,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * The last modified date of the setting
    * @return configSettingLastModified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The last modified date of the setting")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_LAST_MODIFIED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,10 +160,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_LAST_MODIFIED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingLastModified(OffsetDateTime configSettingLastModified) {
     this.configSettingLastModified = configSettingLastModified;
   }
-
 
   public SettingValue configSettingName(String configSettingName) {
     
@@ -173,12 +172,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * Name of the setting
    * @return configSettingName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the setting")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,10 +185,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingName(String configSettingName) {
     this.configSettingName = configSettingName;
   }
-
 
   public SettingValue configSettingDescription(String configSettingDescription) {
     
@@ -198,12 +197,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * Description of the setting
    * @return configSettingDescription
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Description of the setting")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,10 +210,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingDescription(String configSettingDescription) {
     this.configSettingDescription = configSettingDescription;
   }
-
 
   public SettingValue configSettingTags(String configSettingTags) {
     
@@ -223,12 +222,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * Setting tags
    * @return configSettingTags
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Setting tags")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_TAGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -237,10 +235,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_TAGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingTags(String configSettingTags) {
     this.configSettingTags = configSettingTags;
   }
-
 
   public SettingValue configSettingType(String configSettingType) {
     
@@ -248,12 +247,11 @@ public class SettingValue {
     return this;
   }
 
-   /**
+  /**
    * Possible values are: STRING, JSON
    * @return configSettingType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Possible values are: STRING, JSON")
   @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -262,10 +260,11 @@ public class SettingValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIG_SETTING_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfigSettingType(String configSettingType) {
     this.configSettingType = configSettingType;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -290,7 +289,6 @@ public class SettingValue {
   public int hashCode() {
     return Objects.hash(configSettingValueID, configSettingDefinitionID, configSettingValue, configSettingLastModified, configSettingName, configSettingDescription, configSettingTags, configSettingType);
   }
-
 
   @Override
   public String toString() {

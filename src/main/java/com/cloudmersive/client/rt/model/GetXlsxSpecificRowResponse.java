@@ -21,20 +21,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Specific-Row command
  */
-@ApiModel(description = "Result of running a Get-Specific-Row command")
 @JsonPropertyOrder({
   GetXlsxSpecificRowResponse.JSON_PROPERTY_SUCCESSFUL,
   GetXlsxSpecificRowResponse.JSON_PROPERTY_ROW
 })
-@JsonTypeName("GetXlsxSpecificRowResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxSpecificRowResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -42,6 +39,8 @@ public class GetXlsxSpecificRowResponse {
   public static final String JSON_PROPERTY_ROW = "Row";
   private XlsxSpreadsheetRow row;
 
+  public GetXlsxSpecificRowResponse() {
+  }
 
   public GetXlsxSpecificRowResponse successful(Boolean successful) {
     
@@ -49,12 +48,11 @@ public class GetXlsxSpecificRowResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -63,10 +61,11 @@ public class GetXlsxSpecificRowResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetXlsxSpecificRowResponse row(XlsxSpreadsheetRow row) {
     
@@ -74,12 +73,11 @@ public class GetXlsxSpecificRowResponse {
     return this;
   }
 
-   /**
+  /**
    * Get row
    * @return row
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_ROW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,10 +86,11 @@ public class GetXlsxSpecificRowResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRow(XlsxSpreadsheetRow row) {
     this.row = row;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -110,7 +109,6 @@ public class GetXlsxSpecificRowResponse {
   public int hashCode() {
     return Objects.hash(successful, row);
   }
-
 
   @Override
   public String toString() {

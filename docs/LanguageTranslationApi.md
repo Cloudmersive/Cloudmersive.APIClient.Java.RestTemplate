@@ -2,15 +2,89 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**languageTranslationTranslateDeuToEng**](LanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
-[**languageTranslationTranslateEngToDeu**](LanguageTranslationApi.md#languageTranslationTranslateEngToDeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
-[**languageTranslationTranslateEngToFra**](LanguageTranslationApi.md#languageTranslationTranslateEngToFra) | **POST** /nlp-v2/translate/language/eng/to/fra | Translate English to French text with Deep Learning AI
-[**languageTranslationTranslateEngToRus**](LanguageTranslationApi.md#languageTranslationTranslateEngToRus) | **POST** /nlp-v2/translate/language/eng/to/rus | Translate English to Russian text with Deep Learning AI
-[**languageTranslationTranslateFraToEng**](LanguageTranslationApi.md#languageTranslationTranslateFraToEng) | **POST** /nlp-v2/translate/language/fra/to/eng | Translate French to English text with Deep Learning AI
-[**languageTranslationTranslateRusToEng**](LanguageTranslationApi.md#languageTranslationTranslateRusToEng) | **POST** /nlp-v2/translate/language/rus/to/eng | Translate Russian to English text with Deep Learning AI
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**languageTranslationHtmlTranslate**](LanguageTranslationApi.md#languageTranslationHtmlTranslate) | **POST** /nlp-v2/translate/language/html | Translate HTML with Deep Learning AI |
+| [**languageTranslationTranslateDeuToEng**](LanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI |
+| [**languageTranslationTranslateEngToDeu**](LanguageTranslationApi.md#languageTranslationTranslateEngToDeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI |
+| [**languageTranslationTranslateEngToFra**](LanguageTranslationApi.md#languageTranslationTranslateEngToFra) | **POST** /nlp-v2/translate/language/eng/to/fra | Translate English to French text with Deep Learning AI |
+| [**languageTranslationTranslateEngToRus**](LanguageTranslationApi.md#languageTranslationTranslateEngToRus) | **POST** /nlp-v2/translate/language/eng/to/rus | Translate English to Russian text with Deep Learning AI |
+| [**languageTranslationTranslateFraToEng**](LanguageTranslationApi.md#languageTranslationTranslateFraToEng) | **POST** /nlp-v2/translate/language/fra/to/eng | Translate French to English text with Deep Learning AI |
+| [**languageTranslationTranslateRusToEng**](LanguageTranslationApi.md#languageTranslationTranslateRusToEng) | **POST** /nlp-v2/translate/language/rus/to/eng | Translate Russian to English text with Deep Learning AI |
 
+
+
+## languageTranslationHtmlTranslate
+
+> LanguageHtmlTranslationResponse languageTranslationHtmlTranslate(input)
+
+Translate HTML with Deep Learning AI
+
+Automatically translates input text in German to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.LanguageTranslationApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        LanguageTranslationApi apiInstance = new LanguageTranslationApi(defaultClient);
+        LanguageHtmlTranslationRequest input = new LanguageHtmlTranslationRequest(); // LanguageHtmlTranslationRequest | Input translation request
+        try {
+            LanguageHtmlTranslationResponse result = apiInstance.languageTranslationHtmlTranslate(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling LanguageTranslationApi#languageTranslationHtmlTranslate");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageHtmlTranslationRequest**](LanguageHtmlTranslationRequest.md)| Input translation request | |
+
+### Return type
+
+[**LanguageHtmlTranslationResponse**](LanguageHtmlTranslationResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 
 ## languageTranslationTranslateDeuToEng
@@ -62,9 +136,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request | |
 
 ### Return type
 
@@ -78,6 +152,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -134,9 +209,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request | |
 
 ### Return type
 
@@ -150,6 +225,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -206,9 +282,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request | |
 
 ### Return type
 
@@ -222,6 +298,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -278,9 +355,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request | |
 
 ### Return type
 
@@ -294,6 +371,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -350,9 +428,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request | |
 
 ### Return type
 
@@ -366,6 +444,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -422,9 +501,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**LanguageTranslationRequest**](LanguageTranslationRequest.md)| Input translation request | |
 
 ### Return type
 
@@ -438,6 +517,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

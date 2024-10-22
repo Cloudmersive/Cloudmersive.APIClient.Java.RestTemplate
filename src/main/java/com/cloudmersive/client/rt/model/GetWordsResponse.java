@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Words in input string
  */
-@ApiModel(description = "Words in input string")
 @JsonPropertyOrder({
   GetWordsResponse.JSON_PROPERTY_WORDS
 })
-@JsonTypeName("GetWordsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetWordsResponse {
   public static final String JSON_PROPERTY_WORDS = "Words";
-  private List<WordPosition> words = null;
+  private List<WordPosition> words = new ArrayList<>();
 
+  public GetWordsResponse() {
+  }
 
   public GetWordsResponse words(List<WordPosition> words) {
     
@@ -49,18 +49,17 @@ public class GetWordsResponse {
 
   public GetWordsResponse addWordsItem(WordPosition wordsItem) {
     if (this.words == null) {
-      this.words = new ArrayList<WordPosition>();
+      this.words = new ArrayList<>();
     }
     this.words.add(wordsItem);
     return this;
   }
 
-   /**
+  /**
    * Array of words
    * @return words
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of words")
   @JsonProperty(JSON_PROPERTY_WORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class GetWordsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWords(List<WordPosition> words) {
     this.words = words;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class GetWordsResponse {
   public int hashCode() {
     return Objects.hash(words);
   }
-
 
   @Override
   public String toString() {

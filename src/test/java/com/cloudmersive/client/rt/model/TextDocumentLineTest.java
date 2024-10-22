@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for TextDocumentLine
  */
-public class TextDocumentLineTest {
+class TextDocumentLineTest {
     private final TextDocumentLine model = new TextDocumentLine();
 
     /**
      * Model tests for TextDocumentLine
      */
     @Test
-    public void testTextDocumentLine() {
+    void testTextDocumentLine() {
         // TODO: test TextDocumentLine
     }
 
@@ -43,7 +40,7 @@ public class TextDocumentLineTest {
      * Test the property 'lineNumber'
      */
     @Test
-    public void lineNumberTest() {
+    void lineNumberTest() {
         // TODO: test lineNumber
     }
 
@@ -51,7 +48,7 @@ public class TextDocumentLineTest {
      * Test the property 'lineContents'
      */
     @Test
-    public void lineContentsTest() {
+    void lineContentsTest() {
         // TODO: test lineContents
     }
 

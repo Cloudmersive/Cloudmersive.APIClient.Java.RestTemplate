@@ -17,9 +17,12 @@ import com.cloudmersive.client.rt.model.DocumentTransformEditSession;
 import com.cloudmersive.client.rt.model.DocxTableTableFillMultiRequest;
 import com.cloudmersive.client.rt.model.DocxTableTableFillRequest;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +31,8 @@ import java.util.Map;
 /**
  * API tests for TransformDocumentApi
  */
-@Ignore
-public class TransformDocumentApiTest {
+@Disabled
+class TransformDocumentApiTest {
 
     private final TransformDocumentApi api = new TransformDocumentApi();
 
@@ -39,16 +42,17 @@ public class TransformDocumentApiTest {
      *
      * Replace all instances of a string in an Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void transformDocumentDocxReplaceTest() {
+    void transformDocumentDocxReplaceTest() {
         String matchString = null;
         String replaceString = null;
         String inputFileUrl = null;
         Boolean matchCase = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.transformDocumentDocxReplace(matchString, replaceString, inputFileUrl, matchCase, inputFile);
 
         // TODO: test validations
@@ -59,16 +63,17 @@ public class TransformDocumentApiTest {
      *
      * Replace all instances of a string in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void transformDocumentDocxReplaceEditSessionTest() {
+    void transformDocumentDocxReplaceEditSessionTest() {
         String matchString = null;
         String replaceString = null;
         String inputFileUrl = null;
         Boolean matchCase = null;
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentTransformEditSession response = api.transformDocumentDocxReplaceEditSession(matchString, replaceString, inputFileUrl, matchCase, inputFile);
 
         // TODO: test validations
@@ -79,12 +84,13 @@ public class TransformDocumentApiTest {
      *
      * Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void transformDocumentDocxTableFillInTest() {
+    void transformDocumentDocxTableFillInTest() {
         DocxTableTableFillRequest request = null;
+
         byte[] response = api.transformDocumentDocxTableFillIn(request);
 
         // TODO: test validations
@@ -95,12 +101,13 @@ public class TransformDocumentApiTest {
      *
      * Replace placeholder rows ina  table in an Office Word Document (docx) using one or more templates.  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void transformDocumentDocxTableFillInEditSessionTest() {
+    void transformDocumentDocxTableFillInEditSessionTest() {
         DocxTableTableFillRequest request = null;
+
         DocumentTransformEditSession response = api.transformDocumentDocxTableFillInEditSession(request);
 
         // TODO: test validations
@@ -111,12 +118,13 @@ public class TransformDocumentApiTest {
      *
      * Replace placeholder rows in multiple tables in an Office Word Document (docx) using one or more templates
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void transformDocumentDocxTableFillInMultiTest() {
+    void transformDocumentDocxTableFillInMultiTest() {
         DocxTableTableFillMultiRequest request = null;
+
         byte[] response = api.transformDocumentDocxTableFillInMulti(request);
 
         // TODO: test validations
@@ -127,16 +135,17 @@ public class TransformDocumentApiTest {
      *
      * Replace all instances of a string in an Office PowerPoint Document (pptx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void transformDocumentPptxReplaceTest() {
+    void transformDocumentPptxReplaceTest() {
         String matchString = null;
         String replaceString = null;
         String inputFileUrl = null;
         Boolean matchCase = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.transformDocumentPptxReplace(matchString, replaceString, inputFileUrl, matchCase, inputFile);
 
         // TODO: test validations

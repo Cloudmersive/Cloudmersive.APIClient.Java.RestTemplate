@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * WordPosition
@@ -33,8 +32,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   WordPosition.JSON_PROPERTY_START_POSITION,
   WordPosition.JSON_PROPERTY_END_POSITION
 })
-@JsonTypeName("WordPosition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WordPosition {
   public static final String JSON_PROPERTY_WORD = "Word";
   private String word;
@@ -48,6 +46,8 @@ public class WordPosition {
   public static final String JSON_PROPERTY_END_POSITION = "EndPosition";
   private Integer endPosition;
 
+  public WordPosition() {
+  }
 
   public WordPosition word(String word) {
     
@@ -55,12 +55,11 @@ public class WordPosition {
     return this;
   }
 
-   /**
+  /**
    * Word as a string
    * @return word
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word as a string")
   @JsonProperty(JSON_PROPERTY_WORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class WordPosition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWord(String word) {
     this.word = word;
   }
-
 
   public WordPosition wordIndex(Integer wordIndex) {
     
@@ -80,12 +80,11 @@ public class WordPosition {
     return this;
   }
 
-   /**
+  /**
    * Zero-based index of the word; first word has index 0, second word has index 1 and so on
    * @return wordIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Zero-based index of the word; first word has index 0, second word has index 1 and so on")
   @JsonProperty(JSON_PROPERTY_WORD_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class WordPosition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWordIndex(Integer wordIndex) {
     this.wordIndex = wordIndex;
   }
-
 
   public WordPosition startPosition(Integer startPosition) {
     
@@ -105,12 +105,11 @@ public class WordPosition {
     return this;
   }
 
-   /**
+  /**
    * Zero-based character offset at which the word begins in the input string
    * @return startPosition
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Zero-based character offset at which the word begins in the input string")
   @JsonProperty(JSON_PROPERTY_START_POSITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,10 +118,11 @@ public class WordPosition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_START_POSITION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStartPosition(Integer startPosition) {
     this.startPosition = startPosition;
   }
-
 
   public WordPosition endPosition(Integer endPosition) {
     
@@ -130,12 +130,11 @@ public class WordPosition {
     return this;
   }
 
-   /**
+  /**
    * Zero-based character offset at which the word ends in the input string
    * @return endPosition
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Zero-based character offset at which the word ends in the input string")
   @JsonProperty(JSON_PROPERTY_END_POSITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,10 +143,11 @@ public class WordPosition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_END_POSITION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEndPosition(Integer endPosition) {
     this.endPosition = endPosition;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -168,7 +168,6 @@ public class WordPosition {
   public int hashCode() {
     return Objects.hash(word, wordIndex, startPosition, endPosition);
   }
-
 
   @Override
   public String toString() {

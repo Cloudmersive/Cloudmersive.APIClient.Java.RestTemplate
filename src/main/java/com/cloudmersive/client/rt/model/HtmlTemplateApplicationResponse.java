@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Response from an HTML template application
  */
-@ApiModel(description = "Response from an HTML template application")
 @JsonPropertyOrder({
   HtmlTemplateApplicationResponse.JSON_PROPERTY_SUCCESSFUL,
   HtmlTemplateApplicationResponse.JSON_PROPERTY_FINAL_HTML
 })
-@JsonTypeName("HtmlTemplateApplicationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlTemplateApplicationResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class HtmlTemplateApplicationResponse {
   public static final String JSON_PROPERTY_FINAL_HTML = "FinalHtml";
   private String finalHtml;
 
+  public HtmlTemplateApplicationResponse() {
+  }
 
   public HtmlTemplateApplicationResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class HtmlTemplateApplicationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class HtmlTemplateApplicationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public HtmlTemplateApplicationResponse finalHtml(String finalHtml) {
     
@@ -73,12 +72,11 @@ public class HtmlTemplateApplicationResponse {
     return this;
   }
 
-   /**
+  /**
    * Final HTML result of all operations on input
    * @return finalHtml
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Final HTML result of all operations on input")
   @JsonProperty(JSON_PROPERTY_FINAL_HTML)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class HtmlTemplateApplicationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FINAL_HTML)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFinalHtml(String finalHtml) {
     this.finalHtml = finalHtml;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class HtmlTemplateApplicationResponse {
   public int hashCode() {
     return Objects.hash(successful, finalHtml);
   }
-
 
   @Override
   public String toString() {

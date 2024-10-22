@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxTableRowRequest
  */
-public class GetDocxTableRowRequestTest {
+class GetDocxTableRowRequestTest {
     private final GetDocxTableRowRequest model = new GetDocxTableRowRequest();
 
     /**
      * Model tests for GetDocxTableRowRequest
      */
     @Test
-    public void testGetDocxTableRowRequest() {
+    void testGetDocxTableRowRequest() {
         // TODO: test GetDocxTableRowRequest
     }
 
@@ -43,7 +40,7 @@ public class GetDocxTableRowRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class GetDocxTableRowRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class GetDocxTableRowRequestTest {
      * Test the property 'tablePath'
      */
     @Test
-    public void tablePathTest() {
+    void tablePathTest() {
         // TODO: test tablePath
     }
 
@@ -67,7 +64,7 @@ public class GetDocxTableRowRequestTest {
      * Test the property 'tableRowRowIndex'
      */
     @Test
-    public void tableRowRowIndexTest() {
+    void tableRowRowIndexTest() {
         // TODO: test tableRowRowIndex
     }
 

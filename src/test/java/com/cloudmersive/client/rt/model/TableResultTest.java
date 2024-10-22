@@ -20,26 +20,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for TableResult
  */
-public class TableResultTest {
+class TableResultTest {
     private final TableResult model = new TableResult();
 
     /**
      * Model tests for TableResult
      */
     @Test
-    public void testTableResult() {
+    void testTableResult() {
         // TODO: test TableResult
     }
 
@@ -47,7 +45,7 @@ public class TableResultTest {
      * Test the property 'tableDefinition'
      */
     @Test
-    public void tableDefinitionTest() {
+    void tableDefinitionTest() {
         // TODO: test tableDefinition
     }
 
@@ -55,7 +53,7 @@ public class TableResultTest {
      * Test the property 'tableRowsResult'
      */
     @Test
-    public void tableRowsResultTest() {
+    void tableRowsResultTest() {
         // TODO: test tableRowsResult
     }
 

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxContentControl
  */
-public class DocxContentControlTest {
+class DocxContentControlTest {
     private final DocxContentControl model = new DocxContentControl();
 
     /**
      * Model tests for DocxContentControl
      */
     @Test
-    public void testDocxContentControl() {
+    void testDocxContentControl() {
         // TODO: test DocxContentControl
     }
 
@@ -43,7 +40,7 @@ public class DocxContentControlTest {
      * Test the property 'value'
      */
     @Test
-    public void valueTest() {
+    void valueTest() {
         // TODO: test value
     }
 

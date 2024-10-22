@@ -21,21 +21,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Remove Excel XLSX Spreadsheet worksheet request
  */
-@ApiModel(description = "Input to a Remove Excel XLSX Spreadsheet worksheet request")
 @JsonPropertyOrder({
   RemoveXlsxWorksheetRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   RemoveXlsxWorksheetRequest.JSON_PROPERTY_INPUT_FILE_URL,
   RemoveXlsxWorksheetRequest.JSON_PROPERTY_WORKSHEET_TO_REMOVE
 })
-@JsonTypeName("RemoveXlsxWorksheetRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RemoveXlsxWorksheetRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -46,6 +43,8 @@ public class RemoveXlsxWorksheetRequest {
   public static final String JSON_PROPERTY_WORKSHEET_TO_REMOVE = "WorksheetToRemove";
   private XlsxWorksheet worksheetToRemove;
 
+  public RemoveXlsxWorksheetRequest() {
+  }
 
   public RemoveXlsxWorksheetRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -53,12 +52,11 @@ public class RemoveXlsxWorksheetRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class RemoveXlsxWorksheetRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public RemoveXlsxWorksheetRequest inputFileUrl(String inputFileUrl) {
     
@@ -78,12 +77,11 @@ public class RemoveXlsxWorksheetRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class RemoveXlsxWorksheetRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public RemoveXlsxWorksheetRequest worksheetToRemove(XlsxWorksheet worksheetToRemove) {
     
@@ -103,12 +102,11 @@ public class RemoveXlsxWorksheetRequest {
     return this;
   }
 
-   /**
+  /**
    * Get worksheetToRemove
    * @return worksheetToRemove
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class RemoveXlsxWorksheetRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_REMOVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetToRemove(XlsxWorksheet worksheetToRemove) {
     this.worksheetToRemove = worksheetToRemove;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class RemoveXlsxWorksheetRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, worksheetToRemove);
   }
-
 
   @Override
   public String toString() {

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for UrlSafetyCheckResponseFull
  */
-public class UrlSafetyCheckResponseFullTest {
+class UrlSafetyCheckResponseFullTest {
     private final UrlSafetyCheckResponseFull model = new UrlSafetyCheckResponseFull();
 
     /**
      * Model tests for UrlSafetyCheckResponseFull
      */
     @Test
-    public void testUrlSafetyCheckResponseFull() {
+    void testUrlSafetyCheckResponseFull() {
         // TODO: test UrlSafetyCheckResponseFull
     }
 
@@ -43,7 +40,7 @@ public class UrlSafetyCheckResponseFullTest {
      * Test the property 'cleanURL'
      */
     @Test
-    public void cleanURLTest() {
+    void cleanURLTest() {
         // TODO: test cleanURL
     }
 
@@ -51,7 +48,7 @@ public class UrlSafetyCheckResponseFullTest {
      * Test the property 'threatType'
      */
     @Test
-    public void threatTypeTest() {
+    void threatTypeTest() {
         // TODO: test threatType
     }
 

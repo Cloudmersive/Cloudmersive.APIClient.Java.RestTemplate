@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SetPdfMetadataRequest
  */
-public class SetPdfMetadataRequestTest {
+class SetPdfMetadataRequestTest {
     private final SetPdfMetadataRequest model = new SetPdfMetadataRequest();
 
     /**
      * Model tests for SetPdfMetadataRequest
      */
     @Test
-    public void testSetPdfMetadataRequest() {
+    void testSetPdfMetadataRequest() {
         // TODO: test SetPdfMetadataRequest
     }
 
@@ -44,7 +41,7 @@ public class SetPdfMetadataRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class SetPdfMetadataRequestTest {
      * Test the property 'metadataToSet'
      */
     @Test
-    public void metadataToSetTest() {
+    void metadataToSetTest() {
         // TODO: test metadataToSet
     }
 

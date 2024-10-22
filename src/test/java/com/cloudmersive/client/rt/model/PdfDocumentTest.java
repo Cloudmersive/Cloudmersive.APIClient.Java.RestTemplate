@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PdfDocument
  */
-public class PdfDocumentTest {
+class PdfDocumentTest {
     private final PdfDocument model = new PdfDocument();
 
     /**
      * Model tests for PdfDocument
      */
     @Test
-    public void testPdfDocument() {
+    void testPdfDocument() {
         // TODO: test PdfDocument
     }
 
@@ -43,7 +40,7 @@ public class PdfDocumentTest {
      * Test the property 'pageNumber'
      */
     @Test
-    public void pageNumberTest() {
+    void pageNumberTest() {
         // TODO: test pageNumber
     }
 
@@ -51,7 +48,7 @@ public class PdfDocumentTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 
@@ -59,7 +56,7 @@ public class PdfDocumentTest {
      * Test the property 'documentContents'
      */
     @Test
-    public void documentContentsTest() {
+    void documentContentsTest() {
         // TODO: test documentContents
     }
 

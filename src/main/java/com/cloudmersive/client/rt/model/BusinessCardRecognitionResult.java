@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of recognizing a business card, to extract the key information from the business card
  */
-@ApiModel(description = "Result of recognizing a business card, to extract the key information from the business card")
 @JsonPropertyOrder({
   BusinessCardRecognitionResult.JSON_PROPERTY_SUCCESSFUL,
   BusinessCardRecognitionResult.JSON_PROPERTY_PERSON_NAME,
@@ -39,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   BusinessCardRecognitionResult.JSON_PROPERTY_EMAIL_ADDRESS,
   BusinessCardRecognitionResult.JSON_PROPERTY_TIMESTAMP
 })
-@JsonTypeName("BusinessCardRecognitionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BusinessCardRecognitionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -66,6 +63,8 @@ public class BusinessCardRecognitionResult {
   public static final String JSON_PROPERTY_TIMESTAMP = "Timestamp";
   private OffsetDateTime timestamp;
 
+  public BusinessCardRecognitionResult() {
+  }
 
   public BusinessCardRecognitionResult successful(Boolean successful) {
     
@@ -73,12 +72,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public BusinessCardRecognitionResult personName(String personName) {
     
@@ -98,12 +97,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The name of the person printed on the business card (if included on the business card)
    * @return personName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the person printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_PERSON_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -112,10 +110,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PERSON_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPersonName(String personName) {
     this.personName = personName;
   }
-
 
   public BusinessCardRecognitionResult personTitle(String personTitle) {
     
@@ -123,12 +122,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The title of the person printed on the business card (if included on the business card)
    * @return personTitle
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The title of the person printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_PERSON_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -137,10 +135,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PERSON_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPersonTitle(String personTitle) {
     this.personTitle = personTitle;
   }
-
 
   public BusinessCardRecognitionResult businessName(String businessName) {
     
@@ -148,12 +147,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The name of the business printed on the business card (if included on the business card)
    * @return businessName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the business printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_BUSINESS_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,10 +160,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessName(String businessName) {
     this.businessName = businessName;
   }
-
 
   public BusinessCardRecognitionResult addressString(String addressString) {
     
@@ -173,12 +172,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The address printed on the business card (if included on the business card)
    * @return addressString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The address printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_ADDRESS_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,10 +185,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ADDRESS_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAddressString(String addressString) {
     this.addressString = addressString;
   }
-
 
   public BusinessCardRecognitionResult phoneNumber(String phoneNumber) {
     
@@ -198,12 +197,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The phone number printed on the business card (if included on the business card)
    * @return phoneNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The phone number printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,10 +210,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
-
 
   public BusinessCardRecognitionResult emailAddress(String emailAddress) {
     
@@ -223,12 +222,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The email address printed on the business card (if included on the business card)
    * @return emailAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The email address printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_EMAIL_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -237,10 +235,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EMAIL_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEmailAddress(String emailAddress) {
     this.emailAddress = emailAddress;
   }
-
 
   public BusinessCardRecognitionResult timestamp(OffsetDateTime timestamp) {
     
@@ -248,12 +247,11 @@ public class BusinessCardRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The date and time printed on the business card (if included on the business card)
    * @return timestamp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date and time printed on the business card (if included on the business card)")
   @JsonProperty(JSON_PROPERTY_TIMESTAMP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -262,10 +260,11 @@ public class BusinessCardRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimestamp(OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -290,7 +289,6 @@ public class BusinessCardRecognitionResult {
   public int hashCode() {
     return Objects.hash(successful, personName, personTitle, businessName, addressString, phoneNumber, emailAddress, timestamp);
   }
-
 
   @Override
   public String toString() {

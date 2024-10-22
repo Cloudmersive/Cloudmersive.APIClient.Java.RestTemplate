@@ -13,10 +13,16 @@
 
 package com.cloudmersive.client.rt;
 
+import com.cloudmersive.client.rt.model.DocumentArrayInput;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import com.cloudmersive.client.rt.model.MergeBatchJobCreateResult;
+import com.cloudmersive.client.rt.model.MergeJobStatusResult;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,24 +31,42 @@ import java.util.Map;
 /**
  * API tests for MergeDocumentApi
  */
-@Ignore
-public class MergeDocumentApiTest {
+@Disabled
+class MergeDocumentApiTest {
 
     private final MergeDocumentApi api = new MergeDocumentApi();
 
+    
+    /**
+     * Merge an array of Documents into a Single Document by Page as a Batch Job
+     *
+     * Merge an array of Documents (PDF supported), into a single document.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentBatchJobCreateTest() {
+        DocumentArrayInput input = null;
+
+        MergeBatchJobCreateResult response = api.mergeDocumentBatchJobCreate(input);
+
+        // TODO: test validations
+    }
     
     /**
      * Merge Two Word DOCX Together
      *
      * Combine two Office Word Documents (docx) into one single Office Word document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentDocxTest() {
+    void mergeDocumentDocxTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         byte[] response = api.mergeDocumentDocx(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -53,11 +77,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple Office Word Documents (docx) into one single Office Word document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentDocxMultiTest() {
+    void mergeDocumentDocxMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -68,7 +92,42 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentDocxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple Word DOCX Together from an array
+     *
+     * Combine multiple Office Word Documents (docx), stored in an array, into one single Office Word document
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentDocxMultiArrayTest() {
+        DocumentArrayInput input = null;
+
+        Object response = api.mergeDocumentDocxMultiArray(input);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the status and result of a Merge Document Batch Job
+     *
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentGetAsyncJobStatusTest() {
+        String asyncJobID = null;
+
+        MergeJobStatusResult response = api.mergeDocumentGetAsyncJobStatus(asyncJobID);
 
         // TODO: test validations
     }
@@ -78,13 +137,14 @@ public class MergeDocumentApiTest {
      *
      * Combine two HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentHtmlTest() {
+    void mergeDocumentHtmlTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         byte[] response = api.mergeDocumentHtml(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -95,11 +155,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple HTML (.HTM) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentHtmlMultiTest() {
+    void mergeDocumentHtmlMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -110,7 +170,25 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentHtmlMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple HTML (HTM) Files Together from an array
+     *
+     * Combine multiple HTML (.HTM) files, from an array, into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentHtmlMultiArrayTest() {
+        DocumentArrayInput input = null;
+
+        Object response = api.mergeDocumentHtmlMultiArray(input);
 
         // TODO: test validations
     }
@@ -120,13 +198,14 @@ public class MergeDocumentApiTest {
      *
      * Combine two PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentPdfTest() {
+    void mergeDocumentPdfTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         byte[] response = api.mergeDocumentPdf(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -137,11 +216,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple PDF files (pdf) into a single PDF document, preserving the order of the input documents in the combined document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentPdfMultiTest() {
+    void mergeDocumentPdfMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -152,7 +231,25 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentPdfMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple PDF Files Together from an array
+     *
+     * Combine multiple PDF files (pdf), as an array, into a single PDF document, preserving the order of the input documents in the combined document
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentPdfMultiArrayTest() {
+        DocumentArrayInput input = null;
+
+        Object response = api.mergeDocumentPdfMultiArray(input);
 
         // TODO: test validations
     }
@@ -162,13 +259,14 @@ public class MergeDocumentApiTest {
      *
      * Combine two PNG files into a single PNG document, preserving the order of the input documents in the combined document by stacking them vertically
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentPngTest() {
+    void mergeDocumentPngTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         byte[] response = api.mergeDocumentPng(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -179,11 +277,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple PNG files into a single PNG document, preserving the order of the input documents in the combined document by stacking them vertically
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentPngMultiTest() {
+    void mergeDocumentPngMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -194,7 +292,25 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentPngMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple PNG Files Together from an array
+     *
+     * Combine multiple PNG files, from an array, into a single PNG document, preserving the order of the input documents in the combined document by stacking them vertically
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentPngMultiArrayTest() {
+        DocumentArrayInput input = null;
+
+        Object response = api.mergeDocumentPngMultiArray(input);
 
         // TODO: test validations
     }
@@ -204,13 +320,14 @@ public class MergeDocumentApiTest {
      *
      * Combine two Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentPptxTest() {
+    void mergeDocumentPptxTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         byte[] response = api.mergeDocumentPptx(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -221,11 +338,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple Office PowerPoint presentations (pptx) into one single Office PowerPoint presentation
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentPptxMultiTest() {
+    void mergeDocumentPptxMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -236,7 +353,25 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentPptxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple PowerPoint PPTX Together from an array
+     *
+     * Combine multiple Office PowerPoint presentations (pptx), from an array, into one single Office PowerPoint presentation
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentPptxMultiArrayTest() {
+        DocumentArrayInput input = null;
+
+        Object response = api.mergeDocumentPptxMultiArray(input);
 
         // TODO: test validations
     }
@@ -246,13 +381,14 @@ public class MergeDocumentApiTest {
      *
      * Combine two Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentTxtTest() {
+    void mergeDocumentTxtTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         Object response = api.mergeDocumentTxt(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -263,11 +399,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple Text (.TXT) files into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentTxtMultiTest() {
+    void mergeDocumentTxtMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -278,6 +414,7 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentTxtMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
 
         // TODO: test validations
@@ -288,13 +425,14 @@ public class MergeDocumentApiTest {
      *
      * Combine two Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentXlsxTest() {
+    void mergeDocumentXlsxTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
+
         byte[] response = api.mergeDocumentXlsx(inputFile1, inputFile2);
 
         // TODO: test validations
@@ -305,11 +443,11 @@ public class MergeDocumentApiTest {
      *
      * Combine multiple Office Excel spreadsheets (xlsx) into a single Office Excel spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void mergeDocumentXlsxMultiTest() {
+    void mergeDocumentXlsxMultiTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -320,7 +458,25 @@ public class MergeDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.mergeDocumentXlsxMulti(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Merge Multple Excel XLSX Together from an Array
+     *
+     * Combine multiple Office Excel spreadsheets (xlsx), as an array, into a single Office Excel spreadsheet
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void mergeDocumentXlsxMultiArrayTest() {
+        DocumentArrayInput input = null;
+
+        Object response = api.mergeDocumentXlsxMultiArray(input);
 
         // TODO: test validations
     }

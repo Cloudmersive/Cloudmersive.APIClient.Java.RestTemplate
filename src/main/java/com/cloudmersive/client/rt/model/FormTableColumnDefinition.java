@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Definition of a column within a table for OCR data extraction from images
  */
-@ApiModel(description = "Definition of a column within a table for OCR data extraction from images")
 @JsonPropertyOrder({
   FormTableColumnDefinition.JSON_PROPERTY_COLUMN_I_D,
   FormTableColumnDefinition.JSON_PROPERTY_TOP_ANCHOR,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FormTableColumnDefinition.JSON_PROPERTY_MINIMUM_CHARACTER_COUNT,
   FormTableColumnDefinition.JSON_PROPERTY_ALLOW_NUMERIC_DIGITS
 })
-@JsonTypeName("FormTableColumnDefinition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FormTableColumnDefinition {
   public static final String JSON_PROPERTY_COLUMN_I_D = "ColumnID";
   private String columnID;
@@ -57,6 +54,8 @@ public class FormTableColumnDefinition {
   public static final String JSON_PROPERTY_ALLOW_NUMERIC_DIGITS = "AllowNumericDigits";
   private Boolean allowNumericDigits;
 
+  public FormTableColumnDefinition() {
+  }
 
   public FormTableColumnDefinition columnID(String columnID) {
     
@@ -64,12 +63,11 @@ public class FormTableColumnDefinition {
     return this;
   }
 
-   /**
+  /**
    * The identifier of the field; use this to identify which field is being referenced
    * @return columnID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The identifier of the field; use this to identify which field is being referenced")
   @JsonProperty(JSON_PROPERTY_COLUMN_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -78,10 +76,11 @@ public class FormTableColumnDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLUMN_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColumnID(String columnID) {
     this.columnID = columnID;
   }
-
 
   public FormTableColumnDefinition topAnchor(String topAnchor) {
     
@@ -89,12 +88,11 @@ public class FormTableColumnDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the top anchor of the column heading
    * @return topAnchor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the top anchor of the column heading")
   @JsonProperty(JSON_PROPERTY_TOP_ANCHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +101,11 @@ public class FormTableColumnDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_ANCHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopAnchor(String topAnchor) {
     this.topAnchor = topAnchor;
   }
-
 
   public FormTableColumnDefinition anchorMode(String anchorMode) {
     
@@ -114,12 +113,11 @@ public class FormTableColumnDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the matching mode for the anchor.  Possible values are Complete (requires the entire anchor to match) and Partial (allows only part of the anchor to match).  Default is Partial.
    * @return anchorMode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the matching mode for the anchor.  Possible values are Complete (requires the entire anchor to match) and Partial (allows only part of the anchor to match).  Default is Partial.")
   @JsonProperty(JSON_PROPERTY_ANCHOR_MODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +126,11 @@ public class FormTableColumnDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANCHOR_MODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAnchorMode(String anchorMode) {
     this.anchorMode = anchorMode;
   }
-
 
   public FormTableColumnDefinition dataType(String dataType) {
     
@@ -139,12 +138,11 @@ public class FormTableColumnDefinition {
     return this;
   }
 
-   /**
+  /**
    * The data type of the field; possible values are INTEGER (Integer value), STRING (Arbitrary string value, spaces are permitted), DATE (Date in a structured format), DECIMAL (Decimal number), ALPHANUMERIC (Continuous alphanumeric string with no spaces), STRINGNOWHITESPACE (A string that contains no whitespace characters), SERIALNUMBER (A serial-number style string that contains letters and numbers, and certain symbols; must contain at least one number), ALPHAONLY (Alphabet characters only, no numbers or symbols or whitespace)
    * @return dataType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The data type of the field; possible values are INTEGER (Integer value), STRING (Arbitrary string value, spaces are permitted), DATE (Date in a structured format), DECIMAL (Decimal number), ALPHANUMERIC (Continuous alphanumeric string with no spaces), STRINGNOWHITESPACE (A string that contains no whitespace characters), SERIALNUMBER (A serial-number style string that contains letters and numbers, and certain symbols; must contain at least one number), ALPHAONLY (Alphabet characters only, no numbers or symbols or whitespace)")
   @JsonProperty(JSON_PROPERTY_DATA_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +151,11 @@ public class FormTableColumnDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDataType(String dataType) {
     this.dataType = dataType;
   }
-
 
   public FormTableColumnDefinition minimumCharacterCount(Integer minimumCharacterCount) {
     
@@ -164,12 +163,11 @@ public class FormTableColumnDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the target number of digits in the field; useful for fixed-length fields
    * @return minimumCharacterCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the target number of digits in the field; useful for fixed-length fields")
   @JsonProperty(JSON_PROPERTY_MINIMUM_CHARACTER_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +176,11 @@ public class FormTableColumnDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MINIMUM_CHARACTER_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMinimumCharacterCount(Integer minimumCharacterCount) {
     this.minimumCharacterCount = minimumCharacterCount;
   }
-
 
   public FormTableColumnDefinition allowNumericDigits(Boolean allowNumericDigits) {
     
@@ -189,12 +188,11 @@ public class FormTableColumnDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - set to false to block values that contain numeric digits, set to true to allow numeric digits
    * @return allowNumericDigits
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - set to false to block values that contain numeric digits, set to true to allow numeric digits")
   @JsonProperty(JSON_PROPERTY_ALLOW_NUMERIC_DIGITS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +201,11 @@ public class FormTableColumnDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_NUMERIC_DIGITS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowNumericDigits(Boolean allowNumericDigits) {
     this.allowNumericDigits = allowNumericDigits;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -229,7 +228,6 @@ public class FormTableColumnDefinition {
   public int hashCode() {
     return Objects.hash(columnID, topAnchor, anchorMode, dataType, minimumCharacterCount, allowNumericDigits);
   }
-
 
   @Override
   public String toString() {

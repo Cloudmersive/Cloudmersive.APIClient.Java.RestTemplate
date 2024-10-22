@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AppendXlsxRowResponse
  */
-public class AppendXlsxRowResponseTest {
+class AppendXlsxRowResponseTest {
     private final AppendXlsxRowResponse model = new AppendXlsxRowResponse();
 
     /**
      * Model tests for AppendXlsxRowResponse
      */
     @Test
-    public void testAppendXlsxRowResponse() {
+    void testAppendXlsxRowResponse() {
         // TODO: test AppendXlsxRowResponse
     }
 
@@ -43,7 +40,7 @@ public class AppendXlsxRowResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class AppendXlsxRowResponseTest {
      * Test the property 'editedDocumentURL'
      */
     @Test
-    public void editedDocumentURLTest() {
+    void editedDocumentURLTest() {
         // TODO: test editedDocumentURL
     }
 

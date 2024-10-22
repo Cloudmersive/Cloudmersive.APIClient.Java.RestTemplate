@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet
  */
-@ApiModel(description = "A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet")
 @JsonPropertyOrder({
   WorksheetResult.JSON_PROPERTY_WORKSHEET_NUMBER,
   WorksheetResult.JSON_PROPERTY_WORKSHEET_NAME,
   WorksheetResult.JSON_PROPERTY_U_R_L,
   WorksheetResult.JSON_PROPERTY_WORKSHEET_CONTENTS
 })
-@JsonTypeName("WorksheetResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WorksheetResult {
   public static final String JSON_PROPERTY_WORKSHEET_NUMBER = "WorksheetNumber";
   private Integer worksheetNumber;
@@ -49,6 +46,8 @@ public class WorksheetResult {
   public static final String JSON_PROPERTY_WORKSHEET_CONTENTS = "WorksheetContents";
   private byte[] worksheetContents;
 
+  public WorksheetResult() {
+  }
 
   public WorksheetResult worksheetNumber(Integer worksheetNumber) {
     
@@ -56,12 +55,11 @@ public class WorksheetResult {
     return this;
   }
 
-   /**
+  /**
    * Worksheet number of the converted page, starting with 1 for the left-most worksheet
    * @return worksheetNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Worksheet number of the converted page, starting with 1 for the left-most worksheet")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class WorksheetResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetNumber(Integer worksheetNumber) {
     this.worksheetNumber = worksheetNumber;
   }
-
 
   public WorksheetResult worksheetName(String worksheetName) {
     
@@ -81,12 +80,11 @@ public class WorksheetResult {
     return this;
   }
 
-   /**
+  /**
    * The name of the worksheet
    * @return worksheetName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the worksheet")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class WorksheetResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetName(String worksheetName) {
     this.worksheetName = worksheetName;
   }
-
 
   public WorksheetResult URL(String URL) {
     
@@ -106,12 +105,11 @@ public class WorksheetResult {
     return this;
   }
 
-   /**
+  /**
    * URL to the XLSX file of this worksheet; file is stored in an in-memory cache and will be deleted
    * @return URL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to the XLSX file of this worksheet; file is stored in an in-memory cache and will be deleted")
   @JsonProperty(JSON_PROPERTY_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class WorksheetResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setURL(String URL) {
     this.URL = URL;
   }
-
 
   public WorksheetResult worksheetContents(byte[] worksheetContents) {
     
@@ -131,12 +130,11 @@ public class WorksheetResult {
     return this;
   }
 
-   /**
+  /**
    * Contents of the worksheet in bytes
    * @return worksheetContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Contents of the worksheet in bytes")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class WorksheetResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetContents(byte[] worksheetContents) {
     this.worksheetContents = worksheetContents;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class WorksheetResult {
   public int hashCode() {
     return Objects.hash(worksheetNumber, worksheetName, URL, Arrays.hashCode(worksheetContents));
   }
-
 
   @Override
   public String toString() {

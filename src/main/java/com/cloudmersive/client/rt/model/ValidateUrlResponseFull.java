@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of validating a URL with full validation
  */
-@ApiModel(description = "Result of validating a URL with full validation")
 @JsonPropertyOrder({
   ValidateUrlResponseFull.JSON_PROPERTY_VALID_U_R_L,
   ValidateUrlResponseFull.JSON_PROPERTY_VALID_SYNTAX,
@@ -35,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ValidateUrlResponseFull.JSON_PROPERTY_VALID_ENDPOINT,
   ValidateUrlResponseFull.JSON_PROPERTY_WELL_FORMED_U_R_L
 })
-@JsonTypeName("ValidateUrlResponseFull")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateUrlResponseFull {
   public static final String JSON_PROPERTY_VALID_U_R_L = "ValidURL";
   private Boolean validURL;
@@ -53,6 +50,8 @@ public class ValidateUrlResponseFull {
   public static final String JSON_PROPERTY_WELL_FORMED_U_R_L = "WellFormedURL";
   private String wellFormedURL;
 
+  public ValidateUrlResponseFull() {
+  }
 
   public ValidateUrlResponseFull validURL(Boolean validURL) {
     
@@ -60,12 +59,11 @@ public class ValidateUrlResponseFull {
     return this;
   }
 
-   /**
+  /**
    * True if the URL has valid syntax, a valid domain, a valid endpoint, and passes virus scan checks; false otherwise
    * @return validURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the URL has valid syntax, a valid domain, a valid endpoint, and passes virus scan checks; false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +72,11 @@ public class ValidateUrlResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidURL(Boolean validURL) {
     this.validURL = validURL;
   }
-
 
   public ValidateUrlResponseFull validSyntax(Boolean validSyntax) {
     
@@ -85,12 +84,11 @@ public class ValidateUrlResponseFull {
     return this;
   }
 
-   /**
+  /**
    * True if the URL has valid syntax, false otherwise
    * @return validSyntax
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the URL has valid syntax, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_SYNTAX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +97,11 @@ public class ValidateUrlResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_SYNTAX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidSyntax(Boolean validSyntax) {
     this.validSyntax = validSyntax;
   }
-
 
   public ValidateUrlResponseFull validDomain(Boolean validDomain) {
     
@@ -110,12 +109,11 @@ public class ValidateUrlResponseFull {
     return this;
   }
 
-   /**
+  /**
    * True if the domain name is valid and exists, false otherwise
    * @return validDomain
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the domain name is valid and exists, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_DOMAIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,10 +122,11 @@ public class ValidateUrlResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_DOMAIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidDomain(Boolean validDomain) {
     this.validDomain = validDomain;
   }
-
 
   public ValidateUrlResponseFull validEndpoint(Boolean validEndpoint) {
     
@@ -135,12 +134,11 @@ public class ValidateUrlResponseFull {
     return this;
   }
 
-   /**
+  /**
    * True if the endpoint is up and responsive and passes a virus scan check, false otherwise
    * @return validEndpoint
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the endpoint is up and responsive and passes a virus scan check, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_ENDPOINT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,10 +147,11 @@ public class ValidateUrlResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_ENDPOINT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidEndpoint(Boolean validEndpoint) {
     this.validEndpoint = validEndpoint;
   }
-
 
   public ValidateUrlResponseFull wellFormedURL(String wellFormedURL) {
     
@@ -160,12 +159,11 @@ public class ValidateUrlResponseFull {
     return this;
   }
 
-   /**
+  /**
    * Well-formed version of the URL
    * @return wellFormedURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Well-formed version of the URL")
   @JsonProperty(JSON_PROPERTY_WELL_FORMED_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,10 +172,11 @@ public class ValidateUrlResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WELL_FORMED_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWellFormedURL(String wellFormedURL) {
     this.wellFormedURL = wellFormedURL;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -199,7 +198,6 @@ public class ValidateUrlResponseFull {
   public int hashCode() {
     return Objects.hash(validURL, validSyntax, validDomain, validEndpoint, wellFormedURL);
   }
-
 
   @Override
   public String toString() {

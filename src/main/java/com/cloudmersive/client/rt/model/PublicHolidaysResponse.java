@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a get public holidays request operation
  */
-@ApiModel(description = "Result of performing a get public holidays request operation")
 @JsonPropertyOrder({
   PublicHolidaysResponse.JSON_PROPERTY_SUCCESSFUL,
   PublicHolidaysResponse.JSON_PROPERTY_PUBLIC_HOLIDAYS
 })
-@JsonTypeName("PublicHolidaysResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PublicHolidaysResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_PUBLIC_HOLIDAYS = "PublicHolidays";
-  private List<PublicHolidayOccurrence> publicHolidays = null;
+  private List<PublicHolidayOccurrence> publicHolidays = new ArrayList<>();
 
+  public PublicHolidaysResponse() {
+  }
 
   public PublicHolidaysResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class PublicHolidaysResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class PublicHolidaysResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PublicHolidaysResponse publicHolidays(List<PublicHolidayOccurrence> publicHolidays) {
     
@@ -78,18 +78,17 @@ public class PublicHolidaysResponse {
 
   public PublicHolidaysResponse addPublicHolidaysItem(PublicHolidayOccurrence publicHolidaysItem) {
     if (this.publicHolidays == null) {
-      this.publicHolidays = new ArrayList<PublicHolidayOccurrence>();
+      this.publicHolidays = new ArrayList<>();
     }
     this.publicHolidays.add(publicHolidaysItem);
     return this;
   }
 
-   /**
+  /**
    * Public holidays in the requested country and year
    * @return publicHolidays
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Public holidays in the requested country and year")
   @JsonProperty(JSON_PROPERTY_PUBLIC_HOLIDAYS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class PublicHolidaysResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PUBLIC_HOLIDAYS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPublicHolidays(List<PublicHolidayOccurrence> publicHolidays) {
     this.publicHolidays = publicHolidays;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class PublicHolidaysResponse {
   public int hashCode() {
     return Objects.hash(successful, publicHolidays);
   }
-
 
   @Override
   public String toString() {

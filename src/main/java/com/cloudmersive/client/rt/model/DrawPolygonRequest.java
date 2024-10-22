@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to draw one or more polygons on a base image
  */
-@ApiModel(description = "Request to draw one or more polygons on a base image")
 @JsonPropertyOrder({
   DrawPolygonRequest.JSON_PROPERTY_BASE_IMAGE_BYTES,
   DrawPolygonRequest.JSON_PROPERTY_BASE_IMAGE_URL,
   DrawPolygonRequest.JSON_PROPERTY_POLYGONS_TO_DRAW
 })
-@JsonTypeName("DrawPolygonRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DrawPolygonRequest {
   public static final String JSON_PROPERTY_BASE_IMAGE_BYTES = "BaseImageBytes";
   private byte[] baseImageBytes;
@@ -46,8 +44,10 @@ public class DrawPolygonRequest {
   private String baseImageUrl;
 
   public static final String JSON_PROPERTY_POLYGONS_TO_DRAW = "PolygonsToDraw";
-  private List<DrawPolygonInstance> polygonsToDraw = null;
+  private List<DrawPolygonInstance> polygonsToDraw = new ArrayList<>();
 
+  public DrawPolygonRequest() {
+  }
 
   public DrawPolygonRequest baseImageBytes(byte[] baseImageBytes) {
     
@@ -55,12 +55,11 @@ public class DrawPolygonRequest {
     return this;
   }
 
-   /**
+  /**
    * Image to draw polygons on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL
    * @return baseImageBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image to draw polygons on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL")
   @JsonProperty(JSON_PROPERTY_BASE_IMAGE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class DrawPolygonRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BASE_IMAGE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBaseImageBytes(byte[] baseImageBytes) {
     this.baseImageBytes = baseImageBytes;
   }
-
 
   public DrawPolygonRequest baseImageUrl(String baseImageUrl) {
     
@@ -80,12 +80,11 @@ public class DrawPolygonRequest {
     return this;
   }
 
-   /**
+  /**
    * Image to draw polygons on, as an HTTP or HTTPS fully-qualified URL
    * @return baseImageUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image to draw polygons on, as an HTTP or HTTPS fully-qualified URL")
   @JsonProperty(JSON_PROPERTY_BASE_IMAGE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class DrawPolygonRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BASE_IMAGE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBaseImageUrl(String baseImageUrl) {
     this.baseImageUrl = baseImageUrl;
   }
-
 
   public DrawPolygonRequest polygonsToDraw(List<DrawPolygonInstance> polygonsToDraw) {
     
@@ -107,18 +107,17 @@ public class DrawPolygonRequest {
 
   public DrawPolygonRequest addPolygonsToDrawItem(DrawPolygonInstance polygonsToDrawItem) {
     if (this.polygonsToDraw == null) {
-      this.polygonsToDraw = new ArrayList<DrawPolygonInstance>();
+      this.polygonsToDraw = new ArrayList<>();
     }
     this.polygonsToDraw.add(polygonsToDrawItem);
     return this;
   }
 
-   /**
+  /**
    * Polygons to draw on the image.  Polygons are drawn in index order.
    * @return polygonsToDraw
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Polygons to draw on the image.  Polygons are drawn in index order.")
   @JsonProperty(JSON_PROPERTY_POLYGONS_TO_DRAW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class DrawPolygonRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_POLYGONS_TO_DRAW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPolygonsToDraw(List<DrawPolygonInstance> polygonsToDraw) {
     this.polygonsToDraw = polygonsToDraw;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class DrawPolygonRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(baseImageBytes), baseImageUrl, polygonsToDraw);
   }
-
 
   @Override
   public String toString() {

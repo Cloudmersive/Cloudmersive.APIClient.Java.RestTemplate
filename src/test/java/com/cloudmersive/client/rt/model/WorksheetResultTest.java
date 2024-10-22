@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for WorksheetResult
  */
-public class WorksheetResultTest {
+class WorksheetResultTest {
     private final WorksheetResult model = new WorksheetResult();
 
     /**
      * Model tests for WorksheetResult
      */
     @Test
-    public void testWorksheetResult() {
+    void testWorksheetResult() {
         // TODO: test WorksheetResult
     }
 
@@ -43,7 +40,7 @@ public class WorksheetResultTest {
      * Test the property 'worksheetNumber'
      */
     @Test
-    public void worksheetNumberTest() {
+    void worksheetNumberTest() {
         // TODO: test worksheetNumber
     }
 
@@ -51,7 +48,7 @@ public class WorksheetResultTest {
      * Test the property 'worksheetName'
      */
     @Test
-    public void worksheetNameTest() {
+    void worksheetNameTest() {
         // TODO: test worksheetName
     }
 
@@ -59,7 +56,7 @@ public class WorksheetResultTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 
@@ -67,7 +64,7 @@ public class WorksheetResultTest {
      * Test the property 'worksheetContents'
      */
     @Test
-    public void worksheetContentsTest() {
+    void worksheetContentsTest() {
         // TODO: test worksheetContents
     }
 

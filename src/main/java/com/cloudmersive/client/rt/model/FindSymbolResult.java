@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of a find symbol operation on an input image
  */
-@ApiModel(description = "Result of a find symbol operation on an input image")
 @JsonPropertyOrder({
   FindSymbolResult.JSON_PROPERTY_SUCCESSFUL,
   FindSymbolResult.JSON_PROPERTY_MATCH_SCORE,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FindSymbolResult.JSON_PROPERTY_WIDTH,
   FindSymbolResult.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("FindSymbolResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FindSymbolResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -57,6 +54,8 @@ public class FindSymbolResult {
   public static final String JSON_PROPERTY_HEIGHT = "Height";
   private Integer height;
 
+  public FindSymbolResult() {
+  }
 
   public FindSymbolResult successful(Boolean successful) {
     
@@ -64,12 +63,11 @@ public class FindSymbolResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -78,10 +76,11 @@ public class FindSymbolResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public FindSymbolResult matchScore(Double matchScore) {
     
@@ -89,12 +88,11 @@ public class FindSymbolResult {
     return this;
   }
 
-   /**
+  /**
    * Score between 0.0 and 1.0 that measures how closely the symbol matched; scores above 0.2 are good
    * @return matchScore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Score between 0.0 and 1.0 that measures how closely the symbol matched; scores above 0.2 are good")
   @JsonProperty(JSON_PROPERTY_MATCH_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +101,11 @@ public class FindSymbolResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchScore(Double matchScore) {
     this.matchScore = matchScore;
   }
-
 
   public FindSymbolResult xleft(Integer xleft) {
     
@@ -114,12 +113,11 @@ public class FindSymbolResult {
     return this;
   }
 
-   /**
+  /**
    * X location of the left edge of the found location in pixels
    * @return xleft
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location of the left edge of the found location in pixels")
   @JsonProperty(JSON_PROPERTY_XLEFT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +126,11 @@ public class FindSymbolResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_XLEFT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXleft(Integer xleft) {
     this.xleft = xleft;
   }
-
 
   public FindSymbolResult ytop(Integer ytop) {
     
@@ -139,12 +138,11 @@ public class FindSymbolResult {
     return this;
   }
 
-   /**
+  /**
    * Y location of the top edge of the found location in pixels
    * @return ytop
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location of the top edge of the found location in pixels")
   @JsonProperty(JSON_PROPERTY_YTOP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +151,11 @@ public class FindSymbolResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_YTOP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setYtop(Integer ytop) {
     this.ytop = ytop;
   }
-
 
   public FindSymbolResult width(Integer width) {
     
@@ -164,12 +163,11 @@ public class FindSymbolResult {
     return this;
   }
 
-   /**
+  /**
    * Width of the found location in pixels
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the found location in pixels")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +176,11 @@ public class FindSymbolResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public FindSymbolResult height(Integer height) {
     
@@ -189,12 +188,11 @@ public class FindSymbolResult {
     return this;
   }
 
-   /**
+  /**
    * Height of the found location in pixels
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the found location in pixels")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +201,11 @@ public class FindSymbolResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -229,7 +228,6 @@ public class FindSymbolResult {
   public int hashCode() {
     return Objects.hash(successful, matchScore, xleft, ytop, width, height);
   }
-
 
   @Override
   public String toString() {

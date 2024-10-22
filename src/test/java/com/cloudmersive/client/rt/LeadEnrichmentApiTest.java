@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.EmailLead;
 import com.cloudmersive.client.rt.model.LeadEnrichmentRequest;
 import com.cloudmersive.client.rt.model.LeadEnrichmentResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for LeadEnrichmentApi
  */
-@Ignore
-public class LeadEnrichmentApiTest {
+@Disabled
+class LeadEnrichmentApiTest {
 
     private final LeadEnrichmentApi api = new LeadEnrichmentApi();
 
@@ -38,12 +41,13 @@ public class LeadEnrichmentApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void leadEnrichmentEnrichLeadTest() {
+    void leadEnrichmentEnrichLeadTest() {
         LeadEnrichmentRequest request = null;
+
         LeadEnrichmentResponse response = api.leadEnrichmentEnrichLead(request);
 
         // TODO: test validations
@@ -54,12 +58,13 @@ public class LeadEnrichmentApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void leadEnrichmentGetCompanyInformationTest() {
+    void leadEnrichmentGetCompanyInformationTest() {
         EmailLead request = null;
+
         LeadEnrichmentResponse response = api.leadEnrichmentGetCompanyInformation(request);
 
         // TODO: test validations

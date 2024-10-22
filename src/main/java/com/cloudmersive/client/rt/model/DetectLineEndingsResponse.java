@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of base 64 decoding
  */
-@ApiModel(description = "Result of base 64 decoding")
 @JsonPropertyOrder({
   DetectLineEndingsResponse.JSON_PROPERTY_SUCCESSFUL,
   DetectLineEndingsResponse.JSON_PROPERTY_PRIMARY_NEWLINE_TYPE,
   DetectLineEndingsResponse.JSON_PROPERTY_PRIMARY_NEWLINE_TERMINATOR,
   DetectLineEndingsResponse.JSON_PROPERTY_INPUT_LENGTH
 })
-@JsonTypeName("DetectLineEndingsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DetectLineEndingsResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -49,6 +46,8 @@ public class DetectLineEndingsResponse {
   public static final String JSON_PROPERTY_INPUT_LENGTH = "InputLength";
   private Integer inputLength;
 
+  public DetectLineEndingsResponse() {
+  }
 
   public DetectLineEndingsResponse successful(Boolean successful) {
     
@@ -56,12 +55,11 @@ public class DetectLineEndingsResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class DetectLineEndingsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public DetectLineEndingsResponse primaryNewlineType(String primaryNewlineType) {
     
@@ -81,12 +80,11 @@ public class DetectLineEndingsResponse {
     return this;
   }
 
-   /**
+  /**
    * Type of newline in the file; possible vlaues are \&quot;Mac\&quot; (legacy Mac OS uses carriage return only); \&quot;Unix\&quot; (Unix and Linux OSes, and modern Mac OS); \&quot;Windows\&quot; (Windows operating systems)
    * @return primaryNewlineType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of newline in the file; possible vlaues are \"Mac\" (legacy Mac OS uses carriage return only); \"Unix\" (Unix and Linux OSes, and modern Mac OS); \"Windows\" (Windows operating systems)")
   @JsonProperty(JSON_PROPERTY_PRIMARY_NEWLINE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class DetectLineEndingsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PRIMARY_NEWLINE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPrimaryNewlineType(String primaryNewlineType) {
     this.primaryNewlineType = primaryNewlineType;
   }
-
 
   public DetectLineEndingsResponse primaryNewlineTerminator(String primaryNewlineTerminator) {
     
@@ -106,12 +105,11 @@ public class DetectLineEndingsResponse {
     return this;
   }
 
-   /**
+  /**
    * Characters used to terminate a newline; can be carriage return, linefeed, or carriage return + linefeed
    * @return primaryNewlineTerminator
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Characters used to terminate a newline; can be carriage return, linefeed, or carriage return + linefeed")
   @JsonProperty(JSON_PROPERTY_PRIMARY_NEWLINE_TERMINATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class DetectLineEndingsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PRIMARY_NEWLINE_TERMINATOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPrimaryNewlineTerminator(String primaryNewlineTerminator) {
     this.primaryNewlineTerminator = primaryNewlineTerminator;
   }
-
 
   public DetectLineEndingsResponse inputLength(Integer inputLength) {
     
@@ -131,12 +130,11 @@ public class DetectLineEndingsResponse {
     return this;
   }
 
-   /**
+  /**
    * Length of the input string in characters
    * @return inputLength
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Length of the input string in characters")
   @JsonProperty(JSON_PROPERTY_INPUT_LENGTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class DetectLineEndingsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_LENGTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputLength(Integer inputLength) {
     this.inputLength = inputLength;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class DetectLineEndingsResponse {
   public int hashCode() {
     return Objects.hash(successful, primaryNewlineType, primaryNewlineTerminator, inputLength);
   }
-
 
   @Override
   public String toString() {

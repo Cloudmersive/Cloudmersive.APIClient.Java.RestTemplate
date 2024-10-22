@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for OcrLineElement
  */
-public class OcrLineElementTest {
+class OcrLineElementTest {
     private final OcrLineElement model = new OcrLineElement();
 
     /**
      * Model tests for OcrLineElement
      */
     @Test
-    public void testOcrLineElement() {
+    void testOcrLineElement() {
         // TODO: test OcrLineElement
     }
 
@@ -46,7 +44,7 @@ public class OcrLineElementTest {
      * Test the property 'lineText'
      */
     @Test
-    public void lineTextTest() {
+    void lineTextTest() {
         // TODO: test lineText
     }
 
@@ -54,7 +52,7 @@ public class OcrLineElementTest {
      * Test the property 'words'
      */
     @Test
-    public void wordsTest() {
+    void wordsTest() {
         // TODO: test words
     }
 

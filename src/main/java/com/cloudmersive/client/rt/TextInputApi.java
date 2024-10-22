@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import com.cloudmersive.client.rt.model.HtmlSsrfDetectionResult;
 import com.cloudmersive.client.rt.model.SqlInjectionCheckBatchRequest;
@@ -34,26 +35,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.TextInputApi")
-public class TextInputApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class TextInputApi extends BaseApi {
 
     public TextInputApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public TextInputApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -61,11 +51,12 @@ public class TextInputApi {
      * Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
      * <p><b>200</b> - OK
      * @param value User-facing HTML input. (required)
+     * @param allowCidScheme Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)
      * @return HtmlSsrfDetectionResult
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public HtmlSsrfDetectionResult textInputCheckHtmlSsrf(String value) throws RestClientException {
-        return textInputCheckHtmlSsrfWithHttpInfo(value).getBody();
+    public HtmlSsrfDetectionResult textInputCheckHtmlSsrf(String value, Boolean allowCidScheme) throws RestClientException {
+        return textInputCheckHtmlSsrfWithHttpInfo(value, allowCidScheme).getBody();
     }
 
     /**
@@ -73,37 +64,40 @@ public class TextInputApi {
      * Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
      * <p><b>200</b> - OK
      * @param value User-facing HTML input. (required)
+     * @param allowCidScheme Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. (optional)
      * @return ResponseEntity&lt;HtmlSsrfDetectionResult&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<HtmlSsrfDetectionResult> textInputCheckHtmlSsrfWithHttpInfo(String value) throws RestClientException {
-        Object postBody = value;
+    public ResponseEntity<HtmlSsrfDetectionResult> textInputCheckHtmlSsrfWithHttpInfo(String value, Boolean allowCidScheme) throws RestClientException {
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputCheckHtmlSsrf");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/html/check/ssrf", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (allowCidScheme != null)
+        localVarHeaderParams.add("allowCidScheme", apiClient.parameterToString(allowCidScheme));
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<HtmlSsrfDetectionResult> returnType = new ParameterizedTypeReference<HtmlSsrfDetectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<HtmlSsrfDetectionResult> localReturnType = new ParameterizedTypeReference<HtmlSsrfDetectionResult>() {};
+        return apiClient.invokeAPI("/validate/text-input/html/check/ssrf", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Check text input for SQL Injection (SQLI) attacks
@@ -128,36 +122,35 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SqlInjectionDetectionResult> textInputCheckSqlInjectionWithHttpInfo(String value, String detectionLevel) throws RestClientException {
-        Object postBody = value;
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputCheckSqlInjection");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/check/sql-injection", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (detectionLevel != null)
-        headerParams.add("detectionLevel", apiClient.parameterToString(detectionLevel));
+        localVarHeaderParams.add("detectionLevel", apiClient.parameterToString(detectionLevel));
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SqlInjectionDetectionResult> returnType = new ParameterizedTypeReference<SqlInjectionDetectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SqlInjectionDetectionResult> localReturnType = new ParameterizedTypeReference<SqlInjectionDetectionResult>() {};
+        return apiClient.invokeAPI("/validate/text-input/check/sql-injection", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
@@ -180,33 +173,32 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SqlInjectionCheckBatchResponse> textInputCheckSqlInjectionBatchWithHttpInfo(SqlInjectionCheckBatchRequest value) throws RestClientException {
-        Object postBody = value;
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputCheckSqlInjectionBatch");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/check/sql-injection/batch", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SqlInjectionCheckBatchResponse> returnType = new ParameterizedTypeReference<SqlInjectionCheckBatchResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SqlInjectionCheckBatchResponse> localReturnType = new ParameterizedTypeReference<SqlInjectionCheckBatchResponse>() {};
+        return apiClient.invokeAPI("/validate/text-input/check/sql-injection/batch", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Check text input for Cross-Site-Scripting (XSS) attacks
@@ -229,33 +221,32 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<XssProtectionResult> textInputCheckXssWithHttpInfo(String value) throws RestClientException {
-        Object postBody = value;
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputCheckXss");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/check/xss", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<XssProtectionResult> returnType = new ParameterizedTypeReference<XssProtectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<XssProtectionResult> localReturnType = new ParameterizedTypeReference<XssProtectionResult>() {};
+        return apiClient.invokeAPI("/validate/text-input/check/xss", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
@@ -278,33 +269,32 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<XssProtectionBatchResponse> textInputCheckXssBatchWithHttpInfo(XssProtectionBatchRequest value) throws RestClientException {
-        Object postBody = value;
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputCheckXssBatch");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/check-and-protect/xss/batch", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<XssProtectionBatchResponse> returnType = new ParameterizedTypeReference<XssProtectionBatchResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<XssProtectionBatchResponse> localReturnType = new ParameterizedTypeReference<XssProtectionBatchResponse>() {};
+        return apiClient.invokeAPI("/validate/text-input/check-and-protect/xss/batch", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Protect text input from XML External Entity (XXE) attacks
@@ -333,40 +323,39 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<XxeDetectionResult> textInputCheckXxeWithHttpInfo(String value, Boolean allowInternetUrls, String knownSafeUrls, String knownUnsafeUrls) throws RestClientException {
-        Object postBody = value;
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputCheckXxe");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/check/xxe", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (allowInternetUrls != null)
-        headerParams.add("allowInternetUrls", apiClient.parameterToString(allowInternetUrls));
+        localVarHeaderParams.add("allowInternetUrls", apiClient.parameterToString(allowInternetUrls));
         if (knownSafeUrls != null)
-        headerParams.add("knownSafeUrls", apiClient.parameterToString(knownSafeUrls));
+        localVarHeaderParams.add("knownSafeUrls", apiClient.parameterToString(knownSafeUrls));
         if (knownUnsafeUrls != null)
-        headerParams.add("knownUnsafeUrls", apiClient.parameterToString(knownUnsafeUrls));
+        localVarHeaderParams.add("knownUnsafeUrls", apiClient.parameterToString(knownUnsafeUrls));
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<XxeDetectionResult> returnType = new ParameterizedTypeReference<XxeDetectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<XxeDetectionResult> localReturnType = new ParameterizedTypeReference<XxeDetectionResult>() {};
+        return apiClient.invokeAPI("/validate/text-input/check/xxe", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Protect text input from XML External Entity (XXE) attacks
@@ -389,33 +378,32 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<XxeDetectionBatchResponse> textInputCheckXxeBatchWithHttpInfo(XxeDetectionBatchRequest request) throws RestClientException {
-        Object postBody = request;
+        Object localVarPostBody = request;
         
         // verify the required parameter 'request' is set
         if (request == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling textInputCheckXxeBatch");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/check/xxe/batch", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<XxeDetectionBatchResponse> returnType = new ParameterizedTypeReference<XxeDetectionBatchResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<XxeDetectionBatchResponse> localReturnType = new ParameterizedTypeReference<XxeDetectionBatchResponse>() {};
+        return apiClient.invokeAPI("/validate/text-input/check/xxe/batch", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
@@ -438,32 +426,56 @@ public class TextInputApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<XssProtectionResult> textInputProtectXssWithHttpInfo(String value) throws RestClientException {
-        Object postBody = value;
+        Object localVarPostBody = value;
         
         // verify the required parameter 'value' is set
         if (value == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'value' when calling textInputProtectXss");
         }
         
-        String path = apiClient.expandPath("/validate/text-input/protect/xss", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<XssProtectionResult> returnType = new ParameterizedTypeReference<XssProtectionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<XssProtectionResult> localReturnType = new ParameterizedTypeReference<XssProtectionResult>() {};
+        return apiClient.invokeAPI("/validate/text-input/protect/xss", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json", "text/json"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

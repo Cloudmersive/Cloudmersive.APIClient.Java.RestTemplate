@@ -20,29 +20,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of a partial email address validation
  */
-@ApiModel(description = "Result of a partial email address validation")
 @JsonPropertyOrder({
   AddressGetServersResponse.JSON_PROPERTY_SUCCESS,
   AddressGetServersResponse.JSON_PROPERTY_SERVERS
 })
-@JsonTypeName("AddressGetServersResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AddressGetServersResponse {
   public static final String JSON_PROPERTY_SUCCESS = "Success";
   private Boolean success;
 
   public static final String JSON_PROPERTY_SERVERS = "Servers";
-  private List<String> servers = null;
+  private List<String> servers = new ArrayList<>();
 
+  public AddressGetServersResponse() {
+  }
 
   public AddressGetServersResponse success(Boolean success) {
     
@@ -50,12 +50,11 @@ public class AddressGetServersResponse {
     return this;
   }
 
-   /**
+  /**
    * True if partial address validation was successufl, false otherwise
    * @return success
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if partial address validation was successufl, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -64,10 +63,11 @@ public class AddressGetServersResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccess(Boolean success) {
     this.success = success;
   }
-
 
   public AddressGetServersResponse servers(List<String> servers) {
     
@@ -77,18 +77,17 @@ public class AddressGetServersResponse {
 
   public AddressGetServersResponse addServersItem(String serversItem) {
     if (this.servers == null) {
-      this.servers = new ArrayList<String>();
+      this.servers = new ArrayList<>();
     }
     this.servers.add(serversItem);
     return this;
   }
 
-   /**
+  /**
    * Email servers for this email address
    * @return servers
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Email servers for this email address")
   @JsonProperty(JSON_PROPERTY_SERVERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +96,11 @@ public class AddressGetServersResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SERVERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setServers(List<String> servers) {
     this.servers = servers;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -119,7 +119,6 @@ public class AddressGetServersResponse {
   public int hashCode() {
     return Objects.hash(success, servers);
   }
-
 
   @Override
   public String toString() {

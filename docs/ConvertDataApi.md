@@ -2,26 +2,26 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**convertDataCsvToJson**](ConvertDataApi.md#convertDataCsvToJson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion
-[**convertDataCsvToXml**](ConvertDataApi.md#convertDataCsvToXml) | **POST** /convert/csv/to/xml | Convert CSV to XML conversion
-[**convertDataJsonStringToXml**](ConvertDataApi.md#convertDataJsonStringToXml) | **POST** /convert/json-string/to/xml | Convert JSON String to XML conversion
-[**convertDataJsonToXml**](ConvertDataApi.md#convertDataJsonToXml) | **POST** /convert/json/to/xml | Convert JSON Object to XML conversion
-[**convertDataXlsToJson**](ConvertDataApi.md#convertDataXlsToJson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion
-[**convertDataXlsxToJson**](ConvertDataApi.md#convertDataXlsxToJson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion
-[**convertDataXlsxToXml**](ConvertDataApi.md#convertDataXlsxToXml) | **POST** /convert/xlsx/to/xml | Convert Excel XLSX to XML conversion
-[**convertDataXmlEditAddAttributeWithXPath**](ConvertDataApi.md#convertDataXmlEditAddAttributeWithXPath) | **POST** /convert/xml/edit/xpath/add-attribute | Adds an attribute to all XML nodes matching XPath expression
-[**convertDataXmlEditAddChildWithXPath**](ConvertDataApi.md#convertDataXmlEditAddChildWithXPath) | **POST** /convert/xml/edit/xpath/add-child | Adds an XML node as a child to XML nodes matching XPath expression
-[**convertDataXmlEditRemoveAllChildNodesWithXPath**](ConvertDataApi.md#convertDataXmlEditRemoveAllChildNodesWithXPath) | **POST** /convert/xml/edit/xpath/remove-all-children | Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes
-[**convertDataXmlEditReplaceWithXPath**](ConvertDataApi.md#convertDataXmlEditReplaceWithXPath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node
-[**convertDataXmlEditSetValueWithXPath**](ConvertDataApi.md#convertDataXmlEditSetValueWithXPath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression
-[**convertDataXmlFilterWithXPath**](ConvertDataApi.md#convertDataXmlFilterWithXPath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results
-[**convertDataXmlQueryWithXQuery**](ConvertDataApi.md#convertDataXmlQueryWithXQuery) | **POST** /convert/xml/query/xquery | Query an XML file using XQuery query, get results
-[**convertDataXmlQueryWithXQueryMulti**](ConvertDataApi.md#convertDataXmlQueryWithXQueryMulti) | **POST** /convert/xml/query/xquery/multi | Query multiple XML files using XQuery query, get results
-[**convertDataXmlRemoveWithXPath**](ConvertDataApi.md#convertDataXmlRemoveWithXPath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression
-[**convertDataXmlToJson**](ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion
-[**convertDataXmlTransformWithXsltToXml**](ConvertDataApi.md#convertDataXmlTransformWithXsltToXml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**convertDataCsvToJson**](ConvertDataApi.md#convertDataCsvToJson) | **POST** /convert/csv/to/json | Convert CSV to JSON conversion |
+| [**convertDataCsvToXml**](ConvertDataApi.md#convertDataCsvToXml) | **POST** /convert/csv/to/xml | Convert CSV to XML conversion |
+| [**convertDataJsonStringToXml**](ConvertDataApi.md#convertDataJsonStringToXml) | **POST** /convert/json-string/to/xml | Convert JSON String to XML conversion |
+| [**convertDataJsonToXml**](ConvertDataApi.md#convertDataJsonToXml) | **POST** /convert/json/to/xml | Convert JSON Object to XML conversion |
+| [**convertDataXlsToJson**](ConvertDataApi.md#convertDataXlsToJson) | **POST** /convert/xls/to/json | Convert Excel (97-2003) XLS to JSON conversion |
+| [**convertDataXlsxToJson**](ConvertDataApi.md#convertDataXlsxToJson) | **POST** /convert/xlsx/to/json | Convert Excel XLSX to JSON conversion |
+| [**convertDataXlsxToXml**](ConvertDataApi.md#convertDataXlsxToXml) | **POST** /convert/xlsx/to/xml | Convert Excel XLSX to XML conversion |
+| [**convertDataXmlEditAddAttributeWithXPath**](ConvertDataApi.md#convertDataXmlEditAddAttributeWithXPath) | **POST** /convert/xml/edit/xpath/add-attribute | Adds an attribute to all XML nodes matching XPath expression |
+| [**convertDataXmlEditAddChildWithXPath**](ConvertDataApi.md#convertDataXmlEditAddChildWithXPath) | **POST** /convert/xml/edit/xpath/add-child | Adds an XML node as a child to XML nodes matching XPath expression |
+| [**convertDataXmlEditRemoveAllChildNodesWithXPath**](ConvertDataApi.md#convertDataXmlEditRemoveAllChildNodesWithXPath) | **POST** /convert/xml/edit/xpath/remove-all-children | Removes, deletes all children of nodes matching XPath expression, but does not remove the nodes |
+| [**convertDataXmlEditReplaceWithXPath**](ConvertDataApi.md#convertDataXmlEditReplaceWithXPath) | **POST** /convert/xml/edit/xpath/replace | Replaces XML nodes matching XPath expression with new node |
+| [**convertDataXmlEditSetValueWithXPath**](ConvertDataApi.md#convertDataXmlEditSetValueWithXPath) | **POST** /convert/xml/edit/xpath/set-value | Sets the value contents of XML nodes matching XPath expression |
+| [**convertDataXmlFilterWithXPath**](ConvertDataApi.md#convertDataXmlFilterWithXPath) | **POST** /convert/xml/select/xpath | Filter, select XML nodes using XPath expression, get results |
+| [**convertDataXmlQueryWithXQuery**](ConvertDataApi.md#convertDataXmlQueryWithXQuery) | **POST** /convert/xml/query/xquery | Query an XML file using XQuery query, get results |
+| [**convertDataXmlQueryWithXQueryMulti**](ConvertDataApi.md#convertDataXmlQueryWithXQueryMulti) | **POST** /convert/xml/query/xquery/multi | Query multiple XML files using XQuery query, get results |
+| [**convertDataXmlRemoveWithXPath**](ConvertDataApi.md#convertDataXmlRemoveWithXPath) | **POST** /convert/xml/edit/xpath/remove | Remove, delete XML nodes and items matching XPath expression |
+| [**convertDataXmlToJson**](ConvertDataApi.md#convertDataXmlToJson) | **POST** /convert/xml/to/json | Convert XML to JSON conversion |
+| [**convertDataXmlTransformWithXsltToXml**](ConvertDataApi.md#convertDataXmlTransformWithXsltToXml) | **POST** /convert/xml/transform/xslt/to/xml | Transform XML document file with XSLT into a new XML document |
 
 
 
@@ -75,10 +75,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
- **columnNamesFromFirstRow** | **Boolean**| Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
+| **columnNamesFromFirstRow** | **Boolean**| Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. | [optional] |
 
 ### Return type
 
@@ -92,6 +92,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -149,10 +150,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
- **columnNamesFromFirstRow** | **Boolean**| Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
+| **columnNamesFromFirstRow** | **Boolean**| Optional; If true, the first row will be used as the labels for the columns; if false, columns will be named Column0, Column1, etc.  Default is true.  Set to false if you are not using column headings, or have an irregular column structure. | [optional] |
 
 ### Return type
 
@@ -166,6 +167,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -222,9 +224,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jsonString** | **String**| Input JSON String to convert to XML |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jsonString** | **String**| Input JSON String to convert to XML | |
 
 ### Return type
 
@@ -238,6 +240,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -294,9 +297,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **jsonObject** | **Object**| Input JSON Object to convert to XML |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jsonObject** | **Object**| Input JSON Object to convert to XML | |
 
 ### Return type
 
@@ -310,6 +313,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -366,9 +370,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -382,6 +386,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -438,9 +443,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -454,6 +459,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -510,9 +516,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -526,6 +532,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -585,12 +592,12 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **xmlAttributeName** | **String**| Name of the XML attribute to add |
- **xmlAttributeValue** | **String**| Value of the XML attribute to add |
- **inputFile** | **File**| Input XML file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **xmlAttributeName** | **String**| Name of the XML attribute to add | |
+| **xmlAttributeValue** | **String**| Value of the XML attribute to add | |
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
 
 ### Return type
 
@@ -604,6 +611,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -662,11 +670,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **xmlNodeToAdd** | **String**| XML Node to add as a child |
- **inputFile** | **File**| Input XML file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **xmlNodeToAdd** | **String**| XML Node to add as a child | |
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
 
 ### Return type
 
@@ -680,6 +688,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -737,10 +746,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **inputFile** | **File**| Input XML file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
 
 ### Return type
 
@@ -754,6 +763,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -812,11 +822,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **xmlNodeReplacement** | **String**| XML Node replacement content |
- **inputFile** | **File**| Input XML file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **xmlNodeReplacement** | **String**| XML Node replacement content | |
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
 
 ### Return type
 
@@ -830,6 +840,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -888,11 +899,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **xmlValue** | **String**| XML Value to set into the matching XML nodes |
- **inputFile** | **File**| Input XML file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **xmlValue** | **String**| XML Value to set into the matching XML nodes | |
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
 
 ### Return type
 
@@ -906,6 +917,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -963,10 +975,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -980,6 +992,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1037,10 +1050,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xquery** | **String**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported |
- **inputFile** | **File**| Input XML file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xquery** | **String**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported | |
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
 
 ### Return type
 
@@ -1054,6 +1067,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1120,19 +1134,19 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xquery** | **String**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported |
- **inputFile1** | **File**| First input XML file to perform the operation on. |
- **inputFile2** | **File**| Second input XML file to perform the operation on. | [optional]
- **inputFile3** | **File**| Third input XML file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input XML file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input XML file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input XML file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input XML file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input XML file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input XML file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input XML file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xquery** | **String**| Valid XML XQuery 3.1 or earlier query expression; multi-line expressions are supported | |
+| **inputFile1** | **File**| First input XML file to perform the operation on. | |
+| **inputFile2** | **File**| Second input XML file to perform the operation on. | [optional] |
+| **inputFile3** | **File**| Third input XML file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input XML file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input XML file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input XML file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input XML file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input XML file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input XML file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input XML file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -1146,6 +1160,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1203,10 +1218,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **xpathExpression** | **String**| Valid XML XPath query expression |
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **xpathExpression** | **String**| Valid XML XPath query expression | |
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -1220,6 +1235,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1276,9 +1292,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -1292,6 +1308,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1349,10 +1366,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input XML file to perform the operation on. |
- **transformFile** | **File**| Input XSLT file to use to transform the input XML file. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input XML file to perform the operation on. | |
+| **transformFile** | **File**| Input XSLT file to use to transform the input XML file. | |
 
 ### Return type
 
@@ -1366,6 +1383,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

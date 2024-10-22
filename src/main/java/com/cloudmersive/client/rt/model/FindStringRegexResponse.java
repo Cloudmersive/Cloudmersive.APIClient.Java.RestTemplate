@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of finding a string
  */
-@ApiModel(description = "Result of finding a string")
 @JsonPropertyOrder({
   FindStringRegexResponse.JSON_PROPERTY_SUCCESSFUL,
   FindStringRegexResponse.JSON_PROPERTY_MATCHES,
   FindStringRegexResponse.JSON_PROPERTY_MATCH_COUNT
 })
-@JsonTypeName("FindStringRegexResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FindStringRegexResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_MATCHES = "Matches";
-  private List<FindRegexMatch> matches = null;
+  private List<FindRegexMatch> matches = new ArrayList<>();
 
   public static final String JSON_PROPERTY_MATCH_COUNT = "MatchCount";
   private Integer matchCount;
 
+  public FindStringRegexResponse() {
+  }
 
   public FindStringRegexResponse successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class FindStringRegexResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class FindStringRegexResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public FindStringRegexResponse matches(List<FindRegexMatch> matches) {
     
@@ -82,18 +82,17 @@ public class FindStringRegexResponse {
 
   public FindStringRegexResponse addMatchesItem(FindRegexMatch matchesItem) {
     if (this.matches == null) {
-      this.matches = new ArrayList<FindRegexMatch>();
+      this.matches = new ArrayList<>();
     }
     this.matches.add(matchesItem);
     return this;
   }
 
-   /**
+  /**
    * Regular expression matches
    * @return matches
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Regular expression matches")
   @JsonProperty(JSON_PROPERTY_MATCHES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class FindStringRegexResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCHES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatches(List<FindRegexMatch> matches) {
     this.matches = matches;
   }
-
 
   public FindStringRegexResponse matchCount(Integer matchCount) {
     
@@ -113,12 +113,11 @@ public class FindStringRegexResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of matches
    * @return matchCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of matches")
   @JsonProperty(JSON_PROPERTY_MATCH_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class FindStringRegexResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchCount(Integer matchCount) {
     this.matchCount = matchCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class FindStringRegexResponse {
   public int hashCode() {
     return Objects.hash(successful, matches, matchCount);
   }
-
 
   @Override
   public String toString() {

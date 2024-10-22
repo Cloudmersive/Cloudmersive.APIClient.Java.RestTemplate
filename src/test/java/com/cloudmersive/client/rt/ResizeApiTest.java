@@ -14,9 +14,12 @@
 package com.cloudmersive.client.rt;
 
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +28,8 @@ import java.util.Map;
 /**
  * API tests for ResizeApi
  */
-@Ignore
-public class ResizeApiTest {
+@Disabled
+class ResizeApiTest {
 
     private final ResizeApi api = new ResizeApi();
 
@@ -36,14 +39,15 @@ public class ResizeApiTest {
      *
      * Resize an image to a maximum width and maximum height, while preserving the image&#39;s original aspect ratio.  Resize is EXIF-aware.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void resizePostTest() {
+    void resizePostTest() {
         Integer maxWidth = null;
         Integer maxHeight = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.resizePost(maxWidth, maxHeight, imageFile);
 
         // TODO: test validations
@@ -54,14 +58,15 @@ public class ResizeApiTest {
      *
      * Resize an image to a specific width and specific height.  Resize is EXIF-aware.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void resizeResizeSimpleTest() {
+    void resizeResizeSimpleTest() {
         Integer width = null;
         Integer height = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.resizeResizeSimple(width, height, imageFile);
 
         // TODO: test validations

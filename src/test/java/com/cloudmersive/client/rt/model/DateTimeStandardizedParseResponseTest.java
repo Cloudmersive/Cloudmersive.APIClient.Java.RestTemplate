@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DateTimeStandardizedParseResponse
  */
-public class DateTimeStandardizedParseResponseTest {
+class DateTimeStandardizedParseResponseTest {
     private final DateTimeStandardizedParseResponse model = new DateTimeStandardizedParseResponse();
 
     /**
      * Model tests for DateTimeStandardizedParseResponse
      */
     @Test
-    public void testDateTimeStandardizedParseResponse() {
+    void testDateTimeStandardizedParseResponse() {
         // TODO: test DateTimeStandardizedParseResponse
     }
 
@@ -44,7 +41,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -52,7 +49,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'parsedDateResult'
      */
     @Test
-    public void parsedDateResultTest() {
+    void parsedDateResultTest() {
         // TODO: test parsedDateResult
     }
 
@@ -60,7 +57,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'year'
      */
     @Test
-    public void yearTest() {
+    void yearTest() {
         // TODO: test year
     }
 
@@ -68,7 +65,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'month'
      */
     @Test
-    public void monthTest() {
+    void monthTest() {
         // TODO: test month
     }
 
@@ -76,7 +73,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'day'
      */
     @Test
-    public void dayTest() {
+    void dayTest() {
         // TODO: test day
     }
 
@@ -84,7 +81,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'hour'
      */
     @Test
-    public void hourTest() {
+    void hourTest() {
         // TODO: test hour
     }
 
@@ -92,7 +89,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'minute'
      */
     @Test
-    public void minuteTest() {
+    void minuteTest() {
         // TODO: test minute
     }
 
@@ -100,7 +97,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'second'
      */
     @Test
-    public void secondTest() {
+    void secondTest() {
         // TODO: test second
     }
 
@@ -108,7 +105,7 @@ public class DateTimeStandardizedParseResponseTest {
      * Test the property 'dayOfWeek'
      */
     @Test
-    public void dayOfWeekTest() {
+    void dayOfWeekTest() {
         // TODO: test dayOfWeek
     }
 

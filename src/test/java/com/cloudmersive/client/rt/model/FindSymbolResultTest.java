@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FindSymbolResult
  */
-public class FindSymbolResultTest {
+class FindSymbolResultTest {
     private final FindSymbolResult model = new FindSymbolResult();
 
     /**
      * Model tests for FindSymbolResult
      */
     @Test
-    public void testFindSymbolResult() {
+    void testFindSymbolResult() {
         // TODO: test FindSymbolResult
     }
 
@@ -43,7 +40,7 @@ public class FindSymbolResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class FindSymbolResultTest {
      * Test the property 'matchScore'
      */
     @Test
-    public void matchScoreTest() {
+    void matchScoreTest() {
         // TODO: test matchScore
     }
 
@@ -59,7 +56,7 @@ public class FindSymbolResultTest {
      * Test the property 'xleft'
      */
     @Test
-    public void xleftTest() {
+    void xleftTest() {
         // TODO: test xleft
     }
 
@@ -67,7 +64,7 @@ public class FindSymbolResultTest {
      * Test the property 'ytop'
      */
     @Test
-    public void ytopTest() {
+    void ytopTest() {
         // TODO: test ytop
     }
 
@@ -75,7 +72,7 @@ public class FindSymbolResultTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -83,7 +80,7 @@ public class FindSymbolResultTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 

@@ -23,9 +23,12 @@ import com.cloudmersive.client.rt.model.ImageSimilarityHashResponse;
 import com.cloudmersive.client.rt.model.ObjectDetectionResult;
 import com.cloudmersive.client.rt.model.TextDetectionResult;
 import com.cloudmersive.client.rt.model.VehicleLicensePlateDetectionResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,8 +37,8 @@ import java.util.Map;
 /**
  * API tests for RecognizeApi
  */
-@Ignore
-public class RecognizeApiTest {
+@Disabled
+class RecognizeApiTest {
 
     private final RecognizeApi api = new RecognizeApi();
 
@@ -45,12 +48,13 @@ public class RecognizeApiTest {
      *
      * Generate an English language text description of the image as a sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDescribeTest() {
+    void recognizeDescribeTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         ImageDescriptionResponse response = api.recognizeDescribe(imageFile);
 
         // TODO: test validations
@@ -61,13 +65,14 @@ public class RecognizeApiTest {
      *
      * Detect and unskew a photo of a document (e.g. taken on a cell phone) into a perfectly square image.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDetectAndUnskewDocumentTest() {
+    void recognizeDetectAndUnskewDocumentTest() {
         org.springframework.core.io.Resource imageFile = null;
         String postProcessingEffect = null;
+
         byte[] response = api.recognizeDetectAndUnskewDocument(imageFile, postProcessingEffect);
 
         // TODO: test validations
@@ -78,12 +83,13 @@ public class RecognizeApiTest {
      *
      * Identify the position, size and description of objects in an image, along with a recognition confidence level.  Detects both human people and objects in an image.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDetectObjectsTest() {
+    void recognizeDetectObjectsTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         ObjectDetectionResult response = api.recognizeDetectObjects(imageFile);
 
         // TODO: test validations
@@ -94,12 +100,13 @@ public class RecognizeApiTest {
      *
      * Identify the position, and size of human people in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDetectPeopleTest() {
+    void recognizeDetectPeopleTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         ObjectDetectionResult response = api.recognizeDetectPeople(imageFile);
 
         // TODO: test validations
@@ -110,12 +117,13 @@ public class RecognizeApiTest {
      *
      * Identify the position, and size of small/fine text within a photograph of a document.  Identify the location of small text in a photo - such as words and other forms of high density text.  Can be used on a scan of a document or a photograph (e.g. smartphone camera) of a document, page or receipt.  For OCR purposes - please see our Deep Learning OCR APIs.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDetectTextFineTest() {
+    void recognizeDetectTextFineTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         FineTextDetectionResult response = api.recognizeDetectTextFine(imageFile);
 
         // TODO: test validations
@@ -126,12 +134,13 @@ public class RecognizeApiTest {
      *
      * Identify the position, and size of large text within a photograph.  Identify the location of large text in a photo - such as signs, titles, etc. and other forms of large, low-density text.  Not suitable for high-density text (e.g. scans of documents, receipts, etc.) for OCR purposes - for OCR, please see our Deep Learning OCR APIs.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDetectTextLargeTest() {
+    void recognizeDetectTextLargeTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         TextDetectionResult response = api.recognizeDetectTextLarge(imageFile);
 
         // TODO: test validations
@@ -142,12 +151,13 @@ public class RecognizeApiTest {
      *
      * Identify the position, and size, and content of vehicle license plates in an image.  License plates should be within 15-20 degrees on-axis to the camera.  Supported image formats are JPG, PNG and BMP.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeDetectVehicleLicensePlatesTest() {
+    void recognizeDetectVehicleLicensePlatesTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         VehicleLicensePlateDetectionResult response = api.recognizeDetectVehicleLicensePlates(imageFile);
 
         // TODO: test validations
@@ -158,13 +168,14 @@ public class RecognizeApiTest {
      *
      * Determine if an image contains a symbol, and if so, the location of that symbol in the image.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeFindSymbolTest() {
+    void recognizeFindSymbolTest() {
         org.springframework.core.io.Resource inputImage = null;
         org.springframework.core.io.Resource targetImage = null;
+
         FindSymbolResult response = api.recognizeFindSymbol(inputImage, targetImage);
 
         // TODO: test validations
@@ -175,14 +186,15 @@ public class RecognizeApiTest {
      *
      * Generates an image similarity score using Deep Learning between 0.0 and 1.0, values closer to 1.0 indicate greater similarity
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeSimilarityCompareTest() {
+    void recognizeSimilarityCompareTest() {
         org.springframework.core.io.Resource baseImage = null;
         org.springframework.core.io.Resource comparisonImage = null;
         String recognitionMode = null;
+
         byte[] response = api.recognizeSimilarityCompare(baseImage, comparisonImage, recognitionMode);
 
         // TODO: test validations
@@ -193,13 +205,14 @@ public class RecognizeApiTest {
      *
      * Generates a hash value for the image; hash values that are closer together in terms of Hamming Distance are more similar.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeSimilarityHashTest() {
+    void recognizeSimilarityHashTest() {
         org.springframework.core.io.Resource imageFile = null;
         String recognitionMode = null;
+
         ImageSimilarityHashResponse response = api.recognizeSimilarityHash(imageFile, recognitionMode);
 
         // TODO: test validations
@@ -210,12 +223,13 @@ public class RecognizeApiTest {
      *
      * Calculates the similarity between two perceptual image hashes by computing the Hamming Distance between them.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void recognizeSimilarityHashDistanceTest() {
+    void recognizeSimilarityHashDistanceTest() {
         ImageSimilarityHashDistanceRequest request = null;
+
         ImageSimilarityHashDistanceResponse response = api.recognizeSimilarityHashDistance(request);
 
         // TODO: test validations

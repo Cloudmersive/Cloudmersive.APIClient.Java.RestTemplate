@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidatePostalCodeResponse
  */
-public class ValidatePostalCodeResponseTest {
+class ValidatePostalCodeResponseTest {
     private final ValidatePostalCodeResponse model = new ValidatePostalCodeResponse();
 
     /**
      * Model tests for ValidatePostalCodeResponse
      */
     @Test
-    public void testValidatePostalCodeResponse() {
+    void testValidatePostalCodeResponse() {
         // TODO: test ValidatePostalCodeResponse
     }
 
@@ -43,7 +40,7 @@ public class ValidatePostalCodeResponseTest {
      * Test the property 'validPostalCode'
      */
     @Test
-    public void validPostalCodeTest() {
+    void validPostalCodeTest() {
         // TODO: test validPostalCode
     }
 
@@ -51,7 +48,7 @@ public class ValidatePostalCodeResponseTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -59,7 +56,7 @@ public class ValidatePostalCodeResponseTest {
      * Test the property 'stateOrProvince'
      */
     @Test
-    public void stateOrProvinceTest() {
+    void stateOrProvinceTest() {
         // TODO: test stateOrProvince
     }
 
@@ -67,7 +64,7 @@ public class ValidatePostalCodeResponseTest {
      * Test the property 'latitude'
      */
     @Test
-    public void latitudeTest() {
+    void latitudeTest() {
         // TODO: test latitude
     }
 
@@ -75,7 +72,7 @@ public class ValidatePostalCodeResponseTest {
      * Test the property 'longitude'
      */
     @Test
-    public void longitudeTest() {
+    void longitudeTest() {
         // TODO: test longitude
     }
 

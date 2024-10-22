@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DomainQualityResponse
  */
-public class DomainQualityResponseTest {
+class DomainQualityResponseTest {
     private final DomainQualityResponse model = new DomainQualityResponse();
 
     /**
      * Model tests for DomainQualityResponse
      */
     @Test
-    public void testDomainQualityResponse() {
+    void testDomainQualityResponse() {
         // TODO: test DomainQualityResponse
     }
 
@@ -43,7 +40,7 @@ public class DomainQualityResponseTest {
      * Test the property 'domainQualityScore'
      */
     @Test
-    public void domainQualityScoreTest() {
+    void domainQualityScoreTest() {
         // TODO: test domainQualityScore
     }
 

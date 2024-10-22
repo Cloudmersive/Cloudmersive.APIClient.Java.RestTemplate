@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetTimezonesResponse
  */
-public class GetTimezonesResponseTest {
+class GetTimezonesResponseTest {
     private final GetTimezonesResponse model = new GetTimezonesResponse();
 
     /**
      * Model tests for GetTimezonesResponse
      */
     @Test
-    public void testGetTimezonesResponse() {
+    void testGetTimezonesResponse() {
         // TODO: test GetTimezonesResponse
     }
 
@@ -46,7 +44,7 @@ public class GetTimezonesResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class GetTimezonesResponseTest {
      * Test the property 'countryFullName'
      */
     @Test
-    public void countryFullNameTest() {
+    void countryFullNameTest() {
         // TODO: test countryFullName
     }
 
@@ -62,7 +60,7 @@ public class GetTimezonesResponseTest {
      * Test the property 'isOTwoLetterCode'
      */
     @Test
-    public void isOTwoLetterCodeTest() {
+    void isOTwoLetterCodeTest() {
         // TODO: test isOTwoLetterCode
     }
 
@@ -70,7 +68,7 @@ public class GetTimezonesResponseTest {
      * Test the property 'fiPSTwoLetterCode'
      */
     @Test
-    public void fiPSTwoLetterCodeTest() {
+    void fiPSTwoLetterCodeTest() {
         // TODO: test fiPSTwoLetterCode
     }
 
@@ -78,7 +76,7 @@ public class GetTimezonesResponseTest {
      * Test the property 'threeLetterCode'
      */
     @Test
-    public void threeLetterCodeTest() {
+    void threeLetterCodeTest() {
         // TODO: test threeLetterCode
     }
 
@@ -86,7 +84,7 @@ public class GetTimezonesResponseTest {
      * Test the property 'timezones'
      */
     @Test
-    public void timezonesTest() {
+    void timezonesTest() {
         // TODO: test timezones
     }
 

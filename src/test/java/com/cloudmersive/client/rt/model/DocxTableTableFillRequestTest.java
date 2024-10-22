@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxTableTableFillRequest
  */
-public class DocxTableTableFillRequestTest {
+class DocxTableTableFillRequestTest {
     private final DocxTableTableFillRequest model = new DocxTableTableFillRequest();
 
     /**
      * Model tests for DocxTableTableFillRequest
      */
     @Test
-    public void testDocxTableTableFillRequest() {
+    void testDocxTableTableFillRequest() {
         // TODO: test DocxTableTableFillRequest
     }
 
@@ -46,7 +44,7 @@ public class DocxTableTableFillRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -54,7 +52,7 @@ public class DocxTableTableFillRequestTest {
      * Test the property 'inputFileData'
      */
     @Test
-    public void inputFileDataTest() {
+    void inputFileDataTest() {
         // TODO: test inputFileData
     }
 
@@ -62,7 +60,7 @@ public class DocxTableTableFillRequestTest {
      * Test the property 'tableStartTag'
      */
     @Test
-    public void tableStartTagTest() {
+    void tableStartTagTest() {
         // TODO: test tableStartTag
     }
 
@@ -70,7 +68,7 @@ public class DocxTableTableFillRequestTest {
      * Test the property 'tableEndTag'
      */
     @Test
-    public void tableEndTagTest() {
+    void tableEndTagTest() {
         // TODO: test tableEndTag
     }
 
@@ -78,7 +76,7 @@ public class DocxTableTableFillRequestTest {
      * Test the property 'dataToFillIn'
      */
     @Test
-    public void dataToFillInTest() {
+    void dataToFillInTest() {
         // TODO: test dataToFillIn
     }
 

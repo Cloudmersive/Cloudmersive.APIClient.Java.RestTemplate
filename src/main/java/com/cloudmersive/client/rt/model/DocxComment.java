@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Comment in a Word Document
  */
-@ApiModel(description = "Comment in a Word Document")
 @JsonPropertyOrder({
   DocxComment.JSON_PROPERTY_PATH,
   DocxComment.JSON_PROPERTY_AUTHOR,
@@ -40,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxComment.JSON_PROPERTY_PARENT_COMMENT_PATH,
   DocxComment.JSON_PROPERTY_DONE
 })
-@JsonTypeName("DocxComment")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxComment {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
@@ -70,6 +67,8 @@ public class DocxComment {
   public static final String JSON_PROPERTY_DONE = "Done";
   private Boolean done;
 
+  public DocxComment() {
+  }
 
   public DocxComment path(String path) {
     
@@ -77,12 +76,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * Path to the comment in the document
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Path to the comment in the document")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxComment author(String author) {
     
@@ -102,12 +101,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * Author name of the comment
    * @return author
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Author name of the comment")
   @JsonProperty(JSON_PROPERTY_AUTHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAuthor(String author) {
     this.author = author;
   }
-
 
   public DocxComment authorInitials(String authorInitials) {
     
@@ -127,12 +126,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * Initials of the author of the comment
    * @return authorInitials
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Initials of the author of the comment")
   @JsonProperty(JSON_PROPERTY_AUTHOR_INITIALS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,10 +139,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR_INITIALS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAuthorInitials(String authorInitials) {
     this.authorInitials = authorInitials;
   }
-
 
   public DocxComment commentText(String commentText) {
     
@@ -152,12 +151,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * Text content of the comment
    * @return commentText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text content of the comment")
   @JsonProperty(JSON_PROPERTY_COMMENT_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,10 +164,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMENT_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCommentText(String commentText) {
     this.commentText = commentText;
   }
-
 
   public DocxComment commentDate(OffsetDateTime commentDate) {
     
@@ -177,12 +176,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * Date timestamp of the comment
    * @return commentDate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Date timestamp of the comment")
   @JsonProperty(JSON_PROPERTY_COMMENT_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,10 +189,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMENT_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCommentDate(OffsetDateTime commentDate) {
     this.commentDate = commentDate;
   }
-
 
   public DocxComment isTopLevel(Boolean isTopLevel) {
     
@@ -202,12 +201,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * True if the comment is at the top level, false if this comment is a child reply of another comment
    * @return isTopLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the comment is at the top level, false if this comment is a child reply of another comment")
   @JsonProperty(JSON_PROPERTY_IS_TOP_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,10 +214,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_TOP_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsTopLevel(Boolean isTopLevel) {
     this.isTopLevel = isTopLevel;
   }
-
 
   public DocxComment isReply(Boolean isReply) {
     
@@ -227,12 +226,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * True if this comment is a reply to another comment, false otherwise
    * @return isReply
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this comment is a reply to another comment, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_REPLY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,10 +239,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_REPLY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsReply(Boolean isReply) {
     this.isReply = isReply;
   }
-
 
   public DocxComment parentCommentPath(String parentCommentPath) {
     
@@ -252,12 +251,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * Path to the parent of this comment, if this comment is a reply, otherwise this value will be null
    * @return parentCommentPath
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Path to the parent of this comment, if this comment is a reply, otherwise this value will be null")
   @JsonProperty(JSON_PROPERTY_PARENT_COMMENT_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,10 +264,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARENT_COMMENT_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParentCommentPath(String parentCommentPath) {
     this.parentCommentPath = parentCommentPath;
   }
-
 
   public DocxComment done(Boolean done) {
     
@@ -277,12 +276,11 @@ public class DocxComment {
     return this;
   }
 
-   /**
+  /**
    * True if this comment is marked as Done in Word, otherwise it is false
    * @return done
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this comment is marked as Done in Word, otherwise it is false")
   @JsonProperty(JSON_PROPERTY_DONE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,10 +289,11 @@ public class DocxComment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DONE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDone(Boolean done) {
     this.done = done;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -320,7 +319,6 @@ public class DocxComment {
   public int hashCode() {
     return Objects.hash(path, author, authorInitials, commentText, commentDate, isTopLevel, isReply, parentCommentPath, done);
   }
-
 
   @Override
   public String toString() {

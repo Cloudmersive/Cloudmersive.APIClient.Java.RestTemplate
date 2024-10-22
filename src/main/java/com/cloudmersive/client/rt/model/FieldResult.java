@@ -22,29 +22,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A pairing target field and actual value read from form
  */
-@ApiModel(description = "A pairing target field and actual value read from form")
 @JsonPropertyOrder({
   FieldResult.JSON_PROPERTY_TARGET_FIELD,
   FieldResult.JSON_PROPERTY_FIELD_VALUES
 })
-@JsonTypeName("FieldResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FieldResult {
   public static final String JSON_PROPERTY_TARGET_FIELD = "TargetField";
   private FormFieldDefinition targetField;
 
   public static final String JSON_PROPERTY_FIELD_VALUES = "FieldValues";
-  private List<OcrPhotoTextElement> fieldValues = null;
+  private List<OcrPhotoTextElement> fieldValues = new ArrayList<>();
 
+  public FieldResult() {
+  }
 
   public FieldResult targetField(FormFieldDefinition targetField) {
     
@@ -52,12 +52,11 @@ public class FieldResult {
     return this;
   }
 
-   /**
+  /**
    * Get targetField
    * @return targetField
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_TARGET_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +65,11 @@ public class FieldResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_FIELD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetField(FormFieldDefinition targetField) {
     this.targetField = targetField;
   }
-
 
   public FieldResult fieldValues(List<OcrPhotoTextElement> fieldValues) {
     
@@ -79,18 +79,17 @@ public class FieldResult {
 
   public FieldResult addFieldValuesItem(OcrPhotoTextElement fieldValuesItem) {
     if (this.fieldValues == null) {
-      this.fieldValues = new ArrayList<OcrPhotoTextElement>();
+      this.fieldValues = new ArrayList<>();
     }
     this.fieldValues.add(fieldValuesItem);
     return this;
   }
 
-   /**
+  /**
    * Result field value(s) extracted
    * @return fieldValues
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result field value(s) extracted")
   @JsonProperty(JSON_PROPERTY_FIELD_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +98,11 @@ public class FieldResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_VALUES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldValues(List<OcrPhotoTextElement> fieldValues) {
     this.fieldValues = fieldValues;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -121,7 +121,6 @@ public class FieldResult {
   public int hashCode() {
     return Objects.hash(targetField, fieldValues);
   }
-
 
   @Override
   public String toString() {

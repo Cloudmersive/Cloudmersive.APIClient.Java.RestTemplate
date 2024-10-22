@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateStateResponse
  */
-public class ValidateStateResponseTest {
+class ValidateStateResponseTest {
     private final ValidateStateResponse model = new ValidateStateResponse();
 
     /**
      * Model tests for ValidateStateResponse
      */
     @Test
-    public void testValidateStateResponse() {
+    void testValidateStateResponse() {
         // TODO: test ValidateStateResponse
     }
 
@@ -43,7 +40,7 @@ public class ValidateStateResponseTest {
      * Test the property 'validState'
      */
     @Test
-    public void validStateTest() {
+    void validStateTest() {
         // TODO: test validState
     }
 
@@ -51,7 +48,7 @@ public class ValidateStateResponseTest {
      * Test the property 'stateOrProvince'
      */
     @Test
-    public void stateOrProvinceTest() {
+    void stateOrProvinceTest() {
         // TODO: test stateOrProvince
     }
 
@@ -59,7 +56,7 @@ public class ValidateStateResponseTest {
      * Test the property 'latitude'
      */
     @Test
-    public void latitudeTest() {
+    void latitudeTest() {
         // TODO: test latitude
     }
 
@@ -67,7 +64,7 @@ public class ValidateStateResponseTest {
      * Test the property 'longitude'
      */
     @Test
-    public void longitudeTest() {
+    void longitudeTest() {
         // TODO: test longitude
     }
 

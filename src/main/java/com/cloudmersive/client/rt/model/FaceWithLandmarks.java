@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Location of one face in an image
  */
-@ApiModel(description = "Location of one face in an image")
 @JsonPropertyOrder({
   FaceWithLandmarks.JSON_PROPERTY_LEFT_X,
   FaceWithLandmarks.JSON_PROPERTY_TOP_Y,
@@ -46,8 +45,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FaceWithLandmarks.JSON_PROPERTY_LIPS_INNER_OUTLINE,
   FaceWithLandmarks.JSON_PROPERTY_LIPS_OUTER_OUTLINE
 })
-@JsonTypeName("FaceWithLandmarks")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FaceWithLandmarks {
   public static final String JSON_PROPERTY_LEFT_X = "LeftX";
   private Integer leftX;
@@ -62,32 +60,34 @@ public class FaceWithLandmarks {
   private Integer bottomY;
 
   public static final String JSON_PROPERTY_LEFT_EYEBROW = "LeftEyebrow";
-  private List<FacePoint> leftEyebrow = null;
+  private List<FacePoint> leftEyebrow = new ArrayList<>();
 
   public static final String JSON_PROPERTY_RIGHT_EYEBROW = "RightEyebrow";
-  private List<FacePoint> rightEyebrow = null;
+  private List<FacePoint> rightEyebrow = new ArrayList<>();
 
   public static final String JSON_PROPERTY_LEFT_EYE = "LeftEye";
-  private List<FacePoint> leftEye = null;
+  private List<FacePoint> leftEye = new ArrayList<>();
 
   public static final String JSON_PROPERTY_RIGHT_EYE = "RightEye";
-  private List<FacePoint> rightEye = null;
+  private List<FacePoint> rightEye = new ArrayList<>();
 
   public static final String JSON_PROPERTY_BOTTOM_AND_SIDES_OF_FACE = "BottomAndSidesOfFace";
-  private List<FacePoint> bottomAndSidesOfFace = null;
+  private List<FacePoint> bottomAndSidesOfFace = new ArrayList<>();
 
   public static final String JSON_PROPERTY_NOSE_BRIDGE = "NoseBridge";
-  private List<FacePoint> noseBridge = null;
+  private List<FacePoint> noseBridge = new ArrayList<>();
 
   public static final String JSON_PROPERTY_NOSE_BOTTOM = "NoseBottom";
-  private List<FacePoint> noseBottom = null;
+  private List<FacePoint> noseBottom = new ArrayList<>();
 
   public static final String JSON_PROPERTY_LIPS_INNER_OUTLINE = "LipsInnerOutline";
-  private List<FacePoint> lipsInnerOutline = null;
+  private List<FacePoint> lipsInnerOutline = new ArrayList<>();
 
   public static final String JSON_PROPERTY_LIPS_OUTER_OUTLINE = "LipsOuterOutline";
-  private List<FacePoint> lipsOuterOutline = null;
+  private List<FacePoint> lipsOuterOutline = new ArrayList<>();
 
+  public FaceWithLandmarks() {
+  }
 
   public FaceWithLandmarks leftX(Integer leftX) {
     
@@ -95,12 +95,11 @@ public class FaceWithLandmarks {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the left side of the face
    * @return leftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the left side of the face")
   @JsonProperty(JSON_PROPERTY_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,10 +108,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftX(Integer leftX) {
     this.leftX = leftX;
   }
-
 
   public FaceWithLandmarks topY(Integer topY) {
     
@@ -120,12 +120,11 @@ public class FaceWithLandmarks {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the top side of the face
    * @return topY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the top side of the face")
   @JsonProperty(JSON_PROPERTY_TOP_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -134,10 +133,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopY(Integer topY) {
     this.topY = topY;
   }
-
 
   public FaceWithLandmarks rightX(Integer rightX) {
     
@@ -145,12 +145,11 @@ public class FaceWithLandmarks {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the right side of the face
    * @return rightX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the right side of the face")
   @JsonProperty(JSON_PROPERTY_RIGHT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,10 +158,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightX(Integer rightX) {
     this.rightX = rightX;
   }
-
 
   public FaceWithLandmarks bottomY(Integer bottomY) {
     
@@ -170,12 +170,11 @@ public class FaceWithLandmarks {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the bottom side of the face
    * @return bottomY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the bottom side of the face")
   @JsonProperty(JSON_PROPERTY_BOTTOM_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,10 +183,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomY(Integer bottomY) {
     this.bottomY = bottomY;
   }
-
 
   public FaceWithLandmarks leftEyebrow(List<FacePoint> leftEyebrow) {
     
@@ -197,18 +197,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addLeftEyebrowItem(FacePoint leftEyebrowItem) {
     if (this.leftEyebrow == null) {
-      this.leftEyebrow = new ArrayList<FacePoint>();
+      this.leftEyebrow = new ArrayList<>();
     }
     this.leftEyebrow.add(leftEyebrowItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the left eyebrow (the eyebrow cloesest to the left side of the picture)
    * @return leftEyebrow
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the left eyebrow (the eyebrow cloesest to the left side of the picture)")
   @JsonProperty(JSON_PROPERTY_LEFT_EYEBROW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -217,10 +216,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_EYEBROW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftEyebrow(List<FacePoint> leftEyebrow) {
     this.leftEyebrow = leftEyebrow;
   }
-
 
   public FaceWithLandmarks rightEyebrow(List<FacePoint> rightEyebrow) {
     
@@ -230,18 +230,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addRightEyebrowItem(FacePoint rightEyebrowItem) {
     if (this.rightEyebrow == null) {
-      this.rightEyebrow = new ArrayList<FacePoint>();
+      this.rightEyebrow = new ArrayList<>();
     }
     this.rightEyebrow.add(rightEyebrowItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the right eyebrow (the eyebrow cloesest to the right side of the picture)
    * @return rightEyebrow
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the right eyebrow (the eyebrow cloesest to the right side of the picture)")
   @JsonProperty(JSON_PROPERTY_RIGHT_EYEBROW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -250,10 +249,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_EYEBROW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightEyebrow(List<FacePoint> rightEyebrow) {
     this.rightEyebrow = rightEyebrow;
   }
-
 
   public FaceWithLandmarks leftEye(List<FacePoint> leftEye) {
     
@@ -263,18 +263,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addLeftEyeItem(FacePoint leftEyeItem) {
     if (this.leftEye == null) {
-      this.leftEye = new ArrayList<FacePoint>();
+      this.leftEye = new ArrayList<>();
     }
     this.leftEye.add(leftEyeItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the left eye (the eye closest to the left side of the picture)
    * @return leftEye
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the left eye (the eye closest to the left side of the picture)")
   @JsonProperty(JSON_PROPERTY_LEFT_EYE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -283,10 +282,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_EYE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftEye(List<FacePoint> leftEye) {
     this.leftEye = leftEye;
   }
-
 
   public FaceWithLandmarks rightEye(List<FacePoint> rightEye) {
     
@@ -296,18 +296,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addRightEyeItem(FacePoint rightEyeItem) {
     if (this.rightEye == null) {
-      this.rightEye = new ArrayList<FacePoint>();
+      this.rightEye = new ArrayList<>();
     }
     this.rightEye.add(rightEyeItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the right eye (the eye closest to the right side of the picture)
    * @return rightEye
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the right eye (the eye closest to the right side of the picture)")
   @JsonProperty(JSON_PROPERTY_RIGHT_EYE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -316,10 +315,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RIGHT_EYE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRightEye(List<FacePoint> rightEye) {
     this.rightEye = rightEye;
   }
-
 
   public FaceWithLandmarks bottomAndSidesOfFace(List<FacePoint> bottomAndSidesOfFace) {
     
@@ -329,18 +329,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addBottomAndSidesOfFaceItem(FacePoint bottomAndSidesOfFaceItem) {
     if (this.bottomAndSidesOfFace == null) {
-      this.bottomAndSidesOfFace = new ArrayList<FacePoint>();
+      this.bottomAndSidesOfFace = new ArrayList<>();
     }
     this.bottomAndSidesOfFace.add(bottomAndSidesOfFaceItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the bottom and sides of the face (cheeks and chin)
    * @return bottomAndSidesOfFace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the bottom and sides of the face (cheeks and chin)")
   @JsonProperty(JSON_PROPERTY_BOTTOM_AND_SIDES_OF_FACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -349,10 +348,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_AND_SIDES_OF_FACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomAndSidesOfFace(List<FacePoint> bottomAndSidesOfFace) {
     this.bottomAndSidesOfFace = bottomAndSidesOfFace;
   }
-
 
   public FaceWithLandmarks noseBridge(List<FacePoint> noseBridge) {
     
@@ -362,18 +362,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addNoseBridgeItem(FacePoint noseBridgeItem) {
     if (this.noseBridge == null) {
-      this.noseBridge = new ArrayList<FacePoint>();
+      this.noseBridge = new ArrayList<>();
     }
     this.noseBridge.add(noseBridgeItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the nose bridge (the vertical portion of the nose)
    * @return noseBridge
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the nose bridge (the vertical portion of the nose)")
   @JsonProperty(JSON_PROPERTY_NOSE_BRIDGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -382,10 +381,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NOSE_BRIDGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNoseBridge(List<FacePoint> noseBridge) {
     this.noseBridge = noseBridge;
   }
-
 
   public FaceWithLandmarks noseBottom(List<FacePoint> noseBottom) {
     
@@ -395,18 +395,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addNoseBottomItem(FacePoint noseBottomItem) {
     if (this.noseBottom == null) {
-      this.noseBottom = new ArrayList<FacePoint>();
+      this.noseBottom = new ArrayList<>();
     }
     this.noseBottom.add(noseBottomItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the bottom (nostrils) of the nose
    * @return noseBottom
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the bottom (nostrils) of the nose")
   @JsonProperty(JSON_PROPERTY_NOSE_BOTTOM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -415,10 +414,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NOSE_BOTTOM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNoseBottom(List<FacePoint> noseBottom) {
     this.noseBottom = noseBottom;
   }
-
 
   public FaceWithLandmarks lipsInnerOutline(List<FacePoint> lipsInnerOutline) {
     
@@ -428,18 +428,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addLipsInnerOutlineItem(FacePoint lipsInnerOutlineItem) {
     if (this.lipsInnerOutline == null) {
-      this.lipsInnerOutline = new ArrayList<FacePoint>();
+      this.lipsInnerOutline = new ArrayList<>();
     }
     this.lipsInnerOutline.add(lipsInnerOutlineItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the inner outline of the lips
    * @return lipsInnerOutline
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the inner outline of the lips")
   @JsonProperty(JSON_PROPERTY_LIPS_INNER_OUTLINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -448,10 +447,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LIPS_INNER_OUTLINE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLipsInnerOutline(List<FacePoint> lipsInnerOutline) {
     this.lipsInnerOutline = lipsInnerOutline;
   }
-
 
   public FaceWithLandmarks lipsOuterOutline(List<FacePoint> lipsOuterOutline) {
     
@@ -461,18 +461,17 @@ public class FaceWithLandmarks {
 
   public FaceWithLandmarks addLipsOuterOutlineItem(FacePoint lipsOuterOutlineItem) {
     if (this.lipsOuterOutline == null) {
-      this.lipsOuterOutline = new ArrayList<FacePoint>();
+      this.lipsOuterOutline = new ArrayList<>();
     }
     this.lipsOuterOutline.add(lipsOuterOutlineItem);
     return this;
   }
 
-   /**
+  /**
    * Point locations of the outer outline of the lips
    * @return lipsOuterOutline
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Point locations of the outer outline of the lips")
   @JsonProperty(JSON_PROPERTY_LIPS_OUTER_OUTLINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -481,10 +480,11 @@ public class FaceWithLandmarks {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LIPS_OUTER_OUTLINE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLipsOuterOutline(List<FacePoint> lipsOuterOutline) {
     this.lipsOuterOutline = lipsOuterOutline;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -514,7 +514,6 @@ public class FaceWithLandmarks {
   public int hashCode() {
     return Objects.hash(leftX, topY, rightX, bottomY, leftEyebrow, rightEyebrow, leftEye, rightEye, bottomAndSidesOfFace, noseBridge, noseBottom, lipsInnerOutline, lipsOuterOutline);
   }
-
 
   @Override
   public String toString() {

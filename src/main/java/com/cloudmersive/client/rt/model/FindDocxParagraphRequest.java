@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a request to find matching paragraphs in a Word DOCX document
  */
-@ApiModel(description = "Input to a request to find matching paragraphs in a Word DOCX document")
 @JsonPropertyOrder({
   FindDocxParagraphRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   FindDocxParagraphRequest.JSON_PROPERTY_INPUT_FILE_URL,
   FindDocxParagraphRequest.JSON_PROPERTY_FIND_STRING,
   FindDocxParagraphRequest.JSON_PROPERTY_MATCH_CASE
 })
-@JsonTypeName("FindDocxParagraphRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FindDocxParagraphRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -49,6 +46,8 @@ public class FindDocxParagraphRequest {
   public static final String JSON_PROPERTY_MATCH_CASE = "MatchCase";
   private Boolean matchCase;
 
+  public FindDocxParagraphRequest() {
+  }
 
   public FindDocxParagraphRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -56,12 +55,11 @@ public class FindDocxParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class FindDocxParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public FindDocxParagraphRequest inputFileUrl(String inputFileUrl) {
     
@@ -81,12 +80,11 @@ public class FindDocxParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class FindDocxParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public FindDocxParagraphRequest findString(String findString) {
     
@@ -106,12 +105,11 @@ public class FindDocxParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Required: The target string to search for in the paragraphs of the document
    * @return findString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Required: The target string to search for in the paragraphs of the document")
   @JsonProperty(JSON_PROPERTY_FIND_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class FindDocxParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIND_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFindString(String findString) {
     this.findString = findString;
   }
-
 
   public FindDocxParagraphRequest matchCase(Boolean matchCase) {
     
@@ -131,12 +130,11 @@ public class FindDocxParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: True to match case, false to ignore case when matching
    * @return matchCase
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: True to match case, false to ignore case when matching")
   @JsonProperty(JSON_PROPERTY_MATCH_CASE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class FindDocxParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_CASE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchCase(Boolean matchCase) {
     this.matchCase = matchCase;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class FindDocxParagraphRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, findString, matchCase);
   }
-
 
   @Override
   public String toString() {

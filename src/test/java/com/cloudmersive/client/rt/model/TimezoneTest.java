@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for Timezone
  */
-public class TimezoneTest {
+class TimezoneTest {
     private final Timezone model = new Timezone();
 
     /**
      * Model tests for Timezone
      */
     @Test
-    public void testTimezone() {
+    void testTimezone() {
         // TODO: test Timezone
     }
 
@@ -44,7 +41,7 @@ public class TimezoneTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -52,7 +49,7 @@ public class TimezoneTest {
      * Test the property 'baseUTCOffset'
      */
     @Test
-    public void baseUTCOffsetTest() {
+    void baseUTCOffsetTest() {
         // TODO: test baseUTCOffset
     }
 
@@ -60,7 +57,7 @@ public class TimezoneTest {
      * Test the property 'now'
      */
     @Test
-    public void nowTest() {
+    void nowTest() {
         // TODO: test now
     }
 

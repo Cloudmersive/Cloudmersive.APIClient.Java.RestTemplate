@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Get Word DOCX Document Pages request
  */
-@ApiModel(description = "Input to a Get Word DOCX Document Pages request")
 @JsonPropertyOrder({
   GetDocxPagesRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   GetDocxPagesRequest.JSON_PROPERTY_INPUT_FILE_URL,
   GetDocxPagesRequest.JSON_PROPERTY_MAXIMUM_PAGES
 })
-@JsonTypeName("GetDocxPagesRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxPagesRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -45,6 +42,8 @@ public class GetDocxPagesRequest {
   public static final String JSON_PROPERTY_MAXIMUM_PAGES = "MaximumPages";
   private Integer maximumPages;
 
+  public GetDocxPagesRequest() {
+  }
 
   public GetDocxPagesRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -52,12 +51,11 @@ public class GetDocxPagesRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class GetDocxPagesRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public GetDocxPagesRequest inputFileUrl(String inputFileUrl) {
     
@@ -77,12 +76,11 @@ public class GetDocxPagesRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class GetDocxPagesRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public GetDocxPagesRequest maximumPages(Integer maximumPages) {
     
@@ -102,12 +101,11 @@ public class GetDocxPagesRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Maximum number of pages to return; set to 0 or do not supply to return all pages
    * @return maximumPages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Maximum number of pages to return; set to 0 or do not supply to return all pages")
   @JsonProperty(JSON_PROPERTY_MAXIMUM_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class GetDocxPagesRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MAXIMUM_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMaximumPages(Integer maximumPages) {
     this.maximumPages = maximumPages;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class GetDocxPagesRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, maximumPages);
   }
-
 
   @Override
   public String toString() {

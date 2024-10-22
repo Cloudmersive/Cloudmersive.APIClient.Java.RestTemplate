@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for LeadEnrichmentResponse
  */
-public class LeadEnrichmentResponseTest {
+class LeadEnrichmentResponseTest {
     private final LeadEnrichmentResponse model = new LeadEnrichmentResponse();
 
     /**
      * Model tests for LeadEnrichmentResponse
      */
     @Test
-    public void testLeadEnrichmentResponse() {
+    void testLeadEnrichmentResponse() {
         // TODO: test LeadEnrichmentResponse
     }
 
@@ -43,7 +40,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'leadType'
      */
     @Test
-    public void leadTypeTest() {
+    void leadTypeTest() {
         // TODO: test leadType
     }
 
@@ -59,7 +56,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'contactBusinessEmail'
      */
     @Test
-    public void contactBusinessEmailTest() {
+    void contactBusinessEmailTest() {
         // TODO: test contactBusinessEmail
     }
 
@@ -67,7 +64,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'contactFirstName'
      */
     @Test
-    public void contactFirstNameTest() {
+    void contactFirstNameTest() {
         // TODO: test contactFirstName
     }
 
@@ -75,7 +72,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'contactLastName'
      */
     @Test
-    public void contactLastNameTest() {
+    void contactLastNameTest() {
         // TODO: test contactLastName
     }
 
@@ -83,7 +80,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'contactGender'
      */
     @Test
-    public void contactGenderTest() {
+    void contactGenderTest() {
         // TODO: test contactGender
     }
 
@@ -91,7 +88,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyName'
      */
     @Test
-    public void companyNameTest() {
+    void companyNameTest() {
         // TODO: test companyName
     }
 
@@ -99,7 +96,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyDomainName'
      */
     @Test
-    public void companyDomainNameTest() {
+    void companyDomainNameTest() {
         // TODO: test companyDomainName
     }
 
@@ -107,7 +104,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyHouseNumber'
      */
     @Test
-    public void companyHouseNumberTest() {
+    void companyHouseNumberTest() {
         // TODO: test companyHouseNumber
     }
 
@@ -115,7 +112,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyStreet'
      */
     @Test
-    public void companyStreetTest() {
+    void companyStreetTest() {
         // TODO: test companyStreet
     }
 
@@ -123,7 +120,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyCity'
      */
     @Test
-    public void companyCityTest() {
+    void companyCityTest() {
         // TODO: test companyCity
     }
 
@@ -131,7 +128,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyStateOrProvince'
      */
     @Test
-    public void companyStateOrProvinceTest() {
+    void companyStateOrProvinceTest() {
         // TODO: test companyStateOrProvince
     }
 
@@ -139,7 +136,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyPostalCode'
      */
     @Test
-    public void companyPostalCodeTest() {
+    void companyPostalCodeTest() {
         // TODO: test companyPostalCode
     }
 
@@ -147,7 +144,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyCountry'
      */
     @Test
-    public void companyCountryTest() {
+    void companyCountryTest() {
         // TODO: test companyCountry
     }
 
@@ -155,7 +152,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyCountryCode'
      */
     @Test
-    public void companyCountryCodeTest() {
+    void companyCountryCodeTest() {
         // TODO: test companyCountryCode
     }
 
@@ -163,7 +160,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyTelephone'
      */
     @Test
-    public void companyTelephoneTest() {
+    void companyTelephoneTest() {
         // TODO: test companyTelephone
     }
 
@@ -171,7 +168,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'companyVATNumber'
      */
     @Test
-    public void companyVATNumberTest() {
+    void companyVATNumberTest() {
         // TODO: test companyVATNumber
     }
 
@@ -179,7 +176,7 @@ public class LeadEnrichmentResponseTest {
      * Test the property 'employeeCount'
      */
     @Test
-    public void employeeCountTest() {
+    void employeeCountTest() {
         // TODO: test employeeCount
     }
 

@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AgeDetectionResult
  */
-public class AgeDetectionResultTest {
+class AgeDetectionResultTest {
     private final AgeDetectionResult model = new AgeDetectionResult();
 
     /**
      * Model tests for AgeDetectionResult
      */
     @Test
-    public void testAgeDetectionResult() {
+    void testAgeDetectionResult() {
         // TODO: test AgeDetectionResult
     }
 
@@ -46,7 +44,7 @@ public class AgeDetectionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class AgeDetectionResultTest {
      * Test the property 'peopleWithAge'
      */
     @Test
-    public void peopleWithAgeTest() {
+    void peopleWithAgeTest() {
         // TODO: test peopleWithAge
     }
 
@@ -62,7 +60,7 @@ public class AgeDetectionResultTest {
      * Test the property 'peopleIdentified'
      */
     @Test
-    public void peopleIdentifiedTest() {
+    void peopleIdentifiedTest() {
         // TODO: test peopleIdentified
     }
 

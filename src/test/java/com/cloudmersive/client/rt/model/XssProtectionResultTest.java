@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XssProtectionResult
  */
-public class XssProtectionResultTest {
+class XssProtectionResultTest {
     private final XssProtectionResult model = new XssProtectionResult();
 
     /**
      * Model tests for XssProtectionResult
      */
     @Test
-    public void testXssProtectionResult() {
+    void testXssProtectionResult() {
         // TODO: test XssProtectionResult
     }
 
@@ -43,7 +40,7 @@ public class XssProtectionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class XssProtectionResultTest {
      * Test the property 'containedXss'
      */
     @Test
-    public void containedXssTest() {
+    void containedXssTest() {
         // TODO: test containedXss
     }
 
@@ -59,7 +56,7 @@ public class XssProtectionResultTest {
      * Test the property 'originalInput'
      */
     @Test
-    public void originalInputTest() {
+    void originalInputTest() {
         // TODO: test originalInput
     }
 
@@ -67,7 +64,7 @@ public class XssProtectionResultTest {
      * Test the property 'normalizedResult'
      */
     @Test
-    public void normalizedResultTest() {
+    void normalizedResultTest() {
         // TODO: test normalizedResult
     }
 

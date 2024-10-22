@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for NsfwResult
  */
-public class NsfwResultTest {
+class NsfwResultTest {
     private final NsfwResult model = new NsfwResult();
 
     /**
      * Model tests for NsfwResult
      */
     @Test
-    public void testNsfwResult() {
+    void testNsfwResult() {
         // TODO: test NsfwResult
     }
 
@@ -43,7 +40,7 @@ public class NsfwResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class NsfwResultTest {
      * Test the property 'score'
      */
     @Test
-    public void scoreTest() {
+    void scoreTest() {
         // TODO: test score
     }
 
@@ -59,7 +56,7 @@ public class NsfwResultTest {
      * Test the property 'classificationOutcome'
      */
     @Test
-    public void classificationOutcomeTest() {
+    void classificationOutcomeTest() {
         // TODO: test classificationOutcome
     }
 

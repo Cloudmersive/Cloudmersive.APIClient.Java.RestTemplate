@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to update data in a table in a Word DOCX Document
  */
-@ApiModel(description = "Request to update data in a table in a Word DOCX Document")
 @JsonPropertyOrder({
   DocxTableTableFillMultiRequest.JSON_PROPERTY_INPUT_FILE_URL,
   DocxTableTableFillMultiRequest.JSON_PROPERTY_INPUT_FILE_DATA,
   DocxTableTableFillMultiRequest.JSON_PROPERTY_TABLES_TO_FILL
 })
-@JsonTypeName("DocxTableTableFillMultiRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableTableFillMultiRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_URL = "InputFileUrl";
   private String inputFileUrl;
@@ -46,8 +44,10 @@ public class DocxTableTableFillMultiRequest {
   private byte[] inputFileData;
 
   public static final String JSON_PROPERTY_TABLES_TO_FILL = "TablesToFill";
-  private List<DocxTableSingleTableFill> tablesToFill = null;
+  private List<DocxTableSingleTableFill> tablesToFill = new ArrayList<>();
 
+  public DocxTableTableFillMultiRequest() {
+  }
 
   public DocxTableTableFillMultiRequest inputFileUrl(String inputFileUrl) {
     
@@ -55,12 +55,11 @@ public class DocxTableTableFillMultiRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; Input URL of the document; use BeginEditing to create this
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; Input URL of the document; use BeginEditing to create this")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class DocxTableTableFillMultiRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public DocxTableTableFillMultiRequest inputFileData(byte[] inputFileData) {
     
@@ -80,12 +80,11 @@ public class DocxTableTableFillMultiRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; Input Word Document file content for the operation
    * @return inputFileData
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; Input Word Document file content for the operation")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class DocxTableTableFillMultiRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_DATA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileData(byte[] inputFileData) {
     this.inputFileData = inputFileData;
   }
-
 
   public DocxTableTableFillMultiRequest tablesToFill(List<DocxTableSingleTableFill> tablesToFill) {
     
@@ -107,18 +107,17 @@ public class DocxTableTableFillMultiRequest {
 
   public DocxTableTableFillMultiRequest addTablesToFillItem(DocxTableSingleTableFill tablesToFillItem) {
     if (this.tablesToFill == null) {
-      this.tablesToFill = new ArrayList<DocxTableSingleTableFill>();
+      this.tablesToFill = new ArrayList<>();
     }
     this.tablesToFill.add(tablesToFillItem);
     return this;
   }
 
-   /**
+  /**
    * Tables and datasets to fill into the document
    * @return tablesToFill
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tables and datasets to fill into the document")
   @JsonProperty(JSON_PROPERTY_TABLES_TO_FILL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class DocxTableTableFillMultiRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLES_TO_FILL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTablesToFill(List<DocxTableSingleTableFill> tablesToFill) {
     this.tablesToFill = tablesToFill;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class DocxTableTableFillMultiRequest {
   public int hashCode() {
     return Objects.hash(inputFileUrl, Arrays.hashCode(inputFileData), tablesToFill);
   }
-
 
   @Override
   public String toString() {

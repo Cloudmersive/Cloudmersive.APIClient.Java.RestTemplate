@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxTemplateOperation
  */
-public class DocxTemplateOperationTest {
+class DocxTemplateOperationTest {
     private final DocxTemplateOperation model = new DocxTemplateOperation();
 
     /**
      * Model tests for DocxTemplateOperation
      */
     @Test
-    public void testDocxTemplateOperation() {
+    void testDocxTemplateOperation() {
         // TODO: test DocxTemplateOperation
     }
 
@@ -43,7 +40,7 @@ public class DocxTemplateOperationTest {
      * Test the property 'action'
      */
     @Test
-    public void actionTest() {
+    void actionTest() {
         // TODO: test action
     }
 
@@ -51,7 +48,7 @@ public class DocxTemplateOperationTest {
      * Test the property 'matchAgainst'
      */
     @Test
-    public void matchAgainstTest() {
+    void matchAgainstTest() {
         // TODO: test matchAgainst
     }
 
@@ -59,7 +56,7 @@ public class DocxTemplateOperationTest {
      * Test the property 'replaceWith'
      */
     @Test
-    public void replaceWithTest() {
+    void replaceWithTest() {
         // TODO: test replaceWith
     }
 

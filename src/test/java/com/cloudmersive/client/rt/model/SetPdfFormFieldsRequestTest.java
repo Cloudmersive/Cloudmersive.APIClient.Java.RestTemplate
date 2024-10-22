@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SetPdfFormFieldsRequest
  */
-public class SetPdfFormFieldsRequestTest {
+class SetPdfFormFieldsRequestTest {
     private final SetPdfFormFieldsRequest model = new SetPdfFormFieldsRequest();
 
     /**
      * Model tests for SetPdfFormFieldsRequest
      */
     @Test
-    public void testSetPdfFormFieldsRequest() {
+    void testSetPdfFormFieldsRequest() {
         // TODO: test SetPdfFormFieldsRequest
     }
 
@@ -46,7 +44,7 @@ public class SetPdfFormFieldsRequestTest {
      * Test the property 'fieldValues'
      */
     @Test
-    public void fieldValuesTest() {
+    void fieldValuesTest() {
         // TODO: test fieldValues
     }
 
@@ -54,7 +52,7 @@ public class SetPdfFormFieldsRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 

@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of validating a city
  */
-@ApiModel(description = "Result of validating a city")
 @JsonPropertyOrder({
   ValidateCityResponse.JSON_PROPERTY_VALID_CITY,
   ValidateCityResponse.JSON_PROPERTY_CITY,
@@ -35,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ValidateCityResponse.JSON_PROPERTY_LATITUDE,
   ValidateCityResponse.JSON_PROPERTY_LONGITUDE
 })
-@JsonTypeName("ValidateCityResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateCityResponse {
   public static final String JSON_PROPERTY_VALID_CITY = "ValidCity";
   private Boolean validCity;
@@ -53,6 +50,8 @@ public class ValidateCityResponse {
   public static final String JSON_PROPERTY_LONGITUDE = "Longitude";
   private Double longitude;
 
+  public ValidateCityResponse() {
+  }
 
   public ValidateCityResponse validCity(Boolean validCity) {
     
@@ -60,12 +59,11 @@ public class ValidateCityResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the city is valid, false otherwise
    * @return validCity
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the city is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +72,11 @@ public class ValidateCityResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidCity(Boolean validCity) {
     this.validCity = validCity;
   }
-
 
   public ValidateCityResponse city(String city) {
     
@@ -85,12 +84,11 @@ public class ValidateCityResponse {
     return this;
   }
 
-   /**
+  /**
    * If valid, City corresponding to the input postal code, such as &#39;Walnut Creek&#39;
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If valid, City corresponding to the input postal code, such as 'Walnut Creek'")
   @JsonProperty(JSON_PROPERTY_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +97,11 @@ public class ValidateCityResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCity(String city) {
     this.city = city;
   }
-
 
   public ValidateCityResponse stateOrProvince(String stateOrProvince) {
     
@@ -110,12 +109,11 @@ public class ValidateCityResponse {
     return this;
   }
 
-   /**
+  /**
    * If valid; State or province corresponding to the input state name, such as &#39;CA&#39; or &#39;California&#39;
    * @return stateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If valid; State or province corresponding to the input state name, such as 'CA' or 'California'")
   @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,10 +122,11 @@ public class ValidateCityResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   public ValidateCityResponse latitude(Double latitude) {
     
@@ -135,12 +134,11 @@ public class ValidateCityResponse {
     return this;
   }
 
-   /**
+  /**
    * If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise
    * @return latitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the postal code is valid, the degrees latitude of the centroid of the state, null otherwise")
   @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,10 +147,11 @@ public class ValidateCityResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
-
 
   public ValidateCityResponse longitude(Double longitude) {
     
@@ -160,12 +159,11 @@ public class ValidateCityResponse {
     return this;
   }
 
-   /**
+  /**
    * If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise
    * @return longitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the postal code is valid, the degrees longitude of the centroid of the state, null otherwise")
   @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,10 +172,11 @@ public class ValidateCityResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -199,7 +198,6 @@ public class ValidateCityResponse {
   public int hashCode() {
     return Objects.hash(validCity, city, stateOrProvince, latitude, longitude);
   }
-
 
   @Override
   public String toString() {

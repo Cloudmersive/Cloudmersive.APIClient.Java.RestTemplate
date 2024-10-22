@@ -22,11 +22,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * DocxBody
@@ -36,18 +36,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxBody.JSON_PROPERTY_ALL_PARAGRAPHS,
   DocxBody.JSON_PROPERTY_ALL_TABLES
 })
-@JsonTypeName("DocxBody")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxBody {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
 
   public static final String JSON_PROPERTY_ALL_PARAGRAPHS = "AllParagraphs";
-  private List<DocxParagraph> allParagraphs = null;
+  private List<DocxParagraph> allParagraphs = new ArrayList<>();
 
   public static final String JSON_PROPERTY_ALL_TABLES = "AllTables";
-  private List<DocxTable> allTables = null;
+  private List<DocxTable> allTables = new ArrayList<>();
 
+  public DocxBody() {
+  }
 
   public DocxBody path(String path) {
     
@@ -55,12 +56,11 @@ public class DocxBody {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +69,11 @@ public class DocxBody {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxBody allParagraphs(List<DocxParagraph> allParagraphs) {
     
@@ -82,18 +83,17 @@ public class DocxBody {
 
   public DocxBody addAllParagraphsItem(DocxParagraph allParagraphsItem) {
     if (this.allParagraphs == null) {
-      this.allParagraphs = new ArrayList<DocxParagraph>();
+      this.allParagraphs = new ArrayList<>();
     }
     this.allParagraphs.add(allParagraphsItem);
     return this;
   }
 
-   /**
+  /**
    * All paragraphs anywhere in the document; these objects are not sequentially placed but are scatted across document
    * @return allParagraphs
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All paragraphs anywhere in the document; these objects are not sequentially placed but are scatted across document")
   @JsonProperty(JSON_PROPERTY_ALL_PARAGRAPHS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +102,11 @@ public class DocxBody {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALL_PARAGRAPHS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllParagraphs(List<DocxParagraph> allParagraphs) {
     this.allParagraphs = allParagraphs;
   }
-
 
   public DocxBody allTables(List<DocxTable> allTables) {
     
@@ -115,18 +116,17 @@ public class DocxBody {
 
   public DocxBody addAllTablesItem(DocxTable allTablesItem) {
     if (this.allTables == null) {
-      this.allTables = new ArrayList<DocxTable>();
+      this.allTables = new ArrayList<>();
     }
     this.allTables.add(allTablesItem);
     return this;
   }
 
-   /**
+  /**
    * All tables anywhere in the document; these objects are not sequentially placed but are scatted across the document
    * @return allTables
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "All tables anywhere in the document; these objects are not sequentially placed but are scatted across the document")
   @JsonProperty(JSON_PROPERTY_ALL_TABLES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,10 +135,11 @@ public class DocxBody {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALL_TABLES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllTables(List<DocxTable> allTables) {
     this.allTables = allTables;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -158,7 +159,6 @@ public class DocxBody {
   public int hashCode() {
     return Objects.hash(path, allParagraphs, allTables);
   }
-
 
   @Override
   public String toString() {

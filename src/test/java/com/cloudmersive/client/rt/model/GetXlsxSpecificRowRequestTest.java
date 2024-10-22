@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetXlsxSpecificRowRequest
  */
-public class GetXlsxSpecificRowRequestTest {
+class GetXlsxSpecificRowRequestTest {
     private final GetXlsxSpecificRowRequest model = new GetXlsxSpecificRowRequest();
 
     /**
      * Model tests for GetXlsxSpecificRowRequest
      */
     @Test
-    public void testGetXlsxSpecificRowRequest() {
+    void testGetXlsxSpecificRowRequest() {
         // TODO: test GetXlsxSpecificRowRequest
     }
 
@@ -44,7 +41,7 @@ public class GetXlsxSpecificRowRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class GetXlsxSpecificRowRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class GetXlsxSpecificRowRequestTest {
      * Test the property 'worksheetToQuery'
      */
     @Test
-    public void worksheetToQueryTest() {
+    void worksheetToQueryTest() {
         // TODO: test worksheetToQuery
     }
 
@@ -68,7 +65,7 @@ public class GetXlsxSpecificRowRequestTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 

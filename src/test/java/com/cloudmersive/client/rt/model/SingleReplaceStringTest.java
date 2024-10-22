@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SingleReplaceString
  */
-public class SingleReplaceStringTest {
+class SingleReplaceStringTest {
     private final SingleReplaceString model = new SingleReplaceString();
 
     /**
      * Model tests for SingleReplaceString
      */
     @Test
-    public void testSingleReplaceString() {
+    void testSingleReplaceString() {
         // TODO: test SingleReplaceString
     }
 
@@ -43,7 +40,7 @@ public class SingleReplaceStringTest {
      * Test the property 'matchString'
      */
     @Test
-    public void matchStringTest() {
+    void matchStringTest() {
         // TODO: test matchString
     }
 
@@ -51,7 +48,7 @@ public class SingleReplaceStringTest {
      * Test the property 'replaceString'
      */
     @Test
-    public void replaceStringTest() {
+    void replaceStringTest() {
         // TODO: test replaceString
     }
 
@@ -59,7 +56,7 @@ public class SingleReplaceStringTest {
      * Test the property 'matchCase'
      */
     @Test
-    public void matchCaseTest() {
+    void matchCaseTest() {
         // TODO: test matchCase
     }
 

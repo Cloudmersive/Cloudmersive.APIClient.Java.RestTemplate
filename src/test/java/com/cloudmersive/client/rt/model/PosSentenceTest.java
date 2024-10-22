@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PosSentence
  */
-public class PosSentenceTest {
+class PosSentenceTest {
     private final PosSentence model = new PosSentence();
 
     /**
      * Model tests for PosSentence
      */
     @Test
-    public void testPosSentence() {
+    void testPosSentence() {
         // TODO: test PosSentence
     }
 
@@ -46,7 +44,7 @@ public class PosSentenceTest {
      * Test the property 'words'
      */
     @Test
-    public void wordsTest() {
+    void wordsTest() {
         // TODO: test words
     }
 

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SentimentAnalysisResponse
  */
-public class SentimentAnalysisResponseTest {
+class SentimentAnalysisResponseTest {
     private final SentimentAnalysisResponse model = new SentimentAnalysisResponse();
 
     /**
      * Model tests for SentimentAnalysisResponse
      */
     @Test
-    public void testSentimentAnalysisResponse() {
+    void testSentimentAnalysisResponse() {
         // TODO: test SentimentAnalysisResponse
     }
 
@@ -43,7 +40,7 @@ public class SentimentAnalysisResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class SentimentAnalysisResponseTest {
      * Test the property 'sentimentClassificationResult'
      */
     @Test
-    public void sentimentClassificationResultTest() {
+    void sentimentClassificationResultTest() {
         // TODO: test sentimentClassificationResult
     }
 
@@ -59,7 +56,7 @@ public class SentimentAnalysisResponseTest {
      * Test the property 'sentimentScoreResult'
      */
     @Test
-    public void sentimentScoreResultTest() {
+    void sentimentScoreResultTest() {
         // TODO: test sentimentScoreResult
     }
 
@@ -67,7 +64,7 @@ public class SentimentAnalysisResponseTest {
      * Test the property 'sentenceCount'
      */
     @Test
-    public void sentenceCountTest() {
+    void sentenceCountTest() {
         // TODO: test sentenceCount
     }
 

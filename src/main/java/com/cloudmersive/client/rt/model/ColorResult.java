@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual color
  */
-@ApiModel(description = "Individual color")
 @JsonPropertyOrder({
   ColorResult.JSON_PROPERTY_R,
   ColorResult.JSON_PROPERTY_G,
   ColorResult.JSON_PROPERTY_B
 })
-@JsonTypeName("ColorResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ColorResult {
   public static final String JSON_PROPERTY_R = "R";
   private Integer R;
@@ -45,6 +42,8 @@ public class ColorResult {
   public static final String JSON_PROPERTY_B = "B";
   private Integer B;
 
+  public ColorResult() {
+  }
 
   public ColorResult R(Integer R) {
     
@@ -52,12 +51,11 @@ public class ColorResult {
     return this;
   }
 
-   /**
+  /**
    * Red (R) channel pixel value of this color
    * @return R
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Red (R) channel pixel value of this color")
   @JsonProperty(JSON_PROPERTY_R)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ColorResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_R)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setR(Integer R) {
     this.R = R;
   }
-
 
   public ColorResult G(Integer G) {
     
@@ -77,12 +76,11 @@ public class ColorResult {
     return this;
   }
 
-   /**
+  /**
    * Green (G) channel pixel value of this color
    * @return G
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Green (G) channel pixel value of this color")
   @JsonProperty(JSON_PROPERTY_G)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ColorResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_G)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setG(Integer G) {
     this.G = G;
   }
-
 
   public ColorResult B(Integer B) {
     
@@ -102,12 +101,11 @@ public class ColorResult {
     return this;
   }
 
-   /**
+  /**
    * Blue (B) channel pixel value of this color
    * @return B
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Blue (B) channel pixel value of this color")
   @JsonProperty(JSON_PROPERTY_B)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ColorResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_B)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setB(Integer B) {
     this.B = B;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ColorResult {
   public int hashCode() {
     return Objects.hash(R, G, B);
   }
-
 
   @Override
   public String toString() {

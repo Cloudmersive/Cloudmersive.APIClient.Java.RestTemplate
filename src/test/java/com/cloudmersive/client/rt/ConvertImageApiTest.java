@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import java.io.File;
 import com.cloudmersive.client.rt.model.GetImageInfoResult;
 import com.cloudmersive.client.rt.model.MultipageImageFormatConversionResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for ConvertImageApi
  */
-@Ignore
-public class ConvertImageApiTest {
+@Disabled
+class ConvertImageApiTest {
 
     private final ConvertImageApi api = new ConvertImageApi();
 
@@ -38,12 +41,13 @@ public class ConvertImageApiTest {
      *
      * Get details from an image such as size, format and MIME type, compression, EXIF data such as location, DPI, unique colors, transparency information, and more
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertImageGetImageInfoTest() {
+    void convertImageGetImageInfoTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetImageInfoResult response = api.convertImageGetImageInfo(inputFile);
 
         // TODO: test validations
@@ -54,14 +58,15 @@ public class ConvertImageApiTest {
      *
      * Convert between over 100 file formats, including key formats such as Photoshop (PSD), PNG, JPG, GIF, NEF, and BMP.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertImageImageFormatConvertTest() {
+    void convertImageImageFormatConvertTest() {
         String format1 = null;
         String format2 = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertImageImageFormatConvert(format1, format2, inputFile);
 
         // TODO: test validations
@@ -72,13 +77,14 @@ public class ConvertImageApiTest {
      *
      * Resize an image to have a different DPI
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertImageImageSetDPITest() {
+    void convertImageImageSetDPITest() {
         Integer dpi = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertImageImageSetDPI(dpi, inputFile);
 
         // TODO: test validations
@@ -89,15 +95,17 @@ public class ConvertImageApiTest {
      *
      * Convert between over 100 file formats, including support for Multiple-Page formats (e.g. PDFs, TIFFs, etc. with multiple pages).
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertImageMultipageImageFormatConvertTest() {
+    void convertImageMultipageImageFormatConvertTest() {
         String format1 = null;
         String format2 = null;
         org.springframework.core.io.Resource inputFile = null;
-        MultipageImageFormatConversionResult response = api.convertImageMultipageImageFormatConvert(format1, format2, inputFile);
+        Integer dpi = null;
+
+        MultipageImageFormatConversionResult response = api.convertImageMultipageImageFormatConvert(format1, format2, inputFile, dpi);
 
         // TODO: test validations
     }

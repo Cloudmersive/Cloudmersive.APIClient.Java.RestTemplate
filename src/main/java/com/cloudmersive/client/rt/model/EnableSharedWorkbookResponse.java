@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Enable Shared Workbook command
  */
-@ApiModel(description = "Result of running a Enable Shared Workbook command")
 @JsonPropertyOrder({
   EnableSharedWorkbookResponse.JSON_PROPERTY_SUCCESSFUL,
   EnableSharedWorkbookResponse.JSON_PROPERTY_EDITED_DOCUMENT_U_R_L
 })
-@JsonTypeName("EnableSharedWorkbookResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EnableSharedWorkbookResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class EnableSharedWorkbookResponse {
   public static final String JSON_PROPERTY_EDITED_DOCUMENT_U_R_L = "EditedDocumentURL";
   private String editedDocumentURL;
 
+  public EnableSharedWorkbookResponse() {
+  }
 
   public EnableSharedWorkbookResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class EnableSharedWorkbookResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class EnableSharedWorkbookResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public EnableSharedWorkbookResponse editedDocumentURL(String editedDocumentURL) {
     
@@ -73,12 +72,11 @@ public class EnableSharedWorkbookResponse {
     return this;
   }
 
-   /**
+  /**
    * URL to the edited XLSX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.
    * @return editedDocumentURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to the edited XLSX file; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the result document contents.")
   @JsonProperty(JSON_PROPERTY_EDITED_DOCUMENT_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class EnableSharedWorkbookResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EDITED_DOCUMENT_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEditedDocumentURL(String editedDocumentURL) {
     this.editedDocumentURL = editedDocumentURL;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class EnableSharedWorkbookResponse {
   public int hashCode() {
     return Objects.hash(successful, editedDocumentURL);
   }
-
 
   @Override
   public String toString() {

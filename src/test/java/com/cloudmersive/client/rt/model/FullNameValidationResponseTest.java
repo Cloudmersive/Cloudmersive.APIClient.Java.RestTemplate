@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FullNameValidationResponse
  */
-public class FullNameValidationResponseTest {
+class FullNameValidationResponseTest {
     private final FullNameValidationResponse model = new FullNameValidationResponse();
 
     /**
      * Model tests for FullNameValidationResponse
      */
     @Test
-    public void testFullNameValidationResponse() {
+    void testFullNameValidationResponse() {
         // TODO: test FullNameValidationResponse
     }
 
@@ -43,7 +40,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'validationResultFirstName'
      */
     @Test
-    public void validationResultFirstNameTest() {
+    void validationResultFirstNameTest() {
         // TODO: test validationResultFirstName
     }
 
@@ -59,7 +56,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'validationResultLastName'
      */
     @Test
-    public void validationResultLastNameTest() {
+    void validationResultLastNameTest() {
         // TODO: test validationResultLastName
     }
 
@@ -67,7 +64,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'title'
      */
     @Test
-    public void titleTest() {
+    void titleTest() {
         // TODO: test title
     }
 
@@ -75,7 +72,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'firstName'
      */
     @Test
-    public void firstNameTest() {
+    void firstNameTest() {
         // TODO: test firstName
     }
 
@@ -83,7 +80,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'middleName'
      */
     @Test
-    public void middleNameTest() {
+    void middleNameTest() {
         // TODO: test middleName
     }
 
@@ -91,7 +88,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'lastName'
      */
     @Test
-    public void lastNameTest() {
+    void lastNameTest() {
         // TODO: test lastName
     }
 
@@ -99,7 +96,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'nickName'
      */
     @Test
-    public void nickNameTest() {
+    void nickNameTest() {
         // TODO: test nickName
     }
 
@@ -107,7 +104,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'suffix'
      */
     @Test
-    public void suffixTest() {
+    void suffixTest() {
         // TODO: test suffix
     }
 
@@ -115,7 +112,7 @@ public class FullNameValidationResponseTest {
      * Test the property 'displayName'
      */
     @Test
-    public void displayNameTest() {
+    void displayNameTest() {
         // TODO: test displayName
     }
 

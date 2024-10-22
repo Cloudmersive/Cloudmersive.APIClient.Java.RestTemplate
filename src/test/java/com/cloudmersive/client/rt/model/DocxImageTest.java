@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxImage
  */
-public class DocxImageTest {
+class DocxImageTest {
     private final DocxImage model = new DocxImage();
 
     /**
      * Model tests for DocxImage
      */
     @Test
-    public void testDocxImage() {
+    void testDocxImage() {
         // TODO: test DocxImage
     }
 
@@ -43,7 +40,7 @@ public class DocxImageTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -51,7 +48,7 @@ public class DocxImageTest {
      * Test the property 'imageName'
      */
     @Test
-    public void imageNameTest() {
+    void imageNameTest() {
         // TODO: test imageName
     }
 
@@ -59,7 +56,7 @@ public class DocxImageTest {
      * Test the property 'imageId'
      */
     @Test
-    public void imageIdTest() {
+    void imageIdTest() {
         // TODO: test imageId
     }
 
@@ -67,7 +64,7 @@ public class DocxImageTest {
      * Test the property 'imageDescription'
      */
     @Test
-    public void imageDescriptionTest() {
+    void imageDescriptionTest() {
         // TODO: test imageDescription
     }
 
@@ -75,7 +72,7 @@ public class DocxImageTest {
      * Test the property 'imageWidth'
      */
     @Test
-    public void imageWidthTest() {
+    void imageWidthTest() {
         // TODO: test imageWidth
     }
 
@@ -83,7 +80,7 @@ public class DocxImageTest {
      * Test the property 'imageHeight'
      */
     @Test
-    public void imageHeightTest() {
+    void imageHeightTest() {
         // TODO: test imageHeight
     }
 
@@ -91,7 +88,7 @@ public class DocxImageTest {
      * Test the property 'xoffset'
      */
     @Test
-    public void xoffsetTest() {
+    void xoffsetTest() {
         // TODO: test xoffset
     }
 
@@ -99,7 +96,7 @@ public class DocxImageTest {
      * Test the property 'yoffset'
      */
     @Test
-    public void yoffsetTest() {
+    void yoffsetTest() {
         // TODO: test yoffset
     }
 
@@ -107,7 +104,7 @@ public class DocxImageTest {
      * Test the property 'imageDataEmbedId'
      */
     @Test
-    public void imageDataEmbedIdTest() {
+    void imageDataEmbedIdTest() {
         // TODO: test imageDataEmbedId
     }
 
@@ -115,7 +112,7 @@ public class DocxImageTest {
      * Test the property 'imageDataContentType'
      */
     @Test
-    public void imageDataContentTypeTest() {
+    void imageDataContentTypeTest() {
         // TODO: test imageDataContentType
     }
 
@@ -123,7 +120,7 @@ public class DocxImageTest {
      * Test the property 'imageInternalFileName'
      */
     @Test
-    public void imageInternalFileNameTest() {
+    void imageInternalFileNameTest() {
         // TODO: test imageInternalFileName
     }
 
@@ -131,7 +128,7 @@ public class DocxImageTest {
      * Test the property 'imageContentsURL'
      */
     @Test
-    public void imageContentsURLTest() {
+    void imageContentsURLTest() {
         // TODO: test imageContentsURL
     }
 
@@ -139,7 +136,7 @@ public class DocxImageTest {
      * Test the property 'inlineWithText'
      */
     @Test
-    public void inlineWithTextTest() {
+    void inlineWithTextTest() {
         // TODO: test inlineWithText
     }
 

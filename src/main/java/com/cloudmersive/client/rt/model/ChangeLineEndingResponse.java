@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a change line ending operation
  */
-@ApiModel(description = "Result of performing a change line ending operation")
 @JsonPropertyOrder({
   ChangeLineEndingResponse.JSON_PROPERTY_SUCCESSFUL,
   ChangeLineEndingResponse.JSON_PROPERTY_TEXT_CONTENT_RESULT
 })
-@JsonTypeName("ChangeLineEndingResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ChangeLineEndingResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class ChangeLineEndingResponse {
   public static final String JSON_PROPERTY_TEXT_CONTENT_RESULT = "TextContentResult";
   private String textContentResult;
 
+  public ChangeLineEndingResponse() {
+  }
 
   public ChangeLineEndingResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class ChangeLineEndingResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ChangeLineEndingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ChangeLineEndingResponse textContentResult(String textContentResult) {
     
@@ -73,12 +72,11 @@ public class ChangeLineEndingResponse {
     return this;
   }
 
-   /**
+  /**
    * Text content result
    * @return textContentResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text content result")
   @JsonProperty(JSON_PROPERTY_TEXT_CONTENT_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ChangeLineEndingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_CONTENT_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextContentResult(String textContentResult) {
     this.textContentResult = textContentResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ChangeLineEndingResponse {
   public int hashCode() {
     return Objects.hash(successful, textContentResult);
   }
-
 
   @Override
   public String toString() {

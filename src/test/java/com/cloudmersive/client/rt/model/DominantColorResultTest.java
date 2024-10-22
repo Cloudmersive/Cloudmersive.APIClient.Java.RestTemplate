@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DominantColorResult
  */
-public class DominantColorResultTest {
+class DominantColorResultTest {
     private final DominantColorResult model = new DominantColorResult();
 
     /**
      * Model tests for DominantColorResult
      */
     @Test
-    public void testDominantColorResult() {
+    void testDominantColorResult() {
         // TODO: test DominantColorResult
     }
 
@@ -46,7 +44,7 @@ public class DominantColorResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class DominantColorResultTest {
      * Test the property 'dominantColors'
      */
     @Test
-    public void dominantColorsTest() {
+    void dominantColorsTest() {
         // TODO: test dominantColors
     }
 

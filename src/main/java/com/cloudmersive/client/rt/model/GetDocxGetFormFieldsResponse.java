@@ -22,33 +22,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a DocxGetFormFields command
  */
-@ApiModel(description = "Result of running a DocxGetFormFields command")
 @JsonPropertyOrder({
   GetDocxGetFormFieldsResponse.JSON_PROPERTY_SUCCESSFUL,
   GetDocxGetFormFieldsResponse.JSON_PROPERTY_CONTENT_CONTROLS,
   GetDocxGetFormFieldsResponse.JSON_PROPERTY_HANDLEBAR_FORM_FIELDS
 })
-@JsonTypeName("GetDocxGetFormFieldsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxGetFormFieldsResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_CONTENT_CONTROLS = "ContentControls";
-  private List<DocxContentControl> contentControls = null;
+  private List<DocxContentControl> contentControls = new ArrayList<>();
 
   public static final String JSON_PROPERTY_HANDLEBAR_FORM_FIELDS = "HandlebarFormFields";
-  private List<HandlebarFormField> handlebarFormFields = null;
+  private List<HandlebarFormField> handlebarFormFields = new ArrayList<>();
 
+  public GetDocxGetFormFieldsResponse() {
+  }
 
   public GetDocxGetFormFieldsResponse successful(Boolean successful) {
     
@@ -56,12 +56,11 @@ public class GetDocxGetFormFieldsResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +69,11 @@ public class GetDocxGetFormFieldsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetDocxGetFormFieldsResponse contentControls(List<DocxContentControl> contentControls) {
     
@@ -83,18 +83,17 @@ public class GetDocxGetFormFieldsResponse {
 
   public GetDocxGetFormFieldsResponse addContentControlsItem(DocxContentControl contentControlsItem) {
     if (this.contentControls == null) {
-      this.contentControls = new ArrayList<DocxContentControl>();
+      this.contentControls = new ArrayList<>();
     }
     this.contentControls.add(contentControlsItem);
     return this;
   }
 
-   /**
+  /**
    * Content controls in the DOCX
    * @return contentControls
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Content controls in the DOCX")
   @JsonProperty(JSON_PROPERTY_CONTENT_CONTROLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +102,11 @@ public class GetDocxGetFormFieldsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT_CONTROLS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContentControls(List<DocxContentControl> contentControls) {
     this.contentControls = contentControls;
   }
-
 
   public GetDocxGetFormFieldsResponse handlebarFormFields(List<HandlebarFormField> handlebarFormFields) {
     
@@ -116,18 +116,17 @@ public class GetDocxGetFormFieldsResponse {
 
   public GetDocxGetFormFieldsResponse addHandlebarFormFieldsItem(HandlebarFormField handlebarFormFieldsItem) {
     if (this.handlebarFormFields == null) {
-      this.handlebarFormFields = new ArrayList<HandlebarFormField>();
+      this.handlebarFormFields = new ArrayList<>();
     }
     this.handlebarFormFields.add(handlebarFormFieldsItem);
     return this;
   }
 
-   /**
+  /**
    * Form fields that comply with the Handlebar style, that is they are surrounded by two curly braces on either side such as \&quot;{{FieldName}}\&quot;, in the DOCX
    * @return handlebarFormFields
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Form fields that comply with the Handlebar style, that is they are surrounded by two curly braces on either side such as \"{{FieldName}}\", in the DOCX")
   @JsonProperty(JSON_PROPERTY_HANDLEBAR_FORM_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,10 +135,11 @@ public class GetDocxGetFormFieldsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HANDLEBAR_FORM_FIELDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHandlebarFormFields(List<HandlebarFormField> handlebarFormFields) {
     this.handlebarFormFields = handlebarFormFields;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -159,7 +159,6 @@ public class GetDocxGetFormFieldsResponse {
   public int hashCode() {
     return Objects.hash(successful, contentControls, handlebarFormFields);
   }
-
 
   @Override
   public String toString() {

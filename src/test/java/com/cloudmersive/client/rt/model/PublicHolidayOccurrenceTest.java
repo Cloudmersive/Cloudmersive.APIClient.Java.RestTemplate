@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PublicHolidayOccurrence
  */
-public class PublicHolidayOccurrenceTest {
+class PublicHolidayOccurrenceTest {
     private final PublicHolidayOccurrence model = new PublicHolidayOccurrence();
 
     /**
      * Model tests for PublicHolidayOccurrence
      */
     @Test
-    public void testPublicHolidayOccurrence() {
+    void testPublicHolidayOccurrence() {
         // TODO: test PublicHolidayOccurrence
     }
 
@@ -44,7 +41,7 @@ public class PublicHolidayOccurrenceTest {
      * Test the property 'englishName'
      */
     @Test
-    public void englishNameTest() {
+    void englishNameTest() {
         // TODO: test englishName
     }
 
@@ -52,7 +49,7 @@ public class PublicHolidayOccurrenceTest {
      * Test the property 'localName'
      */
     @Test
-    public void localNameTest() {
+    void localNameTest() {
         // TODO: test localName
     }
 
@@ -60,7 +57,7 @@ public class PublicHolidayOccurrenceTest {
      * Test the property 'occurrenceDate'
      */
     @Test
-    public void occurrenceDateTest() {
+    void occurrenceDateTest() {
         // TODO: test occurrenceDate
     }
 
@@ -68,7 +65,7 @@ public class PublicHolidayOccurrenceTest {
      * Test the property 'holidayType'
      */
     @Test
-    public void holidayTypeTest() {
+    void holidayTypeTest() {
         // TODO: test holidayType
     }
 
@@ -76,7 +73,7 @@ public class PublicHolidayOccurrenceTest {
      * Test the property 'nationwaide'
      */
     @Test
-    public void nationwaideTest() {
+    void nationwaideTest() {
         // TODO: test nationwaide
     }
 

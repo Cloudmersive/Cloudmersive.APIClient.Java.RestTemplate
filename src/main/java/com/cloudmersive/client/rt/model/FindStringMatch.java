@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual match result of finding a target string in a longer text string
  */
-@ApiModel(description = "Individual match result of finding a target string in a longer text string")
 @JsonPropertyOrder({
   FindStringMatch.JSON_PROPERTY_CHARACTER_OFFSET_START,
   FindStringMatch.JSON_PROPERTY_CHARACTER_OFFSET_END,
   FindStringMatch.JSON_PROPERTY_CONTAINING_LINE
 })
-@JsonTypeName("FindStringMatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FindStringMatch {
   public static final String JSON_PROPERTY_CHARACTER_OFFSET_START = "CharacterOffsetStart";
   private Integer characterOffsetStart;
@@ -45,6 +42,8 @@ public class FindStringMatch {
   public static final String JSON_PROPERTY_CONTAINING_LINE = "ContainingLine";
   private String containingLine;
 
+  public FindStringMatch() {
+  }
 
   public FindStringMatch characterOffsetStart(Integer characterOffsetStart) {
     
@@ -52,12 +51,11 @@ public class FindStringMatch {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the start of the match
    * @return characterOffsetStart
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the start of the match")
   @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_START)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class FindStringMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_START)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCharacterOffsetStart(Integer characterOffsetStart) {
     this.characterOffsetStart = characterOffsetStart;
   }
-
 
   public FindStringMatch characterOffsetEnd(Integer characterOffsetEnd) {
     
@@ -77,12 +76,11 @@ public class FindStringMatch {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the end of the match
    * @return characterOffsetEnd
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the end of the match")
   @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_END)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class FindStringMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_END)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCharacterOffsetEnd(Integer characterOffsetEnd) {
     this.characterOffsetEnd = characterOffsetEnd;
   }
-
 
   public FindStringMatch containingLine(String containingLine) {
     
@@ -102,12 +101,11 @@ public class FindStringMatch {
     return this;
   }
 
-   /**
+  /**
    * Text content of the line containing the match
    * @return containingLine
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text content of the line containing the match")
   @JsonProperty(JSON_PROPERTY_CONTAINING_LINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class FindStringMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINING_LINE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainingLine(String containingLine) {
     this.containingLine = containingLine;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class FindStringMatch {
   public int hashCode() {
     return Objects.hash(characterOffsetStart, characterOffsetEnd, containingLine);
   }
-
 
   @Override
   public String toString() {

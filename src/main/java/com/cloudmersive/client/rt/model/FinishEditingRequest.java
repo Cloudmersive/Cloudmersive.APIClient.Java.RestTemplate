@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Finish Editing request
  */
-@ApiModel(description = "Input to a Finish Editing request")
 @JsonPropertyOrder({
   FinishEditingRequest.JSON_PROPERTY_INPUT_FILE_URL
 })
-@JsonTypeName("FinishEditingRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FinishEditingRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_URL = "InputFileUrl";
   private String inputFileUrl;
 
+  public FinishEditingRequest() {
+  }
 
   public FinishEditingRequest inputFileUrl(String inputFileUrl) {
     
@@ -44,12 +43,11 @@ public class FinishEditingRequest {
     return this;
   }
 
-   /**
+  /**
    * URL of a document being edited to get the contents of.
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL of a document being edited to get the contents of.")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class FinishEditingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class FinishEditingRequest {
   public int hashCode() {
     return Objects.hash(inputFileUrl);
   }
-
 
   @Override
   public String toString() {

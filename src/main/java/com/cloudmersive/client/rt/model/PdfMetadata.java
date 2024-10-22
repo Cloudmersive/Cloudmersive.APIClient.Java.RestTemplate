@@ -20,17 +20,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of an autodetect/get-info operation
  */
-@ApiModel(description = "Result of an autodetect/get-info operation")
 @JsonPropertyOrder({
   PdfMetadata.JSON_PROPERTY_SUCCESSFUL,
+  PdfMetadata.JSON_PROPERTY_ERROR_DETAILS,
   PdfMetadata.JSON_PROPERTY_TITLE,
   PdfMetadata.JSON_PROPERTY_KEYWORDS,
   PdfMetadata.JSON_PROPERTY_SUBJECT,
@@ -38,13 +37,16 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   PdfMetadata.JSON_PROPERTY_CREATOR,
   PdfMetadata.JSON_PROPERTY_DATE_MODIFIED,
   PdfMetadata.JSON_PROPERTY_DATE_CREATED,
-  PdfMetadata.JSON_PROPERTY_PAGE_COUNT
+  PdfMetadata.JSON_PROPERTY_PAGE_COUNT,
+  PdfMetadata.JSON_PROPERTY_ENCRYPTED
 })
-@JsonTypeName("PdfMetadata")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfMetadata {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
+
+  public static final String JSON_PROPERTY_ERROR_DETAILS = "ErrorDetails";
+  private String errorDetails;
 
   public static final String JSON_PROPERTY_TITLE = "Title";
   private String title;
@@ -70,6 +72,11 @@ public class PdfMetadata {
   public static final String JSON_PROPERTY_PAGE_COUNT = "PageCount";
   private Integer pageCount;
 
+  public static final String JSON_PROPERTY_ENCRYPTED = "Encrypted";
+  private Boolean encrypted;
+
+  public PdfMetadata() {
+  }
 
   public PdfMetadata successful(Boolean successful) {
     
@@ -77,12 +84,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +97,36 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
 
+  public PdfMetadata errorDetails(String errorDetails) {
+    
+    this.errorDetails = errorDetails;
+    return this;
+  }
+
+  /**
+   * Details of any errors if the operation was unsucessful
+   * @return errorDetails
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ERROR_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public String getErrorDetails() {
+    return errorDetails;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ERROR_DETAILS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setErrorDetails(String errorDetails) {
+    this.errorDetails = errorDetails;
+  }
 
   public PdfMetadata title(String title) {
     
@@ -102,12 +134,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * Title of the document
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Title of the document")
   @JsonProperty(JSON_PROPERTY_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +147,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   public PdfMetadata keywords(String keywords) {
     
@@ -127,12 +159,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * Keywords of the document
    * @return keywords
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Keywords of the document")
   @JsonProperty(JSON_PROPERTY_KEYWORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,10 +172,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKeywords(String keywords) {
     this.keywords = keywords;
   }
-
 
   public PdfMetadata subject(String subject) {
     
@@ -152,12 +184,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * Subject of the document
    * @return subject
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Subject of the document")
   @JsonProperty(JSON_PROPERTY_SUBJECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,10 +197,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBJECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   public PdfMetadata author(String author) {
     
@@ -177,12 +209,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * User name of the creator/author of the document, if available, null if not available
    * @return author
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User name of the creator/author of the document, if available, null if not available")
   @JsonProperty(JSON_PROPERTY_AUTHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,10 +222,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_AUTHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAuthor(String author) {
     this.author = author;
   }
-
 
   public PdfMetadata creator(String creator) {
     
@@ -202,12 +234,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * Creator of the document
    * @return creator
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Creator of the document")
   @JsonProperty(JSON_PROPERTY_CREATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,10 +247,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CREATOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCreator(String creator) {
     this.creator = creator;
   }
-
 
   public PdfMetadata dateModified(OffsetDateTime dateModified) {
     
@@ -227,12 +259,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * The timestamp that the document was last modified, if available, null if not available
    * @return dateModified
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The timestamp that the document was last modified, if available, null if not available")
   @JsonProperty(JSON_PROPERTY_DATE_MODIFIED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,10 +272,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_MODIFIED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateModified(OffsetDateTime dateModified) {
     this.dateModified = dateModified;
   }
-
 
   public PdfMetadata dateCreated(OffsetDateTime dateCreated) {
     
@@ -252,12 +284,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * The timestamp that the document was created, if available, null if not available
    * @return dateCreated
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The timestamp that the document was created, if available, null if not available")
   @JsonProperty(JSON_PROPERTY_DATE_CREATED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,10 +297,11 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_CREATED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateCreated(OffsetDateTime dateCreated) {
     this.dateCreated = dateCreated;
   }
-
 
   public PdfMetadata pageCount(Integer pageCount) {
     
@@ -277,12 +309,11 @@ public class PdfMetadata {
     return this;
   }
 
-   /**
+  /**
    * The number of pages in the document
    * @return pageCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of pages in the document")
   @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,10 +322,36 @@ public class PdfMetadata {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageCount(Integer pageCount) {
     this.pageCount = pageCount;
   }
 
+  public PdfMetadata encrypted(Boolean encrypted) {
+    
+    this.encrypted = encrypted;
+    return this;
+  }
+
+  /**
+   * True if the PDF document is encrypted, false otherwise
+   * @return encrypted
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_ENCRYPTED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getEncrypted() {
+    return encrypted;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_ENCRYPTED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setEncrypted(Boolean encrypted) {
+    this.encrypted = encrypted;
+  }
 
   @Override
   public boolean equals(Object o) {
@@ -306,6 +363,7 @@ public class PdfMetadata {
     }
     PdfMetadata pdfMetadata = (PdfMetadata) o;
     return Objects.equals(this.successful, pdfMetadata.successful) &&
+        Objects.equals(this.errorDetails, pdfMetadata.errorDetails) &&
         Objects.equals(this.title, pdfMetadata.title) &&
         Objects.equals(this.keywords, pdfMetadata.keywords) &&
         Objects.equals(this.subject, pdfMetadata.subject) &&
@@ -313,20 +371,21 @@ public class PdfMetadata {
         Objects.equals(this.creator, pdfMetadata.creator) &&
         Objects.equals(this.dateModified, pdfMetadata.dateModified) &&
         Objects.equals(this.dateCreated, pdfMetadata.dateCreated) &&
-        Objects.equals(this.pageCount, pdfMetadata.pageCount);
+        Objects.equals(this.pageCount, pdfMetadata.pageCount) &&
+        Objects.equals(this.encrypted, pdfMetadata.encrypted);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(successful, title, keywords, subject, author, creator, dateModified, dateCreated, pageCount);
+    return Objects.hash(successful, errorDetails, title, keywords, subject, author, creator, dateModified, dateCreated, pageCount, encrypted);
   }
-
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PdfMetadata {\n");
     sb.append("    successful: ").append(toIndentedString(successful)).append("\n");
+    sb.append("    errorDetails: ").append(toIndentedString(errorDetails)).append("\n");
     sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("    keywords: ").append(toIndentedString(keywords)).append("\n");
     sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
@@ -335,6 +394,7 @@ public class PdfMetadata {
     sb.append("    dateModified: ").append(toIndentedString(dateModified)).append("\n");
     sb.append("    dateCreated: ").append(toIndentedString(dateCreated)).append("\n");
     sb.append("    pageCount: ").append(toIndentedString(pageCount)).append("\n");
+    sb.append("    encrypted: ").append(toIndentedString(encrypted)).append("\n");
     sb.append("}");
     return sb.toString();
   }

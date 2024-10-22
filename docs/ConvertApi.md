@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**convertToBmp**](ConvertApi.md#convertToBmp) | **POST** /image/convert/to/bmp | Convert input image to Bitmap BMP format
-[**convertToGif**](ConvertApi.md#convertToGif) | **POST** /image/convert/to/gif | Convert input image to GIF format
-[**convertToJpg**](ConvertApi.md#convertToJpg) | **POST** /image/convert/to/jpg/{quality} | Convert input image to JPG, JPEG format
-[**convertToPhotoshop**](ConvertApi.md#convertToPhotoshop) | **POST** /image/convert/to/psd | Convert input image to Photoshop PSD format
-[**convertToPng**](ConvertApi.md#convertToPng) | **POST** /image/convert/to/png | Convert input image to PNG format
-[**convertToTiff**](ConvertApi.md#convertToTiff) | **POST** /image/convert/to/tiff | Convert input image to TIFF format
-[**convertToWebP**](ConvertApi.md#convertToWebP) | **POST** /image/convert/to/webp | Convert input image to WebP format
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**convertToBmp**](ConvertApi.md#convertToBmp) | **POST** /image/convert/to/bmp | Convert input image to Bitmap BMP format |
+| [**convertToGif**](ConvertApi.md#convertToGif) | **POST** /image/convert/to/gif | Convert input image to GIF format |
+| [**convertToJpg**](ConvertApi.md#convertToJpg) | **POST** /image/convert/to/jpg/{quality} | Convert input image to JPG, JPEG format |
+| [**convertToPhotoshop**](ConvertApi.md#convertToPhotoshop) | **POST** /image/convert/to/psd | Convert input image to Photoshop PSD format |
+| [**convertToPng**](ConvertApi.md#convertToPng) | **POST** /image/convert/to/png | Convert input image to PNG format |
+| [**convertToTiff**](ConvertApi.md#convertToTiff) | **POST** /image/convert/to/tiff | Convert input image to TIFF format |
+| [**convertToWebP**](ConvertApi.md#convertToWebP) | **POST** /image/convert/to/webp | Convert input image to WebP format |
 
 
 
@@ -63,9 +63,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -79,6 +79,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -135,9 +136,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -151,6 +152,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -208,10 +210,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **quality** | **Integer**| Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75 |
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **quality** | **Integer**| Set the JPEG quality level; lowest quality is 1 (highest compression), highest quality (lowest compression) is 100; recommended value is 75 | |
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -225,6 +227,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -281,9 +284,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -297,6 +300,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -353,9 +357,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -369,6 +373,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -425,9 +430,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -441,6 +446,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -497,9 +503,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **imageFile** | **File**| Image file to perform the operation on.  Common file formats such as PNG, JPEG are supported. | |
 
 ### Return type
 
@@ -513,6 +519,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

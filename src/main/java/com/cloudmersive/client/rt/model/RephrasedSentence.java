@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * One input sentence and associated rephrasing results
  */
-@ApiModel(description = "One input sentence and associated rephrasing results")
 @JsonPropertyOrder({
   RephrasedSentence.JSON_PROPERTY_SENTENCE_INDEX,
   RephrasedSentence.JSON_PROPERTY_ORIGINAL_SENTENCE_TEXT,
   RephrasedSentence.JSON_PROPERTY_REPHRASINGS
 })
-@JsonTypeName("RephrasedSentence")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RephrasedSentence {
   public static final String JSON_PROPERTY_SENTENCE_INDEX = "SentenceIndex";
   private Integer sentenceIndex;
@@ -46,8 +44,10 @@ public class RephrasedSentence {
   private String originalSentenceText;
 
   public static final String JSON_PROPERTY_REPHRASINGS = "Rephrasings";
-  private List<RephrasedSentenceOption> rephrasings = null;
+  private List<RephrasedSentenceOption> rephrasings = new ArrayList<>();
 
+  public RephrasedSentence() {
+  }
 
   public RephrasedSentence sentenceIndex(Integer sentenceIndex) {
     
@@ -55,12 +55,11 @@ public class RephrasedSentence {
     return this;
   }
 
-   /**
+  /**
    * Index of the sentence, 1-based, ordered
    * @return sentenceIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of the sentence, 1-based, ordered")
   @JsonProperty(JSON_PROPERTY_SENTENCE_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class RephrasedSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceIndex(Integer sentenceIndex) {
     this.sentenceIndex = sentenceIndex;
   }
-
 
   public RephrasedSentence originalSentenceText(String originalSentenceText) {
     
@@ -80,12 +80,11 @@ public class RephrasedSentence {
     return this;
   }
 
-   /**
+  /**
    * Original input sentence text
    * @return originalSentenceText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Original input sentence text")
   @JsonProperty(JSON_PROPERTY_ORIGINAL_SENTENCE_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class RephrasedSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORIGINAL_SENTENCE_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOriginalSentenceText(String originalSentenceText) {
     this.originalSentenceText = originalSentenceText;
   }
-
 
   public RephrasedSentence rephrasings(List<RephrasedSentenceOption> rephrasings) {
     
@@ -107,18 +107,17 @@ public class RephrasedSentence {
 
   public RephrasedSentence addRephrasingsItem(RephrasedSentenceOption rephrasingsItem) {
     if (this.rephrasings == null) {
-      this.rephrasings = new ArrayList<RephrasedSentenceOption>();
+      this.rephrasings = new ArrayList<>();
     }
     this.rephrasings.add(rephrasingsItem);
     return this;
   }
 
-   /**
+  /**
    * Rephrasing text options, candidates of the original input sentence, in order - with best candidate first
    * @return rephrasings
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Rephrasing text options, candidates of the original input sentence, in order - with best candidate first")
   @JsonProperty(JSON_PROPERTY_REPHRASINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class RephrasedSentence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPHRASINGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRephrasings(List<RephrasedSentenceOption> rephrasings) {
     this.rephrasings = rephrasings;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class RephrasedSentence {
   public int hashCode() {
     return Objects.hash(sentenceIndex, originalSentenceText, rephrasings);
   }
-
 
   @Override
   public String toString() {

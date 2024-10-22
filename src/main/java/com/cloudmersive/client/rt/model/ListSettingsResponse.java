@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of enumerating settings
  */
-@ApiModel(description = "Result of enumerating settings")
 @JsonPropertyOrder({
   ListSettingsResponse.JSON_PROPERTY_SETTINGS
 })
-@JsonTypeName("ListSettingsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ListSettingsResponse {
   public static final String JSON_PROPERTY_SETTINGS = "Settings";
-  private List<SettingValue> settings = null;
+  private List<SettingValue> settings = new ArrayList<>();
 
+  public ListSettingsResponse() {
+  }
 
   public ListSettingsResponse settings(List<SettingValue> settings) {
     
@@ -49,18 +49,17 @@ public class ListSettingsResponse {
 
   public ListSettingsResponse addSettingsItem(SettingValue settingsItem) {
     if (this.settings == null) {
-      this.settings = new ArrayList<SettingValue>();
+      this.settings = new ArrayList<>();
     }
     this.settings.add(settingsItem);
     return this;
   }
 
-   /**
+  /**
    * Settings in the bucket
    * @return settings
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Settings in the bucket")
   @JsonProperty(JSON_PROPERTY_SETTINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class ListSettingsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTINGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettings(List<SettingValue> settings) {
     this.settings = settings;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class ListSettingsResponse {
   public int hashCode() {
     return Objects.hash(settings);
   }
-
 
   @Override
   public String toString() {

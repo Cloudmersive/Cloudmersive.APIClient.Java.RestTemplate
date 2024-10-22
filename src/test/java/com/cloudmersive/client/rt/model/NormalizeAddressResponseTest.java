@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for NormalizeAddressResponse
  */
-public class NormalizeAddressResponseTest {
+class NormalizeAddressResponseTest {
     private final NormalizeAddressResponse model = new NormalizeAddressResponse();
 
     /**
      * Model tests for NormalizeAddressResponse
      */
     @Test
-    public void testNormalizeAddressResponse() {
+    void testNormalizeAddressResponse() {
         // TODO: test NormalizeAddressResponse
     }
 
@@ -43,7 +40,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'validAddress'
      */
     @Test
-    public void validAddressTest() {
+    void validAddressTest() {
         // TODO: test validAddress
     }
 
@@ -51,7 +48,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'building'
      */
     @Test
-    public void buildingTest() {
+    void buildingTest() {
         // TODO: test building
     }
 
@@ -59,7 +56,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'streetNumber'
      */
     @Test
-    public void streetNumberTest() {
+    void streetNumberTest() {
         // TODO: test streetNumber
     }
 
@@ -67,7 +64,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'street'
      */
     @Test
-    public void streetTest() {
+    void streetTest() {
         // TODO: test street
     }
 
@@ -75,7 +72,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -83,7 +80,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'stateOrProvince'
      */
     @Test
-    public void stateOrProvinceTest() {
+    void stateOrProvinceTest() {
         // TODO: test stateOrProvince
     }
 
@@ -91,7 +88,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'postalCode'
      */
     @Test
-    public void postalCodeTest() {
+    void postalCodeTest() {
         // TODO: test postalCode
     }
 
@@ -99,7 +96,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'countryFullName'
      */
     @Test
-    public void countryFullNameTest() {
+    void countryFullNameTest() {
         // TODO: test countryFullName
     }
 
@@ -107,7 +104,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'isOTwoLetterCode'
      */
     @Test
-    public void isOTwoLetterCodeTest() {
+    void isOTwoLetterCodeTest() {
         // TODO: test isOTwoLetterCode
     }
 
@@ -115,7 +112,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'latitude'
      */
     @Test
-    public void latitudeTest() {
+    void latitudeTest() {
         // TODO: test latitude
     }
 
@@ -123,7 +120,7 @@ public class NormalizeAddressResponseTest {
      * Test the property 'longitude'
      */
     @Test
-    public void longitudeTest() {
+    void longitudeTest() {
         // TODO: test longitude
     }
 

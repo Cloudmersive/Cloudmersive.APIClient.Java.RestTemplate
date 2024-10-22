@@ -19,9 +19,12 @@ import com.cloudmersive.client.rt.model.FaceLocateResponse;
 import com.cloudmersive.client.rt.model.FaceLocateWithLandmarksResponse;
 import java.io.File;
 import com.cloudmersive.client.rt.model.GenderDetectionResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,8 +33,8 @@ import java.util.Map;
 /**
  * API tests for FaceApi
  */
-@Ignore
-public class FaceApiTest {
+@Disabled
+class FaceApiTest {
 
     private final FaceApi api = new FaceApi();
 
@@ -41,13 +44,14 @@ public class FaceApiTest {
      *
      * Find the faces in an input image, and compare against a reference image to determine if there is a match against the face in the reference image.  The reference image (second parameter) should contain exactly one face.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceCompareTest() {
+    void faceCompareTest() {
         org.springframework.core.io.Resource inputImage = null;
         org.springframework.core.io.Resource matchFace = null;
+
         FaceCompareResponse response = api.faceCompare(inputImage, matchFace);
 
         // TODO: test validations
@@ -58,12 +62,13 @@ public class FaceApiTest {
      *
      * Crop an image to the face (rectangular crop).  If there is more than one face present, choose the first one.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceCropFirstTest() {
+    void faceCropFirstTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.faceCropFirst(imageFile);
 
         // TODO: test validations
@@ -74,12 +79,13 @@ public class FaceApiTest {
      *
      * Crop an image to the face (circular/round crop).  If there is more than one face present, choose the first one.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceCropFirstRoundTest() {
+    void faceCropFirstRoundTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.faceCropFirstRound(imageFile);
 
         // TODO: test validations
@@ -90,12 +96,13 @@ public class FaceApiTest {
      *
      * Identify the age, position, and size of human faces in an image, along with a recognition confidence level.  People in the image do NOT need to be facing the camera; they can be facing away, edge-on, etc.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceDetectAgeTest() {
+    void faceDetectAgeTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         AgeDetectionResult response = api.faceDetectAge(imageFile);
 
         // TODO: test validations
@@ -106,12 +113,13 @@ public class FaceApiTest {
      *
      * Identify the gender, position, and size of human faces in an image, along with a recognition confidence level.  People in the image should be facing the camera.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceDetectGenderTest() {
+    void faceDetectGenderTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         GenderDetectionResult response = api.faceDetectGender(imageFile);
 
         // TODO: test validations
@@ -122,12 +130,13 @@ public class FaceApiTest {
      *
      * Locate the positions of all faces in an image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceLocateTest() {
+    void faceLocateTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         FaceLocateResponse response = api.faceLocate(imageFile);
 
         // TODO: test validations
@@ -138,12 +147,13 @@ public class FaceApiTest {
      *
      * Locate the positions of all faces in an image, along with the eyes, eye brows, nose and mouth components of each
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void faceLocateWithLandmarksTest() {
+    void faceLocateWithLandmarksTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         FaceLocateWithLandmarksResponse response = api.faceLocateWithLandmarks(imageFile);
 
         // TODO: test validations

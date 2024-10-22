@@ -17,9 +17,12 @@ import com.cloudmersive.client.rt.model.DrawPolygonRequest;
 import com.cloudmersive.client.rt.model.DrawRectangleRequest;
 import com.cloudmersive.client.rt.model.DrawTextRequest;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +31,8 @@ import java.util.Map;
 /**
  * API tests for EditApi
  */
-@Ignore
-public class EditApiTest {
+@Disabled
+class EditApiTest {
 
     private final EditApi api = new EditApi();
 
@@ -39,12 +42,13 @@ public class EditApiTest {
      *
      * Automatically orients the input image based on EXIF information and then removes the EXIF information.  EXIF is an additional set of information stored in some images taken with cell phone cameras based on the orientation of the camera.  By normalizing rotation and removing EXIF data these images become much easier to process.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editAutoOrientTest() {
+    void editAutoOrientTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editAutoOrient(imageFile);
 
         // TODO: test validations
@@ -55,14 +59,15 @@ public class EditApiTest {
      *
      * Composites two input images together; a layered image onto a base image.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editCompositeBasicTest() {
+    void editCompositeBasicTest() {
         String location = null;
         org.springframework.core.io.Resource baseImage = null;
         org.springframework.core.io.Resource layeredImage = null;
+
         byte[] response = api.editCompositeBasic(location, baseImage, layeredImage);
 
         // TODO: test validations
@@ -73,11 +78,11 @@ public class EditApiTest {
      *
      * Composites two input images together; a layered image onto a base image. Position is based on distance in pixels from each side.  The first image you input is the base image.  The second image (the layered image) will be composited on top of this base image.  Supports PNG transparency.  To control padding you can include transparent pixels at the border(s) of your layered images as appropriate.  Providing multiple parameters in a single axis (for example top and bottom) is not recommended, since only one of the parameters will be used per axis.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editCompositePreciseTest() {
+    void editCompositePreciseTest() {
         org.springframework.core.io.Resource baseImage = null;
         org.springframework.core.io.Resource layeredImage = null;
         Integer top = null;
@@ -86,6 +91,7 @@ public class EditApiTest {
         Integer right = null;
         Integer width = null;
         Integer height = null;
+
         byte[] response = api.editCompositePrecise(baseImage, layeredImage, top, bottom, left, right, width, height);
 
         // TODO: test validations
@@ -96,13 +102,14 @@ public class EditApiTest {
      *
      * Uses Gamma to adjust the contrast adaptively the way the human eye sees the world.  Results significantly improve the viewability and visual appeal of the image.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editContrastAdaptiveTest() {
+    void editContrastAdaptiveTest() {
         Double gamma = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editContrastAdaptive(gamma, imageFile);
 
         // TODO: test validations
@@ -113,15 +120,16 @@ public class EditApiTest {
      *
      * Crop an image to a target circular area
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editCropCircleTest() {
+    void editCropCircleTest() {
         Integer left = null;
         Integer top = null;
         Integer radius = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editCropCircle(left, top, radius, imageFile);
 
         // TODO: test validations
@@ -132,16 +140,17 @@ public class EditApiTest {
      *
      * Crop an image to a target rectangular area
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editCropRectangleTest() {
+    void editCropRectangleTest() {
         Integer left = null;
         Integer top = null;
         Integer width = null;
         Integer height = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editCropRectangle(left, top, width, height, imageFile);
 
         // TODO: test validations
@@ -152,12 +161,13 @@ public class EditApiTest {
      *
      * Draw one or more polygons, with customized visuals, onto an image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDrawPolygonTest() {
+    void editDrawPolygonTest() {
         DrawPolygonRequest request = null;
+
         byte[] response = api.editDrawPolygon(request);
 
         // TODO: test validations
@@ -168,12 +178,13 @@ public class EditApiTest {
      *
      * Draw one or more rectangles, with customized visuals, onto an image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDrawRectangleTest() {
+    void editDrawRectangleTest() {
         DrawRectangleRequest request = null;
+
         byte[] response = api.editDrawRectangle(request);
 
         // TODO: test validations
@@ -184,12 +195,13 @@ public class EditApiTest {
      *
      * Draw one or more pieces of text, with customized visuals, onto an image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDrawTextTest() {
+    void editDrawTextTest() {
         DrawTextRequest request = null;
+
         byte[] response = api.editDrawText(request);
 
         // TODO: test validations
@@ -200,16 +212,17 @@ public class EditApiTest {
      *
      * Add a customizeable drop shadow to the image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDropShadowTest() {
+    void editDropShadowTest() {
         Integer X = null;
         Integer Y = null;
         Integer sigma = null;
         Integer opacity = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editDropShadow(X, Y, sigma, opacity, imageFile);
 
         // TODO: test validations
@@ -220,12 +233,13 @@ public class EditApiTest {
      *
      * Inverts (negates) all of the colors in the image.  If the image contains transparency, the transparency will first be removed prior to inverting the image.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editInvertTest() {
+    void editInvertTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editInvert(imageFile);
 
         // TODO: test validations
@@ -236,12 +250,13 @@ public class EditApiTest {
      *
      * Removes any EXIF data and profiles .
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editRemoveExifDataTest() {
+    void editRemoveExifDataTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editRemoveExifData(imageFile);
 
         // TODO: test validations
@@ -252,12 +267,13 @@ public class EditApiTest {
      *
      * Removes any active transparency in the image.  Effectively renders the image at the same resolution, in the same file format, over a white background, thus removing transparency.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editRemoveTransparencyTest() {
+    void editRemoveTransparencyTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editRemoveTransparency(imageFile);
 
         // TODO: test validations
@@ -268,13 +284,14 @@ public class EditApiTest {
      *
      * Rotates an image by an arbitrary number of degrees
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editRotateTest() {
+    void editRotateTest() {
         Double degrees = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editRotate(degrees, imageFile);
 
         // TODO: test validations

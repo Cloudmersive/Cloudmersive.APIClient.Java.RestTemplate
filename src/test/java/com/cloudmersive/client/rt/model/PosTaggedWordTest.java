@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PosTaggedWord
  */
-public class PosTaggedWordTest {
+class PosTaggedWordTest {
     private final PosTaggedWord model = new PosTaggedWord();
 
     /**
      * Model tests for PosTaggedWord
      */
     @Test
-    public void testPosTaggedWord() {
+    void testPosTaggedWord() {
         // TODO: test PosTaggedWord
     }
 
@@ -43,7 +40,7 @@ public class PosTaggedWordTest {
      * Test the property 'word'
      */
     @Test
-    public void wordTest() {
+    void wordTest() {
         // TODO: test word
     }
 
@@ -51,7 +48,7 @@ public class PosTaggedWordTest {
      * Test the property 'tag'
      */
     @Test
-    public void tagTest() {
+    void tagTest() {
         // TODO: test tag
     }
 

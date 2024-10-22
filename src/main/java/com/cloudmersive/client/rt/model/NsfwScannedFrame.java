@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * An individual frame scanned for NSFW content
  */
-@ApiModel(description = "An individual frame scanned for NSFW content")
 @JsonPropertyOrder({
   NsfwScannedFrame.JSON_PROPERTY_FRAME_NUMBER,
   NsfwScannedFrame.JSON_PROPERTY_TIME_STAMP,
@@ -35,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   NsfwScannedFrame.JSON_PROPERTY_CLASSIFICATION_RESULT,
   NsfwScannedFrame.JSON_PROPERTY_SCORE
 })
-@JsonTypeName("NsfwScannedFrame")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NsfwScannedFrame {
   public static final String JSON_PROPERTY_FRAME_NUMBER = "FrameNumber";
   private Integer frameNumber;
@@ -53,6 +50,8 @@ public class NsfwScannedFrame {
   public static final String JSON_PROPERTY_SCORE = "Score";
   private Double score;
 
+  public NsfwScannedFrame() {
+  }
 
   public NsfwScannedFrame frameNumber(Integer frameNumber) {
     
@@ -60,12 +59,11 @@ public class NsfwScannedFrame {
     return this;
   }
 
-   /**
+  /**
    * The number of the current frame
    * @return frameNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of the current frame")
   @JsonProperty(JSON_PROPERTY_FRAME_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +72,11 @@ public class NsfwScannedFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FRAME_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFrameNumber(Integer frameNumber) {
     this.frameNumber = frameNumber;
   }
-
 
   public NsfwScannedFrame timeStamp(String timeStamp) {
     
@@ -85,12 +84,11 @@ public class NsfwScannedFrame {
     return this;
   }
 
-   /**
+  /**
    * The playback time of the current frame
    * @return timeStamp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The playback time of the current frame")
   @JsonProperty(JSON_PROPERTY_TIME_STAMP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +97,11 @@ public class NsfwScannedFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIME_STAMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimeStamp(String timeStamp) {
     this.timeStamp = timeStamp;
   }
-
 
   public NsfwScannedFrame content(byte[] content) {
     
@@ -110,12 +109,11 @@ public class NsfwScannedFrame {
     return this;
   }
 
-   /**
+  /**
    * The still frame in PNG format as a byte array
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The still frame in PNG format as a byte array")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,10 +122,11 @@ public class NsfwScannedFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(byte[] content) {
     this.content = content;
   }
-
 
   public NsfwScannedFrame classificationResult(String classificationResult) {
     
@@ -135,12 +134,11 @@ public class NsfwScannedFrame {
     return this;
   }
 
-   /**
+  /**
    * The NSFW classification of the still frame
    * @return classificationResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The NSFW classification of the still frame")
   @JsonProperty(JSON_PROPERTY_CLASSIFICATION_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,10 +147,11 @@ public class NsfwScannedFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLASSIFICATION_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setClassificationResult(String classificationResult) {
     this.classificationResult = classificationResult;
   }
-
 
   public NsfwScannedFrame score(Double score) {
     
@@ -160,12 +159,11 @@ public class NsfwScannedFrame {
     return this;
   }
 
-   /**
+  /**
    * The NSFW score of the current frame
    * @return score
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The NSFW score of the current frame")
   @JsonProperty(JSON_PROPERTY_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,10 +172,11 @@ public class NsfwScannedFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setScore(Double score) {
     this.score = score;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -199,7 +198,6 @@ public class NsfwScannedFrame {
   public int hashCode() {
     return Objects.hash(frameNumber, timeStamp, Arrays.hashCode(content), classificationResult, score);
   }
-
 
   @Override
   public String toString() {

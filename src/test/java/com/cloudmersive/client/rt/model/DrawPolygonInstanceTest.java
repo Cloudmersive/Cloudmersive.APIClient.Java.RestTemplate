@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DrawPolygonInstance
  */
-public class DrawPolygonInstanceTest {
+class DrawPolygonInstanceTest {
     private final DrawPolygonInstance model = new DrawPolygonInstance();
 
     /**
      * Model tests for DrawPolygonInstance
      */
     @Test
-    public void testDrawPolygonInstance() {
+    void testDrawPolygonInstance() {
         // TODO: test DrawPolygonInstance
     }
 
@@ -46,7 +44,7 @@ public class DrawPolygonInstanceTest {
      * Test the property 'borderColor'
      */
     @Test
-    public void borderColorTest() {
+    void borderColorTest() {
         // TODO: test borderColor
     }
 
@@ -54,7 +52,7 @@ public class DrawPolygonInstanceTest {
      * Test the property 'borderWidth'
      */
     @Test
-    public void borderWidthTest() {
+    void borderWidthTest() {
         // TODO: test borderWidth
     }
 
@@ -62,7 +60,7 @@ public class DrawPolygonInstanceTest {
      * Test the property 'fillColor'
      */
     @Test
-    public void fillColorTest() {
+    void fillColorTest() {
         // TODO: test fillColor
     }
 
@@ -70,7 +68,7 @@ public class DrawPolygonInstanceTest {
      * Test the property 'points'
      */
     @Test
-    public void pointsTest() {
+    void pointsTest() {
         // TODO: test points
     }
 

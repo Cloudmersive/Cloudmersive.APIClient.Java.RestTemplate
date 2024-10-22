@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**settingsCreateSetting**](SettingsApi.md#settingsCreateSetting) | **POST** /config/settings/create | Create a setting in the specified bucket
-[**settingsListSettings**](SettingsApi.md#settingsListSettings) | **POST** /config/settings/list | Enumerate the settings in a bucket
-[**settingsUpdateSetting**](SettingsApi.md#settingsUpdateSetting) | **POST** /config/settings/update | Update a setting
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**settingsCreateSetting**](SettingsApi.md#settingsCreateSetting) | **POST** /config/settings/create | Create a setting in the specified bucket |
+| [**settingsListSettings**](SettingsApi.md#settingsListSettings) | **POST** /config/settings/list | Enumerate the settings in a bucket |
+| [**settingsUpdateSetting**](SettingsApi.md#settingsUpdateSetting) | **POST** /config/settings/update | Update a setting |
 
 
 
@@ -57,9 +57,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CreateSettingRequest**](CreateSettingRequest.md)| Request to perform the operation on |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateSettingRequest**](CreateSettingRequest.md)| Request to perform the operation on | |
 
 ### Return type
 
@@ -73,6 +73,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -127,9 +128,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**ListSettingsRequest**](ListSettingsRequest.md)| Request to perform the operation on |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**ListSettingsRequest**](ListSettingsRequest.md)| Request to perform the operation on | |
 
 ### Return type
 
@@ -143,6 +144,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -197,9 +199,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**UpdateSettingRequest**](UpdateSettingRequest.md)| Request to perform the operation on |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**UpdateSettingRequest**](UpdateSettingRequest.md)| Request to perform the operation on | |
 
 ### Return type
 
@@ -213,6 +215,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for VatLookupResponse
  */
-public class VatLookupResponseTest {
+class VatLookupResponseTest {
     private final VatLookupResponse model = new VatLookupResponse();
 
     /**
      * Model tests for VatLookupResponse
      */
     @Test
-    public void testVatLookupResponse() {
+    void testVatLookupResponse() {
         // TODO: test VatLookupResponse
     }
 
@@ -43,7 +40,7 @@ public class VatLookupResponseTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 
@@ -51,7 +48,7 @@ public class VatLookupResponseTest {
      * Test the property 'vatNumber'
      */
     @Test
-    public void vatNumberTest() {
+    void vatNumberTest() {
         // TODO: test vatNumber
     }
 
@@ -59,7 +56,7 @@ public class VatLookupResponseTest {
      * Test the property 'isValid'
      */
     @Test
-    public void isValidTest() {
+    void isValidTest() {
         // TODO: test isValid
     }
 
@@ -67,7 +64,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessName'
      */
     @Test
-    public void businessNameTest() {
+    void businessNameTest() {
         // TODO: test businessName
     }
 
@@ -75,7 +72,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessAddress'
      */
     @Test
-    public void businessAddressTest() {
+    void businessAddressTest() {
         // TODO: test businessAddress
     }
 
@@ -83,7 +80,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessBuilding'
      */
     @Test
-    public void businessBuildingTest() {
+    void businessBuildingTest() {
         // TODO: test businessBuilding
     }
 
@@ -91,7 +88,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessStreetNumber'
      */
     @Test
-    public void businessStreetNumberTest() {
+    void businessStreetNumberTest() {
         // TODO: test businessStreetNumber
     }
 
@@ -99,7 +96,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessStreet'
      */
     @Test
-    public void businessStreetTest() {
+    void businessStreetTest() {
         // TODO: test businessStreet
     }
 
@@ -107,7 +104,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessCity'
      */
     @Test
-    public void businessCityTest() {
+    void businessCityTest() {
         // TODO: test businessCity
     }
 
@@ -115,7 +112,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessStateOrProvince'
      */
     @Test
-    public void businessStateOrProvinceTest() {
+    void businessStateOrProvinceTest() {
         // TODO: test businessStateOrProvince
     }
 
@@ -123,7 +120,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessPostalCode'
      */
     @Test
-    public void businessPostalCodeTest() {
+    void businessPostalCodeTest() {
         // TODO: test businessPostalCode
     }
 
@@ -131,7 +128,7 @@ public class VatLookupResponseTest {
      * Test the property 'businessCountry'
      */
     @Test
-    public void businessCountryTest() {
+    void businessCountryTest() {
         // TODO: test businessCountry
     }
 

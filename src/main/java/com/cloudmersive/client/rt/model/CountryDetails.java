@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Details of one country
  */
-@ApiModel(description = "Details of one country")
 @JsonPropertyOrder({
   CountryDetails.JSON_PROPERTY_COUNTRY_NAME,
   CountryDetails.JSON_PROPERTY_THREE_LETTER_CODE,
@@ -39,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CountryDetails.JSON_PROPERTY_REGION,
   CountryDetails.JSON_PROPERTY_SUBREGION
 })
-@JsonTypeName("CountryDetails")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CountryDetails {
   public static final String JSON_PROPERTY_COUNTRY_NAME = "CountryName";
   private String countryName;
@@ -69,6 +66,8 @@ public class CountryDetails {
   public static final String JSON_PROPERTY_SUBREGION = "Subregion";
   private String subregion;
 
+  public CountryDetails() {
+  }
 
   public CountryDetails countryName(String countryName) {
     
@@ -76,12 +75,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Name of the country
    * @return countryName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the country")
   @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,10 +88,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryName(String countryName) {
     this.countryName = countryName;
   }
-
 
   public CountryDetails threeLetterCode(String threeLetterCode) {
     
@@ -101,12 +100,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Three-letter ISO 3166-1 country code
    * @return threeLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Three-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_THREE_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,10 +113,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_THREE_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setThreeLetterCode(String threeLetterCode) {
     this.threeLetterCode = threeLetterCode;
   }
-
 
   public CountryDetails isOTwoLetterCode(String isOTwoLetterCode) {
     
@@ -126,12 +125,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Two-letter ISO 3166-1 country code
    * @return isOTwoLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,10 +138,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsOTwoLetterCode(String isOTwoLetterCode) {
     this.isOTwoLetterCode = isOTwoLetterCode;
   }
-
 
   public CountryDetails isEuropeanUnionMember(Boolean isEuropeanUnionMember) {
     
@@ -151,12 +150,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * True if this country is currently a member of the European Union (EU), false otherwise
    * @return isEuropeanUnionMember
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this country is currently a member of the European Union (EU), false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -165,10 +163,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsEuropeanUnionMember(Boolean isEuropeanUnionMember) {
     this.isEuropeanUnionMember = isEuropeanUnionMember;
   }
-
 
   public CountryDetails isOCurrencyCode(String isOCurrencyCode) {
     
@@ -176,12 +175,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * ISO 4217 currency three-letter code associated with the country
    * @return isOCurrencyCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ISO 4217 currency three-letter code associated with the country")
   @JsonProperty(JSON_PROPERTY_IS_O_CURRENCY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,10 +188,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_O_CURRENCY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsOCurrencyCode(String isOCurrencyCode) {
     this.isOCurrencyCode = isOCurrencyCode;
   }
-
 
   public CountryDetails currencySymbol(String currencySymbol) {
     
@@ -201,12 +200,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Symbol associated with the currency
    * @return currencySymbol
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Symbol associated with the currency")
   @JsonProperty(JSON_PROPERTY_CURRENCY_SYMBOL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -215,10 +213,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCY_SYMBOL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
   }
-
 
   public CountryDetails currencyEnglishName(String currencyEnglishName) {
     
@@ -226,12 +225,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Full name of the currency
    * @return currencyEnglishName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Full name of the currency")
   @JsonProperty(JSON_PROPERTY_CURRENCY_ENGLISH_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -240,10 +238,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCY_ENGLISH_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencyEnglishName(String currencyEnglishName) {
     this.currencyEnglishName = currencyEnglishName;
   }
-
 
   public CountryDetails region(String region) {
     
@@ -251,12 +250,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania
    * @return region
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania")
   @JsonProperty(JSON_PROPERTY_REGION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -265,10 +263,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REGION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRegion(String region) {
     this.region = region;
   }
-
 
   public CountryDetails subregion(String subregion) {
     
@@ -276,12 +275,11 @@ public class CountryDetails {
     return this;
   }
 
-   /**
+  /**
    * Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,
    * @return subregion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,")
   @JsonProperty(JSON_PROPERTY_SUBREGION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -290,10 +288,11 @@ public class CountryDetails {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBREGION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSubregion(String subregion) {
     this.subregion = subregion;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -319,7 +318,6 @@ public class CountryDetails {
   public int hashCode() {
     return Objects.hash(countryName, threeLetterCode, isOTwoLetterCode, isEuropeanUnionMember, isOCurrencyCode, currencySymbol, currencyEnglishName, region, subregion);
   }
-
 
   @Override
   public String toString() {

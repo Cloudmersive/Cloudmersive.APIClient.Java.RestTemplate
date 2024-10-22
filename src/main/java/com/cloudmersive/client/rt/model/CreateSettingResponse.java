@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a create setting operation
  */
-@ApiModel(description = "Result of performing a create setting operation")
 @JsonPropertyOrder({
   CreateSettingResponse.JSON_PROPERTY_SUCCESSFUL,
   CreateSettingResponse.JSON_PROPERTY_SETTING_DEFINITION_I_D,
   CreateSettingResponse.JSON_PROPERTY_SETTING_VALUE_I_D,
   CreateSettingResponse.JSON_PROPERTY_ERROR_MESSAGE
 })
-@JsonTypeName("CreateSettingResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateSettingResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -49,6 +46,8 @@ public class CreateSettingResponse {
   public static final String JSON_PROPERTY_ERROR_MESSAGE = "ErrorMessage";
   private String errorMessage;
 
+  public CreateSettingResponse() {
+  }
 
   public CreateSettingResponse successful(Boolean successful) {
     
@@ -56,12 +55,11 @@ public class CreateSettingResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class CreateSettingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public CreateSettingResponse settingDefinitionID(String settingDefinitionID) {
     
@@ -81,12 +80,11 @@ public class CreateSettingResponse {
     return this;
   }
 
-   /**
+  /**
    * SettingDefinitionID of the setting created
    * @return settingDefinitionID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SettingDefinitionID of the setting created")
   @JsonProperty(JSON_PROPERTY_SETTING_DEFINITION_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class CreateSettingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_DEFINITION_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingDefinitionID(String settingDefinitionID) {
     this.settingDefinitionID = settingDefinitionID;
   }
-
 
   public CreateSettingResponse settingValueID(String settingValueID) {
     
@@ -106,12 +105,11 @@ public class CreateSettingResponse {
     return this;
   }
 
-   /**
+  /**
    * SettingValueID of the value of the setting
    * @return settingValueID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SettingValueID of the value of the setting")
   @JsonProperty(JSON_PROPERTY_SETTING_VALUE_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class CreateSettingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_VALUE_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingValueID(String settingValueID) {
     this.settingValueID = settingValueID;
   }
-
 
   public CreateSettingResponse errorMessage(String errorMessage) {
     
@@ -131,12 +130,11 @@ public class CreateSettingResponse {
     return this;
   }
 
-   /**
+  /**
    * Error message, if any, when the operation was not successful
    * @return errorMessage
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Error message, if any, when the operation was not successful")
   @JsonProperty(JSON_PROPERTY_ERROR_MESSAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class CreateSettingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorMessage(String errorMessage) {
     this.errorMessage = errorMessage;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class CreateSettingResponse {
   public int hashCode() {
     return Objects.hash(successful, settingDefinitionID, settingValueID, errorMessage);
   }
-
 
   @Override
   public String toString() {

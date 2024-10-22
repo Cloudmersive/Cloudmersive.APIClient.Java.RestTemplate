@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of converting a video into still frames
  */
-@ApiModel(description = "The result of converting a video into still frames")
 @JsonPropertyOrder({
   StillFramesResult.JSON_PROPERTY_SUCCESSFUL,
   StillFramesResult.JSON_PROPERTY_TOTAL_FRAMES,
   StillFramesResult.JSON_PROPERTY_STILL_FRAMES
 })
-@JsonTypeName("StillFramesResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class StillFramesResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -46,8 +44,10 @@ public class StillFramesResult {
   private Integer totalFrames;
 
   public static final String JSON_PROPERTY_STILL_FRAMES = "StillFrames";
-  private List<StillFrame> stillFrames = null;
+  private List<StillFrame> stillFrames = new ArrayList<>();
 
+  public StillFramesResult() {
+  }
 
   public StillFramesResult successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class StillFramesResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class StillFramesResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public StillFramesResult totalFrames(Integer totalFrames) {
     
@@ -80,12 +80,11 @@ public class StillFramesResult {
     return this;
   }
 
-   /**
+  /**
    * The total number of frames converted
    * @return totalFrames
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total number of frames converted")
   @JsonProperty(JSON_PROPERTY_TOTAL_FRAMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class StillFramesResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOTAL_FRAMES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTotalFrames(Integer totalFrames) {
     this.totalFrames = totalFrames;
   }
-
 
   public StillFramesResult stillFrames(List<StillFrame> stillFrames) {
     
@@ -107,18 +107,17 @@ public class StillFramesResult {
 
   public StillFramesResult addStillFramesItem(StillFrame stillFramesItem) {
     if (this.stillFrames == null) {
-      this.stillFrames = new ArrayList<StillFrame>();
+      this.stillFrames = new ArrayList<>();
     }
     this.stillFrames.add(stillFramesItem);
     return this;
   }
 
-   /**
+  /**
    * Individual still frames from the conversion operation
    * @return stillFrames
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Individual still frames from the conversion operation")
   @JsonProperty(JSON_PROPERTY_STILL_FRAMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class StillFramesResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STILL_FRAMES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStillFrames(List<StillFrame> stillFrames) {
     this.stillFrames = stillFrames;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class StillFramesResult {
   public int hashCode() {
     return Objects.hash(successful, totalFrames, stillFrames);
   }
-
 
   @Override
   public String toString() {

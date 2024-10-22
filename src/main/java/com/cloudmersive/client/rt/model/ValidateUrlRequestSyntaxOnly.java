@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to determine if a URL is valid
  */
-@ApiModel(description = "Request to determine if a URL is valid")
 @JsonPropertyOrder({
   ValidateUrlRequestSyntaxOnly.JSON_PROPERTY_U_R_L
 })
-@JsonTypeName("ValidateUrlRequestSyntaxOnly")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateUrlRequestSyntaxOnly {
   public static final String JSON_PROPERTY_U_R_L = "URL";
   private String URL;
 
+  public ValidateUrlRequestSyntaxOnly() {
+  }
 
   public ValidateUrlRequestSyntaxOnly URL(String URL) {
     
@@ -44,12 +43,11 @@ public class ValidateUrlRequestSyntaxOnly {
     return this;
   }
 
-   /**
+  /**
    * URL to validate
    * @return URL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to validate")
   @JsonProperty(JSON_PROPERTY_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class ValidateUrlRequestSyntaxOnly {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setURL(String URL) {
     this.URL = URL;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class ValidateUrlRequestSyntaxOnly {
   public int hashCode() {
     return Objects.hash(URL);
   }
-
 
   @Override
   public String toString() {

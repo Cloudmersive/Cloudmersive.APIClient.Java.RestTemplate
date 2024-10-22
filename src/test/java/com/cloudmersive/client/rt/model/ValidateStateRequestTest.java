@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateStateRequest
  */
-public class ValidateStateRequestTest {
+class ValidateStateRequestTest {
     private final ValidateStateRequest model = new ValidateStateRequest();
 
     /**
      * Model tests for ValidateStateRequest
      */
     @Test
-    public void testValidateStateRequest() {
+    void testValidateStateRequest() {
         // TODO: test ValidateStateRequest
     }
 
@@ -43,7 +40,7 @@ public class ValidateStateRequestTest {
      * Test the property 'stateOrProvince'
      */
     @Test
-    public void stateOrProvinceTest() {
+    void stateOrProvinceTest() {
         // TODO: test stateOrProvince
     }
 
@@ -51,7 +48,7 @@ public class ValidateStateRequestTest {
      * Test the property 'countryFullName'
      */
     @Test
-    public void countryFullNameTest() {
+    void countryFullNameTest() {
         // TODO: test countryFullName
     }
 
@@ -59,7 +56,7 @@ public class ValidateStateRequestTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 

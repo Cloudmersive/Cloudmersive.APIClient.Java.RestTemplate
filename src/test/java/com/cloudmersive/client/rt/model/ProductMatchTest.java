@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ProductMatch
  */
-public class ProductMatchTest {
+class ProductMatchTest {
     private final ProductMatch model = new ProductMatch();
 
     /**
      * Model tests for ProductMatch
      */
     @Test
-    public void testProductMatch() {
+    void testProductMatch() {
         // TODO: test ProductMatch
     }
 
@@ -43,7 +40,7 @@ public class ProductMatchTest {
      * Test the property 'EAN'
      */
     @Test
-    public void EANTest() {
+    void EANTest() {
         // TODO: test EAN
     }
 
@@ -51,7 +48,7 @@ public class ProductMatchTest {
      * Test the property 'title'
      */
     @Test
-    public void titleTest() {
+    void titleTest() {
         // TODO: test title
     }
 

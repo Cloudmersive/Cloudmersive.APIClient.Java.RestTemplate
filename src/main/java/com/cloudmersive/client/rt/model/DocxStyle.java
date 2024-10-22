@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Style in a DOCX Word Document
  */
-@ApiModel(description = "Style in a DOCX Word Document")
 @JsonPropertyOrder({
   DocxStyle.JSON_PROPERTY_STYLE_I_D,
   DocxStyle.JSON_PROPERTY_PATH,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxStyle.JSON_PROPERTY_FONT_SIZE,
   DocxStyle.JSON_PROPERTY_FONT_FAMILY
 })
-@JsonTypeName("DocxStyle")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxStyle {
   public static final String JSON_PROPERTY_STYLE_I_D = "StyleID";
   private String styleID;
@@ -61,6 +58,8 @@ public class DocxStyle {
   public static final String JSON_PROPERTY_FONT_FAMILY = "FontFamily";
   private String fontFamily;
 
+  public DocxStyle() {
+  }
 
   public DocxStyle styleID(String styleID) {
     
@@ -68,12 +67,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * ID of the style
    * @return styleID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ID of the style")
   @JsonProperty(JSON_PROPERTY_STYLE_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,10 +80,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STYLE_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStyleID(String styleID) {
     this.styleID = styleID;
   }
-
 
   public DocxStyle path(String path) {
     
@@ -93,12 +92,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +105,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxStyle bold(Boolean bold) {
     
@@ -118,12 +117,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * Style applies bold formatting
    * @return bold
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Style applies bold formatting")
   @JsonProperty(JSON_PROPERTY_BOLD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,10 +130,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOLD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBold(Boolean bold) {
     this.bold = bold;
   }
-
 
   public DocxStyle italic(Boolean italic) {
     
@@ -143,12 +142,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * Style applies italic formatting
    * @return italic
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Style applies italic formatting")
   @JsonProperty(JSON_PROPERTY_ITALIC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,10 +155,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ITALIC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setItalic(Boolean italic) {
     this.italic = italic;
   }
-
 
   public DocxStyle underline(Boolean underline) {
     
@@ -168,12 +167,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * Style applies underline formatting
    * @return underline
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Style applies underline formatting")
   @JsonProperty(JSON_PROPERTY_UNDERLINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,10 +180,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_UNDERLINE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUnderline(Boolean underline) {
     this.underline = underline;
   }
-
 
   public DocxStyle fontSize(String fontSize) {
     
@@ -193,12 +192,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * Font size
    * @return fontSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Font size")
   @JsonProperty(JSON_PROPERTY_FONT_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,10 +205,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FONT_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFontSize(String fontSize) {
     this.fontSize = fontSize;
   }
-
 
   public DocxStyle fontFamily(String fontFamily) {
     
@@ -218,12 +217,11 @@ public class DocxStyle {
     return this;
   }
 
-   /**
+  /**
    * Font family
    * @return fontFamily
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Font family")
   @JsonProperty(JSON_PROPERTY_FONT_FAMILY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,10 +230,11 @@ public class DocxStyle {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FONT_FAMILY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFontFamily(String fontFamily) {
     this.fontFamily = fontFamily;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -259,7 +258,6 @@ public class DocxStyle {
   public int hashCode() {
     return Objects.hash(styleID, path, bold, italic, underline, fontSize, fontFamily);
   }
-
 
   @Override
   public String toString() {

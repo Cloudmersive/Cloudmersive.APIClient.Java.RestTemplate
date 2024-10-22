@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetWordsRequest
  */
-public class GetWordsRequestTest {
+class GetWordsRequestTest {
     private final GetWordsRequest model = new GetWordsRequest();
 
     /**
      * Model tests for GetWordsRequest
      */
     @Test
-    public void testGetWordsRequest() {
+    void testGetWordsRequest() {
         // TODO: test GetWordsRequest
     }
 
@@ -43,7 +40,7 @@ public class GetWordsRequestTest {
      * Test the property 'inputText'
      */
     @Test
-    public void inputTextTest() {
+    void inputTextTest() {
         // TODO: test inputText
     }
 

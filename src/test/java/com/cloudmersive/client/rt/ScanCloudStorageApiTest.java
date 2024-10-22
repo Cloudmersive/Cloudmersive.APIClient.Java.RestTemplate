@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.CloudStorageAdvancedVirusScanResult;
 import com.cloudmersive.client.rt.model.CloudStorageVirusScanResult;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for ScanCloudStorageApi
  */
-@Ignore
-public class ScanCloudStorageApiTest {
+@Disabled
+class ScanCloudStorageApiTest {
 
     private final ScanCloudStorageApi api = new ScanCloudStorageApi();
 
@@ -38,17 +41,19 @@ public class ScanCloudStorageApiTest {
      *
      * Scan the contents of a single AWS S3 file and its content for viruses. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanAwsS3FileTest() {
+    void scanCloudStorageScanAwsS3FileTest() {
         String accessKey = null;
         String secretKey = null;
         String bucketRegion = null;
         String bucketName = null;
         String keyName = null;
-        CloudStorageVirusScanResult response = api.scanCloudStorageScanAwsS3File(accessKey, secretKey, bucketRegion, bucketName, keyName);
+        String roleArn = null;
+
+        CloudStorageVirusScanResult response = api.scanCloudStorageScanAwsS3File(accessKey, secretKey, bucketRegion, bucketName, keyName, roleArn);
 
         // TODO: test validations
     }
@@ -58,24 +63,28 @@ public class ScanCloudStorageApiTest {
      *
      * Advanced Scan the contents of a single AWS S3 file and its content for viruses and threats. Advanced Scan files with 360-degree Content Protection across Viruses and Malware, executables, invalid files, scripts, and even restrictions on accepted file types with complete content verification. Customize threat rules to your needs. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Block threats beyond viruses including executables, scripts, invalid files, and more.  Optionally limit input files to a specific set of file types (e.g. PDF and Word Documents only).  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanAwsS3FileAdvancedTest() {
+    void scanCloudStorageScanAwsS3FileAdvancedTest() {
         String accessKey = null;
         String secretKey = null;
         String bucketRegion = null;
         String bucketName = null;
         String keyName = null;
+        String roleArn = null;
         Boolean allowExecutables = null;
         Boolean allowInvalidFiles = null;
         Boolean allowScripts = null;
         Boolean allowPasswordProtectedFiles = null;
         Boolean allowMacros = null;
         Boolean allowXmlExternalEntities = null;
+        Boolean allowInsecureDeserialization = null;
+        Boolean allowHtml = null;
         String restrictFileTypes = null;
-        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanAwsS3FileAdvanced(accessKey, secretKey, bucketRegion, bucketName, keyName, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, restrictFileTypes);
+
+        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanAwsS3FileAdvanced(accessKey, secretKey, bucketRegion, bucketName, keyName, roleArn, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, restrictFileTypes);
 
         // TODO: test validations
     }
@@ -85,14 +94,15 @@ public class ScanCloudStorageApiTest {
      *
      * Scan the contents of a single Azure Blob and its content for viruses. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanAzureBlobTest() {
+    void scanCloudStorageScanAzureBlobTest() {
         String connectionString = null;
         String containerName = null;
         String blobPath = null;
+
         CloudStorageVirusScanResult response = api.scanCloudStorageScanAzureBlob(connectionString, containerName, blobPath);
 
         // TODO: test validations
@@ -103,11 +113,11 @@ public class ScanCloudStorageApiTest {
      *
      * Advanced Scan the contents of a single Azure Blob and its content for viruses and threats.  Advanced Scan files with 360-degree Content Protection across Viruses and Malware, executables, invalid files, scripts, and even restrictions on accepted file types with complete content verification. Customize threat rules to your needs. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Block threats beyond viruses including executables, scripts, invalid files, and more.  Optionally limit input files to a specific set of file types (e.g. PDF and Word Documents only).  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanAzureBlobAdvancedTest() {
+    void scanCloudStorageScanAzureBlobAdvancedTest() {
         String connectionString = null;
         String containerName = null;
         String blobPath = null;
@@ -117,8 +127,11 @@ public class ScanCloudStorageApiTest {
         Boolean allowPasswordProtectedFiles = null;
         Boolean allowMacros = null;
         Boolean allowXmlExternalEntities = null;
+        Boolean allowInsecureDeserialization = null;
+        Boolean allowHtml = null;
         String restrictFileTypes = null;
-        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanAzureBlobAdvanced(connectionString, containerName, blobPath, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, restrictFileTypes);
+
+        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanAzureBlobAdvanced(connectionString, containerName, blobPath, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, restrictFileTypes);
 
         // TODO: test validations
     }
@@ -128,14 +141,15 @@ public class ScanCloudStorageApiTest {
      *
      * Scan the contents of a single Google Cloud Platform (GCP) Storage file and its content for viruses. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanGcpStorageFileTest() {
+    void scanCloudStorageScanGcpStorageFileTest() {
         String bucketName = null;
         String objectName = null;
         org.springframework.core.io.Resource jsonCredentialFile = null;
+
         CloudStorageVirusScanResult response = api.scanCloudStorageScanGcpStorageFile(bucketName, objectName, jsonCredentialFile);
 
         // TODO: test validations
@@ -146,11 +160,11 @@ public class ScanCloudStorageApiTest {
      *
      * Advanced Scan the contents of a single Google Cloud Platform (GCP) Storage file and its content for viruses and threats. Advanced Scan files with 360-degree Content Protection across Viruses and Malware, executables, invalid files, scripts, and even restrictions on accepted file types with complete content verification. Customize threat rules to your needs. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Block threats beyond viruses including executables, scripts, invalid files, and more.  Optionally limit input files to a specific set of file types (e.g. PDF and Word Documents only).  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanGcpStorageFileAdvancedTest() {
+    void scanCloudStorageScanGcpStorageFileAdvancedTest() {
         String bucketName = null;
         String objectName = null;
         org.springframework.core.io.Resource jsonCredentialFile = null;
@@ -160,8 +174,11 @@ public class ScanCloudStorageApiTest {
         Boolean allowPasswordProtectedFiles = null;
         Boolean allowMacros = null;
         Boolean allowXmlExternalEntities = null;
+        Boolean allowInsecureDeserialization = null;
+        Boolean allowHtml = null;
         String restrictFileTypes = null;
-        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanGcpStorageFileAdvanced(bucketName, objectName, jsonCredentialFile, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, restrictFileTypes);
+
+        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanGcpStorageFileAdvanced(bucketName, objectName, jsonCredentialFile, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, restrictFileTypes);
 
         // TODO: test validations
     }
@@ -171,11 +188,11 @@ public class ScanCloudStorageApiTest {
      *
      * Virus Scan the contents of a single SharePoint Online Site Drive file and its content for viruses. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time. To get the Client ID and Client Secret, follow these steps: (1) Navigate to the Azure Portal and click on Azure Active Directory, (2) click on App Registrations on the left hand side, (3) click on Register Application, (4) Name the application CloudmersiveAntiVirus and click on Register, (5) Get the client ID by clicking on Overview and copying the value labeled Application (client) ID, (6) click on Certificates and Secrets, (7) click on New client secret, choose a longer expiration and give the secret a name, (8) copy the secret value to the clipboard and save it securely, this is your Client Secret, (9) Now we need to grant permissions to SharePOint; click on API Permissions on the left hand side, (10) click on Add a permission and choose Microsoft Graph, (11) click on Application Permissions, (12) search for Sites.FullControl.All, (13) Click on Add Permissions, (14) now navigate back to Azure Active Directory and click on Enterprise Applications, click on CloudmersiveAntiVirus and click on Permissions, and (15) click on Grant Admin Consent.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanSharePointOnlineFileTest() {
+    void scanCloudStorageScanSharePointOnlineFileTest() {
         String clientID = null;
         String clientSecret = null;
         String sharepointDomainName = null;
@@ -183,6 +200,7 @@ public class ScanCloudStorageApiTest {
         String filePath = null;
         String tenantID = null;
         String itemID = null;
+
         CloudStorageVirusScanResult response = api.scanCloudStorageScanSharePointOnlineFile(clientID, clientSecret, sharepointDomainName, siteID, filePath, tenantID, itemID);
 
         // TODO: test validations
@@ -193,11 +211,11 @@ public class ScanCloudStorageApiTest {
      *
      * Advanced Virus Scan the contents of a single SharePoint Online Site Drive file and its content for viruses and threats.  Advanced Scan files with 360-degree Content Protection across Viruses and Malware, executables, invalid files, scripts, and even restrictions on accepted file types with complete content verification. Customize threat rules to your needs. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Block threats beyond viruses including executables, scripts, invalid files, and more.  Optionally limit input files to a specific set of file types (e.g. PDF and Word Documents only).  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time. To get the Client ID and Client Secret, follow these steps: (1) Navigate to the Azure Portal and click on Azure Active Directory, (2) click on App Registrations on the left hand side, (3) click on Register Application, (4) Name the application CloudmersiveAntiVirus and click on Register, (5) Get the client ID by clicking on Overview and copying the value labeled Application (client) ID, (6) click on Certificates and Secrets, (7) click on New client secret, choose a longer expiration and give the secret a name, (8) copy the secret value to the clipboard and save it securely, this is your Client Secret, (9) Now we need to grant permissions to SharePOint; click on API Permissions on the left hand side, (10) click on Add a permission and choose Microsoft Graph, (11) click on Application Permissions, (12) search for Sites.FullControl.All, (13) Click on Add Permissions, (14) now navigate back to Azure Active Directory and click on Enterprise Applications, click on CloudmersiveAntiVirus and click on Permissions, and (15) click on Grant Admin Consent.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanCloudStorageScanSharePointOnlineFileAdvancedTest() {
+    void scanCloudStorageScanSharePointOnlineFileAdvancedTest() {
         String clientID = null;
         String clientSecret = null;
         String sharepointDomainName = null;
@@ -211,8 +229,11 @@ public class ScanCloudStorageApiTest {
         Boolean allowPasswordProtectedFiles = null;
         Boolean allowMacros = null;
         Boolean allowXmlExternalEntities = null;
+        Boolean allowInsecureDeserialization = null;
+        Boolean allowHtml = null;
         String restrictFileTypes = null;
-        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanSharePointOnlineFileAdvanced(clientID, clientSecret, sharepointDomainName, siteID, tenantID, filePath, itemID, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, restrictFileTypes);
+
+        CloudStorageAdvancedVirusScanResult response = api.scanCloudStorageScanSharePointOnlineFileAdvanced(clientID, clientSecret, sharepointDomainName, siteID, tenantID, filePath, itemID, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, restrictFileTypes);
 
         // TODO: test validations
     }

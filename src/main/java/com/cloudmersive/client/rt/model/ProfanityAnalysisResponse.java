@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Output of a profanity analysis operation
  */
-@ApiModel(description = "Output of a profanity analysis operation")
 @JsonPropertyOrder({
   ProfanityAnalysisResponse.JSON_PROPERTY_SUCCESSFUL,
   ProfanityAnalysisResponse.JSON_PROPERTY_PROFANITY_SCORE_RESULT,
   ProfanityAnalysisResponse.JSON_PROPERTY_SENTENCE_COUNT
 })
-@JsonTypeName("ProfanityAnalysisResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ProfanityAnalysisResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class ProfanityAnalysisResponse {
   public static final String JSON_PROPERTY_SENTENCE_COUNT = "SentenceCount";
   private Integer sentenceCount;
 
+  public ProfanityAnalysisResponse() {
+  }
 
   public ProfanityAnalysisResponse successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class ProfanityAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the profanity detection operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the profanity detection operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ProfanityAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ProfanityAnalysisResponse profanityScoreResult(Double profanityScoreResult) {
     
@@ -77,12 +76,11 @@ public class ProfanityAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane.
    * @return profanityScoreResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane.")
   @JsonProperty(JSON_PROPERTY_PROFANITY_SCORE_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ProfanityAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROFANITY_SCORE_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setProfanityScoreResult(Double profanityScoreResult) {
     this.profanityScoreResult = profanityScoreResult;
   }
-
 
   public ProfanityAnalysisResponse sentenceCount(Integer sentenceCount) {
     
@@ -102,12 +101,11 @@ public class ProfanityAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of sentences in input text
    * @return sentenceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of sentences in input text")
   @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ProfanityAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceCount(Integer sentenceCount) {
     this.sentenceCount = sentenceCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ProfanityAnalysisResponse {
   public int hashCode() {
     return Objects.hash(successful, profanityScoreResult, sentenceCount);
   }
-
 
   @Override
   public String toString() {

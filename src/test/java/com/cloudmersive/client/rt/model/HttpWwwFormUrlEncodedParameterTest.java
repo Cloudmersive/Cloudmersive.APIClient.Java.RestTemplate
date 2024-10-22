@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpWwwFormUrlEncodedParameter
  */
-public class HttpWwwFormUrlEncodedParameterTest {
+class HttpWwwFormUrlEncodedParameterTest {
     private final HttpWwwFormUrlEncodedParameter model = new HttpWwwFormUrlEncodedParameter();
 
     /**
      * Model tests for HttpWwwFormUrlEncodedParameter
      */
     @Test
-    public void testHttpWwwFormUrlEncodedParameter() {
+    void testHttpWwwFormUrlEncodedParameter() {
         // TODO: test HttpWwwFormUrlEncodedParameter
     }
 
@@ -44,7 +41,7 @@ public class HttpWwwFormUrlEncodedParameterTest {
      * Test the property 'keyName'
      */
     @Test
-    public void keyNameTest() {
+    void keyNameTest() {
         // TODO: test keyName
     }
 
@@ -52,7 +49,7 @@ public class HttpWwwFormUrlEncodedParameterTest {
      * Test the property 'keyValue'
      */
     @Test
-    public void keyValueTest() {
+    void keyValueTest() {
         // TODO: test keyValue
     }
 
@@ -60,7 +57,7 @@ public class HttpWwwFormUrlEncodedParameterTest {
      * Test the property 'useOutputFromPreviousTask'
      */
     @Test
-    public void useOutputFromPreviousTaskTest() {
+    void useOutputFromPreviousTaskTest() {
         // TODO: test useOutputFromPreviousTask
     }
 

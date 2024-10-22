@@ -21,9 +21,12 @@ import com.cloudmersive.client.rt.model.ImageToTextResponse;
 import com.cloudmersive.client.rt.model.ImageToWordsWithLocationResult;
 import com.cloudmersive.client.rt.model.PhotoToWordsWithLocationResult;
 import com.cloudmersive.client.rt.model.ReceiptRecognitionResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,8 +35,8 @@ import java.util.Map;
 /**
  * API tests for ImageOcrApi
  */
-@Ignore
-public class ImageOcrApiTest {
+@Disabled
+class ImageOcrApiTest {
 
     private final ImageOcrApi api = new ImageOcrApi();
 
@@ -43,14 +46,15 @@ public class ImageOcrApiTest {
      *
      * Converts an uploaded image in common formats such as JPEG, PNG into lines/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrImageLinesWithLocationTest() {
+    void imageOcrImageLinesWithLocationTest() {
         org.springframework.core.io.Resource imageFile = null;
         String language = null;
         String preprocessing = null;
+
         ImageToLinesWithLocationResult response = api.imageOcrImageLinesWithLocation(imageFile, language, preprocessing);
 
         // TODO: test validations
@@ -61,14 +65,15 @@ public class ImageOcrApiTest {
      *
      * Converts an uploaded image in common formats such as JPEG, PNG into words/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrImageWordsWithLocationTest() {
+    void imageOcrImageWordsWithLocationTest() {
         org.springframework.core.io.Resource imageFile = null;
         String language = null;
         String preprocessing = null;
+
         ImageToWordsWithLocationResult response = api.imageOcrImageWordsWithLocation(imageFile, language, preprocessing);
 
         // TODO: test validations
@@ -79,12 +84,13 @@ public class ImageOcrApiTest {
      *
      * Analyzes a photograph of a business card as input, and outputs key business information such as the name of the person, name of the business, the address of the business, the phone number, the email address and more.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPhotoRecognizeBusinessCardTest() {
+    void imageOcrPhotoRecognizeBusinessCardTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         BusinessCardRecognitionResult response = api.imageOcrPhotoRecognizeBusinessCard(imageFile);
 
         // TODO: test validations
@@ -95,17 +101,18 @@ public class ImageOcrApiTest {
      *
      * Analyzes a photograph of a form as input, and outputs key business fields and information.  Customzie data to be extracted by defining fields for the form.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPhotoRecognizeFormTest() {
+    void imageOcrPhotoRecognizeFormTest() {
         org.springframework.core.io.Resource imageFile = null;
         Object formTemplateDefinition = null;
         String recognitionMode = null;
         String preprocessing = null;
         String diagnostics = null;
         String language = null;
+
         FormRecognitionResult response = api.imageOcrPhotoRecognizeForm(imageFile, formTemplateDefinition, recognitionMode, preprocessing, diagnostics, language);
 
         // TODO: test validations
@@ -116,17 +123,18 @@ public class ImageOcrApiTest {
      *
      * Analyzes a photograph of a form as input, and outputs key business fields and information.  Customzie data to be extracted by defining fields for the form.  Uses template definitions stored in Cloudmersive Configuration; to configure stored templates in a configuration bucket, log into Cloudmersive Management Portal and navigate to Settings &amp;gt; API Configuration &amp;gt; Create Bucket.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPhotoRecognizeFormAdvancedTest() {
+    void imageOcrPhotoRecognizeFormAdvancedTest() {
         org.springframework.core.io.Resource imageFile = null;
         String bucketID = null;
         String bucketSecretKey = null;
         String recognitionMode = null;
         String preprocessing = null;
         String diagnostics = null;
+
         FormRecognitionResult response = api.imageOcrPhotoRecognizeFormAdvanced(imageFile, bucketID, bucketSecretKey, recognitionMode, preprocessing, diagnostics);
 
         // TODO: test validations
@@ -137,15 +145,16 @@ public class ImageOcrApiTest {
      *
      * Analyzes a photograph of a receipt as input, and outputs key business information such as the name of the business, the address of the business, the phone number of the business, the total of the receipt, the date of the receipt, and more.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPhotoRecognizeReceiptTest() {
+    void imageOcrPhotoRecognizeReceiptTest() {
         org.springframework.core.io.Resource imageFile = null;
         String recognitionMode = null;
         String language = null;
         String preprocessing = null;
+
         ReceiptRecognitionResult response = api.imageOcrPhotoRecognizeReceipt(imageFile, recognitionMode, language, preprocessing);
 
         // TODO: test validations
@@ -156,14 +165,15 @@ public class ImageOcrApiTest {
      *
      * Converts an uploaded photo of a document in common formats such as JPEG, PNG into text via Optical Character Recognition.  This API is intended to be run on photos of documents, e.g. taken with a smartphone and supports cases where other content, such as a desk, are in the frame and the camera is crooked.  If you want to OCR a scanned image, use the image/toText API call instead as it is designed for scanned images.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPhotoToTextTest() {
+    void imageOcrPhotoToTextTest() {
         org.springframework.core.io.Resource imageFile = null;
         String recognitionMode = null;
         String language = null;
+
         ImageToTextResponse response = api.imageOcrPhotoToText(imageFile, recognitionMode, language);
 
         // TODO: test validations
@@ -174,16 +184,17 @@ public class ImageOcrApiTest {
      *
      * Converts a photo of a document or receipt in common formats such as JPEG, PNG into words/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on photographs of documents.  If you want to OCR scanned documents (e.g. taken with a scanner), be sure to use the image/toText API instead, as it is designed for that use case.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPhotoWordsWithLocationTest() {
+    void imageOcrPhotoWordsWithLocationTest() {
         org.springframework.core.io.Resource imageFile = null;
         String recognitionMode = null;
         String language = null;
         String preprocessing = null;
         String diagnostics = null;
+
         PhotoToWordsWithLocationResult response = api.imageOcrPhotoWordsWithLocation(imageFile, recognitionMode, language, preprocessing, diagnostics);
 
         // TODO: test validations
@@ -194,15 +205,16 @@ public class ImageOcrApiTest {
      *
      * Converts an uploaded image in common formats such as JPEG, PNG into text via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void imageOcrPostTest() {
+    void imageOcrPostTest() {
         org.springframework.core.io.Resource imageFile = null;
         String recognitionMode = null;
         String language = null;
         String preprocessing = null;
+
         ImageToTextResponse response = api.imageOcrPost(imageFile, recognitionMode, language, preprocessing);
 
         // TODO: test validations

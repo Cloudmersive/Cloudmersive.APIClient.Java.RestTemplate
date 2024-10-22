@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Current date and time response
  */
-@ApiModel(description = "Current date and time response")
 @JsonPropertyOrder({
   DateTimeNowResult.JSON_PROPERTY_SUCCESSFUL,
   DateTimeNowResult.JSON_PROPERTY_NOW,
   DateTimeNowResult.JSON_PROPERTY_NOW_GMT
 })
-@JsonTypeName("DateTimeNowResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DateTimeNowResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -46,6 +43,8 @@ public class DateTimeNowResult {
   public static final String JSON_PROPERTY_NOW_GMT = "NowGmt";
   private OffsetDateTime nowGmt;
 
+  public DateTimeNowResult() {
+  }
 
   public DateTimeNowResult successful(Boolean successful) {
     
@@ -53,12 +52,11 @@ public class DateTimeNowResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class DateTimeNowResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public DateTimeNowResult now(OffsetDateTime now) {
     
@@ -78,12 +77,11 @@ public class DateTimeNowResult {
     return this;
   }
 
-   /**
+  /**
    * Current date, time, and time zone in standard JSON date format
    * @return now
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current date, time, and time zone in standard JSON date format")
   @JsonProperty(JSON_PROPERTY_NOW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class DateTimeNowResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NOW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNow(OffsetDateTime now) {
     this.now = now;
   }
-
 
   public DateTimeNowResult nowGmt(OffsetDateTime nowGmt) {
     
@@ -103,12 +102,11 @@ public class DateTimeNowResult {
     return this;
   }
 
-   /**
+  /**
    * Current GMT-time-zone date, time, and time zone in standard JSON date format
    * @return nowGmt
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Current GMT-time-zone date, time, and time zone in standard JSON date format")
   @JsonProperty(JSON_PROPERTY_NOW_GMT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class DateTimeNowResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NOW_GMT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNowGmt(OffsetDateTime nowGmt) {
     this.nowGmt = nowGmt;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class DateTimeNowResult {
   public int hashCode() {
     return Objects.hash(successful, now, nowGmt);
   }
-
 
   @Override
   public String toString() {

@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.AddressGetServersResponse;
 import com.cloudmersive.client.rt.model.AddressVerifySyntaxOnlyResponse;
 import com.cloudmersive.client.rt.model.FullEmailValidationResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for EmailApi
  */
-@Ignore
-public class EmailApiTest {
+@Disabled
+class EmailApiTest {
 
     private final EmailApi api = new EmailApi();
 
@@ -38,12 +41,13 @@ public class EmailApiTest {
      *
      * Validate an email address by identifying whether its parent domain has email servers defined.  This call is less limited than syntaxOnly but not as comprehensive as address/full.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void emailAddressGetServersTest() {
+    void emailAddressGetServersTest() {
         String email = null;
+
         AddressGetServersResponse response = api.emailAddressGetServers(email);
 
         // TODO: test validations
@@ -54,12 +58,13 @@ public class EmailApiTest {
      *
      * Performs a full validation of the email address.  Checks for syntactic correctness, identifies the mail server in question if any, and then contacts the email server to validate the existence of the account - without sending any emails.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void emailFullValidationTest() {
+    void emailFullValidationTest() {
         String email = null;
+
         FullEmailValidationResponse response = api.emailFullValidation(email);
 
         // TODO: test validations
@@ -70,12 +75,13 @@ public class EmailApiTest {
      *
      * Validate whether a given email address is syntactically correct via a limited local-only check.  Use the address/full API to do a full validation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void emailPostTest() {
+    void emailPostTest() {
         String value = null;
+
         AddressVerifySyntaxOnlyResponse response = api.emailPost(value);
 
         // TODO: test validations

@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a string replacement request
  */
-@ApiModel(description = "Input to a string replacement request")
 @JsonPropertyOrder({
   ReplaceStringRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   ReplaceStringRequest.JSON_PROPERTY_INPUT_FILE_URL,
@@ -35,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ReplaceStringRequest.JSON_PROPERTY_REPLACE_STRING,
   ReplaceStringRequest.JSON_PROPERTY_MATCH_CASE
 })
-@JsonTypeName("ReplaceStringRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ReplaceStringRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -53,6 +50,8 @@ public class ReplaceStringRequest {
   public static final String JSON_PROPERTY_MATCH_CASE = "MatchCase";
   private Boolean matchCase;
 
+  public ReplaceStringRequest() {
+  }
 
   public ReplaceStringRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -60,12 +59,11 @@ public class ReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +72,11 @@ public class ReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public ReplaceStringRequest inputFileUrl(String inputFileUrl) {
     
@@ -85,12 +84,11 @@ public class ReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +97,11 @@ public class ReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public ReplaceStringRequest matchString(String matchString) {
     
@@ -110,12 +109,11 @@ public class ReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * String to search for and match against, to be replaced
    * @return matchString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "String to search for and match against, to be replaced")
   @JsonProperty(JSON_PROPERTY_MATCH_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,10 +122,11 @@ public class ReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchString(String matchString) {
     this.matchString = matchString;
   }
-
 
   public ReplaceStringRequest replaceString(String replaceString) {
     
@@ -135,12 +134,11 @@ public class ReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * String to replace the matched values with
    * @return replaceString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "String to replace the matched values with")
   @JsonProperty(JSON_PROPERTY_REPLACE_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,10 +147,11 @@ public class ReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPLACE_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReplaceString(String replaceString) {
     this.replaceString = replaceString;
   }
-
 
   public ReplaceStringRequest matchCase(Boolean matchCase) {
     
@@ -160,12 +159,11 @@ public class ReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * True if the case should be matched, false for case insensitive match
    * @return matchCase
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the case should be matched, false for case insensitive match")
   @JsonProperty(JSON_PROPERTY_MATCH_CASE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,10 +172,11 @@ public class ReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_CASE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchCase(Boolean matchCase) {
     this.matchCase = matchCase;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -199,7 +198,6 @@ public class ReplaceStringRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, matchString, replaceString, matchCase);
   }
-
 
   @Override
   public String toString() {

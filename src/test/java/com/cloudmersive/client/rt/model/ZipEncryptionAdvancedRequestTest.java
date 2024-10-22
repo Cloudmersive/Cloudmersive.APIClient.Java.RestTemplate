@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ZipEncryptionAdvancedRequest
  */
-public class ZipEncryptionAdvancedRequestTest {
+class ZipEncryptionAdvancedRequestTest {
     private final ZipEncryptionAdvancedRequest model = new ZipEncryptionAdvancedRequest();
 
     /**
      * Model tests for ZipEncryptionAdvancedRequest
      */
     @Test
-    public void testZipEncryptionAdvancedRequest() {
+    void testZipEncryptionAdvancedRequest() {
         // TODO: test ZipEncryptionAdvancedRequest
     }
 
@@ -43,7 +40,7 @@ public class ZipEncryptionAdvancedRequestTest {
      * Test the property 'inputFileContents'
      */
     @Test
-    public void inputFileContentsTest() {
+    void inputFileContentsTest() {
         // TODO: test inputFileContents
     }
 
@@ -51,7 +48,7 @@ public class ZipEncryptionAdvancedRequestTest {
      * Test the property 'password'
      */
     @Test
-    public void passwordTest() {
+    void passwordTest() {
         // TODO: test password
     }
 
@@ -59,7 +56,7 @@ public class ZipEncryptionAdvancedRequestTest {
      * Test the property 'encryptionAlgorithm'
      */
     @Test
-    public void encryptionAlgorithmTest() {
+    void encryptionAlgorithmTest() {
         // TODO: test encryptionAlgorithm
     }
 

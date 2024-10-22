@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ImageSimilarityHashDistanceRequest
  */
-public class ImageSimilarityHashDistanceRequestTest {
+class ImageSimilarityHashDistanceRequestTest {
     private final ImageSimilarityHashDistanceRequest model = new ImageSimilarityHashDistanceRequest();
 
     /**
      * Model tests for ImageSimilarityHashDistanceRequest
      */
     @Test
-    public void testImageSimilarityHashDistanceRequest() {
+    void testImageSimilarityHashDistanceRequest() {
         // TODO: test ImageSimilarityHashDistanceRequest
     }
 
@@ -43,7 +40,7 @@ public class ImageSimilarityHashDistanceRequestTest {
      * Test the property 'imageHash1'
      */
     @Test
-    public void imageHash1Test() {
+    void imageHash1Test() {
         // TODO: test imageHash1
     }
 
@@ -51,7 +48,7 @@ public class ImageSimilarityHashDistanceRequestTest {
      * Test the property 'imageHash2'
      */
     @Test
-    public void imageHash2Test() {
+    void imageHash2Test() {
         // TODO: test imageHash2
     }
 

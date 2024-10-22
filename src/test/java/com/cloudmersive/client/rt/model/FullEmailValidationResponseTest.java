@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FullEmailValidationResponse
  */
-public class FullEmailValidationResponseTest {
+class FullEmailValidationResponseTest {
     private final FullEmailValidationResponse model = new FullEmailValidationResponse();
 
     /**
      * Model tests for FullEmailValidationResponse
      */
     @Test
-    public void testFullEmailValidationResponse() {
+    void testFullEmailValidationResponse() {
         // TODO: test FullEmailValidationResponse
     }
 
@@ -43,7 +40,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'validAddress'
      */
     @Test
-    public void validAddressTest() {
+    void validAddressTest() {
         // TODO: test validAddress
     }
 
@@ -51,7 +48,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'mailServerUsedForValidation'
      */
     @Test
-    public void mailServerUsedForValidationTest() {
+    void mailServerUsedForValidationTest() {
         // TODO: test mailServerUsedForValidation
     }
 
@@ -59,7 +56,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'validSyntax'
      */
     @Test
-    public void validSyntaxTest() {
+    void validSyntaxTest() {
         // TODO: test validSyntax
     }
 
@@ -67,7 +64,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'validDomain'
      */
     @Test
-    public void validDomainTest() {
+    void validDomainTest() {
         // TODO: test validDomain
     }
 
@@ -75,7 +72,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'validSMTP'
      */
     @Test
-    public void validSMTPTest() {
+    void validSMTPTest() {
         // TODO: test validSMTP
     }
 
@@ -83,7 +80,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'isCatchallDomain'
      */
     @Test
-    public void isCatchallDomainTest() {
+    void isCatchallDomainTest() {
         // TODO: test isCatchallDomain
     }
 
@@ -91,7 +88,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'domain'
      */
     @Test
-    public void domainTest() {
+    void domainTest() {
         // TODO: test domain
     }
 
@@ -99,7 +96,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'isFreeEmailProvider'
      */
     @Test
-    public void isFreeEmailProviderTest() {
+    void isFreeEmailProviderTest() {
         // TODO: test isFreeEmailProvider
     }
 
@@ -107,7 +104,7 @@ public class FullEmailValidationResponseTest {
      * Test the property 'isDisposable'
      */
     @Test
-    public void isDisposableTest() {
+    void isDisposableTest() {
         // TODO: test isDisposable
     }
 

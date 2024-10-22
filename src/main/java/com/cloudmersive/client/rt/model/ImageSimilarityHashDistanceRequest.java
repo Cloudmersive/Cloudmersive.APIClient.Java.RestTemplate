@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to compute the similarity between two image hashes
  */
-@ApiModel(description = "Request to compute the similarity between two image hashes")
 @JsonPropertyOrder({
   ImageSimilarityHashDistanceRequest.JSON_PROPERTY_IMAGE_HASH1,
   ImageSimilarityHashDistanceRequest.JSON_PROPERTY_IMAGE_HASH2
 })
-@JsonTypeName("ImageSimilarityHashDistanceRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageSimilarityHashDistanceRequest {
   public static final String JSON_PROPERTY_IMAGE_HASH1 = "ImageHash1";
   private String imageHash1;
@@ -41,6 +38,8 @@ public class ImageSimilarityHashDistanceRequest {
   public static final String JSON_PROPERTY_IMAGE_HASH2 = "ImageHash2";
   private String imageHash2;
 
+  public ImageSimilarityHashDistanceRequest() {
+  }
 
   public ImageSimilarityHashDistanceRequest imageHash1(String imageHash1) {
     
@@ -48,12 +47,11 @@ public class ImageSimilarityHashDistanceRequest {
     return this;
   }
 
-   /**
+  /**
    * Image hash computed using Cloudmersive Image Hashing API
    * @return imageHash1
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image hash computed using Cloudmersive Image Hashing API")
   @JsonProperty(JSON_PROPERTY_IMAGE_HASH1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ImageSimilarityHashDistanceRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_HASH1)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageHash1(String imageHash1) {
     this.imageHash1 = imageHash1;
   }
-
 
   public ImageSimilarityHashDistanceRequest imageHash2(String imageHash2) {
     
@@ -73,12 +72,11 @@ public class ImageSimilarityHashDistanceRequest {
     return this;
   }
 
-   /**
+  /**
    * Image hash computed using Cloudmersive Image Hashing API
    * @return imageHash2
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image hash computed using Cloudmersive Image Hashing API")
   @JsonProperty(JSON_PROPERTY_IMAGE_HASH2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ImageSimilarityHashDistanceRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_HASH2)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageHash2(String imageHash2) {
     this.imageHash2 = imageHash2;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ImageSimilarityHashDistanceRequest {
   public int hashCode() {
     return Objects.hash(imageHash1, imageHash2);
   }
-
 
   @Override
   public String toString() {

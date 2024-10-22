@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for UpdateDocxTableRowRequest
  */
-public class UpdateDocxTableRowRequestTest {
+class UpdateDocxTableRowRequestTest {
     private final UpdateDocxTableRowRequest model = new UpdateDocxTableRowRequest();
 
     /**
      * Model tests for UpdateDocxTableRowRequest
      */
     @Test
-    public void testUpdateDocxTableRowRequest() {
+    void testUpdateDocxTableRowRequest() {
         // TODO: test UpdateDocxTableRowRequest
     }
 
@@ -44,7 +41,7 @@ public class UpdateDocxTableRowRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class UpdateDocxTableRowRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class UpdateDocxTableRowRequestTest {
      * Test the property 'rowToUpdate'
      */
     @Test
-    public void rowToUpdateTest() {
+    void rowToUpdateTest() {
         // TODO: test rowToUpdate
     }
 
@@ -68,7 +65,7 @@ public class UpdateDocxTableRowRequestTest {
      * Test the property 'tableRowIndex'
      */
     @Test
-    public void tableRowIndexTest() {
+    void tableRowIndexTest() {
         // TODO: test tableRowIndex
     }
 
@@ -76,7 +73,7 @@ public class UpdateDocxTableRowRequestTest {
      * Test the property 'existingTablePath'
      */
     @Test
-    public void existingTablePathTest() {
+    void existingTablePathTest() {
         // TODO: test existingTablePath
     }
 

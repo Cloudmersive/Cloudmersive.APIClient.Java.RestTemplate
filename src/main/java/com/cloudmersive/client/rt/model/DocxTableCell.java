@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A cell in a Word Document (DOCX) file
  */
-@ApiModel(description = "A cell in a Word Document (DOCX) file")
 @JsonPropertyOrder({
   DocxTableCell.JSON_PROPERTY_CELL_INDEX,
   DocxTableCell.JSON_PROPERTY_PATH,
@@ -41,8 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxTableCell.JSON_PROPERTY_CELL_WIDTH_MODE,
   DocxTableCell.JSON_PROPERTY_CELL_WIDTH
 })
-@JsonTypeName("DocxTableCell")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableCell {
   public static final String JSON_PROPERTY_CELL_INDEX = "CellIndex";
   private Integer cellIndex;
@@ -51,7 +49,7 @@ public class DocxTableCell {
   private String path;
 
   public static final String JSON_PROPERTY_PARAGRAPHS = "Paragraphs";
-  private List<DocxParagraph> paragraphs = null;
+  private List<DocxParagraph> paragraphs = new ArrayList<>();
 
   public static final String JSON_PROPERTY_CELL_SHADING_COLOR = "CellShadingColor";
   private String cellShadingColor;
@@ -68,6 +66,8 @@ public class DocxTableCell {
   public static final String JSON_PROPERTY_CELL_WIDTH = "CellWidth";
   private String cellWidth;
 
+  public DocxTableCell() {
+  }
 
   public DocxTableCell cellIndex(Integer cellIndex) {
     
@@ -75,12 +75,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * The index of the cell, 0-based
    * @return cellIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The index of the cell, 0-based")
   @JsonProperty(JSON_PROPERTY_CELL_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -89,10 +88,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellIndex(Integer cellIndex) {
     this.cellIndex = cellIndex;
   }
-
 
   public DocxTableCell path(String path) {
     
@@ -100,12 +100,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,10 +113,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxTableCell paragraphs(List<DocxParagraph> paragraphs) {
     
@@ -127,18 +127,17 @@ public class DocxTableCell {
 
   public DocxTableCell addParagraphsItem(DocxParagraph paragraphsItem) {
     if (this.paragraphs == null) {
-      this.paragraphs = new ArrayList<DocxParagraph>();
+      this.paragraphs = new ArrayList<>();
     }
     this.paragraphs.add(paragraphsItem);
     return this;
   }
 
-   /**
+  /**
    * Paragraphs inside the cell; this is where the contents of the cell are stored
    * @return paragraphs
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Paragraphs inside the cell; this is where the contents of the cell are stored")
   @JsonProperty(JSON_PROPERTY_PARAGRAPHS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -147,10 +146,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAGRAPHS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParagraphs(List<DocxParagraph> paragraphs) {
     this.paragraphs = paragraphs;
   }
-
 
   public DocxTableCell cellShadingColor(String cellShadingColor) {
     
@@ -158,12 +158,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * Color of the cell shading
    * @return cellShadingColor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Color of the cell shading")
   @JsonProperty(JSON_PROPERTY_CELL_SHADING_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,10 +171,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_SHADING_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellShadingColor(String cellShadingColor) {
     this.cellShadingColor = cellShadingColor;
   }
-
 
   public DocxTableCell cellShadingFill(String cellShadingFill) {
     
@@ -183,12 +183,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * Fill of the cell shading
    * @return cellShadingFill
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fill of the cell shading")
   @JsonProperty(JSON_PROPERTY_CELL_SHADING_FILL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,10 +196,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_SHADING_FILL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellShadingFill(String cellShadingFill) {
     this.cellShadingFill = cellShadingFill;
   }
-
 
   public DocxTableCell cellShadingPattern(String cellShadingPattern) {
     
@@ -208,12 +208,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * Pattern of the cell shading
    * @return cellShadingPattern
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pattern of the cell shading")
   @JsonProperty(JSON_PROPERTY_CELL_SHADING_PATTERN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,10 +221,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_SHADING_PATTERN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellShadingPattern(String cellShadingPattern) {
     this.cellShadingPattern = cellShadingPattern;
   }
-
 
   public DocxTableCell cellWidthMode(String cellWidthMode) {
     
@@ -233,12 +233,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * Width mode of the cell; can be auto (for automatic) or manual
    * @return cellWidthMode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width mode of the cell; can be auto (for automatic) or manual")
   @JsonProperty(JSON_PROPERTY_CELL_WIDTH_MODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -247,10 +246,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_WIDTH_MODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellWidthMode(String cellWidthMode) {
     this.cellWidthMode = cellWidthMode;
   }
-
 
   public DocxTableCell cellWidth(String cellWidth) {
     
@@ -258,12 +258,11 @@ public class DocxTableCell {
     return this;
   }
 
-   /**
+  /**
    * Width of the cell
    * @return cellWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the cell")
   @JsonProperty(JSON_PROPERTY_CELL_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -272,10 +271,11 @@ public class DocxTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellWidth(String cellWidth) {
     this.cellWidth = cellWidth;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -300,7 +300,6 @@ public class DocxTableCell {
   public int hashCode() {
     return Objects.hash(cellIndex, path, paragraphs, cellShadingColor, cellShadingFill, cellShadingPattern, cellWidthMode, cellWidth);
   }
-
 
   @Override
   public String toString() {

@@ -35,9 +35,12 @@ import com.cloudmersive.client.rt.model.ReplaceStringRegexResponse;
 import com.cloudmersive.client.rt.model.ReplaceStringSimpleRequest;
 import com.cloudmersive.client.rt.model.ReplaceStringSimpleResponse;
 import com.cloudmersive.client.rt.model.TextEncodingDetectResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -46,8 +49,8 @@ import java.util.Map;
 /**
  * API tests for EditTextApi
  */
-@Ignore
-public class EditTextApiTest {
+@Disabled
+class EditTextApiTest {
 
     private final EditTextApi api = new EditTextApi();
 
@@ -57,12 +60,13 @@ public class EditTextApiTest {
      *
      * Decodes / converts base 64 UTF-8 text string to binary content
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextBase64DecodeTest() {
+    void editTextBase64DecodeTest() {
         Base64DecodeRequest request = null;
+
         Base64DecodeResponse response = api.editTextBase64Decode(request);
 
         // TODO: test validations
@@ -73,12 +77,13 @@ public class EditTextApiTest {
      *
      * Checks, detects if input string is base 64 encoded
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextBase64DetectTest() {
+    void editTextBase64DetectTest() {
         Base64DetectRequest request = null;
+
         Base64DetectResponse response = api.editTextBase64Detect(request);
 
         // TODO: test validations
@@ -89,12 +94,13 @@ public class EditTextApiTest {
      *
      * Encodes / converts binary or file data to a text string
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextBase64EncodeTest() {
+    void editTextBase64EncodeTest() {
         Base64EncodeRequest request = null;
+
         Base64EncodeResponse response = api.editTextBase64Encode(request);
 
         // TODO: test validations
@@ -105,13 +111,14 @@ public class EditTextApiTest {
      *
      * Sets the line ending type of a text file; set to Windows, Unix or Mac.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextChangeLineEndingsTest() {
+    void editTextChangeLineEndingsTest() {
         String lineEndingType = null;
         org.springframework.core.io.Resource inputFile = null;
+
         ChangeLineEndingResponse response = api.editTextChangeLineEndings(lineEndingType, inputFile);
 
         // TODO: test validations
@@ -122,12 +129,13 @@ public class EditTextApiTest {
      *
      * Detect line ending type (Windows, Unix or Mac) of an input file.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextDetectLineEndingsTest() {
+    void editTextDetectLineEndingsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DetectLineEndingsResponse response = api.editTextDetectLineEndings(inputFile);
 
         // TODO: test validations
@@ -138,12 +146,13 @@ public class EditTextApiTest {
      *
      * Find all occurrences of the input regular expression in the input content, and returns the matches
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextFindRegexTest() {
+    void editTextFindRegexTest() {
         FindStringRegexRequest request = null;
+
         FindStringRegexResponse response = api.editTextFindRegex(request);
 
         // TODO: test validations
@@ -154,12 +163,13 @@ public class EditTextApiTest {
      *
      * Finds all occurrences of the input string in the input content, and returns the matches
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextFindSimpleTest() {
+    void editTextFindSimpleTest() {
         FindStringSimpleRequest request = null;
+
         FindStringSimpleResponse response = api.editTextFindSimple(request);
 
         // TODO: test validations
@@ -170,12 +180,13 @@ public class EditTextApiTest {
      *
      * Removes all whitespace from text, leaving behind only non-whitespace characters.  Whitespace includes newlines, spaces and other whitespace characters.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextRemoveAllWhitespaceTest() {
+    void editTextRemoveAllWhitespaceTest() {
         RemoveWhitespaceFromTextRequest request = null;
+
         RemoveWhitespaceFromTextResponse response = api.editTextRemoveAllWhitespace(request);
 
         // TODO: test validations
@@ -186,12 +197,13 @@ public class EditTextApiTest {
      *
      * Removes HTML from text, leaving behind only text.  Formatted text will become plain text.  Important for protecting against HTML and Cross-Site-Scripting attacks.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextRemoveHtmlTest() {
+    void editTextRemoveHtmlTest() {
         RemoveHtmlFromTextRequest request = null;
+
         RemoveHtmlFromTextResponse response = api.editTextRemoveHtml(request);
 
         // TODO: test validations
@@ -202,12 +214,13 @@ public class EditTextApiTest {
      *
      * Replaces all occurrences of the input regular expression regex string in the input content, and returns the result
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextReplaceRegexTest() {
+    void editTextReplaceRegexTest() {
         ReplaceStringRegexRequest request = null;
+
         ReplaceStringRegexResponse response = api.editTextReplaceRegex(request);
 
         // TODO: test validations
@@ -218,12 +231,13 @@ public class EditTextApiTest {
      *
      * Replaces all occurrences of the input string in the input content, and returns the result
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextReplaceSimpleTest() {
+    void editTextReplaceSimpleTest() {
         ReplaceStringSimpleRequest request = null;
+
         ReplaceStringSimpleResponse response = api.editTextReplaceSimple(request);
 
         // TODO: test validations
@@ -234,12 +248,13 @@ public class EditTextApiTest {
      *
      * Checks text encoding of file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextTextEncodingDetectTest() {
+    void editTextTextEncodingDetectTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         TextEncodingDetectResponse response = api.editTextTextEncodingDetect(inputFile);
 
         // TODO: test validations
@@ -250,12 +265,13 @@ public class EditTextApiTest {
      *
      * Trim leading and trailing whitespace from text, leaving behind a trimmed string.  Whitespace includes newlines, spaces and other whitespace characters.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editTextTrimWhitespaceTest() {
+    void editTextTrimWhitespaceTest() {
         RemoveWhitespaceFromTextRequest request = null;
+
         RemoveWhitespaceFromTextResponse response = api.editTextTrimWhitespace(request);
 
         // TODO: test validations

@@ -17,6 +17,8 @@ import com.cloudmersive.client.rt.model.AutodetectGetInfoResult;
 import com.cloudmersive.client.rt.model.AutodetectToJpgResult;
 import com.cloudmersive.client.rt.model.AutodetectToPngResult;
 import com.cloudmersive.client.rt.model.AutodetectToThumbnailsResult;
+import com.cloudmersive.client.rt.model.ConvertDocumentBatchJobCreateResult;
+import com.cloudmersive.client.rt.model.ConvertDocumentJobStatusResult;
 import com.cloudmersive.client.rt.model.CsvCollection;
 import com.cloudmersive.client.rt.model.DocxToJpgResult;
 import com.cloudmersive.client.rt.model.DocxToPngResult;
@@ -37,15 +39,19 @@ import com.cloudmersive.client.rt.model.OdsToPngResult;
 import com.cloudmersive.client.rt.model.OdtToJpgResult;
 import com.cloudmersive.client.rt.model.OdtToPngResult;
 import com.cloudmersive.client.rt.model.PdfToJpgResult;
+import com.cloudmersive.client.rt.model.PdfToPngDirectResult;
 import com.cloudmersive.client.rt.model.PdfToPngResult;
 import com.cloudmersive.client.rt.model.PptxToPngResult;
 import com.cloudmersive.client.rt.model.RtfToJpgResult;
 import com.cloudmersive.client.rt.model.RtfToPngResult;
 import com.cloudmersive.client.rt.model.TextConversionResult;
 import com.cloudmersive.client.rt.model.XlsxToPngResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -54,8 +60,8 @@ import java.util.Map;
 /**
  * API tests for ConvertDocumentApi
  */
-@Ignore
-public class ConvertDocumentApiTest {
+@Disabled
+class ConvertDocumentApiTest {
 
     private final ConvertDocumentApi api = new ConvertDocumentApi();
 
@@ -65,12 +71,13 @@ public class ConvertDocumentApiTest {
      *
      * Auto-detects a document&#39;s type information; does not require file extension.  Analyzes file contents to confirm file type.  Even if no file extension is present, the auto-detect system will reliably analyze the contents of the file and identify its file type.  Supports over 100 image file formats, Office document file formats, PDF, and more.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectGetInfoTest() {
+    void convertDocumentAutodetectGetInfoTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         AutodetectGetInfoResult response = api.convertDocumentAutodetectGetInfo(inputFile);
 
         // TODO: test validations
@@ -81,13 +88,14 @@ public class ConvertDocumentApiTest {
      *
      * Automatically detect file type and convert it to an array of JPG/JPEG Images.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectToJpgTest() {
+    void convertDocumentAutodetectToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         AutodetectToJpgResult response = api.convertDocumentAutodetectToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -96,15 +104,33 @@ public class ConvertDocumentApiTest {
     /**
      * Convert Document to PDF
      *
-     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files.
+     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectToPdfTest() {
+    void convertDocumentAutodetectToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentAutodetectToPdf(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Convert Document to PDF as Batch Job
+     *
+     * Automatically detect file type and convert it to PDF.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, text files, and even multi-page TIFF files.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void convertDocumentAutodetectToPdfBatchJobTest() {
+        org.springframework.core.io.Resource inputFile = null;
+
+        ConvertDocumentBatchJobCreateResult response = api.convertDocumentAutodetectToPdfBatchJob(inputFile);
 
         // TODO: test validations
     }
@@ -114,12 +140,13 @@ public class ConvertDocumentApiTest {
      *
      * Automatically detect file type and convert it to an array of PNG images.  Supports all of the major Office document file formats, over 100 image formats, and even multi-page TIFF files.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectToPngArrayTest() {
+    void convertDocumentAutodetectToPngArrayTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         AutodetectToPngResult response = api.convertDocumentAutodetectToPngArray(inputFile);
 
         // TODO: test validations
@@ -130,15 +157,16 @@ public class ConvertDocumentApiTest {
      *
      * Automatically detect file type and convert it to a PNG thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats. Maximum thumbnail size is 2048x2048.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectToThumbnailTest() {
+    void convertDocumentAutodetectToThumbnailTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         String extension = null;
+
         byte[] response = api.convertDocumentAutodetectToThumbnail(inputFile, maxWidth, maxHeight, extension);
 
         // TODO: test validations
@@ -149,16 +177,17 @@ public class ConvertDocumentApiTest {
      *
      * Automatically detect file type and convert it to an array of PNG thumbnails, returned as an object. May specify the number of pages for multiple thumbnails; default is one thumbnail. Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT), over 100 image formats, HTML files, and even multi-page TIFF files. Returns a generic PNG thumbnail for unsupported formats. Maximum thumbnail size is 2048x2048.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectToThumbnailsAdvancedTest() {
+    void convertDocumentAutodetectToThumbnailsAdvancedTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer pages = null;
         Integer maxWidth = null;
         Integer maxHeight = null;
         String extension = null;
+
         AutodetectToThumbnailsResult response = api.convertDocumentAutodetectToThumbnailsAdvanced(inputFile, pages, maxWidth, maxHeight, extension);
 
         // TODO: test validations
@@ -169,13 +198,14 @@ public class ConvertDocumentApiTest {
      *
      * Automatically detect file type and convert it to Text.  Supports all of the major Office document file formats including Word (DOCX, DOC), Excel (XLSX, XLS), PowerPoint (PPTX, PPT) and PDF files.  For spreadsheets, all worksheets will be included.  If you wish to exclude certain pages, worksheets, slides, etc. use the Split document API first, or the delete pages/slides/worksheet APIs first to adjust the document to the target state prior to converting to text.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentAutodetectToTxtTest() {
+    void convertDocumentAutodetectToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
         String textFormattingMode = null;
+
         TextConversionResult response = api.convertDocumentAutodetectToTxt(inputFile, textFormattingMode);
 
         // TODO: test validations
@@ -186,11 +216,11 @@ public class ConvertDocumentApiTest {
      *
      * Convert multiple Comma-Separated Values (CSV) files into a single Excel XLSX Spreadsheet, with one worksheet corresponding to each CSV file.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentCsvMultiToXlsxTest() {
+    void convertDocumentCsvMultiToXlsxTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         String worksheetNames = null;
@@ -202,6 +232,7 @@ public class ConvertDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.convertDocumentCsvMultiToXlsx(inputFile1, inputFile2, worksheetNames, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
 
         // TODO: test validations
@@ -212,12 +243,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Comma-Separated Values (CSV) file to HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentCsvToHtmlTest() {
+    void convertDocumentCsvToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentCsvToHtml(inputFile);
 
         // TODO: test validations
@@ -228,12 +260,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Comma-Separated Values (CSV) file to PDF document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentCsvToPdfTest() {
+    void convertDocumentCsvToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentCsvToPdf(inputFile);
 
         // TODO: test validations
@@ -244,12 +277,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert CSV file to Office Excel XLSX Workbooks file format.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentCsvToXlsxTest() {
+    void convertDocumentCsvToXlsxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentCsvToXlsx(inputFile);
 
         // TODO: test validations
@@ -260,12 +294,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert/upgrade Office Word (97-2003 Format) Documents (doc) to the modern DOCX format
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocToDocxTest() {
+    void convertDocumentDocToDocxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentDocToDocx(inputFile);
 
         // TODO: test validations
@@ -276,12 +311,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Word (97-2003 Format) Documents (doc) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocToPdfTest() {
+    void convertDocumentDocToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentDocToPdf(inputFile);
 
         // TODO: test validations
@@ -292,12 +328,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Word DOC (97-03) Document (doc) to text
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocToTxtTest() {
+    void convertDocumentDocToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         TextConversionResult response = api.convertDocumentDocToTxt(inputFile);
 
         // TODO: test validations
@@ -308,12 +345,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert/downgrade modern Office Word DOCX Documents (DOCX) to the legacy Word DOC (97-2003 Format) format
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToDocTest() {
+    void convertDocumentDocxToDocTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentDocxToDoc(inputFile);
 
         // TODO: test validations
@@ -324,12 +362,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Word Document (DOCX) to HTML Document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToHtmlTest() {
+    void convertDocumentDocxToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentDocxToHtml(inputFile);
 
         // TODO: test validations
@@ -340,13 +379,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Office Word Document (DOCX) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToJpgTest() {
+    void convertDocumentDocxToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         DocxToJpgResult response = api.convertDocumentDocxToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -357,12 +397,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Word Documents (docx) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToPdfTest() {
+    void convertDocumentDocxToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentDocxToPdf(inputFile);
 
         // TODO: test validations
@@ -373,12 +414,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Office Word Document (DOCX) file to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToPngTest() {
+    void convertDocumentDocxToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocxToPngResult response = api.convertDocumentDocxToPng(inputFile);
 
         // TODO: test validations
@@ -389,12 +431,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert an Office Word Document (DOCX) to Rich Text Format Document (RTF)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToRtfTest() {
+    void convertDocumentDocxToRtfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentDocxToRtf(inputFile);
 
         // TODO: test validations
@@ -405,13 +448,14 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Word Documents (docx) to text
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentDocxToTxtTest() {
+    void convertDocumentDocxToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
         String textFormattingMode = null;
+
         TextConversionResult response = api.convertDocumentDocxToTxt(inputFile, textFormattingMode);
 
         // TODO: test validations
@@ -422,14 +466,15 @@ public class ConvertDocumentApiTest {
      *
      * Convert Outlook Email EML file to HTML string and attachments. Supports images if they are base 64 inline.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentEmlToHtmlTest() {
+    void convertDocumentEmlToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean bodyOnly = null;
         Boolean includeAttachments = null;
+
         EmlToHtmlResult response = api.convertDocumentEmlToHtml(inputFile, bodyOnly, includeAttachments);
 
         // TODO: test validations
@@ -440,13 +485,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Outlook Email File (EML) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentEmlToJpgTest() {
+    void convertDocumentEmlToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         EmlToJpgResult response = api.convertDocumentEmlToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -457,13 +503,14 @@ public class ConvertDocumentApiTest {
      *
      * Convert Outlook Email EML file to PDF document. Supports images if they are base 64 inline.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentEmlToPdfTest() {
+    void convertDocumentEmlToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean bodyOnly = null;
+
         byte[] response = api.convertDocumentEmlToPdf(inputFile, bodyOnly);
 
         // TODO: test validations
@@ -474,13 +521,31 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Outlook Email File (EML) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentEmlToPngTest() {
+    void convertDocumentEmlToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         EmlToPngResult response = api.convertDocumentEmlToPng(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the status and result of a Convert Document Batch Job
+     *
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void convertDocumentGetAsyncJobStatusTest() {
+        String asyncJobID = null;
+
+        ConvertDocumentJobStatusResult response = api.convertDocumentGetAsyncJobStatus(asyncJobID);
 
         // TODO: test validations
     }
@@ -490,13 +555,14 @@ public class ConvertDocumentApiTest {
      *
      * Returns a PNG icon for the given file format extension as a file for download. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentGetFileTypeIconTest() {
+    void convertDocumentGetFileTypeIconTest() {
         String fileExtension = null;
         Integer iconSize = null;
+
         byte[] response = api.convertDocumentGetFileTypeIcon(fileExtension, iconSize);
 
         // TODO: test validations
@@ -507,13 +573,14 @@ public class ConvertDocumentApiTest {
      *
      * Returns a PNG icon for the given file format extension directly as a byte array. User may specify the icon size. Supports over 100 file formats, with a generic icon for unsupported formats.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentGetFileTypeIconAdvancedTest() {
+    void convertDocumentGetFileTypeIconAdvancedTest() {
         String fileExtension = null;
         Integer iconSize = null;
+
         GetFileTypeIconResult response = api.convertDocumentGetFileTypeIconAdvanced(fileExtension, iconSize);
 
         // TODO: test validations
@@ -524,14 +591,15 @@ public class ConvertDocumentApiTest {
      *
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to PDF.  To use external files such as images, use an absolute URL to the file.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentHtmlToPdfTest() {
+    void convertDocumentHtmlToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean includeBackgroundGraphics = null;
         Integer scaleFactor = null;
+
         byte[] response = api.convertDocumentHtmlToPdf(inputFile, includeBackgroundGraphics, scaleFactor);
 
         // TODO: test validations
@@ -542,12 +610,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert standard HTML, with full support for CSS, JavaScript, Images, and other complex behavior to an array of PNG images, one for each page.  To use external files in your HTML such as images, use an absolute URL to the file.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentHtmlToPngTest() {
+    void convertDocumentHtmlToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         PdfToPngResult response = api.convertDocumentHtmlToPng(inputFile);
 
         // TODO: test validations
@@ -558,12 +627,13 @@ public class ConvertDocumentApiTest {
      *
      * HTML document to text
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentHtmlToTxtTest() {
+    void convertDocumentHtmlToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         TextConversionResult response = api.convertDocumentHtmlToTxt(inputFile);
 
         // TODO: test validations
@@ -574,13 +644,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts a Mac Keynote Presentation (KEY) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentKeynoteToJpgTest() {
+    void convertDocumentKeynoteToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         KeynoteToJpgResult response = api.convertDocumentKeynoteToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -591,12 +662,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Mac Keynote Presentation (KEY) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentKeynoteToPdfTest() {
+    void convertDocumentKeynoteToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentKeynoteToPdf(inputFile);
 
         // TODO: test validations
@@ -607,12 +679,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts a Mac Keynote Presentation (KEY) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentKeynoteToPngTest() {
+    void convertDocumentKeynoteToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         KeynoteToPngResult response = api.convertDocumentKeynoteToPng(inputFile);
 
         // TODO: test validations
@@ -623,12 +696,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Mac Keynote Presentation (KEY) to PowerPoint Presentation (PPTX)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentKeynoteToPptxTest() {
+    void convertDocumentKeynoteToPptxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentKeynoteToPptx(inputFile);
 
         // TODO: test validations
@@ -639,14 +713,15 @@ public class ConvertDocumentApiTest {
      *
      * Convert Outlook Email MSG file to HTML string and attachments. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentMsgToHtmlTest() {
+    void convertDocumentMsgToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean bodyOnly = null;
         Boolean includeAttachments = null;
+
         MsgToHtmlResult response = api.convertDocumentMsgToHtml(inputFile, bodyOnly, includeAttachments);
 
         // TODO: test validations
@@ -657,13 +732,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Outlook Message File (MSG) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentMsgToJpgTest() {
+    void convertDocumentMsgToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         MsgToJpgResult response = api.convertDocumentMsgToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -674,13 +750,14 @@ public class ConvertDocumentApiTest {
      *
      * Convert Outlook Email MSG file to PDF document. Supports images if they are base 64 inline. Supports most, but not all, RTF bodied MSG files.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentMsgToPdfTest() {
+    void convertDocumentMsgToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean bodyOnly = null;
+
         byte[] response = api.convertDocumentMsgToPdf(inputFile, bodyOnly);
 
         // TODO: test validations
@@ -691,12 +768,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Outlook Email Message File (MSG) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentMsgToPngTest() {
+    void convertDocumentMsgToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         MsgToPngResult response = api.convertDocumentMsgToPng(inputFile);
 
         // TODO: test validations
@@ -707,13 +785,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Open Document Presentation (ODP) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdpToJpgTest() {
+    void convertDocumentOdpToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         OdpToJpgResult response = api.convertDocumentOdpToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -724,12 +803,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Open Document Presentation (ODP) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdpToPdfTest() {
+    void convertDocumentOdpToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentOdpToPdf(inputFile);
 
         // TODO: test validations
@@ -740,12 +820,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Office Open Document Presentation (ODP) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdpToPngTest() {
+    void convertDocumentOdpToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         OdpToPngResult response = api.convertDocumentOdpToPng(inputFile);
 
         // TODO: test validations
@@ -756,12 +837,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Open Document Presentation (ODP) to PowerPoint Presentation (PPTX)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdpToPptxTest() {
+    void convertDocumentOdpToPptxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentOdpToPptx(inputFile);
 
         // TODO: test validations
@@ -772,13 +854,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Open Document Spreadsheet (ODS) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdsToJpgTest() {
+    void convertDocumentOdsToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         OdsToJpgResult response = api.convertDocumentOdsToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -789,12 +872,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Open Document Spreadsheet (ODS) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdsToPdfTest() {
+    void convertDocumentOdsToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentOdsToPdf(inputFile);
 
         // TODO: test validations
@@ -805,12 +889,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Office Open Document Spreadsheet (ODS) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdsToPngTest() {
+    void convertDocumentOdsToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         OdsToPngResult response = api.convertDocumentOdsToPng(inputFile);
 
         // TODO: test validations
@@ -821,12 +906,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Open Document Spreadsheet (ODS) to Excel Spreadsheet (XLSX)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdsToXlsxTest() {
+    void convertDocumentOdsToXlsxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentOdsToXlsx(inputFile);
 
         // TODO: test validations
@@ -837,12 +923,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Open Document Text File (ODT) to Word DOCX Document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdtToDocxTest() {
+    void convertDocumentOdtToDocxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentOdtToDocx(inputFile);
 
         // TODO: test validations
@@ -853,13 +940,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Open Document Text File (ODT) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdtToJpgTest() {
+    void convertDocumentOdtToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         OdtToJpgResult response = api.convertDocumentOdtToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -870,12 +958,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Open Document Text File (ODT) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdtToPdfTest() {
+    void convertDocumentOdtToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentOdtToPdf(inputFile);
 
         // TODO: test validations
@@ -886,12 +975,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Office Open Document Text File (ODT) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentOdtToPngTest() {
+    void convertDocumentOdtToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         OdtToPngResult response = api.convertDocumentOdtToPng(inputFile);
 
         // TODO: test validations
@@ -902,12 +992,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert standard PDF to Office Word Documents (docx).    Converts a PDF at high fidelity into Word format, where it can be easily edited and processed.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToDocxTest() {
+    void convertDocumentPdfToDocxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPdfToDocx(inputFile);
 
         // TODO: test validations
@@ -918,12 +1009,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert standard PDF to Office Word Documents (docx), but first rasterize the PDF.    Converts a PDF at high fidelity into Word format.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToDocxRasterizeTest() {
+    void convertDocumentPdfToDocxRasterizeTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPdfToDocxRasterize(inputFile);
 
         // TODO: test validations
@@ -934,13 +1026,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts a PDF Document to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToJpgTest() {
+    void convertDocumentPdfToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         PdfToJpgResult response = api.convertDocumentPdfToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -949,15 +1042,35 @@ public class ConvertDocumentApiTest {
     /**
      * Convert PDF to PNG Image Array
      *
-     * Convert PDF document to PNG array, one image per page.
+     * Convert PDF document to PNG array, one image per page.  Returns PNG images as temporary expiring URLs.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToPngArrayTest() {
+    void convertDocumentPdfToPngArrayTest() {
         org.springframework.core.io.Resource inputFile = null;
-        PdfToPngResult response = api.convertDocumentPdfToPngArray(inputFile);
+        Integer dpi = null;
+
+        PdfToPngResult response = api.convertDocumentPdfToPngArray(inputFile, dpi);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Convert PDF to PNG Image Array (Direct)
+     *
+     * Convert PDF document to PNG array, one image per page.  Returns PNG images directly in the response objects.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void convertDocumentPdfToPngArrayDirectTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        Integer dpi = null;
+
+        PdfToPngDirectResult response = api.convertDocumentPdfToPngArrayDirect(inputFile, dpi);
 
         // TODO: test validations
     }
@@ -967,12 +1080,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert PDF document to a single tall PNG image, by stacking/concatenating the images vertically into a single \&quot;tall\&quot; image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToPngSingleTest() {
+    void convertDocumentPdfToPngSingleTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPdfToPngSingle(inputFile);
 
         // TODO: test validations
@@ -983,13 +1097,33 @@ public class ConvertDocumentApiTest {
      *
      * Convert standard PDF to Office PowerPoint Presentation (pptx).  Converts a PDF file at high fidelity into PowerPoint format, where it can be easily edited and processed.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToPptxTest() {
+    void convertDocumentPdfToPptxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPdfToPptx(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Convert PDF to TIFF image
+     *
+     * Converts a PDF Document to a TIFF image.  If the PDF contains multiple pages, these pages will be represented as separate pages within the output TIFF image.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void convertDocumentPdfToTiffTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        Integer dpi = null;
+        Boolean lzwCompression = null;
+
+        byte[] response = api.convertDocumentPdfToTiff(inputFile, dpi, lzwCompression);
 
         // TODO: test validations
     }
@@ -999,13 +1133,14 @@ public class ConvertDocumentApiTest {
      *
      * PDF document to text
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPdfToTxtTest() {
+    void convertDocumentPdfToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
         String textFormattingMode = null;
+
         TextConversionResult response = api.convertDocumentPdfToTxt(inputFile, textFormattingMode);
 
         // TODO: test validations
@@ -1016,11 +1151,11 @@ public class ConvertDocumentApiTest {
      *
      * Convert an array of PNG images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPngArrayToPdfTest() {
+    void convertDocumentPngArrayToPdfTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
         org.springframework.core.io.Resource inputFile3 = null;
@@ -1031,7 +1166,24 @@ public class ConvertDocumentApiTest {
         org.springframework.core.io.Resource inputFile8 = null;
         org.springframework.core.io.Resource inputFile9 = null;
         org.springframework.core.io.Resource inputFile10 = null;
+
         byte[] response = api.convertDocumentPngArrayToPdf(inputFile1, inputFile2, inputFile3, inputFile4, inputFile5, inputFile6, inputFile7, inputFile8, inputFile9, inputFile10);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Convert PNG Array to PDF and remove transparency
+     *
+     * Convert an array of PNG images, remove transparency in source images, one image per page, into a newly-created PDF.  Supports images of different sizes as input.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void convertDocumentPngArrayToPdfFlattenTransparencyTest() {
+
+        Object response = api.convertDocumentPngArrayToPdfFlattenTransparency();
 
         // TODO: test validations
     }
@@ -1041,12 +1193,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office PowerPoint (97-2003) Documents (ppt) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPptToPdfTest() {
+    void convertDocumentPptToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPptToPdf(inputFile);
 
         // TODO: test validations
@@ -1057,12 +1210,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert/upgrade Office PowerPoint (97-2003) Documents (ppt) to modern PPTX
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPptToPptxTest() {
+    void convertDocumentPptToPptxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPptToPptx(inputFile);
 
         // TODO: test validations
@@ -1073,12 +1227,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office PowerPoint Documents (pptx) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPptxToPdfTest() {
+    void convertDocumentPptxToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentPptxToPdf(inputFile);
 
         // TODO: test validations
@@ -1089,12 +1244,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts a PowerPoint Presentation (PPTX) file to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPptxToPngTest() {
+    void convertDocumentPptxToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         PptxToPngResult response = api.convertDocumentPptxToPng(inputFile);
 
         // TODO: test validations
@@ -1105,12 +1261,14 @@ public class ConvertDocumentApiTest {
      *
      * Convert/downgrade modern Office PowerPoint PPTX Presentation to the legacy PowerPoint PPT (97-2003 Format) format
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPptxToPptTest() {
-        Object response = api.convertDocumentPptxToPpt();
+    void convertDocumentPptxToPptTest() {
+        org.springframework.core.io.Resource inputFile = null;
+
+        byte[] response = api.convertDocumentPptxToPpt(inputFile);
 
         // TODO: test validations
     }
@@ -1120,12 +1278,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office PowerPoint Documents (pptx) to standard Text
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentPptxToTxtTest() {
+    void convertDocumentPptxToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         TextConversionResult response = api.convertDocumentPptxToTxt(inputFile);
 
         // TODO: test validations
@@ -1136,12 +1295,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Rich Text Format Document (RTF) to Word DOCX Document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentRtfToDocxTest() {
+    void convertDocumentRtfToDocxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentRtfToDocx(inputFile);
 
         // TODO: test validations
@@ -1152,12 +1312,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Rich Text Format Document (RTF) to HTML Document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentRtfToHtmlTest() {
+    void convertDocumentRtfToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentRtfToHtml(inputFile);
 
         // TODO: test validations
@@ -1168,13 +1329,14 @@ public class ConvertDocumentApiTest {
      *
      * Converts a Rich Text Format Document (RTF) to an array of JPG/JPEG images, one for each page. Customize image quality using quality header.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentRtfToJpgTest() {
+    void convertDocumentRtfToJpgTest() {
         org.springframework.core.io.Resource inputFile = null;
         Integer quality = null;
+
         RtfToJpgResult response = api.convertDocumentRtfToJpg(inputFile, quality);
 
         // TODO: test validations
@@ -1185,12 +1347,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Rich Text Format Document (RTF) to standard PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentRtfToPdfTest() {
+    void convertDocumentRtfToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentRtfToPdf(inputFile);
 
         // TODO: test validations
@@ -1201,13 +1364,32 @@ public class ConvertDocumentApiTest {
      *
      * Converts a Rich Text Format Document (RTF) to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentRtfToPngTest() {
+    void convertDocumentRtfToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         RtfToPngResult response = api.convertDocumentRtfToPng(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Convert TXT text file to PDF Document
+     *
+     * Convert simple text files to PDF.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void convertDocumentTxtToPdfTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        Integer scaleFactor = null;
+
+        byte[] response = api.convertDocumentTxtToPdf(inputFile, scaleFactor);
 
         // TODO: test validations
     }
@@ -1217,12 +1399,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert/upgrade Office Excel (97-2003) Workbooks (xls) to standard CSV format.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsToCsvTest() {
+    void convertDocumentXlsToCsvTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentXlsToCsv(inputFile);
 
         // TODO: test validations
@@ -1233,12 +1416,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Excel (97-2003) Workbooks (xls) to standard PDF.  Converts all worksheets in the workbook to PDF.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsToPdfTest() {
+    void convertDocumentXlsToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentXlsToPdf(inputFile);
 
         // TODO: test validations
@@ -1249,12 +1433,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert/upgrade Office Excel (97-2003) Workbooks (xls) to modern XLSX format.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsToXlsxTest() {
+    void convertDocumentXlsToXlsxTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentXlsToXlsx(inputFile);
 
         // TODO: test validations
@@ -1265,13 +1450,14 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format.  Supports both XLSX and XLSB file Excel formats.  If the input file contains multiple worksheets, the first one is used.  If you wish to convert all of the worksheets (not just the first one), be sure to use the xlsx/to/csv/multi API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToCsvTest() {
+    void convertDocumentXlsxToCsvTest() {
         org.springframework.core.io.Resource inputFile = null;
         String outputEncoding = null;
+
         byte[] response = api.convertDocumentXlsxToCsv(inputFile, outputEncoding);
 
         // TODO: test validations
@@ -1282,13 +1468,14 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Excel Workbooks (XLSX) to standard Comma-Separated Values (CSV) format, with support for multiple worksheets.  Supports both XLSX and XLSB file Excel formats.  Returns multiple CSV files, one for each worksheet (tab) in the spreadsheet.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToCsvMultiTest() {
+    void convertDocumentXlsxToCsvMultiTest() {
         org.springframework.core.io.Resource inputFile = null;
         String outputEncoding = null;
+
         CsvCollection response = api.convertDocumentXlsxToCsvMulti(inputFile, outputEncoding);
 
         // TODO: test validations
@@ -1299,12 +1486,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Excel Spreadsheet (XLSX) to HTML Document.  Converts all worksheets to HTML.  Supports both XLSX and XLSB Excel file formats.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToHtmlTest() {
+    void convertDocumentXlsxToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentXlsxToHtml(inputFile);
 
         // TODO: test validations
@@ -1315,12 +1503,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Excel Workbooks (XLSX) to standard PDF.  Converts all worksheets in the workbook to PDF.  Supports both XLSX and XLSB Excel file formats.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToPdfTest() {
+    void convertDocumentXlsxToPdfTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentXlsxToPdf(inputFile);
 
         // TODO: test validations
@@ -1331,12 +1520,13 @@ public class ConvertDocumentApiTest {
      *
      * Converts an Excel Spreadsheet (XLSX) file to an array of PNG images, one for each page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToPngTest() {
+    void convertDocumentXlsxToPngTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         XlsxToPngResult response = api.convertDocumentXlsxToPng(inputFile);
 
         // TODO: test validations
@@ -1347,12 +1537,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert Office Excel Workbooks (XLSX) to standard Text.  Converts all worksheets in the workbook to Text.  Supports both XLSX and XLSB file formats.  When a spreadsheet contains multiple worksheets, will export all of the text from all of the worksheets.  If you wish to export the text from only one worksheet, try using the Split XLSX API to split the spreadsheet into multiple worksheet files, and then run XLSX to Text on the individual worksheet file that you need to extract the text from.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToTxtTest() {
+    void convertDocumentXlsxToTxtTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         TextConversionResult response = api.convertDocumentXlsxToTxt(inputFile);
 
         // TODO: test validations
@@ -1363,12 +1554,13 @@ public class ConvertDocumentApiTest {
      *
      * Convert/downgrade modern Office Excel XLSX Spreadsheet to the legacy Excel XLS (97-2003 Format) format
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertDocumentXlsxToXlsTest() {
+    void convertDocumentXlsxToXlsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.convertDocumentXlsxToXls(inputFile);
 
         // TODO: test validations

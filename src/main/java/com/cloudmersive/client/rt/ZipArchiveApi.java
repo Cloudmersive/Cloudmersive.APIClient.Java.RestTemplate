@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import com.cloudmersive.client.rt.model.CreateZipArchiveRequest;
 import java.io.File;
@@ -28,26 +29,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.ZipArchiveApi")
-public class ZipArchiveApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ZipArchiveApi extends BaseApi {
 
     public ZipArchiveApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public ZipArchiveApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -89,54 +79,53 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> zipArchiveZipCreateWithHttpInfo(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2, org.springframework.core.io.Resource inputFile3, org.springframework.core.io.Resource inputFile4, org.springframework.core.io.Resource inputFile5, org.springframework.core.io.Resource inputFile6, org.springframework.core.io.Resource inputFile7, org.springframework.core.io.Resource inputFile8, org.springframework.core.io.Resource inputFile9, org.springframework.core.io.Resource inputFile10) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile1' is set
         if (inputFile1 == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile1' when calling zipArchiveZipCreate");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/create", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile1 != null)
-            formParams.add("inputFile1", inputFile1);
+            localVarFormParams.add("inputFile1", inputFile1);
         if (inputFile2 != null)
-            formParams.add("inputFile2", inputFile2);
+            localVarFormParams.add("inputFile2", inputFile2);
         if (inputFile3 != null)
-            formParams.add("inputFile3", inputFile3);
+            localVarFormParams.add("inputFile3", inputFile3);
         if (inputFile4 != null)
-            formParams.add("inputFile4", inputFile4);
+            localVarFormParams.add("inputFile4", inputFile4);
         if (inputFile5 != null)
-            formParams.add("inputFile5", inputFile5);
+            localVarFormParams.add("inputFile5", inputFile5);
         if (inputFile6 != null)
-            formParams.add("inputFile6", inputFile6);
+            localVarFormParams.add("inputFile6", inputFile6);
         if (inputFile7 != null)
-            formParams.add("inputFile7", inputFile7);
+            localVarFormParams.add("inputFile7", inputFile7);
         if (inputFile8 != null)
-            formParams.add("inputFile8", inputFile8);
+            localVarFormParams.add("inputFile8", inputFile8);
         if (inputFile9 != null)
-            formParams.add("inputFile9", inputFile9);
+            localVarFormParams.add("inputFile9", inputFile9);
         if (inputFile10 != null)
-            formParams.add("inputFile10", inputFile10);
+            localVarFormParams.add("inputFile10", inputFile10);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/create", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Compress files and folders to create a new zip archive with advanced options
@@ -159,33 +148,32 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<Object> zipArchiveZipCreateAdvancedWithHttpInfo(CreateZipArchiveRequest request) throws RestClientException {
-        Object postBody = request;
+        Object localVarPostBody = request;
         
         // verify the required parameter 'request' is set
         if (request == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling zipArchiveZipCreateAdvanced");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/create/advanced", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/create/advanced", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Compress files to create a new, encrypted and password-protected zip archive
@@ -230,7 +218,7 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<byte[]> zipArchiveZipCreateEncryptedWithHttpInfo(String password, org.springframework.core.io.Resource inputFile1, String encryptionAlgorithm, org.springframework.core.io.Resource inputFile2, org.springframework.core.io.Resource inputFile3, org.springframework.core.io.Resource inputFile4, org.springframework.core.io.Resource inputFile5, org.springframework.core.io.Resource inputFile6, org.springframework.core.io.Resource inputFile7, org.springframework.core.io.Resource inputFile8, org.springframework.core.io.Resource inputFile9, org.springframework.core.io.Resource inputFile10) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'password' is set
         if (password == null) {
@@ -242,52 +230,51 @@ public class ZipArchiveApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile1' when calling zipArchiveZipCreateEncrypted");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/create/encrypted", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (password != null)
-        headerParams.add("password", apiClient.parameterToString(password));
+        localVarHeaderParams.add("password", apiClient.parameterToString(password));
         if (encryptionAlgorithm != null)
-        headerParams.add("encryptionAlgorithm", apiClient.parameterToString(encryptionAlgorithm));
+        localVarHeaderParams.add("encryptionAlgorithm", apiClient.parameterToString(encryptionAlgorithm));
 
         if (inputFile1 != null)
-            formParams.add("inputFile1", inputFile1);
+            localVarFormParams.add("inputFile1", inputFile1);
         if (inputFile2 != null)
-            formParams.add("inputFile2", inputFile2);
+            localVarFormParams.add("inputFile2", inputFile2);
         if (inputFile3 != null)
-            formParams.add("inputFile3", inputFile3);
+            localVarFormParams.add("inputFile3", inputFile3);
         if (inputFile4 != null)
-            formParams.add("inputFile4", inputFile4);
+            localVarFormParams.add("inputFile4", inputFile4);
         if (inputFile5 != null)
-            formParams.add("inputFile5", inputFile5);
+            localVarFormParams.add("inputFile5", inputFile5);
         if (inputFile6 != null)
-            formParams.add("inputFile6", inputFile6);
+            localVarFormParams.add("inputFile6", inputFile6);
         if (inputFile7 != null)
-            formParams.add("inputFile7", inputFile7);
+            localVarFormParams.add("inputFile7", inputFile7);
         if (inputFile8 != null)
-            formParams.add("inputFile8", inputFile8);
+            localVarFormParams.add("inputFile8", inputFile8);
         if (inputFile9 != null)
-            formParams.add("inputFile9", inputFile9);
+            localVarFormParams.add("inputFile9", inputFile9);
         if (inputFile10 != null)
-            formParams.add("inputFile10", inputFile10);
+            localVarFormParams.add("inputFile10", inputFile10);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/create/encrypted", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Create an encrypted zip file to quarantine a dangerous file
@@ -314,7 +301,7 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<Object> zipArchiveZipCreateQuarantineWithHttpInfo(String password, org.springframework.core.io.Resource inputFile1, String encryptionAlgorithm) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'password' is set
         if (password == null) {
@@ -326,34 +313,33 @@ public class ZipArchiveApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile1' when calling zipArchiveZipCreateQuarantine");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/create/quarantine", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (password != null)
-        headerParams.add("password", apiClient.parameterToString(password));
+        localVarHeaderParams.add("password", apiClient.parameterToString(password));
         if (encryptionAlgorithm != null)
-        headerParams.add("encryptionAlgorithm", apiClient.parameterToString(encryptionAlgorithm));
+        localVarHeaderParams.add("encryptionAlgorithm", apiClient.parameterToString(encryptionAlgorithm));
 
         if (inputFile1 != null)
-            formParams.add("inputFile1", inputFile1);
+            localVarFormParams.add("inputFile1", inputFile1);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/create/quarantine", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Decrypt and remove password protection on a zip file
@@ -378,7 +364,7 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<Object> zipArchiveZipDecryptWithHttpInfo(String zipPassword, org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'zipPassword' is set
         if (zipPassword == null) {
@@ -390,32 +376,31 @@ public class ZipArchiveApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling zipArchiveZipDecrypt");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/decrypt", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (zipPassword != null)
-        headerParams.add("zipPassword", apiClient.parameterToString(zipPassword));
+        localVarHeaderParams.add("zipPassword", apiClient.parameterToString(zipPassword));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/decrypt", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Encrypt and password protect a zip file
@@ -438,33 +423,32 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<Object> zipArchiveZipEncryptAdvancedWithHttpInfo(ZipEncryptionAdvancedRequest encryptionRequest) throws RestClientException {
-        Object postBody = encryptionRequest;
+        Object localVarPostBody = encryptionRequest;
         
         // verify the required parameter 'encryptionRequest' is set
         if (encryptionRequest == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'encryptionRequest' when calling zipArchiveZipEncryptAdvanced");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/encrypt/advanced", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<Object> localReturnType = new ParameterizedTypeReference<Object>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/encrypt/advanced", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Extract, decompress files and folders from a zip archive
@@ -487,35 +471,59 @@ public class ZipArchiveApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ZipExtractResponse> zipArchiveZipExtractWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling zipArchiveZipExtract");
         }
         
-        String path = apiClient.expandPath("/convert/archive/zip/extract", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ZipExtractResponse> returnType = new ParameterizedTypeReference<ZipExtractResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ZipExtractResponse> localReturnType = new ParameterizedTypeReference<ZipExtractResponse>() {};
+        return apiClient.invokeAPI("/convert/archive/zip/extract", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

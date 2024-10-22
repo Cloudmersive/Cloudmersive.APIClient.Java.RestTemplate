@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.LanguageDetectionRequest;
 import com.cloudmersive.client.rt.model.LanguageDetectionResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for LanguageDetectionApi
  */
-@Ignore
-public class LanguageDetectionApiTest {
+@Disabled
+class LanguageDetectionApiTest {
 
     private final LanguageDetectionApi api = new LanguageDetectionApi();
 
@@ -37,12 +40,13 @@ public class LanguageDetectionApiTest {
      *
      * Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageDetectionGetLanguageTest() {
+    void languageDetectionGetLanguageTest() {
         LanguageDetectionRequest input = null;
+
         LanguageDetectionResponse response = api.languageDetectionGetLanguage(input);
 
         // TODO: test validations

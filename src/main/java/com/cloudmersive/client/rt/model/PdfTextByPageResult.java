@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Text of the PDF, broken down by page
  */
-@ApiModel(description = "Text of the PDF, broken down by page")
 @JsonPropertyOrder({
   PdfTextByPageResult.JSON_PROPERTY_SUCCESSFUL,
   PdfTextByPageResult.JSON_PROPERTY_PAGES
 })
-@JsonTypeName("PdfTextByPageResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfTextByPageResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_PAGES = "Pages";
-  private List<PdfPageText> pages = null;
+  private List<PdfPageText> pages = new ArrayList<>();
 
+  public PdfTextByPageResult() {
+  }
 
   public PdfTextByPageResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class PdfTextByPageResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class PdfTextByPageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PdfTextByPageResult pages(List<PdfPageText> pages) {
     
@@ -78,18 +78,17 @@ public class PdfTextByPageResult {
 
   public PdfTextByPageResult addPagesItem(PdfPageText pagesItem) {
     if (this.pages == null) {
-      this.pages = new ArrayList<PdfPageText>();
+      this.pages = new ArrayList<>();
     }
     this.pages.add(pagesItem);
     return this;
   }
 
-   /**
+  /**
    * Pages in the PDF
    * @return pages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pages in the PDF")
   @JsonProperty(JSON_PROPERTY_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class PdfTextByPageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPages(List<PdfPageText> pages) {
     this.pages = pages;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class PdfTextByPageResult {
   public int hashCode() {
     return Objects.hash(successful, pages);
   }
-
 
   @Override
   public String toString() {

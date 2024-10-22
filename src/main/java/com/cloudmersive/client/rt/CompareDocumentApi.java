@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import java.io.File;
 
@@ -25,26 +26,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.CompareDocumentApi")
-public class CompareDocumentApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class CompareDocumentApi extends BaseApi {
 
     public CompareDocumentApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public CompareDocumentApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -53,11 +43,12 @@ public class CompareDocumentApi {
      * <p><b>200</b> - OK
      * @param inputFile1 First input file to perform the operation on. (required)
      * @param inputFile2 Second input file to perform the operation on (more than 2 can be supplied). (required)
+     * @param autorepair Optional; automatically repair input documents that have errors (default is true) (optional)
      * @return byte[]
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public byte[] compareDocumentDocx(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2) throws RestClientException {
-        return compareDocumentDocxWithHttpInfo(inputFile1, inputFile2).getBody();
+    public byte[] compareDocumentDocx(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2, Boolean autorepair) throws RestClientException {
+        return compareDocumentDocxWithHttpInfo(inputFile1, inputFile2, autorepair).getBody();
     }
 
     /**
@@ -66,11 +57,12 @@ public class CompareDocumentApi {
      * <p><b>200</b> - OK
      * @param inputFile1 First input file to perform the operation on. (required)
      * @param inputFile2 Second input file to perform the operation on (more than 2 can be supplied). (required)
+     * @param autorepair Optional; automatically repair input documents that have errors (default is true) (optional)
      * @return ResponseEntity&lt;byte[]&gt;
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public ResponseEntity<byte[]> compareDocumentDocxWithHttpInfo(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2) throws RestClientException {
-        Object postBody = null;
+    public ResponseEntity<byte[]> compareDocumentDocxWithHttpInfo(org.springframework.core.io.Resource inputFile1, org.springframework.core.io.Resource inputFile2, Boolean autorepair) throws RestClientException {
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile1' is set
         if (inputFile1 == null) {
@@ -82,30 +74,57 @@ public class CompareDocumentApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile2' when calling compareDocumentDocx");
         }
         
-        String path = apiClient.expandPath("/convert/compare/docx", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (autorepair != null)
+        localVarHeaderParams.add("autorepair", apiClient.parameterToString(autorepair));
 
         if (inputFile1 != null)
-            formParams.add("inputFile1", inputFile1);
+            localVarFormParams.add("inputFile1", inputFile1);
         if (inputFile2 != null)
-            formParams.add("inputFile2", inputFile2);
+            localVarFormParams.add("inputFile2", inputFile2);
 
         final String[] localVarAccepts = { 
             "application/octet-stream"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<byte[]> returnType = new ParameterizedTypeReference<byte[]>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<byte[]> localReturnType = new ParameterizedTypeReference<byte[]>() {};
+        return apiClient.invokeAPI("/convert/compare/docx", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/octet-stream"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

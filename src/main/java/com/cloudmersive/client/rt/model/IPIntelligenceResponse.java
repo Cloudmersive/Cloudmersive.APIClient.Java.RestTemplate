@@ -21,14 +21,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * IP address intelligence result
  */
-@ApiModel(description = "IP address intelligence result")
 @JsonPropertyOrder({
   IPIntelligenceResponse.JSON_PROPERTY_IS_BOT,
   IPIntelligenceResponse.JSON_PROPERTY_IS_TOR_NODE,
@@ -40,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   IPIntelligenceResponse.JSON_PROPERTY_REGION_AREA,
   IPIntelligenceResponse.JSON_PROPERTY_SUBREGION_AREA
 })
-@JsonTypeName("IPIntelligenceResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class IPIntelligenceResponse {
   public static final String JSON_PROPERTY_IS_BOT = "IsBot";
   private Boolean isBot;
@@ -70,6 +67,8 @@ public class IPIntelligenceResponse {
   public static final String JSON_PROPERTY_SUBREGION_AREA = "SubregionArea";
   private String subregionArea;
 
+  public IPIntelligenceResponse() {
+  }
 
   public IPIntelligenceResponse isBot(Boolean isBot) {
     
@@ -77,12 +76,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the IP address is a known bot, otherwise false
    * @return isBot
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the IP address is a known bot, otherwise false")
   @JsonProperty(JSON_PROPERTY_IS_BOT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BOT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsBot(Boolean isBot) {
     this.isBot = isBot;
   }
-
 
   public IPIntelligenceResponse isTorNode(Boolean isTorNode) {
     
@@ -102,12 +101,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the IP address is a known Tor exit node, otherwise false
    * @return isTorNode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the IP address is a known Tor exit node, otherwise false")
   @JsonProperty(JSON_PROPERTY_IS_TOR_NODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_TOR_NODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsTorNode(Boolean isTorNode) {
     this.isTorNode = isTorNode;
   }
-
 
   public IPIntelligenceResponse isThreat(Boolean isThreat) {
     
@@ -127,12 +126,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the IP address is a known threat IP, otherwise false
    * @return isThreat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the IP address is a known threat IP, otherwise false")
   @JsonProperty(JSON_PROPERTY_IS_THREAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,10 +139,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_THREAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsThreat(Boolean isThreat) {
     this.isThreat = isThreat;
   }
-
 
   public IPIntelligenceResponse isEU(Boolean isEU) {
     
@@ -152,12 +151,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the IP address is in the European Union, otherwise false
    * @return isEU
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the IP address is in the European Union, otherwise false")
   @JsonProperty(JSON_PROPERTY_IS_E_U)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,10 +164,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_E_U)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsEU(Boolean isEU) {
     this.isEU = isEU;
   }
-
 
   public IPIntelligenceResponse location(GeolocateResponse location) {
     
@@ -177,12 +176,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * Get location
    * @return location
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,10 +189,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LOCATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocation(GeolocateResponse location) {
     this.location = location;
   }
-
 
   public IPIntelligenceResponse currencyCode(String currencyCode) {
     
@@ -202,12 +201,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * ISO 4217 currency code for the IP address location
    * @return currencyCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ISO 4217 currency code for the IP address location")
   @JsonProperty(JSON_PROPERTY_CURRENCY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,10 +214,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencyCode(String currencyCode) {
     this.currencyCode = currencyCode;
   }
-
 
   public IPIntelligenceResponse currencyName(String currencyName) {
     
@@ -227,12 +226,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the currency in English
    * @return currencyName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the currency in English")
   @JsonProperty(JSON_PROPERTY_CURRENCY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,10 +239,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencyName(String currencyName) {
     this.currencyName = currencyName;
   }
-
 
   public IPIntelligenceResponse regionArea(String regionArea) {
     
@@ -252,12 +251,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania
    * @return regionArea
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Region (continent) in which the country is located; possible values are None, Europe, Americas, Asia, Africa, Oceania")
   @JsonProperty(JSON_PROPERTY_REGION_AREA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,10 +264,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REGION_AREA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRegionArea(String regionArea) {
     this.regionArea = regionArea;
   }
-
 
   public IPIntelligenceResponse subregionArea(String subregionArea) {
     
@@ -277,12 +276,11 @@ public class IPIntelligenceResponse {
     return this;
   }
 
-   /**
+  /**
    * Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,
    * @return subregionArea
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Subregion in which the country is located; possible values are None, NorthernEurope, WesternEurope, SouthernEurope, EasternEurope, CentralAmerica, NorthernAmerica, SouthAmerica, EasternAfrica, MiddleAfrica, NorthernAfrica , SouthernAfrica , WesternAfrica , CentralAsia , EasternAsia , SouthernAsia , SouthEasternAsia , WesternAsia , Southern , Middle , AustraliaandNewZealand , Melanesia , Polynesia , Micronesia , Caribbean,")
   @JsonProperty(JSON_PROPERTY_SUBREGION_AREA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,10 +289,11 @@ public class IPIntelligenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBREGION_AREA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSubregionArea(String subregionArea) {
     this.subregionArea = subregionArea;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -320,7 +319,6 @@ public class IPIntelligenceResponse {
   public int hashCode() {
     return Objects.hash(isBot, isTorNode, isThreat, isEU, location, currencyCode, currencyName, regionArea, subregionArea);
   }
-
 
   @Override
   public String toString() {

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CsvFileResult
  */
-public class CsvFileResultTest {
+class CsvFileResultTest {
     private final CsvFileResult model = new CsvFileResult();
 
     /**
      * Model tests for CsvFileResult
      */
     @Test
-    public void testCsvFileResult() {
+    void testCsvFileResult() {
         // TODO: test CsvFileResult
     }
 
@@ -43,7 +40,7 @@ public class CsvFileResultTest {
      * Test the property 'title'
      */
     @Test
-    public void titleTest() {
+    void titleTest() {
         // TODO: test title
     }
 
@@ -51,7 +48,7 @@ public class CsvFileResultTest {
      * Test the property 'fileContents'
      */
     @Test
-    public void fileContentsTest() {
+    void fileContentsTest() {
         // TODO: test fileContents
     }
 

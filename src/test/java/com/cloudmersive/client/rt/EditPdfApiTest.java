@@ -15,6 +15,8 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.AddPdfAnnotationRequest;
 import java.math.BigDecimal;
+import com.cloudmersive.client.rt.model.EditPdfBatchJobCreateResult;
+import com.cloudmersive.client.rt.model.EditPdfJobStatusResult;
 import java.io.File;
 import com.cloudmersive.client.rt.model.GetPdfAnnotationsResult;
 import com.cloudmersive.client.rt.model.PdfFormFields;
@@ -22,9 +24,12 @@ import com.cloudmersive.client.rt.model.PdfMetadata;
 import com.cloudmersive.client.rt.model.PdfTextByPageResult;
 import com.cloudmersive.client.rt.model.SetPdfFormFieldsRequest;
 import com.cloudmersive.client.rt.model.SetPdfMetadataRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -33,8 +38,8 @@ import java.util.Map;
 /**
  * API tests for EditPdfApi
  */
-@Ignore
-public class EditPdfApiTest {
+@Disabled
+class EditPdfApiTest {
 
     private final EditPdfApi api = new EditPdfApi();
 
@@ -44,12 +49,13 @@ public class EditPdfApiTest {
      *
      * Adds one or more annotations, comments to a PDF document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfAddAnnotationsTest() {
+    void editPdfAddAnnotationsTest() {
         AddPdfAnnotationRequest request = null;
+
         byte[] response = api.editPdfAddAnnotations(request);
 
         // TODO: test validations
@@ -60,13 +66,14 @@ public class EditPdfApiTest {
      *
      * Converts the input PDF file to a PDF/A-1b or PDF/A-2b standardized PDF.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfConvertToPdfATest() {
+    void editPdfConvertToPdfATest() {
         org.springframework.core.io.Resource inputFile = null;
         String conformanceLevel = null;
+
         byte[] response = api.editPdfConvertToPdfA(inputFile, conformanceLevel);
 
         // TODO: test validations
@@ -77,13 +84,14 @@ public class EditPdfApiTest {
      *
      * Decrypt a PDF document with a password.  Decrypted PDF will no longer require a password to open.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfDecryptTest() {
+    void editPdfDecryptTest() {
         String password = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfDecrypt(password, inputFile);
 
         // TODO: test validations
@@ -94,15 +102,35 @@ public class EditPdfApiTest {
      *
      * Remove one or more pages from a PDF document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfDeletePagesTest() {
+    void editPdfDeletePagesTest() {
         Integer pageStart = null;
         Integer pageEnd = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfDeletePages(pageStart, pageEnd, inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Remove, delete pages from a PDF document as Batch Job
+     *
+     * Remove one or more pages from a PDF document.  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void editPdfDeletePagesBatchJobTest() {
+        Integer pageStart = null;
+        Integer pageEnd = null;
+        org.springframework.core.io.Resource inputFile = null;
+
+        EditPdfBatchJobCreateResult response = api.editPdfDeletePagesBatchJob(pageStart, pageEnd, inputFile);
 
         // TODO: test validations
     }
@@ -112,15 +140,16 @@ public class EditPdfApiTest {
      *
      * Encrypt a PDF document with a password.  Set an owner password to control owner (editor/creator) permissions, and set a user (reader) password to control the viewer of the PDF.  Set the password fields null to omit the given password.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfEncryptTest() {
+    void editPdfEncryptTest() {
         org.springframework.core.io.Resource inputFile = null;
         String userPassword = null;
         String ownerPassword = null;
         String encryptionKeyLength = null;
+
         byte[] response = api.editPdfEncrypt(inputFile, userPassword, ownerPassword, encryptionKeyLength);
 
         // TODO: test validations
@@ -131,13 +160,31 @@ public class EditPdfApiTest {
      *
      * Enumerates the annotations, including comments and notes, in a PDF document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfGetAnnotationsTest() {
+    void editPdfGetAnnotationsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetPdfAnnotationsResult response = api.editPdfGetAnnotations(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get the status and result of a PDF Batch Job
+     *
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void editPdfGetAsyncJobStatusTest() {
+        String asyncJobID = null;
+
+        EditPdfJobStatusResult response = api.editPdfGetAsyncJobStatus(asyncJobID);
 
         // TODO: test validations
     }
@@ -147,12 +194,13 @@ public class EditPdfApiTest {
      *
      * Encrypt a PDF document with a password.  Set an owner password to control owner (editor/creator) permissions, and set a user (reader) password to control the viewer of the PDF.  Set the password fields null to omit the given password.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfGetFormFieldsTest() {
+    void editPdfGetFormFieldsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         PdfFormFields response = api.editPdfGetFormFields(inputFile);
 
         // TODO: test validations
@@ -163,12 +211,13 @@ public class EditPdfApiTest {
      *
      * Returns the metadata from the PDF document, including Title, Author, etc.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfGetMetadataTest() {
+    void editPdfGetMetadataTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         PdfMetadata response = api.editPdfGetMetadata(inputFile);
 
         // TODO: test validations
@@ -179,13 +228,14 @@ public class EditPdfApiTest {
      *
      * Gets the text in a PDF by page
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfGetPdfTextByPagesTest() {
+    void editPdfGetPdfTextByPagesTest() {
         org.springframework.core.io.Resource inputFile = null;
         String textFormattingMode = null;
+
         PdfTextByPageResult response = api.editPdfGetPdfTextByPages(inputFile, textFormattingMode);
 
         // TODO: test validations
@@ -196,17 +246,39 @@ public class EditPdfApiTest {
      *
      * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfInsertPagesTest() {
+    void editPdfInsertPagesTest() {
         Integer pageStartSource = null;
         Integer pageEndSource = null;
         Integer pageInsertBeforeDesitnation = null;
         org.springframework.core.io.Resource sourceFile = null;
         org.springframework.core.io.Resource destinationFile = null;
+
         byte[] response = api.editPdfInsertPages(pageStartSource, pageEndSource, pageInsertBeforeDesitnation, sourceFile, destinationFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Insert, copy pages from one PDF document into another as a batch job
+     *
+     * Copy one or more pages from one PDF document (source document) and insert them into a second PDF document (destination document).  Runs as a batch job async and returns a batch job ID that you can check the status of to get the result.  Requires Cloudmersive Private Cloud or Managed Instance.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void editPdfInsertPagesBatchJobTest() {
+        Integer pageStartSource = null;
+        Integer pageEndSource = null;
+        Integer pageInsertBeforeDesitnation = null;
+        org.springframework.core.io.Resource sourceFile = null;
+        org.springframework.core.io.Resource destinationFile = null;
+
+        EditPdfBatchJobCreateResult response = api.editPdfInsertPagesBatchJob(pageStartSource, pageEndSource, pageInsertBeforeDesitnation, sourceFile, destinationFile);
 
         // TODO: test validations
     }
@@ -216,12 +288,13 @@ public class EditPdfApiTest {
      *
      * Linearizes the content of a PDF to optimize it for streaming download, particularly over web streaming.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfLinearizeTest() {
+    void editPdfLinearizeTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfLinearize(inputFile);
 
         // TODO: test validations
@@ -232,13 +305,32 @@ public class EditPdfApiTest {
      *
      * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfRasterizeTest() {
+    void editPdfRasterizeTest() {
         org.springframework.core.io.Resource inputFile = null;
-        byte[] response = api.editPdfRasterize(inputFile);
+        Integer dpi = null;
+
+        byte[] response = api.editPdfRasterize(inputFile, dpi);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Rasterize a PDF to an image-based PDF as Batch Job
+     *
+     * Rasterize a PDF into an image-based PDF.  The output is a PDF where each page is comprised of a high-resolution image, with all text, figures and other components removed.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void editPdfRasterizeBatchJobTest() {
+        org.springframework.core.io.Resource inputFile = null;
+
+        EditPdfBatchJobCreateResult response = api.editPdfRasterizeBatchJob(inputFile);
 
         // TODO: test validations
     }
@@ -248,13 +340,14 @@ public class EditPdfApiTest {
      *
      * Reduces the file size and optimizes the content of a PDF to minimize its file size.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfReduceFileSizeTest() {
+    void editPdfReduceFileSizeTest() {
         org.springframework.core.io.Resource inputFile = null;
         BigDecimal quality = null;
+
         byte[] response = api.editPdfReduceFileSize(inputFile, quality);
 
         // TODO: test validations
@@ -265,12 +358,13 @@ public class EditPdfApiTest {
      *
      * Removes all of the annotations, including comments and notes, in a PDF document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfRemoveAllAnnotationsTest() {
+    void editPdfRemoveAllAnnotationsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfRemoveAllAnnotations(inputFile);
 
         // TODO: test validations
@@ -281,13 +375,14 @@ public class EditPdfApiTest {
      *
      * Removes a specific annotation in a PDF document, using the AnnotationIndex.  To enumerate AnnotationIndex for all of the annotations in the PDF document, use the /edit/pdf/annotations/list API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfRemoveAnnotationItemTest() {
+    void editPdfRemoveAnnotationItemTest() {
         Integer annotationIndex = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfRemoveAnnotationItem(annotationIndex, inputFile);
 
         // TODO: test validations
@@ -298,13 +393,14 @@ public class EditPdfApiTest {
      *
      * Resizes a PDF document&#39;s paper size.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfResizeTest() {
+    void editPdfResizeTest() {
         String paperSize = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfResize(paperSize, inputFile);
 
         // TODO: test validations
@@ -315,13 +411,14 @@ public class EditPdfApiTest {
      *
      * Rotate all of the pages in a PDF document by a multiple of 90 degrees
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfRotateAllPagesTest() {
+    void editPdfRotateAllPagesTest() {
         Integer rotationAngle = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfRotateAllPages(rotationAngle, inputFile);
 
         // TODO: test validations
@@ -332,15 +429,16 @@ public class EditPdfApiTest {
      *
      * Rotate a range of specific pages in a PDF document by a multiple of 90 degrees
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfRotatePageRangeTest() {
+    void editPdfRotatePageRangeTest() {
         Integer rotationAngle = null;
         Integer pageStart = null;
         Integer pageEnd = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editPdfRotatePageRange(rotationAngle, pageStart, pageEnd, inputFile);
 
         // TODO: test validations
@@ -351,12 +449,13 @@ public class EditPdfApiTest {
      *
      * Fill in the form fields in a PDF form with specific values.  Use form/get-fields to enumerate the available fields and their data types in an input form.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfSetFormFieldsTest() {
+    void editPdfSetFormFieldsTest() {
         SetPdfFormFieldsRequest fieldValues = null;
+
         byte[] response = api.editPdfSetFormFields(fieldValues);
 
         // TODO: test validations
@@ -367,12 +466,13 @@ public class EditPdfApiTest {
      *
      * Sets (writes) metadata into the input PDF document, including Title, Author, etc.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfSetMetadataTest() {
+    void editPdfSetMetadataTest() {
         SetPdfMetadataRequest request = null;
+
         byte[] response = api.editPdfSetMetadata(request);
 
         // TODO: test validations
@@ -383,11 +483,11 @@ public class EditPdfApiTest {
      *
      * Encrypt a PDF document with a password, and set permissions on the PDF.  Set an owner password to control owner (editor/creator) permissions [required], and set a user (reader) password to control the viewer of the PDF [optional].  Set the reader password to null to omit the password.  Restrict or allow printing, copying content, document assembly, editing (read-only), form filling, modification of annotations, and degraded printing through document Digital Rights Management (DRM).
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfSetPermissionsTest() {
+    void editPdfSetPermissionsTest() {
         String ownerPassword = null;
         String userPassword = null;
         org.springframework.core.io.Resource inputFile = null;
@@ -399,6 +499,7 @@ public class EditPdfApiTest {
         Boolean allowEditing = null;
         Boolean allowAnnotations = null;
         Boolean allowDegradedPrinting = null;
+
         byte[] response = api.editPdfSetPermissions(ownerPassword, userPassword, inputFile, encryptionKeyLength, allowPrinting, allowDocumentAssembly, allowContentExtraction, allowFormFilling, allowEditing, allowAnnotations, allowDegradedPrinting);
 
         // TODO: test validations
@@ -409,17 +510,18 @@ public class EditPdfApiTest {
      *
      * Adds a text watermark to a PDF
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editPdfWatermarkTextTest() {
+    void editPdfWatermarkTextTest() {
         String watermarkText = null;
         org.springframework.core.io.Resource inputFile = null;
         String fontName = null;
         BigDecimal fontSize = null;
         String fontColor = null;
         BigDecimal fontTransparency = null;
+
         byte[] response = api.editPdfWatermarkText(watermarkText, inputFile, fontName, fontSize, fontColor, fontTransparency);
 
         // TODO: test validations

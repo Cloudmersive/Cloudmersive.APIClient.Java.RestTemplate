@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetImageInfoResult
  */
-public class GetImageInfoResultTest {
+class GetImageInfoResultTest {
     private final GetImageInfoResult model = new GetImageInfoResult();
 
     /**
      * Model tests for GetImageInfoResult
      */
     @Test
-    public void testGetImageInfoResult() {
+    void testGetImageInfoResult() {
         // TODO: test GetImageInfoResult
     }
 
@@ -46,7 +44,7 @@ public class GetImageInfoResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class GetImageInfoResultTest {
      * Test the property 'colorSpace'
      */
     @Test
-    public void colorSpaceTest() {
+    void colorSpaceTest() {
         // TODO: test colorSpace
     }
 
@@ -62,7 +60,7 @@ public class GetImageInfoResultTest {
      * Test the property 'colorType'
      */
     @Test
-    public void colorTypeTest() {
+    void colorTypeTest() {
         // TODO: test colorType
     }
 
@@ -70,7 +68,7 @@ public class GetImageInfoResultTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -78,7 +76,7 @@ public class GetImageInfoResultTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 
@@ -86,7 +84,7 @@ public class GetImageInfoResultTest {
      * Test the property 'compressionLevel'
      */
     @Test
-    public void compressionLevelTest() {
+    void compressionLevelTest() {
         // TODO: test compressionLevel
     }
 
@@ -94,7 +92,7 @@ public class GetImageInfoResultTest {
      * Test the property 'imageHashSignature'
      */
     @Test
-    public void imageHashSignatureTest() {
+    void imageHashSignatureTest() {
         // TODO: test imageHashSignature
     }
 
@@ -102,7 +100,7 @@ public class GetImageInfoResultTest {
      * Test the property 'hasTransparency'
      */
     @Test
-    public void hasTransparencyTest() {
+    void hasTransparencyTest() {
         // TODO: test hasTransparency
     }
 
@@ -110,7 +108,7 @@ public class GetImageInfoResultTest {
      * Test the property 'mimeType'
      */
     @Test
-    public void mimeTypeTest() {
+    void mimeTypeTest() {
         // TODO: test mimeType
     }
 
@@ -118,7 +116,7 @@ public class GetImageInfoResultTest {
      * Test the property 'imageFormat'
      */
     @Test
-    public void imageFormatTest() {
+    void imageFormatTest() {
         // TODO: test imageFormat
     }
 
@@ -126,7 +124,7 @@ public class GetImageInfoResultTest {
      * Test the property 'dpIUnit'
      */
     @Test
-    public void dpIUnitTest() {
+    void dpIUnitTest() {
         // TODO: test dpIUnit
     }
 
@@ -134,7 +132,7 @@ public class GetImageInfoResultTest {
      * Test the property 'DPI'
      */
     @Test
-    public void DPITest() {
+    void DPITest() {
         // TODO: test DPI
     }
 
@@ -142,7 +140,7 @@ public class GetImageInfoResultTest {
      * Test the property 'colorCount'
      */
     @Test
-    public void colorCountTest() {
+    void colorCountTest() {
         // TODO: test colorCount
     }
 
@@ -150,7 +148,7 @@ public class GetImageInfoResultTest {
      * Test the property 'bitDepth'
      */
     @Test
-    public void bitDepthTest() {
+    void bitDepthTest() {
         // TODO: test bitDepth
     }
 
@@ -158,7 +156,7 @@ public class GetImageInfoResultTest {
      * Test the property 'comment'
      */
     @Test
-    public void commentTest() {
+    void commentTest() {
         // TODO: test comment
     }
 
@@ -166,7 +164,7 @@ public class GetImageInfoResultTest {
      * Test the property 'exifProfileName'
      */
     @Test
-    public void exifProfileNameTest() {
+    void exifProfileNameTest() {
         // TODO: test exifProfileName
     }
 
@@ -174,7 +172,7 @@ public class GetImageInfoResultTest {
      * Test the property 'exifValues'
      */
     @Test
-    public void exifValuesTest() {
+    void exifValuesTest() {
         // TODO: test exifValues
     }
 

@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CheckWordResponse
  */
-public class CheckWordResponseTest {
+class CheckWordResponseTest {
     private final CheckWordResponse model = new CheckWordResponse();
 
     /**
      * Model tests for CheckWordResponse
      */
     @Test
-    public void testCheckWordResponse() {
+    void testCheckWordResponse() {
         // TODO: test CheckWordResponse
     }
 
@@ -45,7 +43,7 @@ public class CheckWordResponseTest {
      * Test the property 'correct'
      */
     @Test
-    public void correctTest() {
+    void correctTest() {
         // TODO: test correct
     }
 
@@ -53,7 +51,7 @@ public class CheckWordResponseTest {
      * Test the property 'suggestions'
      */
     @Test
-    public void suggestionsTest() {
+    void suggestionsTest() {
         // TODO: test suggestions
     }
 

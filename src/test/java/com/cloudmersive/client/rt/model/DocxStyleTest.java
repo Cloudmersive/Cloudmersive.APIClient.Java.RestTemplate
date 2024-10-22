@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxStyle
  */
-public class DocxStyleTest {
+class DocxStyleTest {
     private final DocxStyle model = new DocxStyle();
 
     /**
      * Model tests for DocxStyle
      */
     @Test
-    public void testDocxStyle() {
+    void testDocxStyle() {
         // TODO: test DocxStyle
     }
 
@@ -43,7 +40,7 @@ public class DocxStyleTest {
      * Test the property 'styleID'
      */
     @Test
-    public void styleIDTest() {
+    void styleIDTest() {
         // TODO: test styleID
     }
 
@@ -51,7 +48,7 @@ public class DocxStyleTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -59,7 +56,7 @@ public class DocxStyleTest {
      * Test the property 'bold'
      */
     @Test
-    public void boldTest() {
+    void boldTest() {
         // TODO: test bold
     }
 
@@ -67,7 +64,7 @@ public class DocxStyleTest {
      * Test the property 'italic'
      */
     @Test
-    public void italicTest() {
+    void italicTest() {
         // TODO: test italic
     }
 
@@ -75,7 +72,7 @@ public class DocxStyleTest {
      * Test the property 'underline'
      */
     @Test
-    public void underlineTest() {
+    void underlineTest() {
         // TODO: test underline
     }
 
@@ -83,7 +80,7 @@ public class DocxStyleTest {
      * Test the property 'fontSize'
      */
     @Test
-    public void fontSizeTest() {
+    void fontSizeTest() {
         // TODO: test fontSize
     }
 
@@ -91,7 +88,7 @@ public class DocxStyleTest {
      * Test the property 'fontFamily'
      */
     @Test
-    public void fontFamilyTest() {
+    void fontFamilyTest() {
         // TODO: test fontFamily
     }
 

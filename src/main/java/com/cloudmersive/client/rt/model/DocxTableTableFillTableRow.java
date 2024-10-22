@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Row data to fill in to the DOCX Table
  */
-@ApiModel(description = "Row data to fill in to the DOCX Table")
 @JsonPropertyOrder({
   DocxTableTableFillTableRow.JSON_PROPERTY_CELLS
 })
-@JsonTypeName("DocxTableTableFillTableRow")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableTableFillTableRow {
   public static final String JSON_PROPERTY_CELLS = "Cells";
-  private List<DocxTableTableFillTableCell> cells = null;
+  private List<DocxTableTableFillTableCell> cells = new ArrayList<>();
 
+  public DocxTableTableFillTableRow() {
+  }
 
   public DocxTableTableFillTableRow cells(List<DocxTableTableFillTableCell> cells) {
     
@@ -49,18 +49,17 @@ public class DocxTableTableFillTableRow {
 
   public DocxTableTableFillTableRow addCellsItem(DocxTableTableFillTableCell cellsItem) {
     if (this.cells == null) {
-      this.cells = new ArrayList<DocxTableTableFillTableCell>();
+      this.cells = new ArrayList<>();
     }
     this.cells.add(cellsItem);
     return this;
   }
 
-   /**
+  /**
    * Cells in the row to fill in
    * @return cells
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Cells in the row to fill in")
   @JsonProperty(JSON_PROPERTY_CELLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class DocxTableTableFillTableRow {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELLS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCells(List<DocxTableTableFillTableCell> cells) {
     this.cells = cells;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class DocxTableTableFillTableRow {
   public int hashCode() {
     return Objects.hash(cells);
   }
-
 
   @Override
   public String toString() {

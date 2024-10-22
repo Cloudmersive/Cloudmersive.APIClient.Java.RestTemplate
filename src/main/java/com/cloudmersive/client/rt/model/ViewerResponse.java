@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of creating a viewer
  */
-@ApiModel(description = "Result of creating a viewer")
 @JsonPropertyOrder({
   ViewerResponse.JSON_PROPERTY_HTML_EMBED,
   ViewerResponse.JSON_PROPERTY_SUCCESSFUL
 })
-@JsonTypeName("ViewerResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ViewerResponse {
   public static final String JSON_PROPERTY_HTML_EMBED = "HtmlEmbed";
   private String htmlEmbed;
@@ -41,6 +38,8 @@ public class ViewerResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
+  public ViewerResponse() {
+  }
 
   public ViewerResponse htmlEmbed(String htmlEmbed) {
     
@@ -48,12 +47,11 @@ public class ViewerResponse {
     return this;
   }
 
-   /**
+  /**
    * Get htmlEmbed
    * @return htmlEmbed
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_HTML_EMBED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ViewerResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTML_EMBED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHtmlEmbed(String htmlEmbed) {
     this.htmlEmbed = htmlEmbed;
   }
-
 
   public ViewerResponse successful(Boolean successful) {
     
@@ -73,12 +72,11 @@ public class ViewerResponse {
     return this;
   }
 
-   /**
+  /**
    * Get successful
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ViewerResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ViewerResponse {
   public int hashCode() {
     return Objects.hash(htmlEmbed, successful);
   }
-
 
   @Override
   public String toString() {

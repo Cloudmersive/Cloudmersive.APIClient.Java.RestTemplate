@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to create a setting
  */
-@ApiModel(description = "Request to create a setting")
 @JsonPropertyOrder({
   CreateSettingRequest.JSON_PROPERTY_BUCKET_I_D,
   CreateSettingRequest.JSON_PROPERTY_BUCKET_SECRET_KEY,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   CreateSettingRequest.JSON_PROPERTY_SETTING_DESCRIPTION,
   CreateSettingRequest.JSON_PROPERTY_SETTING_TAGS
 })
-@JsonTypeName("CreateSettingRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateSettingRequest {
   public static final String JSON_PROPERTY_BUCKET_I_D = "BucketID";
   private String bucketID;
@@ -61,6 +58,8 @@ public class CreateSettingRequest {
   public static final String JSON_PROPERTY_SETTING_TAGS = "SettingTags";
   private String settingTags;
 
+  public CreateSettingRequest() {
+  }
 
   public CreateSettingRequest bucketID(String bucketID) {
     
@@ -68,12 +67,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * BucketID of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket
    * @return bucketID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "BucketID of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &gt; API Configuration &gt; Create Bucket")
   @JsonProperty(JSON_PROPERTY_BUCKET_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,10 +80,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUCKET_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBucketID(String bucketID) {
     this.bucketID = bucketID;
   }
-
 
   public CreateSettingRequest bucketSecretKey(String bucketSecretKey) {
     
@@ -93,12 +92,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * SecretKey of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &amp;gt; API Configuration &amp;gt; Create Bucket
    * @return bucketSecretKey
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SecretKey of the bucket to place the setting in; you can create a bucket by navigating to account.cloudmersive.com, clicking on Settings &gt; API Configuration &gt; Create Bucket")
   @JsonProperty(JSON_PROPERTY_BUCKET_SECRET_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +105,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUCKET_SECRET_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBucketSecretKey(String bucketSecretKey) {
     this.bucketSecretKey = bucketSecretKey;
   }
-
 
   public CreateSettingRequest settingName(String settingName) {
     
@@ -118,12 +117,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Name of the setting to create
    * @return settingName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the setting to create")
   @JsonProperty(JSON_PROPERTY_SETTING_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,10 +130,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingName(String settingName) {
     this.settingName = settingName;
   }
-
 
   public CreateSettingRequest settingType(String settingType) {
     
@@ -143,12 +142,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Type of setting to create; possible values are STRING, JSON
    * @return settingType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of setting to create; possible values are STRING, JSON")
   @JsonProperty(JSON_PROPERTY_SETTING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,10 +155,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingType(String settingType) {
     this.settingType = settingType;
   }
-
 
   public CreateSettingRequest settingValue(Object settingValue) {
     
@@ -168,12 +167,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Initial value of the setting
    * @return settingValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Initial value of the setting")
   @JsonProperty(JSON_PROPERTY_SETTING_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,10 +180,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingValue(Object settingValue) {
     this.settingValue = settingValue;
   }
-
 
   public CreateSettingRequest settingDescription(String settingDescription) {
     
@@ -193,12 +192,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Description of the setting
    * @return settingDescription
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Description of the setting")
   @JsonProperty(JSON_PROPERTY_SETTING_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,10 +205,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingDescription(String settingDescription) {
     this.settingDescription = settingDescription;
   }
-
 
   public CreateSettingRequest settingTags(String settingTags) {
     
@@ -218,12 +217,11 @@ public class CreateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Tags to apply to the setting
    * @return settingTags
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tags to apply to the setting")
   @JsonProperty(JSON_PROPERTY_SETTING_TAGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,10 +230,11 @@ public class CreateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_TAGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingTags(String settingTags) {
     this.settingTags = settingTags;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -259,7 +258,6 @@ public class CreateSettingRequest {
   public int hashCode() {
     return Objects.hash(bucketID, bucketSecretKey, settingName, settingType, settingValue, settingDescription, settingTags);
   }
-
 
   @Override
   public String toString() {

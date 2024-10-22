@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Text instance to draw on an image
  */
-@ApiModel(description = "Text instance to draw on an image")
 @JsonPropertyOrder({
   DrawTextInstance.JSON_PROPERTY_TEXT,
   DrawTextInstance.JSON_PROPERTY_FONT_FAMILY_NAME,
@@ -38,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DrawTextInstance.JSON_PROPERTY_WIDTH,
   DrawTextInstance.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("DrawTextInstance")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DrawTextInstance {
   public static final String JSON_PROPERTY_TEXT = "Text";
   private String text;
@@ -65,6 +62,8 @@ public class DrawTextInstance {
   public static final String JSON_PROPERTY_HEIGHT = "Height";
   private Double height;
 
+  public DrawTextInstance() {
+  }
 
   public DrawTextInstance text(String text) {
     
@@ -72,12 +71,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Text string to draw
    * @return text
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text string to draw")
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,10 +84,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setText(String text) {
     this.text = text;
   }
-
 
   public DrawTextInstance fontFamilyName(String fontFamilyName) {
     
@@ -97,12 +96,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Font Family to use.  Leave blank to default to \&quot;Arial\&quot;.  Supported fonts including Arial, Calibri, Cambria, Candara, Consolas, Constantia, Corbel, Courier New, Courier Regular, Georgia, Impact Regular, Lucida, Modern Regular, Tahoma, Times New Roman, Verdana
    * @return fontFamilyName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Font Family to use.  Leave blank to default to \"Arial\".  Supported fonts including Arial, Calibri, Cambria, Candara, Consolas, Constantia, Corbel, Courier New, Courier Regular, Georgia, Impact Regular, Lucida, Modern Regular, Tahoma, Times New Roman, Verdana")
   @JsonProperty(JSON_PROPERTY_FONT_FAMILY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,10 +109,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FONT_FAMILY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFontFamilyName(String fontFamilyName) {
     this.fontFamilyName = fontFamilyName;
   }
-
 
   public DrawTextInstance fontSize(Double fontSize) {
     
@@ -122,12 +121,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Font size to use.
    * @return fontSize
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Font size to use.")
   @JsonProperty(JSON_PROPERTY_FONT_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,10 +134,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FONT_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFontSize(Double fontSize) {
     this.fontSize = fontSize;
   }
-
 
   public DrawTextInstance color(String color) {
     
@@ -147,12 +146,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Color to use - can be a hex value (with #) or HTML common color name
    * @return color
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Color to use - can be a hex value (with #) or HTML common color name")
   @JsonProperty(JSON_PROPERTY_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,10 +159,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColor(String color) {
     this.color = color;
   }
-
 
   public DrawTextInstance X(Double X) {
     
@@ -172,12 +171,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Pixel location of the left edge of the text location
    * @return X
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pixel location of the left edge of the text location")
   @JsonProperty(JSON_PROPERTY_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,10 +184,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setX(Double X) {
     this.X = X;
   }
-
 
   public DrawTextInstance Y(Double Y) {
     
@@ -197,12 +196,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Pixel location of the top edge of the text location
    * @return Y
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pixel location of the top edge of the text location")
   @JsonProperty(JSON_PROPERTY_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,10 +209,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setY(Double Y) {
     this.Y = Y;
   }
-
 
   public DrawTextInstance width(Double width) {
     
@@ -222,12 +221,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the text box to draw the text in; text will wrap inside this box
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the text box to draw the text in; text will wrap inside this box")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -236,10 +234,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Double width) {
     this.width = width;
   }
-
 
   public DrawTextInstance height(Double height) {
     
@@ -247,12 +246,11 @@ public class DrawTextInstance {
     return this;
   }
 
-   /**
+  /**
    * Height in pixels of the text box to draw the text in; text will wrap inside this box
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height in pixels of the text box to draw the text in; text will wrap inside this box")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -261,10 +259,11 @@ public class DrawTextInstance {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Double height) {
     this.height = height;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -289,7 +288,6 @@ public class DrawTextInstance {
   public int hashCode() {
     return Objects.hash(text, fontFamilyName, fontSize, color, X, Y, width, height);
   }
-
 
   @Override
   public String toString() {

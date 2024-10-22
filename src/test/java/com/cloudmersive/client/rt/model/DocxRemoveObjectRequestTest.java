@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxRemoveObjectRequest
  */
-public class DocxRemoveObjectRequestTest {
+class DocxRemoveObjectRequestTest {
     private final DocxRemoveObjectRequest model = new DocxRemoveObjectRequest();
 
     /**
      * Model tests for DocxRemoveObjectRequest
      */
     @Test
-    public void testDocxRemoveObjectRequest() {
+    void testDocxRemoveObjectRequest() {
         // TODO: test DocxRemoveObjectRequest
     }
 
@@ -43,7 +40,7 @@ public class DocxRemoveObjectRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class DocxRemoveObjectRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class DocxRemoveObjectRequestTest {
      * Test the property 'pathToObjectToRemove'
      */
     @Test
-    public void pathToObjectToRemoveTest() {
+    void pathToObjectToRemoveTest() {
         // TODO: test pathToObjectToRemove
     }
 

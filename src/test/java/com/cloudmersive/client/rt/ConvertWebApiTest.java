@@ -24,9 +24,12 @@ import com.cloudmersive.client.rt.model.ScreenshotRequest;
 import com.cloudmersive.client.rt.model.UrlToPdfRequest;
 import com.cloudmersive.client.rt.model.UrlToTextRequest;
 import com.cloudmersive.client.rt.model.UrlToTextResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -35,8 +38,8 @@ import java.util.Map;
 /**
  * API tests for ConvertWebApi
  */
-@Ignore
-public class ConvertWebApiTest {
+@Disabled
+class ConvertWebApiTest {
 
     private final ConvertWebApi api = new ConvertWebApi();
 
@@ -46,12 +49,13 @@ public class ConvertWebApiTest {
      *
      * Convert HTML to Office Word Document (DOCX) format
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebHtmlToDocxTest() {
+    void convertWebHtmlToDocxTest() {
         HtmlToOfficeRequest inputRequest = null;
+
         byte[] response = api.convertWebHtmlToDocx(inputRequest);
 
         // TODO: test validations
@@ -62,12 +66,13 @@ public class ConvertWebApiTest {
      *
      * Fully renders a website and returns a PDF of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebHtmlToPdfTest() {
+    void convertWebHtmlToPdfTest() {
         HtmlToPdfRequest input = null;
+
         byte[] response = api.convertWebHtmlToPdf(input);
 
         // TODO: test validations
@@ -78,12 +83,13 @@ public class ConvertWebApiTest {
      *
      * Fully renders a website and returns a PNG (screenshot) of the HTML.  Javascript, HTML5, CSS and other advanced features are all supported.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebHtmlToPngTest() {
+    void convertWebHtmlToPngTest() {
         HtmlToPngRequest input = null;
+
         byte[] response = api.convertWebHtmlToPng(input);
 
         // TODO: test validations
@@ -94,12 +100,13 @@ public class ConvertWebApiTest {
      *
      * Converts an HTML string input into text (txt); extracts text from HTML
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebHtmlToTxtTest() {
+    void convertWebHtmlToTxtTest() {
         HtmlToTextRequest input = null;
+
         HtmlToTextResponse response = api.convertWebHtmlToTxt(input);
 
         // TODO: test validations
@@ -110,12 +117,13 @@ public class ConvertWebApiTest {
      *
      * Convert a markdown file (.md) to HTML
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebMdToHtmlTest() {
+    void convertWebMdToHtmlTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         HtmlMdResult response = api.convertWebMdToHtml(inputFile);
 
         // TODO: test validations
@@ -126,12 +134,13 @@ public class ConvertWebApiTest {
      *
      * Fully renders a website and returns a PDF of the full page.  Javascript, HTML5, CSS and other advanced features are all supported.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebUrlToPdfTest() {
+    void convertWebUrlToPdfTest() {
         UrlToPdfRequest input = null;
+
         byte[] response = api.convertWebUrlToPdf(input);
 
         // TODO: test validations
@@ -142,12 +151,13 @@ public class ConvertWebApiTest {
      *
      * Fully renders a website and returns a PNG screenshot of the full page image.  Javascript, HTML5, CSS and other advanced features are all supported.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebUrlToScreenshotTest() {
+    void convertWebUrlToScreenshotTest() {
         ScreenshotRequest input = null;
+
         byte[] response = api.convertWebUrlToScreenshot(input);
 
         // TODO: test validations
@@ -158,12 +168,13 @@ public class ConvertWebApiTest {
      *
      * Converts a website URL page into text (txt); extracts text from HTML
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void convertWebUrlToTxtTest() {
+    void convertWebUrlToTxtTest() {
         UrlToTextRequest input = null;
+
         UrlToTextResponse response = api.convertWebUrlToTxt(input);
 
         // TODO: test validations

@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Part of speech tag result
  */
-@ApiModel(description = "Part of speech tag result")
 @JsonPropertyOrder({
   PosResponse.JSON_PROPERTY_TAGGED_SENTENCES
 })
-@JsonTypeName("PosResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PosResponse {
   public static final String JSON_PROPERTY_TAGGED_SENTENCES = "TaggedSentences";
-  private List<PosSentence> taggedSentences = null;
+  private List<PosSentence> taggedSentences = new ArrayList<>();
 
+  public PosResponse() {
+  }
 
   public PosResponse taggedSentences(List<PosSentence> taggedSentences) {
     
@@ -49,18 +49,17 @@ public class PosResponse {
 
   public PosResponse addTaggedSentencesItem(PosSentence taggedSentencesItem) {
     if (this.taggedSentences == null) {
-      this.taggedSentences = new ArrayList<PosSentence>();
+      this.taggedSentences = new ArrayList<>();
     }
     this.taggedSentences.add(taggedSentencesItem);
     return this;
   }
 
-   /**
+  /**
    * Sentences in the string
    * @return taggedSentences
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sentences in the string")
   @JsonProperty(JSON_PROPERTY_TAGGED_SENTENCES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class PosResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TAGGED_SENTENCES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTaggedSentences(List<PosSentence> taggedSentences) {
     this.taggedSentences = taggedSentences;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class PosResponse {
   public int hashCode() {
     return Objects.hash(taggedSentences);
   }
-
 
   @Override
   public String toString() {

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ClearXlsxRowResponse
  */
-public class ClearXlsxRowResponseTest {
+class ClearXlsxRowResponseTest {
     private final ClearXlsxRowResponse model = new ClearXlsxRowResponse();
 
     /**
      * Model tests for ClearXlsxRowResponse
      */
     @Test
-    public void testClearXlsxRowResponse() {
+    void testClearXlsxRowResponse() {
         // TODO: test ClearXlsxRowResponse
     }
 
@@ -43,7 +40,7 @@ public class ClearXlsxRowResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class ClearXlsxRowResponseTest {
      * Test the property 'editedDocumentURL'
      */
     @Test
-    public void editedDocumentURLTest() {
+    void editedDocumentURLTest() {
         // TODO: test editedDocumentURL
     }
 

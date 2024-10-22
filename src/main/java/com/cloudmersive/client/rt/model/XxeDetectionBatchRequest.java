@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a batch XXE detection operation
  */
-@ApiModel(description = "Input to a batch XXE detection operation")
 @JsonPropertyOrder({
   XxeDetectionBatchRequest.JSON_PROPERTY_REQUEST_ITEMS
 })
-@JsonTypeName("XxeDetectionBatchRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XxeDetectionBatchRequest {
   public static final String JSON_PROPERTY_REQUEST_ITEMS = "RequestItems";
-  private List<XxeDetectionRequestItem> requestItems = null;
+  private List<XxeDetectionRequestItem> requestItems = new ArrayList<>();
 
+  public XxeDetectionBatchRequest() {
+  }
 
   public XxeDetectionBatchRequest requestItems(List<XxeDetectionRequestItem> requestItems) {
     
@@ -49,18 +49,17 @@ public class XxeDetectionBatchRequest {
 
   public XxeDetectionBatchRequest addRequestItemsItem(XxeDetectionRequestItem requestItemsItem) {
     if (this.requestItems == null) {
-      this.requestItems = new ArrayList<XxeDetectionRequestItem>();
+      this.requestItems = new ArrayList<>();
     }
     this.requestItems.add(requestItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Multiple items to protect for XXE
    * @return requestItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Multiple items to protect for XXE")
   @JsonProperty(JSON_PROPERTY_REQUEST_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class XxeDetectionBatchRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REQUEST_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRequestItems(List<XxeDetectionRequestItem> requestItems) {
     this.requestItems = requestItems;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class XxeDetectionBatchRequest {
   public int hashCode() {
     return Objects.hash(requestItems);
   }
-
 
   @Override
   public String toString() {

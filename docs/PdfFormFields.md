@@ -3,12 +3,13 @@
 # PdfFormFields
 
 Result of retrieving PDF form fields
+
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**successful** | **Boolean** | True if the operation was successful, false otherwise |  [optional]
-**formFields** | [**List&lt;PdfFormField&gt;**](PdfFormField.md) | Fields and field values found in the form |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**successful** | **Boolean** | True if the operation was successful, false otherwise |  [optional] |
+|**formFields** | [**List&lt;PdfFormField&gt;**](PdfFormField.md) | Fields and field values found in the form |  [optional] |
 
 
 

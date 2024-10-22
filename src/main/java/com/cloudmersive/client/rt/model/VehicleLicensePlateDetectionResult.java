@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of detecting vehicle license plates in an image
  */
-@ApiModel(description = "Result of detecting vehicle license plates in an image")
 @JsonPropertyOrder({
   VehicleLicensePlateDetectionResult.JSON_PROPERTY_SUCCESSFUL,
   VehicleLicensePlateDetectionResult.JSON_PROPERTY_DETECTED_LICENSE_PLATES,
   VehicleLicensePlateDetectionResult.JSON_PROPERTY_DETECTED_LICENSE_PLATE_COUNT
 })
-@JsonTypeName("VehicleLicensePlateDetectionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VehicleLicensePlateDetectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_DETECTED_LICENSE_PLATES = "DetectedLicensePlates";
-  private List<DetectedLicensePlate> detectedLicensePlates = null;
+  private List<DetectedLicensePlate> detectedLicensePlates = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DETECTED_LICENSE_PLATE_COUNT = "DetectedLicensePlateCount";
   private Integer detectedLicensePlateCount;
 
+  public VehicleLicensePlateDetectionResult() {
+  }
 
   public VehicleLicensePlateDetectionResult successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class VehicleLicensePlateDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * Was the image processed successfully?
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Was the image processed successfully?")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class VehicleLicensePlateDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public VehicleLicensePlateDetectionResult detectedLicensePlates(List<DetectedLicensePlate> detectedLicensePlates) {
     
@@ -82,18 +82,17 @@ public class VehicleLicensePlateDetectionResult {
 
   public VehicleLicensePlateDetectionResult addDetectedLicensePlatesItem(DetectedLicensePlate detectedLicensePlatesItem) {
     if (this.detectedLicensePlates == null) {
-      this.detectedLicensePlates = new ArrayList<DetectedLicensePlate>();
+      this.detectedLicensePlates = new ArrayList<>();
     }
     this.detectedLicensePlates.add(detectedLicensePlatesItem);
     return this;
   }
 
-   /**
+  /**
    * License plates found in the image
    * @return detectedLicensePlates
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "License plates found in the image")
   @JsonProperty(JSON_PROPERTY_DETECTED_LICENSE_PLATES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class VehicleLicensePlateDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_LICENSE_PLATES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedLicensePlates(List<DetectedLicensePlate> detectedLicensePlates) {
     this.detectedLicensePlates = detectedLicensePlates;
   }
-
 
   public VehicleLicensePlateDetectionResult detectedLicensePlateCount(Integer detectedLicensePlateCount) {
     
@@ -113,12 +113,11 @@ public class VehicleLicensePlateDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * The number of license plates detected in the image
    * @return detectedLicensePlateCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of license plates detected in the image")
   @JsonProperty(JSON_PROPERTY_DETECTED_LICENSE_PLATE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class VehicleLicensePlateDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_LICENSE_PLATE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedLicensePlateCount(Integer detectedLicensePlateCount) {
     this.detectedLicensePlateCount = detectedLicensePlateCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class VehicleLicensePlateDetectionResult {
   public int hashCode() {
     return Objects.hash(successful, detectedLicensePlates, detectedLicensePlateCount);
   }
-
 
   @Override
   public String toString() {

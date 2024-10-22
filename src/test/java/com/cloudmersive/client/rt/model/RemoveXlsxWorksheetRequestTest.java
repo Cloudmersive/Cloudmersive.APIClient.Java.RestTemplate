@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for RemoveXlsxWorksheetRequest
  */
-public class RemoveXlsxWorksheetRequestTest {
+class RemoveXlsxWorksheetRequestTest {
     private final RemoveXlsxWorksheetRequest model = new RemoveXlsxWorksheetRequest();
 
     /**
      * Model tests for RemoveXlsxWorksheetRequest
      */
     @Test
-    public void testRemoveXlsxWorksheetRequest() {
+    void testRemoveXlsxWorksheetRequest() {
         // TODO: test RemoveXlsxWorksheetRequest
     }
 
@@ -44,7 +41,7 @@ public class RemoveXlsxWorksheetRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class RemoveXlsxWorksheetRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class RemoveXlsxWorksheetRequestTest {
      * Test the property 'worksheetToRemove'
      */
     @Test
-    public void worksheetToRemoveTest() {
+    void worksheetToRemoveTest() {
         // TODO: test worksheetToRemove
     }
 

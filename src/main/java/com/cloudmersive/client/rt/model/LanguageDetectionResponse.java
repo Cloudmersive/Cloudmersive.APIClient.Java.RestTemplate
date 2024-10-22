@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Output of a language detection operation
  */
-@ApiModel(description = "Output of a language detection operation")
 @JsonPropertyOrder({
   LanguageDetectionResponse.JSON_PROPERTY_SUCCESSFUL,
   LanguageDetectionResponse.JSON_PROPERTY_DETECTED_LANGUAGE_THREE_LETTER_CODE,
   LanguageDetectionResponse.JSON_PROPERTY_DETECTED_LANGUAGE_FULL_NAME
 })
-@JsonTypeName("LanguageDetectionResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class LanguageDetectionResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class LanguageDetectionResponse {
   public static final String JSON_PROPERTY_DETECTED_LANGUAGE_FULL_NAME = "DetectedLanguage_FullName";
   private String detectedLanguageFullName;
 
+  public LanguageDetectionResponse() {
+  }
 
   public LanguageDetectionResponse successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class LanguageDetectionResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the language detection operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the language detection operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class LanguageDetectionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public LanguageDetectionResponse detectedLanguageThreeLetterCode(String detectedLanguageThreeLetterCode) {
     
@@ -77,12 +76,11 @@ public class LanguageDetectionResponse {
     return this;
   }
 
-   /**
+  /**
    * ISO 639 three letter language code
    * @return detectedLanguageThreeLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ISO 639 three letter language code")
   @JsonProperty(JSON_PROPERTY_DETECTED_LANGUAGE_THREE_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class LanguageDetectionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_LANGUAGE_THREE_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedLanguageThreeLetterCode(String detectedLanguageThreeLetterCode) {
     this.detectedLanguageThreeLetterCode = detectedLanguageThreeLetterCode;
   }
-
 
   public LanguageDetectionResponse detectedLanguageFullName(String detectedLanguageFullName) {
     
@@ -102,12 +101,11 @@ public class LanguageDetectionResponse {
     return this;
   }
 
-   /**
+  /**
    * The full name (in English) of the detected language
    * @return detectedLanguageFullName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The full name (in English) of the detected language")
   @JsonProperty(JSON_PROPERTY_DETECTED_LANGUAGE_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class LanguageDetectionResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTED_LANGUAGE_FULL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectedLanguageFullName(String detectedLanguageFullName) {
     this.detectedLanguageFullName = detectedLanguageFullName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class LanguageDetectionResponse {
   public int hashCode() {
     return Objects.hash(successful, detectedLanguageThreeLetterCode, detectedLanguageFullName);
   }
-
 
   @Override
   public String toString() {

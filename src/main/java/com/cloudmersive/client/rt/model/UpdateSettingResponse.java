@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * UpdateSettingResponse
@@ -31,8 +30,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   UpdateSettingResponse.JSON_PROPERTY_SUCCESSFUL,
   UpdateSettingResponse.JSON_PROPERTY_ERROR_MESSAGE
 })
-@JsonTypeName("UpdateSettingResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UpdateSettingResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -40,6 +38,8 @@ public class UpdateSettingResponse {
   public static final String JSON_PROPERTY_ERROR_MESSAGE = "ErrorMessage";
   private String errorMessage;
 
+  public UpdateSettingResponse() {
+  }
 
   public UpdateSettingResponse successful(Boolean successful) {
     
@@ -47,12 +47,11 @@ public class UpdateSettingResponse {
     return this;
   }
 
-   /**
+  /**
    * Get successful
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -61,10 +60,11 @@ public class UpdateSettingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public UpdateSettingResponse errorMessage(String errorMessage) {
     
@@ -72,12 +72,11 @@ public class UpdateSettingResponse {
     return this;
   }
 
-   /**
+  /**
    * Get errorMessage
    * @return errorMessage
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_ERROR_MESSAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,10 +85,11 @@ public class UpdateSettingResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorMessage(String errorMessage) {
     this.errorMessage = errorMessage;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -108,7 +108,6 @@ public class UpdateSettingResponse {
   public int hashCode() {
     return Objects.hash(successful, errorMessage);
   }
-
 
   @Override
   public String toString() {

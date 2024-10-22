@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.UserAgentValidateRequest;
 import com.cloudmersive.client.rt.model.UserAgentValidateResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for UserAgentApi
  */
-@Ignore
-public class UserAgentApiTest {
+@Disabled
+class UserAgentApiTest {
 
     private final UserAgentApi api = new UserAgentApi();
 
@@ -37,12 +40,13 @@ public class UserAgentApiTest {
      *
      * Uses a parsing system and database to parse the User-Agent into its structured component parts, such as Browser, Browser Version, Browser Engine, Operating System, and importantly, Robot identification.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void userAgentParseTest() {
+    void userAgentParseTest() {
         UserAgentValidateRequest request = null;
+
         UserAgentValidateResponse response = api.userAgentParse(request);
 
         // TODO: test validations

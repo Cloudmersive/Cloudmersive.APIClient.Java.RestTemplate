@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * OcrPageResult
@@ -32,8 +31,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   OcrPageResult.JSON_PROPERTY_MEAN_CONFIDENCE_LEVEL,
   OcrPageResult.JSON_PROPERTY_TEXT_RESULT
 })
-@JsonTypeName("OcrPageResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class OcrPageResult {
   public static final String JSON_PROPERTY_PAGE_NUMBER = "PageNumber";
   private Integer pageNumber;
@@ -44,6 +42,8 @@ public class OcrPageResult {
   public static final String JSON_PROPERTY_TEXT_RESULT = "TextResult";
   private String textResult;
 
+  public OcrPageResult() {
+  }
 
   public OcrPageResult pageNumber(Integer pageNumber) {
     
@@ -51,12 +51,11 @@ public class OcrPageResult {
     return this;
   }
 
-   /**
+  /**
    * Page number of the page that was OCR-ed, starting with 1 for the first page in the PDF file
    * @return pageNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Page number of the page that was OCR-ed, starting with 1 for the first page in the PDF file")
   @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class OcrPageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   public OcrPageResult meanConfidenceLevel(Float meanConfidenceLevel) {
     
@@ -76,12 +76,11 @@ public class OcrPageResult {
     return this;
   }
 
-   /**
+  /**
    * Confidence level rating of the OCR operation; ratings above 80% are strong.
    * @return meanConfidenceLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence level rating of the OCR operation; ratings above 80% are strong.")
   @JsonProperty(JSON_PROPERTY_MEAN_CONFIDENCE_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,10 +89,11 @@ public class OcrPageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MEAN_CONFIDENCE_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMeanConfidenceLevel(Float meanConfidenceLevel) {
     this.meanConfidenceLevel = meanConfidenceLevel;
   }
-
 
   public OcrPageResult textResult(String textResult) {
     
@@ -101,12 +101,11 @@ public class OcrPageResult {
     return this;
   }
 
-   /**
+  /**
    * Converted text string from the image input.
    * @return textResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Converted text string from the image input.")
   @JsonProperty(JSON_PROPERTY_TEXT_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,10 +114,11 @@ public class OcrPageResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextResult(String textResult) {
     this.textResult = textResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -138,7 +138,6 @@ public class OcrPageResult {
   public int hashCode() {
     return Objects.hash(pageNumber, meanConfidenceLevel, textResult);
   }
-
 
   @Override
   public String toString() {

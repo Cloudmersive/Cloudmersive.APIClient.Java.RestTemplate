@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of the GetGender operation
  */
-@ApiModel(description = "Result of the GetGender operation")
 @JsonPropertyOrder({
   GetGenderResponse.JSON_PROPERTY_SUCCESSFUL,
   GetGenderResponse.JSON_PROPERTY_GENDER
 })
-@JsonTypeName("GetGenderResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetGenderResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class GetGenderResponse {
   public static final String JSON_PROPERTY_GENDER = "Gender";
   private String gender;
 
+  public GetGenderResponse() {
+  }
 
   public GetGenderResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class GetGenderResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class GetGenderResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetGenderResponse gender(String gender) {
     
@@ -73,12 +72,11 @@ public class GetGenderResponse {
     return this;
   }
 
-   /**
+  /**
    * Gender for this name; possible values are Male, Female, and Neutral (can be applied to Male or Female)
    * @return gender
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Gender for this name; possible values are Male, Female, and Neutral (can be applied to Male or Female)")
   @JsonProperty(JSON_PROPERTY_GENDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class GetGenderResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GENDER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setGender(String gender) {
     this.gender = gender;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class GetGenderResponse {
   public int hashCode() {
     return Objects.hash(successful, gender);
   }
-
 
   @Override
   public String toString() {

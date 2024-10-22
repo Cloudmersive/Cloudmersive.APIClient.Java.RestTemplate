@@ -2,22 +2,22 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**textInputCheckHtmlSsrf**](TextInputApi.md#textInputCheckHtmlSsrf) | **POST** /validate/text-input/html/check/ssrf | Protect html input from Server-side Request Forgery (SSRF) attacks
-[**textInputCheckSqlInjection**](TextInputApi.md#textInputCheckSqlInjection) | **POST** /validate/text-input/check/sql-injection | Check text input for SQL Injection (SQLI) attacks
-[**textInputCheckSqlInjectionBatch**](TextInputApi.md#textInputCheckSqlInjectionBatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch
-[**textInputCheckXss**](TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks
-[**textInputCheckXssBatch**](TextInputApi.md#textInputCheckXssBatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch
-[**textInputCheckXxe**](TextInputApi.md#textInputCheckXxe) | **POST** /validate/text-input/check/xxe | Protect text input from XML External Entity (XXE) attacks
-[**textInputCheckXxeBatch**](TextInputApi.md#textInputCheckXxeBatch) | **POST** /validate/text-input/check/xxe/batch | Protect text input from XML External Entity (XXE) attacks
-[**textInputProtectXss**](TextInputApi.md#textInputProtectXss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**textInputCheckHtmlSsrf**](TextInputApi.md#textInputCheckHtmlSsrf) | **POST** /validate/text-input/html/check/ssrf | Protect html input from Server-side Request Forgery (SSRF) attacks |
+| [**textInputCheckSqlInjection**](TextInputApi.md#textInputCheckSqlInjection) | **POST** /validate/text-input/check/sql-injection | Check text input for SQL Injection (SQLI) attacks |
+| [**textInputCheckSqlInjectionBatch**](TextInputApi.md#textInputCheckSqlInjectionBatch) | **POST** /validate/text-input/check/sql-injection/batch | Check and protect multiple text inputs for SQL Injection (SQLI) attacks in batch |
+| [**textInputCheckXss**](TextInputApi.md#textInputCheckXss) | **POST** /validate/text-input/check/xss | Check text input for Cross-Site-Scripting (XSS) attacks |
+| [**textInputCheckXssBatch**](TextInputApi.md#textInputCheckXssBatch) | **POST** /validate/text-input/check-and-protect/xss/batch | Check and protect multiple text inputs for Cross-Site-Scripting (XSS) attacks in batch |
+| [**textInputCheckXxe**](TextInputApi.md#textInputCheckXxe) | **POST** /validate/text-input/check/xxe | Protect text input from XML External Entity (XXE) attacks |
+| [**textInputCheckXxeBatch**](TextInputApi.md#textInputCheckXxeBatch) | **POST** /validate/text-input/check/xxe/batch | Protect text input from XML External Entity (XXE) attacks |
+| [**textInputProtectXss**](TextInputApi.md#textInputProtectXss) | **POST** /validate/text-input/protect/xss | Protect text input from Cross-Site-Scripting (XSS) attacks through normalization |
 
 
 
 ## textInputCheckHtmlSsrf
 
-> HtmlSsrfDetectionResult textInputCheckHtmlSsrf(value)
+> HtmlSsrfDetectionResult textInputCheckHtmlSsrf(value, allowCidScheme)
 
 Protect html input from Server-side Request Forgery (SSRF) attacks
 
@@ -47,8 +47,9 @@ public class Example {
 
         TextInputApi apiInstance = new TextInputApi(defaultClient);
         String value = "value_example"; // String | User-facing HTML input.
+        Boolean allowCidScheme = true; // Boolean | Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false.
         try {
-            HtmlSsrfDetectionResult result = apiInstance.textInputCheckHtmlSsrf(value);
+            HtmlSsrfDetectionResult result = apiInstance.textInputCheckHtmlSsrf(value, allowCidScheme);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling TextInputApi#textInputCheckHtmlSsrf");
@@ -64,9 +65,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| User-facing HTML input. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| User-facing HTML input. | |
+| **allowCidScheme** | **Boolean**| Optional: Set to true to allow cid: scheme URLs for email message attachments.  Default is false. | [optional] |
 
 ### Return type
 
@@ -80,6 +82,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -137,10 +140,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| User-facing text input. |
- **detectionLevel** | **String**| Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| User-facing text input. | |
+| **detectionLevel** | **String**| Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended). | [optional] |
 
 ### Return type
 
@@ -154,6 +157,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -210,9 +214,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | [**SqlInjectionCheckBatchRequest**](SqlInjectionCheckBatchRequest.md)| User-facing text input. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | [**SqlInjectionCheckBatchRequest**](SqlInjectionCheckBatchRequest.md)| User-facing text input. | |
 
 ### Return type
 
@@ -226,6 +230,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -282,9 +287,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| User-facing text input. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| User-facing text input. | |
 
 ### Return type
 
@@ -298,6 +303,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -354,9 +360,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | [**XssProtectionBatchRequest**](XssProtectionBatchRequest.md)| User-facing text input. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | [**XssProtectionBatchRequest**](XssProtectionBatchRequest.md)| User-facing text input. | |
 
 ### Return type
 
@@ -370,6 +376,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -429,12 +436,12 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| User-facing text input. |
- **allowInternetUrls** | **Boolean**| Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. | [optional]
- **knownSafeUrls** | **String**| Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. | [optional]
- **knownUnsafeUrls** | **String**| Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| User-facing text input. | |
+| **allowInternetUrls** | **Boolean**| Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false. | [optional] |
+| **knownSafeUrls** | **String**| Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe. | [optional] |
+| **knownUnsafeUrls** | **String**| Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe. | [optional] |
 
 ### Return type
 
@@ -448,6 +455,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -504,9 +512,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**XxeDetectionBatchRequest**](XxeDetectionBatchRequest.md)|  |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**XxeDetectionBatchRequest**](XxeDetectionBatchRequest.md)|  | |
 
 ### Return type
 
@@ -520,6 +528,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -576,9 +585,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **value** | **String**| User-facing text input. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **value** | **String**| User-facing text input. | |
 
 ### Return type
 
@@ -592,6 +601,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

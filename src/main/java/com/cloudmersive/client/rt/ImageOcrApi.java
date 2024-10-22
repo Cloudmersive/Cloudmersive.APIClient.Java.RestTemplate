@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import com.cloudmersive.client.rt.model.BusinessCardRecognitionResult;
 import java.io.File;
@@ -32,26 +33,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.ImageOcrApi")
-public class ImageOcrApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class ImageOcrApi extends BaseApi {
 
     public ImageOcrApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public ImageOcrApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -79,41 +69,40 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ImageToLinesWithLocationResult> imageOcrImageLinesWithLocationWithHttpInfo(org.springframework.core.io.Resource imageFile, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrImageLinesWithLocation");
         }
         
-        String path = apiClient.expandPath("/ocr/image/to/lines-with-location", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ImageToLinesWithLocationResult> returnType = new ParameterizedTypeReference<ImageToLinesWithLocationResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ImageToLinesWithLocationResult> localReturnType = new ParameterizedTypeReference<ImageToLinesWithLocationResult>() {};
+        return apiClient.invokeAPI("/ocr/image/to/lines-with-location", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Convert a scanned image into words with location
@@ -140,41 +129,40 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ImageToWordsWithLocationResult> imageOcrImageWordsWithLocationWithHttpInfo(org.springframework.core.io.Resource imageFile, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrImageWordsWithLocation");
         }
         
-        String path = apiClient.expandPath("/ocr/image/to/words-with-location", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ImageToWordsWithLocationResult> returnType = new ParameterizedTypeReference<ImageToWordsWithLocationResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ImageToWordsWithLocationResult> localReturnType = new ParameterizedTypeReference<ImageToWordsWithLocationResult>() {};
+        return apiClient.invokeAPI("/ocr/image/to/words-with-location", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Recognize a photo of a business card, extract key business information
@@ -197,43 +185,42 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<BusinessCardRecognitionResult> imageOcrPhotoRecognizeBusinessCardWithHttpInfo(org.springframework.core.io.Resource imageFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPhotoRecognizeBusinessCard");
         }
         
-        String path = apiClient.expandPath("/ocr/photo/recognize/business-card", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<BusinessCardRecognitionResult> returnType = new ParameterizedTypeReference<BusinessCardRecognitionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<BusinessCardRecognitionResult> localReturnType = new ParameterizedTypeReference<BusinessCardRecognitionResult>() {};
+        return apiClient.invokeAPI("/ocr/photo/recognize/business-card", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Recognize a photo of a form, extract key fields and business information
      * Analyzes a photograph of a form as input, and outputs key business fields and information.  Customzie data to be extracted by defining fields for the form.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      * <p><b>200</b> - OK
      * @param imageFile Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. (required)
-     * @param formTemplateDefinition Form field definitions (optional, default to null)
+     * @param formTemplateDefinition Form field definitions (optional)
      * @param recognitionMode Optional, enable advanced recognition mode by specifying &#39;Advanced&#39;, enable handwriting recognition by specifying &#39;EnableHandwriting&#39;.  Default is disabled. (optional)
      * @param preprocessing Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)
      * @param diagnostics Optional, diagnostics mode, default is &#39;false&#39;.  Possible values are &#39;true&#39; (will set DiagnosticImage to a diagnostic PNG image in the result), and &#39;false&#39; (no diagnostics are enabled; this is recommended for best performance). (optional)
@@ -250,7 +237,7 @@ public class ImageOcrApi {
      * Analyzes a photograph of a form as input, and outputs key business fields and information.  Customzie data to be extracted by defining fields for the form.  Note: for free tier API keys, it is required to add a credit card to your account for security reasons, to use the free tier key with this API.
      * <p><b>200</b> - OK
      * @param imageFile Image file to perform OCR on.  Common file formats such as PNG, JPEG are supported. (required)
-     * @param formTemplateDefinition Form field definitions (optional, default to null)
+     * @param formTemplateDefinition Form field definitions (optional)
      * @param recognitionMode Optional, enable advanced recognition mode by specifying &#39;Advanced&#39;, enable handwriting recognition by specifying &#39;EnableHandwriting&#39;.  Default is disabled. (optional)
      * @param preprocessing Optional, preprocessing mode, default is &#39;Auto&#39;.  Possible values are None (no preprocessing of the image), and Auto (automatic image enhancement of the image - including automatic unrotation of the image - before OCR is applied; this is recommended).  Set this to &#39;None&#39; if you do not want to use automatic image unrotation and enhancement. (optional)
      * @param diagnostics Optional, diagnostics mode, default is &#39;false&#39;.  Possible values are &#39;true&#39; (will set DiagnosticImage to a diagnostic PNG image in the result), and &#39;false&#39; (no diagnostics are enabled; this is recommended for best performance). (optional)
@@ -259,47 +246,46 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<FormRecognitionResult> imageOcrPhotoRecognizeFormWithHttpInfo(org.springframework.core.io.Resource imageFile, Object formTemplateDefinition, String recognitionMode, String preprocessing, String diagnostics, String language) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPhotoRecognizeForm");
         }
         
-        String path = apiClient.expandPath("/ocr/photo/recognize/form", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (formTemplateDefinition != null)
-        headerParams.add("formTemplateDefinition", apiClient.parameterToString(formTemplateDefinition));
+        localVarHeaderParams.add("formTemplateDefinition", apiClient.parameterToString(formTemplateDefinition));
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
         if (diagnostics != null)
-        headerParams.add("diagnostics", apiClient.parameterToString(diagnostics));
+        localVarHeaderParams.add("diagnostics", apiClient.parameterToString(diagnostics));
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<FormRecognitionResult> returnType = new ParameterizedTypeReference<FormRecognitionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<FormRecognitionResult> localReturnType = new ParameterizedTypeReference<FormRecognitionResult>() {};
+        return apiClient.invokeAPI("/ocr/photo/recognize/form", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Recognize a photo of a form, extract key fields using stored templates
@@ -332,47 +318,46 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<FormRecognitionResult> imageOcrPhotoRecognizeFormAdvancedWithHttpInfo(org.springframework.core.io.Resource imageFile, String bucketID, String bucketSecretKey, String recognitionMode, String preprocessing, String diagnostics) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPhotoRecognizeFormAdvanced");
         }
         
-        String path = apiClient.expandPath("/ocr/photo/recognize/form/advanced", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (bucketID != null)
-        headerParams.add("bucketID", apiClient.parameterToString(bucketID));
+        localVarHeaderParams.add("bucketID", apiClient.parameterToString(bucketID));
         if (bucketSecretKey != null)
-        headerParams.add("bucketSecretKey", apiClient.parameterToString(bucketSecretKey));
+        localVarHeaderParams.add("bucketSecretKey", apiClient.parameterToString(bucketSecretKey));
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
         if (diagnostics != null)
-        headerParams.add("diagnostics", apiClient.parameterToString(diagnostics));
+        localVarHeaderParams.add("diagnostics", apiClient.parameterToString(diagnostics));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<FormRecognitionResult> returnType = new ParameterizedTypeReference<FormRecognitionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<FormRecognitionResult> localReturnType = new ParameterizedTypeReference<FormRecognitionResult>() {};
+        return apiClient.invokeAPI("/ocr/photo/recognize/form/advanced", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Recognize a photo of a receipt, extract key business information
@@ -401,43 +386,42 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ReceiptRecognitionResult> imageOcrPhotoRecognizeReceiptWithHttpInfo(org.springframework.core.io.Resource imageFile, String recognitionMode, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPhotoRecognizeReceipt");
         }
         
-        String path = apiClient.expandPath("/ocr/photo/recognize/receipt", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ReceiptRecognitionResult> returnType = new ParameterizedTypeReference<ReceiptRecognitionResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ReceiptRecognitionResult> localReturnType = new ParameterizedTypeReference<ReceiptRecognitionResult>() {};
+        return apiClient.invokeAPI("/ocr/photo/recognize/receipt", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Convert a photo of a document into text
@@ -464,41 +448,40 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ImageToTextResponse> imageOcrPhotoToTextWithHttpInfo(org.springframework.core.io.Resource imageFile, String recognitionMode, String language) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPhotoToText");
         }
         
-        String path = apiClient.expandPath("/ocr/photo/toText", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ImageToTextResponse> returnType = new ParameterizedTypeReference<ImageToTextResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ImageToTextResponse> localReturnType = new ParameterizedTypeReference<ImageToTextResponse>() {};
+        return apiClient.invokeAPI("/ocr/photo/toText", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Convert a photo of a document or receipt into words with location
@@ -529,45 +512,44 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PhotoToWordsWithLocationResult> imageOcrPhotoWordsWithLocationWithHttpInfo(org.springframework.core.io.Resource imageFile, String recognitionMode, String language, String preprocessing, String diagnostics) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPhotoWordsWithLocation");
         }
         
-        String path = apiClient.expandPath("/ocr/photo/to/words-with-location", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
         if (diagnostics != null)
-        headerParams.add("diagnostics", apiClient.parameterToString(diagnostics));
+        localVarHeaderParams.add("diagnostics", apiClient.parameterToString(diagnostics));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PhotoToWordsWithLocationResult> returnType = new ParameterizedTypeReference<PhotoToWordsWithLocationResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PhotoToWordsWithLocationResult> localReturnType = new ParameterizedTypeReference<PhotoToWordsWithLocationResult>() {};
+        return apiClient.invokeAPI("/ocr/photo/to/words-with-location", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Convert a scanned image into text
@@ -596,42 +578,66 @@ public class ImageOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<ImageToTextResponse> imageOcrPostWithHttpInfo(org.springframework.core.io.Resource imageFile, String recognitionMode, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling imageOcrPost");
         }
         
-        String path = apiClient.expandPath("/ocr/image/toText", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<ImageToTextResponse> returnType = new ParameterizedTypeReference<ImageToTextResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<ImageToTextResponse> localReturnType = new ParameterizedTypeReference<ImageToTextResponse>() {};
+        return apiClient.invokeAPI("/ocr/image/toText", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single converted page
  */
-@ApiModel(description = "A single converted page")
 @JsonPropertyOrder({
   ConvertedJpgPage.JSON_PROPERTY_PAGE_NUMBER,
   ConvertedJpgPage.JSON_PROPERTY_CONTENT
 })
-@JsonTypeName("ConvertedJpgPage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ConvertedJpgPage {
   public static final String JSON_PROPERTY_PAGE_NUMBER = "PageNumber";
   private Integer pageNumber;
@@ -41,6 +38,8 @@ public class ConvertedJpgPage {
   public static final String JSON_PROPERTY_CONTENT = "Content";
   private byte[] content;
 
+  public ConvertedJpgPage() {
+  }
 
   public ConvertedJpgPage pageNumber(Integer pageNumber) {
     
@@ -48,12 +47,11 @@ public class ConvertedJpgPage {
     return this;
   }
 
-   /**
+  /**
    * Page number of the converted page, starting with 1
    * @return pageNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Page number of the converted page, starting with 1")
   @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ConvertedJpgPage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   public ConvertedJpgPage content(byte[] content) {
     
@@ -73,12 +72,11 @@ public class ConvertedJpgPage {
     return this;
   }
 
-   /**
+  /**
    * The JPG file of this page as a byte array
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The JPG file of this page as a byte array")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ConvertedJpgPage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(byte[] content) {
     this.content = content;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ConvertedJpgPage {
   public int hashCode() {
     return Objects.hash(pageNumber, Arrays.hashCode(content));
   }
-
 
   @Override
   public String toString() {

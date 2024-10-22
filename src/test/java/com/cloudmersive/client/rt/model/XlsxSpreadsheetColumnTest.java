@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XlsxSpreadsheetColumn
  */
-public class XlsxSpreadsheetColumnTest {
+class XlsxSpreadsheetColumnTest {
     private final XlsxSpreadsheetColumn model = new XlsxSpreadsheetColumn();
 
     /**
      * Model tests for XlsxSpreadsheetColumn
      */
     @Test
-    public void testXlsxSpreadsheetColumn() {
+    void testXlsxSpreadsheetColumn() {
         // TODO: test XlsxSpreadsheetColumn
     }
 
@@ -44,7 +41,7 @@ public class XlsxSpreadsheetColumnTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -52,7 +49,7 @@ public class XlsxSpreadsheetColumnTest {
      * Test the property 'headingCell'
      */
     @Test
-    public void headingCellTest() {
+    void headingCellTest() {
         // TODO: test headingCell
     }
 

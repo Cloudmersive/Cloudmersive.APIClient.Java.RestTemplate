@@ -20,9 +20,12 @@ import com.cloudmersive.client.rt.model.IPIntelligenceResponse;
 import com.cloudmersive.client.rt.model.IPReverseDNSLookupResponse;
 import com.cloudmersive.client.rt.model.IPThreatResponse;
 import com.cloudmersive.client.rt.model.TorNodeResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,8 +34,8 @@ import java.util.Map;
 /**
  * API tests for IpAddressApi
  */
-@Ignore
-public class IpAddressApiTest {
+@Disabled
+class IpAddressApiTest {
 
     private final IpAddressApi api = new IpAddressApi();
 
@@ -42,12 +45,13 @@ public class IpAddressApiTest {
      *
      * Identify an IP address&#39;s street address.  Useful for security and UX applications.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressGeolocateStreetAddressTest() {
+    void iPAddressGeolocateStreetAddressTest() {
         String value = null;
+
         GeolocateStreetAddressResponse response = api.iPAddressGeolocateStreetAddress(value);
 
         // TODO: test validations
@@ -58,12 +62,13 @@ public class IpAddressApiTest {
      *
      * Identify key intelligence about an IP address, including if it is a known threat IP, known bot, Tor exit node, as well as the location of the IP address.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressIpIntelligenceTest() {
+    void iPAddressIpIntelligenceTest() {
         String value = null;
+
         IPIntelligenceResponse response = api.iPAddressIpIntelligence(value);
 
         // TODO: test validations
@@ -74,12 +79,13 @@ public class IpAddressApiTest {
      *
      * Check if the input IP address is a Bot, robot, or otherwise a non-user entity.  Leverages real-time signals to check against known high-probability bots..
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressIsBotTest() {
+    void iPAddressIsBotTest() {
         String value = null;
+
         BotCheckResponse response = api.iPAddressIsBot(value);
 
         // TODO: test validations
@@ -90,12 +96,13 @@ public class IpAddressApiTest {
      *
      * Check if the input IP address is a known threat IP address.  Checks against known bad IPs, botnets, compromised servers, and other lists of threats.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressIsThreatTest() {
+    void iPAddressIsThreatTest() {
         String value = null;
+
         IPThreatResponse response = api.iPAddressIsThreat(value);
 
         // TODO: test validations
@@ -106,12 +113,13 @@ public class IpAddressApiTest {
      *
      * Check if the input IP address is a Tor exit node server.  Tor servers are a type of privacy-preserving technology that can hide the original IP address who makes a request.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressIsTorNodeTest() {
+    void iPAddressIsTorNodeTest() {
         String value = null;
+
         TorNodeResponse response = api.iPAddressIsTorNode(value);
 
         // TODO: test validations
@@ -122,12 +130,13 @@ public class IpAddressApiTest {
      *
      * Identify an IP address Country, State/Provence, City, Zip/Postal Code, etc.  Useful for security and UX applications.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressPostTest() {
+    void iPAddressPostTest() {
         String value = null;
+
         GeolocateResponse response = api.iPAddressPost(value);
 
         // TODO: test validations
@@ -138,12 +147,13 @@ public class IpAddressApiTest {
      *
      * Gets the domain name, if any, associated with the IP address.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void iPAddressReverseDomainLookupTest() {
+    void iPAddressReverseDomainLookupTest() {
         String value = null;
+
         IPReverseDNSLookupResponse response = api.iPAddressReverseDomainLookup(value);
 
         // TODO: test validations

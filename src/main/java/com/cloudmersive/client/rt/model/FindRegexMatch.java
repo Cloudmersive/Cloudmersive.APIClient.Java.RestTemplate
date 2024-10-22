@@ -20,16 +20,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual regular expression match result of finding a target regex in a longer text string
  */
-@ApiModel(description = "Individual regular expression match result of finding a target regex in a longer text string")
 @JsonPropertyOrder({
   FindRegexMatch.JSON_PROPERTY_CHARACTER_OFFSET_START,
   FindRegexMatch.JSON_PROPERTY_CHARACTER_OFFSET_END,
@@ -37,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FindRegexMatch.JSON_PROPERTY_MATCH_VALUE,
   FindRegexMatch.JSON_PROPERTY_MATCH_GROUPS
 })
-@JsonTypeName("FindRegexMatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FindRegexMatch {
   public static final String JSON_PROPERTY_CHARACTER_OFFSET_START = "CharacterOffsetStart";
   private Integer characterOffsetStart;
@@ -53,8 +51,10 @@ public class FindRegexMatch {
   private String matchValue;
 
   public static final String JSON_PROPERTY_MATCH_GROUPS = "MatchGroups";
-  private List<String> matchGroups = null;
+  private List<String> matchGroups = new ArrayList<>();
 
+  public FindRegexMatch() {
+  }
 
   public FindRegexMatch characterOffsetStart(Integer characterOffsetStart) {
     
@@ -62,12 +62,11 @@ public class FindRegexMatch {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the start of the match
    * @return characterOffsetStart
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the start of the match")
   @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_START)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -76,10 +75,11 @@ public class FindRegexMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_START)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCharacterOffsetStart(Integer characterOffsetStart) {
     this.characterOffsetStart = characterOffsetStart;
   }
-
 
   public FindRegexMatch characterOffsetEnd(Integer characterOffsetEnd) {
     
@@ -87,12 +87,11 @@ public class FindRegexMatch {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the end of the match
    * @return characterOffsetEnd
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the end of the match")
   @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_END)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -101,10 +100,11 @@ public class FindRegexMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CHARACTER_OFFSET_END)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCharacterOffsetEnd(Integer characterOffsetEnd) {
     this.characterOffsetEnd = characterOffsetEnd;
   }
-
 
   public FindRegexMatch containingLine(String containingLine) {
     
@@ -112,12 +112,11 @@ public class FindRegexMatch {
     return this;
   }
 
-   /**
+  /**
    * Text content of the line containing the match
    * @return containingLine
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text content of the line containing the match")
   @JsonProperty(JSON_PROPERTY_CONTAINING_LINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,10 +125,11 @@ public class FindRegexMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINING_LINE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainingLine(String containingLine) {
     this.containingLine = containingLine;
   }
-
 
   public FindRegexMatch matchValue(String matchValue) {
     
@@ -137,12 +137,11 @@ public class FindRegexMatch {
     return this;
   }
 
-   /**
+  /**
    * The match value
    * @return matchValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The match value")
   @JsonProperty(JSON_PROPERTY_MATCH_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -151,10 +150,11 @@ public class FindRegexMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchValue(String matchValue) {
     this.matchValue = matchValue;
   }
-
 
   public FindRegexMatch matchGroups(List<String> matchGroups) {
     
@@ -164,18 +164,17 @@ public class FindRegexMatch {
 
   public FindRegexMatch addMatchGroupsItem(String matchGroupsItem) {
     if (this.matchGroups == null) {
-      this.matchGroups = new ArrayList<String>();
+      this.matchGroups = new ArrayList<>();
     }
     this.matchGroups.add(matchGroupsItem);
     return this;
   }
 
-   /**
+  /**
    * Regular expression regex match groups; these correspond to the match values
    * @return matchGroups
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Regular expression regex match groups; these correspond to the match values")
   @JsonProperty(JSON_PROPERTY_MATCH_GROUPS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,10 +183,11 @@ public class FindRegexMatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_GROUPS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchGroups(List<String> matchGroups) {
     this.matchGroups = matchGroups;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -209,7 +209,6 @@ public class FindRegexMatch {
   public int hashCode() {
     return Objects.hash(characterOffsetStart, characterOffsetEnd, containingLine, matchValue, matchGroups);
   }
-
 
   @Override
   public String toString() {

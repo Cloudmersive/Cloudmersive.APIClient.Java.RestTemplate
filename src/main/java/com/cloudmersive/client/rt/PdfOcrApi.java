@@ -1,6 +1,7 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import java.io.File;
 import com.cloudmersive.client.rt.model.PdfToLinesWithLocationResult;
@@ -28,28 +29,66 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.PdfOcrApi")
-public class PdfOcrApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class PdfOcrApi extends BaseApi {
 
     public PdfOcrApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public PdfOcrApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
-    public ApiClient getApiClient() {
-        return apiClient;
+    /**
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED
+     * 
+     * <p><b>200</b> - OK
+     * @param asyncJobID  (required)
+     * @return PdfToTextResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public PdfToTextResponse pdfOcrGetAsyncJobStatus(String asyncJobID) throws RestClientException {
+        return pdfOcrGetAsyncJobStatusWithHttpInfo(asyncJobID).getBody();
     }
 
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
+    /**
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED
+     * 
+     * <p><b>200</b> - OK
+     * @param asyncJobID  (required)
+     * @return ResponseEntity&lt;PdfToTextResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<PdfToTextResponse> pdfOcrGetAsyncJobStatusWithHttpInfo(String asyncJobID) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'asyncJobID' is set
+        if (asyncJobID == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'asyncJobID' when calling pdfOcrGetAsyncJobStatus");
+        }
+        
 
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "AsyncJobID", asyncJobID));
+        
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<PdfToTextResponse> localReturnType = new ParameterizedTypeReference<PdfToTextResponse>() {};
+        return apiClient.invokeAPI("/ocr/pdf/get-job-status", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
     /**
      * Convert a PDF into text lines with location
      * Converts a PDF into lines/text with location information and other metdata via Optical Character Recognition.  This API is intended to be run on scanned documents.  If you want to OCR photos (e.g. taken with a smart phone camera), be sure to use the photo/toText API instead, as it is designed to unskew the image first.
@@ -75,41 +114,40 @@ public class PdfOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PdfToLinesWithLocationResult> pdfOcrPdfToLinesWithLocationWithHttpInfo(org.springframework.core.io.Resource imageFile, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling pdfOcrPdfToLinesWithLocation");
         }
         
-        String path = apiClient.expandPath("/ocr/pdf/to/lines-with-location", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PdfToLinesWithLocationResult> returnType = new ParameterizedTypeReference<PdfToLinesWithLocationResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PdfToLinesWithLocationResult> localReturnType = new ParameterizedTypeReference<PdfToLinesWithLocationResult>() {};
+        return apiClient.invokeAPI("/ocr/pdf/to/lines-with-location", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Convert a PDF into words with location
@@ -136,41 +174,40 @@ public class PdfOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PdfToWordsWithLocationResult> pdfOcrPdfToWordsWithLocationWithHttpInfo(org.springframework.core.io.Resource imageFile, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling pdfOcrPdfToWordsWithLocation");
         }
         
-        String path = apiClient.expandPath("/ocr/pdf/to/words-with-location", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PdfToWordsWithLocationResult> returnType = new ParameterizedTypeReference<PdfToWordsWithLocationResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PdfToWordsWithLocationResult> localReturnType = new ParameterizedTypeReference<PdfToWordsWithLocationResult>() {};
+        return apiClient.invokeAPI("/ocr/pdf/to/words-with-location", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Converts an uploaded PDF file into text via Optical Character Recognition.
@@ -199,42 +236,66 @@ public class PdfOcrApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<PdfToTextResponse> pdfOcrPostWithHttpInfo(org.springframework.core.io.Resource imageFile, String recognitionMode, String language, String preprocessing) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'imageFile' is set
         if (imageFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'imageFile' when calling pdfOcrPost");
         }
         
-        String path = apiClient.expandPath("/ocr/pdf/toText", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (recognitionMode != null)
-        headerParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
+        localVarHeaderParams.add("recognitionMode", apiClient.parameterToString(recognitionMode));
         if (language != null)
-        headerParams.add("language", apiClient.parameterToString(language));
+        localVarHeaderParams.add("language", apiClient.parameterToString(language));
         if (preprocessing != null)
-        headerParams.add("preprocessing", apiClient.parameterToString(preprocessing));
+        localVarHeaderParams.add("preprocessing", apiClient.parameterToString(preprocessing));
 
         if (imageFile != null)
-            formParams.add("imageFile", imageFile);
+            localVarFormParams.add("imageFile", imageFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<PdfToTextResponse> returnType = new ParameterizedTypeReference<PdfToTextResponse>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<PdfToTextResponse> localReturnType = new ParameterizedTypeReference<PdfToTextResponse>() {};
+        return apiClient.invokeAPI("/ocr/pdf/toText", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

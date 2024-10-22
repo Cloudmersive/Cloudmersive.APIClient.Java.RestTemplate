@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Field definition and value in the form
  */
-@ApiModel(description = "Field definition and value in the form")
 @JsonPropertyOrder({
   PdfFormField.JSON_PROPERTY_FIELD_NAME,
   PdfFormField.JSON_PROPERTY_FIELD_TYPE,
   PdfFormField.JSON_PROPERTY_FIELD_VALUE,
   PdfFormField.JSON_PROPERTY_FIELD_COMBO_BOX_SELECTED_INDEX
 })
-@JsonTypeName("PdfFormField")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfFormField {
   public static final String JSON_PROPERTY_FIELD_NAME = "FieldName";
   private String fieldName;
@@ -49,6 +46,8 @@ public class PdfFormField {
   public static final String JSON_PROPERTY_FIELD_COMBO_BOX_SELECTED_INDEX = "FieldComboBoxSelectedIndex";
   private Integer fieldComboBoxSelectedIndex;
 
+  public PdfFormField() {
+  }
 
   public PdfFormField fieldName(String fieldName) {
     
@@ -56,12 +55,11 @@ public class PdfFormField {
     return this;
   }
 
-   /**
+  /**
    * Name of the form field
    * @return fieldName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the form field")
   @JsonProperty(JSON_PROPERTY_FIELD_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class PdfFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldName(String fieldName) {
     this.fieldName = fieldName;
   }
-
 
   public PdfFormField fieldType(String fieldType) {
     
@@ -81,12 +80,11 @@ public class PdfFormField {
     return this;
   }
 
-   /**
+  /**
    * The data type of the field; possible values are Text (FieldValue will be a string), Checkbox (FieldValue can be \&quot;true\&quot; or \&quot;false\&quot;), ComboBox (FieldComboBoxSelectedIndex will also be populated), Other
    * @return fieldType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The data type of the field; possible values are Text (FieldValue will be a string), Checkbox (FieldValue can be \"true\" or \"false\"), ComboBox (FieldComboBoxSelectedIndex will also be populated), Other")
   @JsonProperty(JSON_PROPERTY_FIELD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class PdfFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldType(String fieldType) {
     this.fieldType = fieldType;
   }
-
 
   public PdfFormField fieldValue(String fieldValue) {
     
@@ -106,12 +105,11 @@ public class PdfFormField {
     return this;
   }
 
-   /**
+  /**
    * Value of the form field
    * @return fieldValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value of the form field")
   @JsonProperty(JSON_PROPERTY_FIELD_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class PdfFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldValue(String fieldValue) {
     this.fieldValue = fieldValue;
   }
-
 
   public PdfFormField fieldComboBoxSelectedIndex(Integer fieldComboBoxSelectedIndex) {
     
@@ -131,12 +130,11 @@ public class PdfFormField {
     return this;
   }
 
-   /**
+  /**
    * Applies to ComboBox field types only; specifies the selected index of the combo box selection if available
    * @return fieldComboBoxSelectedIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Applies to ComboBox field types only; specifies the selected index of the combo box selection if available")
   @JsonProperty(JSON_PROPERTY_FIELD_COMBO_BOX_SELECTED_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class PdfFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_COMBO_BOX_SELECTED_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldComboBoxSelectedIndex(Integer fieldComboBoxSelectedIndex) {
     this.fieldComboBoxSelectedIndex = fieldComboBoxSelectedIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class PdfFormField {
   public int hashCode() {
     return Objects.hash(fieldName, fieldType, fieldValue, fieldComboBoxSelectedIndex);
   }
-
 
   @Override
   public String toString() {

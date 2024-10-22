@@ -23,9 +23,12 @@ import com.cloudmersive.client.rt.model.SimilarityAnalysisRequest;
 import com.cloudmersive.client.rt.model.SimilarityAnalysisResponse;
 import com.cloudmersive.client.rt.model.SubjectivityAnalysisRequest;
 import com.cloudmersive.client.rt.model.SubjectivityAnalysisResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,8 +37,8 @@ import java.util.Map;
 /**
  * API tests for AnalyticsApi
  */
-@Ignore
-public class AnalyticsApiTest {
+@Disabled
+class AnalyticsApiTest {
 
     private final AnalyticsApi api = new AnalyticsApi();
 
@@ -45,12 +48,13 @@ public class AnalyticsApiTest {
      *
      * Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void analyticsHateSpeechTest() {
+    void analyticsHateSpeechTest() {
         HateSpeechAnalysisRequest input = null;
+
         HateSpeechAnalysisResponse response = api.analyticsHateSpeech(input);
 
         // TODO: test validations
@@ -61,12 +65,13 @@ public class AnalyticsApiTest {
      *
      * Analyze input text using advanced Profanity and Obscene Language Analysis to determine if the input contains profane language.  Supports English language input.  Consumes 1-2 API calls per sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void analyticsProfanityTest() {
+    void analyticsProfanityTest() {
         ProfanityAnalysisRequest input = null;
+
         ProfanityAnalysisResponse response = api.analyticsProfanity(input);
 
         // TODO: test validations
@@ -77,12 +82,13 @@ public class AnalyticsApiTest {
      *
      * Analyze input text using advanced Sentiment Analysis to determine if the input is positive, negative, or neutral.  Supports English language input.  Consumes 1-2 API calls per sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void analyticsSentimentTest() {
+    void analyticsSentimentTest() {
         SentimentAnalysisRequest input = null;
+
         SentimentAnalysisResponse response = api.analyticsSentiment(input);
 
         // TODO: test validations
@@ -93,12 +99,13 @@ public class AnalyticsApiTest {
      *
      * Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void analyticsSimilarityTest() {
+    void analyticsSimilarityTest() {
         SimilarityAnalysisRequest input = null;
+
         SimilarityAnalysisResponse response = api.analyticsSimilarity(input);
 
         // TODO: test validations
@@ -109,12 +116,13 @@ public class AnalyticsApiTest {
      *
      * Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void analyticsSubjectivityTest() {
+    void analyticsSubjectivityTest() {
         SubjectivityAnalysisRequest input = null;
+
         SubjectivityAnalysisResponse response = api.analyticsSubjectivity(input);
 
         // TODO: test validations

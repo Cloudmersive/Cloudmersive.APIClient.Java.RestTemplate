@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for WhoisResponse
  */
-public class WhoisResponseTest {
+class WhoisResponseTest {
     private final WhoisResponse model = new WhoisResponse();
 
     /**
      * Model tests for WhoisResponse
      */
     @Test
-    public void testWhoisResponse() {
+    void testWhoisResponse() {
         // TODO: test WhoisResponse
     }
 
@@ -44,7 +41,7 @@ public class WhoisResponseTest {
      * Test the property 'validDomain'
      */
     @Test
-    public void validDomainTest() {
+    void validDomainTest() {
         // TODO: test validDomain
     }
 
@@ -52,7 +49,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantName'
      */
     @Test
-    public void registrantNameTest() {
+    void registrantNameTest() {
         // TODO: test registrantName
     }
 
@@ -60,7 +57,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantOrganization'
      */
     @Test
-    public void registrantOrganizationTest() {
+    void registrantOrganizationTest() {
         // TODO: test registrantOrganization
     }
 
@@ -68,7 +65,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantEmail'
      */
     @Test
-    public void registrantEmailTest() {
+    void registrantEmailTest() {
         // TODO: test registrantEmail
     }
 
@@ -76,7 +73,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantStreetNumber'
      */
     @Test
-    public void registrantStreetNumberTest() {
+    void registrantStreetNumberTest() {
         // TODO: test registrantStreetNumber
     }
 
@@ -84,7 +81,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantStreet'
      */
     @Test
-    public void registrantStreetTest() {
+    void registrantStreetTest() {
         // TODO: test registrantStreet
     }
 
@@ -92,7 +89,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantCity'
      */
     @Test
-    public void registrantCityTest() {
+    void registrantCityTest() {
         // TODO: test registrantCity
     }
 
@@ -100,7 +97,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantStateOrProvince'
      */
     @Test
-    public void registrantStateOrProvinceTest() {
+    void registrantStateOrProvinceTest() {
         // TODO: test registrantStateOrProvince
     }
 
@@ -108,7 +105,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantPostalCode'
      */
     @Test
-    public void registrantPostalCodeTest() {
+    void registrantPostalCodeTest() {
         // TODO: test registrantPostalCode
     }
 
@@ -116,7 +113,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantCountry'
      */
     @Test
-    public void registrantCountryTest() {
+    void registrantCountryTest() {
         // TODO: test registrantCountry
     }
 
@@ -124,7 +121,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantRawAddress'
      */
     @Test
-    public void registrantRawAddressTest() {
+    void registrantRawAddressTest() {
         // TODO: test registrantRawAddress
     }
 
@@ -132,7 +129,7 @@ public class WhoisResponseTest {
      * Test the property 'registrantTelephone'
      */
     @Test
-    public void registrantTelephoneTest() {
+    void registrantTelephoneTest() {
         // TODO: test registrantTelephone
     }
 
@@ -140,7 +137,7 @@ public class WhoisResponseTest {
      * Test the property 'whoisServer'
      */
     @Test
-    public void whoisServerTest() {
+    void whoisServerTest() {
         // TODO: test whoisServer
     }
 
@@ -148,7 +145,7 @@ public class WhoisResponseTest {
      * Test the property 'rawTextRecord'
      */
     @Test
-    public void rawTextRecordTest() {
+    void rawTextRecordTest() {
         // TODO: test rawTextRecord
     }
 
@@ -156,7 +153,7 @@ public class WhoisResponseTest {
      * Test the property 'createdDt'
      */
     @Test
-    public void createdDtTest() {
+    void createdDtTest() {
         // TODO: test createdDt
     }
 

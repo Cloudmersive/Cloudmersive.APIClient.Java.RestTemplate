@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for VideoFile
  */
-public class VideoFileTest {
+class VideoFileTest {
     private final VideoFile model = new VideoFile();
 
     /**
      * Model tests for VideoFile
      */
     @Test
-    public void testVideoFile() {
+    void testVideoFile() {
         // TODO: test VideoFile
     }
 
@@ -43,7 +40,7 @@ public class VideoFileTest {
      * Test the property 'videoNumber'
      */
     @Test
-    public void videoNumberTest() {
+    void videoNumberTest() {
         // TODO: test videoNumber
     }
 
@@ -51,7 +48,7 @@ public class VideoFileTest {
      * Test the property 'content'
      */
     @Test
-    public void contentTest() {
+    void contentTest() {
         // TODO: test content
     }
 

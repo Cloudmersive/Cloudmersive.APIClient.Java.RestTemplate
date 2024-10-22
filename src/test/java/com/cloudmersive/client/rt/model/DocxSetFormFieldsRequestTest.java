@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxSetFormFieldsRequest
  */
-public class DocxSetFormFieldsRequestTest {
+class DocxSetFormFieldsRequestTest {
     private final DocxSetFormFieldsRequest model = new DocxSetFormFieldsRequest();
 
     /**
      * Model tests for DocxSetFormFieldsRequest
      */
     @Test
-    public void testDocxSetFormFieldsRequest() {
+    void testDocxSetFormFieldsRequest() {
         // TODO: test DocxSetFormFieldsRequest
     }
 
@@ -46,7 +44,7 @@ public class DocxSetFormFieldsRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -54,7 +52,7 @@ public class DocxSetFormFieldsRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -62,7 +60,7 @@ public class DocxSetFormFieldsRequestTest {
      * Test the property 'handlebarFieldsToFill'
      */
     @Test
-    public void handlebarFieldsToFillTest() {
+    void handlebarFieldsToFillTest() {
         // TODO: test handlebarFieldsToFill
     }
 

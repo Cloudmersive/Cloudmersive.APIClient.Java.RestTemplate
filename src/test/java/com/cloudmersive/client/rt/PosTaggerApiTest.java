@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.PosRequest;
 import com.cloudmersive.client.rt.model.PosResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for PosTaggerApi
  */
-@Ignore
-public class PosTaggerApiTest {
+@Disabled
+class PosTaggerApiTest {
 
     private final PosTaggerApi api = new PosTaggerApi();
 
@@ -37,12 +40,13 @@ public class PosTaggerApiTest {
      *
      * Part-of-speech (POS) tag a string, find the adjectives, and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void posTaggerTagAdjectivesTest() {
+    void posTaggerTagAdjectivesTest() {
         PosRequest request = null;
+
         PosResponse response = api.posTaggerTagAdjectives(request);
 
         // TODO: test validations
@@ -53,12 +57,13 @@ public class PosTaggerApiTest {
      *
      * Part-of-speech (POS) tag a string, find the adverbs, and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void posTaggerTagAdverbsTest() {
+    void posTaggerTagAdverbsTest() {
         PosRequest request = null;
+
         PosResponse response = api.posTaggerTagAdverbs(request);
 
         // TODO: test validations
@@ -69,12 +74,13 @@ public class PosTaggerApiTest {
      *
      * Part-of-speech (POS) tag a string, find the nouns, and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void posTaggerTagNounsTest() {
+    void posTaggerTagNounsTest() {
         PosRequest request = null;
+
         PosResponse response = api.posTaggerTagNouns(request);
 
         // TODO: test validations
@@ -85,12 +91,13 @@ public class PosTaggerApiTest {
      *
      * Part-of-speech (POS) tag a string, find the pronouns, and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void posTaggerTagPronounsTest() {
+    void posTaggerTagPronounsTest() {
         PosRequest request = null;
+
         PosResponse response = api.posTaggerTagPronouns(request);
 
         // TODO: test validations
@@ -101,12 +108,13 @@ public class PosTaggerApiTest {
      *
      * Part-of-speech (POS) tag a string and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void posTaggerTagSentenceTest() {
+    void posTaggerTagSentenceTest() {
         PosRequest request = null;
+
         PosResponse response = api.posTaggerTagSentence(request);
 
         // TODO: test validations
@@ -117,12 +125,13 @@ public class PosTaggerApiTest {
      *
      * Part-of-speech (POS) tag a string, find the verbs, and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void posTaggerTagVerbsTest() {
+    void posTaggerTagVerbsTest() {
         PosRequest request = null;
+
         PosResponse response = api.posTaggerTagVerbs(request);
 
         // TODO: test validations

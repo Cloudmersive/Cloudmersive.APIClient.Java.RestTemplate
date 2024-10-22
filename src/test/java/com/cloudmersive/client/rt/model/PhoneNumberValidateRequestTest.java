@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PhoneNumberValidateRequest
  */
-public class PhoneNumberValidateRequestTest {
+class PhoneNumberValidateRequestTest {
     private final PhoneNumberValidateRequest model = new PhoneNumberValidateRequest();
 
     /**
      * Model tests for PhoneNumberValidateRequest
      */
     @Test
-    public void testPhoneNumberValidateRequest() {
+    void testPhoneNumberValidateRequest() {
         // TODO: test PhoneNumberValidateRequest
     }
 
@@ -43,7 +40,7 @@ public class PhoneNumberValidateRequestTest {
      * Test the property 'phoneNumber'
      */
     @Test
-    public void phoneNumberTest() {
+    void phoneNumberTest() {
         // TODO: test phoneNumber
     }
 
@@ -51,7 +48,7 @@ public class PhoneNumberValidateRequestTest {
      * Test the property 'defaultCountryCode'
      */
     @Test
-    public void defaultCountryCodeTest() {
+    void defaultCountryCodeTest() {
         // TODO: test defaultCountryCode
     }
 

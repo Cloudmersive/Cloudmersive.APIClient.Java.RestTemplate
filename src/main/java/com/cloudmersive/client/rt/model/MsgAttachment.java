@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * An MSG file attachment
  */
-@ApiModel(description = "An MSG file attachment")
 @JsonPropertyOrder({
   MsgAttachment.JSON_PROPERTY_NAME,
   MsgAttachment.JSON_PROPERTY_CONTENT
 })
-@JsonTypeName("MsgAttachment")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MsgAttachment {
   public static final String JSON_PROPERTY_NAME = "Name";
   private String name;
@@ -41,6 +38,8 @@ public class MsgAttachment {
   public static final String JSON_PROPERTY_CONTENT = "Content";
   private byte[] content;
 
+  public MsgAttachment() {
+  }
 
   public MsgAttachment name(String name) {
     
@@ -48,12 +47,11 @@ public class MsgAttachment {
     return this;
   }
 
-   /**
+  /**
    * Name of the attachment, including file extension
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the attachment, including file extension")
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class MsgAttachment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setName(String name) {
     this.name = name;
   }
-
 
   public MsgAttachment content(byte[] content) {
     
@@ -73,12 +72,11 @@ public class MsgAttachment {
     return this;
   }
 
-   /**
+  /**
    * The MSG attachment as a byte[]
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The MSG attachment as a byte[]")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class MsgAttachment {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(byte[] content) {
     this.content = content;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class MsgAttachment {
   public int hashCode() {
     return Objects.hash(name, Arrays.hashCode(content));
   }
-
 
   @Override
   public String toString() {

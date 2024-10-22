@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * DocxTemplateOperation
@@ -32,8 +31,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxTemplateOperation.JSON_PROPERTY_MATCH_AGAINST,
   DocxTemplateOperation.JSON_PROPERTY_REPLACE_WITH
 })
-@JsonTypeName("DocxTemplateOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTemplateOperation {
   /**
    * Operation action to take; possible values are \&quot;Replace\&quot;
@@ -77,6 +75,8 @@ public class DocxTemplateOperation {
   public static final String JSON_PROPERTY_REPLACE_WITH = "ReplaceWith";
   private String replaceWith;
 
+  public DocxTemplateOperation() {
+  }
 
   public DocxTemplateOperation action(ActionEnum action) {
     
@@ -84,12 +84,11 @@ public class DocxTemplateOperation {
     return this;
   }
 
-   /**
+  /**
    * Operation action to take; possible values are \&quot;Replace\&quot;
    * @return action
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Operation action to take; possible values are \"Replace\"")
   @JsonProperty(JSON_PROPERTY_ACTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class DocxTemplateOperation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ACTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAction(ActionEnum action) {
     this.action = action;
   }
-
 
   public DocxTemplateOperation matchAgainst(String matchAgainst) {
     
@@ -109,12 +109,11 @@ public class DocxTemplateOperation {
     return this;
   }
 
-   /**
+  /**
    * For Replace operations, the string to match against (to be replaced with ReplaceWith string)
    * @return matchAgainst
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For Replace operations, the string to match against (to be replaced with ReplaceWith string)")
   @JsonProperty(JSON_PROPERTY_MATCH_AGAINST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,10 +122,11 @@ public class DocxTemplateOperation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCH_AGAINST)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatchAgainst(String matchAgainst) {
     this.matchAgainst = matchAgainst;
   }
-
 
   public DocxTemplateOperation replaceWith(String replaceWith) {
     
@@ -134,12 +134,11 @@ public class DocxTemplateOperation {
     return this;
   }
 
-   /**
+  /**
    * For Replace operations, the string to Replace the original string with
    * @return replaceWith
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For Replace operations, the string to Replace the original string with")
   @JsonProperty(JSON_PROPERTY_REPLACE_WITH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,10 +147,11 @@ public class DocxTemplateOperation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPLACE_WITH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReplaceWith(String replaceWith) {
     this.replaceWith = replaceWith;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -171,7 +171,6 @@ public class DocxTemplateOperation {
   public int hashCode() {
     return Objects.hash(action, matchAgainst, replaceWith);
   }
-
 
   @Override
   public String toString() {

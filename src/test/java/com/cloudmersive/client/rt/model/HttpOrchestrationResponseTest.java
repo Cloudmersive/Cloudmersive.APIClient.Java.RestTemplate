@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpOrchestrationResponse
  */
-public class HttpOrchestrationResponseTest {
+class HttpOrchestrationResponseTest {
     private final HttpOrchestrationResponse model = new HttpOrchestrationResponse();
 
     /**
      * Model tests for HttpOrchestrationResponse
      */
     @Test
-    public void testHttpOrchestrationResponse() {
+    void testHttpOrchestrationResponse() {
         // TODO: test HttpOrchestrationResponse
     }
 
@@ -43,7 +40,7 @@ public class HttpOrchestrationResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class HttpOrchestrationResponseTest {
      * Test the property 'tasksCompleted'
      */
     @Test
-    public void tasksCompletedTest() {
+    void tasksCompletedTest() {
         // TODO: test tasksCompleted
     }
 
@@ -59,7 +56,7 @@ public class HttpOrchestrationResponseTest {
      * Test the property 'outputStringType'
      */
     @Test
-    public void outputStringTypeTest() {
+    void outputStringTypeTest() {
         // TODO: test outputStringType
     }
 
@@ -67,7 +64,7 @@ public class HttpOrchestrationResponseTest {
      * Test the property 'outputBinaryType'
      */
     @Test
-    public void outputBinaryTypeTest() {
+    void outputBinaryTypeTest() {
         // TODO: test outputBinaryType
     }
 

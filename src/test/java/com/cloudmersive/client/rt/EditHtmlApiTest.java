@@ -18,9 +18,12 @@ import com.cloudmersive.client.rt.model.HtmlGetLanguageResult;
 import com.cloudmersive.client.rt.model.HtmlGetLinksResponse;
 import com.cloudmersive.client.rt.model.HtmlGetRelCanonicalUrlResult;
 import com.cloudmersive.client.rt.model.HtmlGetSitemapUrlResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,8 +32,8 @@ import java.util.Map;
 /**
  * API tests for EditHtmlApi
  */
-@Ignore
-public class EditHtmlApiTest {
+@Disabled
+class EditHtmlApiTest {
 
     private final EditHtmlApi api = new EditHtmlApi();
 
@@ -40,14 +43,15 @@ public class EditHtmlApiTest {
      *
      * Appends an HTML tag to the HEAD section of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlAppendHeaderTagTest() {
+    void editHtmlHtmlAppendHeaderTagTest() {
         String htmlTag = null;
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlAppendHeaderTag(htmlTag, inputFileUrl, inputFile);
 
         // TODO: test validations
@@ -58,16 +62,17 @@ public class EditHtmlApiTest {
      *
      * Appends a heading to the end of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlAppendHeadingTest() {
+    void editHtmlHtmlAppendHeadingTest() {
         String headingText = null;
         String inputFileUrl = null;
         Integer headingSize = null;
         String cssStyle = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlAppendHeading(headingText, inputFileUrl, headingSize, cssStyle, inputFile);
 
         // TODO: test validations
@@ -78,15 +83,16 @@ public class EditHtmlApiTest {
      *
      * Appends an image to the end of an HTML document using a URL.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlAppendImageFromUrlTest() {
+    void editHtmlHtmlAppendImageFromUrlTest() {
         String imageUrl = null;
         String inputFileUrl = null;
         String cssStyle = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlAppendImageFromUrl(imageUrl, inputFileUrl, cssStyle, inputFile);
 
         // TODO: test validations
@@ -97,17 +103,18 @@ public class EditHtmlApiTest {
      *
      * Appends a base64 inline image to the end of an HTML document from an input file or URL.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlAppendImageInlineTest() {
+    void editHtmlHtmlAppendImageInlineTest() {
         String inputFileUrl = null;
         String imageUrl = null;
         String cssStyle = null;
         String imageExtension = null;
         org.springframework.core.io.Resource inputFile = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.editHtmlHtmlAppendImageInline(inputFileUrl, imageUrl, cssStyle, imageExtension, inputFile, imageFile);
 
         // TODO: test validations
@@ -118,15 +125,16 @@ public class EditHtmlApiTest {
      *
      * Appends a paragraph to the end of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlAppendParagraphTest() {
+    void editHtmlHtmlAppendParagraphTest() {
         String paragraphText = null;
         String inputFileUrl = null;
         String cssStyle = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlAppendParagraph(paragraphText, inputFileUrl, cssStyle, inputFile);
 
         // TODO: test validations
@@ -137,16 +145,17 @@ public class EditHtmlApiTest {
      *
      * Returns a blank HTML Document format file.  The file is blank, with no contents by default.  Use the optional input parameters to add various starting elements.  Use additional editing commands such as Append Header, Append Paragraph or Append Image from URL to populate the document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlCreateBlankDocumentTest() {
+    void editHtmlHtmlCreateBlankDocumentTest() {
         String title = null;
         String cssUrl = null;
         String cssInline = null;
         String javascriptUrl = null;
         String javascriptInline = null;
+
         byte[] response = api.editHtmlHtmlCreateBlankDocument(title, cssUrl, cssInline, javascriptUrl, javascriptInline);
 
         // TODO: test validations
@@ -157,13 +166,14 @@ public class EditHtmlApiTest {
      *
      * Retrieves the language code (e.g. \&quot;en\&quot; or \&quot;de\&quot;) of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlGetLanguageTest() {
+    void editHtmlHtmlGetLanguageTest() {
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         HtmlGetLanguageResult response = api.editHtmlHtmlGetLanguage(inputFileUrl, inputFile);
 
         // TODO: test validations
@@ -174,14 +184,15 @@ public class EditHtmlApiTest {
      *
      * Extracts the resolved link URLs, fully-qualified if possible, from an input HTML file.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlGetLinksTest() {
+    void editHtmlHtmlGetLinksTest() {
         String inputFileUrl = null;
         String baseUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         HtmlGetLinksResponse response = api.editHtmlHtmlGetLinks(inputFileUrl, baseUrl, inputFile);
 
         // TODO: test validations
@@ -192,13 +203,14 @@ public class EditHtmlApiTest {
      *
      * Gets the rel canonical URL of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlGetRelCanonicalTest() {
+    void editHtmlHtmlGetRelCanonicalTest() {
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         HtmlGetRelCanonicalUrlResult response = api.editHtmlHtmlGetRelCanonical(inputFileUrl, inputFile);
 
         // TODO: test validations
@@ -209,13 +221,14 @@ public class EditHtmlApiTest {
      *
      * Gets the sitemap link URL of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlGetSitemapTest() {
+    void editHtmlHtmlGetSitemapTest() {
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         HtmlGetSitemapUrlResult response = api.editHtmlHtmlGetSitemap(inputFileUrl, inputFile);
 
         // TODO: test validations
@@ -226,14 +239,15 @@ public class EditHtmlApiTest {
      *
      * Sets the language code of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlSetLanguageTest() {
+    void editHtmlHtmlSetLanguageTest() {
         String languageCode = null;
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlSetLanguage(languageCode, inputFileUrl, inputFile);
 
         // TODO: test validations
@@ -244,14 +258,15 @@ public class EditHtmlApiTest {
      *
      * Sets the rel canonical URL of an HTML document.  This is useful for telling search engines and other indexers which pages are duplicates of eachother; any pages with the rel&#x3D;canonical tag will be treated as duplicates of the canonical URL.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlSetRelCanonicalTest() {
+    void editHtmlHtmlSetRelCanonicalTest() {
         String canonicalUrl = null;
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlSetRelCanonical(canonicalUrl, inputFileUrl, inputFile);
 
         // TODO: test validations
@@ -262,14 +277,15 @@ public class EditHtmlApiTest {
      *
      * Sets the sitemap URL of an HTML document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editHtmlHtmlSetSitemapUrlTest() {
+    void editHtmlHtmlSetSitemapUrlTest() {
         String sitemapUrl = null;
         String inputFileUrl = null;
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editHtmlHtmlSetSitemapUrl(sitemapUrl, inputFileUrl, inputFile);
 
         // TODO: test validations

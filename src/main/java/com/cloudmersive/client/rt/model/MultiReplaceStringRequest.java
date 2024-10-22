@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a multiple string replacement request
  */
-@ApiModel(description = "Input to a multiple string replacement request")
 @JsonPropertyOrder({
   MultiReplaceStringRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   MultiReplaceStringRequest.JSON_PROPERTY_INPUT_FILE_URL,
   MultiReplaceStringRequest.JSON_PROPERTY_REPLACE_STRINGS
 })
-@JsonTypeName("MultiReplaceStringRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MultiReplaceStringRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -46,8 +44,10 @@ public class MultiReplaceStringRequest {
   private String inputFileUrl;
 
   public static final String JSON_PROPERTY_REPLACE_STRINGS = "ReplaceStrings";
-  private List<SingleReplaceString> replaceStrings = null;
+  private List<SingleReplaceString> replaceStrings = new ArrayList<>();
 
+  public MultiReplaceStringRequest() {
+  }
 
   public MultiReplaceStringRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -55,12 +55,11 @@ public class MultiReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class MultiReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public MultiReplaceStringRequest inputFileUrl(String inputFileUrl) {
     
@@ -80,12 +80,11 @@ public class MultiReplaceStringRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class MultiReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public MultiReplaceStringRequest replaceStrings(List<SingleReplaceString> replaceStrings) {
     
@@ -107,18 +107,17 @@ public class MultiReplaceStringRequest {
 
   public MultiReplaceStringRequest addReplaceStringsItem(SingleReplaceString replaceStringsItem) {
     if (this.replaceStrings == null) {
-      this.replaceStrings = new ArrayList<SingleReplaceString>();
+      this.replaceStrings = new ArrayList<>();
     }
     this.replaceStrings.add(replaceStringsItem);
     return this;
   }
 
-   /**
+  /**
    * An array of individual string replacement requests
    * @return replaceStrings
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An array of individual string replacement requests")
   @JsonProperty(JSON_PROPERTY_REPLACE_STRINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class MultiReplaceStringRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPLACE_STRINGS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReplaceStrings(List<SingleReplaceString> replaceStrings) {
     this.replaceStrings = replaceStrings;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class MultiReplaceStringRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, replaceStrings);
   }
-
 
   @Override
   public String toString() {

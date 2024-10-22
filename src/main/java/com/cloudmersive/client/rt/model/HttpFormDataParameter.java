@@ -21,22 +21,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Defines a parameter of type FormData (multipart/form-data)
  */
-@ApiModel(description = "Defines a parameter of type FormData (multipart/form-data)")
 @JsonPropertyOrder({
   HttpFormDataParameter.JSON_PROPERTY_PARAMETER_NAME,
   HttpFormDataParameter.JSON_PROPERTY_PARAMETER_TEXT_VALUE,
   HttpFormDataParameter.JSON_PROPERTY_PARAMETER_FILE_CONTENTS,
   HttpFormDataParameter.JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK
 })
-@JsonTypeName("HttpFormDataParameter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpFormDataParameter {
   public static final String JSON_PROPERTY_PARAMETER_NAME = "ParameterName";
   private String parameterName;
@@ -50,6 +47,8 @@ public class HttpFormDataParameter {
   public static final String JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK = "UseOutputFromPreviousTask";
   private TaskOutputReference useOutputFromPreviousTask;
 
+  public HttpFormDataParameter() {
+  }
 
   public HttpFormDataParameter parameterName(String parameterName) {
     
@@ -57,12 +56,11 @@ public class HttpFormDataParameter {
     return this;
   }
 
-   /**
+  /**
    * Name of the parameter
    * @return parameterName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the parameter")
   @JsonProperty(JSON_PROPERTY_PARAMETER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -71,10 +69,11 @@ public class HttpFormDataParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAMETER_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParameterName(String parameterName) {
     this.parameterName = parameterName;
   }
-
 
   public HttpFormDataParameter parameterTextValue(String parameterTextValue) {
     
@@ -82,12 +81,11 @@ public class HttpFormDataParameter {
     return this;
   }
 
-   /**
+  /**
    * Text value of the parameter; if set, do not set ParameterFileContents or UseOutputFromPreviousTask
    * @return parameterTextValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text value of the parameter; if set, do not set ParameterFileContents or UseOutputFromPreviousTask")
   @JsonProperty(JSON_PROPERTY_PARAMETER_TEXT_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +94,11 @@ public class HttpFormDataParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAMETER_TEXT_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParameterTextValue(String parameterTextValue) {
     this.parameterTextValue = parameterTextValue;
   }
-
 
   public HttpFormDataParameter parameterFileContents(byte[] parameterFileContents) {
     
@@ -107,12 +106,11 @@ public class HttpFormDataParameter {
     return this;
   }
 
-   /**
+  /**
    * Binary contents of the parameter; if set, do not set ParameterTextValue or UseOutputFromPreviousTask
    * @return parameterFileContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Binary contents of the parameter; if set, do not set ParameterTextValue or UseOutputFromPreviousTask")
   @JsonProperty(JSON_PROPERTY_PARAMETER_FILE_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +119,11 @@ public class HttpFormDataParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAMETER_FILE_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParameterFileContents(byte[] parameterFileContents) {
     this.parameterFileContents = parameterFileContents;
   }
-
 
   public HttpFormDataParameter useOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     
@@ -132,12 +131,11 @@ public class HttpFormDataParameter {
     return this;
   }
 
-   /**
+  /**
    * Get useOutputFromPreviousTask
    * @return useOutputFromPreviousTask
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +144,11 @@ public class HttpFormDataParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUseOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     this.useOutputFromPreviousTask = useOutputFromPreviousTask;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -170,7 +169,6 @@ public class HttpFormDataParameter {
   public int hashCode() {
     return Objects.hash(parameterName, parameterTextValue, Arrays.hashCode(parameterFileContents), useOutputFromPreviousTask);
   }
-
 
   @Override
   public String toString() {

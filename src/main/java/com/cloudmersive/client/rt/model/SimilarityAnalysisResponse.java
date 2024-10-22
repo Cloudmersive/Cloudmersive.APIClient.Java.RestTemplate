@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Output of a similarity analysis operation
  */
-@ApiModel(description = "Output of a similarity analysis operation")
 @JsonPropertyOrder({
   SimilarityAnalysisResponse.JSON_PROPERTY_SUCCESSFUL,
   SimilarityAnalysisResponse.JSON_PROPERTY_SIMILARITY_SCORE_RESULT,
   SimilarityAnalysisResponse.JSON_PROPERTY_SENTENCE_COUNT
 })
-@JsonTypeName("SimilarityAnalysisResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SimilarityAnalysisResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class SimilarityAnalysisResponse {
   public static final String JSON_PROPERTY_SENTENCE_COUNT = "SentenceCount";
   private Integer sentenceCount;
 
+  public SimilarityAnalysisResponse() {
+  }
 
   public SimilarityAnalysisResponse successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class SimilarityAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the similarity analysis operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the similarity analysis operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class SimilarityAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public SimilarityAnalysisResponse similarityScoreResult(Double similarityScoreResult) {
     
@@ -77,12 +76,11 @@ public class SimilarityAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Similarity score between 0.0 and 1.0 where scores closer to zero have a low probability of semantic similarity, while scores close to 1.0 have a high probability of semantic similarity.
    * @return similarityScoreResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Similarity score between 0.0 and 1.0 where scores closer to zero have a low probability of semantic similarity, while scores close to 1.0 have a high probability of semantic similarity.")
   @JsonProperty(JSON_PROPERTY_SIMILARITY_SCORE_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class SimilarityAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SIMILARITY_SCORE_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSimilarityScoreResult(Double similarityScoreResult) {
     this.similarityScoreResult = similarityScoreResult;
   }
-
 
   public SimilarityAnalysisResponse sentenceCount(Integer sentenceCount) {
     
@@ -102,12 +101,11 @@ public class SimilarityAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of sentences in input text
    * @return sentenceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of sentences in input text")
   @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class SimilarityAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceCount(Integer sentenceCount) {
     this.sentenceCount = sentenceCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class SimilarityAnalysisResponse {
   public int hashCode() {
     return Objects.hash(successful, similarityScoreResult, sentenceCount);
   }
-
 
   @Override
   public String toString() {

@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Re-use the output from a previously-completed task
  */
-@ApiModel(description = "Re-use the output from a previously-completed task")
 @JsonPropertyOrder({
   TaskOutputReference.JSON_PROPERTY_TASK_NAME,
   TaskOutputReference.JSON_PROPERTY_TARGET_TYPE
 })
-@JsonTypeName("TaskOutputReference")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TaskOutputReference {
   public static final String JSON_PROPERTY_TASK_NAME = "TaskName";
   private String taskName;
@@ -41,6 +38,8 @@ public class TaskOutputReference {
   public static final String JSON_PROPERTY_TARGET_TYPE = "TargetType";
   private String targetType;
 
+  public TaskOutputReference() {
+  }
 
   public TaskOutputReference taskName(String taskName) {
     
@@ -48,12 +47,11 @@ public class TaskOutputReference {
     return this;
   }
 
-   /**
+  /**
    * Name of the task to use the output from
    * @return taskName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the task to use the output from")
   @JsonProperty(JSON_PROPERTY_TASK_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class TaskOutputReference {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TASK_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTaskName(String taskName) {
     this.taskName = taskName;
   }
-
 
   public TaskOutputReference targetType(String targetType) {
     
@@ -73,12 +72,11 @@ public class TaskOutputReference {
     return this;
   }
 
-   /**
+  /**
    * Type to convert the output from the referenced task to; possible values are string, binary
    * @return targetType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type to convert the output from the referenced task to; possible values are string, binary")
   @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class TaskOutputReference {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetType(String targetType) {
     this.targetType = targetType;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class TaskOutputReference {
   public int hashCode() {
     return Objects.hash(taskName, targetType);
   }
-
 
   @Override
   public String toString() {

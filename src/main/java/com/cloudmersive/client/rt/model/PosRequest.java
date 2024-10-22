@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Part of speech tagging request
  */
-@ApiModel(description = "Part of speech tagging request")
 @JsonPropertyOrder({
   PosRequest.JSON_PROPERTY_INPUT_TEXT
 })
-@JsonTypeName("PosRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PosRequest {
   public static final String JSON_PROPERTY_INPUT_TEXT = "InputText";
   private String inputText;
 
+  public PosRequest() {
+  }
 
   public PosRequest inputText(String inputText) {
     
@@ -44,12 +43,11 @@ public class PosRequest {
     return this;
   }
 
-   /**
+  /**
    * Input text string
    * @return inputText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Input text string")
   @JsonProperty(JSON_PROPERTY_INPUT_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class PosRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputText(String inputText) {
     this.inputText = inputText;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class PosRequest {
   public int hashCode() {
     return Objects.hash(inputText);
   }
-
 
   @Override
   public String toString() {

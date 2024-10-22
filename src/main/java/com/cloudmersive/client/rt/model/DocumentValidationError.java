@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Validation error found in document
  */
-@ApiModel(description = "Validation error found in document")
 @JsonPropertyOrder({
   DocumentValidationError.JSON_PROPERTY_DESCRIPTION,
   DocumentValidationError.JSON_PROPERTY_PATH,
   DocumentValidationError.JSON_PROPERTY_URI,
   DocumentValidationError.JSON_PROPERTY_IS_ERROR
 })
-@JsonTypeName("DocumentValidationError")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocumentValidationError {
   public static final String JSON_PROPERTY_DESCRIPTION = "Description";
   private String description;
@@ -49,6 +46,8 @@ public class DocumentValidationError {
   public static final String JSON_PROPERTY_IS_ERROR = "IsError";
   private Boolean isError;
 
+  public DocumentValidationError() {
+  }
 
   public DocumentValidationError description(String description) {
     
@@ -56,12 +55,11 @@ public class DocumentValidationError {
     return this;
   }
 
-   /**
+  /**
    * Description of the error
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Description of the error")
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class DocumentValidationError {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDescription(String description) {
     this.description = description;
   }
-
 
   public DocumentValidationError path(String path) {
     
@@ -81,12 +80,11 @@ public class DocumentValidationError {
     return this;
   }
 
-   /**
+  /**
    * XPath to the error
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "XPath to the error")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class DocumentValidationError {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocumentValidationError uri(String uri) {
     
@@ -106,12 +105,11 @@ public class DocumentValidationError {
     return this;
   }
 
-   /**
+  /**
    * URI of the part in question
    * @return uri
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URI of the part in question")
   @JsonProperty(JSON_PROPERTY_URI)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class DocumentValidationError {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URI)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUri(String uri) {
     this.uri = uri;
   }
-
 
   public DocumentValidationError isError(Boolean isError) {
     
@@ -131,12 +130,11 @@ public class DocumentValidationError {
     return this;
   }
 
-   /**
+  /**
    * True if this is an error, false otherwise
    * @return isError
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this is an error, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_ERROR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class DocumentValidationError {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_ERROR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsError(Boolean isError) {
     this.isError = isError;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class DocumentValidationError {
   public int hashCode() {
     return Objects.hash(description, path, uri, isError);
   }
-
 
   @Override
   public String toString() {

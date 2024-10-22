@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * IANA/Olsen time zone
  */
-@ApiModel(description = "IANA/Olsen time zone")
 @JsonPropertyOrder({
   Timezone.JSON_PROPERTY_NAME,
   Timezone.JSON_PROPERTY_BASE_U_T_C_OFFSET,
   Timezone.JSON_PROPERTY_NOW
 })
-@JsonTypeName("Timezone")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Timezone {
   public static final String JSON_PROPERTY_NAME = "Name";
   private String name;
@@ -46,6 +43,8 @@ public class Timezone {
   public static final String JSON_PROPERTY_NOW = "Now";
   private OffsetDateTime now;
 
+  public Timezone() {
+  }
 
   public Timezone name(String name) {
     
@@ -53,12 +52,11 @@ public class Timezone {
     return this;
   }
 
-   /**
+  /**
    * Name of the Time Zone
    * @return name
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the Time Zone")
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class Timezone {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setName(String name) {
     this.name = name;
   }
-
 
   public Timezone baseUTCOffset(String baseUTCOffset) {
     
@@ -78,12 +77,11 @@ public class Timezone {
     return this;
   }
 
-   /**
+  /**
    * UTC offset for this time zone
    * @return baseUTCOffset
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "UTC offset for this time zone")
   @JsonProperty(JSON_PROPERTY_BASE_U_T_C_OFFSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class Timezone {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BASE_U_T_C_OFFSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBaseUTCOffset(String baseUTCOffset) {
     this.baseUTCOffset = baseUTCOffset;
   }
-
 
   public Timezone now(OffsetDateTime now) {
     
@@ -103,12 +102,11 @@ public class Timezone {
     return this;
   }
 
-   /**
+  /**
    * The current time (Now) in this time zone
    * @return now
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The current time (Now) in this time zone")
   @JsonProperty(JSON_PROPERTY_NOW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class Timezone {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NOW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNow(OffsetDateTime now) {
     this.now = now;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class Timezone {
   public int hashCode() {
     return Objects.hash(name, baseUTCOffset, now);
   }
-
 
   @Override
   public String toString() {

@@ -21,14 +21,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Insert Table Row request
  */
-@ApiModel(description = "Input to a Insert Table Row request")
 @JsonPropertyOrder({
   InsertDocxTableRowRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   InsertDocxTableRowRequest.JSON_PROPERTY_INPUT_FILE_URL,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   InsertDocxTableRowRequest.JSON_PROPERTY_INSERT_PLACEMENT,
   InsertDocxTableRowRequest.JSON_PROPERTY_EXISTING_TABLE_PATH
 })
-@JsonTypeName("InsertDocxTableRowRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class InsertDocxTableRowRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -54,6 +51,8 @@ public class InsertDocxTableRowRequest {
   public static final String JSON_PROPERTY_EXISTING_TABLE_PATH = "ExistingTablePath";
   private String existingTablePath;
 
+  public InsertDocxTableRowRequest() {
+  }
 
   public InsertDocxTableRowRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -61,12 +60,11 @@ public class InsertDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -75,10 +73,11 @@ public class InsertDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public InsertDocxTableRowRequest inputFileUrl(String inputFileUrl) {
     
@@ -86,12 +85,11 @@ public class InsertDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,10 +98,11 @@ public class InsertDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public InsertDocxTableRowRequest rowToInsert(DocxTableRow rowToInsert) {
     
@@ -111,12 +110,11 @@ public class InsertDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Get rowToInsert
    * @return rowToInsert
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_ROW_TO_INSERT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,10 +123,11 @@ public class InsertDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW_TO_INSERT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRowToInsert(DocxTableRow rowToInsert) {
     this.rowToInsert = rowToInsert;
   }
-
 
   public InsertDocxTableRowRequest insertPlacement(String insertPlacement) {
     
@@ -136,12 +135,11 @@ public class InsertDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; default is TableEnd.  Placement Type of the insert; possible values are: TableStart (very beginning of the table), TableEnd (very end of the document), or a 0-based row index number as an integer, 0 being the first row in the table, 1 being the second row in the table, 2 being the third row in the table, etc. to insert this row after
    * @return insertPlacement
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; default is TableEnd.  Placement Type of the insert; possible values are: TableStart (very beginning of the table), TableEnd (very end of the document), or a 0-based row index number as an integer, 0 being the first row in the table, 1 being the second row in the table, 2 being the third row in the table, etc. to insert this row after")
   @JsonProperty(JSON_PROPERTY_INSERT_PLACEMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,10 +148,11 @@ public class InsertDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INSERT_PLACEMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInsertPlacement(String insertPlacement) {
     this.insertPlacement = insertPlacement;
   }
-
 
   public InsertDocxTableRowRequest existingTablePath(String existingTablePath) {
     
@@ -161,12 +160,11 @@ public class InsertDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Required; the path to the existing table to modify
    * @return existingTablePath
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Required; the path to the existing table to modify")
   @JsonProperty(JSON_PROPERTY_EXISTING_TABLE_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,10 +173,11 @@ public class InsertDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXISTING_TABLE_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExistingTablePath(String existingTablePath) {
     this.existingTablePath = existingTablePath;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -200,7 +199,6 @@ public class InsertDocxTableRowRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, rowToInsert, insertPlacement, existingTablePath);
   }
-
 
   @Override
   public String toString() {

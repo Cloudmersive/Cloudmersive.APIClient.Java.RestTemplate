@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxImagesRequest
  */
-public class GetDocxImagesRequestTest {
+class GetDocxImagesRequestTest {
     private final GetDocxImagesRequest model = new GetDocxImagesRequest();
 
     /**
      * Model tests for GetDocxImagesRequest
      */
     @Test
-    public void testGetDocxImagesRequest() {
+    void testGetDocxImagesRequest() {
         // TODO: test GetDocxImagesRequest
     }
 
@@ -43,7 +40,7 @@ public class GetDocxImagesRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class GetDocxImagesRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 

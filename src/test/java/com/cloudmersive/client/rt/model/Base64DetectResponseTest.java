@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for Base64DetectResponse
  */
-public class Base64DetectResponseTest {
+class Base64DetectResponseTest {
     private final Base64DetectResponse model = new Base64DetectResponse();
 
     /**
      * Model tests for Base64DetectResponse
      */
     @Test
-    public void testBase64DetectResponse() {
+    void testBase64DetectResponse() {
         // TODO: test Base64DetectResponse
     }
 
@@ -43,7 +40,7 @@ public class Base64DetectResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class Base64DetectResponseTest {
      * Test the property 'isBase64Encoded'
      */
     @Test
-    public void isBase64EncodedTest() {
+    void isBase64EncodedTest() {
         // TODO: test isBase64Encoded
     }
 

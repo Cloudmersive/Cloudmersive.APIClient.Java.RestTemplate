@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to remove whitespace from a string
  */
-@ApiModel(description = "Request to remove whitespace from a string")
 @JsonPropertyOrder({
   RemoveWhitespaceFromTextRequest.JSON_PROPERTY_TEXT_CONTAINING_WHITESPACE
 })
-@JsonTypeName("RemoveWhitespaceFromTextRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RemoveWhitespaceFromTextRequest {
   public static final String JSON_PROPERTY_TEXT_CONTAINING_WHITESPACE = "TextContainingWhitespace";
   private String textContainingWhitespace;
 
+  public RemoveWhitespaceFromTextRequest() {
+  }
 
   public RemoveWhitespaceFromTextRequest textContainingWhitespace(String textContainingWhitespace) {
     
@@ -44,12 +43,11 @@ public class RemoveWhitespaceFromTextRequest {
     return this;
   }
 
-   /**
+  /**
    * Input text string to remove the whitespace from
    * @return textContainingWhitespace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Input text string to remove the whitespace from")
   @JsonProperty(JSON_PROPERTY_TEXT_CONTAINING_WHITESPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class RemoveWhitespaceFromTextRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_CONTAINING_WHITESPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextContainingWhitespace(String textContainingWhitespace) {
     this.textContainingWhitespace = textContainingWhitespace;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class RemoveWhitespaceFromTextRequest {
   public int hashCode() {
     return Objects.hash(textContainingWhitespace);
   }
-
 
   @Override
   public String toString() {

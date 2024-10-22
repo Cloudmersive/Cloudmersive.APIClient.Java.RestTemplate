@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FaceLocateWithLandmarksResponse
  */
-public class FaceLocateWithLandmarksResponseTest {
+class FaceLocateWithLandmarksResponseTest {
     private final FaceLocateWithLandmarksResponse model = new FaceLocateWithLandmarksResponse();
 
     /**
      * Model tests for FaceLocateWithLandmarksResponse
      */
     @Test
-    public void testFaceLocateWithLandmarksResponse() {
+    void testFaceLocateWithLandmarksResponse() {
         // TODO: test FaceLocateWithLandmarksResponse
     }
 
@@ -46,7 +44,7 @@ public class FaceLocateWithLandmarksResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class FaceLocateWithLandmarksResponseTest {
      * Test the property 'faces'
      */
     @Test
-    public void facesTest() {
+    void facesTest() {
         // TODO: test faces
     }
 
@@ -62,7 +60,7 @@ public class FaceLocateWithLandmarksResponseTest {
      * Test the property 'faceCount'
      */
     @Test
-    public void faceCountTest() {
+    void faceCountTest() {
         // TODO: test faceCount
     }
 
@@ -70,7 +68,7 @@ public class FaceLocateWithLandmarksResponseTest {
      * Test the property 'errorDetails'
      */
     @Test
-    public void errorDetailsTest() {
+    void errorDetailsTest() {
         // TODO: test errorDetails
     }
 

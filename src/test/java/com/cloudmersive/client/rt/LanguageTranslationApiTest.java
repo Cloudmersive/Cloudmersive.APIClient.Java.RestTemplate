@@ -13,11 +13,16 @@
 
 package com.cloudmersive.client.rt;
 
+import com.cloudmersive.client.rt.model.LanguageHtmlTranslationRequest;
+import com.cloudmersive.client.rt.model.LanguageHtmlTranslationResponse;
 import com.cloudmersive.client.rt.model.LanguageTranslationRequest;
 import com.cloudmersive.client.rt.model.LanguageTranslationResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,23 +31,41 @@ import java.util.Map;
 /**
  * API tests for LanguageTranslationApi
  */
-@Ignore
-public class LanguageTranslationApiTest {
+@Disabled
+class LanguageTranslationApiTest {
 
     private final LanguageTranslationApi api = new LanguageTranslationApi();
 
+    
+    /**
+     * Translate HTML with Deep Learning AI
+     *
+     * Automatically translates input text in German to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void languageTranslationHtmlTranslateTest() {
+        LanguageHtmlTranslationRequest input = null;
+
+        LanguageHtmlTranslationResponse response = api.languageTranslationHtmlTranslate(input);
+
+        // TODO: test validations
+    }
     
     /**
      * Translate German to English text with Deep Learning AI
      *
      * Automatically translates input text in German to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageTranslationTranslateDeuToEngTest() {
+    void languageTranslationTranslateDeuToEngTest() {
         LanguageTranslationRequest input = null;
+
         LanguageTranslationResponse response = api.languageTranslationTranslateDeuToEng(input);
 
         // TODO: test validations
@@ -53,12 +76,13 @@ public class LanguageTranslationApiTest {
      *
      * Automatically translates input text in English to output text in German using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageTranslationTranslateEngToDeuTest() {
+    void languageTranslationTranslateEngToDeuTest() {
         LanguageTranslationRequest input = null;
+
         LanguageTranslationResponse response = api.languageTranslationTranslateEngToDeu(input);
 
         // TODO: test validations
@@ -69,12 +93,13 @@ public class LanguageTranslationApiTest {
      *
      * Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageTranslationTranslateEngToFraTest() {
+    void languageTranslationTranslateEngToFraTest() {
         LanguageTranslationRequest input = null;
+
         LanguageTranslationResponse response = api.languageTranslationTranslateEngToFra(input);
 
         // TODO: test validations
@@ -85,12 +110,13 @@ public class LanguageTranslationApiTest {
      *
      * Automatically translates input text in English to output text in Russian using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageTranslationTranslateEngToRusTest() {
+    void languageTranslationTranslateEngToRusTest() {
         LanguageTranslationRequest input = null;
+
         LanguageTranslationResponse response = api.languageTranslationTranslateEngToRus(input);
 
         // TODO: test validations
@@ -101,12 +127,13 @@ public class LanguageTranslationApiTest {
      *
      * Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageTranslationTranslateFraToEngTest() {
+    void languageTranslationTranslateFraToEngTest() {
         LanguageTranslationRequest input = null;
+
         LanguageTranslationResponse response = api.languageTranslationTranslateFraToEng(input);
 
         // TODO: test validations
@@ -117,12 +144,13 @@ public class LanguageTranslationApiTest {
      *
      * Automatically translates input text in Russian to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void languageTranslationTranslateRusToEngTest() {
+    void languageTranslationTranslateRusToEngTest() {
         LanguageTranslationRequest input = null;
+
         LanguageTranslationResponse response = api.languageTranslationTranslateRusToEng(input);
 
         // TODO: test validations

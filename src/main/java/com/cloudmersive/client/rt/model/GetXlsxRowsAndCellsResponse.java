@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Worksheets command
  */
-@ApiModel(description = "Result of running a Get-Worksheets command")
 @JsonPropertyOrder({
   GetXlsxRowsAndCellsResponse.JSON_PROPERTY_SUCCESSFUL,
   GetXlsxRowsAndCellsResponse.JSON_PROPERTY_ROWS
 })
-@JsonTypeName("GetXlsxRowsAndCellsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxRowsAndCellsResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_ROWS = "Rows";
-  private List<XlsxSpreadsheetRow> rows = null;
+  private List<XlsxSpreadsheetRow> rows = new ArrayList<>();
 
+  public GetXlsxRowsAndCellsResponse() {
+  }
 
   public GetXlsxRowsAndCellsResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class GetXlsxRowsAndCellsResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class GetXlsxRowsAndCellsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetXlsxRowsAndCellsResponse rows(List<XlsxSpreadsheetRow> rows) {
     
@@ -78,18 +78,17 @@ public class GetXlsxRowsAndCellsResponse {
 
   public GetXlsxRowsAndCellsResponse addRowsItem(XlsxSpreadsheetRow rowsItem) {
     if (this.rows == null) {
-      this.rows = new ArrayList<XlsxSpreadsheetRow>();
+      this.rows = new ArrayList<>();
     }
     this.rows.add(rowsItem);
     return this;
   }
 
-   /**
+  /**
    * Spreadsheet Rows in the Excel XLSX document
    * @return rows
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Spreadsheet Rows in the Excel XLSX document")
   @JsonProperty(JSON_PROPERTY_ROWS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class GetXlsxRowsAndCellsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROWS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRows(List<XlsxSpreadsheetRow> rows) {
     this.rows = rows;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class GetXlsxRowsAndCellsResponse {
   public int hashCode() {
     return Objects.hash(successful, rows);
   }
-
 
   @Override
   public String toString() {

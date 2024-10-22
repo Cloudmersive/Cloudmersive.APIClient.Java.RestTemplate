@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Output of a text rephrasing operation
  */
-@ApiModel(description = "Output of a text rephrasing operation")
 @JsonPropertyOrder({
   RephraseResponse.JSON_PROPERTY_SUCCESSFUL,
   RephraseResponse.JSON_PROPERTY_REPHRASED_RESULTS,
   RephraseResponse.JSON_PROPERTY_SENTENCE_COUNT
 })
-@JsonTypeName("RephraseResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RephraseResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_REPHRASED_RESULTS = "RephrasedResults";
-  private List<RephrasedSentence> rephrasedResults = null;
+  private List<RephrasedSentence> rephrasedResults = new ArrayList<>();
 
   public static final String JSON_PROPERTY_SENTENCE_COUNT = "SentenceCount";
   private Integer sentenceCount;
 
+  public RephraseResponse() {
+  }
 
   public RephraseResponse successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class RephraseResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the language detection operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the language detection operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class RephraseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public RephraseResponse rephrasedResults(List<RephrasedSentence> rephrasedResults) {
     
@@ -82,18 +82,17 @@ public class RephraseResponse {
 
   public RephraseResponse addRephrasedResultsItem(RephrasedSentence rephrasedResultsItem) {
     if (this.rephrasedResults == null) {
-      this.rephrasedResults = new ArrayList<RephrasedSentence>();
+      this.rephrasedResults = new ArrayList<>();
     }
     this.rephrasedResults.add(rephrasedResultsItem);
     return this;
   }
 
-   /**
+  /**
    * Results of the rephrasing, paraphrasing operation, in the order of the input sentences
    * @return rephrasedResults
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Results of the rephrasing, paraphrasing operation, in the order of the input sentences")
   @JsonProperty(JSON_PROPERTY_REPHRASED_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class RephraseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPHRASED_RESULTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRephrasedResults(List<RephrasedSentence> rephrasedResults) {
     this.rephrasedResults = rephrasedResults;
   }
-
 
   public RephraseResponse sentenceCount(Integer sentenceCount) {
     
@@ -113,12 +113,11 @@ public class RephraseResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of sentences in input text
    * @return sentenceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of sentences in input text")
   @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class RephraseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceCount(Integer sentenceCount) {
     this.sentenceCount = sentenceCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class RephraseResponse {
   public int hashCode() {
     return Objects.hash(successful, rephrasedResults, sentenceCount);
   }
-
 
   @Override
   public String toString() {

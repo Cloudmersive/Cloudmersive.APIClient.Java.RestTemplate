@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxRun
  */
-public class DocxRunTest {
+class DocxRunTest {
     private final DocxRun model = new DocxRun();
 
     /**
      * Model tests for DocxRun
      */
     @Test
-    public void testDocxRun() {
+    void testDocxRun() {
         // TODO: test DocxRun
     }
 
@@ -46,7 +44,7 @@ public class DocxRunTest {
      * Test the property 'runIndex'
      */
     @Test
-    public void runIndexTest() {
+    void runIndexTest() {
         // TODO: test runIndex
     }
 
@@ -54,7 +52,7 @@ public class DocxRunTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -62,7 +60,7 @@ public class DocxRunTest {
      * Test the property 'textItems'
      */
     @Test
-    public void textItemsTest() {
+    void textItemsTest() {
         // TODO: test textItems
     }
 
@@ -70,7 +68,7 @@ public class DocxRunTest {
      * Test the property 'bold'
      */
     @Test
-    public void boldTest() {
+    void boldTest() {
         // TODO: test bold
     }
 
@@ -78,7 +76,7 @@ public class DocxRunTest {
      * Test the property 'italic'
      */
     @Test
-    public void italicTest() {
+    void italicTest() {
         // TODO: test italic
     }
 
@@ -86,7 +84,7 @@ public class DocxRunTest {
      * Test the property 'underline'
      */
     @Test
-    public void underlineTest() {
+    void underlineTest() {
         // TODO: test underline
     }
 
@@ -94,7 +92,7 @@ public class DocxRunTest {
      * Test the property 'fontFamily'
      */
     @Test
-    public void fontFamilyTest() {
+    void fontFamilyTest() {
         // TODO: test fontFamily
     }
 
@@ -102,7 +100,7 @@ public class DocxRunTest {
      * Test the property 'fontSize'
      */
     @Test
-    public void fontSizeTest() {
+    void fontSizeTest() {
         // TODO: test fontSize
     }
 

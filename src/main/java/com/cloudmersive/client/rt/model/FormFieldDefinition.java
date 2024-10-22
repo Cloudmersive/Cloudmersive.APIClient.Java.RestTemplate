@@ -20,16 +20,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Definition of a form field for OCR data extraction from images
  */
-@ApiModel(description = "Definition of a form field for OCR data extraction from images")
 @JsonPropertyOrder({
   FormFieldDefinition.JSON_PROPERTY_FIELD_I_D,
   FormFieldDefinition.JSON_PROPERTY_LEFT_ANCHOR,
@@ -50,8 +49,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FormFieldDefinition.JSON_PROPERTY_IGNORE,
   FormFieldDefinition.JSON_PROPERTY_OPTIONS
 })
-@JsonTypeName("FormFieldDefinition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FormFieldDefinition {
   public static final String JSON_PROPERTY_FIELD_I_D = "FieldID";
   private String fieldID;
@@ -102,11 +100,13 @@ public class FormFieldDefinition {
   private Double targetFieldVerticalAdjustment;
 
   public static final String JSON_PROPERTY_IGNORE = "Ignore";
-  private List<String> ignore = null;
+  private List<String> ignore = new ArrayList<>();
 
   public static final String JSON_PROPERTY_OPTIONS = "Options";
   private String options;
 
+  public FormFieldDefinition() {
+  }
 
   public FormFieldDefinition fieldID(String fieldID) {
     
@@ -114,12 +114,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * The identifier of the field; use this to identify which field is being referenced.  Set to SkipField if you do not wish to return the value of this field in the result.
    * @return fieldID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The identifier of the field; use this to identify which field is being referenced.  Set to SkipField if you do not wish to return the value of this field in the result.")
   @JsonProperty(JSON_PROPERTY_FIELD_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +127,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldID(String fieldID) {
     this.fieldID = fieldID;
   }
-
 
   public FormFieldDefinition leftAnchor(String leftAnchor) {
     
@@ -139,12 +139,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the left-hand anchor of the field
    * @return leftAnchor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the left-hand anchor of the field")
   @JsonProperty(JSON_PROPERTY_LEFT_ANCHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +152,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LEFT_ANCHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLeftAnchor(String leftAnchor) {
     this.leftAnchor = leftAnchor;
   }
-
 
   public FormFieldDefinition topAnchor(String topAnchor) {
     
@@ -164,12 +164,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the top anchor of the field
    * @return topAnchor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the top anchor of the field")
   @JsonProperty(JSON_PROPERTY_TOP_ANCHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +177,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_ANCHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopAnchor(String topAnchor) {
     this.topAnchor = topAnchor;
   }
-
 
   public FormFieldDefinition bottomAnchor(String bottomAnchor) {
     
@@ -189,12 +189,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the bottom anchor of the field
    * @return bottomAnchor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the bottom anchor of the field")
   @JsonProperty(JSON_PROPERTY_BOTTOM_ANCHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +202,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_ANCHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomAnchor(String bottomAnchor) {
     this.bottomAnchor = bottomAnchor;
   }
-
 
   public FormFieldDefinition alternateAnchor(String alternateAnchor) {
     
@@ -214,12 +214,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - alterate match text for the specified anchor
    * @return alternateAnchor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - alterate match text for the specified anchor")
   @JsonProperty(JSON_PROPERTY_ALTERNATE_ANCHOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -228,10 +227,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALTERNATE_ANCHOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAlternateAnchor(String alternateAnchor) {
     this.alternateAnchor = alternateAnchor;
   }
-
 
   public FormFieldDefinition anchorMode(String anchorMode) {
     
@@ -239,12 +239,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the matching mode for the anchor.  Possible values are Complete (requires the entire anchor to match) and Partial (allows only part of the anchor to match) and Horizontal (anchor must be laid out horizontally).  Default is Partial.
    * @return anchorMode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the matching mode for the anchor.  Possible values are Complete (requires the entire anchor to match) and Partial (allows only part of the anchor to match) and Horizontal (anchor must be laid out horizontally).  Default is Partial.")
   @JsonProperty(JSON_PROPERTY_ANCHOR_MODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -253,10 +252,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANCHOR_MODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAnchorMode(String anchorMode) {
     this.anchorMode = anchorMode;
   }
-
 
   public FormFieldDefinition dataType(String dataType) {
     
@@ -264,12 +264,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * The data type of the field; possible values are INTEGER (Integer value), STRING (Arbitrary string value, spaces are permitted), DATE (Date in a structured format), DECIMAL (Decimal number), ALPHANUMERIC (Continuous alphanumeric string with no spaces), STRINGNOWHITESPACE (A string that contains no whitespace characters), SERIALNUMBER (A serial-number style string that contains letters and numbers, and certain symbols; must contain at least one number), ALPHAONLY (Alphabet characters only, no numbers or symbols or whitespace)
    * @return dataType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The data type of the field; possible values are INTEGER (Integer value), STRING (Arbitrary string value, spaces are permitted), DATE (Date in a structured format), DECIMAL (Decimal number), ALPHANUMERIC (Continuous alphanumeric string with no spaces), STRINGNOWHITESPACE (A string that contains no whitespace characters), SERIALNUMBER (A serial-number style string that contains letters and numbers, and certain symbols; must contain at least one number), ALPHAONLY (Alphabet characters only, no numbers or symbols or whitespace)")
   @JsonProperty(JSON_PROPERTY_DATA_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -278,10 +277,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDataType(String dataType) {
     this.dataType = dataType;
   }
-
 
   public FormFieldDefinition targetDigitCount(Integer targetDigitCount) {
     
@@ -289,12 +289,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the target number of digits in the field; useful for fixed-length fields
    * @return targetDigitCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the target number of digits in the field; useful for fixed-length fields")
   @JsonProperty(JSON_PROPERTY_TARGET_DIGIT_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,10 +302,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_DIGIT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetDigitCount(Integer targetDigitCount) {
     this.targetDigitCount = targetDigitCount;
   }
-
 
   public FormFieldDefinition minimumCharacterCount(Integer minimumCharacterCount) {
     
@@ -314,12 +314,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - the target number of digits in the field; useful for fixed-length fields
    * @return minimumCharacterCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - the target number of digits in the field; useful for fixed-length fields")
   @JsonProperty(JSON_PROPERTY_MINIMUM_CHARACTER_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -328,10 +327,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MINIMUM_CHARACTER_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMinimumCharacterCount(Integer minimumCharacterCount) {
     this.minimumCharacterCount = minimumCharacterCount;
   }
-
 
   public FormFieldDefinition allowNumericDigits(Boolean allowNumericDigits) {
     
@@ -339,12 +339,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - set to false to block values that contain numeric digits, set to true to allow numeric digits
    * @return allowNumericDigits
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - set to false to block values that contain numeric digits, set to true to allow numeric digits")
   @JsonProperty(JSON_PROPERTY_ALLOW_NUMERIC_DIGITS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -353,10 +352,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_NUMERIC_DIGITS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowNumericDigits(Boolean allowNumericDigits) {
     this.allowNumericDigits = allowNumericDigits;
   }
-
 
   public FormFieldDefinition verticalAlignmentType(String verticalAlignmentType) {
     
@@ -364,12 +364,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Vertical alignment of target value area relative to the field anchor; Possible values are VCenter, Top, Bottom
    * @return verticalAlignmentType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Vertical alignment of target value area relative to the field anchor; Possible values are VCenter, Top, Bottom")
   @JsonProperty(JSON_PROPERTY_VERTICAL_ALIGNMENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -378,10 +377,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VERTICAL_ALIGNMENT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVerticalAlignmentType(String verticalAlignmentType) {
     this.verticalAlignmentType = verticalAlignmentType;
   }
-
 
   public FormFieldDefinition horizontalAlignmentType(String horizontalAlignmentType) {
     
@@ -389,12 +389,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Horizontal alignment of target value area relative to the field anchor; Possible values are Left, Right
    * @return horizontalAlignmentType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Horizontal alignment of target value area relative to the field anchor; Possible values are Left, Right")
   @JsonProperty(JSON_PROPERTY_HORIZONTAL_ALIGNMENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -403,10 +402,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HORIZONTAL_ALIGNMENT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHorizontalAlignmentType(String horizontalAlignmentType) {
     this.horizontalAlignmentType = horizontalAlignmentType;
   }
-
 
   public FormFieldDefinition targetFieldWidthRelative(Double targetFieldWidthRelative) {
     
@@ -414,12 +414,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - scale factor for target field width - relative to width of field title; a value of 1.0 indicates the target value area has the same width as the field value as occurring in the image; a value of 2.0 would indicate that the target value area has 2 times the width of the field value as occurring in the image.
    * @return targetFieldWidthRelative
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - scale factor for target field width - relative to width of field title; a value of 1.0 indicates the target value area has the same width as the field value as occurring in the image; a value of 2.0 would indicate that the target value area has 2 times the width of the field value as occurring in the image.")
   @JsonProperty(JSON_PROPERTY_TARGET_FIELD_WIDTH_RELATIVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -428,10 +427,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_FIELD_WIDTH_RELATIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetFieldWidthRelative(Double targetFieldWidthRelative) {
     this.targetFieldWidthRelative = targetFieldWidthRelative;
   }
-
 
   public FormFieldDefinition targetFieldHeightRelative(Double targetFieldHeightRelative) {
     
@@ -439,12 +439,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - scale factor for target field height - relative to height of field title
    * @return targetFieldHeightRelative
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - scale factor for target field height - relative to height of field title")
   @JsonProperty(JSON_PROPERTY_TARGET_FIELD_HEIGHT_RELATIVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -453,10 +452,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_FIELD_HEIGHT_RELATIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetFieldHeightRelative(Double targetFieldHeightRelative) {
     this.targetFieldHeightRelative = targetFieldHeightRelative;
   }
-
 
   public FormFieldDefinition targetFieldHorizontalAdjustment(Double targetFieldHorizontalAdjustment) {
     
@@ -464,12 +464,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - horizontal adjestment in relative width of the field
    * @return targetFieldHorizontalAdjustment
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - horizontal adjestment in relative width of the field")
   @JsonProperty(JSON_PROPERTY_TARGET_FIELD_HORIZONTAL_ADJUSTMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -478,10 +477,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_FIELD_HORIZONTAL_ADJUSTMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetFieldHorizontalAdjustment(Double targetFieldHorizontalAdjustment) {
     this.targetFieldHorizontalAdjustment = targetFieldHorizontalAdjustment;
   }
-
 
   public FormFieldDefinition targetFieldVerticalAdjustment(Double targetFieldVerticalAdjustment) {
     
@@ -489,12 +489,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - vertical adjestment in relative height of the field
    * @return targetFieldVerticalAdjustment
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - vertical adjestment in relative height of the field")
   @JsonProperty(JSON_PROPERTY_TARGET_FIELD_VERTICAL_ADJUSTMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -503,10 +502,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_FIELD_VERTICAL_ADJUSTMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetFieldVerticalAdjustment(Double targetFieldVerticalAdjustment) {
     this.targetFieldVerticalAdjustment = targetFieldVerticalAdjustment;
   }
-
 
   public FormFieldDefinition ignore(List<String> ignore) {
     
@@ -516,18 +516,17 @@ public class FormFieldDefinition {
 
   public FormFieldDefinition addIgnoreItem(String ignoreItem) {
     if (this.ignore == null) {
-      this.ignore = new ArrayList<String>();
+      this.ignore = new ArrayList<>();
     }
     this.ignore.add(ignoreItem);
     return this;
   }
 
-   /**
+  /**
    * Optional - Ignore any result items that contain a partial or complete match with these text strings
    * @return ignore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - Ignore any result items that contain a partial or complete match with these text strings")
   @JsonProperty(JSON_PROPERTY_IGNORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -536,10 +535,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IGNORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIgnore(List<String> ignore) {
     this.ignore = ignore;
   }
-
 
   public FormFieldDefinition options(String options) {
     
@@ -547,12 +547,11 @@ public class FormFieldDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - additional options that can be set for this field definition, separated by commas.  Possible values are AllowMultiMatch (allow the same anchor to be matched to multiple fields)
    * @return options
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - additional options that can be set for this field definition, separated by commas.  Possible values are AllowMultiMatch (allow the same anchor to be matched to multiple fields)")
   @JsonProperty(JSON_PROPERTY_OPTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -561,10 +560,11 @@ public class FormFieldDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPTIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOptions(String options) {
     this.options = options;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -599,7 +599,6 @@ public class FormFieldDefinition {
   public int hashCode() {
     return Objects.hash(fieldID, leftAnchor, topAnchor, bottomAnchor, alternateAnchor, anchorMode, dataType, targetDigitCount, minimumCharacterCount, allowNumericDigits, verticalAlignmentType, horizontalAlignmentType, targetFieldWidthRelative, targetFieldHeightRelative, targetFieldHorizontalAdjustment, targetFieldVerticalAdjustment, ignore, options);
   }
-
 
   @Override
   public String toString() {

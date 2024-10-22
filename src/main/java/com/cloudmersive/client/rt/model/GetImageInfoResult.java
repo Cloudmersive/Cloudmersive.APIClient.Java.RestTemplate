@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a get-info operation on an image
  */
-@ApiModel(description = "Result of running a get-info operation on an image")
 @JsonPropertyOrder({
   GetImageInfoResult.JSON_PROPERTY_SUCCESSFUL,
   GetImageInfoResult.JSON_PROPERTY_COLOR_SPACE,
@@ -50,8 +49,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   GetImageInfoResult.JSON_PROPERTY_EXIF_PROFILE_NAME,
   GetImageInfoResult.JSON_PROPERTY_EXIF_VALUES
 })
-@JsonTypeName("GetImageInfoResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetImageInfoResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -102,8 +100,10 @@ public class GetImageInfoResult {
   private String exifProfileName;
 
   public static final String JSON_PROPERTY_EXIF_VALUES = "ExifValues";
-  private List<ExifValue> exifValues = null;
+  private List<ExifValue> exifValues = new ArrayList<>();
 
+  public GetImageInfoResult() {
+  }
 
   public GetImageInfoResult successful(Boolean successful) {
     
@@ -111,12 +111,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Get successful
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,10 +124,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetImageInfoResult colorSpace(String colorSpace) {
     
@@ -136,12 +136,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Color space of the image
    * @return colorSpace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Color space of the image")
   @JsonProperty(JSON_PROPERTY_COLOR_SPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,10 +149,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLOR_SPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColorSpace(String colorSpace) {
     this.colorSpace = colorSpace;
   }
-
 
   public GetImageInfoResult colorType(String colorType) {
     
@@ -161,12 +161,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Color type of the image
    * @return colorType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Color type of the image")
   @JsonProperty(JSON_PROPERTY_COLOR_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,10 +174,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLOR_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColorType(String colorType) {
     this.colorType = colorType;
   }
-
 
   public GetImageInfoResult width(Integer width) {
     
@@ -186,12 +186,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the image
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the image")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -200,10 +199,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public GetImageInfoResult height(Integer height) {
     
@@ -211,12 +211,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Height in pixels of the image
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height in pixels of the image")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,10 +224,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public GetImageInfoResult compressionLevel(Integer compressionLevel) {
     
@@ -236,12 +236,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Compression level value from 0 (lowest quality) to 100 (highest quality)
    * @return compressionLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Compression level value from 0 (lowest quality) to 100 (highest quality)")
   @JsonProperty(JSON_PROPERTY_COMPRESSION_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -250,10 +249,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMPRESSION_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCompressionLevel(Integer compressionLevel) {
     this.compressionLevel = compressionLevel;
   }
-
 
   public GetImageInfoResult imageHashSignature(String imageHashSignature) {
     
@@ -261,12 +261,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * SHA256 hash signature of the image
    * @return imageHashSignature
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SHA256 hash signature of the image")
   @JsonProperty(JSON_PROPERTY_IMAGE_HASH_SIGNATURE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -275,10 +274,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_HASH_SIGNATURE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageHashSignature(String imageHashSignature) {
     this.imageHashSignature = imageHashSignature;
   }
-
 
   public GetImageInfoResult hasTransparency(Boolean hasTransparency) {
     
@@ -286,12 +286,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * True if the image contains transparency, otherwise false
    * @return hasTransparency
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the image contains transparency, otherwise false")
   @JsonProperty(JSON_PROPERTY_HAS_TRANSPARENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -300,10 +299,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HAS_TRANSPARENCY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHasTransparency(Boolean hasTransparency) {
     this.hasTransparency = hasTransparency;
   }
-
 
   public GetImageInfoResult mimeType(String mimeType) {
     
@@ -311,12 +311,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * MIME type of the image format
    * @return mimeType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "MIME type of the image format")
   @JsonProperty(JSON_PROPERTY_MIME_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -325,10 +324,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MIME_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMimeType(String mimeType) {
     this.mimeType = mimeType;
   }
-
 
   public GetImageInfoResult imageFormat(String imageFormat) {
     
@@ -336,12 +336,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Image format
    * @return imageFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image format")
   @JsonProperty(JSON_PROPERTY_IMAGE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -350,10 +349,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageFormat(String imageFormat) {
     this.imageFormat = imageFormat;
   }
-
 
   public GetImageInfoResult dpIUnit(String dpIUnit) {
     
@@ -361,12 +361,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Units of the DPI measurement; can be either in Inches or Centimeters
    * @return dpIUnit
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Units of the DPI measurement; can be either in Inches or Centimeters")
   @JsonProperty(JSON_PROPERTY_DP_I_UNIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -375,10 +374,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DP_I_UNIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDpIUnit(String dpIUnit) {
     this.dpIUnit = dpIUnit;
   }
-
 
   public GetImageInfoResult DPI(Double DPI) {
     
@@ -386,12 +386,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * DPI (pixels per unit, e.g. pixels per inch) of the image
    * @return DPI
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "DPI (pixels per unit, e.g. pixels per inch) of the image")
   @JsonProperty(JSON_PROPERTY_D_P_I)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -400,10 +399,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_D_P_I)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDPI(Double DPI) {
     this.DPI = DPI;
   }
-
 
   public GetImageInfoResult colorCount(Integer colorCount) {
     
@@ -411,12 +411,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Unique colors in the image
    * @return colorCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Unique colors in the image")
   @JsonProperty(JSON_PROPERTY_COLOR_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -425,10 +424,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLOR_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColorCount(Integer colorCount) {
     this.colorCount = colorCount;
   }
-
 
   public GetImageInfoResult bitDepth(Integer bitDepth) {
     
@@ -436,12 +436,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Bit depth of the image
    * @return bitDepth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Bit depth of the image")
   @JsonProperty(JSON_PROPERTY_BIT_DEPTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -450,10 +449,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BIT_DEPTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBitDepth(Integer bitDepth) {
     this.bitDepth = bitDepth;
   }
-
 
   public GetImageInfoResult comment(String comment) {
     
@@ -461,12 +461,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Comment string in the image
    * @return comment
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Comment string in the image")
   @JsonProperty(JSON_PROPERTY_COMMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -475,10 +474,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setComment(String comment) {
     this.comment = comment;
   }
-
 
   public GetImageInfoResult exifProfileName(String exifProfileName) {
     
@@ -486,12 +486,11 @@ public class GetImageInfoResult {
     return this;
   }
 
-   /**
+  /**
    * Name of the EXIF profile used
    * @return exifProfileName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the EXIF profile used")
   @JsonProperty(JSON_PROPERTY_EXIF_PROFILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -500,10 +499,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXIF_PROFILE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExifProfileName(String exifProfileName) {
     this.exifProfileName = exifProfileName;
   }
-
 
   public GetImageInfoResult exifValues(List<ExifValue> exifValues) {
     
@@ -513,18 +513,17 @@ public class GetImageInfoResult {
 
   public GetImageInfoResult addExifValuesItem(ExifValue exifValuesItem) {
     if (this.exifValues == null) {
-      this.exifValues = new ArrayList<ExifValue>();
+      this.exifValues = new ArrayList<>();
     }
     this.exifValues.add(exifValuesItem);
     return this;
   }
 
-   /**
+  /**
    * EXIF tags and values embedded in the image
    * @return exifValues
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "EXIF tags and values embedded in the image")
   @JsonProperty(JSON_PROPERTY_EXIF_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -533,10 +532,11 @@ public class GetImageInfoResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXIF_VALUES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExifValues(List<ExifValue> exifValues) {
     this.exifValues = exifValues;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -570,7 +570,6 @@ public class GetImageInfoResult {
   public int hashCode() {
     return Objects.hash(successful, colorSpace, colorType, width, height, compressionLevel, imageHashSignature, hasTransparency, mimeType, imageFormat, dpIUnit, DPI, colorCount, bitDepth, comment, exifProfileName, exifValues);
   }
-
 
   @Override
   public String toString() {

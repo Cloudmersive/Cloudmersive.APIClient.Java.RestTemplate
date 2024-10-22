@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for Face
  */
-public class FaceTest {
+class FaceTest {
     private final Face model = new Face();
 
     /**
      * Model tests for Face
      */
     @Test
-    public void testFace() {
+    void testFace() {
         // TODO: test Face
     }
 
@@ -43,7 +40,7 @@ public class FaceTest {
      * Test the property 'leftX'
      */
     @Test
-    public void leftXTest() {
+    void leftXTest() {
         // TODO: test leftX
     }
 
@@ -51,7 +48,7 @@ public class FaceTest {
      * Test the property 'topY'
      */
     @Test
-    public void topYTest() {
+    void topYTest() {
         // TODO: test topY
     }
 
@@ -59,7 +56,7 @@ public class FaceTest {
      * Test the property 'rightX'
      */
     @Test
-    public void rightXTest() {
+    void rightXTest() {
         // TODO: test rightX
     }
 
@@ -67,7 +64,7 @@ public class FaceTest {
      * Test the property 'bottomY'
      */
     @Test
-    public void bottomYTest() {
+    void bottomYTest() {
         // TODO: test bottomY
     }
 

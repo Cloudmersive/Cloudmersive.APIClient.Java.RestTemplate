@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of a first name validation operation
  */
-@ApiModel(description = "Result of a first name validation operation")
 @JsonPropertyOrder({
   FirstNameValidationResponse.JSON_PROPERTY_SUCCESSFUL,
   FirstNameValidationResponse.JSON_PROPERTY_VALIDATION_RESULT
 })
-@JsonTypeName("FirstNameValidationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FirstNameValidationResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class FirstNameValidationResponse {
   public static final String JSON_PROPERTY_VALIDATION_RESULT = "ValidationResult";
   private String validationResult;
 
+  public FirstNameValidationResponse() {
+  }
 
   public FirstNameValidationResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class FirstNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the validation operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the validation operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class FirstNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public FirstNameValidationResponse validationResult(String validationResult) {
     
@@ -73,12 +72,11 @@ public class FirstNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Possible values are: ValidFirstName, ValidUnknownFirstName, InvalidSpamInput, InvalidCharacters, InvalidEmpty
    * @return validationResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Possible values are: ValidFirstName, ValidUnknownFirstName, InvalidSpamInput, InvalidCharacters, InvalidEmpty")
   @JsonProperty(JSON_PROPERTY_VALIDATION_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class FirstNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALIDATION_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidationResult(String validationResult) {
     this.validationResult = validationResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class FirstNameValidationResponse {
   public int hashCode() {
     return Objects.hash(successful, validationResult);
   }
-
 
   @Override
   public String toString() {

@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Remove Headers and Footers request
  */
-@ApiModel(description = "Input to a Remove Headers and Footers request")
 @JsonPropertyOrder({
   RemoveDocxHeadersAndFootersRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   RemoveDocxHeadersAndFootersRequest.JSON_PROPERTY_INPUT_FILE_URL,
   RemoveDocxHeadersAndFootersRequest.JSON_PROPERTY_REMOVE_HEADERS,
   RemoveDocxHeadersAndFootersRequest.JSON_PROPERTY_REMOVE_FOOTERS
 })
-@JsonTypeName("RemoveDocxHeadersAndFootersRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RemoveDocxHeadersAndFootersRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -49,6 +46,8 @@ public class RemoveDocxHeadersAndFootersRequest {
   public static final String JSON_PROPERTY_REMOVE_FOOTERS = "RemoveFooters";
   private Boolean removeFooters;
 
+  public RemoveDocxHeadersAndFootersRequest() {
+  }
 
   public RemoveDocxHeadersAndFootersRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -56,12 +55,11 @@ public class RemoveDocxHeadersAndFootersRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class RemoveDocxHeadersAndFootersRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public RemoveDocxHeadersAndFootersRequest inputFileUrl(String inputFileUrl) {
     
@@ -81,12 +80,11 @@ public class RemoveDocxHeadersAndFootersRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class RemoveDocxHeadersAndFootersRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public RemoveDocxHeadersAndFootersRequest removeHeaders(Boolean removeHeaders) {
     
@@ -106,12 +105,11 @@ public class RemoveDocxHeadersAndFootersRequest {
     return this;
   }
 
-   /**
+  /**
    * True if you would like to remove all headers from the input document, false otherwise
    * @return removeHeaders
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if you would like to remove all headers from the input document, false otherwise")
   @JsonProperty(JSON_PROPERTY_REMOVE_HEADERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class RemoveDocxHeadersAndFootersRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REMOVE_HEADERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRemoveHeaders(Boolean removeHeaders) {
     this.removeHeaders = removeHeaders;
   }
-
 
   public RemoveDocxHeadersAndFootersRequest removeFooters(Boolean removeFooters) {
     
@@ -131,12 +130,11 @@ public class RemoveDocxHeadersAndFootersRequest {
     return this;
   }
 
-   /**
+  /**
    * True if you would like to remove all footers from the input document, false otherwise
    * @return removeFooters
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if you would like to remove all footers from the input document, false otherwise")
   @JsonProperty(JSON_PROPERTY_REMOVE_FOOTERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class RemoveDocxHeadersAndFootersRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REMOVE_FOOTERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRemoveFooters(Boolean removeFooters) {
     this.removeFooters = removeFooters;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class RemoveDocxHeadersAndFootersRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, removeHeaders, removeFooters);
   }
-
 
   @Override
   public String toString() {

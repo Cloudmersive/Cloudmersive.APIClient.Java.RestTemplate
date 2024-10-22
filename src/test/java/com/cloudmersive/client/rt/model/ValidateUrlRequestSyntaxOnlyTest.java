@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateUrlRequestSyntaxOnly
  */
-public class ValidateUrlRequestSyntaxOnlyTest {
+class ValidateUrlRequestSyntaxOnlyTest {
     private final ValidateUrlRequestSyntaxOnly model = new ValidateUrlRequestSyntaxOnly();
 
     /**
      * Model tests for ValidateUrlRequestSyntaxOnly
      */
     @Test
-    public void testValidateUrlRequestSyntaxOnly() {
+    void testValidateUrlRequestSyntaxOnly() {
         // TODO: test ValidateUrlRequestSyntaxOnly
     }
 
@@ -43,7 +40,7 @@ public class ValidateUrlRequestSyntaxOnlyTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 

@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Syntactic validity of email address
  */
-@ApiModel(description = "Syntactic validity of email address")
 @JsonPropertyOrder({
   AddressVerifySyntaxOnlyResponse.JSON_PROPERTY_VALID_ADDRESS,
   AddressVerifySyntaxOnlyResponse.JSON_PROPERTY_DOMAIN,
   AddressVerifySyntaxOnlyResponse.JSON_PROPERTY_IS_FREE_EMAIL_PROVIDER,
   AddressVerifySyntaxOnlyResponse.JSON_PROPERTY_IS_DISPOSABLE
 })
-@JsonTypeName("AddressVerifySyntaxOnlyResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AddressVerifySyntaxOnlyResponse {
   public static final String JSON_PROPERTY_VALID_ADDRESS = "ValidAddress";
   private Boolean validAddress;
@@ -49,6 +46,8 @@ public class AddressVerifySyntaxOnlyResponse {
   public static final String JSON_PROPERTY_IS_DISPOSABLE = "IsDisposable";
   private Boolean isDisposable;
 
+  public AddressVerifySyntaxOnlyResponse() {
+  }
 
   public AddressVerifySyntaxOnlyResponse validAddress(Boolean validAddress) {
     
@@ -56,12 +55,11 @@ public class AddressVerifySyntaxOnlyResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the email address is syntactically valid, false if it is not
    * @return validAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the email address is syntactically valid, false if it is not")
   @JsonProperty(JSON_PROPERTY_VALID_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class AddressVerifySyntaxOnlyResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidAddress(Boolean validAddress) {
     this.validAddress = validAddress;
   }
-
 
   public AddressVerifySyntaxOnlyResponse domain(String domain) {
     
@@ -81,12 +80,11 @@ public class AddressVerifySyntaxOnlyResponse {
     return this;
   }
 
-   /**
+  /**
    * Domain name of the email address
    * @return domain
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Domain name of the email address")
   @JsonProperty(JSON_PROPERTY_DOMAIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class AddressVerifySyntaxOnlyResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOMAIN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDomain(String domain) {
     this.domain = domain;
   }
-
 
   public AddressVerifySyntaxOnlyResponse isFreeEmailProvider(Boolean isFreeEmailProvider) {
     
@@ -106,12 +105,11 @@ public class AddressVerifySyntaxOnlyResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the email domain name is a free provider (typically a free to sign up web email provider for consumers / personal use), false otherwise.
    * @return isFreeEmailProvider
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the email domain name is a free provider (typically a free to sign up web email provider for consumers / personal use), false otherwise.")
   @JsonProperty(JSON_PROPERTY_IS_FREE_EMAIL_PROVIDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class AddressVerifySyntaxOnlyResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_FREE_EMAIL_PROVIDER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsFreeEmailProvider(Boolean isFreeEmailProvider) {
     this.isFreeEmailProvider = isFreeEmailProvider;
   }
-
 
   public AddressVerifySyntaxOnlyResponse isDisposable(Boolean isDisposable) {
     
@@ -131,12 +130,11 @@ public class AddressVerifySyntaxOnlyResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the email address is a disposable email address, false otherwise; these disposable providers are not typically used to receive email and so will have a low likelihood of opening mail sent there.
    * @return isDisposable
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the email address is a disposable email address, false otherwise; these disposable providers are not typically used to receive email and so will have a low likelihood of opening mail sent there.")
   @JsonProperty(JSON_PROPERTY_IS_DISPOSABLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class AddressVerifySyntaxOnlyResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_DISPOSABLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsDisposable(Boolean isDisposable) {
     this.isDisposable = isDisposable;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class AddressVerifySyntaxOnlyResponse {
   public int hashCode() {
     return Objects.hash(validAddress, domain, isFreeEmailProvider, isDisposable);
   }
-
 
   @Override
   public String toString() {

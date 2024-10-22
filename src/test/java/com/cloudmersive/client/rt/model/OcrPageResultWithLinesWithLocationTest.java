@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for OcrPageResultWithLinesWithLocation
  */
-public class OcrPageResultWithLinesWithLocationTest {
+class OcrPageResultWithLinesWithLocationTest {
     private final OcrPageResultWithLinesWithLocation model = new OcrPageResultWithLinesWithLocation();
 
     /**
      * Model tests for OcrPageResultWithLinesWithLocation
      */
     @Test
-    public void testOcrPageResultWithLinesWithLocation() {
+    void testOcrPageResultWithLinesWithLocation() {
         // TODO: test OcrPageResultWithLinesWithLocation
     }
 
@@ -46,7 +44,7 @@ public class OcrPageResultWithLinesWithLocationTest {
      * Test the property 'pageNumber'
      */
     @Test
-    public void pageNumberTest() {
+    void pageNumberTest() {
         // TODO: test pageNumber
     }
 
@@ -54,7 +52,7 @@ public class OcrPageResultWithLinesWithLocationTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -62,7 +60,7 @@ public class OcrPageResultWithLinesWithLocationTest {
      * Test the property 'lines'
      */
     @Test
-    public void linesTest() {
+    void linesTest() {
         // TODO: test lines
     }
 

@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * EXIF tag and value
  */
-@ApiModel(description = "EXIF tag and value")
 @JsonPropertyOrder({
   ImageMetadataExifValue.JSON_PROPERTY_TAG,
   ImageMetadataExifValue.JSON_PROPERTY_DATA_TYPE,
   ImageMetadataExifValue.JSON_PROPERTY_DATA_VALUE
 })
-@JsonTypeName("ImageMetadataExifValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageMetadataExifValue {
   public static final String JSON_PROPERTY_TAG = "Tag";
   private String tag;
@@ -45,6 +42,8 @@ public class ImageMetadataExifValue {
   public static final String JSON_PROPERTY_DATA_VALUE = "DataValue";
   private String dataValue;
 
+  public ImageMetadataExifValue() {
+  }
 
   public ImageMetadataExifValue tag(String tag) {
     
@@ -52,12 +51,11 @@ public class ImageMetadataExifValue {
     return this;
   }
 
-   /**
+  /**
    * Tag name for the EXIF value
    * @return tag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tag name for the EXIF value")
   @JsonProperty(JSON_PROPERTY_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ImageMetadataExifValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTag(String tag) {
     this.tag = tag;
   }
-
 
   public ImageMetadataExifValue dataType(String dataType) {
     
@@ -77,12 +76,11 @@ public class ImageMetadataExifValue {
     return this;
   }
 
-   /**
+  /**
    * Date type of the EXIF value
    * @return dataType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Date type of the EXIF value")
   @JsonProperty(JSON_PROPERTY_DATA_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ImageMetadataExifValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDataType(String dataType) {
     this.dataType = dataType;
   }
-
 
   public ImageMetadataExifValue dataValue(String dataValue) {
     
@@ -102,12 +101,11 @@ public class ImageMetadataExifValue {
     return this;
   }
 
-   /**
+  /**
    * Value, formatted as a string of the EXIF value
    * @return dataValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Value, formatted as a string of the EXIF value")
   @JsonProperty(JSON_PROPERTY_DATA_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ImageMetadataExifValue {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDataValue(String dataValue) {
     this.dataValue = dataValue;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ImageMetadataExifValue {
   public int hashCode() {
     return Objects.hash(tag, dataType, dataValue);
   }
-
 
   @Override
   public String toString() {

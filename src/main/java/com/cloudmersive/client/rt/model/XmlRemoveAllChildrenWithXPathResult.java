@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a remove all child nodes operation on XML input using XPath
  */
-@ApiModel(description = "Result of performing a remove all child nodes operation on XML input using XPath")
 @JsonPropertyOrder({
   XmlRemoveAllChildrenWithXPathResult.JSON_PROPERTY_SUCCESSFUL,
   XmlRemoveAllChildrenWithXPathResult.JSON_PROPERTY_RESULTING_XML_DOCUMENT,
   XmlRemoveAllChildrenWithXPathResult.JSON_PROPERTY_NODES_EDITED_COUNT
 })
-@JsonTypeName("XmlRemoveAllChildrenWithXPathResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XmlRemoveAllChildrenWithXPathResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class XmlRemoveAllChildrenWithXPathResult {
   public static final String JSON_PROPERTY_NODES_EDITED_COUNT = "NodesEditedCount";
   private Integer nodesEditedCount;
 
+  public XmlRemoveAllChildrenWithXPathResult() {
+  }
 
   public XmlRemoveAllChildrenWithXPathResult successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class XmlRemoveAllChildrenWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class XmlRemoveAllChildrenWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public XmlRemoveAllChildrenWithXPathResult resultingXmlDocument(String resultingXmlDocument) {
     
@@ -77,12 +76,11 @@ public class XmlRemoveAllChildrenWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * Resulting, modified XML document
    * @return resultingXmlDocument
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Resulting, modified XML document")
   @JsonProperty(JSON_PROPERTY_RESULTING_XML_DOCUMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class XmlRemoveAllChildrenWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULTING_XML_DOCUMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultingXmlDocument(String resultingXmlDocument) {
     this.resultingXmlDocument = resultingXmlDocument;
   }
-
 
   public XmlRemoveAllChildrenWithXPathResult nodesEditedCount(Integer nodesEditedCount) {
     
@@ -102,12 +101,11 @@ public class XmlRemoveAllChildrenWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * Count of the matching results
    * @return nodesEditedCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of the matching results")
   @JsonProperty(JSON_PROPERTY_NODES_EDITED_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class XmlRemoveAllChildrenWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NODES_EDITED_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNodesEditedCount(Integer nodesEditedCount) {
     this.nodesEditedCount = nodesEditedCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class XmlRemoveAllChildrenWithXPathResult {
   public int hashCode() {
     return Objects.hash(successful, resultingXmlDocument, nodesEditedCount);
   }
-
 
   @Override
   public String toString() {

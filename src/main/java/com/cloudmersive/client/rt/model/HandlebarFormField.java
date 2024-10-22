@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Instance of a form field that is handlebar style, such as \&quot;{{FieldName}}\&quot;
  */
-@ApiModel(description = "Instance of a form field that is handlebar style, such as \"{{FieldName}}\"")
 @JsonPropertyOrder({
   HandlebarFormField.JSON_PROPERTY_FORM_FIELD_TITLE
 })
-@JsonTypeName("HandlebarFormField")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HandlebarFormField {
   public static final String JSON_PROPERTY_FORM_FIELD_TITLE = "FormFieldTitle";
   private String formFieldTitle;
 
+  public HandlebarFormField() {
+  }
 
   public HandlebarFormField formFieldTitle(String formFieldTitle) {
     
@@ -44,12 +43,11 @@ public class HandlebarFormField {
     return this;
   }
 
-   /**
+  /**
    * Title of the handlebar style form field, such as \&quot;FieldName\&quot; in the case of \&quot;{{FieldName}}\&quot;
    * @return formFieldTitle
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Title of the handlebar style form field, such as \"FieldName\" in the case of \"{{FieldName}}\"")
   @JsonProperty(JSON_PROPERTY_FORM_FIELD_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class HandlebarFormField {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FORM_FIELD_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFormFieldTitle(String formFieldTitle) {
     this.formFieldTitle = formFieldTitle;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class HandlebarFormField {
   public int hashCode() {
     return Objects.hash(formFieldTitle);
   }
-
 
   @Override
   public String toString() {

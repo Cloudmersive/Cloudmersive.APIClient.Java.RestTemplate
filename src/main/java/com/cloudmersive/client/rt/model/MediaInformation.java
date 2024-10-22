@@ -20,16 +20,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of retrieving information about a video or audio file
  */
-@ApiModel(description = "Result of retrieving information about a video or audio file")
 @JsonPropertyOrder({
   MediaInformation.JSON_PROPERTY_SUCCESSFUL,
   MediaInformation.JSON_PROPERTY_FILE_FORMAT,
@@ -42,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   MediaInformation.JSON_PROPERTY_DURATION,
   MediaInformation.JSON_PROPERTY_START_TIME
 })
-@JsonTypeName("MediaInformation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MediaInformation {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -55,7 +53,7 @@ public class MediaInformation {
   private String fileFormatFull;
 
   public static final String JSON_PROPERTY_VALID_FILE_FORMATS = "ValidFileFormats";
-  private List<String> validFileFormats = null;
+  private List<String> validFileFormats = new ArrayList<>();
 
   public static final String JSON_PROPERTY_WIDTH = "Width";
   private Integer width;
@@ -75,6 +73,8 @@ public class MediaInformation {
   public static final String JSON_PROPERTY_START_TIME = "StartTime";
   private Double startTime;
 
+  public MediaInformation() {
+  }
 
   public MediaInformation successful(Boolean successful) {
     
@@ -82,12 +82,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +95,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public MediaInformation fileFormat(String fileFormat) {
     
@@ -107,12 +107,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The file&#39;s short format name
    * @return fileFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The file's short format name")
   @JsonProperty(JSON_PROPERTY_FILE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +120,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileFormat(String fileFormat) {
     this.fileFormat = fileFormat;
   }
-
 
   public MediaInformation fileFormatFull(String fileFormatFull) {
     
@@ -132,12 +132,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The file&#39;s full format name
    * @return fileFormatFull
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The file's full format name")
   @JsonProperty(JSON_PROPERTY_FILE_FORMAT_FULL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +145,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_FORMAT_FULL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileFormatFull(String fileFormatFull) {
     this.fileFormatFull = fileFormatFull;
   }
-
 
   public MediaInformation validFileFormats(List<String> validFileFormats) {
     
@@ -159,18 +159,17 @@ public class MediaInformation {
 
   public MediaInformation addValidFileFormatsItem(String validFileFormatsItem) {
     if (this.validFileFormats == null) {
-      this.validFileFormats = new ArrayList<String>();
+      this.validFileFormats = new ArrayList<>();
     }
     this.validFileFormats.add(validFileFormatsItem);
     return this;
   }
 
-   /**
+  /**
    * A list of the file&#39;s valid formats
    * @return validFileFormats
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "A list of the file's valid formats")
   @JsonProperty(JSON_PROPERTY_VALID_FILE_FORMATS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,10 +178,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_FILE_FORMATS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidFileFormats(List<String> validFileFormats) {
     this.validFileFormats = validFileFormats;
   }
-
 
   public MediaInformation width(Integer width) {
     
@@ -190,12 +190,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The video&#39;s width, if file is a video
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The video's width, if file is a video")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,10 +203,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public MediaInformation height(Integer height) {
     
@@ -215,12 +215,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The video&#39;s height, if file is a video
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The video's height, if file is a video")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -229,10 +228,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public MediaInformation size(Integer size) {
     
@@ -240,12 +240,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The file&#39;s size in bytes
    * @return size
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The file's size in bytes")
   @JsonProperty(JSON_PROPERTY_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -254,10 +253,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SIZE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSize(Integer size) {
     this.size = size;
   }
-
 
   public MediaInformation bitRate(Integer bitRate) {
     
@@ -265,12 +265,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The file&#39;s bit rate
    * @return bitRate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The file's bit rate")
   @JsonProperty(JSON_PROPERTY_BIT_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,10 +278,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BIT_RATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBitRate(Integer bitRate) {
     this.bitRate = bitRate;
   }
-
 
   public MediaInformation duration(Double duration) {
     
@@ -290,12 +290,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The file&#39;s duration in seconds
    * @return duration
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The file's duration in seconds")
   @JsonProperty(JSON_PROPERTY_DURATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -304,10 +303,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DURATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDuration(Double duration) {
     this.duration = duration;
   }
-
 
   public MediaInformation startTime(Double startTime) {
     
@@ -315,12 +315,11 @@ public class MediaInformation {
     return this;
   }
 
-   /**
+  /**
    * The file&#39;s media start time
    * @return startTime
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The file's media start time")
   @JsonProperty(JSON_PROPERTY_START_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -329,10 +328,11 @@ public class MediaInformation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStartTime(Double startTime) {
     this.startTime = startTime;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -359,7 +359,6 @@ public class MediaInformation {
   public int hashCode() {
     return Objects.hash(successful, fileFormat, fileFormatFull, validFileFormats, width, height, size, bitRate, duration, startTime);
   }
-
 
   @Override
   public String toString() {

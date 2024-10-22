@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HtmlThreatLink
  */
-public class HtmlThreatLinkTest {
+class HtmlThreatLinkTest {
     private final HtmlThreatLink model = new HtmlThreatLink();
 
     /**
      * Model tests for HtmlThreatLink
      */
     @Test
-    public void testHtmlThreatLink() {
+    void testHtmlThreatLink() {
         // TODO: test HtmlThreatLink
     }
 
@@ -43,7 +40,7 @@ public class HtmlThreatLinkTest {
      * Test the property 'linkUrl'
      */
     @Test
-    public void linkUrlTest() {
+    void linkUrlTest() {
         // TODO: test linkUrl
     }
 
@@ -51,7 +48,7 @@ public class HtmlThreatLinkTest {
      * Test the property 'threatLevel'
      */
     @Test
-    public void threatLevelTest() {
+    void threatLevelTest() {
         // TODO: test threatLevel
     }
 

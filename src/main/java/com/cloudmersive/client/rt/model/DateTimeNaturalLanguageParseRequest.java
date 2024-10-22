@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input parameter to a date time parsing request
  */
-@ApiModel(description = "Input parameter to a date time parsing request")
 @JsonPropertyOrder({
   DateTimeNaturalLanguageParseRequest.JSON_PROPERTY_RAW_DATE_TIME_INPUT
 })
-@JsonTypeName("DateTimeNaturalLanguageParseRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DateTimeNaturalLanguageParseRequest {
   public static final String JSON_PROPERTY_RAW_DATE_TIME_INPUT = "RawDateTimeInput";
   private String rawDateTimeInput;
 
+  public DateTimeNaturalLanguageParseRequest() {
+  }
 
   public DateTimeNaturalLanguageParseRequest rawDateTimeInput(String rawDateTimeInput) {
     
@@ -44,12 +43,11 @@ public class DateTimeNaturalLanguageParseRequest {
     return this;
   }
 
-   /**
+  /**
    * Raw string input of a natural language-formatted date and time for parsing
    * @return rawDateTimeInput
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Raw string input of a natural language-formatted date and time for parsing")
   @JsonProperty(JSON_PROPERTY_RAW_DATE_TIME_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class DateTimeNaturalLanguageParseRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RAW_DATE_TIME_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRawDateTimeInput(String rawDateTimeInput) {
     this.rawDateTimeInput = rawDateTimeInput;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class DateTimeNaturalLanguageParseRequest {
   public int hashCode() {
     return Objects.hash(rawDateTimeInput);
   }
-
 
   @Override
   public String toString() {

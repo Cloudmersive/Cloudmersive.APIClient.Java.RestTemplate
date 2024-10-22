@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Single object instance, and associated details, detected in an image
  */
-@ApiModel(description = "Single object instance, and associated details, detected in an image")
 @JsonPropertyOrder({
   DetectedObject.JSON_PROPERTY_OBJECT_CLASS_NAME,
   DetectedObject.JSON_PROPERTY_HEIGHT,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DetectedObject.JSON_PROPERTY_X,
   DetectedObject.JSON_PROPERTY_Y
 })
-@JsonTypeName("DetectedObject")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DetectedObject {
   public static final String JSON_PROPERTY_OBJECT_CLASS_NAME = "ObjectClassName";
   private String objectClassName;
@@ -57,6 +54,8 @@ public class DetectedObject {
   public static final String JSON_PROPERTY_Y = "Y";
   private Integer Y;
 
+  public DetectedObject() {
+  }
 
   public DetectedObject objectClassName(String objectClassName) {
     
@@ -64,12 +63,11 @@ public class DetectedObject {
     return this;
   }
 
-   /**
+  /**
    * Class of the object.  Example values are \&quot;person\&quot;, \&quot;car\&quot;, \&quot;dining table\&quot;, etc.
    * @return objectClassName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Class of the object.  Example values are \"person\", \"car\", \"dining table\", etc.")
   @JsonProperty(JSON_PROPERTY_OBJECT_CLASS_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -78,10 +76,11 @@ public class DetectedObject {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OBJECT_CLASS_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setObjectClassName(String objectClassName) {
     this.objectClassName = objectClassName;
   }
-
 
   public DetectedObject height(Integer height) {
     
@@ -89,12 +88,11 @@ public class DetectedObject {
     return this;
   }
 
-   /**
+  /**
    * Height, in pixels, of the object
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height, in pixels, of the object")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,10 +101,11 @@ public class DetectedObject {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public DetectedObject width(Integer width) {
     
@@ -114,12 +113,11 @@ public class DetectedObject {
     return this;
   }
 
-   /**
+  /**
    * Width, in pixels, of the object
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width, in pixels, of the object")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,10 +126,11 @@ public class DetectedObject {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public DetectedObject score(Double score) {
     
@@ -139,12 +138,11 @@ public class DetectedObject {
     return this;
   }
 
-   /**
+  /**
    * Confidence score of detected object; possible values are between 0.0 and 1.0; values closer to 1.0 are higher confidence
    * @return score
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence score of detected object; possible values are between 0.0 and 1.0; values closer to 1.0 are higher confidence")
   @JsonProperty(JSON_PROPERTY_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,10 +151,11 @@ public class DetectedObject {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setScore(Double score) {
     this.score = score;
   }
-
 
   public DetectedObject X(Integer X) {
     
@@ -164,12 +163,11 @@ public class DetectedObject {
     return this;
   }
 
-   /**
+  /**
    * X location, in pixels, of the left side location of the object, with the right side being X + Width
    * @return X
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location, in pixels, of the left side location of the object, with the right side being X + Width")
   @JsonProperty(JSON_PROPERTY_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -178,10 +176,11 @@ public class DetectedObject {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setX(Integer X) {
     this.X = X;
   }
-
 
   public DetectedObject Y(Integer Y) {
     
@@ -189,12 +188,11 @@ public class DetectedObject {
     return this;
   }
 
-   /**
+  /**
    * Y location, in pixels, of the top side location of the object, with the bottom side being Y + Height
    * @return Y
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location, in pixels, of the top side location of the object, with the bottom side being Y + Height")
   @JsonProperty(JSON_PROPERTY_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,10 +201,11 @@ public class DetectedObject {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setY(Integer Y) {
     this.Y = Y;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -229,7 +228,6 @@ public class DetectedObject {
   public int hashCode() {
     return Objects.hash(objectClassName, height, width, score, X, Y);
   }
-
 
   @Override
   public String toString() {

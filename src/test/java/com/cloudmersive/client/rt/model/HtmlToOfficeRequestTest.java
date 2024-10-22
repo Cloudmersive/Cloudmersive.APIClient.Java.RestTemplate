@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HtmlToOfficeRequest
  */
-public class HtmlToOfficeRequestTest {
+class HtmlToOfficeRequestTest {
     private final HtmlToOfficeRequest model = new HtmlToOfficeRequest();
 
     /**
      * Model tests for HtmlToOfficeRequest
      */
     @Test
-    public void testHtmlToOfficeRequest() {
+    void testHtmlToOfficeRequest() {
         // TODO: test HtmlToOfficeRequest
     }
 
@@ -43,7 +40,7 @@ public class HtmlToOfficeRequestTest {
      * Test the property 'html'
      */
     @Test
-    public void htmlTest() {
+    void htmlTest() {
         // TODO: test html
     }
 

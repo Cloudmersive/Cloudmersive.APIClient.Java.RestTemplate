@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AddressVerifySyntaxOnlyResponse
  */
-public class AddressVerifySyntaxOnlyResponseTest {
+class AddressVerifySyntaxOnlyResponseTest {
     private final AddressVerifySyntaxOnlyResponse model = new AddressVerifySyntaxOnlyResponse();
 
     /**
      * Model tests for AddressVerifySyntaxOnlyResponse
      */
     @Test
-    public void testAddressVerifySyntaxOnlyResponse() {
+    void testAddressVerifySyntaxOnlyResponse() {
         // TODO: test AddressVerifySyntaxOnlyResponse
     }
 
@@ -43,7 +40,7 @@ public class AddressVerifySyntaxOnlyResponseTest {
      * Test the property 'validAddress'
      */
     @Test
-    public void validAddressTest() {
+    void validAddressTest() {
         // TODO: test validAddress
     }
 
@@ -51,7 +48,7 @@ public class AddressVerifySyntaxOnlyResponseTest {
      * Test the property 'domain'
      */
     @Test
-    public void domainTest() {
+    void domainTest() {
         // TODO: test domain
     }
 
@@ -59,7 +56,7 @@ public class AddressVerifySyntaxOnlyResponseTest {
      * Test the property 'isFreeEmailProvider'
      */
     @Test
-    public void isFreeEmailProviderTest() {
+    void isFreeEmailProviderTest() {
         // TODO: test isFreeEmailProvider
     }
 
@@ -67,7 +64,7 @@ public class AddressVerifySyntaxOnlyResponseTest {
      * Test the property 'isDisposable'
      */
     @Test
-    public void isDisposableTest() {
+    void isDisposableTest() {
         // TODO: test isDisposable
     }
 

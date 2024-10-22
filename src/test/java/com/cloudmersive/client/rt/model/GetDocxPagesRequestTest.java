@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxPagesRequest
  */
-public class GetDocxPagesRequestTest {
+class GetDocxPagesRequestTest {
     private final GetDocxPagesRequest model = new GetDocxPagesRequest();
 
     /**
      * Model tests for GetDocxPagesRequest
      */
     @Test
-    public void testGetDocxPagesRequest() {
+    void testGetDocxPagesRequest() {
         // TODO: test GetDocxPagesRequest
     }
 
@@ -43,7 +40,7 @@ public class GetDocxPagesRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class GetDocxPagesRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class GetDocxPagesRequestTest {
      * Test the property 'maximumPages'
      */
     @Test
-    public void maximumPagesTest() {
+    void maximumPagesTest() {
         // TODO: test maximumPages
     }
 

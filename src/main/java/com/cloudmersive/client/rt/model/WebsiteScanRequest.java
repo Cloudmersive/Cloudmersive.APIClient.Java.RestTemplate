@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to scan a website for malicious content
  */
-@ApiModel(description = "Request to scan a website for malicious content")
 @JsonPropertyOrder({
   WebsiteScanRequest.JSON_PROPERTY_URL
 })
-@JsonTypeName("WebsiteScanRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsiteScanRequest {
   public static final String JSON_PROPERTY_URL = "Url";
   private String url;
 
+  public WebsiteScanRequest() {
+  }
 
   public WebsiteScanRequest url(String url) {
     
@@ -44,12 +43,11 @@ public class WebsiteScanRequest {
     return this;
   }
 
-   /**
+  /**
    * URL of the website to scan; should begin with http:// or https://
    * @return url
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL of the website to scan; should begin with http:// or https://")
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class WebsiteScanRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUrl(String url) {
     this.url = url;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class WebsiteScanRequest {
   public int hashCode() {
     return Objects.hash(url);
   }
-
 
   @Override
   public String toString() {

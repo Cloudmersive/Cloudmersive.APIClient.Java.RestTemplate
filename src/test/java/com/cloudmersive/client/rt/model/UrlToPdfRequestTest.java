@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for UrlToPdfRequest
  */
-public class UrlToPdfRequestTest {
+class UrlToPdfRequestTest {
     private final UrlToPdfRequest model = new UrlToPdfRequest();
 
     /**
      * Model tests for UrlToPdfRequest
      */
     @Test
-    public void testUrlToPdfRequest() {
+    void testUrlToPdfRequest() {
         // TODO: test UrlToPdfRequest
     }
 
@@ -43,7 +40,7 @@ public class UrlToPdfRequestTest {
      * Test the property 'url'
      */
     @Test
-    public void urlTest() {
+    void urlTest() {
         // TODO: test url
     }
 
@@ -51,7 +48,7 @@ public class UrlToPdfRequestTest {
      * Test the property 'extraLoadingWait'
      */
     @Test
-    public void extraLoadingWaitTest() {
+    void extraLoadingWaitTest() {
         // TODO: test extraLoadingWait
     }
 
@@ -59,7 +56,7 @@ public class UrlToPdfRequestTest {
      * Test the property 'includeBackgroundGraphics'
      */
     @Test
-    public void includeBackgroundGraphicsTest() {
+    void includeBackgroundGraphicsTest() {
         // TODO: test includeBackgroundGraphics
     }
 
@@ -67,7 +64,7 @@ public class UrlToPdfRequestTest {
      * Test the property 'scaleFactor'
      */
     @Test
-    public void scaleFactorTest() {
+    void scaleFactorTest() {
         // TODO: test scaleFactor
     }
 

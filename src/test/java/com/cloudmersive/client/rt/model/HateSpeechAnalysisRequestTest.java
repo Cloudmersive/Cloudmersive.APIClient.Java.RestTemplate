@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HateSpeechAnalysisRequest
  */
-public class HateSpeechAnalysisRequestTest {
+class HateSpeechAnalysisRequestTest {
     private final HateSpeechAnalysisRequest model = new HateSpeechAnalysisRequest();
 
     /**
      * Model tests for HateSpeechAnalysisRequest
      */
     @Test
-    public void testHateSpeechAnalysisRequest() {
+    void testHateSpeechAnalysisRequest() {
         // TODO: test HateSpeechAnalysisRequest
     }
 
@@ -43,7 +40,7 @@ public class HateSpeechAnalysisRequestTest {
      * Test the property 'textToAnalyze'
      */
     @Test
-    public void textToAnalyzeTest() {
+    void textToAnalyzeTest() {
         // TODO: test textToAnalyze
     }
 

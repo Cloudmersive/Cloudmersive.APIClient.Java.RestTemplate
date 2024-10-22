@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for InsertDocxTableRowRequest
  */
-public class InsertDocxTableRowRequestTest {
+class InsertDocxTableRowRequestTest {
     private final InsertDocxTableRowRequest model = new InsertDocxTableRowRequest();
 
     /**
      * Model tests for InsertDocxTableRowRequest
      */
     @Test
-    public void testInsertDocxTableRowRequest() {
+    void testInsertDocxTableRowRequest() {
         // TODO: test InsertDocxTableRowRequest
     }
 
@@ -44,7 +41,7 @@ public class InsertDocxTableRowRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class InsertDocxTableRowRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class InsertDocxTableRowRequestTest {
      * Test the property 'rowToInsert'
      */
     @Test
-    public void rowToInsertTest() {
+    void rowToInsertTest() {
         // TODO: test rowToInsert
     }
 
@@ -68,7 +65,7 @@ public class InsertDocxTableRowRequestTest {
      * Test the property 'insertPlacement'
      */
     @Test
-    public void insertPlacementTest() {
+    void insertPlacementTest() {
         // TODO: test insertPlacement
     }
 
@@ -76,7 +73,7 @@ public class InsertDocxTableRowRequestTest {
      * Test the property 'existingTablePath'
      */
     @Test
-    public void existingTablePathTest() {
+    void existingTablePathTest() {
         // TODO: test existingTablePath
     }
 

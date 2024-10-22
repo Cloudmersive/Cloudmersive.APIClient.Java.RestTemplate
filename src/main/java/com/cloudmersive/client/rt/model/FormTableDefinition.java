@@ -21,30 +21,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Definition of a form table for OCR data extraction from images
  */
-@ApiModel(description = "Definition of a form table for OCR data extraction from images")
 @JsonPropertyOrder({
   FormTableDefinition.JSON_PROPERTY_TABLE_I_D,
   FormTableDefinition.JSON_PROPERTY_COLUMN_DEFINITIONS,
   FormTableDefinition.JSON_PROPERTY_TARGET_TABLE_HEIGHT_RELATIVE,
   FormTableDefinition.JSON_PROPERTY_TARGET_ROW_HEIGHT_RELATIVE
 })
-@JsonTypeName("FormTableDefinition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FormTableDefinition {
   public static final String JSON_PROPERTY_TABLE_I_D = "TableID";
   private String tableID;
 
   public static final String JSON_PROPERTY_COLUMN_DEFINITIONS = "ColumnDefinitions";
-  private List<FormTableColumnDefinition> columnDefinitions = null;
+  private List<FormTableColumnDefinition> columnDefinitions = new ArrayList<>();
 
   public static final String JSON_PROPERTY_TARGET_TABLE_HEIGHT_RELATIVE = "TargetTableHeight_Relative";
   private Double targetTableHeightRelative;
@@ -52,6 +50,8 @@ public class FormTableDefinition {
   public static final String JSON_PROPERTY_TARGET_ROW_HEIGHT_RELATIVE = "TargetRowHeight_Relative";
   private Double targetRowHeightRelative;
 
+  public FormTableDefinition() {
+  }
 
   public FormTableDefinition tableID(String tableID) {
     
@@ -59,12 +59,11 @@ public class FormTableDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional; the ID of the table
    * @return tableID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; the ID of the table")
   @JsonProperty(JSON_PROPERTY_TABLE_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class FormTableDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableID(String tableID) {
     this.tableID = tableID;
   }
-
 
   public FormTableDefinition columnDefinitions(List<FormTableColumnDefinition> columnDefinitions) {
     
@@ -86,18 +86,17 @@ public class FormTableDefinition {
 
   public FormTableDefinition addColumnDefinitionsItem(FormTableColumnDefinition columnDefinitionsItem) {
     if (this.columnDefinitions == null) {
-      this.columnDefinitions = new ArrayList<FormTableColumnDefinition>();
+      this.columnDefinitions = new ArrayList<>();
     }
     this.columnDefinitions.add(columnDefinitionsItem);
     return this;
   }
 
-   /**
+  /**
    * Definition of the columns in the table
    * @return columnDefinitions
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Definition of the columns in the table")
   @JsonProperty(JSON_PROPERTY_COLUMN_DEFINITIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,10 +105,11 @@ public class FormTableDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLUMN_DEFINITIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColumnDefinitions(List<FormTableColumnDefinition> columnDefinitions) {
     this.columnDefinitions = columnDefinitions;
   }
-
 
   public FormTableDefinition targetTableHeightRelative(Double targetTableHeightRelative) {
     
@@ -117,12 +117,11 @@ public class FormTableDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - scale factor for target table height - relative to maximum height of headers of columns
    * @return targetTableHeightRelative
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - scale factor for target table height - relative to maximum height of headers of columns")
   @JsonProperty(JSON_PROPERTY_TARGET_TABLE_HEIGHT_RELATIVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,10 +130,11 @@ public class FormTableDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_TABLE_HEIGHT_RELATIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetTableHeightRelative(Double targetTableHeightRelative) {
     this.targetTableHeightRelative = targetTableHeightRelative;
   }
-
 
   public FormTableDefinition targetRowHeightRelative(Double targetRowHeightRelative) {
     
@@ -142,12 +142,11 @@ public class FormTableDefinition {
     return this;
   }
 
-   /**
+  /**
    * Optional - scale factor for target row height - relative to height of column header
    * @return targetRowHeightRelative
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional - scale factor for target row height - relative to height of column header")
   @JsonProperty(JSON_PROPERTY_TARGET_ROW_HEIGHT_RELATIVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,10 +155,11 @@ public class FormTableDefinition {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_ROW_HEIGHT_RELATIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetRowHeightRelative(Double targetRowHeightRelative) {
     this.targetRowHeightRelative = targetRowHeightRelative;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -180,7 +180,6 @@ public class FormTableDefinition {
   public int hashCode() {
     return Objects.hash(tableID, columnDefinitions, targetTableHeightRelative, targetRowHeightRelative);
   }
-
 
   @Override
   public String toString() {

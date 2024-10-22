@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a domain quality score operation
  */
-@ApiModel(description = "Result of performing a domain quality score operation")
 @JsonPropertyOrder({
   DomainQualityResponse.JSON_PROPERTY_DOMAIN_QUALITY_SCORE
 })
-@JsonTypeName("DomainQualityResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DomainQualityResponse {
   public static final String JSON_PROPERTY_DOMAIN_QUALITY_SCORE = "DomainQualityScore";
   private Double domainQualityScore;
 
+  public DomainQualityResponse() {
+  }
 
   public DomainQualityResponse domainQualityScore(Double domainQualityScore) {
     
@@ -44,12 +43,11 @@ public class DomainQualityResponse {
     return this;
   }
 
-   /**
+  /**
    * The quality score of the domain name; possible values are 0.0 to 10.0 with 10.0 being the highest and 0.0 being the lowest quality.
    * @return domainQualityScore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The quality score of the domain name; possible values are 0.0 to 10.0 with 10.0 being the highest and 0.0 being the lowest quality.")
   @JsonProperty(JSON_PROPERTY_DOMAIN_QUALITY_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class DomainQualityResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOMAIN_QUALITY_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDomainQualityScore(Double domainQualityScore) {
     this.domainQualityScore = domainQualityScore;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class DomainQualityResponse {
   public int hashCode() {
     return Objects.hash(domainQualityScore);
   }
-
 
   @Override
   public String toString() {

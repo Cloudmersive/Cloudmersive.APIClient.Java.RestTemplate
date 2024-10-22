@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an XQuery operation on multiple XML documents.
  */
-@ApiModel(description = "Result of performing an XQuery operation on multiple XML documents.")
 @JsonPropertyOrder({
   XmlQueryWithXQueryMultiResult.JSON_PROPERTY_SUCCESSFUL,
   XmlQueryWithXQueryMultiResult.JSON_PROPERTY_RESULTING_XML,
   XmlQueryWithXQueryMultiResult.JSON_PROPERTY_ERROR_MESSAGE
 })
-@JsonTypeName("XmlQueryWithXQueryMultiResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XmlQueryWithXQueryMultiResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class XmlQueryWithXQueryMultiResult {
   public static final String JSON_PROPERTY_ERROR_MESSAGE = "ErrorMessage";
   private String errorMessage;
 
+  public XmlQueryWithXQueryMultiResult() {
+  }
 
   public XmlQueryWithXQueryMultiResult successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class XmlQueryWithXQueryMultiResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class XmlQueryWithXQueryMultiResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public XmlQueryWithXQueryMultiResult resultingXml(String resultingXml) {
     
@@ -77,12 +76,11 @@ public class XmlQueryWithXQueryMultiResult {
     return this;
   }
 
-   /**
+  /**
    * Resulting XML result output
    * @return resultingXml
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Resulting XML result output")
   @JsonProperty(JSON_PROPERTY_RESULTING_XML)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class XmlQueryWithXQueryMultiResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULTING_XML)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultingXml(String resultingXml) {
     this.resultingXml = resultingXml;
   }
-
 
   public XmlQueryWithXQueryMultiResult errorMessage(String errorMessage) {
     
@@ -102,12 +101,11 @@ public class XmlQueryWithXQueryMultiResult {
     return this;
   }
 
-   /**
+  /**
    * If an error occurs, additional details on the error
    * @return errorMessage
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If an error occurs, additional details on the error")
   @JsonProperty(JSON_PROPERTY_ERROR_MESSAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class XmlQueryWithXQueryMultiResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ERROR_MESSAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setErrorMessage(String errorMessage) {
     this.errorMessage = errorMessage;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class XmlQueryWithXQueryMultiResult {
   public int hashCode() {
     return Objects.hash(successful, resultingXml, errorMessage);
   }
-
 
   @Override
   public String toString() {

@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SentenceSegmentationResponse
  */
-public class SentenceSegmentationResponseTest {
+class SentenceSegmentationResponseTest {
     private final SentenceSegmentationResponse model = new SentenceSegmentationResponse();
 
     /**
      * Model tests for SentenceSegmentationResponse
      */
     @Test
-    public void testSentenceSegmentationResponse() {
+    void testSentenceSegmentationResponse() {
         // TODO: test SentenceSegmentationResponse
     }
 
@@ -45,7 +43,7 @@ public class SentenceSegmentationResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -53,7 +51,7 @@ public class SentenceSegmentationResponseTest {
      * Test the property 'sentences'
      */
     @Test
-    public void sentencesTest() {
+    void sentencesTest() {
         // TODO: test sentences
     }
 
@@ -61,7 +59,7 @@ public class SentenceSegmentationResponseTest {
      * Test the property 'sentenceCount'
      */
     @Test
-    public void sentenceCountTest() {
+    void sentenceCountTest() {
         // TODO: test sentenceCount
     }
 

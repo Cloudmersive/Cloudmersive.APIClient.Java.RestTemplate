@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * HTML SSRF validation result
  */
-@ApiModel(description = "HTML SSRF validation result")
 @JsonPropertyOrder({
   HtmlSsrfThreatCheckResult.JSON_PROPERTY_IS_VALID,
   HtmlSsrfThreatCheckResult.JSON_PROPERTY_IS_THREAT,
   HtmlSsrfThreatCheckResult.JSON_PROPERTY_THREAT_LINKS
 })
-@JsonTypeName("HtmlSsrfThreatCheckResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlSsrfThreatCheckResult {
   public static final String JSON_PROPERTY_IS_VALID = "IsValid";
   private Boolean isValid;
@@ -46,8 +44,10 @@ public class HtmlSsrfThreatCheckResult {
   private Boolean isThreat;
 
   public static final String JSON_PROPERTY_THREAT_LINKS = "ThreatLinks";
-  private List<HtmlThreatLink> threatLinks = null;
+  private List<HtmlThreatLink> threatLinks = new ArrayList<>();
 
+  public HtmlSsrfThreatCheckResult() {
+  }
 
   public HtmlSsrfThreatCheckResult isValid(Boolean isValid) {
     
@@ -55,12 +55,11 @@ public class HtmlSsrfThreatCheckResult {
     return this;
   }
 
-   /**
+  /**
    * True if the document is valid and has no errors, false otherwise
    * @return isValid
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the document is valid and has no errors, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_VALID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class HtmlSsrfThreatCheckResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_VALID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsValid(Boolean isValid) {
     this.isValid = isValid;
   }
-
 
   public HtmlSsrfThreatCheckResult isThreat(Boolean isThreat) {
     
@@ -80,12 +80,11 @@ public class HtmlSsrfThreatCheckResult {
     return this;
   }
 
-   /**
+  /**
    * True if the document contains an SSRF threat, false otherwise
    * @return isThreat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the document contains an SSRF threat, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_THREAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class HtmlSsrfThreatCheckResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_THREAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsThreat(Boolean isThreat) {
     this.isThreat = isThreat;
   }
-
 
   public HtmlSsrfThreatCheckResult threatLinks(List<HtmlThreatLink> threatLinks) {
     
@@ -107,18 +107,17 @@ public class HtmlSsrfThreatCheckResult {
 
   public HtmlSsrfThreatCheckResult addThreatLinksItem(HtmlThreatLink threatLinksItem) {
     if (this.threatLinks == null) {
-      this.threatLinks = new ArrayList<HtmlThreatLink>();
+      this.threatLinks = new ArrayList<>();
     }
     this.threatLinks.add(threatLinksItem);
     return this;
   }
 
-   /**
+  /**
    * Links found in the input HTML that contains threats
    * @return threatLinks
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Links found in the input HTML that contains threats")
   @JsonProperty(JSON_PROPERTY_THREAT_LINKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class HtmlSsrfThreatCheckResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_THREAT_LINKS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setThreatLinks(List<HtmlThreatLink> threatLinks) {
     this.threatLinks = threatLinks;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class HtmlSsrfThreatCheckResult {
   public int hashCode() {
     return Objects.hash(isValid, isThreat, threatLinks);
   }
-
 
   @Override
   public String toString() {

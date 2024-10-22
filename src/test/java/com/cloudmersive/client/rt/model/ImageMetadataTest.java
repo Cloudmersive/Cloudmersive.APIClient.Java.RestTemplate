@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ImageMetadata
  */
-public class ImageMetadataTest {
+class ImageMetadataTest {
     private final ImageMetadata model = new ImageMetadata();
 
     /**
      * Model tests for ImageMetadata
      */
     @Test
-    public void testImageMetadata() {
+    void testImageMetadata() {
         // TODO: test ImageMetadata
     }
 
@@ -46,7 +44,7 @@ public class ImageMetadataTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class ImageMetadataTest {
      * Test the property 'isValidImage'
      */
     @Test
-    public void isValidImageTest() {
+    void isValidImageTest() {
         // TODO: test isValidImage
     }
 
@@ -62,7 +60,7 @@ public class ImageMetadataTest {
      * Test the property 'fileFormat'
      */
     @Test
-    public void fileFormatTest() {
+    void fileFormatTest() {
         // TODO: test fileFormat
     }
 
@@ -70,7 +68,7 @@ public class ImageMetadataTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -78,7 +76,7 @@ public class ImageMetadataTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 
@@ -86,7 +84,7 @@ public class ImageMetadataTest {
      * Test the property 'bitDepth'
      */
     @Test
-    public void bitDepthTest() {
+    void bitDepthTest() {
         // TODO: test bitDepth
     }
 
@@ -94,7 +92,7 @@ public class ImageMetadataTest {
      * Test the property 'hasTransparency'
      */
     @Test
-    public void hasTransparencyTest() {
+    void hasTransparencyTest() {
         // TODO: test hasTransparency
     }
 
@@ -102,7 +100,7 @@ public class ImageMetadataTest {
      * Test the property 'colorSpace'
      */
     @Test
-    public void colorSpaceTest() {
+    void colorSpaceTest() {
         // TODO: test colorSpace
     }
 
@@ -110,7 +108,7 @@ public class ImageMetadataTest {
      * Test the property 'exifProfileName'
      */
     @Test
-    public void exifProfileNameTest() {
+    void exifProfileNameTest() {
         // TODO: test exifProfileName
     }
 
@@ -118,7 +116,7 @@ public class ImageMetadataTest {
      * Test the property 'exifValues'
      */
     @Test
-    public void exifValuesTest() {
+    void exifValuesTest() {
         // TODO: test exifValues
     }
 

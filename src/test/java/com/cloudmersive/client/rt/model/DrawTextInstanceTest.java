@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DrawTextInstance
  */
-public class DrawTextInstanceTest {
+class DrawTextInstanceTest {
     private final DrawTextInstance model = new DrawTextInstance();
 
     /**
      * Model tests for DrawTextInstance
      */
     @Test
-    public void testDrawTextInstance() {
+    void testDrawTextInstance() {
         // TODO: test DrawTextInstance
     }
 
@@ -43,7 +40,7 @@ public class DrawTextInstanceTest {
      * Test the property 'text'
      */
     @Test
-    public void textTest() {
+    void textTest() {
         // TODO: test text
     }
 
@@ -51,7 +48,7 @@ public class DrawTextInstanceTest {
      * Test the property 'fontFamilyName'
      */
     @Test
-    public void fontFamilyNameTest() {
+    void fontFamilyNameTest() {
         // TODO: test fontFamilyName
     }
 
@@ -59,7 +56,7 @@ public class DrawTextInstanceTest {
      * Test the property 'fontSize'
      */
     @Test
-    public void fontSizeTest() {
+    void fontSizeTest() {
         // TODO: test fontSize
     }
 
@@ -67,7 +64,7 @@ public class DrawTextInstanceTest {
      * Test the property 'color'
      */
     @Test
-    public void colorTest() {
+    void colorTest() {
         // TODO: test color
     }
 
@@ -75,7 +72,7 @@ public class DrawTextInstanceTest {
      * Test the property 'X'
      */
     @Test
-    public void XTest() {
+    void XTest() {
         // TODO: test X
     }
 
@@ -83,7 +80,7 @@ public class DrawTextInstanceTest {
      * Test the property 'Y'
      */
     @Test
-    public void YTest() {
+    void YTest() {
         // TODO: test Y
     }
 
@@ -91,7 +88,7 @@ public class DrawTextInstanceTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -99,7 +96,7 @@ public class DrawTextInstanceTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 

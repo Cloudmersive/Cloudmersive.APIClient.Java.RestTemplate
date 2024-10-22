@@ -20,11 +20,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * SentenceSegmentationResponse
@@ -34,18 +34,19 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   SentenceSegmentationResponse.JSON_PROPERTY_SENTENCES,
   SentenceSegmentationResponse.JSON_PROPERTY_SENTENCE_COUNT
 })
-@JsonTypeName("SentenceSegmentationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SentenceSegmentationResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_SENTENCES = "Sentences";
-  private List<String> sentences = null;
+  private List<String> sentences = new ArrayList<>();
 
   public static final String JSON_PROPERTY_SENTENCE_COUNT = "SentenceCount";
   private Integer sentenceCount;
 
+  public SentenceSegmentationResponse() {
+  }
 
   public SentenceSegmentationResponse successful(Boolean successful) {
     
@@ -53,12 +54,11 @@ public class SentenceSegmentationResponse {
     return this;
   }
 
-   /**
+  /**
    * Get successful
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +67,11 @@ public class SentenceSegmentationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public SentenceSegmentationResponse sentences(List<String> sentences) {
     
@@ -80,18 +81,17 @@ public class SentenceSegmentationResponse {
 
   public SentenceSegmentationResponse addSentencesItem(String sentencesItem) {
     if (this.sentences == null) {
-      this.sentences = new ArrayList<String>();
+      this.sentences = new ArrayList<>();
     }
     this.sentences.add(sentencesItem);
     return this;
   }
 
-   /**
+  /**
    * Get sentences
    * @return sentences
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SENTENCES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,10 +100,11 @@ public class SentenceSegmentationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentences(List<String> sentences) {
     this.sentences = sentences;
   }
-
 
   public SentenceSegmentationResponse sentenceCount(Integer sentenceCount) {
     
@@ -111,12 +112,11 @@ public class SentenceSegmentationResponse {
     return this;
   }
 
-   /**
+  /**
    * Get sentenceCount
    * @return sentenceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,10 +125,11 @@ public class SentenceSegmentationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceCount(Integer sentenceCount) {
     this.sentenceCount = sentenceCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -148,7 +149,6 @@ public class SentenceSegmentationResponse {
   public int hashCode() {
     return Objects.hash(successful, sentences, sentenceCount);
   }
-
 
   @Override
   public String toString() {

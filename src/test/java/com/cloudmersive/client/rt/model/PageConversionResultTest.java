@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PageConversionResult
  */
-public class PageConversionResultTest {
+class PageConversionResultTest {
     private final PageConversionResult model = new PageConversionResult();
 
     /**
      * Model tests for PageConversionResult
      */
     @Test
-    public void testPageConversionResult() {
+    void testPageConversionResult() {
         // TODO: test PageConversionResult
     }
 
@@ -43,7 +40,7 @@ public class PageConversionResultTest {
      * Test the property 'filename'
      */
     @Test
-    public void filenameTest() {
+    void filenameTest() {
         // TODO: test filename
     }
 
@@ -51,7 +48,7 @@ public class PageConversionResultTest {
      * Test the property 'fileBytes'
      */
     @Test
-    public void fileBytesTest() {
+    void fileBytesTest() {
         // TODO: test fileBytes
     }
 

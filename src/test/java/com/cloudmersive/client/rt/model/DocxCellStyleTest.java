@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxCellStyle
  */
-public class DocxCellStyleTest {
+class DocxCellStyleTest {
     private final DocxCellStyle model = new DocxCellStyle();
 
     /**
      * Model tests for DocxCellStyle
      */
     @Test
-    public void testDocxCellStyle() {
+    void testDocxCellStyle() {
         // TODO: test DocxCellStyle
     }
 
@@ -43,7 +40,7 @@ public class DocxCellStyleTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -51,7 +48,7 @@ public class DocxCellStyleTest {
      * Test the property 'name'
      */
     @Test
-    public void nameTest() {
+    void nameTest() {
         // TODO: test name
     }
 
@@ -59,7 +56,7 @@ public class DocxCellStyleTest {
      * Test the property 'formatID'
      */
     @Test
-    public void formatIDTest() {
+    void formatIDTest() {
         // TODO: test formatID
     }
 
@@ -67,7 +64,7 @@ public class DocxCellStyleTest {
      * Test the property 'builtInID'
      */
     @Test
-    public void builtInIDTest() {
+    void builtInIDTest() {
         // TODO: test builtInID
     }
 

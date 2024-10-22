@@ -21,22 +21,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Clear-Row request
  */
-@ApiModel(description = "Input to a Clear-Row request")
 @JsonPropertyOrder({
   ClearXlsxRowRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   ClearXlsxRowRequest.JSON_PROPERTY_INPUT_FILE_URL,
   ClearXlsxRowRequest.JSON_PROPERTY_WORKSHEET_TO_EDIT,
   ClearXlsxRowRequest.JSON_PROPERTY_ROW_INDEX
 })
-@JsonTypeName("ClearXlsxRowRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ClearXlsxRowRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -50,6 +47,8 @@ public class ClearXlsxRowRequest {
   public static final String JSON_PROPERTY_ROW_INDEX = "RowIndex";
   private Integer rowIndex;
 
+  public ClearXlsxRowRequest() {
+  }
 
   public ClearXlsxRowRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -57,12 +56,11 @@ public class ClearXlsxRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -71,10 +69,11 @@ public class ClearXlsxRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public ClearXlsxRowRequest inputFileUrl(String inputFileUrl) {
     
@@ -82,12 +81,11 @@ public class ClearXlsxRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +94,11 @@ public class ClearXlsxRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public ClearXlsxRowRequest worksheetToEdit(XlsxWorksheet worksheetToEdit) {
     
@@ -107,12 +106,11 @@ public class ClearXlsxRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Get worksheetToEdit
    * @return worksheetToEdit
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_EDIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +119,11 @@ public class ClearXlsxRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_EDIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetToEdit(XlsxWorksheet worksheetToEdit) {
     this.worksheetToEdit = worksheetToEdit;
   }
-
 
   public ClearXlsxRowRequest rowIndex(Integer rowIndex) {
     
@@ -132,12 +131,11 @@ public class ClearXlsxRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Required; Index for the desired row to be cleared
    * @return rowIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Required; Index for the desired row to be cleared")
   @JsonProperty(JSON_PROPERTY_ROW_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +144,11 @@ public class ClearXlsxRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ROW_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRowIndex(Integer rowIndex) {
     this.rowIndex = rowIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -170,7 +169,6 @@ public class ClearXlsxRowRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, worksheetToEdit, rowIndex);
   }
-
 
   @Override
   public String toString() {

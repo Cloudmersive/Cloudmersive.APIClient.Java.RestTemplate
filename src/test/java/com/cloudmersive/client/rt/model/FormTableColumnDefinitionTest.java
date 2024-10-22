@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FormTableColumnDefinition
  */
-public class FormTableColumnDefinitionTest {
+class FormTableColumnDefinitionTest {
     private final FormTableColumnDefinition model = new FormTableColumnDefinition();
 
     /**
      * Model tests for FormTableColumnDefinition
      */
     @Test
-    public void testFormTableColumnDefinition() {
+    void testFormTableColumnDefinition() {
         // TODO: test FormTableColumnDefinition
     }
 
@@ -43,7 +40,7 @@ public class FormTableColumnDefinitionTest {
      * Test the property 'columnID'
      */
     @Test
-    public void columnIDTest() {
+    void columnIDTest() {
         // TODO: test columnID
     }
 
@@ -51,7 +48,7 @@ public class FormTableColumnDefinitionTest {
      * Test the property 'topAnchor'
      */
     @Test
-    public void topAnchorTest() {
+    void topAnchorTest() {
         // TODO: test topAnchor
     }
 
@@ -59,7 +56,7 @@ public class FormTableColumnDefinitionTest {
      * Test the property 'anchorMode'
      */
     @Test
-    public void anchorModeTest() {
+    void anchorModeTest() {
         // TODO: test anchorMode
     }
 
@@ -67,7 +64,7 @@ public class FormTableColumnDefinitionTest {
      * Test the property 'dataType'
      */
     @Test
-    public void dataTypeTest() {
+    void dataTypeTest() {
         // TODO: test dataType
     }
 
@@ -75,7 +72,7 @@ public class FormTableColumnDefinitionTest {
      * Test the property 'minimumCharacterCount'
      */
     @Test
-    public void minimumCharacterCountTest() {
+    void minimumCharacterCountTest() {
         // TODO: test minimumCharacterCount
     }
 
@@ -83,7 +80,7 @@ public class FormTableColumnDefinitionTest {
      * Test the property 'allowNumericDigits'
      */
     @Test
-    public void allowNumericDigitsTest() {
+    void allowNumericDigitsTest() {
         // TODO: test allowNumericDigits
     }
 

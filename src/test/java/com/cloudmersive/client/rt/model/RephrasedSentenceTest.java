@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for RephrasedSentence
  */
-public class RephrasedSentenceTest {
+class RephrasedSentenceTest {
     private final RephrasedSentence model = new RephrasedSentence();
 
     /**
      * Model tests for RephrasedSentence
      */
     @Test
-    public void testRephrasedSentence() {
+    void testRephrasedSentence() {
         // TODO: test RephrasedSentence
     }
 
@@ -46,7 +44,7 @@ public class RephrasedSentenceTest {
      * Test the property 'sentenceIndex'
      */
     @Test
-    public void sentenceIndexTest() {
+    void sentenceIndexTest() {
         // TODO: test sentenceIndex
     }
 
@@ -54,7 +52,7 @@ public class RephrasedSentenceTest {
      * Test the property 'originalSentenceText'
      */
     @Test
-    public void originalSentenceTextTest() {
+    void originalSentenceTextTest() {
         // TODO: test originalSentenceText
     }
 
@@ -62,7 +60,7 @@ public class RephrasedSentenceTest {
      * Test the property 'rephrasings'
      */
     @Test
-    public void rephrasingsTest() {
+    void rephrasingsTest() {
         // TODO: test rephrasings
     }
 

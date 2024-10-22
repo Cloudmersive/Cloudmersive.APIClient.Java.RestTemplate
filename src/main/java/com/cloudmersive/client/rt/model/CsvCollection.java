@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Collection of CSV Files
  */
-@ApiModel(description = "Collection of CSV Files")
 @JsonPropertyOrder({
   CsvCollection.JSON_PROPERTY_SUCCESSFUL,
   CsvCollection.JSON_PROPERTY_CSV_FILES,
   CsvCollection.JSON_PROPERTY_FILE_COUNT
 })
-@JsonTypeName("CsvCollection")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CsvCollection {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_CSV_FILES = "CsvFiles";
-  private List<CsvFileResult> csvFiles = null;
+  private List<CsvFileResult> csvFiles = new ArrayList<>();
 
   public static final String JSON_PROPERTY_FILE_COUNT = "FileCount";
   private Integer fileCount;
 
+  public CsvCollection() {
+  }
 
   public CsvCollection successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class CsvCollection {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class CsvCollection {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public CsvCollection csvFiles(List<CsvFileResult> csvFiles) {
     
@@ -82,18 +82,17 @@ public class CsvCollection {
 
   public CsvCollection addCsvFilesItem(CsvFileResult csvFilesItem) {
     if (this.csvFiles == null) {
-      this.csvFiles = new ArrayList<CsvFileResult>();
+      this.csvFiles = new ArrayList<>();
     }
     this.csvFiles.add(csvFilesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of CSV File results
    * @return csvFiles
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of CSV File results")
   @JsonProperty(JSON_PROPERTY_CSV_FILES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class CsvCollection {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CSV_FILES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCsvFiles(List<CsvFileResult> csvFiles) {
     this.csvFiles = csvFiles;
   }
-
 
   public CsvCollection fileCount(Integer fileCount) {
     
@@ -113,12 +113,11 @@ public class CsvCollection {
     return this;
   }
 
-   /**
+  /**
    * Count of the number of CSV files produced
    * @return fileCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of the number of CSV files produced")
   @JsonProperty(JSON_PROPERTY_FILE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class CsvCollection {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileCount(Integer fileCount) {
     this.fileCount = fileCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class CsvCollection {
   public int hashCode() {
     return Objects.hash(successful, csvFiles, fileCount);
   }
-
 
   @Override
   public String toString() {

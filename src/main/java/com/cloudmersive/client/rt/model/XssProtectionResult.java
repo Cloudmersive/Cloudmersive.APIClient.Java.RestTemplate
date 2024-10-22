@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an XSS protection operation
  */
-@ApiModel(description = "Result of performing an XSS protection operation")
 @JsonPropertyOrder({
   XssProtectionResult.JSON_PROPERTY_SUCCESSFUL,
   XssProtectionResult.JSON_PROPERTY_CONTAINED_XSS,
   XssProtectionResult.JSON_PROPERTY_ORIGINAL_INPUT,
   XssProtectionResult.JSON_PROPERTY_NORMALIZED_RESULT
 })
-@JsonTypeName("XssProtectionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XssProtectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -49,6 +46,8 @@ public class XssProtectionResult {
   public static final String JSON_PROPERTY_NORMALIZED_RESULT = "NormalizedResult";
   private String normalizedResult;
 
+  public XssProtectionResult() {
+  }
 
   public XssProtectionResult successful(Boolean successful) {
     
@@ -56,12 +55,11 @@ public class XssProtectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class XssProtectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public XssProtectionResult containedXss(Boolean containedXss) {
     
@@ -81,12 +80,11 @@ public class XssProtectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the input contained XSS scripting, false otherwise
    * @return containedXss
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input contained XSS scripting, false otherwise")
   @JsonProperty(JSON_PROPERTY_CONTAINED_XSS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class XssProtectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINED_XSS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainedXss(Boolean containedXss) {
     this.containedXss = containedXss;
   }
-
 
   public XssProtectionResult originalInput(String originalInput) {
     
@@ -106,12 +105,11 @@ public class XssProtectionResult {
     return this;
   }
 
-   /**
+  /**
    * Original input string
    * @return originalInput
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Original input string")
   @JsonProperty(JSON_PROPERTY_ORIGINAL_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class XssProtectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ORIGINAL_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOriginalInput(String originalInput) {
     this.originalInput = originalInput;
   }
-
 
   public XssProtectionResult normalizedResult(String normalizedResult) {
     
@@ -131,12 +130,11 @@ public class XssProtectionResult {
     return this;
   }
 
-   /**
+  /**
    * Normalized string result, with XSS removed
    * @return normalizedResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Normalized string result, with XSS removed")
   @JsonProperty(JSON_PROPERTY_NORMALIZED_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class XssProtectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NORMALIZED_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNormalizedResult(String normalizedResult) {
     this.normalizedResult = normalizedResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class XssProtectionResult {
   public int hashCode() {
     return Objects.hash(successful, containedXss, originalInput, normalizedResult);
   }
-
 
   @Override
   public String toString() {

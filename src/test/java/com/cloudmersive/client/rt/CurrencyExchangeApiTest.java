@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.AvailableCurrencyResponse;
 import com.cloudmersive.client.rt.model.ConvertedCurrencyResult;
 import com.cloudmersive.client.rt.model.ExchangeRateResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for CurrencyExchangeApi
  */
-@Ignore
-public class CurrencyExchangeApiTest {
+@Disabled
+class CurrencyExchangeApiTest {
 
     private final CurrencyExchangeApi api = new CurrencyExchangeApi();
 
@@ -38,14 +41,15 @@ public class CurrencyExchangeApiTest {
      *
      * Automatically converts the price in the source currency into the destination currency using the latest available currency exchange rate data.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void currencyExchangeConvertCurrencyTest() {
+    void currencyExchangeConvertCurrencyTest() {
         String source = null;
         String destination = null;
         Double sourcePrice = null;
+
         ConvertedCurrencyResult response = api.currencyExchangeConvertCurrency(source, destination, sourcePrice);
 
         // TODO: test validations
@@ -56,11 +60,12 @@ public class CurrencyExchangeApiTest {
      *
      * Enumerates available currencies and the countries that correspond to these currencies.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void currencyExchangeGetAvailableCurrenciesTest() {
+    void currencyExchangeGetAvailableCurrenciesTest() {
+
         AvailableCurrencyResponse response = api.currencyExchangeGetAvailableCurrencies();
 
         // TODO: test validations
@@ -71,13 +76,14 @@ public class CurrencyExchangeApiTest {
      *
      * Automatically gets the exchange rate from the source currency into the destination currency using the latest available currency exchange rate data.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void currencyExchangeGetExchangeRateTest() {
+    void currencyExchangeGetExchangeRateTest() {
         String source = null;
         String destination = null;
+
         ExchangeRateResult response = api.currencyExchangeGetExchangeRate(source, destination);
 
         // TODO: test validations

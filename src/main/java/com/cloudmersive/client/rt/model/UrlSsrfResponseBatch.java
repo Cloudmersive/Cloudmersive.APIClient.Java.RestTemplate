@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing SSRF threat checks on multiple URLs
  */
-@ApiModel(description = "Result of performing SSRF threat checks on multiple URLs")
 @JsonPropertyOrder({
   UrlSsrfResponseBatch.JSON_PROPERTY_OUTPUT_ITEMS
 })
-@JsonTypeName("UrlSsrfResponseBatch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UrlSsrfResponseBatch {
   public static final String JSON_PROPERTY_OUTPUT_ITEMS = "OutputItems";
-  private List<UrlSsrfResponseFull> outputItems = null;
+  private List<UrlSsrfResponseFull> outputItems = new ArrayList<>();
 
+  public UrlSsrfResponseBatch() {
+  }
 
   public UrlSsrfResponseBatch outputItems(List<UrlSsrfResponseFull> outputItems) {
     
@@ -49,18 +49,17 @@ public class UrlSsrfResponseBatch {
 
   public UrlSsrfResponseBatch addOutputItemsItem(UrlSsrfResponseFull outputItemsItem) {
     if (this.outputItems == null) {
-      this.outputItems = new ArrayList<UrlSsrfResponseFull>();
+      this.outputItems = new ArrayList<>();
     }
     this.outputItems.add(outputItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Results of the operation, with indexes matched to input values
    * @return outputItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Results of the operation, with indexes matched to input values")
   @JsonProperty(JSON_PROPERTY_OUTPUT_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class UrlSsrfResponseBatch {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OUTPUT_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOutputItems(List<UrlSsrfResponseFull> outputItems) {
     this.outputItems = outputItems;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class UrlSsrfResponseBatch {
   public int hashCode() {
     return Objects.hash(outputItems);
   }
-
 
   @Override
   public String toString() {

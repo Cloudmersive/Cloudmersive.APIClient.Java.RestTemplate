@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * OCR results of a page, including words of text and their location
  */
-@ApiModel(description = "OCR results of a page, including words of text and their location")
 @JsonPropertyOrder({
   OcrPageResultWithWordsWithLocation.JSON_PROPERTY_PAGE_NUMBER,
   OcrPageResultWithWordsWithLocation.JSON_PROPERTY_SUCCESSFUL,
   OcrPageResultWithWordsWithLocation.JSON_PROPERTY_WORDS
 })
-@JsonTypeName("OcrPageResultWithWordsWithLocation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class OcrPageResultWithWordsWithLocation {
   public static final String JSON_PROPERTY_PAGE_NUMBER = "PageNumber";
   private Integer pageNumber;
@@ -46,8 +44,10 @@ public class OcrPageResultWithWordsWithLocation {
   private Boolean successful;
 
   public static final String JSON_PROPERTY_WORDS = "Words";
-  private List<OcrWordElement> words = null;
+  private List<OcrWordElement> words = new ArrayList<>();
 
+  public OcrPageResultWithWordsWithLocation() {
+  }
 
   public OcrPageResultWithWordsWithLocation pageNumber(Integer pageNumber) {
     
@@ -55,12 +55,11 @@ public class OcrPageResultWithWordsWithLocation {
     return this;
   }
 
-   /**
+  /**
    * Page number of the page that was OCR-ed, starting with 1 for the first page in the PDF file
    * @return pageNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Page number of the page that was OCR-ed, starting with 1 for the first page in the PDF file")
   @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class OcrPageResultWithWordsWithLocation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   public OcrPageResultWithWordsWithLocation successful(Boolean successful) {
     
@@ -80,12 +80,11 @@ public class OcrPageResultWithWordsWithLocation {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class OcrPageResultWithWordsWithLocation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public OcrPageResultWithWordsWithLocation words(List<OcrWordElement> words) {
     
@@ -107,18 +107,17 @@ public class OcrPageResultWithWordsWithLocation {
 
   public OcrPageResultWithWordsWithLocation addWordsItem(OcrWordElement wordsItem) {
     if (this.words == null) {
-      this.words = new ArrayList<OcrWordElement>();
+      this.words = new ArrayList<>();
     }
     this.words.add(wordsItem);
     return this;
   }
 
-   /**
+  /**
    * Word elements in the image
    * @return words
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word elements in the image")
   @JsonProperty(JSON_PROPERTY_WORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class OcrPageResultWithWordsWithLocation {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWords(List<OcrWordElement> words) {
     this.words = words;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class OcrPageResultWithWordsWithLocation {
   public int hashCode() {
     return Objects.hash(pageNumber, successful, words);
   }
-
 
   @Override
   public String toString() {

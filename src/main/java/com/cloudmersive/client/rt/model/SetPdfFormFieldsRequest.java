@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to set the fields in a PDF form
  */
-@ApiModel(description = "Request to set the fields in a PDF form")
 @JsonPropertyOrder({
   SetPdfFormFieldsRequest.JSON_PROPERTY_FIELD_VALUES,
   SetPdfFormFieldsRequest.JSON_PROPERTY_INPUT_FILE_BYTES
 })
-@JsonTypeName("SetPdfFormFieldsRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SetPdfFormFieldsRequest {
   public static final String JSON_PROPERTY_FIELD_VALUES = "FieldValues";
-  private List<SetFormFieldValue> fieldValues = null;
+  private List<SetFormFieldValue> fieldValues = new ArrayList<>();
 
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
 
+  public SetPdfFormFieldsRequest() {
+  }
 
   public SetPdfFormFieldsRequest fieldValues(List<SetFormFieldValue> fieldValues) {
     
@@ -53,18 +53,17 @@ public class SetPdfFormFieldsRequest {
 
   public SetPdfFormFieldsRequest addFieldValuesItem(SetFormFieldValue fieldValuesItem) {
     if (this.fieldValues == null) {
-      this.fieldValues = new ArrayList<SetFormFieldValue>();
+      this.fieldValues = new ArrayList<>();
     }
     this.fieldValues.add(fieldValuesItem);
     return this;
   }
 
-   /**
+  /**
    * Field values to set
    * @return fieldValues
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Field values to set")
   @JsonProperty(JSON_PROPERTY_FIELD_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class SetPdfFormFieldsRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_VALUES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldValues(List<SetFormFieldValue> fieldValues) {
     this.fieldValues = fieldValues;
   }
-
 
   public SetPdfFormFieldsRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -84,12 +84,11 @@ public class SetPdfFormFieldsRequest {
     return this;
   }
 
-   /**
+  /**
    * Contents of the input file to set the fields on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Contents of the input file to set the fields on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class SetPdfFormFieldsRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class SetPdfFormFieldsRequest {
   public int hashCode() {
     return Objects.hash(fieldValues, Arrays.hashCode(inputFileBytes));
   }
-
 
   @Override
   public String toString() {

@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of an image to lines-with-location OCR operation
  */
-@ApiModel(description = "Result of an image to lines-with-location OCR operation")
 @JsonPropertyOrder({
   ImageToLinesWithLocationResult.JSON_PROPERTY_SUCCESSFUL,
   ImageToLinesWithLocationResult.JSON_PROPERTY_LINES
 })
-@JsonTypeName("ImageToLinesWithLocationResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageToLinesWithLocationResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_LINES = "Lines";
-  private List<OcrLineElement> lines = null;
+  private List<OcrLineElement> lines = new ArrayList<>();
 
+  public ImageToLinesWithLocationResult() {
+  }
 
   public ImageToLinesWithLocationResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class ImageToLinesWithLocationResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class ImageToLinesWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ImageToLinesWithLocationResult lines(List<OcrLineElement> lines) {
     
@@ -78,18 +78,17 @@ public class ImageToLinesWithLocationResult {
 
   public ImageToLinesWithLocationResult addLinesItem(OcrLineElement linesItem) {
     if (this.lines == null) {
-      this.lines = new ArrayList<OcrLineElement>();
+      this.lines = new ArrayList<>();
     }
     this.lines.add(linesItem);
     return this;
   }
 
-   /**
+  /**
    * Words in the image
    * @return lines
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Words in the image")
   @JsonProperty(JSON_PROPERTY_LINES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class ImageToLinesWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLines(List<OcrLineElement> lines) {
     this.lines = lines;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class ImageToLinesWithLocationResult {
   public int hashCode() {
     return Objects.hash(successful, lines);
   }
-
 
   @Override
   public String toString() {

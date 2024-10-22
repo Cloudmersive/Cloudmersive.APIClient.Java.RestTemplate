@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FindDocxParagraphRequest
  */
-public class FindDocxParagraphRequestTest {
+class FindDocxParagraphRequestTest {
     private final FindDocxParagraphRequest model = new FindDocxParagraphRequest();
 
     /**
      * Model tests for FindDocxParagraphRequest
      */
     @Test
-    public void testFindDocxParagraphRequest() {
+    void testFindDocxParagraphRequest() {
         // TODO: test FindDocxParagraphRequest
     }
 
@@ -43,7 +40,7 @@ public class FindDocxParagraphRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class FindDocxParagraphRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class FindDocxParagraphRequestTest {
      * Test the property 'findString'
      */
     @Test
-    public void findStringTest() {
+    void findStringTest() {
         // TODO: test findString
     }
 
@@ -67,7 +64,7 @@ public class FindDocxParagraphRequestTest {
      * Test the property 'matchCase'
      */
     @Test
-    public void matchCaseTest() {
+    void matchCaseTest() {
         // TODO: test matchCase
     }
 

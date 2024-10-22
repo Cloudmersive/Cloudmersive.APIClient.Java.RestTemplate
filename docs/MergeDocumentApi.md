@@ -2,23 +2,104 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**mergeDocumentDocx**](MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together
-[**mergeDocumentDocxMulti**](MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together
-[**mergeDocumentHtml**](MergeDocumentApi.md#mergeDocumentHtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together
-[**mergeDocumentHtmlMulti**](MergeDocumentApi.md#mergeDocumentHtmlMulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together
-[**mergeDocumentPdf**](MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together
-[**mergeDocumentPdfMulti**](MergeDocumentApi.md#mergeDocumentPdfMulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together
-[**mergeDocumentPng**](MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together
-[**mergeDocumentPngMulti**](MergeDocumentApi.md#mergeDocumentPngMulti) | **POST** /convert/merge/png/vertical/multi | Merge Multple PNG Files Together
-[**mergeDocumentPptx**](MergeDocumentApi.md#mergeDocumentPptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together
-[**mergeDocumentPptxMulti**](MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together
-[**mergeDocumentTxt**](MergeDocumentApi.md#mergeDocumentTxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together
-[**mergeDocumentTxtMulti**](MergeDocumentApi.md#mergeDocumentTxtMulti) | **POST** /convert/merge/txt/multi | Merge Multple Text (TXT) Files Together
-[**mergeDocumentXlsx**](MergeDocumentApi.md#mergeDocumentXlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together
-[**mergeDocumentXlsxMulti**](MergeDocumentApi.md#mergeDocumentXlsxMulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**mergeDocumentBatchJobCreate**](MergeDocumentApi.md#mergeDocumentBatchJobCreate) | **POST** /convert/merge/batch-job/create | Merge an array of Documents into a Single Document by Page as a Batch Job |
+| [**mergeDocumentDocx**](MergeDocumentApi.md#mergeDocumentDocx) | **POST** /convert/merge/docx | Merge Two Word DOCX Together |
+| [**mergeDocumentDocxMulti**](MergeDocumentApi.md#mergeDocumentDocxMulti) | **POST** /convert/merge/docx/multi | Merge Multple Word DOCX Together |
+| [**mergeDocumentDocxMultiArray**](MergeDocumentApi.md#mergeDocumentDocxMultiArray) | **POST** /convert/merge/docx/multi/array | Merge Multple Word DOCX Together from an array |
+| [**mergeDocumentGetAsyncJobStatus**](MergeDocumentApi.md#mergeDocumentGetAsyncJobStatus) | **GET** /convert/merge/batch-job/status | Get the status and result of a Merge Document Batch Job |
+| [**mergeDocumentHtml**](MergeDocumentApi.md#mergeDocumentHtml) | **POST** /convert/merge/html | Merge Two HTML (HTM) Files Together |
+| [**mergeDocumentHtmlMulti**](MergeDocumentApi.md#mergeDocumentHtmlMulti) | **POST** /convert/merge/html/multi | Merge Multple HTML (HTM) Files Together |
+| [**mergeDocumentHtmlMultiArray**](MergeDocumentApi.md#mergeDocumentHtmlMultiArray) | **POST** /convert/merge/html/multi/array | Merge Multple HTML (HTM) Files Together from an array |
+| [**mergeDocumentPdf**](MergeDocumentApi.md#mergeDocumentPdf) | **POST** /convert/merge/pdf | Merge Two PDF Files Together |
+| [**mergeDocumentPdfMulti**](MergeDocumentApi.md#mergeDocumentPdfMulti) | **POST** /convert/merge/pdf/multi | Merge Multple PDF Files Together |
+| [**mergeDocumentPdfMultiArray**](MergeDocumentApi.md#mergeDocumentPdfMultiArray) | **POST** /convert/merge/pdf/multi/array | Merge Multple PDF Files Together from an array |
+| [**mergeDocumentPng**](MergeDocumentApi.md#mergeDocumentPng) | **POST** /convert/merge/png/vertical | Merge Two PNG Files Together |
+| [**mergeDocumentPngMulti**](MergeDocumentApi.md#mergeDocumentPngMulti) | **POST** /convert/merge/png/vertical/multi | Merge Multple PNG Files Together |
+| [**mergeDocumentPngMultiArray**](MergeDocumentApi.md#mergeDocumentPngMultiArray) | **POST** /convert/merge/png/vertical/multi/array | Merge Multple PNG Files Together from an array |
+| [**mergeDocumentPptx**](MergeDocumentApi.md#mergeDocumentPptx) | **POST** /convert/merge/pptx | Merge Two PowerPoint PPTX Together |
+| [**mergeDocumentPptxMulti**](MergeDocumentApi.md#mergeDocumentPptxMulti) | **POST** /convert/merge/pptx/multi | Merge Multple PowerPoint PPTX Together |
+| [**mergeDocumentPptxMultiArray**](MergeDocumentApi.md#mergeDocumentPptxMultiArray) | **POST** /convert/merge/pptx/multi/array | Merge Multple PowerPoint PPTX Together from an array |
+| [**mergeDocumentTxt**](MergeDocumentApi.md#mergeDocumentTxt) | **POST** /convert/merge/txt | Merge Two Text (TXT) Files Together |
+| [**mergeDocumentTxtMulti**](MergeDocumentApi.md#mergeDocumentTxtMulti) | **POST** /convert/merge/txt/multi | Merge Multple Text (TXT) Files Together |
+| [**mergeDocumentXlsx**](MergeDocumentApi.md#mergeDocumentXlsx) | **POST** /convert/merge/xlsx | Merge Two Excel XLSX Together |
+| [**mergeDocumentXlsxMulti**](MergeDocumentApi.md#mergeDocumentXlsxMulti) | **POST** /convert/merge/xlsx/multi | Merge Multple Excel XLSX Together |
+| [**mergeDocumentXlsxMultiArray**](MergeDocumentApi.md#mergeDocumentXlsxMultiArray) | **POST** /convert/merge/xlsx/multi/array | Merge Multple Excel XLSX Together from an Array |
 
+
+
+## mergeDocumentBatchJobCreate
+
+> MergeBatchJobCreateResult mergeDocumentBatchJobCreate(input)
+
+Merge an array of Documents into a Single Document by Page as a Batch Job
+
+Merge an array of Documents (PDF supported), into a single document.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | 
+        try {
+            MergeBatchJobCreateResult result = apiInstance.mergeDocumentBatchJobCreate(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentBatchJobCreate");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)|  | |
+
+### Return type
+
+[**MergeBatchJobCreateResult**](MergeBatchJobCreateResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/json, text/json, application/xml, text/xml
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
 
 ## mergeDocumentDocx
@@ -71,10 +152,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -88,6 +169,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -153,18 +235,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -178,6 +260,153 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentDocxMultiArray
+
+> Object mergeDocumentDocxMultiArray(input)
+
+Merge Multple Word DOCX Together from an array
+
+Combine multiple Office Word Documents (docx), stored in an array, into one single Office Word document
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+        try {
+            Object result = apiInstance.mergeDocumentDocxMultiArray(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentDocxMultiArray");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentGetAsyncJobStatus
+
+> MergeJobStatusResult mergeDocumentGetAsyncJobStatus(asyncJobID)
+
+Get the status and result of a Merge Document Batch Job
+
+Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        String asyncJobID = "asyncJobID_example"; // String | 
+        try {
+            MergeJobStatusResult result = apiInstance.mergeDocumentGetAsyncJobStatus(asyncJobID);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentGetAsyncJobStatus");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **asyncJobID** | **String**|  | |
+
+### Return type
+
+[**MergeJobStatusResult**](MergeJobStatusResult.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -235,10 +464,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -252,6 +481,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -317,18 +547,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -342,6 +572,80 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentHtmlMultiArray
+
+> Object mergeDocumentHtmlMultiArray(input)
+
+Merge Multple HTML (HTM) Files Together from an array
+
+Combine multiple HTML (.HTM) files, from an array, into a single text document, preserving the order of the input documents in the combined document by stacking them vertically.  The title will be taken from the first document.
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+        try {
+            Object result = apiInstance.mergeDocumentHtmlMultiArray(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentHtmlMultiArray");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -399,10 +703,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -416,6 +720,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -481,18 +786,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -506,6 +811,80 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentPdfMultiArray
+
+> Object mergeDocumentPdfMultiArray(input)
+
+Merge Multple PDF Files Together from an array
+
+Combine multiple PDF files (pdf), as an array, into a single PDF document, preserving the order of the input documents in the combined document
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+        try {
+            Object result = apiInstance.mergeDocumentPdfMultiArray(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentPdfMultiArray");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -563,10 +942,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -580,6 +959,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -645,18 +1025,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -670,6 +1050,80 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentPngMultiArray
+
+> Object mergeDocumentPngMultiArray(input)
+
+Merge Multple PNG Files Together from an array
+
+Combine multiple PNG files, from an array, into a single PNG document, preserving the order of the input documents in the combined document by stacking them vertically
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+        try {
+            Object result = apiInstance.mergeDocumentPngMultiArray(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentPngMultiArray");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -727,10 +1181,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -744,6 +1198,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -809,18 +1264,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -834,6 +1289,80 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentPptxMultiArray
+
+> Object mergeDocumentPptxMultiArray(input)
+
+Merge Multple PowerPoint PPTX Together from an array
+
+Combine multiple Office PowerPoint presentations (pptx), from an array, into one single Office PowerPoint presentation
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+        try {
+            Object result = apiInstance.mergeDocumentPptxMultiArray(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentPptxMultiArray");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -891,10 +1420,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -908,6 +1437,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -973,18 +1503,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -998,6 +1528,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1055,10 +1586,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
 
 ### Return type
 
@@ -1072,6 +1603,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -1137,18 +1669,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. |
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -1162,6 +1694,80 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+
+## mergeDocumentXlsxMultiArray
+
+> Object mergeDocumentXlsxMultiArray(input)
+
+Merge Multple Excel XLSX Together from an Array
+
+Combine multiple Office Excel spreadsheets (xlsx), as an array, into a single Office Excel spreadsheet
+
+### Example
+
+```java
+// Import classes:
+import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.ApiException;
+import com.cloudmersive.client.rt.invoker.Configuration;
+import com.cloudmersive.client.rt.invoker.auth.*;
+import com.cloudmersive.client.rt.invoker.models.*;
+import com.cloudmersive.client.rt.MergeDocumentApi;
+
+public class Example {
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        defaultClient.setBasePath("https://api.cloudmersive.com");
+        
+        // Configure API key authorization: Apikey
+        ApiKeyAuth Apikey = (ApiKeyAuth) defaultClient.getAuthentication("Apikey");
+        Apikey.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //Apikey.setApiKeyPrefix("Token");
+
+        MergeDocumentApi apiInstance = new MergeDocumentApi(defaultClient);
+        DocumentArrayInput input = new DocumentArrayInput(); // DocumentArrayInput | Array of input files
+        try {
+            Object result = apiInstance.mergeDocumentXlsxMultiArray(input);
+            System.out.println(result);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling MergeDocumentApi#mergeDocumentXlsxMultiArray");
+            System.err.println("Status code: " + e.getCode());
+            System.err.println("Reason: " + e.getResponseBody());
+            System.err.println("Response headers: " + e.getResponseHeaders());
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Parameters
+
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**DocumentArrayInput**](DocumentArrayInput.md)| Array of input files | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+- **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

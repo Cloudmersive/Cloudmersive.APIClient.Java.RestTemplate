@@ -14,9 +14,12 @@
 package com.cloudmersive.client.rt;
 
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +28,8 @@ import java.util.Map;
 /**
  * API tests for CompareDocumentApi
  */
-@Ignore
-public class CompareDocumentApiTest {
+@Disabled
+class CompareDocumentApiTest {
 
     private final CompareDocumentApi api = new CompareDocumentApi();
 
@@ -36,14 +39,16 @@ public class CompareDocumentApiTest {
      *
      * Compare two Office Word Documents (docx) files and highlight the differences
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void compareDocumentDocxTest() {
+    void compareDocumentDocxTest() {
         org.springframework.core.io.Resource inputFile1 = null;
         org.springframework.core.io.Resource inputFile2 = null;
-        byte[] response = api.compareDocumentDocx(inputFile1, inputFile2);
+        Boolean autorepair = null;
+
+        byte[] response = api.compareDocumentDocx(inputFile1, inputFile2, autorepair);
 
         // TODO: test validations
     }

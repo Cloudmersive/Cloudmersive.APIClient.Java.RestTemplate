@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SettingValue
  */
-public class SettingValueTest {
+class SettingValueTest {
     private final SettingValue model = new SettingValue();
 
     /**
      * Model tests for SettingValue
      */
     @Test
-    public void testSettingValue() {
+    void testSettingValue() {
         // TODO: test SettingValue
     }
 
@@ -44,7 +41,7 @@ public class SettingValueTest {
      * Test the property 'configSettingValueID'
      */
     @Test
-    public void configSettingValueIDTest() {
+    void configSettingValueIDTest() {
         // TODO: test configSettingValueID
     }
 
@@ -52,7 +49,7 @@ public class SettingValueTest {
      * Test the property 'configSettingDefinitionID'
      */
     @Test
-    public void configSettingDefinitionIDTest() {
+    void configSettingDefinitionIDTest() {
         // TODO: test configSettingDefinitionID
     }
 
@@ -60,7 +57,7 @@ public class SettingValueTest {
      * Test the property 'configSettingValue'
      */
     @Test
-    public void configSettingValueTest() {
+    void configSettingValueTest() {
         // TODO: test configSettingValue
     }
 
@@ -68,7 +65,7 @@ public class SettingValueTest {
      * Test the property 'configSettingLastModified'
      */
     @Test
-    public void configSettingLastModifiedTest() {
+    void configSettingLastModifiedTest() {
         // TODO: test configSettingLastModified
     }
 
@@ -76,7 +73,7 @@ public class SettingValueTest {
      * Test the property 'configSettingName'
      */
     @Test
-    public void configSettingNameTest() {
+    void configSettingNameTest() {
         // TODO: test configSettingName
     }
 
@@ -84,7 +81,7 @@ public class SettingValueTest {
      * Test the property 'configSettingDescription'
      */
     @Test
-    public void configSettingDescriptionTest() {
+    void configSettingDescriptionTest() {
         // TODO: test configSettingDescription
     }
 
@@ -92,7 +89,7 @@ public class SettingValueTest {
      * Test the property 'configSettingTags'
      */
     @Test
-    public void configSettingTagsTest() {
+    void configSettingTagsTest() {
         // TODO: test configSettingTags
     }
 
@@ -100,7 +97,7 @@ public class SettingValueTest {
      * Test the property 'configSettingType'
      */
     @Test
-    public void configSettingTypeTest() {
+    void configSettingTypeTest() {
         // TODO: test configSettingType
     }
 

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ImageSimilarityComparisonResponse
  */
-public class ImageSimilarityComparisonResponseTest {
+class ImageSimilarityComparisonResponseTest {
     private final ImageSimilarityComparisonResponse model = new ImageSimilarityComparisonResponse();
 
     /**
      * Model tests for ImageSimilarityComparisonResponse
      */
     @Test
-    public void testImageSimilarityComparisonResponse() {
+    void testImageSimilarityComparisonResponse() {
         // TODO: test ImageSimilarityComparisonResponse
     }
 
@@ -43,7 +40,7 @@ public class ImageSimilarityComparisonResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class ImageSimilarityComparisonResponseTest {
      * Test the property 'areImagesSimilar'
      */
     @Test
-    public void areImagesSimilarTest() {
+    void areImagesSimilarTest() {
         // TODO: test areImagesSimilar
     }
 
@@ -59,7 +56,7 @@ public class ImageSimilarityComparisonResponseTest {
      * Test the property 'imageSimilarityScore'
      */
     @Test
-    public void imageSimilarityScoreTest() {
+    void imageSimilarityScoreTest() {
         // TODO: test imageSimilarityScore
     }
 

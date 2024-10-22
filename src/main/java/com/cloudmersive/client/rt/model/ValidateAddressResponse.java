@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of validating a street address
  */
-@ApiModel(description = "Result of validating a street address")
 @JsonPropertyOrder({
   ValidateAddressResponse.JSON_PROPERTY_VALID_ADDRESS,
   ValidateAddressResponse.JSON_PROPERTY_LATITUDE,
   ValidateAddressResponse.JSON_PROPERTY_LONGITUDE
 })
-@JsonTypeName("ValidateAddressResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateAddressResponse {
   public static final String JSON_PROPERTY_VALID_ADDRESS = "ValidAddress";
   private Boolean validAddress;
@@ -45,6 +42,8 @@ public class ValidateAddressResponse {
   public static final String JSON_PROPERTY_LONGITUDE = "Longitude";
   private Double longitude;
 
+  public ValidateAddressResponse() {
+  }
 
   public ValidateAddressResponse validAddress(Boolean validAddress) {
     
@@ -52,12 +51,11 @@ public class ValidateAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the address is valid, false otherwise
    * @return validAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the address is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ValidateAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidAddress(Boolean validAddress) {
     this.validAddress = validAddress;
   }
-
 
   public ValidateAddressResponse latitude(Double latitude) {
     
@@ -77,12 +76,11 @@ public class ValidateAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * If the address is valid, the degrees latitude of the validated address, null otherwise
    * @return latitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the address is valid, the degrees latitude of the validated address, null otherwise")
   @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ValidateAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
-
 
   public ValidateAddressResponse longitude(Double longitude) {
     
@@ -102,12 +101,11 @@ public class ValidateAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * If the address is valid, the degrees longitude of the validated address, null otherwise
    * @return longitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the address is valid, the degrees longitude of the validated address, null otherwise")
   @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ValidateAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ValidateAddressResponse {
   public int hashCode() {
     return Objects.hash(validAddress, latitude, longitude);
   }
-
 
   @Override
   public String toString() {

@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to create a PNG of handwriting
  */
-@ApiModel(description = "Request to create a PNG of handwriting")
 @JsonPropertyOrder({
   CreateHandwritingRequest.JSON_PROPERTY_TEXT_INPUT,
   CreateHandwritingRequest.JSON_PROPERTY_TARGET_WIDTH,
   CreateHandwritingRequest.JSON_PROPERTY_STROKE_WIDTH,
   CreateHandwritingRequest.JSON_PROPERTY_COLOR
 })
-@JsonTypeName("CreateHandwritingRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateHandwritingRequest {
   public static final String JSON_PROPERTY_TEXT_INPUT = "TextInput";
   private String textInput;
@@ -49,6 +46,8 @@ public class CreateHandwritingRequest {
   public static final String JSON_PROPERTY_COLOR = "Color";
   private String color;
 
+  public CreateHandwritingRequest() {
+  }
 
   public CreateHandwritingRequest textInput(String textInput) {
     
@@ -56,12 +55,11 @@ public class CreateHandwritingRequest {
     return this;
   }
 
-   /**
+  /**
    * Text to convert to handwriting
    * @return textInput
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text to convert to handwriting")
   @JsonProperty(JSON_PROPERTY_TEXT_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class CreateHandwritingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextInput(String textInput) {
     this.textInput = textInput;
   }
-
 
   public CreateHandwritingRequest targetWidth(Integer targetWidth) {
     
@@ -81,12 +80,11 @@ public class CreateHandwritingRequest {
     return this;
   }
 
-   /**
+  /**
    * Desired width in pixels of the resulting image
    * @return targetWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Desired width in pixels of the resulting image")
   @JsonProperty(JSON_PROPERTY_TARGET_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class CreateHandwritingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetWidth(Integer targetWidth) {
     this.targetWidth = targetWidth;
   }
-
 
   public CreateHandwritingRequest strokeWidth(Integer strokeWidth) {
     
@@ -106,12 +105,11 @@ public class CreateHandwritingRequest {
     return this;
   }
 
-   /**
+  /**
    * Optinoal; Width of the text stroke in pixels; default is 2
    * @return strokeWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optinoal; Width of the text stroke in pixels; default is 2")
   @JsonProperty(JSON_PROPERTY_STROKE_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class CreateHandwritingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STROKE_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStrokeWidth(Integer strokeWidth) {
     this.strokeWidth = strokeWidth;
   }
-
 
   public CreateHandwritingRequest color(String color) {
     
@@ -131,12 +130,11 @@ public class CreateHandwritingRequest {
     return this;
   }
 
-   /**
+  /**
    * HTML hexadecimal color, or HTML common color name (e.g. &#39;black&#39;, &#39;red&#39;), for the handwriting
    * @return color
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML hexadecimal color, or HTML common color name (e.g. 'black', 'red'), for the handwriting")
   @JsonProperty(JSON_PROPERTY_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class CreateHandwritingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COLOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setColor(String color) {
     this.color = color;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class CreateHandwritingRequest {
   public int hashCode() {
     return Objects.hash(textInput, targetWidth, strokeWidth, color);
   }
-
 
   @Override
   public String toString() {

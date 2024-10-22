@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of reverse geocoding a street address
  */
-@ApiModel(description = "Result of reverse geocoding a street address")
 @JsonPropertyOrder({
   ReverseGeocodeAddressResponse.JSON_PROPERTY_SUCCESSFUL,
   ReverseGeocodeAddressResponse.JSON_PROPERTY_STREET_ADDRESS,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ReverseGeocodeAddressResponse.JSON_PROPERTY_COUNTRY_FULL_NAME,
   ReverseGeocodeAddressResponse.JSON_PROPERTY_COUNTRY_CODE
 })
-@JsonTypeName("ReverseGeocodeAddressResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ReverseGeocodeAddressResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -61,6 +58,8 @@ public class ReverseGeocodeAddressResponse {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "CountryCode";
   private String countryCode;
 
+  public ReverseGeocodeAddressResponse() {
+  }
 
   public ReverseGeocodeAddressResponse successful(Boolean successful) {
     
@@ -68,12 +67,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the address operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the address operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,10 +80,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ReverseGeocodeAddressResponse streetAddress(String streetAddress) {
     
@@ -93,12 +92,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Street address to validate, such as &#39;2950 Buskirk Ave.&#39;
    * @return streetAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Street address to validate, such as '2950 Buskirk Ave.'")
   @JsonProperty(JSON_PROPERTY_STREET_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +105,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STREET_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStreetAddress(String streetAddress) {
     this.streetAddress = streetAddress;
   }
-
 
   public ReverseGeocodeAddressResponse city(String city) {
     
@@ -118,12 +117,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * City part of the addrerss to validate, such as &#39;Walnut Creek&#39;
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "City part of the addrerss to validate, such as 'Walnut Creek'")
   @JsonProperty(JSON_PROPERTY_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,10 +130,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCity(String city) {
     this.city = city;
   }
-
 
   public ReverseGeocodeAddressResponse stateOrProvince(String stateOrProvince) {
     
@@ -143,12 +142,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * State or province of the address to validate, such as &#39;CA&#39; or &#39;California&#39;
    * @return stateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "State or province of the address to validate, such as 'CA' or 'California'")
   @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,10 +155,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   public ReverseGeocodeAddressResponse postalCode(String postalCode) {
     
@@ -168,12 +167,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Zip code or postal code of the address to validate, such as &#39;94597&#39;
    * @return postalCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Zip code or postal code of the address to validate, such as '94597'")
   @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,10 +180,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
-
 
   public ReverseGeocodeAddressResponse countryFullName(String countryFullName) {
     
@@ -193,12 +192,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the country, such as &#39;United States&#39;.  Global countries are supported.
    * @return countryFullName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the country, such as 'United States'.  Global countries are supported.")
   @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,10 +205,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryFullName(String countryFullName) {
     this.countryFullName = countryFullName;
   }
-
 
   public ReverseGeocodeAddressResponse countryCode(String countryCode) {
     
@@ -218,12 +217,11 @@ public class ReverseGeocodeAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Three-letter ISO 3166-1 country code
    * @return countryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Three-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,10 +230,11 @@ public class ReverseGeocodeAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -259,7 +258,6 @@ public class ReverseGeocodeAddressResponse {
   public int hashCode() {
     return Objects.hash(successful, streetAddress, city, stateOrProvince, postalCode, countryFullName, countryCode);
   }
-
 
   @Override
   public String toString() {

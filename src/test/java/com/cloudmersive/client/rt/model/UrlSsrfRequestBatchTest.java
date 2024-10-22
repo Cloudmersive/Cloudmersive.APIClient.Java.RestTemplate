@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for UrlSsrfRequestBatch
  */
-public class UrlSsrfRequestBatchTest {
+class UrlSsrfRequestBatchTest {
     private final UrlSsrfRequestBatch model = new UrlSsrfRequestBatch();
 
     /**
      * Model tests for UrlSsrfRequestBatch
      */
     @Test
-    public void testUrlSsrfRequestBatch() {
+    void testUrlSsrfRequestBatch() {
         // TODO: test UrlSsrfRequestBatch
     }
 
@@ -46,7 +44,7 @@ public class UrlSsrfRequestBatchTest {
      * Test the property 'inputItems'
      */
     @Test
-    public void inputItemsTest() {
+    void inputItemsTest() {
         // TODO: test inputItems
     }
 

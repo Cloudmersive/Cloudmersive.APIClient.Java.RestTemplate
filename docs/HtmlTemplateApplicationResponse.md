@@ -3,12 +3,13 @@
 # HtmlTemplateApplicationResponse
 
 Response from an HTML template application
+
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**successful** | **Boolean** | True if the operation was successful, false otherwise |  [optional]
-**finalHtml** | **String** | Final HTML result of all operations on input |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**successful** | **Boolean** | True if the operation was successful, false otherwise |  [optional] |
+|**finalHtml** | **String** | Final HTML result of all operations on input |  [optional] |
 
 
 

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XlsxSpreadsheetCell
  */
-public class XlsxSpreadsheetCellTest {
+class XlsxSpreadsheetCellTest {
     private final XlsxSpreadsheetCell model = new XlsxSpreadsheetCell();
 
     /**
      * Model tests for XlsxSpreadsheetCell
      */
     @Test
-    public void testXlsxSpreadsheetCell() {
+    void testXlsxSpreadsheetCell() {
         // TODO: test XlsxSpreadsheetCell
     }
 
@@ -43,7 +40,7 @@ public class XlsxSpreadsheetCellTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -51,7 +48,7 @@ public class XlsxSpreadsheetCellTest {
      * Test the property 'textValue'
      */
     @Test
-    public void textValueTest() {
+    void textValueTest() {
         // TODO: test textValue
     }
 
@@ -59,7 +56,7 @@ public class XlsxSpreadsheetCellTest {
      * Test the property 'cellIdentifier'
      */
     @Test
-    public void cellIdentifierTest() {
+    void cellIdentifierTest() {
         // TODO: test cellIdentifier
     }
 
@@ -67,7 +64,7 @@ public class XlsxSpreadsheetCellTest {
      * Test the property 'styleIndex'
      */
     @Test
-    public void styleIndexTest() {
+    void styleIndexTest() {
         // TODO: test styleIndex
     }
 
@@ -75,7 +72,7 @@ public class XlsxSpreadsheetCellTest {
      * Test the property 'formula'
      */
     @Test
-    public void formulaTest() {
+    void formulaTest() {
         // TODO: test formula
     }
 

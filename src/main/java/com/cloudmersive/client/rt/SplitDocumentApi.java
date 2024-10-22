@@ -1,8 +1,13 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.invoker.ApiClient;
+import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import java.io.File;
+import com.cloudmersive.client.rt.model.JobStatusResult;
+import com.cloudmersive.client.rt.model.PptxSplitAdvancedRequest;
+import com.cloudmersive.client.rt.model.PptxSplitAdvancedResponse;
+import com.cloudmersive.client.rt.model.SplitBatchJobCreateResult;
 import com.cloudmersive.client.rt.model.SplitDocxDocumentResult;
 import com.cloudmersive.client.rt.model.SplitPdfResult;
 import com.cloudmersive.client.rt.model.SplitPptxPresentationResult;
@@ -31,28 +36,73 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
-@Component("com.cloudmersive.client.rt.SplitDocumentApi")
-public class SplitDocumentApi {
-    private ApiClient apiClient;
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+public class SplitDocumentApi extends BaseApi {
 
     public SplitDocumentApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
-    @Autowired
     public SplitDocumentApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
-    public ApiClient getApiClient() {
-        return apiClient;
+    /**
+     * Split a single Document into Separate Documents by Page as a Batch Job
+     * Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @param returnDocumentContents Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)
+     * @return SplitBatchJobCreateResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public SplitBatchJobCreateResult splitDocumentBatchJobCreate(org.springframework.core.io.Resource inputFile, Boolean returnDocumentContents) throws RestClientException {
+        return splitDocumentBatchJobCreateWithHttpInfo(inputFile, returnDocumentContents).getBody();
     }
 
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
+    /**
+     * Split a single Document into Separate Documents by Page as a Batch Job
+     * Split a Document (PPTX supported), comprised of multiple pages into separate files, with each containing exactly one page.  This API is designed for large jobs that could take a long time to create and so runs as a batch job that returns a Job ID that you can use with the GetAsyncJobStatus API to check on the status of the Job and ultimately get the output result.  This API automatically detects the document type and then performs the split by using the document type-specific API needed to perform the split.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * <p><b>200</b> - OK
+     * @param inputFile Input file to perform the operation on. (required)
+     * @param returnDocumentContents Set to true to return the contents of each presentation directly, set to false to only return URLs to each resulting presentation.  Default is true. (optional)
+     * @return ResponseEntity&lt;SplitBatchJobCreateResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<SplitBatchJobCreateResult> splitDocumentBatchJobCreateWithHttpInfo(org.springframework.core.io.Resource inputFile, Boolean returnDocumentContents) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'inputFile' is set
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentBatchJobCreate");
+        }
+        
 
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        if (returnDocumentContents != null)
+        localVarHeaderParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
+
+        if (inputFile != null)
+            localVarFormParams.add("inputFile", inputFile);
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<SplitBatchJobCreateResult> localReturnType = new ParameterizedTypeReference<SplitBatchJobCreateResult>() {};
+        return apiClient.invokeAPI("/convert/split/batch-job/create", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
     /**
      * Split a single Word Document DOCX into Separate Documents by Page
      * Split a Word DOCX Document, comprised of multiple pages into separate Word DOCX document files, with each containing exactly one page.
@@ -76,39 +126,87 @@ public class SplitDocumentApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SplitDocxDocumentResult> splitDocumentDocxWithHttpInfo(org.springframework.core.io.Resource inputFile, Boolean returnDocumentContents) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentDocx");
         }
         
-        String path = apiClient.expandPath("/convert/split/docx", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (returnDocumentContents != null)
-        headerParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
+        localVarHeaderParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SplitDocxDocumentResult> returnType = new ParameterizedTypeReference<SplitDocxDocumentResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SplitDocxDocumentResult> localReturnType = new ParameterizedTypeReference<SplitDocxDocumentResult>() {};
+        return apiClient.invokeAPI("/convert/split/docx", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Get the status and result of a Split Document Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * <p><b>200</b> - OK
+     * @param asyncJobID  (required)
+     * @return JobStatusResult
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public JobStatusResult splitDocumentGetAsyncJobStatus(String asyncJobID) throws RestClientException {
+        return splitDocumentGetAsyncJobStatusWithHttpInfo(asyncJobID).getBody();
+    }
+
+    /**
+     * Get the status and result of a Split Document Batch Job
+     * Returns the result of the Async Job - possible states can be STARTED or COMPLETED.  This API is only available for Cloudmersive Managed Instance and Private Cloud deployments.
+     * <p><b>200</b> - OK
+     * @param asyncJobID  (required)
+     * @return ResponseEntity&lt;JobStatusResult&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<JobStatusResult> splitDocumentGetAsyncJobStatusWithHttpInfo(String asyncJobID) throws RestClientException {
+        Object localVarPostBody = null;
+        
+        // verify the required parameter 'asyncJobID' is set
+        if (asyncJobID == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'asyncJobID' when calling splitDocumentGetAsyncJobStatus");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "AsyncJobID", asyncJobID));
+        
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = {  };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<JobStatusResult> localReturnType = new ParameterizedTypeReference<JobStatusResult>() {};
+        return apiClient.invokeAPI("/convert/split/batch-job/status", HttpMethod.GET, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Split a PDF file into separate PDF files, one per page
@@ -133,39 +231,38 @@ public class SplitDocumentApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SplitPdfResult> splitDocumentPdfByPageWithHttpInfo(org.springframework.core.io.Resource inputFile, Boolean returnDocumentContents) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentPdfByPage");
         }
         
-        String path = apiClient.expandPath("/convert/split/pdf", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (returnDocumentContents != null)
-        headerParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
+        localVarHeaderParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SplitPdfResult> returnType = new ParameterizedTypeReference<SplitPdfResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SplitPdfResult> localReturnType = new ParameterizedTypeReference<SplitPdfResult>() {};
+        return apiClient.invokeAPI("/convert/split/pdf", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Split a single PowerPoint Presentation PPTX into Separate Slides
@@ -190,39 +287,86 @@ public class SplitDocumentApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SplitPptxPresentationResult> splitDocumentPptxWithHttpInfo(org.springframework.core.io.Resource inputFile, Boolean returnDocumentContents) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentPptx");
         }
         
-        String path = apiClient.expandPath("/convert/split/pptx", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (returnDocumentContents != null)
-        headerParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
+        localVarHeaderParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SplitPptxPresentationResult> returnType = new ParameterizedTypeReference<SplitPptxPresentationResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SplitPptxPresentationResult> localReturnType = new ParameterizedTypeReference<SplitPptxPresentationResult>() {};
+        return apiClient.invokeAPI("/convert/split/pptx", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+    /**
+     * Split a single PowerPoint Presentation PPTX into Separate Presentations
+     * Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+     * <p><b>200</b> - OK
+     * @param request  (required)
+     * @return PptxSplitAdvancedResponse
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public PptxSplitAdvancedResponse splitDocumentPptxAdvanced(PptxSplitAdvancedRequest request) throws RestClientException {
+        return splitDocumentPptxAdvancedWithHttpInfo(request).getBody();
+    }
+
+    /**
+     * Split a single PowerPoint Presentation PPTX into Separate Presentations
+     * Split a PowerPoint PPTX Presentation, comprised of multiple slides into separate PowerPoint PPTX presentations of customizeable size.
+     * <p><b>200</b> - OK
+     * @param request  (required)
+     * @return ResponseEntity&lt;PptxSplitAdvancedResponse&gt;
+     * @throws RestClientException if an error occurs while attempting to invoke the API
+     */
+    public ResponseEntity<PptxSplitAdvancedResponse> splitDocumentPptxAdvancedWithHttpInfo(PptxSplitAdvancedRequest request) throws RestClientException {
+        Object localVarPostBody = request;
+        
+        // verify the required parameter 'request' is set
+        if (request == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'request' when calling splitDocumentPptxAdvanced");
+        }
+        
+
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json", "text/json", "application/xml", "text/xml", "application/x-www-form-urlencoded"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        ParameterizedTypeReference<PptxSplitAdvancedResponse> localReturnType = new ParameterizedTypeReference<PptxSplitAdvancedResponse>() {};
+        return apiClient.invokeAPI("/convert/split/pptx/advanced", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Split a single Text file (txt) into lines
@@ -245,36 +389,35 @@ public class SplitDocumentApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SplitTextDocumentByLinesResult> splitDocumentTxtByLineWithHttpInfo(org.springframework.core.io.Resource inputFile) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentTxtByLine");
         }
         
-        String path = apiClient.expandPath("/convert/split/txt/by-line", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SplitTextDocumentByLinesResult> returnType = new ParameterizedTypeReference<SplitTextDocumentByLinesResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SplitTextDocumentByLinesResult> localReturnType = new ParameterizedTypeReference<SplitTextDocumentByLinesResult>() {};
+        return apiClient.invokeAPI("/convert/split/txt/by-line", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Split a single Text file (txt) by a string delimiter
@@ -301,7 +444,7 @@ public class SplitDocumentApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SplitTextDocumentByStringResult> splitDocumentTxtByStringWithHttpInfo(String splitDelimiter, org.springframework.core.io.Resource inputFile, Boolean skipEmptyElements) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'splitDelimiter' is set
         if (splitDelimiter == null) {
@@ -313,34 +456,33 @@ public class SplitDocumentApi {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentTxtByString");
         }
         
-        String path = apiClient.expandPath("/convert/split/txt/by-string", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (splitDelimiter != null)
-        headerParams.add("splitDelimiter", apiClient.parameterToString(splitDelimiter));
+        localVarHeaderParams.add("splitDelimiter", apiClient.parameterToString(splitDelimiter));
         if (skipEmptyElements != null)
-        headerParams.add("skipEmptyElements", apiClient.parameterToString(skipEmptyElements));
+        localVarHeaderParams.add("skipEmptyElements", apiClient.parameterToString(skipEmptyElements));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SplitTextDocumentByStringResult> returnType = new ParameterizedTypeReference<SplitTextDocumentByStringResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SplitTextDocumentByStringResult> localReturnType = new ParameterizedTypeReference<SplitTextDocumentByStringResult>() {};
+        return apiClient.invokeAPI("/convert/split/txt/by-string", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * Split a single Excel XLSX into Separate Worksheets
@@ -365,38 +507,62 @@ public class SplitDocumentApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<SplitXlsxWorksheetResult> splitDocumentXlsxWithHttpInfo(org.springframework.core.io.Resource inputFile, Boolean returnDocumentContents) throws RestClientException {
-        Object postBody = null;
+        Object localVarPostBody = null;
         
         // verify the required parameter 'inputFile' is set
         if (inputFile == null) {
             throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling splitDocumentXlsx");
         }
         
-        String path = apiClient.expandPath("/convert/split/xlsx", Collections.<String, Object>emptyMap());
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         if (returnDocumentContents != null)
-        headerParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
+        localVarHeaderParams.add("returnDocumentContents", apiClient.parameterToString(returnDocumentContents));
 
         if (inputFile != null)
-            formParams.add("inputFile", inputFile);
+            localVarFormParams.add("inputFile", inputFile);
 
         final String[] localVarAccepts = { 
             "application/json", "text/json", "application/xml", "text/xml"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "multipart/form-data"
          };
-        final MediaType contentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "Apikey" };
+        String[] localVarAuthNames = new String[] { "Apikey" };
 
-        ParameterizedTypeReference<SplitXlsxWorksheetResult> returnType = new ParameterizedTypeReference<SplitXlsxWorksheetResult>() {};
-        return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, contentType, authNames, returnType);
+        ParameterizedTypeReference<SplitXlsxWorksheetResult> localReturnType = new ParameterizedTypeReference<SplitXlsxWorksheetResult>() {};
+        return apiClient.invokeAPI("/convert/split/xlsx", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    public <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json", "text/json", "application/xml", "text/xml"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "multipart/form-data"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "Apikey" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

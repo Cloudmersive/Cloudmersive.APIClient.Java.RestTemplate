@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of an photo to words-with-location OCR operation
  */
-@ApiModel(description = "Result of an photo to words-with-location OCR operation")
 @JsonPropertyOrder({
   PhotoToWordsWithLocationResult.JSON_PROPERTY_SUCCESSFUL,
   PhotoToWordsWithLocationResult.JSON_PROPERTY_TEXT_ELEMENTS,
   PhotoToWordsWithLocationResult.JSON_PROPERTY_DIAGNOSTIC_IMAGE
 })
-@JsonTypeName("PhotoToWordsWithLocationResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PhotoToWordsWithLocationResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_TEXT_ELEMENTS = "TextElements";
-  private List<OcrPhotoTextElement> textElements = null;
+  private List<OcrPhotoTextElement> textElements = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DIAGNOSTIC_IMAGE = "DiagnosticImage";
   private byte[] diagnosticImage;
 
+  public PhotoToWordsWithLocationResult() {
+  }
 
   public PhotoToWordsWithLocationResult successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class PhotoToWordsWithLocationResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class PhotoToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PhotoToWordsWithLocationResult textElements(List<OcrPhotoTextElement> textElements) {
     
@@ -82,18 +82,17 @@ public class PhotoToWordsWithLocationResult {
 
   public PhotoToWordsWithLocationResult addTextElementsItem(OcrPhotoTextElement textElementsItem) {
     if (this.textElements == null) {
-      this.textElements = new ArrayList<OcrPhotoTextElement>();
+      this.textElements = new ArrayList<>();
     }
     this.textElements.add(textElementsItem);
     return this;
   }
 
-   /**
+  /**
    * Word elements in the image
    * @return textElements
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word elements in the image")
   @JsonProperty(JSON_PROPERTY_TEXT_ELEMENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class PhotoToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_ELEMENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextElements(List<OcrPhotoTextElement> textElements) {
     this.textElements = textElements;
   }
-
 
   public PhotoToWordsWithLocationResult diagnosticImage(byte[] diagnosticImage) {
     
@@ -113,12 +113,11 @@ public class PhotoToWordsWithLocationResult {
     return this;
   }
 
-   /**
+  /**
    * Typically null.  To analyze OCR performance, enable diagnostic mode by adding the HTTP header \&quot;DiagnosticMode\&quot; with the value \&quot;true\&quot;.  When this is true, a diagnostic image showing the details of the OCR result will be set in PNG format into DiagnosticImage.
    * @return diagnosticImage
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Typically null.  To analyze OCR performance, enable diagnostic mode by adding the HTTP header \"DiagnosticMode\" with the value \"true\".  When this is true, a diagnostic image showing the details of the OCR result will be set in PNG format into DiagnosticImage.")
   @JsonProperty(JSON_PROPERTY_DIAGNOSTIC_IMAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class PhotoToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DIAGNOSTIC_IMAGE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDiagnosticImage(byte[] diagnosticImage) {
     this.diagnosticImage = diagnosticImage;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class PhotoToWordsWithLocationResult {
   public int hashCode() {
     return Objects.hash(successful, textElements, Arrays.hashCode(diagnosticImage));
   }
-
 
   @Override
   public String toString() {

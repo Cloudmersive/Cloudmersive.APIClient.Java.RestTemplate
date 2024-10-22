@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PdfMetadata
  */
-public class PdfMetadataTest {
+class PdfMetadataTest {
     private final PdfMetadata model = new PdfMetadata();
 
     /**
      * Model tests for PdfMetadata
      */
     @Test
-    public void testPdfMetadata() {
+    void testPdfMetadata() {
         // TODO: test PdfMetadata
     }
 
@@ -44,15 +41,23 @@ public class PdfMetadataTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
+    }
+
+    /**
+     * Test the property 'errorDetails'
+     */
+    @Test
+    void errorDetailsTest() {
+        // TODO: test errorDetails
     }
 
     /**
      * Test the property 'title'
      */
     @Test
-    public void titleTest() {
+    void titleTest() {
         // TODO: test title
     }
 
@@ -60,7 +65,7 @@ public class PdfMetadataTest {
      * Test the property 'keywords'
      */
     @Test
-    public void keywordsTest() {
+    void keywordsTest() {
         // TODO: test keywords
     }
 
@@ -68,7 +73,7 @@ public class PdfMetadataTest {
      * Test the property 'subject'
      */
     @Test
-    public void subjectTest() {
+    void subjectTest() {
         // TODO: test subject
     }
 
@@ -76,7 +81,7 @@ public class PdfMetadataTest {
      * Test the property 'author'
      */
     @Test
-    public void authorTest() {
+    void authorTest() {
         // TODO: test author
     }
 
@@ -84,7 +89,7 @@ public class PdfMetadataTest {
      * Test the property 'creator'
      */
     @Test
-    public void creatorTest() {
+    void creatorTest() {
         // TODO: test creator
     }
 
@@ -92,7 +97,7 @@ public class PdfMetadataTest {
      * Test the property 'dateModified'
      */
     @Test
-    public void dateModifiedTest() {
+    void dateModifiedTest() {
         // TODO: test dateModified
     }
 
@@ -100,7 +105,7 @@ public class PdfMetadataTest {
      * Test the property 'dateCreated'
      */
     @Test
-    public void dateCreatedTest() {
+    void dateCreatedTest() {
         // TODO: test dateCreated
     }
 
@@ -108,8 +113,16 @@ public class PdfMetadataTest {
      * Test the property 'pageCount'
      */
     @Test
-    public void pageCountTest() {
+    void pageCountTest() {
         // TODO: test pageCount
+    }
+
+    /**
+     * Test the property 'encrypted'
+     */
+    @Test
+    void encryptedTest() {
+        // TODO: test encrypted
     }
 
 }

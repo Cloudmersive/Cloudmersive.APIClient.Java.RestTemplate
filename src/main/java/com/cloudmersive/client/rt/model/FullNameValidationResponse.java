@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of a full name validation operation
  */
-@ApiModel(description = "Result of a full name validation operation")
 @JsonPropertyOrder({
   FullNameValidationResponse.JSON_PROPERTY_SUCCESSFUL,
   FullNameValidationResponse.JSON_PROPERTY_VALIDATION_RESULT_FIRST_NAME,
@@ -40,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FullNameValidationResponse.JSON_PROPERTY_SUFFIX,
   FullNameValidationResponse.JSON_PROPERTY_DISPLAY_NAME
 })
-@JsonTypeName("FullNameValidationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FullNameValidationResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -73,6 +70,8 @@ public class FullNameValidationResponse {
   public static final String JSON_PROPERTY_DISPLAY_NAME = "DisplayName";
   private String displayName;
 
+  public FullNameValidationResponse() {
+  }
 
   public FullNameValidationResponse successful(Boolean successful) {
     
@@ -80,12 +79,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the validation operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the validation operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +92,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public FullNameValidationResponse validationResultFirstName(String validationResultFirstName) {
     
@@ -105,12 +104,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Possible values are: ValidFirstName, ValidUnknownFirstName, InvalidSpamInput, InvalidCharacters, InvalidEmpty
    * @return validationResultFirstName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Possible values are: ValidFirstName, ValidUnknownFirstName, InvalidSpamInput, InvalidCharacters, InvalidEmpty")
   @JsonProperty(JSON_PROPERTY_VALIDATION_RESULT_FIRST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,10 +117,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALIDATION_RESULT_FIRST_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidationResultFirstName(String validationResultFirstName) {
     this.validationResultFirstName = validationResultFirstName;
   }
-
 
   public FullNameValidationResponse validationResultLastName(String validationResultLastName) {
     
@@ -130,12 +129,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty
    * @return validationResultLastName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Possible values are: ValidLastName, ValidUnknownLastName, InvalidSpamInput, InvalidCharacters, InvalidEmpty")
   @JsonProperty(JSON_PROPERTY_VALIDATION_RESULT_LAST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,10 +142,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALIDATION_RESULT_LAST_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidationResultLastName(String validationResultLastName) {
     this.validationResultLastName = validationResultLastName;
   }
-
 
   public FullNameValidationResponse title(String title) {
     
@@ -155,12 +154,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * The person&#39;s title (if supplied), e.g. \&quot;Mr.\&quot; or \&quot;Ms.\&quot;
    * @return title
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The person's title (if supplied), e.g. \"Mr.\" or \"Ms.\"")
   @JsonProperty(JSON_PROPERTY_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,10 +167,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TITLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   public FullNameValidationResponse firstName(String firstName) {
     
@@ -180,12 +179,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * The first name (given name)
    * @return firstName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The first name (given name)")
   @JsonProperty(JSON_PROPERTY_FIRST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,10 +192,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIRST_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFirstName(String firstName) {
     this.firstName = firstName;
   }
-
 
   public FullNameValidationResponse middleName(String middleName) {
     
@@ -205,12 +204,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * The middle name(s); if there are multiple names they will be separated by spaces
    * @return middleName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The middle name(s); if there are multiple names they will be separated by spaces")
   @JsonProperty(JSON_PROPERTY_MIDDLE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,10 +217,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MIDDLE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMiddleName(String middleName) {
     this.middleName = middleName;
   }
-
 
   public FullNameValidationResponse lastName(String lastName) {
     
@@ -230,12 +229,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * The last name (surname)
    * @return lastName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The last name (surname)")
   @JsonProperty(JSON_PROPERTY_LAST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -244,10 +242,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LAST_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLastName(String lastName) {
     this.lastName = lastName;
   }
-
 
   public FullNameValidationResponse nickName(String nickName) {
     
@@ -255,12 +254,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Nickname (if supplied)
    * @return nickName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Nickname (if supplied)")
   @JsonProperty(JSON_PROPERTY_NICK_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -269,10 +267,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NICK_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNickName(String nickName) {
     this.nickName = nickName;
   }
-
 
   public FullNameValidationResponse suffix(String suffix) {
     
@@ -280,12 +279,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * Suffix to the name, e.g. \&quot;Jr.\&quot; or \&quot;Sr.\&quot;
    * @return suffix
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Suffix to the name, e.g. \"Jr.\" or \"Sr.\"")
   @JsonProperty(JSON_PROPERTY_SUFFIX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -294,10 +292,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuffix(String suffix) {
     this.suffix = suffix;
   }
-
 
   public FullNameValidationResponse displayName(String displayName) {
     
@@ -305,12 +304,11 @@ public class FullNameValidationResponse {
     return this;
   }
 
-   /**
+  /**
    * The full display name of the name
    * @return displayName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The full display name of the name")
   @JsonProperty(JSON_PROPERTY_DISPLAY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -319,10 +317,11 @@ public class FullNameValidationResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DISPLAY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDisplayName(String displayName) {
     this.displayName = displayName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -349,7 +348,6 @@ public class FullNameValidationResponse {
   public int hashCode() {
     return Objects.hash(successful, validationResultFirstName, validationResultLastName, title, firstName, middleName, lastName, nickName, suffix, displayName);
   }
-
 
   @Override
   public String toString() {

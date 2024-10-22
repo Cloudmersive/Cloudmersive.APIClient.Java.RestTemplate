@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import java.io.File;
 import com.cloudmersive.client.rt.model.GetPageAngleResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for PreprocessingApi
  */
-@Ignore
-public class PreprocessingApiTest {
+@Disabled
+class PreprocessingApiTest {
 
     private final PreprocessingApi api = new PreprocessingApi();
 
@@ -37,12 +40,13 @@ public class PreprocessingApiTest {
      *
      * Perform an adaptive binarization algorithm on the input image to prepare it for further OCR operations.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void preprocessingBinarizeTest() {
+    void preprocessingBinarizeTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.preprocessingBinarize(imageFile);
 
         // TODO: test validations
@@ -53,12 +57,13 @@ public class PreprocessingApiTest {
      *
      * Perform an advanced adaptive, Deep Learning-based binarization algorithm on the input image to prepare it for further OCR operations.  Provides enhanced accuracy than adaptive binarization.  Image will be upsampled to 300 DPI if it has a DPI below 300.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void preprocessingBinarizeAdvancedTest() {
+    void preprocessingBinarizeAdvancedTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.preprocessingBinarizeAdvanced(imageFile);
 
         // TODO: test validations
@@ -69,12 +74,13 @@ public class PreprocessingApiTest {
      *
      * Analyzes a photo or image of a document and identifies the rotation angle of the page.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void preprocessingGetPageAngleTest() {
+    void preprocessingGetPageAngleTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         GetPageAngleResult response = api.preprocessingGetPageAngle(imageFile);
 
         // TODO: test validations
@@ -85,12 +91,13 @@ public class PreprocessingApiTest {
      *
      * Detect and unrotate an image of a document (e.g. that was scanned at an angle).  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void preprocessingUnrotateTest() {
+    void preprocessingUnrotateTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.preprocessingUnrotate(imageFile);
 
         // TODO: test validations
@@ -101,12 +108,13 @@ public class PreprocessingApiTest {
      *
      * Detect and unrotate an image of a document (e.g. that was scanned at an angle) using deep learning.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void preprocessingUnrotateAdvancedTest() {
+    void preprocessingUnrotateAdvancedTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.preprocessingUnrotateAdvanced(imageFile);
 
         // TODO: test validations
@@ -117,12 +125,13 @@ public class PreprocessingApiTest {
      *
      * Detect and unskew a photo of a document (e.g. taken on a cell phone) into a perfectly square image.  Great for document scanning applications; once unskewed, this image is perfect for converting to PDF using the Convert API or optical character recognition using the OCR API.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void preprocessingUnskewTest() {
+    void preprocessingUnskewTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.preprocessingUnskew(imageFile);
 
         // TODO: test validations

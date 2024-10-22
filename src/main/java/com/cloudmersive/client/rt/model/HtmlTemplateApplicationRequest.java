@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * HTML template application request
  */
-@ApiModel(description = "HTML template application request")
 @JsonPropertyOrder({
   HtmlTemplateApplicationRequest.JSON_PROPERTY_HTML_TEMPLATE,
   HtmlTemplateApplicationRequest.JSON_PROPERTY_HTML_TEMPLATE_URL,
   HtmlTemplateApplicationRequest.JSON_PROPERTY_OPERATIONS
 })
-@JsonTypeName("HtmlTemplateApplicationRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlTemplateApplicationRequest {
   public static final String JSON_PROPERTY_HTML_TEMPLATE = "HtmlTemplate";
   private String htmlTemplate;
@@ -46,8 +44,10 @@ public class HtmlTemplateApplicationRequest {
   private String htmlTemplateUrl;
 
   public static final String JSON_PROPERTY_OPERATIONS = "Operations";
-  private List<HtmlTemplateOperation> operations = null;
+  private List<HtmlTemplateOperation> operations = new ArrayList<>();
 
+  public HtmlTemplateApplicationRequest() {
+  }
 
   public HtmlTemplateApplicationRequest htmlTemplate(String htmlTemplate) {
     
@@ -55,12 +55,11 @@ public class HtmlTemplateApplicationRequest {
     return this;
   }
 
-   /**
+  /**
    * HTML template input as a string
    * @return htmlTemplate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML template input as a string")
   @JsonProperty(JSON_PROPERTY_HTML_TEMPLATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class HtmlTemplateApplicationRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTML_TEMPLATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHtmlTemplate(String htmlTemplate) {
     this.htmlTemplate = htmlTemplate;
   }
-
 
   public HtmlTemplateApplicationRequest htmlTemplateUrl(String htmlTemplateUrl) {
     
@@ -80,12 +80,11 @@ public class HtmlTemplateApplicationRequest {
     return this;
   }
 
-   /**
+  /**
    * URL to HTML template input
    * @return htmlTemplateUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to HTML template input")
   @JsonProperty(JSON_PROPERTY_HTML_TEMPLATE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class HtmlTemplateApplicationRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTML_TEMPLATE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHtmlTemplateUrl(String htmlTemplateUrl) {
     this.htmlTemplateUrl = htmlTemplateUrl;
   }
-
 
   public HtmlTemplateApplicationRequest operations(List<HtmlTemplateOperation> operations) {
     
@@ -107,18 +107,17 @@ public class HtmlTemplateApplicationRequest {
 
   public HtmlTemplateApplicationRequest addOperationsItem(HtmlTemplateOperation operationsItem) {
     if (this.operations == null) {
-      this.operations = new ArrayList<HtmlTemplateOperation>();
+      this.operations = new ArrayList<>();
     }
     this.operations.add(operationsItem);
     return this;
   }
 
-   /**
+  /**
    * Operations to apply to this template
    * @return operations
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Operations to apply to this template")
   @JsonProperty(JSON_PROPERTY_OPERATIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class HtmlTemplateApplicationRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPERATIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOperations(List<HtmlTemplateOperation> operations) {
     this.operations = operations;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class HtmlTemplateApplicationRequest {
   public int hashCode() {
     return Objects.hash(htmlTemplate, htmlTemplateUrl, operations);
   }
-
 
   @Override
   public String toString() {

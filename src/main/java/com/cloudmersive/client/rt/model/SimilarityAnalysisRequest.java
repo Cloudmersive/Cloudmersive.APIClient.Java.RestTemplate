@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a similarity analysis operation
  */
-@ApiModel(description = "Input to a similarity analysis operation")
 @JsonPropertyOrder({
   SimilarityAnalysisRequest.JSON_PROPERTY_TEXT_TO_ANALYZE1,
   SimilarityAnalysisRequest.JSON_PROPERTY_TEXT_TO_ANALYZE2
 })
-@JsonTypeName("SimilarityAnalysisRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SimilarityAnalysisRequest {
   public static final String JSON_PROPERTY_TEXT_TO_ANALYZE1 = "TextToAnalyze1";
   private String textToAnalyze1;
@@ -41,6 +38,8 @@ public class SimilarityAnalysisRequest {
   public static final String JSON_PROPERTY_TEXT_TO_ANALYZE2 = "TextToAnalyze2";
   private String textToAnalyze2;
 
+  public SimilarityAnalysisRequest() {
+  }
 
   public SimilarityAnalysisRequest textToAnalyze1(String textToAnalyze1) {
     
@@ -48,12 +47,11 @@ public class SimilarityAnalysisRequest {
     return this;
   }
 
-   /**
+  /**
    * First text to analyze
    * @return textToAnalyze1
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "First text to analyze")
   @JsonProperty(JSON_PROPERTY_TEXT_TO_ANALYZE1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class SimilarityAnalysisRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_TO_ANALYZE1)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextToAnalyze1(String textToAnalyze1) {
     this.textToAnalyze1 = textToAnalyze1;
   }
-
 
   public SimilarityAnalysisRequest textToAnalyze2(String textToAnalyze2) {
     
@@ -73,12 +72,11 @@ public class SimilarityAnalysisRequest {
     return this;
   }
 
-   /**
+  /**
    * Second text to analyze
    * @return textToAnalyze2
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Second text to analyze")
   @JsonProperty(JSON_PROPERTY_TEXT_TO_ANALYZE2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class SimilarityAnalysisRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_TO_ANALYZE2)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextToAnalyze2(String textToAnalyze2) {
     this.textToAnalyze2 = textToAnalyze2;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class SimilarityAnalysisRequest {
   public int hashCode() {
     return Objects.hash(textToAnalyze1, textToAnalyze2);
   }
-
 
   @Override
   public String toString() {

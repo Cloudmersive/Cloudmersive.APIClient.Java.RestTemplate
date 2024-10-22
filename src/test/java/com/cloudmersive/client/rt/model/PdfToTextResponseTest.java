@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PdfToTextResponse
  */
-public class PdfToTextResponseTest {
+class PdfToTextResponseTest {
     private final PdfToTextResponse model = new PdfToTextResponse();
 
     /**
      * Model tests for PdfToTextResponse
      */
     @Test
-    public void testPdfToTextResponse() {
+    void testPdfToTextResponse() {
         // TODO: test PdfToTextResponse
     }
 
@@ -46,7 +44,7 @@ public class PdfToTextResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,8 +52,24 @@ public class PdfToTextResponseTest {
      * Test the property 'ocrPages'
      */
     @Test
-    public void ocrPagesTest() {
+    void ocrPagesTest() {
         // TODO: test ocrPages
+    }
+
+    /**
+     * Test the property 'asyncJobID'
+     */
+    @Test
+    void asyncJobIDTest() {
+        // TODO: test asyncJobID
+    }
+
+    /**
+     * Test the property 'asyncJobStatus'
+     */
+    @Test
+    void asyncJobStatusTest() {
+        // TODO: test asyncJobStatus
     }
 
 }

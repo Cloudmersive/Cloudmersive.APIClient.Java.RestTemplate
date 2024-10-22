@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PdfAnnotation
  */
-public class PdfAnnotationTest {
+class PdfAnnotationTest {
     private final PdfAnnotation model = new PdfAnnotation();
 
     /**
      * Model tests for PdfAnnotation
      */
     @Test
-    public void testPdfAnnotation() {
+    void testPdfAnnotation() {
         // TODO: test PdfAnnotation
     }
 
@@ -44,7 +41,7 @@ public class PdfAnnotationTest {
      * Test the property 'title'
      */
     @Test
-    public void titleTest() {
+    void titleTest() {
         // TODO: test title
     }
 
@@ -52,7 +49,7 @@ public class PdfAnnotationTest {
      * Test the property 'annotationType'
      */
     @Test
-    public void annotationTypeTest() {
+    void annotationTypeTest() {
         // TODO: test annotationType
     }
 
@@ -60,7 +57,7 @@ public class PdfAnnotationTest {
      * Test the property 'pageNumber'
      */
     @Test
-    public void pageNumberTest() {
+    void pageNumberTest() {
         // TODO: test pageNumber
     }
 
@@ -68,7 +65,7 @@ public class PdfAnnotationTest {
      * Test the property 'annotationIndex'
      */
     @Test
-    public void annotationIndexTest() {
+    void annotationIndexTest() {
         // TODO: test annotationIndex
     }
 
@@ -76,7 +73,7 @@ public class PdfAnnotationTest {
      * Test the property 'subject'
      */
     @Test
-    public void subjectTest() {
+    void subjectTest() {
         // TODO: test subject
     }
 
@@ -84,7 +81,7 @@ public class PdfAnnotationTest {
      * Test the property 'textContents'
      */
     @Test
-    public void textContentsTest() {
+    void textContentsTest() {
         // TODO: test textContents
     }
 
@@ -92,7 +89,7 @@ public class PdfAnnotationTest {
      * Test the property 'creationDate'
      */
     @Test
-    public void creationDateTest() {
+    void creationDateTest() {
         // TODO: test creationDate
     }
 
@@ -100,7 +97,7 @@ public class PdfAnnotationTest {
      * Test the property 'modifiedDate'
      */
     @Test
-    public void modifiedDateTest() {
+    void modifiedDateTest() {
         // TODO: test modifiedDate
     }
 
@@ -108,7 +105,7 @@ public class PdfAnnotationTest {
      * Test the property 'leftX'
      */
     @Test
-    public void leftXTest() {
+    void leftXTest() {
         // TODO: test leftX
     }
 
@@ -116,7 +113,7 @@ public class PdfAnnotationTest {
      * Test the property 'topY'
      */
     @Test
-    public void topYTest() {
+    void topYTest() {
         // TODO: test topY
     }
 
@@ -124,7 +121,7 @@ public class PdfAnnotationTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -132,7 +129,7 @@ public class PdfAnnotationTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 

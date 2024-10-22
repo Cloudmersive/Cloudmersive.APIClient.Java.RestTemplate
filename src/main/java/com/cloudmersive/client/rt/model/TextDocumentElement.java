@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single element of a Text document
  */
-@ApiModel(description = "A single element of a Text document")
 @JsonPropertyOrder({
   TextDocumentElement.JSON_PROPERTY_ELEMENT_NUMBER,
   TextDocumentElement.JSON_PROPERTY_ELEMENT_CONTENTS
 })
-@JsonTypeName("TextDocumentElement")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TextDocumentElement {
   public static final String JSON_PROPERTY_ELEMENT_NUMBER = "ElementNumber";
   private Integer elementNumber;
@@ -41,6 +38,8 @@ public class TextDocumentElement {
   public static final String JSON_PROPERTY_ELEMENT_CONTENTS = "ElementContents";
   private String elementContents;
 
+  public TextDocumentElement() {
+  }
 
   public TextDocumentElement elementNumber(Integer elementNumber) {
     
@@ -48,12 +47,11 @@ public class TextDocumentElement {
     return this;
   }
 
-   /**
+  /**
    * The 1-based line index of the element
    * @return elementNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The 1-based line index of the element")
   @JsonProperty(JSON_PROPERTY_ELEMENT_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class TextDocumentElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ELEMENT_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setElementNumber(Integer elementNumber) {
     this.elementNumber = elementNumber;
   }
-
 
   public TextDocumentElement elementContents(String elementContents) {
     
@@ -73,12 +72,11 @@ public class TextDocumentElement {
     return this;
   }
 
-   /**
+  /**
    * The text contents of a single element of a text file
    * @return elementContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The text contents of a single element of a text file")
   @JsonProperty(JSON_PROPERTY_ELEMENT_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class TextDocumentElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ELEMENT_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setElementContents(String elementContents) {
     this.elementContents = elementContents;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class TextDocumentElement {
   public int hashCode() {
     return Objects.hash(elementNumber, elementContents);
   }
-
 
   @Override
   public String toString() {

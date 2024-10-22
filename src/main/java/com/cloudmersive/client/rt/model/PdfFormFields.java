@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of retrieving PDF form fields
  */
-@ApiModel(description = "Result of retrieving PDF form fields")
 @JsonPropertyOrder({
   PdfFormFields.JSON_PROPERTY_SUCCESSFUL,
   PdfFormFields.JSON_PROPERTY_FORM_FIELDS
 })
-@JsonTypeName("PdfFormFields")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfFormFields {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_FORM_FIELDS = "FormFields";
-  private List<PdfFormField> formFields = null;
+  private List<PdfFormField> formFields = new ArrayList<>();
 
+  public PdfFormFields() {
+  }
 
   public PdfFormFields successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class PdfFormFields {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class PdfFormFields {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PdfFormFields formFields(List<PdfFormField> formFields) {
     
@@ -78,18 +78,17 @@ public class PdfFormFields {
 
   public PdfFormFields addFormFieldsItem(PdfFormField formFieldsItem) {
     if (this.formFields == null) {
-      this.formFields = new ArrayList<PdfFormField>();
+      this.formFields = new ArrayList<>();
     }
     this.formFields.add(formFieldsItem);
     return this;
   }
 
-   /**
+  /**
    * Fields and field values found in the form
    * @return formFields
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Fields and field values found in the form")
   @JsonProperty(JSON_PROPERTY_FORM_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class PdfFormFields {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FORM_FIELDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFormFields(List<PdfFormField> formFields) {
     this.formFields = formFields;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class PdfFormFields {
   public int hashCode() {
     return Objects.hash(successful, formFields);
   }
-
 
   @Override
   public String toString() {

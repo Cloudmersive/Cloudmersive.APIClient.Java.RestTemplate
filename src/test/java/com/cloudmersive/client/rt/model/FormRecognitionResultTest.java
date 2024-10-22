@@ -20,26 +20,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FormRecognitionResult
  */
-public class FormRecognitionResultTest {
+class FormRecognitionResultTest {
     private final FormRecognitionResult model = new FormRecognitionResult();
 
     /**
      * Model tests for FormRecognitionResult
      */
     @Test
-    public void testFormRecognitionResult() {
+    void testFormRecognitionResult() {
         // TODO: test FormRecognitionResult
     }
 
@@ -47,7 +45,7 @@ public class FormRecognitionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -55,7 +53,7 @@ public class FormRecognitionResultTest {
      * Test the property 'fieldValueExtractionResult'
      */
     @Test
-    public void fieldValueExtractionResultTest() {
+    void fieldValueExtractionResultTest() {
         // TODO: test fieldValueExtractionResult
     }
 
@@ -63,7 +61,7 @@ public class FormRecognitionResultTest {
      * Test the property 'tableValueExtractionResults'
      */
     @Test
-    public void tableValueExtractionResultsTest() {
+    void tableValueExtractionResultsTest() {
         // TODO: test tableValueExtractionResults
     }
 
@@ -71,7 +69,7 @@ public class FormRecognitionResultTest {
      * Test the property 'diagnostics'
      */
     @Test
-    public void diagnosticsTest() {
+    void diagnosticsTest() {
         // TODO: test diagnostics
     }
 
@@ -79,7 +77,7 @@ public class FormRecognitionResultTest {
      * Test the property 'bestMatchFormSettingName'
      */
     @Test
-    public void bestMatchFormSettingNameTest() {
+    void bestMatchFormSettingNameTest() {
         // TODO: test bestMatchFormSettingName
     }
 

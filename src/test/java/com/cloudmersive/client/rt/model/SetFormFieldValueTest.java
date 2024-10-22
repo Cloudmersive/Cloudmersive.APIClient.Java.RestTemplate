@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SetFormFieldValue
  */
-public class SetFormFieldValueTest {
+class SetFormFieldValueTest {
     private final SetFormFieldValue model = new SetFormFieldValue();
 
     /**
      * Model tests for SetFormFieldValue
      */
     @Test
-    public void testSetFormFieldValue() {
+    void testSetFormFieldValue() {
         // TODO: test SetFormFieldValue
     }
 
@@ -43,7 +40,7 @@ public class SetFormFieldValueTest {
      * Test the property 'fieldName'
      */
     @Test
-    public void fieldNameTest() {
+    void fieldNameTest() {
         // TODO: test fieldName
     }
 
@@ -51,7 +48,7 @@ public class SetFormFieldValueTest {
      * Test the property 'textValue'
      */
     @Test
-    public void textValueTest() {
+    void textValueTest() {
         // TODO: test textValue
     }
 
@@ -59,7 +56,7 @@ public class SetFormFieldValueTest {
      * Test the property 'checkboxValue'
      */
     @Test
-    public void checkboxValueTest() {
+    void checkboxValueTest() {
         // TODO: test checkboxValue
     }
 
@@ -67,7 +64,7 @@ public class SetFormFieldValueTest {
      * Test the property 'comboBoxSelectedIndex'
      */
     @Test
-    public void comboBoxSelectedIndexTest() {
+    void comboBoxSelectedIndexTest() {
         // TODO: test comboBoxSelectedIndex
     }
 

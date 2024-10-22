@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single still frame from a video
  */
-@ApiModel(description = "A single still frame from a video")
 @JsonPropertyOrder({
   StillFrame.JSON_PROPERTY_FRAME_NUMBER,
   StillFrame.JSON_PROPERTY_TIME_STAMP,
   StillFrame.JSON_PROPERTY_CONTENT
 })
-@JsonTypeName("StillFrame")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class StillFrame {
   public static final String JSON_PROPERTY_FRAME_NUMBER = "FrameNumber";
   private Integer frameNumber;
@@ -45,6 +42,8 @@ public class StillFrame {
   public static final String JSON_PROPERTY_CONTENT = "Content";
   private byte[] content;
 
+  public StillFrame() {
+  }
 
   public StillFrame frameNumber(Integer frameNumber) {
     
@@ -52,12 +51,11 @@ public class StillFrame {
     return this;
   }
 
-   /**
+  /**
    * The number of the current frame
    * @return frameNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of the current frame")
   @JsonProperty(JSON_PROPERTY_FRAME_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class StillFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FRAME_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFrameNumber(Integer frameNumber) {
     this.frameNumber = frameNumber;
   }
-
 
   public StillFrame timeStamp(String timeStamp) {
     
@@ -77,12 +76,11 @@ public class StillFrame {
     return this;
   }
 
-   /**
+  /**
    * The playback time of the current frame
    * @return timeStamp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The playback time of the current frame")
   @JsonProperty(JSON_PROPERTY_TIME_STAMP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class StillFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIME_STAMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimeStamp(String timeStamp) {
     this.timeStamp = timeStamp;
   }
-
 
   public StillFrame content(byte[] content) {
     
@@ -102,12 +101,11 @@ public class StillFrame {
     return this;
   }
 
-   /**
+  /**
    * The still frame in PNG format as a byte array
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The still frame in PNG format as a byte array")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class StillFrame {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(byte[] content) {
     this.content = content;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class StillFrame {
   public int hashCode() {
     return Objects.hash(frameNumber, timeStamp, Arrays.hashCode(content));
   }
-
 
   @Override
   public String toString() {

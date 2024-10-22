@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Details of the HTML to Office request
  */
-@ApiModel(description = "Details of the HTML to Office request")
 @JsonPropertyOrder({
   HtmlToOfficeRequest.JSON_PROPERTY_HTML
 })
-@JsonTypeName("HtmlToOfficeRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlToOfficeRequest {
   public static final String JSON_PROPERTY_HTML = "Html";
   private String html;
 
+  public HtmlToOfficeRequest() {
+  }
 
   public HtmlToOfficeRequest html(String html) {
     
@@ -44,12 +43,11 @@ public class HtmlToOfficeRequest {
     return this;
   }
 
-   /**
+  /**
    * HTML to render to Office format
    * @return html
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML to render to Office format")
   @JsonProperty(JSON_PROPERTY_HTML)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class HtmlToOfficeRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTML)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHtml(String html) {
     this.html = html;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class HtmlToOfficeRequest {
   public int hashCode() {
     return Objects.hash(html);
   }
-
 
   @Override
   public String toString() {

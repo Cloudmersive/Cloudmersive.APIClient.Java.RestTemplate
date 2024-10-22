@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A single Word DOCX file corresponding to one page in the original document
  */
-@ApiModel(description = "A single Word DOCX file corresponding to one page in the original document")
 @JsonPropertyOrder({
   SplitDocumentResult.JSON_PROPERTY_PAGE_NUMBER,
   SplitDocumentResult.JSON_PROPERTY_U_R_L,
   SplitDocumentResult.JSON_PROPERTY_DOCUMENT_CONTENTS
 })
-@JsonTypeName("SplitDocumentResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SplitDocumentResult {
   public static final String JSON_PROPERTY_PAGE_NUMBER = "PageNumber";
   private Integer pageNumber;
@@ -45,6 +42,8 @@ public class SplitDocumentResult {
   public static final String JSON_PROPERTY_DOCUMENT_CONTENTS = "DocumentContents";
   private byte[] documentContents;
 
+  public SplitDocumentResult() {
+  }
 
   public SplitDocumentResult pageNumber(Integer pageNumber) {
     
@@ -52,12 +51,11 @@ public class SplitDocumentResult {
     return this;
   }
 
-   /**
+  /**
    * Page number of the converted page, starting with 1 for the first page
    * @return pageNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Page number of the converted page, starting with 1 for the first page")
   @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class SplitDocumentResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageNumber(Integer pageNumber) {
     this.pageNumber = pageNumber;
   }
-
 
   public SplitDocumentResult URL(String URL) {
     
@@ -77,12 +76,11 @@ public class SplitDocumentResult {
     return this;
   }
 
-   /**
+  /**
    * URL to the DOCX file of this slide; file is stored in an in-memory cache and will be deleted
    * @return URL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to the DOCX file of this slide; file is stored in an in-memory cache and will be deleted")
   @JsonProperty(JSON_PROPERTY_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class SplitDocumentResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setURL(String URL) {
     this.URL = URL;
   }
-
 
   public SplitDocumentResult documentContents(byte[] documentContents) {
     
@@ -102,12 +101,11 @@ public class SplitDocumentResult {
     return this;
   }
 
-   /**
+  /**
    * Contents of the document in bytes
    * @return documentContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Contents of the document in bytes")
   @JsonProperty(JSON_PROPERTY_DOCUMENT_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class SplitDocumentResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOCUMENT_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDocumentContents(byte[] documentContents) {
     this.documentContents = documentContents;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class SplitDocumentResult {
   public int hashCode() {
     return Objects.hash(pageNumber, URL, Arrays.hashCode(documentContents));
   }
-
 
   @Override
   public String toString() {

@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a language detection operation
  */
-@ApiModel(description = "Input to a language detection operation")
 @JsonPropertyOrder({
   LanguageDetectionRequest.JSON_PROPERTY_TEXT_TO_DETECT
 })
-@JsonTypeName("LanguageDetectionRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class LanguageDetectionRequest {
   public static final String JSON_PROPERTY_TEXT_TO_DETECT = "textToDetect";
   private String textToDetect;
 
+  public LanguageDetectionRequest() {
+  }
 
   public LanguageDetectionRequest textToDetect(String textToDetect) {
     
@@ -44,12 +43,11 @@ public class LanguageDetectionRequest {
     return this;
   }
 
-   /**
+  /**
    * Text to detect the language of
    * @return textToDetect
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text to detect the language of")
   @JsonProperty(JSON_PROPERTY_TEXT_TO_DETECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class LanguageDetectionRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_TO_DETECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextToDetect(String textToDetect) {
     this.textToDetect = textToDetect;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class LanguageDetectionRequest {
   public int hashCode() {
     return Objects.hash(textToDetect);
   }
-
 
   @Override
   public String toString() {

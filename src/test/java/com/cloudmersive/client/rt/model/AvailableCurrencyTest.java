@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AvailableCurrency
  */
-public class AvailableCurrencyTest {
+class AvailableCurrencyTest {
     private final AvailableCurrency model = new AvailableCurrency();
 
     /**
      * Model tests for AvailableCurrency
      */
     @Test
-    public void testAvailableCurrency() {
+    void testAvailableCurrency() {
         // TODO: test AvailableCurrency
     }
 
@@ -43,7 +40,7 @@ public class AvailableCurrencyTest {
      * Test the property 'isOCurrencyCode'
      */
     @Test
-    public void isOCurrencyCodeTest() {
+    void isOCurrencyCodeTest() {
         // TODO: test isOCurrencyCode
     }
 
@@ -51,7 +48,7 @@ public class AvailableCurrencyTest {
      * Test the property 'currencySymbol'
      */
     @Test
-    public void currencySymbolTest() {
+    void currencySymbolTest() {
         // TODO: test currencySymbol
     }
 
@@ -59,7 +56,7 @@ public class AvailableCurrencyTest {
      * Test the property 'currencyEnglishName'
      */
     @Test
-    public void currencyEnglishNameTest() {
+    void currencyEnglishNameTest() {
         // TODO: test currencyEnglishName
     }
 
@@ -67,7 +64,7 @@ public class AvailableCurrencyTest {
      * Test the property 'countryName'
      */
     @Test
-    public void countryNameTest() {
+    void countryNameTest() {
         // TODO: test countryName
     }
 
@@ -75,7 +72,7 @@ public class AvailableCurrencyTest {
      * Test the property 'countryThreeLetterCode'
      */
     @Test
-    public void countryThreeLetterCodeTest() {
+    void countryThreeLetterCodeTest() {
         // TODO: test countryThreeLetterCode
     }
 
@@ -83,7 +80,7 @@ public class AvailableCurrencyTest {
      * Test the property 'countryISOTwoLetterCode'
      */
     @Test
-    public void countryISOTwoLetterCodeTest() {
+    void countryISOTwoLetterCodeTest() {
         // TODO: test countryISOTwoLetterCode
     }
 
@@ -91,7 +88,7 @@ public class AvailableCurrencyTest {
      * Test the property 'isEuropeanUnionMember'
      */
     @Test
-    public void isEuropeanUnionMemberTest() {
+    void isEuropeanUnionMemberTest() {
         // TODO: test isEuropeanUnionMember
     }
 

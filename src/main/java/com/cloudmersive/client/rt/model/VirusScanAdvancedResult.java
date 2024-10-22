@@ -22,16 +22,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running an advanced virus scan
  */
-@ApiModel(description = "Result of running an advanced virus scan")
 @JsonPropertyOrder({
   VirusScanAdvancedResult.JSON_PROPERTY_CLEAN_RESULT,
   VirusScanAdvancedResult.JSON_PROPERTY_CONTAINS_EXECUTABLE,
@@ -43,12 +42,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   VirusScanAdvancedResult.JSON_PROPERTY_CONTAINS_XML_EXTERNAL_ENTITIES,
   VirusScanAdvancedResult.JSON_PROPERTY_CONTAINS_INSECURE_DESERIALIZATION,
   VirusScanAdvancedResult.JSON_PROPERTY_CONTAINS_HTML,
+  VirusScanAdvancedResult.JSON_PROPERTY_CONTAINS_UNSAFE_ARCHIVE,
+  VirusScanAdvancedResult.JSON_PROPERTY_CONTAINS_OLE_EMBEDDED_OBJECT,
   VirusScanAdvancedResult.JSON_PROPERTY_VERIFIED_FILE_FORMAT,
   VirusScanAdvancedResult.JSON_PROPERTY_FOUND_VIRUSES,
   VirusScanAdvancedResult.JSON_PROPERTY_CONTENT_INFORMATION
 })
-@JsonTypeName("VirusScanAdvancedResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VirusScanAdvancedResult {
   public static final String JSON_PROPERTY_CLEAN_RESULT = "CleanResult";
   private Boolean cleanResult;
@@ -80,15 +80,23 @@ public class VirusScanAdvancedResult {
   public static final String JSON_PROPERTY_CONTAINS_HTML = "ContainsHtml";
   private Boolean containsHtml;
 
+  public static final String JSON_PROPERTY_CONTAINS_UNSAFE_ARCHIVE = "ContainsUnsafeArchive";
+  private Boolean containsUnsafeArchive;
+
+  public static final String JSON_PROPERTY_CONTAINS_OLE_EMBEDDED_OBJECT = "ContainsOleEmbeddedObject";
+  private Boolean containsOleEmbeddedObject;
+
   public static final String JSON_PROPERTY_VERIFIED_FILE_FORMAT = "VerifiedFileFormat";
   private String verifiedFileFormat;
 
   public static final String JSON_PROPERTY_FOUND_VIRUSES = "FoundViruses";
-  private List<VirusFound> foundViruses = null;
+  private List<VirusFound> foundViruses = new ArrayList<>();
 
   public static final String JSON_PROPERTY_CONTENT_INFORMATION = "ContentInformation";
   private AdditionalAdvancedScanInformation contentInformation;
 
+  public VirusScanAdvancedResult() {
+  }
 
   public VirusScanAdvancedResult cleanResult(Boolean cleanResult) {
     
@@ -96,12 +104,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained no viruses, false otherwise
    * @return cleanResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained no viruses, false otherwise")
   @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,10 +117,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanResult(Boolean cleanResult) {
     this.cleanResult = cleanResult;
   }
-
 
   public VirusScanAdvancedResult containsExecutable(Boolean containsExecutable) {
     
@@ -121,12 +129,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained an executable (application code), which can be a significant risk factor
    * @return containsExecutable
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained an executable (application code), which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_EXECUTABLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,10 +142,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_EXECUTABLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsExecutable(Boolean containsExecutable) {
     this.containsExecutable = containsExecutable;
   }
-
 
   public VirusScanAdvancedResult containsInvalidFile(Boolean containsInvalidFile) {
     
@@ -146,12 +154,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained an invalid file (such as a PDF that is not a valid PDF, Word Document that is not a valid Word Document, etc.), which can be a significant risk factor
    * @return containsInvalidFile
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained an invalid file (such as a PDF that is not a valid PDF, Word Document that is not a valid Word Document, etc.), which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_INVALID_FILE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,10 +167,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_INVALID_FILE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsInvalidFile(Boolean containsInvalidFile) {
     this.containsInvalidFile = containsInvalidFile;
   }
-
 
   public VirusScanAdvancedResult containsScript(Boolean containsScript) {
     
@@ -171,12 +179,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained a script (such as a PHP script, Python script, etc.) which can be a significant risk factor
    * @return containsScript
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained a script (such as a PHP script, Python script, etc.) which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_SCRIPT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +192,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_SCRIPT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsScript(Boolean containsScript) {
     this.containsScript = containsScript;
   }
-
 
   public VirusScanAdvancedResult containsPasswordProtectedFile(Boolean containsPasswordProtectedFile) {
     
@@ -196,12 +204,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained a password protected or encrypted file, which can be a significant risk factor
    * @return containsPasswordProtectedFile
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained a password protected or encrypted file, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_PASSWORD_PROTECTED_FILE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,10 +217,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_PASSWORD_PROTECTED_FILE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsPasswordProtectedFile(Boolean containsPasswordProtectedFile) {
     this.containsPasswordProtectedFile = containsPasswordProtectedFile;
   }
-
 
   public VirusScanAdvancedResult containsRestrictedFileFormat(Boolean containsRestrictedFileFormat) {
     
@@ -221,12 +229,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file is of a type that is not allowed based on the optional restrictFileTypes parameter, false otherwise; if restrictFileTypes is not set, this will always be false
    * @return containsRestrictedFileFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file is of a type that is not allowed based on the optional restrictFileTypes parameter, false otherwise; if restrictFileTypes is not set, this will always be false")
   @JsonProperty(JSON_PROPERTY_CONTAINS_RESTRICTED_FILE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -235,10 +242,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_RESTRICTED_FILE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsRestrictedFileFormat(Boolean containsRestrictedFileFormat) {
     this.containsRestrictedFileFormat = containsRestrictedFileFormat;
   }
-
 
   public VirusScanAdvancedResult containsMacros(Boolean containsMacros) {
     
@@ -246,12 +254,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file contains embedded Macros of other embedded threats within the document, which can be a significant risk factor
    * @return containsMacros
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file contains embedded Macros of other embedded threats within the document, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_MACROS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -260,10 +267,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_MACROS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsMacros(Boolean containsMacros) {
     this.containsMacros = containsMacros;
   }
-
 
   public VirusScanAdvancedResult containsXmlExternalEntities(Boolean containsXmlExternalEntities) {
     
@@ -271,12 +279,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file contains embedded XML External Entity threats of other embedded threats within the document, which can be a significant risk factor
    * @return containsXmlExternalEntities
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file contains embedded XML External Entity threats of other embedded threats within the document, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_XML_EXTERNAL_ENTITIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -285,10 +292,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_XML_EXTERNAL_ENTITIES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsXmlExternalEntities(Boolean containsXmlExternalEntities) {
     this.containsXmlExternalEntities = containsXmlExternalEntities;
   }
-
 
   public VirusScanAdvancedResult containsInsecureDeserialization(Boolean containsInsecureDeserialization) {
     
@@ -296,12 +304,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file contains embedded Insecure Deserialization threats of other embedded threats within the document, which can be a significant risk factor
    * @return containsInsecureDeserialization
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file contains embedded Insecure Deserialization threats of other embedded threats within the document, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_INSECURE_DESERIALIZATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,10 +317,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_INSECURE_DESERIALIZATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsInsecureDeserialization(Boolean containsInsecureDeserialization) {
     this.containsInsecureDeserialization = containsInsecureDeserialization;
   }
-
 
   public VirusScanAdvancedResult containsHtml(Boolean containsHtml) {
     
@@ -321,12 +329,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * True if the uploaded file contains HTML, which can be a significant risk factor
    * @return containsHtml
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the uploaded file contains HTML, which can be a significant risk factor")
   @JsonProperty(JSON_PROPERTY_CONTAINS_HTML)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -335,10 +342,61 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINS_HTML)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainsHtml(Boolean containsHtml) {
     this.containsHtml = containsHtml;
   }
 
+  public VirusScanAdvancedResult containsUnsafeArchive(Boolean containsUnsafeArchive) {
+    
+    this.containsUnsafeArchive = containsUnsafeArchive;
+    return this;
+  }
+
+  /**
+   * True if the uploaded file contains unsafe archive (e.g. zip) content, such as a Zip Bomb, or other configurations of a zip file that could lead to an unsafe extraction
+   * @return containsUnsafeArchive
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_CONTAINS_UNSAFE_ARCHIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getContainsUnsafeArchive() {
+    return containsUnsafeArchive;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTAINS_UNSAFE_ARCHIVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContainsUnsafeArchive(Boolean containsUnsafeArchive) {
+    this.containsUnsafeArchive = containsUnsafeArchive;
+  }
+
+  public VirusScanAdvancedResult containsOleEmbeddedObject(Boolean containsOleEmbeddedObject) {
+    
+    this.containsOleEmbeddedObject = containsOleEmbeddedObject;
+    return this;
+  }
+
+  /**
+   * True if the uploaded file contains an OLE embedded object, which can be a significant risk factor
+   * @return containsOleEmbeddedObject
+   */
+  @javax.annotation.Nullable
+  @JsonProperty(JSON_PROPERTY_CONTAINS_OLE_EMBEDDED_OBJECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+
+  public Boolean getContainsOleEmbeddedObject() {
+    return containsOleEmbeddedObject;
+  }
+
+
+  @JsonProperty(JSON_PROPERTY_CONTAINS_OLE_EMBEDDED_OBJECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
+  public void setContainsOleEmbeddedObject(Boolean containsOleEmbeddedObject) {
+    this.containsOleEmbeddedObject = containsOleEmbeddedObject;
+  }
 
   public VirusScanAdvancedResult verifiedFileFormat(String verifiedFileFormat) {
     
@@ -346,12 +404,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * For file format verification-supported file formats, the contents-verified file format of the file.  Null indicates that the file format is not supported for contents verification.  If a Virus or Malware is found, this field will always be set to Null.
    * @return verifiedFileFormat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For file format verification-supported file formats, the contents-verified file format of the file.  Null indicates that the file format is not supported for contents verification.  If a Virus or Malware is found, this field will always be set to Null.")
   @JsonProperty(JSON_PROPERTY_VERIFIED_FILE_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -360,10 +417,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VERIFIED_FILE_FORMAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVerifiedFileFormat(String verifiedFileFormat) {
     this.verifiedFileFormat = verifiedFileFormat;
   }
-
 
   public VirusScanAdvancedResult foundViruses(List<VirusFound> foundViruses) {
     
@@ -373,18 +431,17 @@ public class VirusScanAdvancedResult {
 
   public VirusScanAdvancedResult addFoundVirusesItem(VirusFound foundVirusesItem) {
     if (this.foundViruses == null) {
-      this.foundViruses = new ArrayList<VirusFound>();
+      this.foundViruses = new ArrayList<>();
     }
     this.foundViruses.add(foundVirusesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of viruses found, if any
    * @return foundViruses
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of viruses found, if any")
   @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -393,10 +450,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFoundViruses(List<VirusFound> foundViruses) {
     this.foundViruses = foundViruses;
   }
-
 
   public VirusScanAdvancedResult contentInformation(AdditionalAdvancedScanInformation contentInformation) {
     
@@ -404,12 +462,11 @@ public class VirusScanAdvancedResult {
     return this;
   }
 
-   /**
+  /**
    * Get contentInformation
    * @return contentInformation
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_CONTENT_INFORMATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -418,10 +475,11 @@ public class VirusScanAdvancedResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT_INFORMATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContentInformation(AdditionalAdvancedScanInformation contentInformation) {
     this.contentInformation = contentInformation;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -442,6 +500,8 @@ public class VirusScanAdvancedResult {
         Objects.equals(this.containsXmlExternalEntities, virusScanAdvancedResult.containsXmlExternalEntities) &&
         Objects.equals(this.containsInsecureDeserialization, virusScanAdvancedResult.containsInsecureDeserialization) &&
         Objects.equals(this.containsHtml, virusScanAdvancedResult.containsHtml) &&
+        Objects.equals(this.containsUnsafeArchive, virusScanAdvancedResult.containsUnsafeArchive) &&
+        Objects.equals(this.containsOleEmbeddedObject, virusScanAdvancedResult.containsOleEmbeddedObject) &&
         Objects.equals(this.verifiedFileFormat, virusScanAdvancedResult.verifiedFileFormat) &&
         Objects.equals(this.foundViruses, virusScanAdvancedResult.foundViruses) &&
         Objects.equals(this.contentInformation, virusScanAdvancedResult.contentInformation);
@@ -449,9 +509,8 @@ public class VirusScanAdvancedResult {
 
   @Override
   public int hashCode() {
-    return Objects.hash(cleanResult, containsExecutable, containsInvalidFile, containsScript, containsPasswordProtectedFile, containsRestrictedFileFormat, containsMacros, containsXmlExternalEntities, containsInsecureDeserialization, containsHtml, verifiedFileFormat, foundViruses, contentInformation);
+    return Objects.hash(cleanResult, containsExecutable, containsInvalidFile, containsScript, containsPasswordProtectedFile, containsRestrictedFileFormat, containsMacros, containsXmlExternalEntities, containsInsecureDeserialization, containsHtml, containsUnsafeArchive, containsOleEmbeddedObject, verifiedFileFormat, foundViruses, contentInformation);
   }
-
 
   @Override
   public String toString() {
@@ -467,6 +526,8 @@ public class VirusScanAdvancedResult {
     sb.append("    containsXmlExternalEntities: ").append(toIndentedString(containsXmlExternalEntities)).append("\n");
     sb.append("    containsInsecureDeserialization: ").append(toIndentedString(containsInsecureDeserialization)).append("\n");
     sb.append("    containsHtml: ").append(toIndentedString(containsHtml)).append("\n");
+    sb.append("    containsUnsafeArchive: ").append(toIndentedString(containsUnsafeArchive)).append("\n");
+    sb.append("    containsOleEmbeddedObject: ").append(toIndentedString(containsOleEmbeddedObject)).append("\n");
     sb.append("    verifiedFileFormat: ").append(toIndentedString(verifiedFileFormat)).append("\n");
     sb.append("    foundViruses: ").append(toIndentedString(foundViruses)).append("\n");
     sb.append("    contentInformation: ").append(toIndentedString(contentInformation)).append("\n");

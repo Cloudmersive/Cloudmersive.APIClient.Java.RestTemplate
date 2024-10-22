@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of converting an entire document to an array of PNG thumbnails
  */
-@ApiModel(description = "Result of converting an entire document to an array of PNG thumbnails")
 @JsonPropertyOrder({
   AutodetectToThumbnailsResult.JSON_PROPERTY_SUCCESSFUL,
   AutodetectToThumbnailsResult.JSON_PROPERTY_THUMBNAIL_PAGES
 })
-@JsonTypeName("AutodetectToThumbnailsResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AutodetectToThumbnailsResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_THUMBNAIL_PAGES = "ThumbnailPages";
-  private List<Thumbnail> thumbnailPages = null;
+  private List<Thumbnail> thumbnailPages = new ArrayList<>();
 
+  public AutodetectToThumbnailsResult() {
+  }
 
   public AutodetectToThumbnailsResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class AutodetectToThumbnailsResult {
     return this;
   }
 
-   /**
+  /**
    * Index of this thumbnail
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of this thumbnail")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class AutodetectToThumbnailsResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public AutodetectToThumbnailsResult thumbnailPages(List<Thumbnail> thumbnailPages) {
     
@@ -78,18 +78,17 @@ public class AutodetectToThumbnailsResult {
 
   public AutodetectToThumbnailsResult addThumbnailPagesItem(Thumbnail thumbnailPagesItem) {
     if (this.thumbnailPages == null) {
-      this.thumbnailPages = new ArrayList<Thumbnail>();
+      this.thumbnailPages = new ArrayList<>();
     }
     this.thumbnailPages.add(thumbnailPagesItem);
     return this;
   }
 
-   /**
+  /**
    * A PNG thumbnail of the document page
    * @return thumbnailPages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "A PNG thumbnail of the document page")
   @JsonProperty(JSON_PROPERTY_THUMBNAIL_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class AutodetectToThumbnailsResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_THUMBNAIL_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setThumbnailPages(List<Thumbnail> thumbnailPages) {
     this.thumbnailPages = thumbnailPages;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class AutodetectToThumbnailsResult {
   public int hashCode() {
     return Objects.hash(successful, thumbnailPages);
   }
-
 
   @Override
   public String toString() {

@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of an image to words-with-location OCR operation
  */
-@ApiModel(description = "Result of an image to words-with-location OCR operation")
 @JsonPropertyOrder({
   ImageToWordsWithLocationResult.JSON_PROPERTY_SUCCESSFUL,
   ImageToWordsWithLocationResult.JSON_PROPERTY_WORDS
 })
-@JsonTypeName("ImageToWordsWithLocationResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageToWordsWithLocationResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_WORDS = "Words";
-  private List<OcrWordElement> words = null;
+  private List<OcrWordElement> words = new ArrayList<>();
 
+  public ImageToWordsWithLocationResult() {
+  }
 
   public ImageToWordsWithLocationResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class ImageToWordsWithLocationResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class ImageToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ImageToWordsWithLocationResult words(List<OcrWordElement> words) {
     
@@ -78,18 +78,17 @@ public class ImageToWordsWithLocationResult {
 
   public ImageToWordsWithLocationResult addWordsItem(OcrWordElement wordsItem) {
     if (this.words == null) {
-      this.words = new ArrayList<OcrWordElement>();
+      this.words = new ArrayList<>();
     }
     this.words.add(wordsItem);
     return this;
   }
 
-   /**
+  /**
    * Word elements in the image
    * @return words
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word elements in the image")
   @JsonProperty(JSON_PROPERTY_WORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class ImageToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWords(List<OcrWordElement> words) {
     this.words = words;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class ImageToWordsWithLocationResult {
   public int hashCode() {
     return Objects.hash(successful, words);
   }
-
 
   @Override
   public String toString() {

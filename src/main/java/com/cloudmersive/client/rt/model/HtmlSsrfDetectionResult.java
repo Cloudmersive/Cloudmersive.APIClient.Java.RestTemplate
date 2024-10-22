@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an XXE threat detection operation
  */
-@ApiModel(description = "Result of performing an XXE threat detection operation")
 @JsonPropertyOrder({
   HtmlSsrfDetectionResult.JSON_PROPERTY_SUCCESSFUL,
   HtmlSsrfDetectionResult.JSON_PROPERTY_CONTAINED_THREATS
 })
-@JsonTypeName("HtmlSsrfDetectionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlSsrfDetectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class HtmlSsrfDetectionResult {
   public static final String JSON_PROPERTY_CONTAINED_THREATS = "ContainedThreats";
   private Boolean containedThreats;
 
+  public HtmlSsrfDetectionResult() {
+  }
 
   public HtmlSsrfDetectionResult successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class HtmlSsrfDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class HtmlSsrfDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public HtmlSsrfDetectionResult containedThreats(Boolean containedThreats) {
     
@@ -73,12 +72,11 @@ public class HtmlSsrfDetectionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the input contained SSRF threats, false otherwise
    * @return containedThreats
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input contained SSRF threats, false otherwise")
   @JsonProperty(JSON_PROPERTY_CONTAINED_THREATS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class HtmlSsrfDetectionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTAINED_THREATS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContainedThreats(Boolean containedThreats) {
     this.containedThreats = containedThreats;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class HtmlSsrfDetectionResult {
   public int hashCode() {
     return Objects.hash(successful, containedThreats);
   }
-
 
   @Override
   public String toString() {

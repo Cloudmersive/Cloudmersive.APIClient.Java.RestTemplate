@@ -20,24 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SetXlsxCellRequest
  */
-public class SetXlsxCellRequestTest {
+class SetXlsxCellRequestTest {
     private final SetXlsxCellRequest model = new SetXlsxCellRequest();
 
     /**
      * Model tests for SetXlsxCellRequest
      */
     @Test
-    public void testSetXlsxCellRequest() {
+    void testSetXlsxCellRequest() {
         // TODO: test SetXlsxCellRequest
     }
 
@@ -45,7 +42,7 @@ public class SetXlsxCellRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -53,7 +50,7 @@ public class SetXlsxCellRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -61,7 +58,7 @@ public class SetXlsxCellRequestTest {
      * Test the property 'worksheetToUpdate'
      */
     @Test
-    public void worksheetToUpdateTest() {
+    void worksheetToUpdateTest() {
         // TODO: test worksheetToUpdate
     }
 
@@ -69,7 +66,7 @@ public class SetXlsxCellRequestTest {
      * Test the property 'rowIndex'
      */
     @Test
-    public void rowIndexTest() {
+    void rowIndexTest() {
         // TODO: test rowIndex
     }
 
@@ -77,7 +74,7 @@ public class SetXlsxCellRequestTest {
      * Test the property 'cellIndex'
      */
     @Test
-    public void cellIndexTest() {
+    void cellIndexTest() {
         // TODO: test cellIndex
     }
 
@@ -85,7 +82,7 @@ public class SetXlsxCellRequestTest {
      * Test the property 'cellValue'
      */
     @Test
-    public void cellValueTest() {
+    void cellValueTest() {
         // TODO: test cellValue
     }
 

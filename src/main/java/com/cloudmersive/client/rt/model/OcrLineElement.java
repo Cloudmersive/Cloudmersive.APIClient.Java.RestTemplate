@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A contiguous line of text in an OCR document
  */
-@ApiModel(description = "A contiguous line of text in an OCR document")
 @JsonPropertyOrder({
   OcrLineElement.JSON_PROPERTY_LINE_TEXT,
   OcrLineElement.JSON_PROPERTY_WORDS
 })
-@JsonTypeName("OcrLineElement")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class OcrLineElement {
   public static final String JSON_PROPERTY_LINE_TEXT = "LineText";
   private String lineText;
 
   public static final String JSON_PROPERTY_WORDS = "Words";
-  private List<OcrWordElement> words = null;
+  private List<OcrWordElement> words = new ArrayList<>();
 
+  public OcrLineElement() {
+  }
 
   public OcrLineElement lineText(String lineText) {
     
@@ -51,12 +51,11 @@ public class OcrLineElement {
     return this;
   }
 
-   /**
+  /**
    * Text of the line
    * @return lineText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text of the line")
   @JsonProperty(JSON_PROPERTY_LINE_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class OcrLineElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LINE_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLineText(String lineText) {
     this.lineText = lineText;
   }
-
 
   public OcrLineElement words(List<OcrWordElement> words) {
     
@@ -78,18 +78,17 @@ public class OcrLineElement {
 
   public OcrLineElement addWordsItem(OcrWordElement wordsItem) {
     if (this.words == null) {
-      this.words = new ArrayList<OcrWordElement>();
+      this.words = new ArrayList<>();
     }
     this.words.add(wordsItem);
     return this;
   }
 
-   /**
+  /**
    * Word objects in the line
    * @return words
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word objects in the line")
   @JsonProperty(JSON_PROPERTY_WORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class OcrLineElement {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWords(List<OcrWordElement> words) {
     this.words = words;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class OcrLineElement {
   public int hashCode() {
     return Objects.hash(lineText, words);
   }
-
 
   @Override
   public String toString() {

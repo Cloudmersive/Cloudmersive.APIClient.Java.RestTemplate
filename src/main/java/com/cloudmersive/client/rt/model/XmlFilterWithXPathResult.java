@@ -20,33 +20,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a filter operation on XML input using XPath
  */
-@ApiModel(description = "Result of performing a filter operation on XML input using XPath")
 @JsonPropertyOrder({
   XmlFilterWithXPathResult.JSON_PROPERTY_SUCCESSFUL,
   XmlFilterWithXPathResult.JSON_PROPERTY_XML_NODES,
   XmlFilterWithXPathResult.JSON_PROPERTY_RESULT_COUNT
 })
-@JsonTypeName("XmlFilterWithXPathResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XmlFilterWithXPathResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_XML_NODES = "XmlNodes";
-  private List<String> xmlNodes = null;
+  private List<String> xmlNodes = new ArrayList<>();
 
   public static final String JSON_PROPERTY_RESULT_COUNT = "ResultCount";
   private Integer resultCount;
 
+  public XmlFilterWithXPathResult() {
+  }
 
   public XmlFilterWithXPathResult successful(Boolean successful) {
     
@@ -54,12 +54,11 @@ public class XmlFilterWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -68,10 +67,11 @@ public class XmlFilterWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public XmlFilterWithXPathResult xmlNodes(List<String> xmlNodes) {
     
@@ -81,18 +81,17 @@ public class XmlFilterWithXPathResult {
 
   public XmlFilterWithXPathResult addXmlNodesItem(String xmlNodesItem) {
     if (this.xmlNodes == null) {
-      this.xmlNodes = new ArrayList<String>();
+      this.xmlNodes = new ArrayList<>();
     }
     this.xmlNodes.add(xmlNodesItem);
     return this;
   }
 
-   /**
+  /**
    * Matching selected XML nodes as strings
    * @return xmlNodes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Matching selected XML nodes as strings")
   @JsonProperty(JSON_PROPERTY_XML_NODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -101,10 +100,11 @@ public class XmlFilterWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_XML_NODES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXmlNodes(List<String> xmlNodes) {
     this.xmlNodes = xmlNodes;
   }
-
 
   public XmlFilterWithXPathResult resultCount(Integer resultCount) {
     
@@ -112,12 +112,11 @@ public class XmlFilterWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * Count of the matching results
    * @return resultCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of the matching results")
   @JsonProperty(JSON_PROPERTY_RESULT_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,10 +125,11 @@ public class XmlFilterWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultCount(Integer resultCount) {
     this.resultCount = resultCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -149,7 +149,6 @@ public class XmlFilterWithXPathResult {
   public int hashCode() {
     return Objects.hash(successful, xmlNodes, resultCount);
   }
-
 
   @Override
   public String toString() {

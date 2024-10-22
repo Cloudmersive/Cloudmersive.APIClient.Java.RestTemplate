@@ -3,12 +3,13 @@
 # DocxTableTableFillTableCell
 
 Cell data to fill in to the DOCX Table
+
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**targetTag** | **String** | Target tag to replace |  [optional]
-**replacementValue** | **String** | Replacement value for the target tag |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**targetTag** | **String** | Target tag to replace |  [optional] |
+|**replacementValue** | **String** | Replacement value for the target tag |  [optional] |
 
 
 

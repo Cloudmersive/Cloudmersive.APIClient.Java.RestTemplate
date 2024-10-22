@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ReplaceStringRequest
  */
-public class ReplaceStringRequestTest {
+class ReplaceStringRequestTest {
     private final ReplaceStringRequest model = new ReplaceStringRequest();
 
     /**
      * Model tests for ReplaceStringRequest
      */
     @Test
-    public void testReplaceStringRequest() {
+    void testReplaceStringRequest() {
         // TODO: test ReplaceStringRequest
     }
 
@@ -43,7 +40,7 @@ public class ReplaceStringRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -51,7 +48,7 @@ public class ReplaceStringRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -59,7 +56,7 @@ public class ReplaceStringRequestTest {
      * Test the property 'matchString'
      */
     @Test
-    public void matchStringTest() {
+    void matchStringTest() {
         // TODO: test matchString
     }
 
@@ -67,7 +64,7 @@ public class ReplaceStringRequestTest {
      * Test the property 'replaceString'
      */
     @Test
-    public void replaceStringTest() {
+    void replaceStringTest() {
         // TODO: test replaceString
     }
 
@@ -75,7 +72,7 @@ public class ReplaceStringRequestTest {
      * Test the property 'matchCase'
      */
     @Test
-    public void matchCaseTest() {
+    void matchCaseTest() {
         // TODO: test matchCase
     }
 

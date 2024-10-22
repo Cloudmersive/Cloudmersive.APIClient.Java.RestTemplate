@@ -2,9 +2,9 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**parseParseString**](ParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**parseParseString**](ParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree |
 
 
 
@@ -57,9 +57,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **input** | [**ParseRequest**](ParseRequest.md)| Input string |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **input** | [**ParseRequest**](ParseRequest.md)| Input string | |
 
 ### Return type
 
@@ -73,6 +73,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

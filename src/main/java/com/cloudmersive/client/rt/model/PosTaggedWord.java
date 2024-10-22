@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Word tagged in a POS tag
  */
-@ApiModel(description = "Word tagged in a POS tag")
 @JsonPropertyOrder({
   PosTaggedWord.JSON_PROPERTY_WORD,
   PosTaggedWord.JSON_PROPERTY_TAG
 })
-@JsonTypeName("PosTaggedWord")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PosTaggedWord {
   public static final String JSON_PROPERTY_WORD = "Word";
   private Object word;
@@ -41,6 +38,8 @@ public class PosTaggedWord {
   public static final String JSON_PROPERTY_TAG = "Tag";
   private Object tag;
 
+  public PosTaggedWord() {
+  }
 
   public PosTaggedWord word(Object word) {
     
@@ -48,12 +47,11 @@ public class PosTaggedWord {
     return this;
   }
 
-   /**
+  /**
    * Word that was tagged
    * @return word
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Word that was tagged")
   @JsonProperty(JSON_PROPERTY_WORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class PosTaggedWord {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWord(Object word) {
     this.word = word;
   }
-
 
   public PosTaggedWord tag(Object tag) {
     
@@ -73,12 +72,11 @@ public class PosTaggedWord {
     return this;
   }
 
-   /**
+  /**
    * Penn Treebank tag applied to the word
    * @return tag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Penn Treebank tag applied to the word")
   @JsonProperty(JSON_PROPERTY_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class PosTaggedWord {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTag(Object tag) {
     this.tag = tag;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class PosTaggedWord {
   public int hashCode() {
     return Objects.hash(word, tag);
   }
-
 
   @Override
   public String toString() {

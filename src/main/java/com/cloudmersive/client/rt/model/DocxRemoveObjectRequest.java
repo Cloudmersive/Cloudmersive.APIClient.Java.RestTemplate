@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Insert Paragraph request
  */
-@ApiModel(description = "Input to a Insert Paragraph request")
 @JsonPropertyOrder({
   DocxRemoveObjectRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   DocxRemoveObjectRequest.JSON_PROPERTY_INPUT_FILE_URL,
   DocxRemoveObjectRequest.JSON_PROPERTY_PATH_TO_OBJECT_TO_REMOVE
 })
-@JsonTypeName("DocxRemoveObjectRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxRemoveObjectRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -45,6 +42,8 @@ public class DocxRemoveObjectRequest {
   public static final String JSON_PROPERTY_PATH_TO_OBJECT_TO_REMOVE = "PathToObjectToRemove";
   private String pathToObjectToRemove;
 
+  public DocxRemoveObjectRequest() {
+  }
 
   public DocxRemoveObjectRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -52,12 +51,11 @@ public class DocxRemoveObjectRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class DocxRemoveObjectRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public DocxRemoveObjectRequest inputFileUrl(String inputFileUrl) {
     
@@ -77,12 +76,11 @@ public class DocxRemoveObjectRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class DocxRemoveObjectRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public DocxRemoveObjectRequest pathToObjectToRemove(String pathToObjectToRemove) {
     
@@ -102,12 +101,11 @@ public class DocxRemoveObjectRequest {
     return this;
   }
 
-   /**
+  /**
    * Path within the document of the object to delete; fill in the PathToObjectToRemove field using the Path value from an existing object.
    * @return pathToObjectToRemove
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Path within the document of the object to delete; fill in the PathToObjectToRemove field using the Path value from an existing object.")
   @JsonProperty(JSON_PROPERTY_PATH_TO_OBJECT_TO_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class DocxRemoveObjectRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH_TO_OBJECT_TO_REMOVE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPathToObjectToRemove(String pathToObjectToRemove) {
     this.pathToObjectToRemove = pathToObjectToRemove;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class DocxRemoveObjectRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, pathToObjectToRemove);
   }
-
 
   @Override
   public String toString() {

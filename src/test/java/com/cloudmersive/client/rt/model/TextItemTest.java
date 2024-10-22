@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for TextItem
  */
-public class TextItemTest {
+class TextItemTest {
     private final TextItem model = new TextItem();
 
     /**
      * Model tests for TextItem
      */
     @Test
-    public void testTextItem() {
+    void testTextItem() {
         // TODO: test TextItem
     }
 
@@ -43,7 +40,7 @@ public class TextItemTest {
      * Test the property 'leftX'
      */
     @Test
-    public void leftXTest() {
+    void leftXTest() {
         // TODO: test leftX
     }
 
@@ -51,7 +48,7 @@ public class TextItemTest {
      * Test the property 'topY'
      */
     @Test
-    public void topYTest() {
+    void topYTest() {
         // TODO: test topY
     }
 
@@ -59,7 +56,7 @@ public class TextItemTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -67,7 +64,7 @@ public class TextItemTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 

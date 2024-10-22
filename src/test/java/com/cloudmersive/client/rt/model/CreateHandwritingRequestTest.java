@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CreateHandwritingRequest
  */
-public class CreateHandwritingRequestTest {
+class CreateHandwritingRequestTest {
     private final CreateHandwritingRequest model = new CreateHandwritingRequest();
 
     /**
      * Model tests for CreateHandwritingRequest
      */
     @Test
-    public void testCreateHandwritingRequest() {
+    void testCreateHandwritingRequest() {
         // TODO: test CreateHandwritingRequest
     }
 
@@ -43,7 +40,7 @@ public class CreateHandwritingRequestTest {
      * Test the property 'textInput'
      */
     @Test
-    public void textInputTest() {
+    void textInputTest() {
         // TODO: test textInput
     }
 
@@ -51,7 +48,7 @@ public class CreateHandwritingRequestTest {
      * Test the property 'targetWidth'
      */
     @Test
-    public void targetWidthTest() {
+    void targetWidthTest() {
         // TODO: test targetWidth
     }
 
@@ -59,7 +56,7 @@ public class CreateHandwritingRequestTest {
      * Test the property 'strokeWidth'
      */
     @Test
-    public void strokeWidthTest() {
+    void strokeWidthTest() {
         // TODO: test strokeWidth
     }
 
@@ -67,7 +64,7 @@ public class CreateHandwritingRequestTest {
      * Test the property 'color'
      */
     @Test
-    public void colorTest() {
+    void colorTest() {
         // TODO: test color
     }
 

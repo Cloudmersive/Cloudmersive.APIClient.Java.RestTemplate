@@ -21,25 +21,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing an enumerate currencies operation
  */
-@ApiModel(description = "Result of performing an enumerate currencies operation")
 @JsonPropertyOrder({
   AvailableCurrencyResponse.JSON_PROPERTY_CURRENCIES
 })
-@JsonTypeName("AvailableCurrencyResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:08.451112300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AvailableCurrencyResponse {
   public static final String JSON_PROPERTY_CURRENCIES = "Currencies";
-  private List<AvailableCurrency> currencies = null;
+  private List<AvailableCurrency> currencies = new ArrayList<>();
 
+  public AvailableCurrencyResponse() {
+  }
 
   public AvailableCurrencyResponse currencies(List<AvailableCurrency> currencies) {
     
@@ -49,18 +49,17 @@ public class AvailableCurrencyResponse {
 
   public AvailableCurrencyResponse addCurrenciesItem(AvailableCurrency currenciesItem) {
     if (this.currencies == null) {
-      this.currencies = new ArrayList<AvailableCurrency>();
+      this.currencies = new ArrayList<>();
     }
     this.currencies.add(currenciesItem);
     return this;
   }
 
-   /**
+  /**
    * List of available currencies from the API
    * @return currencies
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of available currencies from the API")
   @JsonProperty(JSON_PROPERTY_CURRENCIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class AvailableCurrencyResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCIES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencies(List<AvailableCurrency> currencies) {
     this.currencies = currencies;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -90,7 +90,6 @@ public class AvailableCurrencyResponse {
   public int hashCode() {
     return Objects.hash(currencies);
   }
-
 
   @Override
   public String toString() {

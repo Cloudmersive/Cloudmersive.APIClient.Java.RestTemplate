@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to update data in a table in a Word DOCX Document
  */
-@ApiModel(description = "Request to update data in a table in a Word DOCX Document")
 @JsonPropertyOrder({
   DocxTableTableFillRequest.JSON_PROPERTY_INPUT_FILE_URL,
   DocxTableTableFillRequest.JSON_PROPERTY_INPUT_FILE_DATA,
@@ -38,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxTableTableFillRequest.JSON_PROPERTY_TABLE_END_TAG,
   DocxTableTableFillRequest.JSON_PROPERTY_DATA_TO_FILL_IN
 })
-@JsonTypeName("DocxTableTableFillRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableTableFillRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_URL = "InputFileUrl";
   private String inputFileUrl;
@@ -54,8 +52,10 @@ public class DocxTableTableFillRequest {
   private String tableEndTag;
 
   public static final String JSON_PROPERTY_DATA_TO_FILL_IN = "DataToFillIn";
-  private List<DocxTableTableFillTableRow> dataToFillIn = null;
+  private List<DocxTableTableFillTableRow> dataToFillIn = new ArrayList<>();
 
+  public DocxTableTableFillRequest() {
+  }
 
   public DocxTableTableFillRequest inputFileUrl(String inputFileUrl) {
     
@@ -63,12 +63,11 @@ public class DocxTableTableFillRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; Input URL of the document; use BeginEditing to create this
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; Input URL of the document; use BeginEditing to create this")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,10 +76,11 @@ public class DocxTableTableFillRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public DocxTableTableFillRequest inputFileData(byte[] inputFileData) {
     
@@ -88,12 +88,11 @@ public class DocxTableTableFillRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; Input Word Document file content for the operation
    * @return inputFileData
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; Input Word Document file content for the operation")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_DATA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class DocxTableTableFillRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_DATA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileData(byte[] inputFileData) {
     this.inputFileData = inputFileData;
   }
-
 
   public DocxTableTableFillRequest tableStartTag(String tableStartTag) {
     
@@ -113,12 +113,11 @@ public class DocxTableTableFillRequest {
     return this;
   }
 
-   /**
+  /**
    * Start tag that delineates the beginning of the table
    * @return tableStartTag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Start tag that delineates the beginning of the table")
   @JsonProperty(JSON_PROPERTY_TABLE_START_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class DocxTableTableFillRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_START_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableStartTag(String tableStartTag) {
     this.tableStartTag = tableStartTag;
   }
-
 
   public DocxTableTableFillRequest tableEndTag(String tableEndTag) {
     
@@ -138,12 +138,11 @@ public class DocxTableTableFillRequest {
     return this;
   }
 
-   /**
+  /**
    * End tag that delineates the end of the table
    * @return tableEndTag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "End tag that delineates the end of the table")
   @JsonProperty(JSON_PROPERTY_TABLE_END_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -152,10 +151,11 @@ public class DocxTableTableFillRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_END_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableEndTag(String tableEndTag) {
     this.tableEndTag = tableEndTag;
   }
-
 
   public DocxTableTableFillRequest dataToFillIn(List<DocxTableTableFillTableRow> dataToFillIn) {
     
@@ -165,18 +165,17 @@ public class DocxTableTableFillRequest {
 
   public DocxTableTableFillRequest addDataToFillInItem(DocxTableTableFillTableRow dataToFillInItem) {
     if (this.dataToFillIn == null) {
-      this.dataToFillIn = new ArrayList<DocxTableTableFillTableRow>();
+      this.dataToFillIn = new ArrayList<>();
     }
     this.dataToFillIn.add(dataToFillInItem);
     return this;
   }
 
-   /**
+  /**
    * Data set to populate the table with
    * @return dataToFillIn
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Data set to populate the table with")
   @JsonProperty(JSON_PROPERTY_DATA_TO_FILL_IN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +184,11 @@ public class DocxTableTableFillRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_TO_FILL_IN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDataToFillIn(List<DocxTableTableFillTableRow> dataToFillIn) {
     this.dataToFillIn = dataToFillIn;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -210,7 +210,6 @@ public class DocxTableTableFillRequest {
   public int hashCode() {
     return Objects.hash(inputFileUrl, Arrays.hashCode(inputFileData), tableStartTag, tableEndTag, dataToFillIn);
   }
-
 
   @Override
   public String toString() {

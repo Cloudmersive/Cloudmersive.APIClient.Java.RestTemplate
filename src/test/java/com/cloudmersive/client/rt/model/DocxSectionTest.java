@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxSection
  */
-public class DocxSectionTest {
+class DocxSectionTest {
     private final DocxSection model = new DocxSection();
 
     /**
      * Model tests for DocxSection
      */
     @Test
-    public void testDocxSection() {
+    void testDocxSection() {
         // TODO: test DocxSection
     }
 
@@ -45,7 +43,7 @@ public class DocxSectionTest {
      * Test the property 'startingPageNumbers'
      */
     @Test
-    public void startingPageNumbersTest() {
+    void startingPageNumbersTest() {
         // TODO: test startingPageNumbers
     }
 
@@ -53,7 +51,7 @@ public class DocxSectionTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 

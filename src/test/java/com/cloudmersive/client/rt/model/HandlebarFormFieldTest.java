@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HandlebarFormField
  */
-public class HandlebarFormFieldTest {
+class HandlebarFormFieldTest {
     private final HandlebarFormField model = new HandlebarFormField();
 
     /**
      * Model tests for HandlebarFormField
      */
     @Test
-    public void testHandlebarFormField() {
+    void testHandlebarFormField() {
         // TODO: test HandlebarFormField
     }
 
@@ -43,7 +40,7 @@ public class HandlebarFormFieldTest {
      * Test the property 'formFieldTitle'
      */
     @Test
-    public void formFieldTitleTest() {
+    void formFieldTitleTest() {
         // TODO: test formFieldTitle
     }
 

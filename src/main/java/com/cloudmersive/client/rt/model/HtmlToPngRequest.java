@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Details of the HTML to PNG request
  */
-@ApiModel(description = "Details of the HTML to PNG request")
 @JsonPropertyOrder({
   HtmlToPngRequest.JSON_PROPERTY_HTML,
   HtmlToPngRequest.JSON_PROPERTY_EXTRA_LOADING_WAIT,
   HtmlToPngRequest.JSON_PROPERTY_SCREENSHOT_WIDTH,
   HtmlToPngRequest.JSON_PROPERTY_SCREENSHOT_HEIGHT
 })
-@JsonTypeName("HtmlToPngRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlToPngRequest {
   public static final String JSON_PROPERTY_HTML = "Html";
   private String html;
@@ -49,6 +46,8 @@ public class HtmlToPngRequest {
   public static final String JSON_PROPERTY_SCREENSHOT_HEIGHT = "ScreenshotHeight";
   private Integer screenshotHeight;
 
+  public HtmlToPngRequest() {
+  }
 
   public HtmlToPngRequest html(String html) {
     
@@ -56,12 +55,11 @@ public class HtmlToPngRequest {
     return this;
   }
 
-   /**
+  /**
    * HTML to render to PNG (screenshot)
    * @return html
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML to render to PNG (screenshot)")
   @JsonProperty(JSON_PROPERTY_HTML)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class HtmlToPngRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTML)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHtml(String html) {
     this.html = html;
   }
-
 
   public HtmlToPngRequest extraLoadingWait(Integer extraLoadingWait) {
     
@@ -81,12 +80,11 @@ public class HtmlToPngRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds).
    * @return extraLoadingWait
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds).")
   @JsonProperty(JSON_PROPERTY_EXTRA_LOADING_WAIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class HtmlToPngRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXTRA_LOADING_WAIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExtraLoadingWait(Integer extraLoadingWait) {
     this.extraLoadingWait = extraLoadingWait;
   }
-
 
   public HtmlToPngRequest screenshotWidth(Integer screenshotWidth) {
     
@@ -106,12 +105,11 @@ public class HtmlToPngRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Width of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot
    * @return screenshotWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Width of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot")
   @JsonProperty(JSON_PROPERTY_SCREENSHOT_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class HtmlToPngRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCREENSHOT_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setScreenshotWidth(Integer screenshotWidth) {
     this.screenshotWidth = screenshotWidth;
   }
-
 
   public HtmlToPngRequest screenshotHeight(Integer screenshotHeight) {
     
@@ -131,12 +130,11 @@ public class HtmlToPngRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Height of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot
    * @return screenshotHeight
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Height of the screenshot in pixels; supply 0 to default to 1280 x 1024, supply -1 to measure the full screen height of the page and attempt to take a screen-height screenshot")
   @JsonProperty(JSON_PROPERTY_SCREENSHOT_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class HtmlToPngRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCREENSHOT_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setScreenshotHeight(Integer screenshotHeight) {
     this.screenshotHeight = screenshotHeight;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class HtmlToPngRequest {
   public int hashCode() {
     return Objects.hash(html, extraLoadingWait, screenshotWidth, screenshotHeight);
   }
-
 
   @Override
   public String toString() {

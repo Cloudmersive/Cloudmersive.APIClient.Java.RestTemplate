@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpGetParameter
  */
-public class HttpGetParameterTest {
+class HttpGetParameterTest {
     private final HttpGetParameter model = new HttpGetParameter();
 
     /**
      * Model tests for HttpGetParameter
      */
     @Test
-    public void testHttpGetParameter() {
+    void testHttpGetParameter() {
         // TODO: test HttpGetParameter
     }
 
@@ -44,7 +41,7 @@ public class HttpGetParameterTest {
      * Test the property 'parameterName'
      */
     @Test
-    public void parameterNameTest() {
+    void parameterNameTest() {
         // TODO: test parameterName
     }
 
@@ -52,7 +49,7 @@ public class HttpGetParameterTest {
      * Test the property 'parameterValue'
      */
     @Test
-    public void parameterValueTest() {
+    void parameterValueTest() {
         // TODO: test parameterValue
     }
 
@@ -60,7 +57,7 @@ public class HttpGetParameterTest {
      * Test the property 'useOutputFromPreviousTask'
      */
     @Test
-    public void useOutputFromPreviousTaskTest() {
+    void useOutputFromPreviousTaskTest() {
         // TODO: test useOutputFromPreviousTask
     }
 

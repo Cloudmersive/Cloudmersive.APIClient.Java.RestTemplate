@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a barcode lookup
  */
-@ApiModel(description = "Result of performing a barcode lookup")
 @JsonPropertyOrder({
   BarcodeLookupResponse.JSON_PROPERTY_SUCCESSFUL,
   BarcodeLookupResponse.JSON_PROPERTY_MATCHES
 })
-@JsonTypeName("BarcodeLookupResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:34.231-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:12.746969900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BarcodeLookupResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_MATCHES = "Matches";
-  private List<ProductMatch> matches = null;
+  private List<ProductMatch> matches = new ArrayList<>();
 
+  public BarcodeLookupResponse() {
+  }
 
   public BarcodeLookupResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class BarcodeLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * True if operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class BarcodeLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public BarcodeLookupResponse matches(List<ProductMatch> matches) {
     
@@ -78,18 +78,17 @@ public class BarcodeLookupResponse {
 
   public BarcodeLookupResponse addMatchesItem(ProductMatch matchesItem) {
     if (this.matches == null) {
-      this.matches = new ArrayList<ProductMatch>();
+      this.matches = new ArrayList<>();
     }
     this.matches.add(matchesItem);
     return this;
   }
 
-   /**
+  /**
    * Resulting product matches for the input barcode
    * @return matches
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Resulting product matches for the input barcode")
   @JsonProperty(JSON_PROPERTY_MATCHES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class BarcodeLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MATCHES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMatches(List<ProductMatch> matches) {
     this.matches = matches;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class BarcodeLookupResponse {
   public int hashCode() {
     return Objects.hash(successful, matches);
   }
-
 
   @Override
   public String toString() {

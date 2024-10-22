@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XxeDetectionRequestItem
  */
-public class XxeDetectionRequestItemTest {
+class XxeDetectionRequestItemTest {
     private final XxeDetectionRequestItem model = new XxeDetectionRequestItem();
 
     /**
      * Model tests for XxeDetectionRequestItem
      */
     @Test
-    public void testXxeDetectionRequestItem() {
+    void testXxeDetectionRequestItem() {
         // TODO: test XxeDetectionRequestItem
     }
 
@@ -45,7 +43,7 @@ public class XxeDetectionRequestItemTest {
      * Test the property 'inputText'
      */
     @Test
-    public void inputTextTest() {
+    void inputTextTest() {
         // TODO: test inputText
     }
 
@@ -53,7 +51,7 @@ public class XxeDetectionRequestItemTest {
      * Test the property 'allowInternetUrls'
      */
     @Test
-    public void allowInternetUrlsTest() {
+    void allowInternetUrlsTest() {
         // TODO: test allowInternetUrls
     }
 
@@ -61,7 +59,7 @@ public class XxeDetectionRequestItemTest {
      * Test the property 'knownSafeUrls'
      */
     @Test
-    public void knownSafeUrlsTest() {
+    void knownSafeUrlsTest() {
         // TODO: test knownSafeUrls
     }
 
@@ -69,7 +67,7 @@ public class XxeDetectionRequestItemTest {
      * Test the property 'knownUnsafeUrls'
      */
     @Test
-    public void knownUnsafeUrlsTest() {
+    void knownUnsafeUrlsTest() {
         // TODO: test knownUnsafeUrls
     }
 

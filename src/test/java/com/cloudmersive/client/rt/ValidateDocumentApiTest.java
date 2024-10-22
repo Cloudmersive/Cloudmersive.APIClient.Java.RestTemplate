@@ -18,9 +18,12 @@ import com.cloudmersive.client.rt.model.DocumentValidationResult;
 import java.io.File;
 import com.cloudmersive.client.rt.model.HtmlSsrfThreatCheckResult;
 import com.cloudmersive.client.rt.model.XxeThreatDetectionResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,8 +32,8 @@ import java.util.Map;
 /**
  * API tests for ValidateDocumentApi
  */
-@Ignore
-public class ValidateDocumentApiTest {
+@Disabled
+class ValidateDocumentApiTest {
 
     private final ValidateDocumentApi api = new ValidateDocumentApi();
 
@@ -40,12 +43,13 @@ public class ValidateDocumentApiTest {
      *
      * Automatically detect the type of content, verify and validate that the content is indeed fully valid at depth, and then report the validation result.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentAutodetectValidationTest() {
+    void validateDocumentAutodetectValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         AutodetectDocumentValidationResult response = api.validateDocumentAutodetectValidation(inputFile);
 
         // TODO: test validations
@@ -56,12 +60,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a CSV file document (CSV); if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentCsvValidationTest() {
+    void validateDocumentCsvValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentCsvValidation(inputFile);
 
         // TODO: test validations
@@ -72,13 +77,32 @@ public class ValidateDocumentApiTest {
      *
      * Validate a Word 97-2003 Legacy document (DOC)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentDocValidationTest() {
+    void validateDocumentDocValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentDocValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Repair a Word document (DOCX) that contains errors
+     *
+     * Repair a Word document (DOCX) that contains errors or corruption, if possible.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void validateDocumentDocxRepairTest() {
+        org.springframework.core.io.Resource inputFile = null;
+        String repairMode = null;
+
+        byte[] response = api.validateDocumentDocxRepair(inputFile, repairMode);
 
         // TODO: test validations
     }
@@ -88,28 +112,30 @@ public class ValidateDocumentApiTest {
      *
      * Validate a Word document (DOCX); if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentDocxValidationTest() {
+    void validateDocumentDocxValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentDocxValidation(inputFile);
 
         // TODO: test validations
     }
     
     /**
-     * Validate if an EML file is executable
+     * Validate if input file is a valid EML file
      *
      * Validate if an input file is an EML email file; if the document is not valid
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentEmlValidationTest() {
+    void validateDocumentEmlValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentEmlValidation(inputFile);
 
         // TODO: test validations
@@ -120,12 +146,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate if an input file is a binary executable file; if the document is not valid
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentExecutableValidationTest() {
+    void validateDocumentExecutableValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentExecutableValidation(inputFile);
 
         // TODO: test validations
@@ -136,12 +163,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a GZip archive file (GZIP or GZ)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentGZipValidationTest() {
+    void validateDocumentGZipValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentGZipValidation(inputFile);
 
         // TODO: test validations
@@ -152,12 +180,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate an HTML document file and checks for SSRF (Server-side Request Forgery) threats in the file; if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentHtmlSsrfValidationTest() {
+    void validateDocumentHtmlSsrfValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         HtmlSsrfThreatCheckResult response = api.validateDocumentHtmlSsrfValidation(inputFile);
 
         // TODO: test validations
@@ -168,12 +197,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate an HTML document file; if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentHtmlValidationTest() {
+    void validateDocumentHtmlValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentHtmlValidation(inputFile);
 
         // TODO: test validations
@@ -184,12 +214,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate an image file; if the document is not valid, identifies the errors in the document.  Formats supported include AAI, ART, ARW, AVS, BPG, BMP, BMP2, BMP3, BRF, CALS, CGM, CIN, CMYK, CMYKA, CR2, CRW, CUR, CUT, DCM, DCR, DCX, DDS, DIB, DJVU, DNG, DOT, DPX, EMF, EPDF, EPI, EPS, EPS2, EPS3, EPSF, EPSI, EPT, EXR, FAX, FIG, FITS, FPX, GIF, GPLT, GRAY, HDR, HEIC, HPGL, HRZ, ICO, ISOBRL, ISBRL6, JBIG, JNG, JP2, JPT, J2C, J2K, JPEG/JPG, JXR, MAT, MONO, MNG, M2V, MRW, MTV, NEF, ORF, OTB, P7, PALM, PAM, PBM, PCD, PCDS, PCL, PCX, PDF, PEF, PES, PFA, PFB, PFM, PGM, PICON, PICT, PIX, PNG, PNG8, PNG00, PNG24, PNG32, PNG48, PNG64, PNM, PPM, PSB, PSD, PTIF, PWB, RAD, RAF, RGB, RGBA, RGF, RLA, RLE, SCT, SFW, SGI, SID, SUN, SVG, TGA, TIFF, TIM, UIL, VIFF, VICAR, VBMP, WDP, WEBP, WPG, X, XBM, XCF, XPM, XWD, X3F, YCbCr, YCbCrA, YUV.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentImageValidationTest() {
+    void validateDocumentImageValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentImageValidation(inputFile);
 
         // TODO: test validations
@@ -200,12 +231,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a JPEG image file; if the document is not valid, identifies the errors in the document..
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentJpgValidationTest() {
+    void validateDocumentJpgValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentJpgValidation(inputFile);
 
         // TODO: test validations
@@ -216,28 +248,30 @@ public class ValidateDocumentApiTest {
      *
      * Validate a JSON (JavaScript Object Notation) document file; if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentJsonValidationTest() {
+    void validateDocumentJsonValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentJsonValidation(inputFile);
 
         // TODO: test validations
     }
     
     /**
-     * Validate if an MSG file is executable
+     * Validate if input file is a valid MSG file
      *
      * Validate if an input file is an MSG email file; if the document is not valid
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentMsgValidationTest() {
+    void validateDocumentMsgValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentMsgValidation(inputFile);
 
         // TODO: test validations
@@ -248,12 +282,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a PDF document; if the document is not valid, identifies the errors in the document.  Also checks if the PDF is password protected.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentPdfValidationTest() {
+    void validateDocumentPdfValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentPdfValidation(inputFile);
 
         // TODO: test validations
@@ -264,12 +299,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a PNG image file; if the document is not valid, identifies the errors in the document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentPngValidationTest() {
+    void validateDocumentPngValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentPngValidation(inputFile);
 
         // TODO: test validations
@@ -280,13 +316,31 @@ public class ValidateDocumentApiTest {
      *
      * Validate a PowerPoint 97-2003 Legacy presentation (PPT)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentPptValidationTest() {
+    void validateDocumentPptValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentPptValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Repair a PowerPoint presentation (PPTX) that contains errors
+     *
+     * Repair a PowerPoint presentation document (PPTX) that contains errors or corruption, if possible.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void validateDocumentPptxRepairTest() {
+        org.springframework.core.io.Resource inputFile = null;
+
+        byte[] response = api.validateDocumentPptxRepair(inputFile);
 
         // TODO: test validations
     }
@@ -296,12 +350,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a PowerPoint presentation (PPTX); if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentPptxValidationTest() {
+    void validateDocumentPptxValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentPptxValidation(inputFile);
 
         // TODO: test validations
@@ -312,12 +367,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a RAR archive file (RAR)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentRarValidationTest() {
+    void validateDocumentRarValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentRarValidation(inputFile);
 
         // TODO: test validations
@@ -328,12 +384,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a Rich Text Format document (RTF)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentRtfValidationTest() {
+    void validateDocumentRtfValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentRtfValidation(inputFile);
 
         // TODO: test validations
@@ -344,12 +401,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a TAR tarball archive file (TAR)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentTarValidationTest() {
+    void validateDocumentTarValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentTarValidation(inputFile);
 
         // TODO: test validations
@@ -360,12 +418,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate an TXT document file; if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentTxtValidationTest() {
+    void validateDocumentTxtValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentTxtValidation(inputFile);
 
         // TODO: test validations
@@ -376,13 +435,31 @@ public class ValidateDocumentApiTest {
      *
      * Validate a Excel 97-2003 Legacy spreadsheet (XLS)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentXlsValidationTest() {
+    void validateDocumentXlsValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentXlsValidation(inputFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Repair an Excel spreadsheet (XLSX) that contains errors
+     *
+     * Repair an Excel spreadsheet document (XLSX) that contains errors or corruption, if possible.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void validateDocumentXlsxRepairTest() {
+        org.springframework.core.io.Resource inputFile = null;
+
+        byte[] response = api.validateDocumentXlsxRepair(inputFile);
 
         // TODO: test validations
     }
@@ -392,12 +469,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a Excel document (XLSX); if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentXlsxValidationTest() {
+    void validateDocumentXlsxValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentXlsxValidation(inputFile);
 
         // TODO: test validations
@@ -408,12 +486,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate an XML document file; if the document is not valid, identifies the errors in the document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentXmlValidationTest() {
+    void validateDocumentXmlValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentXmlValidation(inputFile);
 
         // TODO: test validations
@@ -424,12 +503,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate an XML document file for XML External Entity (XXE) threats; if the document is not valid, identifies the errors in the document.  XXE threats are a type of threat that exploits vulnerabilities in the XML standard relating to external or local entity URIs in XML documents.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentXmlXxeThreatValidationTest() {
+    void validateDocumentXmlXxeThreatValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         XxeThreatDetectionResult response = api.validateDocumentXmlXxeThreatValidation(inputFile);
 
         // TODO: test validations
@@ -440,12 +520,13 @@ public class ValidateDocumentApiTest {
      *
      * Validate a Zip archive file (ZIP)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void validateDocumentZipValidationTest() {
+    void validateDocumentZipValidationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         DocumentValidationResult response = api.validateDocumentZipValidation(inputFile);
 
         // TODO: test validations

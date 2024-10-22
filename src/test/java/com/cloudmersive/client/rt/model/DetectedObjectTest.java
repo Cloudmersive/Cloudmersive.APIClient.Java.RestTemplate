@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DetectedObject
  */
-public class DetectedObjectTest {
+class DetectedObjectTest {
     private final DetectedObject model = new DetectedObject();
 
     /**
      * Model tests for DetectedObject
      */
     @Test
-    public void testDetectedObject() {
+    void testDetectedObject() {
         // TODO: test DetectedObject
     }
 
@@ -43,7 +40,7 @@ public class DetectedObjectTest {
      * Test the property 'objectClassName'
      */
     @Test
-    public void objectClassNameTest() {
+    void objectClassNameTest() {
         // TODO: test objectClassName
     }
 
@@ -51,7 +48,7 @@ public class DetectedObjectTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 
@@ -59,7 +56,7 @@ public class DetectedObjectTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -67,7 +64,7 @@ public class DetectedObjectTest {
      * Test the property 'score'
      */
     @Test
-    public void scoreTest() {
+    void scoreTest() {
         // TODO: test score
     }
 
@@ -75,7 +72,7 @@ public class DetectedObjectTest {
      * Test the property 'X'
      */
     @Test
-    public void XTest() {
+    void XTest() {
         // TODO: test X
     }
 
@@ -83,7 +80,7 @@ public class DetectedObjectTest {
      * Test the property 'Y'
      */
     @Test
-    public void YTest() {
+    void YTest() {
         // TODO: test Y
     }
 

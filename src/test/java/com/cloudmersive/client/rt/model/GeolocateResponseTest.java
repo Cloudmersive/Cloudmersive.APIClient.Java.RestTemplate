@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GeolocateResponse
  */
-public class GeolocateResponseTest {
+class GeolocateResponseTest {
     private final GeolocateResponse model = new GeolocateResponse();
 
     /**
      * Model tests for GeolocateResponse
      */
     @Test
-    public void testGeolocateResponse() {
+    void testGeolocateResponse() {
         // TODO: test GeolocateResponse
     }
 
@@ -43,7 +40,7 @@ public class GeolocateResponseTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 
@@ -51,7 +48,7 @@ public class GeolocateResponseTest {
      * Test the property 'countryName'
      */
     @Test
-    public void countryNameTest() {
+    void countryNameTest() {
         // TODO: test countryName
     }
 
@@ -59,7 +56,7 @@ public class GeolocateResponseTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -67,7 +64,7 @@ public class GeolocateResponseTest {
      * Test the property 'regionCode'
      */
     @Test
-    public void regionCodeTest() {
+    void regionCodeTest() {
         // TODO: test regionCode
     }
 
@@ -75,7 +72,7 @@ public class GeolocateResponseTest {
      * Test the property 'regionName'
      */
     @Test
-    public void regionNameTest() {
+    void regionNameTest() {
         // TODO: test regionName
     }
 
@@ -83,7 +80,7 @@ public class GeolocateResponseTest {
      * Test the property 'zipCode'
      */
     @Test
-    public void zipCodeTest() {
+    void zipCodeTest() {
         // TODO: test zipCode
     }
 
@@ -91,7 +88,7 @@ public class GeolocateResponseTest {
      * Test the property 'timezoneStandardName'
      */
     @Test
-    public void timezoneStandardNameTest() {
+    void timezoneStandardNameTest() {
         // TODO: test timezoneStandardName
     }
 
@@ -99,7 +96,7 @@ public class GeolocateResponseTest {
      * Test the property 'latitude'
      */
     @Test
-    public void latitudeTest() {
+    void latitudeTest() {
         // TODO: test latitude
     }
 
@@ -107,7 +104,7 @@ public class GeolocateResponseTest {
      * Test the property 'longitude'
      */
     @Test
-    public void longitudeTest() {
+    void longitudeTest() {
         // TODO: test longitude
     }
 

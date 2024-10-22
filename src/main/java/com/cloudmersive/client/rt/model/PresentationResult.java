@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet
+ * A single PowerPoint PPTX file corresponding to one slide in the original presentation
  */
-@ApiModel(description = "A single Excel XLSX file corresponding to one worksheet (tab) in the original spreadsheet")
 @JsonPropertyOrder({
   PresentationResult.JSON_PROPERTY_SLIDE_NUMBER,
   PresentationResult.JSON_PROPERTY_U_R_L,
   PresentationResult.JSON_PROPERTY_PRESENTATION_CONTENTS
 })
-@JsonTypeName("PresentationResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PresentationResult {
   public static final String JSON_PROPERTY_SLIDE_NUMBER = "SlideNumber";
   private Integer slideNumber;
@@ -45,6 +42,8 @@ public class PresentationResult {
   public static final String JSON_PROPERTY_PRESENTATION_CONTENTS = "PresentationContents";
   private byte[] presentationContents;
 
+  public PresentationResult() {
+  }
 
   public PresentationResult slideNumber(Integer slideNumber) {
     
@@ -52,12 +51,11 @@ public class PresentationResult {
     return this;
   }
 
-   /**
+  /**
    * Worksheet number of the converted page, starting with 1 for the left-most worksheet
    * @return slideNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Worksheet number of the converted page, starting with 1 for the left-most worksheet")
   @JsonProperty(JSON_PROPERTY_SLIDE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class PresentationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SLIDE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSlideNumber(Integer slideNumber) {
     this.slideNumber = slideNumber;
   }
-
 
   public PresentationResult URL(String URL) {
     
@@ -77,12 +76,11 @@ public class PresentationResult {
     return this;
   }
 
-   /**
+  /**
    * URL to the PPTX file of this slide; file is stored in an in-memory cache and will be deleted
    * @return URL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to the PPTX file of this slide; file is stored in an in-memory cache and will be deleted")
   @JsonProperty(JSON_PROPERTY_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class PresentationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setURL(String URL) {
     this.URL = URL;
   }
-
 
   public PresentationResult presentationContents(byte[] presentationContents) {
     
@@ -102,12 +101,11 @@ public class PresentationResult {
     return this;
   }
 
-   /**
+  /**
    * Contents of the presentation in bytes
    * @return presentationContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Contents of the presentation in bytes")
   @JsonProperty(JSON_PROPERTY_PRESENTATION_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class PresentationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PRESENTATION_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPresentationContents(byte[] presentationContents) {
     this.presentationContents = presentationContents;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class PresentationResult {
   public int hashCode() {
     return Objects.hash(slideNumber, URL, Arrays.hashCode(presentationContents));
   }
-
 
   @Override
   public String toString() {

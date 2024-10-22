@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a date time parsing
  */
-@ApiModel(description = "Result of performing a date time parsing")
 @JsonPropertyOrder({
   DateTimeStandardizedParseResponse.JSON_PROPERTY_SUCCESSFUL,
   DateTimeStandardizedParseResponse.JSON_PROPERTY_PARSED_DATE_RESULT,
@@ -40,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DateTimeStandardizedParseResponse.JSON_PROPERTY_SECOND,
   DateTimeStandardizedParseResponse.JSON_PROPERTY_DAY_OF_WEEK
 })
-@JsonTypeName("DateTimeStandardizedParseResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DateTimeStandardizedParseResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -70,6 +67,8 @@ public class DateTimeStandardizedParseResponse {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "DayOfWeek";
   private String dayOfWeek;
 
+  public DateTimeStandardizedParseResponse() {
+  }
 
   public DateTimeStandardizedParseResponse successful(Boolean successful) {
     
@@ -77,12 +76,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public DateTimeStandardizedParseResponse parsedDateResult(OffsetDateTime parsedDateResult) {
     
@@ -102,12 +101,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Result of performing a date time parsing
    * @return parsedDateResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result of performing a date time parsing")
   @JsonProperty(JSON_PROPERTY_PARSED_DATE_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARSED_DATE_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParsedDateResult(OffsetDateTime parsedDateResult) {
     this.parsedDateResult = parsedDateResult;
   }
-
 
   public DateTimeStandardizedParseResponse year(Integer year) {
     
@@ -127,12 +126,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Year of the parsed date time result
    * @return year
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Year of the parsed date time result")
   @JsonProperty(JSON_PROPERTY_YEAR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,10 +139,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_YEAR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setYear(Integer year) {
     this.year = year;
   }
-
 
   public DateTimeStandardizedParseResponse month(Integer month) {
     
@@ -152,12 +151,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Month of the parsed date time result
    * @return month
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Month of the parsed date time result")
   @JsonProperty(JSON_PROPERTY_MONTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,10 +164,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MONTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMonth(Integer month) {
     this.month = month;
   }
-
 
   public DateTimeStandardizedParseResponse day(Integer day) {
     
@@ -177,12 +176,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Day of the parsed date time result
    * @return day
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Day of the parsed date time result")
   @JsonProperty(JSON_PROPERTY_DAY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,10 +189,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DAY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDay(Integer day) {
     this.day = day;
   }
-
 
   public DateTimeStandardizedParseResponse hour(Integer hour) {
     
@@ -202,12 +201,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Hour of the parsed date time result (24-hour)
    * @return hour
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Hour of the parsed date time result (24-hour)")
   @JsonProperty(JSON_PROPERTY_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,10 +214,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HOUR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHour(Integer hour) {
     this.hour = hour;
   }
-
 
   public DateTimeStandardizedParseResponse minute(Integer minute) {
     
@@ -227,12 +226,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Minute of the parsed date time result
    * @return minute
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Minute of the parsed date time result")
   @JsonProperty(JSON_PROPERTY_MINUTE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,10 +239,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MINUTE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMinute(Integer minute) {
     this.minute = minute;
   }
-
 
   public DateTimeStandardizedParseResponse second(Integer second) {
     
@@ -252,12 +251,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Second of the parsed date time result
    * @return second
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Second of the parsed date time result")
   @JsonProperty(JSON_PROPERTY_SECOND)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,10 +264,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SECOND)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSecond(Integer second) {
     this.second = second;
   }
-
 
   public DateTimeStandardizedParseResponse dayOfWeek(String dayOfWeek) {
     
@@ -277,12 +276,11 @@ public class DateTimeStandardizedParseResponse {
     return this;
   }
 
-   /**
+  /**
    * Day of week
    * @return dayOfWeek
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Day of week")
   @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,10 +289,11 @@ public class DateTimeStandardizedParseResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDayOfWeek(String dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -320,7 +319,6 @@ public class DateTimeStandardizedParseResponse {
   public int hashCode() {
     return Objects.hash(successful, parsedDateResult, year, month, day, hour, minute, second, dayOfWeek);
   }
-
 
   @Override
   public String toString() {

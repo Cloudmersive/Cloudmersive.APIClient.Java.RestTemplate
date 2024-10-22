@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateAddressRequest
  */
-public class ValidateAddressRequestTest {
+class ValidateAddressRequestTest {
     private final ValidateAddressRequest model = new ValidateAddressRequest();
 
     /**
      * Model tests for ValidateAddressRequest
      */
     @Test
-    public void testValidateAddressRequest() {
+    void testValidateAddressRequest() {
         // TODO: test ValidateAddressRequest
     }
 
@@ -43,7 +40,7 @@ public class ValidateAddressRequestTest {
      * Test the property 'streetAddress'
      */
     @Test
-    public void streetAddressTest() {
+    void streetAddressTest() {
         // TODO: test streetAddress
     }
 
@@ -51,7 +48,7 @@ public class ValidateAddressRequestTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -59,7 +56,7 @@ public class ValidateAddressRequestTest {
      * Test the property 'stateOrProvince'
      */
     @Test
-    public void stateOrProvinceTest() {
+    void stateOrProvinceTest() {
         // TODO: test stateOrProvince
     }
 
@@ -67,7 +64,7 @@ public class ValidateAddressRequestTest {
      * Test the property 'postalCode'
      */
     @Test
-    public void postalCodeTest() {
+    void postalCodeTest() {
         // TODO: test postalCode
     }
 
@@ -75,7 +72,7 @@ public class ValidateAddressRequestTest {
      * Test the property 'countryFullName'
      */
     @Test
-    public void countryFullNameTest() {
+    void countryFullNameTest() {
         // TODO: test countryFullName
     }
 
@@ -83,7 +80,7 @@ public class ValidateAddressRequestTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 

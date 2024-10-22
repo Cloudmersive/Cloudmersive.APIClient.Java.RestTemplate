@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for NsfwScannedFrame
  */
-public class NsfwScannedFrameTest {
+class NsfwScannedFrameTest {
     private final NsfwScannedFrame model = new NsfwScannedFrame();
 
     /**
      * Model tests for NsfwScannedFrame
      */
     @Test
-    public void testNsfwScannedFrame() {
+    void testNsfwScannedFrame() {
         // TODO: test NsfwScannedFrame
     }
 
@@ -43,7 +40,7 @@ public class NsfwScannedFrameTest {
      * Test the property 'frameNumber'
      */
     @Test
-    public void frameNumberTest() {
+    void frameNumberTest() {
         // TODO: test frameNumber
     }
 
@@ -51,7 +48,7 @@ public class NsfwScannedFrameTest {
      * Test the property 'timeStamp'
      */
     @Test
-    public void timeStampTest() {
+    void timeStampTest() {
         // TODO: test timeStamp
     }
 
@@ -59,7 +56,7 @@ public class NsfwScannedFrameTest {
      * Test the property 'content'
      */
     @Test
-    public void contentTest() {
+    void contentTest() {
         // TODO: test content
     }
 
@@ -67,7 +64,7 @@ public class NsfwScannedFrameTest {
      * Test the property 'classificationResult'
      */
     @Test
-    public void classificationResultTest() {
+    void classificationResultTest() {
         // TODO: test classificationResult
     }
 
@@ -75,7 +72,7 @@ public class NsfwScannedFrameTest {
      * Test the property 'score'
      */
     @Test
-    public void scoreTest() {
+    void scoreTest() {
         // TODO: test score
     }
 

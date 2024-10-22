@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * One point in a polygon
  */
-@ApiModel(description = "One point in a polygon")
 @JsonPropertyOrder({
   PolygonPoint.JSON_PROPERTY_X,
   PolygonPoint.JSON_PROPERTY_Y
 })
-@JsonTypeName("PolygonPoint")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PolygonPoint {
   public static final String JSON_PROPERTY_X = "X";
   private Double X;
@@ -41,6 +38,8 @@ public class PolygonPoint {
   public static final String JSON_PROPERTY_Y = "Y";
   private Double Y;
 
+  public PolygonPoint() {
+  }
 
   public PolygonPoint X(Double X) {
     
@@ -48,12 +47,11 @@ public class PolygonPoint {
     return this;
   }
 
-   /**
+  /**
    * X location in pixels of this point in the polygon
    * @return X
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location in pixels of this point in the polygon")
   @JsonProperty(JSON_PROPERTY_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class PolygonPoint {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setX(Double X) {
     this.X = X;
   }
-
 
   public PolygonPoint Y(Double Y) {
     
@@ -73,12 +72,11 @@ public class PolygonPoint {
     return this;
   }
 
-   /**
+  /**
    * Y location in pixels of this point in the polygon
    * @return Y
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location in pixels of this point in the polygon")
   @JsonProperty(JSON_PROPERTY_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class PolygonPoint {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setY(Double Y) {
     this.Y = Y;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class PolygonPoint {
   public int hashCode() {
     return Objects.hash(X, Y);
   }
-
 
   @Override
   public String toString() {

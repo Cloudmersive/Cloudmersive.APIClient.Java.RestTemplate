@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**compareDocumentDocx**](CompareDocumentApi.md#compareDocumentDocx) | **POST** /convert/compare/docx | Compare Two Word DOCX
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**compareDocumentDocx**](CompareDocumentApi.md#compareDocumentDocx) | **POST** /convert/compare/docx | Compare Two Word DOCX |
 
 
 
 ## compareDocumentDocx
 
-> byte[] compareDocumentDocx(inputFile1, inputFile2)
+> byte[] compareDocumentDocx(inputFile1, inputFile2, autorepair)
 
 Compare Two Word DOCX
 
@@ -41,8 +41,9 @@ public class Example {
         CompareDocumentApi apiInstance = new CompareDocumentApi(defaultClient);
         File inputFile1 = new File("/path/to/file"); // File | First input file to perform the operation on.
         File inputFile2 = new File("/path/to/file"); // File | Second input file to perform the operation on (more than 2 can be supplied).
+        Boolean autorepair = true; // Boolean | Optional; automatically repair input documents that have errors (default is true)
         try {
-            byte[] result = apiInstance.compareDocumentDocx(inputFile1, inputFile2);
+            byte[] result = apiInstance.compareDocumentDocx(inputFile1, inputFile2, autorepair);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling CompareDocumentApi#compareDocumentDocx");
@@ -58,10 +59,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on (more than 2 can be supplied). | |
+| **autorepair** | **Boolean**| Optional; automatically repair input documents that have errors (default is true) | [optional] |
 
 ### Return type
 
@@ -75,6 +77,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

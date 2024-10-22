@@ -20,26 +20,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxGetFormFieldsResponse
  */
-public class GetDocxGetFormFieldsResponseTest {
+class GetDocxGetFormFieldsResponseTest {
     private final GetDocxGetFormFieldsResponse model = new GetDocxGetFormFieldsResponse();
 
     /**
      * Model tests for GetDocxGetFormFieldsResponse
      */
     @Test
-    public void testGetDocxGetFormFieldsResponse() {
+    void testGetDocxGetFormFieldsResponse() {
         // TODO: test GetDocxGetFormFieldsResponse
     }
 
@@ -47,7 +45,7 @@ public class GetDocxGetFormFieldsResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -55,7 +53,7 @@ public class GetDocxGetFormFieldsResponseTest {
      * Test the property 'contentControls'
      */
     @Test
-    public void contentControlsTest() {
+    void contentControlsTest() {
         // TODO: test contentControls
     }
 
@@ -63,7 +61,7 @@ public class GetDocxGetFormFieldsResponseTest {
      * Test the property 'handlebarFormFields'
      */
     @Test
-    public void handlebarFormFieldsTest() {
+    void handlebarFormFieldsTest() {
         // TODO: test handlebarFormFields
     }
 

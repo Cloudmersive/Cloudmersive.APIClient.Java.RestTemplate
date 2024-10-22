@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PdfPageText
  */
-public class PdfPageTextTest {
+class PdfPageTextTest {
     private final PdfPageText model = new PdfPageText();
 
     /**
      * Model tests for PdfPageText
      */
     @Test
-    public void testPdfPageText() {
+    void testPdfPageText() {
         // TODO: test PdfPageText
     }
 
@@ -43,7 +40,7 @@ public class PdfPageTextTest {
      * Test the property 'pageNumber'
      */
     @Test
-    public void pageNumberTest() {
+    void pageNumberTest() {
         // TODO: test pageNumber
     }
 
@@ -51,7 +48,7 @@ public class PdfPageTextTest {
      * Test the property 'pageText'
      */
     @Test
-    public void pageTextTest() {
+    void pageTextTest() {
         // TODO: test pageText
     }
 

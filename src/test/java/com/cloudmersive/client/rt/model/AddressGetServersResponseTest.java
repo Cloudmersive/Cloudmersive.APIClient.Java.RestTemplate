@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AddressGetServersResponse
  */
-public class AddressGetServersResponseTest {
+class AddressGetServersResponseTest {
     private final AddressGetServersResponse model = new AddressGetServersResponse();
 
     /**
      * Model tests for AddressGetServersResponse
      */
     @Test
-    public void testAddressGetServersResponse() {
+    void testAddressGetServersResponse() {
         // TODO: test AddressGetServersResponse
     }
 
@@ -45,7 +43,7 @@ public class AddressGetServersResponseTest {
      * Test the property 'success'
      */
     @Test
-    public void successTest() {
+    void successTest() {
         // TODO: test success
     }
 
@@ -53,7 +51,7 @@ public class AddressGetServersResponseTest {
      * Test the property 'servers'
      */
     @Test
-    public void serversTest() {
+    void serversTest() {
         // TODO: test servers
     }
 

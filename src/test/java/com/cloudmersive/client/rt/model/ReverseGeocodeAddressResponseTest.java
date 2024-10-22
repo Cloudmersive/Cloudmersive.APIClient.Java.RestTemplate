@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ReverseGeocodeAddressResponse
  */
-public class ReverseGeocodeAddressResponseTest {
+class ReverseGeocodeAddressResponseTest {
     private final ReverseGeocodeAddressResponse model = new ReverseGeocodeAddressResponse();
 
     /**
      * Model tests for ReverseGeocodeAddressResponse
      */
     @Test
-    public void testReverseGeocodeAddressResponse() {
+    void testReverseGeocodeAddressResponse() {
         // TODO: test ReverseGeocodeAddressResponse
     }
 
@@ -43,7 +40,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'streetAddress'
      */
     @Test
-    public void streetAddressTest() {
+    void streetAddressTest() {
         // TODO: test streetAddress
     }
 
@@ -59,7 +56,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'city'
      */
     @Test
-    public void cityTest() {
+    void cityTest() {
         // TODO: test city
     }
 
@@ -67,7 +64,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'stateOrProvince'
      */
     @Test
-    public void stateOrProvinceTest() {
+    void stateOrProvinceTest() {
         // TODO: test stateOrProvince
     }
 
@@ -75,7 +72,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'postalCode'
      */
     @Test
-    public void postalCodeTest() {
+    void postalCodeTest() {
         // TODO: test postalCode
     }
 
@@ -83,7 +80,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'countryFullName'
      */
     @Test
-    public void countryFullNameTest() {
+    void countryFullNameTest() {
         // TODO: test countryFullName
     }
 
@@ -91,7 +88,7 @@ public class ReverseGeocodeAddressResponseTest {
      * Test the property 'countryCode'
      */
     @Test
-    public void countryCodeTest() {
+    void countryCodeTest() {
         // TODO: test countryCode
     }
 

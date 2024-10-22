@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of scanning a video file for NSFW content
  */
-@ApiModel(description = "The result of scanning a video file for NSFW content")
 @JsonPropertyOrder({
   NsfwResult.JSON_PROPERTY_SUCCESSFUL,
   NsfwResult.JSON_PROPERTY_HIGHEST_CLASSIFICATION_RESULT,
@@ -40,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   NsfwResult.JSON_PROPERTY_TOTAL_FRAMES,
   NsfwResult.JSON_PROPERTY_NSFW_SCANNED_FRAMES
 })
-@JsonTypeName("NsfwResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class NsfwResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -62,8 +60,10 @@ public class NsfwResult {
   private Integer totalFrames;
 
   public static final String JSON_PROPERTY_NSFW_SCANNED_FRAMES = "NsfwScannedFrames";
-  private List<NsfwScannedFrame> nsfwScannedFrames = null;
+  private List<NsfwScannedFrame> nsfwScannedFrames = new ArrayList<>();
 
+  public NsfwResult() {
+  }
 
   public NsfwResult successful(Boolean successful) {
     
@@ -71,12 +71,11 @@ public class NsfwResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -85,10 +84,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public NsfwResult highestClassificationResult(String highestClassificationResult) {
     
@@ -96,12 +96,11 @@ public class NsfwResult {
     return this;
   }
 
-   /**
+  /**
    * The highest NSFW classification of the video
    * @return highestClassificationResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The highest NSFW classification of the video")
   @JsonProperty(JSON_PROPERTY_HIGHEST_CLASSIFICATION_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,10 +109,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HIGHEST_CLASSIFICATION_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHighestClassificationResult(String highestClassificationResult) {
     this.highestClassificationResult = highestClassificationResult;
   }
-
 
   public NsfwResult highestScore(Double highestScore) {
     
@@ -121,12 +121,11 @@ public class NsfwResult {
     return this;
   }
 
-   /**
+  /**
    * The highest NSFW score out of all frames scanned
    * @return highestScore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The highest NSFW score out of all frames scanned")
   @JsonProperty(JSON_PROPERTY_HIGHEST_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,10 +134,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HIGHEST_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHighestScore(Double highestScore) {
     this.highestScore = highestScore;
   }
-
 
   public NsfwResult totalRacyFrames(Integer totalRacyFrames) {
     
@@ -146,12 +146,11 @@ public class NsfwResult {
     return this;
   }
 
-   /**
+  /**
    * The total number of potentially \&quot;racy\&quot; frames.
    * @return totalRacyFrames
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total number of potentially \"racy\" frames.")
   @JsonProperty(JSON_PROPERTY_TOTAL_RACY_FRAMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,10 +159,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOTAL_RACY_FRAMES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTotalRacyFrames(Integer totalRacyFrames) {
     this.totalRacyFrames = totalRacyFrames;
   }
-
 
   public NsfwResult totalNsfwFrames(Integer totalNsfwFrames) {
     
@@ -171,12 +171,11 @@ public class NsfwResult {
     return this;
   }
 
-   /**
+  /**
    * The total number of frames with high probability of NSFW.
    * @return totalNsfwFrames
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total number of frames with high probability of NSFW.")
   @JsonProperty(JSON_PROPERTY_TOTAL_NSFW_FRAMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +184,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOTAL_NSFW_FRAMES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTotalNsfwFrames(Integer totalNsfwFrames) {
     this.totalNsfwFrames = totalNsfwFrames;
   }
-
 
   public NsfwResult totalFrames(Integer totalFrames) {
     
@@ -196,12 +196,11 @@ public class NsfwResult {
     return this;
   }
 
-   /**
+  /**
    * The total number of frames scanned
    * @return totalFrames
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total number of frames scanned")
   @JsonProperty(JSON_PROPERTY_TOTAL_FRAMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,10 +209,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOTAL_FRAMES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTotalFrames(Integer totalFrames) {
     this.totalFrames = totalFrames;
   }
-
 
   public NsfwResult nsfwScannedFrames(List<NsfwScannedFrame> nsfwScannedFrames) {
     
@@ -223,18 +223,17 @@ public class NsfwResult {
 
   public NsfwResult addNsfwScannedFramesItem(NsfwScannedFrame nsfwScannedFramesItem) {
     if (this.nsfwScannedFrames == null) {
-      this.nsfwScannedFrames = new ArrayList<NsfwScannedFrame>();
+      this.nsfwScannedFrames = new ArrayList<>();
     }
     this.nsfwScannedFrames.add(nsfwScannedFramesItem);
     return this;
   }
 
-   /**
+  /**
    * The NSFW scanning results for each frame
    * @return nsfwScannedFrames
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The NSFW scanning results for each frame")
   @JsonProperty(JSON_PROPERTY_NSFW_SCANNED_FRAMES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -243,10 +242,11 @@ public class NsfwResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NSFW_SCANNED_FRAMES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNsfwScannedFrames(List<NsfwScannedFrame> nsfwScannedFrames) {
     this.nsfwScannedFrames = nsfwScannedFrames;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -270,7 +270,6 @@ public class NsfwResult {
   public int hashCode() {
     return Objects.hash(successful, highestClassificationResult, highestScore, totalRacyFrames, totalNsfwFrames, totalFrames, nsfwScannedFrames);
   }
-
 
   @Override
   public String toString() {

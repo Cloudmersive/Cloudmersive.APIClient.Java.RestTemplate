@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of a User-Agent validation request
  */
-@ApiModel(description = "The result of a User-Agent validation request")
 @JsonPropertyOrder({
   UserAgentValidateResponse.JSON_PROPERTY_SUCCESSFUL,
   UserAgentValidateResponse.JSON_PROPERTY_IS_BOT,
@@ -44,8 +42,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   UserAgentValidateResponse.JSON_PROPERTY_BROWSER_ENGINE_NAME,
   UserAgentValidateResponse.JSON_PROPERTY_BROWSER_ENGINE_VERSION
 })
-@JsonTypeName("UserAgentValidateResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserAgentValidateResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -89,6 +86,8 @@ public class UserAgentValidateResponse {
   public static final String JSON_PROPERTY_BROWSER_ENGINE_VERSION = "BrowserEngineVersion";
   private String browserEngineVersion;
 
+  public UserAgentValidateResponse() {
+  }
 
   public UserAgentValidateResponse successful(Boolean successful) {
     
@@ -96,12 +95,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -110,10 +108,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public UserAgentValidateResponse isBot(Boolean isBot) {
     
@@ -121,12 +120,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the request is a known robot, false otherwise
    * @return isBot
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the request is a known robot, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_BOT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,10 +133,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BOT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsBot(Boolean isBot) {
     this.isBot = isBot;
   }
-
 
   public UserAgentValidateResponse botName(String botName) {
     
@@ -146,12 +145,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Optional; name of the robot if the request was from a known robot, otherwise null
    * @return botName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; name of the robot if the request was from a known robot, otherwise null")
   @JsonProperty(JSON_PROPERTY_BOT_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,10 +158,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOT_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBotName(String botName) {
     this.botName = botName;
   }
-
 
   public UserAgentValidateResponse botURL(String botURL) {
     
@@ -171,12 +170,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Optional; if available, the URL to the robot
    * @return botURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; if available, the URL to the robot")
   @JsonProperty(JSON_PROPERTY_BOT_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,10 +183,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOT_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBotURL(String botURL) {
     this.botURL = botURL;
   }
-
 
   public UserAgentValidateResponse operatingSystem(String operatingSystem) {
     
@@ -196,12 +195,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Operating System of the User-Agent (e.g. Windows)
    * @return operatingSystem
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Operating System of the User-Agent (e.g. Windows)")
   @JsonProperty(JSON_PROPERTY_OPERATING_SYSTEM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,10 +208,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPERATING_SYSTEM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOperatingSystem(String operatingSystem) {
     this.operatingSystem = operatingSystem;
   }
-
 
   public UserAgentValidateResponse operatingSystemCPUPlatform(String operatingSystemCPUPlatform) {
     
@@ -221,12 +220,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * The CPU platform of the User-Agent (e.g. x64)
    * @return operatingSystemCPUPlatform
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The CPU platform of the User-Agent (e.g. x64)")
   @JsonProperty(JSON_PROPERTY_OPERATING_SYSTEM_C_P_U_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -235,10 +233,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPERATING_SYSTEM_C_P_U_PLATFORM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOperatingSystemCPUPlatform(String operatingSystemCPUPlatform) {
     this.operatingSystemCPUPlatform = operatingSystemCPUPlatform;
   }
-
 
   public UserAgentValidateResponse operatingSystemVersion(String operatingSystemVersion) {
     
@@ -246,12 +245,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * The version of the operating system of the User-Agent (e.g. \&quot;10\&quot; for Windows 10)
    * @return operatingSystemVersion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The version of the operating system of the User-Agent (e.g. \"10\" for Windows 10)")
   @JsonProperty(JSON_PROPERTY_OPERATING_SYSTEM_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -260,10 +258,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OPERATING_SYSTEM_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOperatingSystemVersion(String operatingSystemVersion) {
     this.operatingSystemVersion = operatingSystemVersion;
   }
-
 
   public UserAgentValidateResponse deviceType(String deviceType) {
     
@@ -271,12 +270,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Device type of the User-Agent; possible values are \&quot;DESKTOP\&quot;, \&quot;SMARTPHONE\&quot;, \&quot;TABLET\&quot;
    * @return deviceType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Device type of the User-Agent; possible values are \"DESKTOP\", \"SMARTPHONE\", \"TABLET\"")
   @JsonProperty(JSON_PROPERTY_DEVICE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -285,10 +283,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DEVICE_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDeviceType(String deviceType) {
     this.deviceType = deviceType;
   }
-
 
   public UserAgentValidateResponse deviceBrandName(String deviceBrandName) {
     
@@ -296,12 +295,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Brand name of the User-Agent
    * @return deviceBrandName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Brand name of the User-Agent")
   @JsonProperty(JSON_PROPERTY_DEVICE_BRAND_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,10 +308,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DEVICE_BRAND_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDeviceBrandName(String deviceBrandName) {
     this.deviceBrandName = deviceBrandName;
   }
-
 
   public UserAgentValidateResponse deviceModel(String deviceModel) {
     
@@ -321,12 +320,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Model name or number of the User-Agent
    * @return deviceModel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Model name or number of the User-Agent")
   @JsonProperty(JSON_PROPERTY_DEVICE_MODEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -335,10 +333,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DEVICE_MODEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDeviceModel(String deviceModel) {
     this.deviceModel = deviceModel;
   }
-
 
   public UserAgentValidateResponse browserName(String browserName) {
     
@@ -346,12 +345,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the Browser
    * @return browserName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the Browser")
   @JsonProperty(JSON_PROPERTY_BROWSER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -360,10 +358,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BROWSER_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBrowserName(String browserName) {
     this.browserName = browserName;
   }
-
 
   public UserAgentValidateResponse browserVersion(String browserVersion) {
     
@@ -371,12 +370,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Version of the Browser
    * @return browserVersion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Version of the Browser")
   @JsonProperty(JSON_PROPERTY_BROWSER_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -385,10 +383,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BROWSER_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBrowserVersion(String browserVersion) {
     this.browserVersion = browserVersion;
   }
-
 
   public UserAgentValidateResponse browserEngineName(String browserEngineName) {
     
@@ -396,12 +395,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the Browser Engine
    * @return browserEngineName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the Browser Engine")
   @JsonProperty(JSON_PROPERTY_BROWSER_ENGINE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -410,10 +408,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BROWSER_ENGINE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBrowserEngineName(String browserEngineName) {
     this.browserEngineName = browserEngineName;
   }
-
 
   public UserAgentValidateResponse browserEngineVersion(String browserEngineVersion) {
     
@@ -421,12 +420,11 @@ public class UserAgentValidateResponse {
     return this;
   }
 
-   /**
+  /**
    * Version of the Browser Engine
    * @return browserEngineVersion
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Version of the Browser Engine")
   @JsonProperty(JSON_PROPERTY_BROWSER_ENGINE_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -435,10 +433,11 @@ public class UserAgentValidateResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BROWSER_ENGINE_VERSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBrowserEngineVersion(String browserEngineVersion) {
     this.browserEngineVersion = browserEngineVersion;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -469,7 +468,6 @@ public class UserAgentValidateResponse {
   public int hashCode() {
     return Objects.hash(successful, isBot, botName, botURL, operatingSystem, operatingSystemCPUPlatform, operatingSystemVersion, deviceType, deviceBrandName, deviceModel, browserName, browserVersion, browserEngineName, browserEngineVersion);
   }
-
 
   @Override
   public String toString() {

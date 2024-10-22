@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XxeDetectionBatchResponse
  */
-public class XxeDetectionBatchResponseTest {
+class XxeDetectionBatchResponseTest {
     private final XxeDetectionBatchResponse model = new XxeDetectionBatchResponse();
 
     /**
      * Model tests for XxeDetectionBatchResponse
      */
     @Test
-    public void testXxeDetectionBatchResponse() {
+    void testXxeDetectionBatchResponse() {
         // TODO: test XxeDetectionBatchResponse
     }
 
@@ -46,7 +44,7 @@ public class XxeDetectionBatchResponseTest {
      * Test the property 'resultItems'
      */
     @Test
-    public void resultItemsTest() {
+    void resultItemsTest() {
         // TODO: test resultItems
     }
 

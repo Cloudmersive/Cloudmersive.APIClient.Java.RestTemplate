@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetDocxPagesResponse
  */
-public class GetDocxPagesResponseTest {
+class GetDocxPagesResponseTest {
     private final GetDocxPagesResponse model = new GetDocxPagesResponse();
 
     /**
      * Model tests for GetDocxPagesResponse
      */
     @Test
-    public void testGetDocxPagesResponse() {
+    void testGetDocxPagesResponse() {
         // TODO: test GetDocxPagesResponse
     }
 
@@ -46,7 +44,7 @@ public class GetDocxPagesResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class GetDocxPagesResponseTest {
      * Test the property 'pages'
      */
     @Test
-    public void pagesTest() {
+    void pagesTest() {
         // TODO: test pages
     }
 
@@ -62,7 +60,7 @@ public class GetDocxPagesResponseTest {
      * Test the property 'pageCount'
      */
     @Test
-    public void pageCountTest() {
+    void pageCountTest() {
         // TODO: test pageCount
     }
 

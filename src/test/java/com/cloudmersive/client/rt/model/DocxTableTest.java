@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxTable
  */
-public class DocxTableTest {
+class DocxTableTest {
     private final DocxTable model = new DocxTable();
 
     /**
      * Model tests for DocxTable
      */
     @Test
-    public void testDocxTable() {
+    void testDocxTable() {
         // TODO: test DocxTable
     }
 
@@ -46,7 +44,7 @@ public class DocxTableTest {
      * Test the property 'tableID'
      */
     @Test
-    public void tableIDTest() {
+    void tableIDTest() {
         // TODO: test tableID
     }
 
@@ -54,7 +52,7 @@ public class DocxTableTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -62,7 +60,7 @@ public class DocxTableTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -70,7 +68,7 @@ public class DocxTableTest {
      * Test the property 'widthType'
      */
     @Test
-    public void widthTypeTest() {
+    void widthTypeTest() {
         // TODO: test widthType
     }
 
@@ -78,7 +76,7 @@ public class DocxTableTest {
      * Test the property 'tableRows'
      */
     @Test
-    public void tableRowsTest() {
+    void tableRowsTest() {
         // TODO: test tableRows
     }
 
@@ -86,7 +84,7 @@ public class DocxTableTest {
      * Test the property 'topBorderType'
      */
     @Test
-    public void topBorderTypeTest() {
+    void topBorderTypeTest() {
         // TODO: test topBorderType
     }
 
@@ -94,7 +92,7 @@ public class DocxTableTest {
      * Test the property 'topBorderSize'
      */
     @Test
-    public void topBorderSizeTest() {
+    void topBorderSizeTest() {
         // TODO: test topBorderSize
     }
 
@@ -102,7 +100,7 @@ public class DocxTableTest {
      * Test the property 'topBorderSpace'
      */
     @Test
-    public void topBorderSpaceTest() {
+    void topBorderSpaceTest() {
         // TODO: test topBorderSpace
     }
 
@@ -110,7 +108,7 @@ public class DocxTableTest {
      * Test the property 'topBorderColor'
      */
     @Test
-    public void topBorderColorTest() {
+    void topBorderColorTest() {
         // TODO: test topBorderColor
     }
 
@@ -118,7 +116,7 @@ public class DocxTableTest {
      * Test the property 'bottomBorderType'
      */
     @Test
-    public void bottomBorderTypeTest() {
+    void bottomBorderTypeTest() {
         // TODO: test bottomBorderType
     }
 
@@ -126,7 +124,7 @@ public class DocxTableTest {
      * Test the property 'bottomBorderSize'
      */
     @Test
-    public void bottomBorderSizeTest() {
+    void bottomBorderSizeTest() {
         // TODO: test bottomBorderSize
     }
 
@@ -134,7 +132,7 @@ public class DocxTableTest {
      * Test the property 'bottomBorderSpace'
      */
     @Test
-    public void bottomBorderSpaceTest() {
+    void bottomBorderSpaceTest() {
         // TODO: test bottomBorderSpace
     }
 
@@ -142,7 +140,7 @@ public class DocxTableTest {
      * Test the property 'bottomBorderColor'
      */
     @Test
-    public void bottomBorderColorTest() {
+    void bottomBorderColorTest() {
         // TODO: test bottomBorderColor
     }
 
@@ -150,7 +148,7 @@ public class DocxTableTest {
      * Test the property 'leftBorderType'
      */
     @Test
-    public void leftBorderTypeTest() {
+    void leftBorderTypeTest() {
         // TODO: test leftBorderType
     }
 
@@ -158,7 +156,7 @@ public class DocxTableTest {
      * Test the property 'leftBorderSize'
      */
     @Test
-    public void leftBorderSizeTest() {
+    void leftBorderSizeTest() {
         // TODO: test leftBorderSize
     }
 
@@ -166,7 +164,7 @@ public class DocxTableTest {
      * Test the property 'leftBorderSpace'
      */
     @Test
-    public void leftBorderSpaceTest() {
+    void leftBorderSpaceTest() {
         // TODO: test leftBorderSpace
     }
 
@@ -174,7 +172,7 @@ public class DocxTableTest {
      * Test the property 'leftBorderColor'
      */
     @Test
-    public void leftBorderColorTest() {
+    void leftBorderColorTest() {
         // TODO: test leftBorderColor
     }
 
@@ -182,7 +180,7 @@ public class DocxTableTest {
      * Test the property 'rightBorderType'
      */
     @Test
-    public void rightBorderTypeTest() {
+    void rightBorderTypeTest() {
         // TODO: test rightBorderType
     }
 
@@ -190,7 +188,7 @@ public class DocxTableTest {
      * Test the property 'rightBorderSize'
      */
     @Test
-    public void rightBorderSizeTest() {
+    void rightBorderSizeTest() {
         // TODO: test rightBorderSize
     }
 
@@ -198,7 +196,7 @@ public class DocxTableTest {
      * Test the property 'rightBorderSpace'
      */
     @Test
-    public void rightBorderSpaceTest() {
+    void rightBorderSpaceTest() {
         // TODO: test rightBorderSpace
     }
 
@@ -206,7 +204,7 @@ public class DocxTableTest {
      * Test the property 'rightBorderColor'
      */
     @Test
-    public void rightBorderColorTest() {
+    void rightBorderColorTest() {
         // TODO: test rightBorderColor
     }
 
@@ -214,7 +212,7 @@ public class DocxTableTest {
      * Test the property 'cellHorizontalBorderType'
      */
     @Test
-    public void cellHorizontalBorderTypeTest() {
+    void cellHorizontalBorderTypeTest() {
         // TODO: test cellHorizontalBorderType
     }
 
@@ -222,7 +220,7 @@ public class DocxTableTest {
      * Test the property 'cellHorizontalBorderSize'
      */
     @Test
-    public void cellHorizontalBorderSizeTest() {
+    void cellHorizontalBorderSizeTest() {
         // TODO: test cellHorizontalBorderSize
     }
 
@@ -230,7 +228,7 @@ public class DocxTableTest {
      * Test the property 'cellHorizontalBorderSpace'
      */
     @Test
-    public void cellHorizontalBorderSpaceTest() {
+    void cellHorizontalBorderSpaceTest() {
         // TODO: test cellHorizontalBorderSpace
     }
 
@@ -238,7 +236,7 @@ public class DocxTableTest {
      * Test the property 'cellHorizontalBorderColor'
      */
     @Test
-    public void cellHorizontalBorderColorTest() {
+    void cellHorizontalBorderColorTest() {
         // TODO: test cellHorizontalBorderColor
     }
 
@@ -246,7 +244,7 @@ public class DocxTableTest {
      * Test the property 'cellVerticalBorderType'
      */
     @Test
-    public void cellVerticalBorderTypeTest() {
+    void cellVerticalBorderTypeTest() {
         // TODO: test cellVerticalBorderType
     }
 
@@ -254,7 +252,7 @@ public class DocxTableTest {
      * Test the property 'cellVerticalBorderSize'
      */
     @Test
-    public void cellVerticalBorderSizeTest() {
+    void cellVerticalBorderSizeTest() {
         // TODO: test cellVerticalBorderSize
     }
 
@@ -262,7 +260,7 @@ public class DocxTableTest {
      * Test the property 'cellVerticalBorderSpace'
      */
     @Test
-    public void cellVerticalBorderSpaceTest() {
+    void cellVerticalBorderSpaceTest() {
         // TODO: test cellVerticalBorderSpace
     }
 
@@ -270,7 +268,7 @@ public class DocxTableTest {
      * Test the property 'cellVerticalBorderColor'
      */
     @Test
-    public void cellVerticalBorderColorTest() {
+    void cellVerticalBorderColorTest() {
         // TODO: test cellVerticalBorderColor
     }
 
@@ -278,7 +276,7 @@ public class DocxTableTest {
      * Test the property 'startBorderType'
      */
     @Test
-    public void startBorderTypeTest() {
+    void startBorderTypeTest() {
         // TODO: test startBorderType
     }
 
@@ -286,7 +284,7 @@ public class DocxTableTest {
      * Test the property 'startBorderSize'
      */
     @Test
-    public void startBorderSizeTest() {
+    void startBorderSizeTest() {
         // TODO: test startBorderSize
     }
 
@@ -294,7 +292,7 @@ public class DocxTableTest {
      * Test the property 'startBorderSpace'
      */
     @Test
-    public void startBorderSpaceTest() {
+    void startBorderSpaceTest() {
         // TODO: test startBorderSpace
     }
 
@@ -302,7 +300,7 @@ public class DocxTableTest {
      * Test the property 'startBorderColor'
      */
     @Test
-    public void startBorderColorTest() {
+    void startBorderColorTest() {
         // TODO: test startBorderColor
     }
 
@@ -310,7 +308,7 @@ public class DocxTableTest {
      * Test the property 'endBorderType'
      */
     @Test
-    public void endBorderTypeTest() {
+    void endBorderTypeTest() {
         // TODO: test endBorderType
     }
 
@@ -318,7 +316,7 @@ public class DocxTableTest {
      * Test the property 'endBorderSize'
      */
     @Test
-    public void endBorderSizeTest() {
+    void endBorderSizeTest() {
         // TODO: test endBorderSize
     }
 
@@ -326,7 +324,7 @@ public class DocxTableTest {
      * Test the property 'endBorderSpace'
      */
     @Test
-    public void endBorderSpaceTest() {
+    void endBorderSpaceTest() {
         // TODO: test endBorderSpace
     }
 
@@ -334,7 +332,7 @@ public class DocxTableTest {
      * Test the property 'endBorderColor'
      */
     @Test
-    public void endBorderColorTest() {
+    void endBorderColorTest() {
         // TODO: test endBorderColor
     }
 
@@ -342,7 +340,7 @@ public class DocxTableTest {
      * Test the property 'tableIndentationMode'
      */
     @Test
-    public void tableIndentationModeTest() {
+    void tableIndentationModeTest() {
         // TODO: test tableIndentationMode
     }
 
@@ -350,7 +348,7 @@ public class DocxTableTest {
      * Test the property 'tableIndentationWidth'
      */
     @Test
-    public void tableIndentationWidthTest() {
+    void tableIndentationWidthTest() {
         // TODO: test tableIndentationWidth
     }
 

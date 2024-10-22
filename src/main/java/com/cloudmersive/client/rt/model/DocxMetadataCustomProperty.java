@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Name and value pair for a custom-defined DOCX metadata property
  */
-@ApiModel(description = "Name and value pair for a custom-defined DOCX metadata property")
 @JsonPropertyOrder({
   DocxMetadataCustomProperty.JSON_PROPERTY_PROPERTY_NAME,
   DocxMetadataCustomProperty.JSON_PROPERTY_PROPERTY_DATA_TYPE,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxMetadataCustomProperty.JSON_PROPERTY_DOUBLE_VALUE,
   DocxMetadataCustomProperty.JSON_PROPERTY_DATE_VALUE
 })
-@JsonTypeName("DocxMetadataCustomProperty")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxMetadataCustomProperty {
   public static final String JSON_PROPERTY_PROPERTY_NAME = "PropertyName";
   private String propertyName;
@@ -58,6 +55,8 @@ public class DocxMetadataCustomProperty {
   public static final String JSON_PROPERTY_DATE_VALUE = "DateValue";
   private OffsetDateTime dateValue;
 
+  public DocxMetadataCustomProperty() {
+  }
 
   public DocxMetadataCustomProperty propertyName(String propertyName) {
     
@@ -65,12 +64,11 @@ public class DocxMetadataCustomProperty {
     return this;
   }
 
-   /**
+  /**
    * Name of the property
    * @return propertyName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the property")
   @JsonProperty(JSON_PROPERTY_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -79,10 +77,11 @@ public class DocxMetadataCustomProperty {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROPERTY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPropertyName(String propertyName) {
     this.propertyName = propertyName;
   }
-
 
   public DocxMetadataCustomProperty propertyDataType(String propertyDataType) {
     
@@ -90,12 +89,11 @@ public class DocxMetadataCustomProperty {
     return this;
   }
 
-   /**
+  /**
    * Data type of the property; possible values are \&quot;string\&quot;, \&quot;integer\&quot;, \&quot;double\&quot; or \&quot;date\&quot;
    * @return propertyDataType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Data type of the property; possible values are \"string\", \"integer\", \"double\" or \"date\"")
   @JsonProperty(JSON_PROPERTY_PROPERTY_DATA_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -104,10 +102,11 @@ public class DocxMetadataCustomProperty {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PROPERTY_DATA_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPropertyDataType(String propertyDataType) {
     this.propertyDataType = propertyDataType;
   }
-
 
   public DocxMetadataCustomProperty stringValue(String stringValue) {
     
@@ -115,12 +114,11 @@ public class DocxMetadataCustomProperty {
     return this;
   }
 
-   /**
+  /**
    * If the property is of a string data type, then provides the string value if available
    * @return stringValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the property is of a string data type, then provides the string value if available")
   @JsonProperty(JSON_PROPERTY_STRING_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,10 +127,11 @@ public class DocxMetadataCustomProperty {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STRING_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStringValue(String stringValue) {
     this.stringValue = stringValue;
   }
-
 
   public DocxMetadataCustomProperty integerValue(Long integerValue) {
     
@@ -140,12 +139,11 @@ public class DocxMetadataCustomProperty {
     return this;
   }
 
-   /**
+  /**
    * If the property is of a integer data type, then provides the integer value if available
    * @return integerValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the property is of a integer data type, then provides the integer value if available")
   @JsonProperty(JSON_PROPERTY_INTEGER_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -154,10 +152,11 @@ public class DocxMetadataCustomProperty {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INTEGER_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIntegerValue(Long integerValue) {
     this.integerValue = integerValue;
   }
-
 
   public DocxMetadataCustomProperty doubleValue(Double doubleValue) {
     
@@ -165,12 +164,11 @@ public class DocxMetadataCustomProperty {
     return this;
   }
 
-   /**
+  /**
    * If the property is of a double floating point data type, then provides the double value if available
    * @return doubleValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the property is of a double floating point data type, then provides the double value if available")
   @JsonProperty(JSON_PROPERTY_DOUBLE_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,10 +177,11 @@ public class DocxMetadataCustomProperty {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DOUBLE_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDoubleValue(Double doubleValue) {
     this.doubleValue = doubleValue;
   }
-
 
   public DocxMetadataCustomProperty dateValue(OffsetDateTime dateValue) {
     
@@ -190,12 +189,11 @@ public class DocxMetadataCustomProperty {
     return this;
   }
 
-   /**
+  /**
    * If the property is of a date time data type, then provides the date time value if available
    * @return dateValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "If the property is of a date time data type, then provides the date time value if available")
   @JsonProperty(JSON_PROPERTY_DATE_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,10 +202,11 @@ public class DocxMetadataCustomProperty {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATE_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDateValue(OffsetDateTime dateValue) {
     this.dateValue = dateValue;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -230,7 +229,6 @@ public class DocxMetadataCustomProperty {
   public int hashCode() {
     return Objects.hash(propertyName, propertyDataType, stringValue, integerValue, doubleValue, dateValue);
   }
-
 
   @Override
   public String toString() {

@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of parsing an address into its component parts
  */
-@ApiModel(description = "Result of parsing an address into its component parts")
 @JsonPropertyOrder({
   ParseAddressResponse.JSON_PROPERTY_SUCCESSFUL,
   ParseAddressResponse.JSON_PROPERTY_BUILDING,
@@ -39,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ParseAddressResponse.JSON_PROPERTY_COUNTRY_FULL_NAME,
   ParseAddressResponse.JSON_PROPERTY_IS_O_TWO_LETTER_CODE
 })
-@JsonTypeName("ParseAddressResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ParseAddressResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -69,6 +66,8 @@ public class ParseAddressResponse {
   public static final String JSON_PROPERTY_IS_O_TWO_LETTER_CODE = "ISOTwoLetterCode";
   private String isOTwoLetterCode;
 
+  public ParseAddressResponse() {
+  }
 
   public ParseAddressResponse successful(Boolean successful) {
     
@@ -76,12 +75,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the parsing operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the parsing operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,10 +88,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ParseAddressResponse building(String building) {
     
@@ -101,12 +100,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the building, house or structure if applicable, such as \&quot;Cloudmersive Building 2\&quot;.  This will often by null.
    * @return building
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the building, house or structure if applicable, such as \"Cloudmersive Building 2\".  This will often by null.")
   @JsonProperty(JSON_PROPERTY_BUILDING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,10 +113,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUILDING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBuilding(String building) {
     this.building = building;
   }
-
 
   public ParseAddressResponse streetNumber(String streetNumber) {
     
@@ -126,12 +125,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The street number or house number of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;1600\&quot;.  This value will typically be populated for most addresses.
    * @return streetNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The street number or house number of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"1600\".  This value will typically be populated for most addresses.")
   @JsonProperty(JSON_PROPERTY_STREET_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,10 +138,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STREET_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStreetNumber(String streetNumber) {
     this.streetNumber = streetNumber;
   }
-
 
   public ParseAddressResponse street(String street) {
     
@@ -151,12 +150,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The name of the street or road of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;Pennsylvania Avenue NW\&quot;.
    * @return street
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the street or road of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"Pennsylvania Avenue NW\".")
   @JsonProperty(JSON_PROPERTY_STREET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -165,10 +163,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STREET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStreet(String street) {
     this.street = street;
   }
-
 
   public ParseAddressResponse city(String city) {
     
@@ -176,12 +175,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The city of the address.
    * @return city
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The city of the address.")
   @JsonProperty(JSON_PROPERTY_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,10 +188,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCity(String city) {
     this.city = city;
   }
-
 
   public ParseAddressResponse stateOrProvince(String stateOrProvince) {
     
@@ -201,12 +200,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The state or province of the address.
    * @return stateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The state or province of the address.")
   @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -215,10 +213,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStateOrProvince(String stateOrProvince) {
     this.stateOrProvince = stateOrProvince;
   }
-
 
   public ParseAddressResponse postalCode(String postalCode) {
     
@@ -226,12 +225,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * The postal code or zip code of the address.
    * @return postalCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The postal code or zip code of the address.")
   @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -240,10 +238,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_POSTAL_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPostalCode(String postalCode) {
     this.postalCode = postalCode;
   }
-
 
   public ParseAddressResponse countryFullName(String countryFullName) {
     
@@ -251,12 +250,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Country of the address, if present in the address.  If not included in the address it will be null.
    * @return countryFullName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Country of the address, if present in the address.  If not included in the address it will be null.")
   @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -265,10 +263,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_FULL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryFullName(String countryFullName) {
     this.countryFullName = countryFullName;
   }
-
 
   public ParseAddressResponse isOTwoLetterCode(String isOTwoLetterCode) {
     
@@ -276,12 +275,11 @@ public class ParseAddressResponse {
     return this;
   }
 
-   /**
+  /**
    * Two-letter ISO 3166-1 country code
    * @return isOTwoLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -290,10 +288,11 @@ public class ParseAddressResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_O_TWO_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsOTwoLetterCode(String isOTwoLetterCode) {
     this.isOTwoLetterCode = isOTwoLetterCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -319,7 +318,6 @@ public class ParseAddressResponse {
   public int hashCode() {
     return Objects.hash(successful, building, streetNumber, street, city, stateOrProvince, postalCode, countryFullName, isOTwoLetterCode);
   }
-
 
   @Override
   public String toString() {

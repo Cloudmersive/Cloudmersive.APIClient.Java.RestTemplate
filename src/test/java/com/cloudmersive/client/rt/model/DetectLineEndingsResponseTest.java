@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DetectLineEndingsResponse
  */
-public class DetectLineEndingsResponseTest {
+class DetectLineEndingsResponseTest {
     private final DetectLineEndingsResponse model = new DetectLineEndingsResponse();
 
     /**
      * Model tests for DetectLineEndingsResponse
      */
     @Test
-    public void testDetectLineEndingsResponse() {
+    void testDetectLineEndingsResponse() {
         // TODO: test DetectLineEndingsResponse
     }
 
@@ -43,7 +40,7 @@ public class DetectLineEndingsResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class DetectLineEndingsResponseTest {
      * Test the property 'primaryNewlineType'
      */
     @Test
-    public void primaryNewlineTypeTest() {
+    void primaryNewlineTypeTest() {
         // TODO: test primaryNewlineType
     }
 
@@ -59,7 +56,7 @@ public class DetectLineEndingsResponseTest {
      * Test the property 'primaryNewlineTerminator'
      */
     @Test
-    public void primaryNewlineTerminatorTest() {
+    void primaryNewlineTerminatorTest() {
         // TODO: test primaryNewlineTerminator
     }
 
@@ -67,7 +64,7 @@ public class DetectLineEndingsResponseTest {
      * Test the property 'inputLength'
      */
     @Test
-    public void inputLengthTest() {
+    void inputLengthTest() {
         // TODO: test inputLength
     }
 

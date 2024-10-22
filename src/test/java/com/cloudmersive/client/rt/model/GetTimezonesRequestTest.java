@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetTimezonesRequest
  */
-public class GetTimezonesRequestTest {
+class GetTimezonesRequestTest {
     private final GetTimezonesRequest model = new GetTimezonesRequest();
 
     /**
      * Model tests for GetTimezonesRequest
      */
     @Test
-    public void testGetTimezonesRequest() {
+    void testGetTimezonesRequest() {
         // TODO: test GetTimezonesRequest
     }
 
@@ -43,7 +40,7 @@ public class GetTimezonesRequestTest {
      * Test the property 'countryCodeOrName'
      */
     @Test
-    public void countryCodeOrNameTest() {
+    void countryCodeOrNameTest() {
         // TODO: test countryCodeOrName
     }
 

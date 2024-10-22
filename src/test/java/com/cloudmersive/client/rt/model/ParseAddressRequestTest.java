@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ParseAddressRequest
  */
-public class ParseAddressRequestTest {
+class ParseAddressRequestTest {
     private final ParseAddressRequest model = new ParseAddressRequest();
 
     /**
      * Model tests for ParseAddressRequest
      */
     @Test
-    public void testParseAddressRequest() {
+    void testParseAddressRequest() {
         // TODO: test ParseAddressRequest
     }
 
@@ -43,7 +40,7 @@ public class ParseAddressRequestTest {
      * Test the property 'addressString'
      */
     @Test
-    public void addressStringTest() {
+    void addressStringTest() {
         // TODO: test addressString
     }
 
@@ -51,7 +48,7 @@ public class ParseAddressRequestTest {
      * Test the property 'capitalizationMode'
      */
     @Test
-    public void capitalizationModeTest() {
+    void capitalizationModeTest() {
         // TODO: test capitalizationMode
     }
 

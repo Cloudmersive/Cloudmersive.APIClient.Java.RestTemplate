@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for GetXlsxCellByIdentifierResponse
  */
-public class GetXlsxCellByIdentifierResponseTest {
+class GetXlsxCellByIdentifierResponseTest {
     private final GetXlsxCellByIdentifierResponse model = new GetXlsxCellByIdentifierResponse();
 
     /**
      * Model tests for GetXlsxCellByIdentifierResponse
      */
     @Test
-    public void testGetXlsxCellByIdentifierResponse() {
+    void testGetXlsxCellByIdentifierResponse() {
         // TODO: test GetXlsxCellByIdentifierResponse
     }
 
@@ -44,7 +41,7 @@ public class GetXlsxCellByIdentifierResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -52,7 +49,7 @@ public class GetXlsxCellByIdentifierResponseTest {
      * Test the property 'cell'
      */
     @Test
-    public void cellTest() {
+    void cellTest() {
         // TODO: test cell
     }
 

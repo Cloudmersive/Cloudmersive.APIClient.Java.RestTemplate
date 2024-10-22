@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XmlQueryWithXQueryMultiResult
  */
-public class XmlQueryWithXQueryMultiResultTest {
+class XmlQueryWithXQueryMultiResultTest {
     private final XmlQueryWithXQueryMultiResult model = new XmlQueryWithXQueryMultiResult();
 
     /**
      * Model tests for XmlQueryWithXQueryMultiResult
      */
     @Test
-    public void testXmlQueryWithXQueryMultiResult() {
+    void testXmlQueryWithXQueryMultiResult() {
         // TODO: test XmlQueryWithXQueryMultiResult
     }
 
@@ -43,7 +40,7 @@ public class XmlQueryWithXQueryMultiResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class XmlQueryWithXQueryMultiResultTest {
      * Test the property 'resultingXml'
      */
     @Test
-    public void resultingXmlTest() {
+    void resultingXmlTest() {
         // TODO: test resultingXml
     }
 
@@ -59,7 +56,7 @@ public class XmlQueryWithXQueryMultiResultTest {
      * Test the property 'errorMessage'
      */
     @Test
-    public void errorMessageTest() {
+    void errorMessageTest() {
         // TODO: test errorMessage
     }
 

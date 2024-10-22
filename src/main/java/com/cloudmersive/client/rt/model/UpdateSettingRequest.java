@@ -21,21 +21,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to update a setting
  */
-@ApiModel(description = "Request to update a setting")
 @JsonPropertyOrder({
   UpdateSettingRequest.JSON_PROPERTY_BUCKET_I_D,
   UpdateSettingRequest.JSON_PROPERTY_BUCKET_SECRET_KEY,
   UpdateSettingRequest.JSON_PROPERTY_SETTING_TO_UPDATE
 })
-@JsonTypeName("UpdateSettingRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UpdateSettingRequest {
   public static final String JSON_PROPERTY_BUCKET_I_D = "BucketID";
   private String bucketID;
@@ -46,6 +43,8 @@ public class UpdateSettingRequest {
   public static final String JSON_PROPERTY_SETTING_TO_UPDATE = "SettingToUpdate";
   private SettingValue settingToUpdate;
 
+  public UpdateSettingRequest() {
+  }
 
   public UpdateSettingRequest bucketID(String bucketID) {
     
@@ -53,12 +52,11 @@ public class UpdateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Get bucketID
    * @return bucketID
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_BUCKET_I_D)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class UpdateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUCKET_I_D)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBucketID(String bucketID) {
     this.bucketID = bucketID;
   }
-
 
   public UpdateSettingRequest bucketSecretKey(String bucketSecretKey) {
     
@@ -78,12 +77,11 @@ public class UpdateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Get bucketSecretKey
    * @return bucketSecretKey
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_BUCKET_SECRET_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class UpdateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUCKET_SECRET_KEY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBucketSecretKey(String bucketSecretKey) {
     this.bucketSecretKey = bucketSecretKey;
   }
-
 
   public UpdateSettingRequest settingToUpdate(SettingValue settingToUpdate) {
     
@@ -103,12 +102,11 @@ public class UpdateSettingRequest {
     return this;
   }
 
-   /**
+  /**
    * Get settingToUpdate
    * @return settingToUpdate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_SETTING_TO_UPDATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class UpdateSettingRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SETTING_TO_UPDATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSettingToUpdate(SettingValue settingToUpdate) {
     this.settingToUpdate = settingToUpdate;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class UpdateSettingRequest {
   public int hashCode() {
     return Objects.hash(bucketID, bucketSecretKey, settingToUpdate);
   }
-
 
   @Override
   public String toString() {

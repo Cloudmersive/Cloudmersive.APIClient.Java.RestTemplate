@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import java.io.File;
 import com.cloudmersive.client.rt.model.NsfwResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for NsfwApi
  */
-@Ignore
-public class NsfwApiTest {
+@Disabled
+class NsfwApiTest {
 
     private final NsfwApi api = new NsfwApi();
 
@@ -37,12 +40,13 @@ public class NsfwApiTest {
      *
      * Classify an image into Not Safe For Work (NSFW)/Porn/Racy content and Safe Content.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void nsfwClassifyTest() {
+    void nsfwClassifyTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         NsfwResult response = api.nsfwClassify(imageFile);
 
         // TODO: test validations

@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Entity
@@ -31,8 +30,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   Entity.JSON_PROPERTY_ENTITY_TYPE,
   Entity.JSON_PROPERTY_ENTITY_TEXT
 })
-@JsonTypeName("Entity")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Entity {
   public static final String JSON_PROPERTY_ENTITY_TYPE = "EntityType";
   private String entityType;
@@ -40,6 +38,8 @@ public class Entity {
   public static final String JSON_PROPERTY_ENTITY_TEXT = "EntityText";
   private String entityText;
 
+  public Entity() {
+  }
 
   public Entity entityType(String entityType) {
     
@@ -47,12 +47,11 @@ public class Entity {
     return this;
   }
 
-   /**
+  /**
    * Get entityType
    * @return entityType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_ENTITY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -61,10 +60,11 @@ public class Entity {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENTITY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEntityType(String entityType) {
     this.entityType = entityType;
   }
-
 
   public Entity entityText(String entityText) {
     
@@ -72,12 +72,11 @@ public class Entity {
     return this;
   }
 
-   /**
+  /**
    * Get entityText
    * @return entityText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_ENTITY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,10 +85,11 @@ public class Entity {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENTITY_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEntityText(String entityText) {
     this.entityText = entityText;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -108,7 +108,6 @@ public class Entity {
   public int hashCode() {
     return Objects.hash(entityType, entityText);
   }
-
 
   @Override
   public String toString() {

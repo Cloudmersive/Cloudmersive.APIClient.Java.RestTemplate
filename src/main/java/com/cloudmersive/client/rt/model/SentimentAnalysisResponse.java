@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Output of a sentiment analysis operation
  */
-@ApiModel(description = "Output of a sentiment analysis operation")
 @JsonPropertyOrder({
   SentimentAnalysisResponse.JSON_PROPERTY_SUCCESSFUL,
   SentimentAnalysisResponse.JSON_PROPERTY_SENTIMENT_CLASSIFICATION_RESULT,
   SentimentAnalysisResponse.JSON_PROPERTY_SENTIMENT_SCORE_RESULT,
   SentimentAnalysisResponse.JSON_PROPERTY_SENTENCE_COUNT
 })
-@JsonTypeName("SentimentAnalysisResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SentimentAnalysisResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -49,6 +46,8 @@ public class SentimentAnalysisResponse {
   public static final String JSON_PROPERTY_SENTENCE_COUNT = "SentenceCount";
   private Integer sentenceCount;
 
+  public SentimentAnalysisResponse() {
+  }
 
   public SentimentAnalysisResponse successful(Boolean successful) {
     
@@ -56,12 +55,11 @@ public class SentimentAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the sentiment analysis operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the sentiment analysis operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class SentimentAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public SentimentAnalysisResponse sentimentClassificationResult(String sentimentClassificationResult) {
     
@@ -81,12 +80,11 @@ public class SentimentAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Classification of input text into a sentiment classification; possible values are \&quot;Positive\&quot;, \&quot;Negative\&quot; or \&quot;Neutral\&quot;
    * @return sentimentClassificationResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Classification of input text into a sentiment classification; possible values are \"Positive\", \"Negative\" or \"Neutral\"")
   @JsonProperty(JSON_PROPERTY_SENTIMENT_CLASSIFICATION_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class SentimentAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTIMENT_CLASSIFICATION_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentimentClassificationResult(String sentimentClassificationResult) {
     this.sentimentClassificationResult = sentimentClassificationResult;
   }
-
 
   public SentimentAnalysisResponse sentimentScoreResult(Double sentimentScoreResult) {
     
@@ -106,12 +105,11 @@ public class SentimentAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
    * @return sentimentScoreResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.")
   @JsonProperty(JSON_PROPERTY_SENTIMENT_SCORE_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class SentimentAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTIMENT_SCORE_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentimentScoreResult(Double sentimentScoreResult) {
     this.sentimentScoreResult = sentimentScoreResult;
   }
-
 
   public SentimentAnalysisResponse sentenceCount(Integer sentenceCount) {
     
@@ -131,12 +130,11 @@ public class SentimentAnalysisResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of sentences in input text
    * @return sentenceCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of sentences in input text")
   @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class SentimentAnalysisResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SENTENCE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSentenceCount(Integer sentenceCount) {
     this.sentenceCount = sentenceCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class SentimentAnalysisResponse {
   public int hashCode() {
     return Objects.hash(successful, sentimentClassificationResult, sentimentScoreResult, sentenceCount);
   }
-
 
   @Override
   public String toString() {

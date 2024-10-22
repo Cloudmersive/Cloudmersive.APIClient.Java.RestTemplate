@@ -2,11 +2,11 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**currencyExchangeConvertCurrency**](CurrencyExchangeApi.md#currencyExchangeConvertCurrency) | **POST** /currency/exchange-rates/convert/{source}/to/{destination} | Converts a price from the source currency into the destination currency
-[**currencyExchangeGetAvailableCurrencies**](CurrencyExchangeApi.md#currencyExchangeGetAvailableCurrencies) | **POST** /currency/exchange-rates/list-available | Get a list of available currencies and corresponding countries
-[**currencyExchangeGetExchangeRate**](CurrencyExchangeApi.md#currencyExchangeGetExchangeRate) | **POST** /currency/exchange-rates/get/{source}/to/{destination} | Gets the exchange rate from the source currency into the destination currency
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**currencyExchangeConvertCurrency**](CurrencyExchangeApi.md#currencyExchangeConvertCurrency) | **POST** /currency/exchange-rates/convert/{source}/to/{destination} | Converts a price from the source currency into the destination currency |
+| [**currencyExchangeGetAvailableCurrencies**](CurrencyExchangeApi.md#currencyExchangeGetAvailableCurrencies) | **POST** /currency/exchange-rates/list-available | Get a list of available currencies and corresponding countries |
+| [**currencyExchangeGetExchangeRate**](CurrencyExchangeApi.md#currencyExchangeGetExchangeRate) | **POST** /currency/exchange-rates/get/{source}/to/{destination} | Gets the exchange rate from the source currency into the destination currency |
 
 
 
@@ -61,11 +61,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **source** | **String**| Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc. |
- **destination** | **String**| Destination currency three-digit code (ISO 4217), e.g. USD, EUR, etc. |
- **sourcePrice** | **Double**| Input price, such as 19.99 in source currency |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **source** | **String**| Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc. | |
+| **destination** | **String**| Destination currency three-digit code (ISO 4217), e.g. USD, EUR, etc. | |
+| **sourcePrice** | **Double**| Input price, such as 19.99 in source currency | |
 
 ### Return type
 
@@ -79,6 +79,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -148,6 +149,7 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: application/json, text/json, application/xml, text/xml
 
+
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
@@ -204,10 +206,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **source** | **String**| Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc. |
- **destination** | **String**| Destination currency three-digit code (ISO 4217), e.g. USD, EUR, etc. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **source** | **String**| Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc. | |
+| **destination** | **String**| Destination currency three-digit code (ISO 4217), e.g. USD, EUR, etc. | |
 
 ### Return type
 
@@ -221,6 +223,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: Not defined
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Sections command
  */
-@ApiModel(description = "Result of running a Get-Sections command")
 @JsonPropertyOrder({
   GetDocxSectionsResponse.JSON_PROPERTY_SUCCESSFUL,
   GetDocxSectionsResponse.JSON_PROPERTY_SECTIONS
 })
-@JsonTypeName("GetDocxSectionsResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxSectionsResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_SECTIONS = "Sections";
-  private List<DocxSection> sections = null;
+  private List<DocxSection> sections = new ArrayList<>();
 
+  public GetDocxSectionsResponse() {
+  }
 
   public GetDocxSectionsResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class GetDocxSectionsResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class GetDocxSectionsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetDocxSectionsResponse sections(List<DocxSection> sections) {
     
@@ -78,18 +78,17 @@ public class GetDocxSectionsResponse {
 
   public GetDocxSectionsResponse addSectionsItem(DocxSection sectionsItem) {
     if (this.sections == null) {
-      this.sections = new ArrayList<DocxSection>();
+      this.sections = new ArrayList<>();
     }
     this.sections.add(sectionsItem);
     return this;
   }
 
-   /**
+  /**
    * Sections in the DOCX document
    * @return sections
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sections in the DOCX document")
   @JsonProperty(JSON_PROPERTY_SECTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class GetDocxSectionsResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SECTIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSections(List<DocxSection> sections) {
     this.sections = sections;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class GetDocxSectionsResponse {
   public int hashCode() {
     return Objects.hash(successful, sections);
   }
-
 
   @Override
   public String toString() {

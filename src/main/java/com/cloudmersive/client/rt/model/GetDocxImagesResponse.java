@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Images command
  */
-@ApiModel(description = "Result of running a Get-Images command")
 @JsonPropertyOrder({
   GetDocxImagesResponse.JSON_PROPERTY_SUCCESSFUL,
   GetDocxImagesResponse.JSON_PROPERTY_IMAGES
 })
-@JsonTypeName("GetDocxImagesResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxImagesResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_IMAGES = "Images";
-  private List<DocxImage> images = null;
+  private List<DocxImage> images = new ArrayList<>();
 
+  public GetDocxImagesResponse() {
+  }
 
   public GetDocxImagesResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class GetDocxImagesResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class GetDocxImagesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetDocxImagesResponse images(List<DocxImage> images) {
     
@@ -78,18 +78,17 @@ public class GetDocxImagesResponse {
 
   public GetDocxImagesResponse addImagesItem(DocxImage imagesItem) {
     if (this.images == null) {
-      this.images = new ArrayList<DocxImage>();
+      this.images = new ArrayList<>();
     }
     this.images.add(imagesItem);
     return this;
   }
 
-   /**
+  /**
    * Images in the DOCX document
    * @return images
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Images in the DOCX document")
   @JsonProperty(JSON_PROPERTY_IMAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class GetDocxImagesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImages(List<DocxImage> images) {
     this.images = images;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class GetDocxImagesResponse {
   public int hashCode() {
     return Objects.hash(successful, images);
   }
-
 
   @Override
   public String toString() {

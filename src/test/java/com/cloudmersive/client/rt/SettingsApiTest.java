@@ -19,9 +19,12 @@ import com.cloudmersive.client.rt.model.ListSettingsRequest;
 import com.cloudmersive.client.rt.model.ListSettingsResponse;
 import com.cloudmersive.client.rt.model.UpdateSettingRequest;
 import com.cloudmersive.client.rt.model.UpdateSettingResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,8 +33,8 @@ import java.util.Map;
 /**
  * API tests for SettingsApi
  */
-@Ignore
-public class SettingsApiTest {
+@Disabled
+class SettingsApiTest {
 
     private final SettingsApi api = new SettingsApi();
 
@@ -41,12 +44,13 @@ public class SettingsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void settingsCreateSettingTest() {
+    void settingsCreateSettingTest() {
         CreateSettingRequest request = null;
+
         CreateSettingResponse response = api.settingsCreateSetting(request);
 
         // TODO: test validations
@@ -57,12 +61,13 @@ public class SettingsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void settingsListSettingsTest() {
+    void settingsListSettingsTest() {
         ListSettingsRequest request = null;
+
         ListSettingsResponse response = api.settingsListSettings(request);
 
         // TODO: test validations
@@ -73,12 +78,13 @@ public class SettingsApiTest {
      *
      * 
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void settingsUpdateSettingTest() {
+    void settingsUpdateSettingTest() {
         UpdateSettingRequest request = null;
+
         UpdateSettingResponse response = api.settingsUpdateSetting(request);
 
         // TODO: test validations

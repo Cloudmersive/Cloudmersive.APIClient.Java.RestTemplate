@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FindStringMatch
  */
-public class FindStringMatchTest {
+class FindStringMatchTest {
     private final FindStringMatch model = new FindStringMatch();
 
     /**
      * Model tests for FindStringMatch
      */
     @Test
-    public void testFindStringMatch() {
+    void testFindStringMatch() {
         // TODO: test FindStringMatch
     }
 
@@ -43,7 +40,7 @@ public class FindStringMatchTest {
      * Test the property 'characterOffsetStart'
      */
     @Test
-    public void characterOffsetStartTest() {
+    void characterOffsetStartTest() {
         // TODO: test characterOffsetStart
     }
 
@@ -51,7 +48,7 @@ public class FindStringMatchTest {
      * Test the property 'characterOffsetEnd'
      */
     @Test
-    public void characterOffsetEndTest() {
+    void characterOffsetEndTest() {
         // TODO: test characterOffsetEnd
     }
 
@@ -59,7 +56,7 @@ public class FindStringMatchTest {
      * Test the property 'containingLine'
      */
     @Test
-    public void containingLineTest() {
+    void containingLineTest() {
         // TODO: test containingLine
     }
 

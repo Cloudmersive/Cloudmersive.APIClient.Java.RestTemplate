@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a IP threat check on an IP address
  */
-@ApiModel(description = "Result of performing a IP threat check on an IP address")
 @JsonPropertyOrder({
   IPThreatResponse.JSON_PROPERTY_IS_THREAT,
   IPThreatResponse.JSON_PROPERTY_THREAT_TYPE
 })
-@JsonTypeName("IPThreatResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class IPThreatResponse {
   public static final String JSON_PROPERTY_IS_THREAT = "IsThreat";
   private Boolean isThreat;
@@ -41,6 +38,8 @@ public class IPThreatResponse {
   public static final String JSON_PROPERTY_THREAT_TYPE = "ThreatType";
   private String threatType;
 
+  public IPThreatResponse() {
+  }
 
   public IPThreatResponse isThreat(Boolean isThreat) {
     
@@ -48,12 +47,11 @@ public class IPThreatResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the input IP address is a threat, false otherwise
    * @return isThreat
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input IP address is a threat, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_THREAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class IPThreatResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_THREAT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsThreat(Boolean isThreat) {
     this.isThreat = isThreat;
   }
-
 
   public IPThreatResponse threatType(String threatType) {
     
@@ -73,12 +72,11 @@ public class IPThreatResponse {
     return this;
   }
 
-   /**
+  /**
    * Specifies the type of IP threat; possible values include Blocklist, Botnet, WebBot
    * @return threatType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Specifies the type of IP threat; possible values include Blocklist, Botnet, WebBot")
   @JsonProperty(JSON_PROPERTY_THREAT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class IPThreatResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_THREAT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setThreatType(String threatType) {
     this.threatType = threatType;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class IPThreatResponse {
   public int hashCode() {
     return Objects.hash(isThreat, threatType);
   }
-
 
   @Override
   public String toString() {

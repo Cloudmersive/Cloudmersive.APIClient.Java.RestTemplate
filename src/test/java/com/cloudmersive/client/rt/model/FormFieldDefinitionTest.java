@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FormFieldDefinition
  */
-public class FormFieldDefinitionTest {
+class FormFieldDefinitionTest {
     private final FormFieldDefinition model = new FormFieldDefinition();
 
     /**
      * Model tests for FormFieldDefinition
      */
     @Test
-    public void testFormFieldDefinition() {
+    void testFormFieldDefinition() {
         // TODO: test FormFieldDefinition
     }
 
@@ -45,7 +43,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'fieldID'
      */
     @Test
-    public void fieldIDTest() {
+    void fieldIDTest() {
         // TODO: test fieldID
     }
 
@@ -53,7 +51,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'leftAnchor'
      */
     @Test
-    public void leftAnchorTest() {
+    void leftAnchorTest() {
         // TODO: test leftAnchor
     }
 
@@ -61,7 +59,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'topAnchor'
      */
     @Test
-    public void topAnchorTest() {
+    void topAnchorTest() {
         // TODO: test topAnchor
     }
 
@@ -69,7 +67,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'bottomAnchor'
      */
     @Test
-    public void bottomAnchorTest() {
+    void bottomAnchorTest() {
         // TODO: test bottomAnchor
     }
 
@@ -77,7 +75,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'alternateAnchor'
      */
     @Test
-    public void alternateAnchorTest() {
+    void alternateAnchorTest() {
         // TODO: test alternateAnchor
     }
 
@@ -85,7 +83,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'anchorMode'
      */
     @Test
-    public void anchorModeTest() {
+    void anchorModeTest() {
         // TODO: test anchorMode
     }
 
@@ -93,7 +91,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'dataType'
      */
     @Test
-    public void dataTypeTest() {
+    void dataTypeTest() {
         // TODO: test dataType
     }
 
@@ -101,7 +99,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'targetDigitCount'
      */
     @Test
-    public void targetDigitCountTest() {
+    void targetDigitCountTest() {
         // TODO: test targetDigitCount
     }
 
@@ -109,7 +107,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'minimumCharacterCount'
      */
     @Test
-    public void minimumCharacterCountTest() {
+    void minimumCharacterCountTest() {
         // TODO: test minimumCharacterCount
     }
 
@@ -117,7 +115,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'allowNumericDigits'
      */
     @Test
-    public void allowNumericDigitsTest() {
+    void allowNumericDigitsTest() {
         // TODO: test allowNumericDigits
     }
 
@@ -125,7 +123,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'verticalAlignmentType'
      */
     @Test
-    public void verticalAlignmentTypeTest() {
+    void verticalAlignmentTypeTest() {
         // TODO: test verticalAlignmentType
     }
 
@@ -133,7 +131,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'horizontalAlignmentType'
      */
     @Test
-    public void horizontalAlignmentTypeTest() {
+    void horizontalAlignmentTypeTest() {
         // TODO: test horizontalAlignmentType
     }
 
@@ -141,7 +139,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'targetFieldWidthRelative'
      */
     @Test
-    public void targetFieldWidthRelativeTest() {
+    void targetFieldWidthRelativeTest() {
         // TODO: test targetFieldWidthRelative
     }
 
@@ -149,7 +147,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'targetFieldHeightRelative'
      */
     @Test
-    public void targetFieldHeightRelativeTest() {
+    void targetFieldHeightRelativeTest() {
         // TODO: test targetFieldHeightRelative
     }
 
@@ -157,7 +155,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'targetFieldHorizontalAdjustment'
      */
     @Test
-    public void targetFieldHorizontalAdjustmentTest() {
+    void targetFieldHorizontalAdjustmentTest() {
         // TODO: test targetFieldHorizontalAdjustment
     }
 
@@ -165,7 +163,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'targetFieldVerticalAdjustment'
      */
     @Test
-    public void targetFieldVerticalAdjustmentTest() {
+    void targetFieldVerticalAdjustmentTest() {
         // TODO: test targetFieldVerticalAdjustment
     }
 
@@ -173,7 +171,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'ignore'
      */
     @Test
-    public void ignoreTest() {
+    void ignoreTest() {
         // TODO: test ignore
     }
 
@@ -181,7 +179,7 @@ public class FormFieldDefinitionTest {
      * Test the property 'options'
      */
     @Test
-    public void optionsTest() {
+    void optionsTest() {
         // TODO: test options
     }
 

@@ -21,22 +21,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Insert Comment on Paragraph request
  */
-@ApiModel(description = "Input to a Insert Comment on Paragraph request")
 @JsonPropertyOrder({
   DocxInsertCommentOnParagraphRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   DocxInsertCommentOnParagraphRequest.JSON_PROPERTY_INPUT_FILE_URL,
   DocxInsertCommentOnParagraphRequest.JSON_PROPERTY_PARAGRAPH_PATH,
   DocxInsertCommentOnParagraphRequest.JSON_PROPERTY_COMMENT_TO_INSERT
 })
-@JsonTypeName("DocxInsertCommentOnParagraphRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxInsertCommentOnParagraphRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -50,6 +47,8 @@ public class DocxInsertCommentOnParagraphRequest {
   public static final String JSON_PROPERTY_COMMENT_TO_INSERT = "CommentToInsert";
   private DocxComment commentToInsert;
 
+  public DocxInsertCommentOnParagraphRequest() {
+  }
 
   public DocxInsertCommentOnParagraphRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -57,12 +56,11 @@ public class DocxInsertCommentOnParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -71,10 +69,11 @@ public class DocxInsertCommentOnParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public DocxInsertCommentOnParagraphRequest inputFileUrl(String inputFileUrl) {
     
@@ -82,12 +81,11 @@ public class DocxInsertCommentOnParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +94,11 @@ public class DocxInsertCommentOnParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public DocxInsertCommentOnParagraphRequest paragraphPath(String paragraphPath) {
     
@@ -107,12 +106,11 @@ public class DocxInsertCommentOnParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Path to the paragraph to attach the comment to.  You can get the Path by retrieving all of the Paragraphs in document by calling Get Body and taking the Path property of the desired paragraph to add the comment to.
    * @return paragraphPath
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Path to the paragraph to attach the comment to.  You can get the Path by retrieving all of the Paragraphs in document by calling Get Body and taking the Path property of the desired paragraph to add the comment to.")
   @JsonProperty(JSON_PROPERTY_PARAGRAPH_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +119,11 @@ public class DocxInsertCommentOnParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PARAGRAPH_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setParagraphPath(String paragraphPath) {
     this.paragraphPath = paragraphPath;
   }
-
 
   public DocxInsertCommentOnParagraphRequest commentToInsert(DocxComment commentToInsert) {
     
@@ -132,12 +131,11 @@ public class DocxInsertCommentOnParagraphRequest {
     return this;
   }
 
-   /**
+  /**
    * Get commentToInsert
    * @return commentToInsert
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_COMMENT_TO_INSERT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +144,11 @@ public class DocxInsertCommentOnParagraphRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMENT_TO_INSERT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCommentToInsert(DocxComment commentToInsert) {
     this.commentToInsert = commentToInsert;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -170,7 +169,6 @@ public class DocxInsertCommentOnParagraphRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, paragraphPath, commentToInsert);
   }
-
 
   @Override
   public String toString() {

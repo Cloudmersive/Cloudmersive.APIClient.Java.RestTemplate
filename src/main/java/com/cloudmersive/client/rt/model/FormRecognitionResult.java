@@ -22,16 +22,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of extracting form field values
  */
-@ApiModel(description = "The result of extracting form field values")
 @JsonPropertyOrder({
   FormRecognitionResult.JSON_PROPERTY_SUCCESSFUL,
   FormRecognitionResult.JSON_PROPERTY_FIELD_VALUE_EXTRACTION_RESULT,
@@ -39,24 +38,25 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FormRecognitionResult.JSON_PROPERTY_DIAGNOSTICS,
   FormRecognitionResult.JSON_PROPERTY_BEST_MATCH_FORM_SETTING_NAME
 })
-@JsonTypeName("FormRecognitionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FormRecognitionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_FIELD_VALUE_EXTRACTION_RESULT = "FieldValueExtractionResult";
-  private List<FieldResult> fieldValueExtractionResult = null;
+  private List<FieldResult> fieldValueExtractionResult = new ArrayList<>();
 
   public static final String JSON_PROPERTY_TABLE_VALUE_EXTRACTION_RESULTS = "TableValueExtractionResults";
-  private List<TableResult> tableValueExtractionResults = null;
+  private List<TableResult> tableValueExtractionResults = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DIAGNOSTICS = "Diagnostics";
-  private List<String> diagnostics = null;
+  private List<String> diagnostics = new ArrayList<>();
 
   public static final String JSON_PROPERTY_BEST_MATCH_FORM_SETTING_NAME = "BestMatchFormSettingName";
   private String bestMatchFormSettingName;
 
+  public FormRecognitionResult() {
+  }
 
   public FormRecognitionResult successful(Boolean successful) {
     
@@ -64,12 +64,11 @@ public class FormRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -78,10 +77,11 @@ public class FormRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public FormRecognitionResult fieldValueExtractionResult(List<FieldResult> fieldValueExtractionResult) {
     
@@ -91,18 +91,17 @@ public class FormRecognitionResult {
 
   public FormRecognitionResult addFieldValueExtractionResultItem(FieldResult fieldValueExtractionResultItem) {
     if (this.fieldValueExtractionResult == null) {
-      this.fieldValueExtractionResult = new ArrayList<FieldResult>();
+      this.fieldValueExtractionResult = new ArrayList<>();
     }
     this.fieldValueExtractionResult.add(fieldValueExtractionResultItem);
     return this;
   }
 
-   /**
+  /**
    * Result of form field OCR data extraction
    * @return fieldValueExtractionResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result of form field OCR data extraction")
   @JsonProperty(JSON_PROPERTY_FIELD_VALUE_EXTRACTION_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,10 +110,11 @@ public class FormRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_VALUE_EXTRACTION_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldValueExtractionResult(List<FieldResult> fieldValueExtractionResult) {
     this.fieldValueExtractionResult = fieldValueExtractionResult;
   }
-
 
   public FormRecognitionResult tableValueExtractionResults(List<TableResult> tableValueExtractionResults) {
     
@@ -124,18 +124,17 @@ public class FormRecognitionResult {
 
   public FormRecognitionResult addTableValueExtractionResultsItem(TableResult tableValueExtractionResultsItem) {
     if (this.tableValueExtractionResults == null) {
-      this.tableValueExtractionResults = new ArrayList<TableResult>();
+      this.tableValueExtractionResults = new ArrayList<>();
     }
     this.tableValueExtractionResults.add(tableValueExtractionResultsItem);
     return this;
   }
 
-   /**
+  /**
    * Result of form table OCR data extraction
    * @return tableValueExtractionResults
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Result of form table OCR data extraction")
   @JsonProperty(JSON_PROPERTY_TABLE_VALUE_EXTRACTION_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,10 +143,11 @@ public class FormRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_VALUE_EXTRACTION_RESULTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableValueExtractionResults(List<TableResult> tableValueExtractionResults) {
     this.tableValueExtractionResults = tableValueExtractionResults;
   }
-
 
   public FormRecognitionResult diagnostics(List<String> diagnostics) {
     
@@ -157,18 +157,17 @@ public class FormRecognitionResult {
 
   public FormRecognitionResult addDiagnosticsItem(String diagnosticsItem) {
     if (this.diagnostics == null) {
-      this.diagnostics = new ArrayList<String>();
+      this.diagnostics = new ArrayList<>();
     }
     this.diagnostics.add(diagnosticsItem);
     return this;
   }
 
-   /**
+  /**
    * Diagnostic images - default is null, enable diagnostics&#x3D;true to populate this parameter with one image per field
    * @return diagnostics
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Diagnostic images - default is null, enable diagnostics=true to populate this parameter with one image per field")
   @JsonProperty(JSON_PROPERTY_DIAGNOSTICS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,10 +176,11 @@ public class FormRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DIAGNOSTICS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDiagnostics(List<String> diagnostics) {
     this.diagnostics = diagnostics;
   }
-
 
   public FormRecognitionResult bestMatchFormSettingName(String bestMatchFormSettingName) {
     
@@ -188,12 +188,11 @@ public class FormRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * Optional; populated when using photo/recognize/form/advanced with the Setting Name of the best-matching highest-relevance form
    * @return bestMatchFormSettingName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; populated when using photo/recognize/form/advanced with the Setting Name of the best-matching highest-relevance form")
   @JsonProperty(JSON_PROPERTY_BEST_MATCH_FORM_SETTING_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -202,10 +201,11 @@ public class FormRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BEST_MATCH_FORM_SETTING_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBestMatchFormSettingName(String bestMatchFormSettingName) {
     this.bestMatchFormSettingName = bestMatchFormSettingName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -227,7 +227,6 @@ public class FormRecognitionResult {
   public int hashCode() {
     return Objects.hash(successful, fieldValueExtractionResult, tableValueExtractionResults, diagnostics, bestMatchFormSettingName);
   }
-
 
   @Override
   public String toString() {

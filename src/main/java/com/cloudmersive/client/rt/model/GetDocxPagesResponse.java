@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of getting pages from a Word Document DOCX
  */
-@ApiModel(description = "Result of getting pages from a Word Document DOCX")
 @JsonPropertyOrder({
   GetDocxPagesResponse.JSON_PROPERTY_SUCCESSFUL,
   GetDocxPagesResponse.JSON_PROPERTY_PAGES,
   GetDocxPagesResponse.JSON_PROPERTY_PAGE_COUNT
 })
-@JsonTypeName("GetDocxPagesResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxPagesResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_PAGES = "Pages";
-  private List<DocxPage> pages = null;
+  private List<DocxPage> pages = new ArrayList<>();
 
   public static final String JSON_PROPERTY_PAGE_COUNT = "PageCount";
   private Integer pageCount;
 
+  public GetDocxPagesResponse() {
+  }
 
   public GetDocxPagesResponse successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class GetDocxPagesResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class GetDocxPagesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetDocxPagesResponse pages(List<DocxPage> pages) {
     
@@ -82,18 +82,17 @@ public class GetDocxPagesResponse {
 
   public GetDocxPagesResponse addPagesItem(DocxPage pagesItem) {
     if (this.pages == null) {
-      this.pages = new ArrayList<DocxPage>();
+      this.pages = new ArrayList<>();
     }
     this.pages.add(pagesItem);
     return this;
   }
 
-   /**
+  /**
    * Pages in the document
    * @return pages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Pages in the document")
   @JsonProperty(JSON_PROPERTY_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class GetDocxPagesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPages(List<DocxPage> pages) {
     this.pages = pages;
   }
-
 
   public GetDocxPagesResponse pageCount(Integer pageCount) {
     
@@ -113,12 +113,11 @@ public class GetDocxPagesResponse {
     return this;
   }
 
-   /**
+  /**
    * Count of pages
    * @return pageCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of pages")
   @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class GetDocxPagesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PAGE_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPageCount(Integer pageCount) {
     this.pageCount = pageCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class GetDocxPagesResponse {
   public int hashCode() {
     return Objects.hash(successful, pages, pageCount);
   }
-
 
   @Override
   public String toString() {

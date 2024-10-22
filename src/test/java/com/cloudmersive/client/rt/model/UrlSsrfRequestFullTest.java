@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for UrlSsrfRequestFull
  */
-public class UrlSsrfRequestFullTest {
+class UrlSsrfRequestFullTest {
     private final UrlSsrfRequestFull model = new UrlSsrfRequestFull();
 
     /**
      * Model tests for UrlSsrfRequestFull
      */
     @Test
-    public void testUrlSsrfRequestFull() {
+    void testUrlSsrfRequestFull() {
         // TODO: test UrlSsrfRequestFull
     }
 
@@ -45,7 +43,7 @@ public class UrlSsrfRequestFullTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 
@@ -53,7 +51,7 @@ public class UrlSsrfRequestFullTest {
      * Test the property 'blockedDomains'
      */
     @Test
-    public void blockedDomainsTest() {
+    void blockedDomainsTest() {
         // TODO: test blockedDomains
     }
 

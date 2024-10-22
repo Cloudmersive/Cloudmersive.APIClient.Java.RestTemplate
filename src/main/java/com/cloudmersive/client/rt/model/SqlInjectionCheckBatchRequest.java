@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a batch SQL Injection detection operation
  */
-@ApiModel(description = "Input to a batch SQL Injection detection operation")
 @JsonPropertyOrder({
   SqlInjectionCheckBatchRequest.JSON_PROPERTY_REQUEST_ITEMS,
   SqlInjectionCheckBatchRequest.JSON_PROPERTY_DETECTION_LEVEL
 })
-@JsonTypeName("SqlInjectionCheckBatchRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SqlInjectionCheckBatchRequest {
   public static final String JSON_PROPERTY_REQUEST_ITEMS = "RequestItems";
-  private List<SqlInjectionCheckRequestItem> requestItems = null;
+  private List<SqlInjectionCheckRequestItem> requestItems = new ArrayList<>();
 
   public static final String JSON_PROPERTY_DETECTION_LEVEL = "DetectionLevel";
   private String detectionLevel;
 
+  public SqlInjectionCheckBatchRequest() {
+  }
 
   public SqlInjectionCheckBatchRequest requestItems(List<SqlInjectionCheckRequestItem> requestItems) {
     
@@ -53,18 +53,17 @@ public class SqlInjectionCheckBatchRequest {
 
   public SqlInjectionCheckBatchRequest addRequestItemsItem(SqlInjectionCheckRequestItem requestItemsItem) {
     if (this.requestItems == null) {
-      this.requestItems = new ArrayList<SqlInjectionCheckRequestItem>();
+      this.requestItems = new ArrayList<>();
     }
     this.requestItems.add(requestItemsItem);
     return this;
   }
 
-   /**
+  /**
    * Multiple items to detect for SQL Injection
    * @return requestItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Multiple items to detect for SQL Injection")
   @JsonProperty(JSON_PROPERTY_REQUEST_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class SqlInjectionCheckBatchRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REQUEST_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRequestItems(List<SqlInjectionCheckRequestItem> requestItems) {
     this.requestItems = requestItems;
   }
-
 
   public SqlInjectionCheckBatchRequest detectionLevel(String detectionLevel) {
     
@@ -84,12 +84,11 @@ public class SqlInjectionCheckBatchRequest {
     return this;
   }
 
-   /**
+  /**
    * Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended).
    * @return detectionLevel
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Set to Normal to target a high-security SQL Injection detection level with a very low false positive rate; select High to target a very-high security SQL Injection detection level with higher false positives.  Default is Normal (recommended).")
   @JsonProperty(JSON_PROPERTY_DETECTION_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class SqlInjectionCheckBatchRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DETECTION_LEVEL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDetectionLevel(String detectionLevel) {
     this.detectionLevel = detectionLevel;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class SqlInjectionCheckBatchRequest {
   public int hashCode() {
     return Objects.hash(requestItems, detectionLevel);
   }
-
 
   @Override
   public String toString() {

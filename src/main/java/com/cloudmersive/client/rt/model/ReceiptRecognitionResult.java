@@ -21,17 +21,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of recognizing a receipt, to extract the key information from the receipt
  */
-@ApiModel(description = "Result of recognizing a receipt, to extract the key information from the receipt")
 @JsonPropertyOrder({
   ReceiptRecognitionResult.JSON_PROPERTY_SUCCESSFUL,
   ReceiptRecognitionResult.JSON_PROPERTY_TIMESTAMP,
@@ -43,8 +42,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ReceiptRecognitionResult.JSON_PROPERTY_RECEIPT_SUB_TOTAL,
   ReceiptRecognitionResult.JSON_PROPERTY_RECEIPT_TOTAL
 })
-@JsonTypeName("ReceiptRecognitionResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ReceiptRecognitionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -65,7 +63,7 @@ public class ReceiptRecognitionResult {
   private String phoneNumber;
 
   public static final String JSON_PROPERTY_RECEIPT_ITEMS = "ReceiptItems";
-  private List<ReceiptLineItem> receiptItems = null;
+  private List<ReceiptLineItem> receiptItems = new ArrayList<>();
 
   public static final String JSON_PROPERTY_RECEIPT_SUB_TOTAL = "ReceiptSubTotal";
   private Double receiptSubTotal;
@@ -73,6 +71,8 @@ public class ReceiptRecognitionResult {
   public static final String JSON_PROPERTY_RECEIPT_TOTAL = "ReceiptTotal";
   private Double receiptTotal;
 
+  public ReceiptRecognitionResult() {
+  }
 
   public ReceiptRecognitionResult successful(Boolean successful) {
     
@@ -80,12 +80,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public ReceiptRecognitionResult timestamp(OffsetDateTime timestamp) {
     
@@ -105,12 +105,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The date and time printed on the receipt (if included on the receipt)
    * @return timestamp
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The date and time printed on the receipt (if included on the receipt)")
   @JsonProperty(JSON_PROPERTY_TIMESTAMP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,10 +118,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TIMESTAMP)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTimestamp(OffsetDateTime timestamp) {
     this.timestamp = timestamp;
   }
-
 
   public ReceiptRecognitionResult businessName(String businessName) {
     
@@ -130,12 +130,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The name of the business printed on the receipt (if included on the receipt)
    * @return businessName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The name of the business printed on the receipt (if included on the receipt)")
   @JsonProperty(JSON_PROPERTY_BUSINESS_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,10 +143,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessName(String businessName) {
     this.businessName = businessName;
   }
-
 
   public ReceiptRecognitionResult businessWebsite(String businessWebsite) {
     
@@ -155,12 +155,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The website URL of the business printed on the receipt (if included on the receipt)
    * @return businessWebsite
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The website URL of the business printed on the receipt (if included on the receipt)")
   @JsonProperty(JSON_PROPERTY_BUSINESS_WEBSITE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,10 +168,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_WEBSITE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessWebsite(String businessWebsite) {
     this.businessWebsite = businessWebsite;
   }
-
 
   public ReceiptRecognitionResult addressString(String addressString) {
     
@@ -180,12 +180,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The address of the business printed on the receipt (if included on the receipt)
    * @return addressString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The address of the business printed on the receipt (if included on the receipt)")
   @JsonProperty(JSON_PROPERTY_ADDRESS_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,10 +193,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ADDRESS_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAddressString(String addressString) {
     this.addressString = addressString;
   }
-
 
   public ReceiptRecognitionResult phoneNumber(String phoneNumber) {
     
@@ -205,12 +205,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The phone number printed on the receipt (if included on the receipt)
    * @return phoneNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The phone number printed on the receipt (if included on the receipt)")
   @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,10 +218,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPhoneNumber(String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
-
 
   public ReceiptRecognitionResult receiptItems(List<ReceiptLineItem> receiptItems) {
     
@@ -232,18 +232,17 @@ public class ReceiptRecognitionResult {
 
   public ReceiptRecognitionResult addReceiptItemsItem(ReceiptLineItem receiptItemsItem) {
     if (this.receiptItems == null) {
-      this.receiptItems = new ArrayList<ReceiptLineItem>();
+      this.receiptItems = new ArrayList<>();
     }
     this.receiptItems.add(receiptItemsItem);
     return this;
   }
 
-   /**
+  /**
    * The individual line items comprising the order; does not include total (see ReceiptTotal)
    * @return receiptItems
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The individual line items comprising the order; does not include total (see ReceiptTotal)")
   @JsonProperty(JSON_PROPERTY_RECEIPT_ITEMS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,10 +251,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RECEIPT_ITEMS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReceiptItems(List<ReceiptLineItem> receiptItems) {
     this.receiptItems = receiptItems;
   }
-
 
   public ReceiptRecognitionResult receiptSubTotal(Double receiptSubTotal) {
     
@@ -263,12 +263,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * Optional; if available, the monetary value of the receipt subtotal - typically not including specialized line items such as Tax. If this value is not available, it will be 0.
    * @return receiptSubTotal
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; if available, the monetary value of the receipt subtotal - typically not including specialized line items such as Tax. If this value is not available, it will be 0.")
   @JsonProperty(JSON_PROPERTY_RECEIPT_SUB_TOTAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -277,10 +276,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RECEIPT_SUB_TOTAL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReceiptSubTotal(Double receiptSubTotal) {
     this.receiptSubTotal = receiptSubTotal;
   }
-
 
   public ReceiptRecognitionResult receiptTotal(Double receiptTotal) {
     
@@ -288,12 +288,11 @@ public class ReceiptRecognitionResult {
     return this;
   }
 
-   /**
+  /**
    * The total monetary value of the receipt (if included on the receipt)
    * @return receiptTotal
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The total monetary value of the receipt (if included on the receipt)")
   @JsonProperty(JSON_PROPERTY_RECEIPT_TOTAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -302,10 +301,11 @@ public class ReceiptRecognitionResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RECEIPT_TOTAL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReceiptTotal(Double receiptTotal) {
     this.receiptTotal = receiptTotal;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -331,7 +331,6 @@ public class ReceiptRecognitionResult {
   public int hashCode() {
     return Objects.hash(successful, timestamp, businessName, businessWebsite, addressString, phoneNumber, receiptItems, receiptSubTotal, receiptTotal);
   }
-
 
   @Override
   public String toString() {

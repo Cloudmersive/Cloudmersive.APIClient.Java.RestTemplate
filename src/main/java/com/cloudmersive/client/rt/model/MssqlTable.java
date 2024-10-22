@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Details about a SQL Server Table
  */
-@ApiModel(description = "Details about a SQL Server Table")
 @JsonPropertyOrder({
   MssqlTable.JSON_PROPERTY_SCHEMA_NAME,
   MssqlTable.JSON_PROPERTY_TABLE_NAME
 })
-@JsonTypeName("MssqlTable")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:05.782-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:03.513337300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MssqlTable {
   public static final String JSON_PROPERTY_SCHEMA_NAME = "schemaName";
   private String schemaName;
@@ -41,6 +38,8 @@ public class MssqlTable {
   public static final String JSON_PROPERTY_TABLE_NAME = "tableName";
   private String tableName;
 
+  public MssqlTable() {
+  }
 
   public MssqlTable schemaName(String schemaName) {
     
@@ -48,12 +47,11 @@ public class MssqlTable {
     return this;
   }
 
-   /**
+  /**
    * Name of the schema containing the table
    * @return schemaName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the schema containing the table")
   @JsonProperty(JSON_PROPERTY_SCHEMA_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class MssqlTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCHEMA_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSchemaName(String schemaName) {
     this.schemaName = schemaName;
   }
-
 
   public MssqlTable tableName(String tableName) {
     
@@ -73,12 +72,11 @@ public class MssqlTable {
     return this;
   }
 
-   /**
+  /**
    * Name of the table
    * @return tableName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the table")
   @JsonProperty(JSON_PROPERTY_TABLE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class MssqlTable {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableName(String tableName) {
     this.tableName = tableName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class MssqlTable {
   public int hashCode() {
     return Objects.hash(schemaName, tableName);
   }
-
 
   @Override
   public String toString() {

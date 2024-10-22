@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Cell in an Excel Spreadsheet worksheet
  */
-@ApiModel(description = "Cell in an Excel Spreadsheet worksheet")
 @JsonPropertyOrder({
   XlsxSpreadsheetCell.JSON_PROPERTY_PATH,
   XlsxSpreadsheetCell.JSON_PROPERTY_TEXT_VALUE,
@@ -35,8 +33,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   XlsxSpreadsheetCell.JSON_PROPERTY_STYLE_INDEX,
   XlsxSpreadsheetCell.JSON_PROPERTY_FORMULA
 })
-@JsonTypeName("XlsxSpreadsheetCell")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XlsxSpreadsheetCell {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
@@ -53,6 +50,8 @@ public class XlsxSpreadsheetCell {
   public static final String JSON_PROPERTY_FORMULA = "Formula";
   private String formula;
 
+  public XlsxSpreadsheetCell() {
+  }
 
   public XlsxSpreadsheetCell path(String path) {
     
@@ -60,12 +59,11 @@ public class XlsxSpreadsheetCell {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new rows
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new rows")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +72,11 @@ public class XlsxSpreadsheetCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public XlsxSpreadsheetCell textValue(String textValue) {
     
@@ -85,12 +84,11 @@ public class XlsxSpreadsheetCell {
     return this;
   }
 
-   /**
+  /**
    * Text value of the cell
    * @return textValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text value of the cell")
   @JsonProperty(JSON_PROPERTY_TEXT_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +97,11 @@ public class XlsxSpreadsheetCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TEXT_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTextValue(String textValue) {
     this.textValue = textValue;
   }
-
 
   public XlsxSpreadsheetCell cellIdentifier(String cellIdentifier) {
     
@@ -110,12 +109,11 @@ public class XlsxSpreadsheetCell {
     return this;
   }
 
-   /**
+  /**
    * Cell reference of the cell, e.g. A1, Z22, etc.
    * @return cellIdentifier
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Cell reference of the cell, e.g. A1, Z22, etc.")
   @JsonProperty(JSON_PROPERTY_CELL_IDENTIFIER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,10 +122,11 @@ public class XlsxSpreadsheetCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CELL_IDENTIFIER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCellIdentifier(String cellIdentifier) {
     this.cellIdentifier = cellIdentifier;
   }
-
 
   public XlsxSpreadsheetCell styleIndex(Integer styleIndex) {
     
@@ -135,12 +134,11 @@ public class XlsxSpreadsheetCell {
     return this;
   }
 
-   /**
+  /**
    * Identifier for the style to apply to this style
    * @return styleIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Identifier for the style to apply to this style")
   @JsonProperty(JSON_PROPERTY_STYLE_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,10 +147,11 @@ public class XlsxSpreadsheetCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_STYLE_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setStyleIndex(Integer styleIndex) {
     this.styleIndex = styleIndex;
   }
-
 
   public XlsxSpreadsheetCell formula(String formula) {
     
@@ -160,12 +159,11 @@ public class XlsxSpreadsheetCell {
     return this;
   }
 
-   /**
+  /**
    * Get formula
    * @return formula
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_FORMULA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,10 +172,11 @@ public class XlsxSpreadsheetCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FORMULA)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFormula(String formula) {
     this.formula = formula;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -199,7 +198,6 @@ public class XlsxSpreadsheetCell {
   public int hashCode() {
     return Objects.hash(path, textValue, cellIdentifier, styleIndex, formula);
   }
-
 
   @Override
   public String toString() {

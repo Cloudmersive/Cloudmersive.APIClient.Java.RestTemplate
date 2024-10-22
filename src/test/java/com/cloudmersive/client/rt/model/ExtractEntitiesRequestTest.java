@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ExtractEntitiesRequest
  */
-public class ExtractEntitiesRequestTest {
+class ExtractEntitiesRequestTest {
     private final ExtractEntitiesRequest model = new ExtractEntitiesRequest();
 
     /**
      * Model tests for ExtractEntitiesRequest
      */
     @Test
-    public void testExtractEntitiesRequest() {
+    void testExtractEntitiesRequest() {
         // TODO: test ExtractEntitiesRequest
     }
 
@@ -43,7 +40,7 @@ public class ExtractEntitiesRequestTest {
      * Test the property 'inputString'
      */
     @Test
-    public void inputStringTest() {
+    void inputStringTest() {
         // TODO: test inputString
     }
 

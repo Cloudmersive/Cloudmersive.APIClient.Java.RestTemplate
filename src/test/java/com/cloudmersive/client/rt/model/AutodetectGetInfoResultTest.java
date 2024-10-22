@@ -19,27 +19,25 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AutodetectGetInfoResult
  */
-public class AutodetectGetInfoResultTest {
+class AutodetectGetInfoResultTest {
     private final AutodetectGetInfoResult model = new AutodetectGetInfoResult();
 
     /**
      * Model tests for AutodetectGetInfoResult
      */
     @Test
-    public void testAutodetectGetInfoResult() {
+    void testAutodetectGetInfoResult() {
         // TODO: test AutodetectGetInfoResult
     }
 
@@ -47,7 +45,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -55,7 +53,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'detectedFileExtension'
      */
     @Test
-    public void detectedFileExtensionTest() {
+    void detectedFileExtensionTest() {
         // TODO: test detectedFileExtension
     }
 
@@ -63,7 +61,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'detectedMimeType'
      */
     @Test
-    public void detectedMimeTypeTest() {
+    void detectedMimeTypeTest() {
         // TODO: test detectedMimeType
     }
 
@@ -71,7 +69,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'pageCount'
      */
     @Test
-    public void pageCountTest() {
+    void pageCountTest() {
         // TODO: test pageCount
     }
 
@@ -79,7 +77,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'author'
      */
     @Test
-    public void authorTest() {
+    void authorTest() {
         // TODO: test author
     }
 
@@ -87,7 +85,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'dateModified'
      */
     @Test
-    public void dateModifiedTest() {
+    void dateModifiedTest() {
         // TODO: test dateModified
     }
 
@@ -95,7 +93,7 @@ public class AutodetectGetInfoResultTest {
      * Test the property 'alternateFileTypeCandidates'
      */
     @Test
-    public void alternateFileTypeCandidatesTest() {
+    void alternateFileTypeCandidatesTest() {
         // TODO: test alternateFileTypeCandidates
     }
 

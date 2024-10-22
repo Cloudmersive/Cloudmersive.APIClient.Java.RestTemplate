@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxTableCell
  */
-public class DocxTableCellTest {
+class DocxTableCellTest {
     private final DocxTableCell model = new DocxTableCell();
 
     /**
      * Model tests for DocxTableCell
      */
     @Test
-    public void testDocxTableCell() {
+    void testDocxTableCell() {
         // TODO: test DocxTableCell
     }
 
@@ -46,7 +44,7 @@ public class DocxTableCellTest {
      * Test the property 'cellIndex'
      */
     @Test
-    public void cellIndexTest() {
+    void cellIndexTest() {
         // TODO: test cellIndex
     }
 
@@ -54,7 +52,7 @@ public class DocxTableCellTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -62,7 +60,7 @@ public class DocxTableCellTest {
      * Test the property 'paragraphs'
      */
     @Test
-    public void paragraphsTest() {
+    void paragraphsTest() {
         // TODO: test paragraphs
     }
 
@@ -70,7 +68,7 @@ public class DocxTableCellTest {
      * Test the property 'cellShadingColor'
      */
     @Test
-    public void cellShadingColorTest() {
+    void cellShadingColorTest() {
         // TODO: test cellShadingColor
     }
 
@@ -78,7 +76,7 @@ public class DocxTableCellTest {
      * Test the property 'cellShadingFill'
      */
     @Test
-    public void cellShadingFillTest() {
+    void cellShadingFillTest() {
         // TODO: test cellShadingFill
     }
 
@@ -86,7 +84,7 @@ public class DocxTableCellTest {
      * Test the property 'cellShadingPattern'
      */
     @Test
-    public void cellShadingPatternTest() {
+    void cellShadingPatternTest() {
         // TODO: test cellShadingPattern
     }
 
@@ -94,7 +92,7 @@ public class DocxTableCellTest {
      * Test the property 'cellWidthMode'
      */
     @Test
-    public void cellWidthModeTest() {
+    void cellWidthModeTest() {
         // TODO: test cellWidthMode
     }
 
@@ -102,7 +100,7 @@ public class DocxTableCellTest {
      * Test the property 'cellWidth'
      */
     @Test
-    public void cellWidthTest() {
+    void cellWidthTest() {
         // TODO: test cellWidth
     }
 

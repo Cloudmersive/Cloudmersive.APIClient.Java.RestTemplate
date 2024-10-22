@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of validating a URL with syntax only
  */
-@ApiModel(description = "Result of validating a URL with syntax only")
 @JsonPropertyOrder({
   ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_VALID_U_R_L,
   ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_WELL_FORMED_U_R_L,
   ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME
 })
-@JsonTypeName("ValidateUrlResponseSyntaxOnly")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateUrlResponseSyntaxOnly {
   public static final String JSON_PROPERTY_VALID_U_R_L = "ValidURL";
   private Boolean validURL;
@@ -45,6 +42,8 @@ public class ValidateUrlResponseSyntaxOnly {
   public static final String JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME = "TopLevelDomainName";
   private String topLevelDomainName;
 
+  public ValidateUrlResponseSyntaxOnly() {
+  }
 
   public ValidateUrlResponseSyntaxOnly validURL(Boolean validURL) {
     
@@ -52,12 +51,11 @@ public class ValidateUrlResponseSyntaxOnly {
     return this;
   }
 
-   /**
+  /**
    * True if the URL is valid, false otherwise
    * @return validURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the URL is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_VALID_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class ValidateUrlResponseSyntaxOnly {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VALID_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setValidURL(Boolean validURL) {
     this.validURL = validURL;
   }
-
 
   public ValidateUrlResponseSyntaxOnly wellFormedURL(String wellFormedURL) {
     
@@ -77,12 +76,11 @@ public class ValidateUrlResponseSyntaxOnly {
     return this;
   }
 
-   /**
+  /**
    * Well-formed version of the URL
    * @return wellFormedURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Well-formed version of the URL")
   @JsonProperty(JSON_PROPERTY_WELL_FORMED_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class ValidateUrlResponseSyntaxOnly {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WELL_FORMED_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWellFormedURL(String wellFormedURL) {
     this.wellFormedURL = wellFormedURL;
   }
-
 
   public ValidateUrlResponseSyntaxOnly topLevelDomainName(String topLevelDomainName) {
     
@@ -102,12 +101,11 @@ public class ValidateUrlResponseSyntaxOnly {
     return this;
   }
 
-   /**
+  /**
    * The top-level domain name of the URL, e.g. mydomain.com
    * @return topLevelDomainName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The top-level domain name of the URL, e.g. mydomain.com")
   @JsonProperty(JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class ValidateUrlResponseSyntaxOnly {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopLevelDomainName(String topLevelDomainName) {
     this.topLevelDomainName = topLevelDomainName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class ValidateUrlResponseSyntaxOnly {
   public int hashCode() {
     return Objects.hash(validURL, wellFormedURL, topLevelDomainName);
   }
-
 
   @Override
   public String toString() {

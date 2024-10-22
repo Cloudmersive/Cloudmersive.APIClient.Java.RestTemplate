@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocumentValidationError
  */
-public class DocumentValidationErrorTest {
+class DocumentValidationErrorTest {
     private final DocumentValidationError model = new DocumentValidationError();
 
     /**
      * Model tests for DocumentValidationError
      */
     @Test
-    public void testDocumentValidationError() {
+    void testDocumentValidationError() {
         // TODO: test DocumentValidationError
     }
 
@@ -43,7 +40,7 @@ public class DocumentValidationErrorTest {
      * Test the property 'description'
      */
     @Test
-    public void descriptionTest() {
+    void descriptionTest() {
         // TODO: test description
     }
 
@@ -51,7 +48,7 @@ public class DocumentValidationErrorTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -59,7 +56,7 @@ public class DocumentValidationErrorTest {
      * Test the property 'uri'
      */
     @Test
-    public void uriTest() {
+    void uriTest() {
         // TODO: test uri
     }
 
@@ -67,7 +64,7 @@ public class DocumentValidationErrorTest {
      * Test the property 'isError'
      */
     @Test
-    public void isErrorTest() {
+    void isErrorTest() {
         // TODO: test isError
     }
 

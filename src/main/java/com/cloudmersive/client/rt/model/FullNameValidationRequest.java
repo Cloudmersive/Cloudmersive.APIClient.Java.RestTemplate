@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to validate a full name string
  */
-@ApiModel(description = "Request to validate a full name string")
 @JsonPropertyOrder({
   FullNameValidationRequest.JSON_PROPERTY_FULL_NAME_STRING
 })
-@JsonTypeName("FullNameValidationRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FullNameValidationRequest {
   public static final String JSON_PROPERTY_FULL_NAME_STRING = "FullNameString";
   private String fullNameString;
 
+  public FullNameValidationRequest() {
+  }
 
   public FullNameValidationRequest fullNameString(String fullNameString) {
     
@@ -44,12 +43,11 @@ public class FullNameValidationRequest {
     return this;
   }
 
-   /**
+  /**
    * Full name to process as a free-form string; supports many components such as First Name, Middle Name, Last Name, Title, Nickname, Suffix, and Display Name
    * @return fullNameString
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Full name to process as a free-form string; supports many components such as First Name, Middle Name, Last Name, Title, Nickname, Suffix, and Display Name")
   @JsonProperty(JSON_PROPERTY_FULL_NAME_STRING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class FullNameValidationRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FULL_NAME_STRING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFullNameString(String fullNameString) {
     this.fullNameString = fullNameString;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class FullNameValidationRequest {
   public int hashCode() {
     return Objects.hash(fullNameString);
   }
-
 
   @Override
   public String toString() {

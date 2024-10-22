@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for VehicleLicensePlateDetectionResult
  */
-public class VehicleLicensePlateDetectionResultTest {
+class VehicleLicensePlateDetectionResultTest {
     private final VehicleLicensePlateDetectionResult model = new VehicleLicensePlateDetectionResult();
 
     /**
      * Model tests for VehicleLicensePlateDetectionResult
      */
     @Test
-    public void testVehicleLicensePlateDetectionResult() {
+    void testVehicleLicensePlateDetectionResult() {
         // TODO: test VehicleLicensePlateDetectionResult
     }
 
@@ -46,7 +44,7 @@ public class VehicleLicensePlateDetectionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class VehicleLicensePlateDetectionResultTest {
      * Test the property 'detectedLicensePlates'
      */
     @Test
-    public void detectedLicensePlatesTest() {
+    void detectedLicensePlatesTest() {
         // TODO: test detectedLicensePlates
     }
 
@@ -62,7 +60,7 @@ public class VehicleLicensePlateDetectionResultTest {
      * Test the property 'detectedLicensePlateCount'
      */
     @Test
-    public void detectedLicensePlateCountTest() {
+    void detectedLicensePlateCountTest() {
         // TODO: test detectedLicensePlateCount
     }
 

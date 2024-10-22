@@ -21,21 +21,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A person identified in an image gender classification operation
  */
-@ApiModel(description = "A person identified in an image gender classification operation")
 @JsonPropertyOrder({
   PersonWithGender.JSON_PROPERTY_FACE_LOCATION,
   PersonWithGender.JSON_PROPERTY_GENDER_CLASSIFICATION_CONFIDENCE,
   PersonWithGender.JSON_PROPERTY_GENDER_CLASS
 })
-@JsonTypeName("PersonWithGender")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PersonWithGender {
   public static final String JSON_PROPERTY_FACE_LOCATION = "FaceLocation";
   private Face faceLocation;
@@ -46,6 +43,8 @@ public class PersonWithGender {
   public static final String JSON_PROPERTY_GENDER_CLASS = "GenderClass";
   private String genderClass;
 
+  public PersonWithGender() {
+  }
 
   public PersonWithGender faceLocation(Face faceLocation) {
     
@@ -53,12 +52,11 @@ public class PersonWithGender {
     return this;
   }
 
-   /**
+  /**
    * Get faceLocation
    * @return faceLocation
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_FACE_LOCATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class PersonWithGender {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FACE_LOCATION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFaceLocation(Face faceLocation) {
     this.faceLocation = faceLocation;
   }
-
 
   public PersonWithGender genderClassificationConfidence(Double genderClassificationConfidence) {
     
@@ -78,12 +77,11 @@ public class PersonWithGender {
     return this;
   }
 
-   /**
+  /**
    * Confidence level of gender classification; possible values are between 0.0 and 1.0; higher is better, with values &amp;gt; 0.50 being high confidence results
    * @return genderClassificationConfidence
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Confidence level of gender classification; possible values are between 0.0 and 1.0; higher is better, with values &gt; 0.50 being high confidence results")
   @JsonProperty(JSON_PROPERTY_GENDER_CLASSIFICATION_CONFIDENCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class PersonWithGender {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GENDER_CLASSIFICATION_CONFIDENCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setGenderClassificationConfidence(Double genderClassificationConfidence) {
     this.genderClassificationConfidence = genderClassificationConfidence;
   }
-
 
   public PersonWithGender genderClass(String genderClass) {
     
@@ -103,12 +102,11 @@ public class PersonWithGender {
     return this;
   }
 
-   /**
+  /**
    * The person&#39;s identified gender; possible values are \&quot;Male\&quot;, \&quot;Female\&quot; and \&quot;Unknown\&quot;
    * @return genderClass
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The person's identified gender; possible values are \"Male\", \"Female\" and \"Unknown\"")
   @JsonProperty(JSON_PROPERTY_GENDER_CLASS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class PersonWithGender {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_GENDER_CLASS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setGenderClass(String genderClass) {
     this.genderClass = genderClass;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class PersonWithGender {
   public int hashCode() {
     return Objects.hash(faceLocation, genderClassificationConfidence, genderClass);
   }
-
 
   @Override
   public String toString() {

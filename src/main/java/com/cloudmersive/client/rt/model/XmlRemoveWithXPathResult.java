@@ -20,24 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a filter operation on XML input using XPath
  */
-@ApiModel(description = "Result of performing a filter operation on XML input using XPath")
 @JsonPropertyOrder({
   XmlRemoveWithXPathResult.JSON_PROPERTY_SUCCESSFUL,
   XmlRemoveWithXPathResult.JSON_PROPERTY_RESULTING_XML_DOCUMENT,
   XmlRemoveWithXPathResult.JSON_PROPERTY_XML_NODES_REMOVED,
   XmlRemoveWithXPathResult.JSON_PROPERTY_NODES_REMOVED_COUNT
 })
-@JsonTypeName("XmlRemoveWithXPathResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XmlRemoveWithXPathResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -46,11 +44,13 @@ public class XmlRemoveWithXPathResult {
   private String resultingXmlDocument;
 
   public static final String JSON_PROPERTY_XML_NODES_REMOVED = "XmlNodesRemoved";
-  private List<String> xmlNodesRemoved = null;
+  private List<String> xmlNodesRemoved = new ArrayList<>();
 
   public static final String JSON_PROPERTY_NODES_REMOVED_COUNT = "NodesRemovedCount";
   private Integer nodesRemovedCount;
 
+  public XmlRemoveWithXPathResult() {
+  }
 
   public XmlRemoveWithXPathResult successful(Boolean successful) {
     
@@ -58,12 +58,11 @@ public class XmlRemoveWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -72,10 +71,11 @@ public class XmlRemoveWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public XmlRemoveWithXPathResult resultingXmlDocument(String resultingXmlDocument) {
     
@@ -83,12 +83,11 @@ public class XmlRemoveWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * Resulting, modified XML document with matching nodes removed as a string
    * @return resultingXmlDocument
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Resulting, modified XML document with matching nodes removed as a string")
   @JsonProperty(JSON_PROPERTY_RESULTING_XML_DOCUMENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +96,11 @@ public class XmlRemoveWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULTING_XML_DOCUMENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultingXmlDocument(String resultingXmlDocument) {
     this.resultingXmlDocument = resultingXmlDocument;
   }
-
 
   public XmlRemoveWithXPathResult xmlNodesRemoved(List<String> xmlNodesRemoved) {
     
@@ -110,18 +110,17 @@ public class XmlRemoveWithXPathResult {
 
   public XmlRemoveWithXPathResult addXmlNodesRemovedItem(String xmlNodesRemovedItem) {
     if (this.xmlNodesRemoved == null) {
-      this.xmlNodesRemoved = new ArrayList<String>();
+      this.xmlNodesRemoved = new ArrayList<>();
     }
     this.xmlNodesRemoved.add(xmlNodesRemovedItem);
     return this;
   }
 
-   /**
+  /**
    * Matching selected XML nodes as strings
    * @return xmlNodesRemoved
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Matching selected XML nodes as strings")
   @JsonProperty(JSON_PROPERTY_XML_NODES_REMOVED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,10 +129,11 @@ public class XmlRemoveWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_XML_NODES_REMOVED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXmlNodesRemoved(List<String> xmlNodesRemoved) {
     this.xmlNodesRemoved = xmlNodesRemoved;
   }
-
 
   public XmlRemoveWithXPathResult nodesRemovedCount(Integer nodesRemovedCount) {
     
@@ -141,12 +141,11 @@ public class XmlRemoveWithXPathResult {
     return this;
   }
 
-   /**
+  /**
    * Count of the matching results
    * @return nodesRemovedCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Count of the matching results")
   @JsonProperty(JSON_PROPERTY_NODES_REMOVED_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -155,10 +154,11 @@ public class XmlRemoveWithXPathResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NODES_REMOVED_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNodesRemovedCount(Integer nodesRemovedCount) {
     this.nodesRemovedCount = nodesRemovedCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -179,7 +179,6 @@ public class XmlRemoveWithXPathResult {
   public int hashCode() {
     return Objects.hash(successful, resultingXmlDocument, xmlNodesRemoved, nodesRemovedCount);
   }
-
 
   @Override
   public String toString() {

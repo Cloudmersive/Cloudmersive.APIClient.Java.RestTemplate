@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * VatLookupResponse
@@ -41,8 +40,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   VatLookupResponse.JSON_PROPERTY_BUSINESS_POSTAL_CODE,
   VatLookupResponse.JSON_PROPERTY_BUSINESS_COUNTRY
 })
-@JsonTypeName("VatLookupResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VatLookupResponse {
   public static final String JSON_PROPERTY_COUNTRY_CODE = "CountryCode";
   private String countryCode;
@@ -80,6 +78,8 @@ public class VatLookupResponse {
   public static final String JSON_PROPERTY_BUSINESS_COUNTRY = "BusinessCountry";
   private String businessCountry;
 
+  public VatLookupResponse() {
+  }
 
   public VatLookupResponse countryCode(String countryCode) {
     
@@ -87,12 +87,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * Two-letter country code
    * @return countryCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter country code")
   @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -101,10 +100,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryCode(String countryCode) {
     this.countryCode = countryCode;
   }
-
 
   public VatLookupResponse vatNumber(String vatNumber) {
     
@@ -112,12 +112,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * VAT number
    * @return vatNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "VAT number")
   @JsonProperty(JSON_PROPERTY_VAT_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,10 +125,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VAT_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVatNumber(String vatNumber) {
     this.vatNumber = vatNumber;
   }
-
 
   public VatLookupResponse isValid(Boolean isValid) {
     
@@ -137,12 +137,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the VAT code is valid, false otherwise
    * @return isValid
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the VAT code is valid, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_VALID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -151,10 +150,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_VALID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsValid(Boolean isValid) {
     this.isValid = isValid;
   }
-
 
   public VatLookupResponse businessName(String businessName) {
     
@@ -162,12 +162,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * Name of the business
    * @return businessName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the business")
   @JsonProperty(JSON_PROPERTY_BUSINESS_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,10 +175,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessName(String businessName) {
     this.businessName = businessName;
   }
-
 
   public VatLookupResponse businessAddress(String businessAddress) {
     
@@ -187,12 +187,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * Business address as a single string
    * @return businessAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Business address as a single string")
   @JsonProperty(JSON_PROPERTY_BUSINESS_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -201,10 +200,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessAddress(String businessAddress) {
     this.businessAddress = businessAddress;
   }
-
 
   public VatLookupResponse businessBuilding(String businessBuilding) {
     
@@ -212,12 +212,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, the name of the building, house or structure if applicable, such as \&quot;Cloudmersive Building 2\&quot;.  This will often by null.
    * @return businessBuilding
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, the name of the building, house or structure if applicable, such as \"Cloudmersive Building 2\".  This will often by null.")
   @JsonProperty(JSON_PROPERTY_BUSINESS_BUILDING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -226,10 +225,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_BUILDING)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessBuilding(String businessBuilding) {
     this.businessBuilding = businessBuilding;
   }
-
 
   public VatLookupResponse businessStreetNumber(String businessStreetNumber) {
     
@@ -237,12 +237,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, the street number or house number of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;1600\&quot;.  This value will typically be populated for most addresses.
    * @return businessStreetNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, the street number or house number of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"1600\".  This value will typically be populated for most addresses.")
   @JsonProperty(JSON_PROPERTY_BUSINESS_STREET_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -251,10 +250,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_STREET_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessStreetNumber(String businessStreetNumber) {
     this.businessStreetNumber = businessStreetNumber;
   }
-
 
   public VatLookupResponse businessStreet(String businessStreet) {
     
@@ -262,12 +262,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, the name of the street or road of the address.  For example, in the address \&quot;1600 Pennsylvania Avenue NW\&quot; the street number would be \&quot;Pennsylvania Avenue NW\&quot;.
    * @return businessStreet
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, the name of the street or road of the address.  For example, in the address \"1600 Pennsylvania Avenue NW\" the street number would be \"Pennsylvania Avenue NW\".")
   @JsonProperty(JSON_PROPERTY_BUSINESS_STREET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,10 +275,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_STREET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessStreet(String businessStreet) {
     this.businessStreet = businessStreet;
   }
-
 
   public VatLookupResponse businessCity(String businessCity) {
     
@@ -287,12 +287,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, the city of the address.
    * @return businessCity
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, the city of the address.")
   @JsonProperty(JSON_PROPERTY_BUSINESS_CITY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -301,10 +300,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_CITY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessCity(String businessCity) {
     this.businessCity = businessCity;
   }
-
 
   public VatLookupResponse businessStateOrProvince(String businessStateOrProvince) {
     
@@ -312,12 +312,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, the state or province of the address.
    * @return businessStateOrProvince
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, the state or province of the address.")
   @JsonProperty(JSON_PROPERTY_BUSINESS_STATE_OR_PROVINCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -326,10 +325,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_STATE_OR_PROVINCE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessStateOrProvince(String businessStateOrProvince) {
     this.businessStateOrProvince = businessStateOrProvince;
   }
-
 
   public VatLookupResponse businessPostalCode(String businessPostalCode) {
     
@@ -337,12 +337,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, the postal code or zip code of the address.
    * @return businessPostalCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, the postal code or zip code of the address.")
   @JsonProperty(JSON_PROPERTY_BUSINESS_POSTAL_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -351,10 +350,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_POSTAL_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessPostalCode(String businessPostalCode) {
     this.businessPostalCode = businessPostalCode;
   }
-
 
   public VatLookupResponse businessCountry(String businessCountry) {
     
@@ -362,12 +362,11 @@ public class VatLookupResponse {
     return this;
   }
 
-   /**
+  /**
    * For the business address, country of the address, if present in the address.  If not included in the address it will be null.
    * @return businessCountry
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "For the business address, country of the address, if present in the address.  If not included in the address it will be null.")
   @JsonProperty(JSON_PROPERTY_BUSINESS_COUNTRY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -376,10 +375,11 @@ public class VatLookupResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BUSINESS_COUNTRY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBusinessCountry(String businessCountry) {
     this.businessCountry = businessCountry;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -408,7 +408,6 @@ public class VatLookupResponse {
   public int hashCode() {
     return Objects.hash(countryCode, vatNumber, isValid, businessName, businessAddress, businessBuilding, businessStreetNumber, businessStreet, businessCity, businessStateOrProvince, businessPostalCode, businessCountry);
   }
-
 
   @Override
   public String toString() {

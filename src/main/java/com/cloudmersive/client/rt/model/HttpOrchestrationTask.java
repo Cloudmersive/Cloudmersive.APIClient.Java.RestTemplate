@@ -26,11 +26,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * HttpOrchestrationTask
@@ -46,8 +46,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   HttpOrchestrationTask.JSON_PROPERTY_RAW_TEXT_BODY,
   HttpOrchestrationTask.JSON_PROPERTY_RAW_BINARY_BODY
 })
-@JsonTypeName("HttpOrchestrationTask")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpOrchestrationTask {
   public static final String JSON_PROPERTY_TASK_NAME = "TaskName";
   private String taskName;
@@ -59,16 +58,16 @@ public class HttpOrchestrationTask {
   private String URL;
 
   public static final String JSON_PROPERTY_HTTP_HEADERS = "HttpHeaders";
-  private List<HttpOrchestrationHeader> httpHeaders = null;
+  private List<HttpOrchestrationHeader> httpHeaders = new ArrayList<>();
 
   public static final String JSON_PROPERTY_QUERY_PARAMETERS = "QueryParameters";
-  private List<HttpGetParameter> queryParameters = null;
+  private List<HttpGetParameter> queryParameters = new ArrayList<>();
 
   public static final String JSON_PROPERTY_FORM_DATA_PARAMETERS = "FormDataParameters";
-  private List<HttpFormDataParameter> formDataParameters = null;
+  private List<HttpFormDataParameter> formDataParameters = new ArrayList<>();
 
   public static final String JSON_PROPERTY_WWW_FORM_URL_ENCODED_PARAMETERS = "WwwFormUrlEncodedParameters";
-  private List<HttpWwwFormUrlEncodedParameter> wwwFormUrlEncodedParameters = null;
+  private List<HttpWwwFormUrlEncodedParameter> wwwFormUrlEncodedParameters = new ArrayList<>();
 
   public static final String JSON_PROPERTY_RAW_TEXT_BODY = "RawTextBody";
   private HttpRawTextParameter rawTextBody;
@@ -76,6 +75,8 @@ public class HttpOrchestrationTask {
   public static final String JSON_PROPERTY_RAW_BINARY_BODY = "RawBinaryBody";
   private HttpRawBinaryParameter rawBinaryBody;
 
+  public HttpOrchestrationTask() {
+  }
 
   public HttpOrchestrationTask taskName(String taskName) {
     
@@ -83,12 +84,11 @@ public class HttpOrchestrationTask {
     return this;
   }
 
-   /**
+  /**
    * An identifier for this task name, e.g. CreateCustomer or ScanForVirus; allows you to refer to this task from other tasks; if not supplied, it will default to a 0-based integer index of the task
    * @return taskName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An identifier for this task name, e.g. CreateCustomer or ScanForVirus; allows you to refer to this task from other tasks; if not supplied, it will default to a 0-based integer index of the task")
   @JsonProperty(JSON_PROPERTY_TASK_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +97,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TASK_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTaskName(String taskName) {
     this.taskName = taskName;
   }
-
 
   public HttpOrchestrationTask httpMethod(String httpMethod) {
     
@@ -108,12 +109,11 @@ public class HttpOrchestrationTask {
     return this;
   }
 
-   /**
+  /**
    * HTTP Method, e.g. GET, PUT, POST, etc.
    * @return httpMethod
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTTP Method, e.g. GET, PUT, POST, etc.")
   @JsonProperty(JSON_PROPERTY_HTTP_METHOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,10 +122,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTTP_METHOD)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHttpMethod(String httpMethod) {
     this.httpMethod = httpMethod;
   }
-
 
   public HttpOrchestrationTask URL(String URL) {
     
@@ -133,12 +134,11 @@ public class HttpOrchestrationTask {
     return this;
   }
 
-   /**
+  /**
    * HTTP URL to orchestrate
    * @return URL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTTP URL to orchestrate")
   @JsonProperty(JSON_PROPERTY_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -147,10 +147,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setURL(String URL) {
     this.URL = URL;
   }
-
 
   public HttpOrchestrationTask httpHeaders(List<HttpOrchestrationHeader> httpHeaders) {
     
@@ -160,18 +161,17 @@ public class HttpOrchestrationTask {
 
   public HttpOrchestrationTask addHttpHeadersItem(HttpOrchestrationHeader httpHeadersItem) {
     if (this.httpHeaders == null) {
-      this.httpHeaders = new ArrayList<HttpOrchestrationHeader>();
+      this.httpHeaders = new ArrayList<>();
     }
     this.httpHeaders.add(httpHeadersItem);
     return this;
   }
 
-   /**
+  /**
    * Optional; HTTP headers to apply to the request
    * @return httpHeaders
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; HTTP headers to apply to the request")
   @JsonProperty(JSON_PROPERTY_HTTP_HEADERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,10 +180,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTTP_HEADERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHttpHeaders(List<HttpOrchestrationHeader> httpHeaders) {
     this.httpHeaders = httpHeaders;
   }
-
 
   public HttpOrchestrationTask queryParameters(List<HttpGetParameter> queryParameters) {
     
@@ -193,18 +194,17 @@ public class HttpOrchestrationTask {
 
   public HttpOrchestrationTask addQueryParametersItem(HttpGetParameter queryParametersItem) {
     if (this.queryParameters == null) {
-      this.queryParameters = new ArrayList<HttpGetParameter>();
+      this.queryParameters = new ArrayList<>();
     }
     this.queryParameters.add(queryParametersItem);
     return this;
   }
 
-   /**
+  /**
    * Optional; query parameters, these query parameters will be incorporated into the URL
    * @return queryParameters
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; query parameters, these query parameters will be incorporated into the URL")
   @JsonProperty(JSON_PROPERTY_QUERY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,10 +213,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_QUERY_PARAMETERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setQueryParameters(List<HttpGetParameter> queryParameters) {
     this.queryParameters = queryParameters;
   }
-
 
   public HttpOrchestrationTask formDataParameters(List<HttpFormDataParameter> formDataParameters) {
     
@@ -226,18 +227,17 @@ public class HttpOrchestrationTask {
 
   public HttpOrchestrationTask addFormDataParametersItem(HttpFormDataParameter formDataParametersItem) {
     if (this.formDataParameters == null) {
-      this.formDataParameters = new ArrayList<HttpFormDataParameter>();
+      this.formDataParameters = new ArrayList<>();
     }
     this.formDataParameters.add(formDataParametersItem);
     return this;
   }
 
-   /**
+  /**
    * Optional; FormData parameters, these parameters will be stored in the body in a multi-part encoding
    * @return formDataParameters
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; FormData parameters, these parameters will be stored in the body in a multi-part encoding")
   @JsonProperty(JSON_PROPERTY_FORM_DATA_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -246,10 +246,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FORM_DATA_PARAMETERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFormDataParameters(List<HttpFormDataParameter> formDataParameters) {
     this.formDataParameters = formDataParameters;
   }
-
 
   public HttpOrchestrationTask wwwFormUrlEncodedParameters(List<HttpWwwFormUrlEncodedParameter> wwwFormUrlEncodedParameters) {
     
@@ -259,18 +260,17 @@ public class HttpOrchestrationTask {
 
   public HttpOrchestrationTask addWwwFormUrlEncodedParametersItem(HttpWwwFormUrlEncodedParameter wwwFormUrlEncodedParametersItem) {
     if (this.wwwFormUrlEncodedParameters == null) {
-      this.wwwFormUrlEncodedParameters = new ArrayList<HttpWwwFormUrlEncodedParameter>();
+      this.wwwFormUrlEncodedParameters = new ArrayList<>();
     }
     this.wwwFormUrlEncodedParameters.add(wwwFormUrlEncodedParametersItem);
     return this;
   }
 
-   /**
+  /**
    * Optional; x-www-form-urlencoded paramereters, these parameters will be stored in the body as an application/x-www-form-urlencoded encoding
    * @return wwwFormUrlEncodedParameters
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; x-www-form-urlencoded paramereters, these parameters will be stored in the body as an application/x-www-form-urlencoded encoding")
   @JsonProperty(JSON_PROPERTY_WWW_FORM_URL_ENCODED_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,10 +279,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WWW_FORM_URL_ENCODED_PARAMETERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWwwFormUrlEncodedParameters(List<HttpWwwFormUrlEncodedParameter> wwwFormUrlEncodedParameters) {
     this.wwwFormUrlEncodedParameters = wwwFormUrlEncodedParameters;
   }
-
 
   public HttpOrchestrationTask rawTextBody(HttpRawTextParameter rawTextBody) {
     
@@ -290,12 +291,11 @@ public class HttpOrchestrationTask {
     return this;
   }
 
-   /**
+  /**
    * Get rawTextBody
    * @return rawTextBody
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_RAW_TEXT_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -304,10 +304,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RAW_TEXT_BODY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRawTextBody(HttpRawTextParameter rawTextBody) {
     this.rawTextBody = rawTextBody;
   }
-
 
   public HttpOrchestrationTask rawBinaryBody(HttpRawBinaryParameter rawBinaryBody) {
     
@@ -315,12 +316,11 @@ public class HttpOrchestrationTask {
     return this;
   }
 
-   /**
+  /**
    * Get rawBinaryBody
    * @return rawBinaryBody
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_RAW_BINARY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -329,10 +329,11 @@ public class HttpOrchestrationTask {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RAW_BINARY_BODY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRawBinaryBody(HttpRawBinaryParameter rawBinaryBody) {
     this.rawBinaryBody = rawBinaryBody;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -358,7 +359,6 @@ public class HttpOrchestrationTask {
   public int hashCode() {
     return Objects.hash(taskName, httpMethod, URL, httpHeaders, queryParameters, formDataParameters, wwwFormUrlEncodedParameters, rawTextBody, rawBinaryBody);
   }
-
 
   @Override
   public String toString() {

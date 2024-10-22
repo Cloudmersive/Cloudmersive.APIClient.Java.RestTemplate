@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A worksheet (tab) in an Excel (XLSX) spreadsheet
  */
-@ApiModel(description = "A worksheet (tab) in an Excel (XLSX) spreadsheet")
 @JsonPropertyOrder({
   XlsxWorksheet.JSON_PROPERTY_PATH,
   XlsxWorksheet.JSON_PROPERTY_WORKSHEET_NAME
 })
-@JsonTypeName("XlsxWorksheet")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XlsxWorksheet {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
@@ -41,6 +38,8 @@ public class XlsxWorksheet {
   public static final String JSON_PROPERTY_WORKSHEET_NAME = "WorksheetName";
   private String worksheetName;
 
+  public XlsxWorksheet() {
+  }
 
   public XlsxWorksheet path(String path) {
     
@@ -48,12 +47,11 @@ public class XlsxWorksheet {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new worksheets
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new worksheets")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class XlsxWorksheet {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public XlsxWorksheet worksheetName(String worksheetName) {
     
@@ -73,12 +72,11 @@ public class XlsxWorksheet {
     return this;
   }
 
-   /**
+  /**
    * User-facing name of the worksheet tab
    * @return worksheetName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User-facing name of the worksheet tab")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class XlsxWorksheet {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetName(String worksheetName) {
     this.worksheetName = worksheetName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class XlsxWorksheet {
   public int hashCode() {
     return Objects.hash(path, worksheetName);
   }
-
 
   @Override
   public String toString() {

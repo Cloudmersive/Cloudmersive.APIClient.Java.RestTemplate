@@ -18,25 +18,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import java.time.OffsetDateTime;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxMetadataCustomProperty
  */
-public class DocxMetadataCustomPropertyTest {
+class DocxMetadataCustomPropertyTest {
     private final DocxMetadataCustomProperty model = new DocxMetadataCustomProperty();
 
     /**
      * Model tests for DocxMetadataCustomProperty
      */
     @Test
-    public void testDocxMetadataCustomProperty() {
+    void testDocxMetadataCustomProperty() {
         // TODO: test DocxMetadataCustomProperty
     }
 
@@ -44,7 +41,7 @@ public class DocxMetadataCustomPropertyTest {
      * Test the property 'propertyName'
      */
     @Test
-    public void propertyNameTest() {
+    void propertyNameTest() {
         // TODO: test propertyName
     }
 
@@ -52,7 +49,7 @@ public class DocxMetadataCustomPropertyTest {
      * Test the property 'propertyDataType'
      */
     @Test
-    public void propertyDataTypeTest() {
+    void propertyDataTypeTest() {
         // TODO: test propertyDataType
     }
 
@@ -60,7 +57,7 @@ public class DocxMetadataCustomPropertyTest {
      * Test the property 'stringValue'
      */
     @Test
-    public void stringValueTest() {
+    void stringValueTest() {
         // TODO: test stringValue
     }
 
@@ -68,7 +65,7 @@ public class DocxMetadataCustomPropertyTest {
      * Test the property 'integerValue'
      */
     @Test
-    public void integerValueTest() {
+    void integerValueTest() {
         // TODO: test integerValue
     }
 
@@ -76,7 +73,7 @@ public class DocxMetadataCustomPropertyTest {
      * Test the property 'doubleValue'
      */
     @Test
-    public void doubleValueTest() {
+    void doubleValueTest() {
         // TODO: test doubleValue
     }
 
@@ -84,7 +81,7 @@ public class DocxMetadataCustomPropertyTest {
      * Test the property 'dateValue'
      */
     @Test
-    public void dateValueTest() {
+    void dateValueTest() {
         // TODO: test dateValue
     }
 

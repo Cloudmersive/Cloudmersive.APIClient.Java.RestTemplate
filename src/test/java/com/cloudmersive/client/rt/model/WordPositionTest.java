@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for WordPosition
  */
-public class WordPositionTest {
+class WordPositionTest {
     private final WordPosition model = new WordPosition();
 
     /**
      * Model tests for WordPosition
      */
     @Test
-    public void testWordPosition() {
+    void testWordPosition() {
         // TODO: test WordPosition
     }
 
@@ -43,7 +40,7 @@ public class WordPositionTest {
      * Test the property 'word'
      */
     @Test
-    public void wordTest() {
+    void wordTest() {
         // TODO: test word
     }
 
@@ -51,7 +48,7 @@ public class WordPositionTest {
      * Test the property 'wordIndex'
      */
     @Test
-    public void wordIndexTest() {
+    void wordIndexTest() {
         // TODO: test wordIndex
     }
 
@@ -59,7 +56,7 @@ public class WordPositionTest {
      * Test the property 'startPosition'
      */
     @Test
-    public void startPositionTest() {
+    void startPositionTest() {
         // TODO: test startPosition
     }
 
@@ -67,7 +64,7 @@ public class WordPositionTest {
      * Test the property 'endPosition'
      */
     @Test
-    public void endPositionTest() {
+    void endPositionTest() {
         // TODO: test endPosition
     }
 

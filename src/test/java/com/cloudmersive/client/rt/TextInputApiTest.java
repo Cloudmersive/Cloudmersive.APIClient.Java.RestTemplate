@@ -23,9 +23,12 @@ import com.cloudmersive.client.rt.model.XssProtectionResult;
 import com.cloudmersive.client.rt.model.XxeDetectionBatchRequest;
 import com.cloudmersive.client.rt.model.XxeDetectionBatchResponse;
 import com.cloudmersive.client.rt.model.XxeDetectionResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -34,8 +37,8 @@ import java.util.Map;
 /**
  * API tests for TextInputApi
  */
-@Ignore
-public class TextInputApiTest {
+@Disabled
+class TextInputApiTest {
 
     private final TextInputApi api = new TextInputApi();
 
@@ -45,13 +48,15 @@ public class TextInputApiTest {
      *
      * Detects SSRF (Server-side request forgery) attacks and unsafe URL attacks from HTML text input, where attackers can attempt to access unsafe local or network paths in the server environment by injecting them into HTML.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckHtmlSsrfTest() {
+    void textInputCheckHtmlSsrfTest() {
         String value = null;
-        HtmlSsrfDetectionResult response = api.textInputCheckHtmlSsrf(value);
+        Boolean allowCidScheme = null;
+
+        HtmlSsrfDetectionResult response = api.textInputCheckHtmlSsrf(value, allowCidScheme);
 
         // TODO: test validations
     }
@@ -61,13 +66,14 @@ public class TextInputApiTest {
      *
      * Detects SQL Injection (SQLI) attacks from text input.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckSqlInjectionTest() {
+    void textInputCheckSqlInjectionTest() {
         String value = null;
         String detectionLevel = null;
+
         SqlInjectionDetectionResult response = api.textInputCheckSqlInjection(value, detectionLevel);
 
         // TODO: test validations
@@ -78,12 +84,13 @@ public class TextInputApiTest {
      *
      * Detects SQL Injection (SQLI) attacks from multiple text inputs.  Output preverses order of input items.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckSqlInjectionBatchTest() {
+    void textInputCheckSqlInjectionBatchTest() {
         SqlInjectionCheckBatchRequest value = null;
+
         SqlInjectionCheckBatchResponse response = api.textInputCheckSqlInjectionBatch(value);
 
         // TODO: test validations
@@ -94,12 +101,13 @@ public class TextInputApiTest {
      *
      * Detects XSS (Cross-Site-Scripting) attacks from text input.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckXssTest() {
+    void textInputCheckXssTest() {
         String value = null;
+
         XssProtectionResult response = api.textInputCheckXss(value);
 
         // TODO: test validations
@@ -110,12 +118,13 @@ public class TextInputApiTest {
      *
      * Detects XSS (Cross-Site-Scripting) attacks from multiple text inputs.  Output preverses order of input items.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckXssBatchTest() {
+    void textInputCheckXssBatchTest() {
         XssProtectionBatchRequest value = null;
+
         XssProtectionBatchResponse response = api.textInputCheckXssBatch(value);
 
         // TODO: test validations
@@ -126,15 +135,16 @@ public class TextInputApiTest {
      *
      * Detects XXE (XML External Entity) attacks from text input.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckXxeTest() {
+    void textInputCheckXxeTest() {
         String value = null;
         Boolean allowInternetUrls = null;
         String knownSafeUrls = null;
         String knownUnsafeUrls = null;
+
         XxeDetectionResult response = api.textInputCheckXxe(value, allowInternetUrls, knownSafeUrls, knownUnsafeUrls);
 
         // TODO: test validations
@@ -145,12 +155,13 @@ public class TextInputApiTest {
      *
      * Detects XXE (XML External Entity) attacks from text input.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputCheckXxeBatchTest() {
+    void textInputCheckXxeBatchTest() {
         XxeDetectionBatchRequest request = null;
+
         XxeDetectionBatchResponse response = api.textInputCheckXxeBatch(request);
 
         // TODO: test validations
@@ -161,12 +172,13 @@ public class TextInputApiTest {
      *
      * Detects and removes XSS (Cross-Site-Scripting) attacks from text input through normalization.  Returns the normalized result, as well as information on whether the original input contained an XSS risk.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textInputProtectXssTest() {
+    void textInputProtectXssTest() {
         String value = null;
+
         XssProtectionResult response = api.textInputProtectXss(value);
 
         // TODO: test validations

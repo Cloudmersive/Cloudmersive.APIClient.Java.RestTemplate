@@ -20,26 +20,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FieldResult
  */
-public class FieldResultTest {
+class FieldResultTest {
     private final FieldResult model = new FieldResult();
 
     /**
      * Model tests for FieldResult
      */
     @Test
-    public void testFieldResult() {
+    void testFieldResult() {
         // TODO: test FieldResult
     }
 
@@ -47,7 +45,7 @@ public class FieldResultTest {
      * Test the property 'targetField'
      */
     @Test
-    public void targetFieldTest() {
+    void targetFieldTest() {
         // TODO: test targetField
     }
 
@@ -55,7 +53,7 @@ public class FieldResultTest {
      * Test the property 'fieldValues'
      */
     @Test
-    public void fieldValuesTest() {
+    void fieldValuesTest() {
         // TODO: test fieldValues
     }
 

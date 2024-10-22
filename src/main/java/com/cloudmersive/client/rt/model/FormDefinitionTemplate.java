@@ -22,29 +22,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Definition of a form template; use a form template definition to recognize the fields in a form with Cloudmersive OCR
  */
-@ApiModel(description = "Definition of a form template; use a form template definition to recognize the fields in a form with Cloudmersive OCR")
 @JsonPropertyOrder({
   FormDefinitionTemplate.JSON_PROPERTY_FIELD_DEFINITIONS,
   FormDefinitionTemplate.JSON_PROPERTY_TABLE_DEFINITIONS
 })
-@JsonTypeName("FormDefinitionTemplate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FormDefinitionTemplate {
   public static final String JSON_PROPERTY_FIELD_DEFINITIONS = "FieldDefinitions";
-  private List<FormFieldDefinition> fieldDefinitions = null;
+  private List<FormFieldDefinition> fieldDefinitions = new ArrayList<>();
 
   public static final String JSON_PROPERTY_TABLE_DEFINITIONS = "TableDefinitions";
-  private List<FormTableDefinition> tableDefinitions = null;
+  private List<FormTableDefinition> tableDefinitions = new ArrayList<>();
 
+  public FormDefinitionTemplate() {
+  }
 
   public FormDefinitionTemplate fieldDefinitions(List<FormFieldDefinition> fieldDefinitions) {
     
@@ -54,18 +54,17 @@ public class FormDefinitionTemplate {
 
   public FormDefinitionTemplate addFieldDefinitionsItem(FormFieldDefinition fieldDefinitionsItem) {
     if (this.fieldDefinitions == null) {
-      this.fieldDefinitions = new ArrayList<FormFieldDefinition>();
+      this.fieldDefinitions = new ArrayList<>();
     }
     this.fieldDefinitions.add(fieldDefinitionsItem);
     return this;
   }
 
-   /**
+  /**
    * Field definitions in the template; a field is comprised of a key/value pair
    * @return fieldDefinitions
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Field definitions in the template; a field is comprised of a key/value pair")
   @JsonProperty(JSON_PROPERTY_FIELD_DEFINITIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -74,10 +73,11 @@ public class FormDefinitionTemplate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FIELD_DEFINITIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFieldDefinitions(List<FormFieldDefinition> fieldDefinitions) {
     this.fieldDefinitions = fieldDefinitions;
   }
-
 
   public FormDefinitionTemplate tableDefinitions(List<FormTableDefinition> tableDefinitions) {
     
@@ -87,18 +87,17 @@ public class FormDefinitionTemplate {
 
   public FormDefinitionTemplate addTableDefinitionsItem(FormTableDefinition tableDefinitionsItem) {
     if (this.tableDefinitions == null) {
-      this.tableDefinitions = new ArrayList<FormTableDefinition>();
+      this.tableDefinitions = new ArrayList<>();
     }
     this.tableDefinitions.add(tableDefinitionsItem);
     return this;
   }
 
-   /**
+  /**
    * Table definitions in the template; a table is comprised of columns and rows and exists in a 2-dimensional layout; a common example of a table would be an invoice
    * @return tableDefinitions
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Table definitions in the template; a table is comprised of columns and rows and exists in a 2-dimensional layout; a common example of a table would be an invoice")
   @JsonProperty(JSON_PROPERTY_TABLE_DEFINITIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +106,11 @@ public class FormDefinitionTemplate {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_DEFINITIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableDefinitions(List<FormTableDefinition> tableDefinitions) {
     this.tableDefinitions = tableDefinitions;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -129,7 +129,6 @@ public class FormDefinitionTemplate {
   public int hashCode() {
     return Objects.hash(fieldDefinitions, tableDefinitions);
   }
-
 
   @Override
   public String toString() {

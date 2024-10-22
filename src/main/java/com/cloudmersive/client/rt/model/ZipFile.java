@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Representation of a file in a zip file
  */
-@ApiModel(description = "Representation of a file in a zip file")
 @JsonPropertyOrder({
   ZipFile.JSON_PROPERTY_FILE_NAME,
   ZipFile.JSON_PROPERTY_FILE_CONTENTS
 })
-@JsonTypeName("ZipFile")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ZipFile {
   public static final String JSON_PROPERTY_FILE_NAME = "FileName";
   private String fileName;
@@ -41,6 +38,8 @@ public class ZipFile {
   public static final String JSON_PROPERTY_FILE_CONTENTS = "FileContents";
   private byte[] fileContents;
 
+  public ZipFile() {
+  }
 
   public ZipFile fileName(String fileName) {
     
@@ -48,12 +47,11 @@ public class ZipFile {
     return this;
   }
 
-   /**
+  /**
    * Name of this file
    * @return fileName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of this file")
   @JsonProperty(JSON_PROPERTY_FILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ZipFile {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileName(String fileName) {
     this.fileName = fileName;
   }
-
 
   public ZipFile fileContents(byte[] fileContents) {
     
@@ -73,12 +72,11 @@ public class ZipFile {
     return this;
   }
 
-   /**
+  /**
    * Contents of this file
    * @return fileContents
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Contents of this file")
   @JsonProperty(JSON_PROPERTY_FILE_CONTENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ZipFile {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_CONTENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileContents(byte[] fileContents) {
     this.fileContents = fileContents;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ZipFile {
   public int hashCode() {
     return Objects.hash(fileName, Arrays.hashCode(fileContents));
   }
-
 
   @Override
   public String toString() {

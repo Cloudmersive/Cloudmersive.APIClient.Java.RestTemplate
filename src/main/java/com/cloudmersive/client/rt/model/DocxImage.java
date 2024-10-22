@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * DocxImage
@@ -42,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   DocxImage.JSON_PROPERTY_IMAGE_CONTENTS_U_R_L,
   DocxImage.JSON_PROPERTY_INLINE_WITH_TEXT
 })
-@JsonTypeName("DocxImage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxImage {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
@@ -84,6 +82,8 @@ public class DocxImage {
   public static final String JSON_PROPERTY_INLINE_WITH_TEXT = "InlineWithText";
   private Boolean inlineWithText;
 
+  public DocxImage() {
+  }
 
   public DocxImage path(String path) {
     
@@ -91,12 +91,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * The Path of the location of this object; leave blank for new tables
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Path of the location of this object; leave blank for new tables")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -105,10 +104,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   public DocxImage imageName(String imageName) {
     
@@ -116,12 +116,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * The Name of the image
    * @return imageName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Name of the image")
   @JsonProperty(JSON_PROPERTY_IMAGE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,10 +129,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageName(String imageName) {
     this.imageName = imageName;
   }
-
 
   public DocxImage imageId(Long imageId) {
     
@@ -141,12 +141,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * The Id of the image
    * @return imageId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Id of the image")
   @JsonProperty(JSON_PROPERTY_IMAGE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -155,10 +154,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageId(Long imageId) {
     this.imageId = imageId;
   }
-
 
   public DocxImage imageDescription(String imageDescription) {
     
@@ -166,12 +166,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * The Description of the image
    * @return imageDescription
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The Description of the image")
   @JsonProperty(JSON_PROPERTY_IMAGE_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,10 +179,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageDescription(String imageDescription) {
     this.imageDescription = imageDescription;
   }
-
 
   public DocxImage imageWidth(Long imageWidth) {
     
@@ -191,12 +191,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * Width of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height
    * @return imageWidth
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height")
   @JsonProperty(JSON_PROPERTY_IMAGE_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -205,10 +204,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageWidth(Long imageWidth) {
     this.imageWidth = imageWidth;
   }
-
 
   public DocxImage imageHeight(Long imageHeight) {
     
@@ -216,12 +216,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * Height of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height
    * @return imageHeight
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height of the image in EMUs (English Metric Units); set to 0 to default to page width and aspect-ratio based height")
   @JsonProperty(JSON_PROPERTY_IMAGE_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -230,10 +229,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageHeight(Long imageHeight) {
     this.imageHeight = imageHeight;
   }
-
 
   public DocxImage xoffset(Long xoffset) {
     
@@ -241,12 +241,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * X (horizontal) offset of the image
    * @return xoffset
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X (horizontal) offset of the image")
   @JsonProperty(JSON_PROPERTY_XOFFSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -255,10 +254,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_XOFFSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setXoffset(Long xoffset) {
     this.xoffset = xoffset;
   }
-
 
   public DocxImage yoffset(Long yoffset) {
     
@@ -266,12 +266,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * Y (vertical) offset of the image
    * @return yoffset
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y (vertical) offset of the image")
   @JsonProperty(JSON_PROPERTY_YOFFSET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -280,10 +279,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_YOFFSET)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setYoffset(Long yoffset) {
     this.yoffset = yoffset;
   }
-
 
   public DocxImage imageDataEmbedId(String imageDataEmbedId) {
     
@@ -291,12 +291,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * Read-only; internal ID for the image contents
    * @return imageDataEmbedId
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Read-only; internal ID for the image contents")
   @JsonProperty(JSON_PROPERTY_IMAGE_DATA_EMBED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -305,10 +304,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_DATA_EMBED_ID)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageDataEmbedId(String imageDataEmbedId) {
     this.imageDataEmbedId = imageDataEmbedId;
   }
-
 
   public DocxImage imageDataContentType(String imageDataContentType) {
     
@@ -316,12 +316,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * Read-only; image data MIME content-type
    * @return imageDataContentType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Read-only; image data MIME content-type")
   @JsonProperty(JSON_PROPERTY_IMAGE_DATA_CONTENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,10 +329,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_DATA_CONTENT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageDataContentType(String imageDataContentType) {
     this.imageDataContentType = imageDataContentType;
   }
-
 
   public DocxImage imageInternalFileName(String imageInternalFileName) {
     
@@ -341,12 +341,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * Read-only; internal file name/path for the image
    * @return imageInternalFileName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Read-only; internal file name/path for the image")
   @JsonProperty(JSON_PROPERTY_IMAGE_INTERNAL_FILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -355,10 +354,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_INTERNAL_FILE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageInternalFileName(String imageInternalFileName) {
     this.imageInternalFileName = imageInternalFileName;
   }
-
 
   public DocxImage imageContentsURL(String imageContentsURL) {
     
@@ -366,12 +366,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents.
    * @return imageContentsURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "URL to the image contents; file is stored in an in-memory cache and will be deleted.  Call Finish-Editing to get the contents.")
   @JsonProperty(JSON_PROPERTY_IMAGE_CONTENTS_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -380,10 +379,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IMAGE_CONTENTS_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setImageContentsURL(String imageContentsURL) {
     this.imageContentsURL = imageContentsURL;
   }
-
 
   public DocxImage inlineWithText(Boolean inlineWithText) {
     
@@ -391,12 +391,11 @@ public class DocxImage {
     return this;
   }
 
-   /**
+  /**
    * True if the image is inline with the text; false if it is floating
    * @return inlineWithText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the image is inline with the text; false if it is floating")
   @JsonProperty(JSON_PROPERTY_INLINE_WITH_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -405,10 +404,11 @@ public class DocxImage {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INLINE_WITH_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInlineWithText(Boolean inlineWithText) {
     this.inlineWithText = inlineWithText;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -438,7 +438,6 @@ public class DocxImage {
   public int hashCode() {
     return Objects.hash(path, imageName, imageId, imageDescription, imageWidth, imageHeight, xoffset, yoffset, imageDataEmbedId, imageDataContentType, imageInternalFileName, imageContentsURL, inlineWithText);
   }
-
 
   @Override
   public String toString() {

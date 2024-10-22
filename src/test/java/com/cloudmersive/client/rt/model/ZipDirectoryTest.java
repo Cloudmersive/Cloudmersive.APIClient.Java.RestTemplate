@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ZipDirectory
  */
-public class ZipDirectoryTest {
+class ZipDirectoryTest {
     private final ZipDirectory model = new ZipDirectory();
 
     /**
      * Model tests for ZipDirectory
      */
     @Test
-    public void testZipDirectory() {
+    void testZipDirectory() {
         // TODO: test ZipDirectory
     }
 
@@ -46,7 +44,7 @@ public class ZipDirectoryTest {
      * Test the property 'directoryName'
      */
     @Test
-    public void directoryNameTest() {
+    void directoryNameTest() {
         // TODO: test directoryName
     }
 
@@ -54,7 +52,7 @@ public class ZipDirectoryTest {
      * Test the property 'directoriesInDirectory'
      */
     @Test
-    public void directoriesInDirectoryTest() {
+    void directoriesInDirectoryTest() {
         // TODO: test directoriesInDirectory
     }
 
@@ -62,7 +60,7 @@ public class ZipDirectoryTest {
      * Test the property 'filesInDirectory'
      */
     @Test
-    public void filesInDirectoryTest() {
+    void filesInDirectoryTest() {
         // TODO: test filesInDirectory
     }
 

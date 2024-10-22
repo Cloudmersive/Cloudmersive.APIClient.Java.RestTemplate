@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a Get-Tables command
  */
-@ApiModel(description = "Result of running a Get-Tables command")
 @JsonPropertyOrder({
   GetDocxTablesResponse.JSON_PROPERTY_SUCCESSFUL,
   GetDocxTablesResponse.JSON_PROPERTY_TABLES
 })
-@JsonTypeName("GetDocxTablesResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxTablesResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_TABLES = "Tables";
-  private List<DocxTable> tables = null;
+  private List<DocxTable> tables = new ArrayList<>();
 
+  public GetDocxTablesResponse() {
+  }
 
   public GetDocxTablesResponse successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class GetDocxTablesResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class GetDocxTablesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetDocxTablesResponse tables(List<DocxTable> tables) {
     
@@ -78,18 +78,17 @@ public class GetDocxTablesResponse {
 
   public GetDocxTablesResponse addTablesItem(DocxTable tablesItem) {
     if (this.tables == null) {
-      this.tables = new ArrayList<DocxTable>();
+      this.tables = new ArrayList<>();
     }
     this.tables.add(tablesItem);
     return this;
   }
 
-   /**
+  /**
    * Tables in the DOCX file
    * @return tables
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Tables in the DOCX file")
   @JsonProperty(JSON_PROPERTY_TABLES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class GetDocxTablesResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTables(List<DocxTable> tables) {
     this.tables = tables;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class GetDocxTablesResponse {
   public int hashCode() {
     return Objects.hash(successful, tables);
   }
-
 
   @Override
   public String toString() {

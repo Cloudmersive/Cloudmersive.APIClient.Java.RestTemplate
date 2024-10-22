@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FineTextItem
  */
-public class FineTextItemTest {
+class FineTextItemTest {
     private final FineTextItem model = new FineTextItem();
 
     /**
      * Model tests for FineTextItem
      */
     @Test
-    public void testFineTextItem() {
+    void testFineTextItem() {
         // TODO: test FineTextItem
     }
 
@@ -43,7 +40,7 @@ public class FineTextItemTest {
      * Test the property 'topLeftX'
      */
     @Test
-    public void topLeftXTest() {
+    void topLeftXTest() {
         // TODO: test topLeftX
     }
 
@@ -51,7 +48,7 @@ public class FineTextItemTest {
      * Test the property 'topLeftY'
      */
     @Test
-    public void topLeftYTest() {
+    void topLeftYTest() {
         // TODO: test topLeftY
     }
 
@@ -59,7 +56,7 @@ public class FineTextItemTest {
      * Test the property 'topRightX'
      */
     @Test
-    public void topRightXTest() {
+    void topRightXTest() {
         // TODO: test topRightX
     }
 
@@ -67,7 +64,7 @@ public class FineTextItemTest {
      * Test the property 'topRightY'
      */
     @Test
-    public void topRightYTest() {
+    void topRightYTest() {
         // TODO: test topRightY
     }
 
@@ -75,7 +72,7 @@ public class FineTextItemTest {
      * Test the property 'bottomLeftX'
      */
     @Test
-    public void bottomLeftXTest() {
+    void bottomLeftXTest() {
         // TODO: test bottomLeftX
     }
 
@@ -83,7 +80,7 @@ public class FineTextItemTest {
      * Test the property 'bottomLeftY'
      */
     @Test
-    public void bottomLeftYTest() {
+    void bottomLeftYTest() {
         // TODO: test bottomLeftY
     }
 
@@ -91,7 +88,7 @@ public class FineTextItemTest {
      * Test the property 'bottomRightX'
      */
     @Test
-    public void bottomRightXTest() {
+    void bottomRightXTest() {
         // TODO: test bottomRightX
     }
 
@@ -99,7 +96,7 @@ public class FineTextItemTest {
      * Test the property 'bottomRightY'
      */
     @Test
-    public void bottomRightYTest() {
+    void bottomRightYTest() {
         // TODO: test bottomRightY
     }
 
@@ -107,7 +104,7 @@ public class FineTextItemTest {
      * Test the property 'width'
      */
     @Test
-    public void widthTest() {
+    void widthTest() {
         // TODO: test width
     }
 
@@ -115,7 +112,7 @@ public class FineTextItemTest {
      * Test the property 'height'
      */
     @Test
-    public void heightTest() {
+    void heightTest() {
         // TODO: test height
     }
 
@@ -123,7 +120,7 @@ public class FineTextItemTest {
      * Test the property 'angle'
      */
     @Test
-    public void angleTest() {
+    void angleTest() {
         // TODO: test angle
     }
 

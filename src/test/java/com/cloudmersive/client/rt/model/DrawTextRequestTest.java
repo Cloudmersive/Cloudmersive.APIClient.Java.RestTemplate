@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DrawTextRequest
  */
-public class DrawTextRequestTest {
+class DrawTextRequestTest {
     private final DrawTextRequest model = new DrawTextRequest();
 
     /**
      * Model tests for DrawTextRequest
      */
     @Test
-    public void testDrawTextRequest() {
+    void testDrawTextRequest() {
         // TODO: test DrawTextRequest
     }
 
@@ -46,7 +44,7 @@ public class DrawTextRequestTest {
      * Test the property 'baseImageBytes'
      */
     @Test
-    public void baseImageBytesTest() {
+    void baseImageBytesTest() {
         // TODO: test baseImageBytes
     }
 
@@ -54,7 +52,7 @@ public class DrawTextRequestTest {
      * Test the property 'baseImageUrl'
      */
     @Test
-    public void baseImageUrlTest() {
+    void baseImageUrlTest() {
         // TODO: test baseImageUrl
     }
 
@@ -62,7 +60,7 @@ public class DrawTextRequestTest {
      * Test the property 'textToDraw'
      */
     @Test
-    public void textToDrawTest() {
+    void textToDrawTest() {
         // TODO: test textToDraw
     }
 

@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * A video file
  */
-@ApiModel(description = "A video file")
 @JsonPropertyOrder({
   VideoFile.JSON_PROPERTY_VIDEO_NUMBER,
   VideoFile.JSON_PROPERTY_CONTENT
 })
-@JsonTypeName("VideoFile")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:54.718-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:57.308518900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VideoFile {
   public static final String JSON_PROPERTY_VIDEO_NUMBER = "VideoNumber";
   private Integer videoNumber;
@@ -41,6 +38,8 @@ public class VideoFile {
   public static final String JSON_PROPERTY_CONTENT = "Content";
   private byte[] content;
 
+  public VideoFile() {
+  }
 
   public VideoFile videoNumber(Integer videoNumber) {
     
@@ -48,12 +47,11 @@ public class VideoFile {
     return this;
   }
 
-   /**
+  /**
    * Sequence number of the video
    * @return videoNumber
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Sequence number of the video")
   @JsonProperty(JSON_PROPERTY_VIDEO_NUMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class VideoFile {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VIDEO_NUMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVideoNumber(Integer videoNumber) {
     this.videoNumber = videoNumber;
   }
-
 
   public VideoFile content(byte[] content) {
     
@@ -73,12 +72,11 @@ public class VideoFile {
     return this;
   }
 
-   /**
+  /**
    * The video file as a byte array
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The video file as a byte array")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class VideoFile {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(byte[] content) {
     this.content = content;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class VideoFile {
   public int hashCode() {
     return Objects.hash(videoNumber, Arrays.hashCode(content));
   }
-
 
   @Override
   public String toString() {

@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AutodetectDocumentValidationResult
  */
-public class AutodetectDocumentValidationResultTest {
+class AutodetectDocumentValidationResultTest {
     private final AutodetectDocumentValidationResult model = new AutodetectDocumentValidationResult();
 
     /**
      * Model tests for AutodetectDocumentValidationResult
      */
     @Test
-    public void testAutodetectDocumentValidationResult() {
+    void testAutodetectDocumentValidationResult() {
         // TODO: test AutodetectDocumentValidationResult
     }
 
@@ -46,7 +44,7 @@ public class AutodetectDocumentValidationResultTest {
      * Test the property 'fileFormatExtension'
      */
     @Test
-    public void fileFormatExtensionTest() {
+    void fileFormatExtensionTest() {
         // TODO: test fileFormatExtension
     }
 
@@ -54,7 +52,7 @@ public class AutodetectDocumentValidationResultTest {
      * Test the property 'documentIsValid'
      */
     @Test
-    public void documentIsValidTest() {
+    void documentIsValidTest() {
         // TODO: test documentIsValid
     }
 
@@ -62,7 +60,7 @@ public class AutodetectDocumentValidationResultTest {
      * Test the property 'errorCount'
      */
     @Test
-    public void errorCountTest() {
+    void errorCountTest() {
         // TODO: test errorCount
     }
 
@@ -70,7 +68,7 @@ public class AutodetectDocumentValidationResultTest {
      * Test the property 'warningCount'
      */
     @Test
-    public void warningCountTest() {
+    void warningCountTest() {
         // TODO: test warningCount
     }
 
@@ -78,7 +76,7 @@ public class AutodetectDocumentValidationResultTest {
      * Test the property 'errorsAndWarnings'
      */
     @Test
-    public void errorsAndWarningsTest() {
+    void errorsAndWarningsTest() {
         // TODO: test errorsAndWarnings
     }
 

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FindStringSimpleRequest
  */
-public class FindStringSimpleRequestTest {
+class FindStringSimpleRequestTest {
     private final FindStringSimpleRequest model = new FindStringSimpleRequest();
 
     /**
      * Model tests for FindStringSimpleRequest
      */
     @Test
-    public void testFindStringSimpleRequest() {
+    void testFindStringSimpleRequest() {
         // TODO: test FindStringSimpleRequest
     }
 
@@ -43,7 +40,7 @@ public class FindStringSimpleRequestTest {
      * Test the property 'textContent'
      */
     @Test
-    public void textContentTest() {
+    void textContentTest() {
         // TODO: test textContent
     }
 
@@ -51,7 +48,7 @@ public class FindStringSimpleRequestTest {
      * Test the property 'targetString'
      */
     @Test
-    public void targetStringTest() {
+    void targetStringTest() {
         // TODO: test targetString
     }
 

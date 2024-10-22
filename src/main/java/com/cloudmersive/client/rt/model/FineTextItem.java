@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual instance of text occuring in an image; one piece of text
  */
-@ApiModel(description = "Individual instance of text occuring in an image; one piece of text")
 @JsonPropertyOrder({
   FineTextItem.JSON_PROPERTY_TOP_LEFT_X,
   FineTextItem.JSON_PROPERTY_TOP_LEFT_Y,
@@ -41,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   FineTextItem.JSON_PROPERTY_HEIGHT,
   FineTextItem.JSON_PROPERTY_ANGLE
 })
-@JsonTypeName("FineTextItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FineTextItem {
   public static final String JSON_PROPERTY_TOP_LEFT_X = "TopLeftX";
   private Integer topLeftX;
@@ -77,6 +74,8 @@ public class FineTextItem {
   public static final String JSON_PROPERTY_ANGLE = "Angle";
   private Double angle;
 
+  public FineTextItem() {
+  }
 
   public FineTextItem topLeftX(Integer topLeftX) {
     
@@ -84,12 +83,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the top/left text location; 0 represents the left edge of the input image
    * @return topLeftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the top/left text location; 0 represents the left edge of the input image")
   @JsonProperty(JSON_PROPERTY_TOP_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +96,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopLeftX(Integer topLeftX) {
     this.topLeftX = topLeftX;
   }
-
 
   public FineTextItem topLeftY(Integer topLeftY) {
     
@@ -109,12 +108,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the top/left text location; 0 represents the top edge of the input image
    * @return topLeftY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the top/left text location; 0 represents the top edge of the input image")
   @JsonProperty(JSON_PROPERTY_TOP_LEFT_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,10 +121,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_LEFT_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopLeftY(Integer topLeftY) {
     this.topLeftY = topLeftY;
   }
-
 
   public FineTextItem topRightX(Integer topRightX) {
     
@@ -134,12 +133,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the top/right text location; 0 represents the left edge of the input image
    * @return topRightX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the top/right text location; 0 represents the left edge of the input image")
   @JsonProperty(JSON_PROPERTY_TOP_RIGHT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,10 +146,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_RIGHT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopRightX(Integer topRightX) {
     this.topRightX = topRightX;
   }
-
 
   public FineTextItem topRightY(Integer topRightY) {
     
@@ -159,12 +158,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the top/right text location; 0 represents the top edge of the input image
    * @return topRightY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the top/right text location; 0 represents the top edge of the input image")
   @JsonProperty(JSON_PROPERTY_TOP_RIGHT_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -173,10 +171,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_RIGHT_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopRightY(Integer topRightY) {
     this.topRightY = topRightY;
   }
-
 
   public FineTextItem bottomLeftX(Integer bottomLeftX) {
     
@@ -184,12 +183,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the bottom/left text location; 0 represents the left edge of the input image
    * @return bottomLeftX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the bottom/left text location; 0 represents the left edge of the input image")
   @JsonProperty(JSON_PROPERTY_BOTTOM_LEFT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,10 +196,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_LEFT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomLeftX(Integer bottomLeftX) {
     this.bottomLeftX = bottomLeftX;
   }
-
 
   public FineTextItem bottomLeftY(Integer bottomLeftY) {
     
@@ -209,12 +208,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the bottom/left text location; 0 represents the top edge of the input image
    * @return bottomLeftY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the bottom/left text location; 0 represents the top edge of the input image")
   @JsonProperty(JSON_PROPERTY_BOTTOM_LEFT_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,10 +221,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_LEFT_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomLeftY(Integer bottomLeftY) {
     this.bottomLeftY = bottomLeftY;
   }
-
 
   public FineTextItem bottomRightX(Integer bottomRightX) {
     
@@ -234,12 +233,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * X coordinate of the bottom/right text location; 0 represents the left edge of the input image
    * @return bottomRightX
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X coordinate of the bottom/right text location; 0 represents the left edge of the input image")
   @JsonProperty(JSON_PROPERTY_BOTTOM_RIGHT_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,10 +246,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_RIGHT_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomRightX(Integer bottomRightX) {
     this.bottomRightX = bottomRightX;
   }
-
 
   public FineTextItem bottomRightY(Integer bottomRightY) {
     
@@ -259,12 +258,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Y coordinate of the bottom/right text location; 0 represents the top edge of the input image
    * @return bottomRightY
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y coordinate of the bottom/right text location; 0 represents the top edge of the input image")
   @JsonProperty(JSON_PROPERTY_BOTTOM_RIGHT_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -273,10 +271,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BOTTOM_RIGHT_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBottomRightY(Integer bottomRightY) {
     this.bottomRightY = bottomRightY;
   }
-
 
   public FineTextItem width(Integer width) {
     
@@ -284,12 +283,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Width in pixels of the text
    * @return width
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Width in pixels of the text")
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -298,10 +296,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWidth(Integer width) {
     this.width = width;
   }
-
 
   public FineTextItem height(Integer height) {
     
@@ -309,12 +308,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Height in pixels of the text
    * @return height
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Height in pixels of the text")
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -323,10 +321,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHeight(Integer height) {
     this.height = height;
   }
-
 
   public FineTextItem angle(Double angle) {
     
@@ -334,12 +333,11 @@ public class FineTextItem {
     return this;
   }
 
-   /**
+  /**
    * Rotation Angle in radians of the text
    * @return angle
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Rotation Angle in radians of the text")
   @JsonProperty(JSON_PROPERTY_ANGLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -348,10 +346,11 @@ public class FineTextItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANGLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAngle(Double angle) {
     this.angle = angle;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -379,7 +378,6 @@ public class FineTextItem {
   public int hashCode() {
     return Objects.hash(topLeftX, topLeftY, topRightX, topRightY, bottomLeftX, bottomLeftY, bottomRightX, bottomRightY, width, height, angle);
   }
-
 
   @Override
   public String toString() {

@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Cell data to fill in to the DOCX Table
  */
-@ApiModel(description = "Cell data to fill in to the DOCX Table")
 @JsonPropertyOrder({
   DocxTableTableFillTableCell.JSON_PROPERTY_TARGET_TAG,
   DocxTableTableFillTableCell.JSON_PROPERTY_REPLACEMENT_VALUE
 })
-@JsonTypeName("DocxTableTableFillTableCell")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableTableFillTableCell {
   public static final String JSON_PROPERTY_TARGET_TAG = "TargetTag";
   private String targetTag;
@@ -41,6 +38,8 @@ public class DocxTableTableFillTableCell {
   public static final String JSON_PROPERTY_REPLACEMENT_VALUE = "ReplacementValue";
   private String replacementValue;
 
+  public DocxTableTableFillTableCell() {
+  }
 
   public DocxTableTableFillTableCell targetTag(String targetTag) {
     
@@ -48,12 +47,11 @@ public class DocxTableTableFillTableCell {
     return this;
   }
 
-   /**
+  /**
    * Target tag to replace
    * @return targetTag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Target tag to replace")
   @JsonProperty(JSON_PROPERTY_TARGET_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class DocxTableTableFillTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TARGET_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTargetTag(String targetTag) {
     this.targetTag = targetTag;
   }
-
 
   public DocxTableTableFillTableCell replacementValue(String replacementValue) {
     
@@ -73,12 +72,11 @@ public class DocxTableTableFillTableCell {
     return this;
   }
 
-   /**
+  /**
    * Replacement value for the target tag
    * @return replacementValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Replacement value for the target tag")
   @JsonProperty(JSON_PROPERTY_REPLACEMENT_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class DocxTableTableFillTableCell {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_REPLACEMENT_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReplacementValue(String replacementValue) {
     this.replacementValue = replacementValue;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class DocxTableTableFillTableCell {
   public int hashCode() {
     return Objects.hash(targetTag, replacementValue);
   }
-
 
   @Override
   public String toString() {

@@ -20,21 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of getting a file type icon from a file extension
  */
-@ApiModel(description = "Result of getting a file type icon from a file extension")
 @JsonPropertyOrder({
   GetFileTypeIconResult.JSON_PROPERTY_SUCCESSFUL,
   GetFileTypeIconResult.JSON_PROPERTY_ICON,
   GetFileTypeIconResult.JSON_PROPERTY_EXTENSION
 })
-@JsonTypeName("GetFileTypeIconResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetFileTypeIconResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -45,6 +42,8 @@ public class GetFileTypeIconResult {
   public static final String JSON_PROPERTY_EXTENSION = "Extension";
   private String extension;
 
+  public GetFileTypeIconResult() {
+  }
 
   public GetFileTypeIconResult successful(Boolean successful) {
     
@@ -52,12 +51,11 @@ public class GetFileTypeIconResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +64,11 @@ public class GetFileTypeIconResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetFileTypeIconResult icon(byte[] icon) {
     
@@ -77,12 +76,11 @@ public class GetFileTypeIconResult {
     return this;
   }
 
-   /**
+  /**
    * PNG icon as a byte array
    * @return icon
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "PNG icon as a byte array")
   @JsonProperty(JSON_PROPERTY_ICON)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,10 +89,11 @@ public class GetFileTypeIconResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ICON)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIcon(byte[] icon) {
     this.icon = icon;
   }
-
 
   public GetFileTypeIconResult extension(String extension) {
     
@@ -102,12 +101,11 @@ public class GetFileTypeIconResult {
     return this;
   }
 
-   /**
+  /**
    * Extension used for the icon
    * @return extension
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Extension used for the icon")
   @JsonProperty(JSON_PROPERTY_EXTENSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,10 +114,11 @@ public class GetFileTypeIconResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXTENSION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExtension(String extension) {
     this.extension = extension;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -139,7 +138,6 @@ public class GetFileTypeIconResult {
   public int hashCode() {
     return Objects.hash(successful, Arrays.hashCode(icon), extension);
   }
-
 
   @Override
   public String toString() {

@@ -120,9 +120,12 @@ import com.cloudmersive.client.rt.model.UpdateDocxTableCellRequest;
 import com.cloudmersive.client.rt.model.UpdateDocxTableCellResponse;
 import com.cloudmersive.client.rt.model.UpdateDocxTableRowRequest;
 import com.cloudmersive.client.rt.model.UpdateDocxTableRowResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -131,8 +134,8 @@ import java.util.Map;
 /**
  * API tests for EditDocumentApi
  */
-@Ignore
-public class EditDocumentApiTest {
+@Disabled
+class EditDocumentApiTest {
 
     private final EditDocumentApi api = new EditDocumentApi();
 
@@ -142,12 +145,13 @@ public class EditDocumentApiTest {
      *
      * Uploads a document to Cloudmersive to begin a series of one or more editing operations.  To edit a document, first call Begin Editing on the document.  Then perform operations on the document using the secure URL returned from BeginEditing, such as Word DOCX Delete Pages and Insert Table.  Finally, perform finish editing on the URL to return the resulting edited document.  The editing URL is temporary and only stored in-memory cache, and will automatically expire from the cache after 30 minutes, and cannot be directly accessed.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentBeginEditingTest() {
+    void editDocumentBeginEditingTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         String response = api.editDocumentBeginEditing(inputFile);
 
         // TODO: test validations
@@ -158,13 +162,15 @@ public class EditDocumentApiTest {
      *
      * Accepts all tracked changes and revisions in a Word DOCX document.  This will accept all pending changes in the document when tracked changes is turned on.  Track changes will remain on (if it is on) after this oepration is completed.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxAcceptAllTrackChangesTest() {
+    void editDocumentDocxAcceptAllTrackChangesTest() {
         org.springframework.core.io.Resource inputFile = null;
-        byte[] response = api.editDocumentDocxAcceptAllTrackChanges(inputFile);
+        Boolean autorepair = null;
+
+        byte[] response = api.editDocumentDocxAcceptAllTrackChanges(inputFile, autorepair);
 
         // TODO: test validations
     }
@@ -174,12 +180,13 @@ public class EditDocumentApiTest {
      *
      * Returns the body defined in the Word Document (DOCX) format file; this is the main content part of a DOCX document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxBodyTest() {
+    void editDocumentDocxBodyTest() {
         GetDocxBodyRequest reqConfig = null;
+
         GetDocxBodyResponse response = api.editDocumentDocxBody(reqConfig);
 
         // TODO: test validations
@@ -190,12 +197,13 @@ public class EditDocumentApiTest {
      *
      * Returns a blank Word DOCX Document format file.  The file is blank, with no contents.  Use additional editing commands such as Insert Paragraph or Insert Table or Insert Image to populate the document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxCreateBlankDocumentTest() {
+    void editDocumentDocxCreateBlankDocumentTest() {
         CreateBlankDocxRequest input = null;
+
         CreateBlankDocxResponse response = api.editDocumentDocxCreateBlankDocument(input);
 
         // TODO: test validations
@@ -206,12 +214,13 @@ public class EditDocumentApiTest {
      *
      * Returns the edited Word Document in the Word Document (DOCX) format file with the specified pages removed
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxDeletePagesTest() {
+    void editDocumentDocxDeletePagesTest() {
         RemoveDocxPagesRequest reqConfig = null;
+
         byte[] response = api.editDocumentDocxDeletePages(reqConfig);
 
         // TODO: test validations
@@ -222,12 +231,13 @@ public class EditDocumentApiTest {
      *
      * Deletes an existing table row in a Word DOCX Document and returns the result.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxDeleteTableRowTest() {
+    void editDocumentDocxDeleteTableRowTest() {
         DeleteDocxTableRowRequest reqConfig = null;
+
         DeleteDocxTableRowResponse response = api.editDocumentDocxDeleteTableRow(reqConfig);
 
         // TODO: test validations
@@ -238,12 +248,13 @@ public class EditDocumentApiTest {
      *
      * Deletes a range of 1 or more existing table rows in a Word DOCX Document and returns the result.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxDeleteTableRowRangeTest() {
+    void editDocumentDocxDeleteTableRowRangeTest() {
         DeleteDocxTableRowRangeRequest reqConfig = null;
+
         DeleteDocxTableRowRangeResponse response = api.editDocumentDocxDeleteTableRowRange(reqConfig);
 
         // TODO: test validations
@@ -254,12 +265,13 @@ public class EditDocumentApiTest {
      *
      * Diables tracking of changes and revisions in a Word DOCX document, and accepts any pending changes.  Users editing the document will no longer see changes tracked automatically.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxDisableTrackChangesTest() {
+    void editDocumentDocxDisableTrackChangesTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editDocumentDocxDisableTrackChanges(inputFile);
 
         // TODO: test validations
@@ -270,12 +282,13 @@ public class EditDocumentApiTest {
      *
      * Enables tracking of changes and revisions in a Word DOCX document.  Users editing the document will see changes tracked automatically, with edits highlighted, and the ability to accept or reject changes made to the document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxEnableTrackChangesTest() {
+    void editDocumentDocxEnableTrackChangesTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editDocumentDocxEnableTrackChanges(inputFile);
 
         // TODO: test validations
@@ -286,12 +299,13 @@ public class EditDocumentApiTest {
      *
      * Returns the paragraphs defined in the Word Document (DOCX) format file that match the input criteria
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxFindParagraphTest() {
+    void editDocumentDocxFindParagraphTest() {
         FindDocxParagraphRequest reqConfig = null;
+
         FindDocxParagraphResponse response = api.editDocumentDocxFindParagraph(reqConfig);
 
         // TODO: test validations
@@ -302,12 +316,13 @@ public class EditDocumentApiTest {
      *
      * Returns the comments and review annotations stored in the Word Document (DOCX) format file as a flattened list (not as a hierarchy of comments and replies).
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetCommentsTest() {
+    void editDocumentDocxGetCommentsTest() {
         GetDocxGetCommentsRequest reqConfig = null;
+
         GetDocxCommentsResponse response = api.editDocumentDocxGetComments(reqConfig);
 
         // TODO: test validations
@@ -318,12 +333,13 @@ public class EditDocumentApiTest {
      *
      * Returns the comments and review annotations stored in the Word Document (DOCX) format file hierarchically, where reply comments are nested as children under top-level comments in the results returned.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetCommentsHierarchicalTest() {
+    void editDocumentDocxGetCommentsHierarchicalTest() {
         GetDocxGetCommentsHierarchicalRequest reqConfig = null;
+
         GetDocxCommentsHierarchicalResponse response = api.editDocumentDocxGetCommentsHierarchical(reqConfig);
 
         // TODO: test validations
@@ -334,12 +350,13 @@ public class EditDocumentApiTest {
      *
      * Returns all the content controls, used for creating form fields, in a Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetContentControlsTest() {
+    void editDocumentDocxGetContentControlsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetDocxContentControlsResponse response = api.editDocumentDocxGetContentControls(inputFile);
 
         // TODO: test validations
@@ -350,12 +367,13 @@ public class EditDocumentApiTest {
      *
      * Returns all the content controls, used for creating form fields, as well as handlebar style text-based form fields such as \&quot;{{FieldName}}\&quot;, in a Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetFormFieldsTest() {
+    void editDocumentDocxGetFormFieldsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetDocxGetFormFieldsResponse response = api.editDocumentDocxGetFormFields(inputFile);
 
         // TODO: test validations
@@ -366,12 +384,13 @@ public class EditDocumentApiTest {
      *
      * Returns the footer content from a Word Document (DOCX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetHeadersAndFootersTest() {
+    void editDocumentDocxGetHeadersAndFootersTest() {
         GetDocxHeadersAndFootersRequest reqConfig = null;
+
         GetDocxHeadersAndFootersResponse response = api.editDocumentDocxGetHeadersAndFooters(reqConfig);
 
         // TODO: test validations
@@ -382,12 +401,13 @@ public class EditDocumentApiTest {
      *
      * Returns the images defined in the Word Document (DOCX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetImagesTest() {
+    void editDocumentDocxGetImagesTest() {
         GetDocxImagesRequest reqConfig = null;
+
         GetDocxImagesResponse response = api.editDocumentDocxGetImages(reqConfig);
 
         // TODO: test validations
@@ -398,12 +418,13 @@ public class EditDocumentApiTest {
      *
      * Returns information about the Macros (e.g. VBA) defined in the Word Document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetMacroInformationTest() {
+    void editDocumentDocxGetMacroInformationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetMacrosResponse response = api.editDocumentDocxGetMacroInformation(inputFile);
 
         // TODO: test validations
@@ -414,12 +435,13 @@ public class EditDocumentApiTest {
      *
      * Returns all the metadata properties in an Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetMetadataPropertiesTest() {
+    void editDocumentDocxGetMetadataPropertiesTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetDocxMetadataPropertiesResponse response = api.editDocumentDocxGetMetadataProperties(inputFile);
 
         // TODO: test validations
@@ -430,12 +452,13 @@ public class EditDocumentApiTest {
      *
      * Returns the sections defined in the Word Document (DOCX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetSectionsTest() {
+    void editDocumentDocxGetSectionsTest() {
         GetDocxSectionsRequest reqConfig = null;
+
         GetDocxSectionsResponse response = api.editDocumentDocxGetSections(reqConfig);
 
         // TODO: test validations
@@ -446,12 +469,13 @@ public class EditDocumentApiTest {
      *
      * Returns the styles defined in the Word Document (DOCX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetStylesTest() {
+    void editDocumentDocxGetStylesTest() {
         GetDocxStylesRequest reqConfig = null;
+
         GetDocxStylesResponse response = api.editDocumentDocxGetStyles(reqConfig);
 
         // TODO: test validations
@@ -462,12 +486,13 @@ public class EditDocumentApiTest {
      *
      * Returns the specific table object by its 0-based index in an Office Word Document (DOCX)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetTableByIndexTest() {
+    void editDocumentDocxGetTableByIndexTest() {
         GetDocxTableByIndexRequest reqConfig = null;
+
         GetDocxTableByIndexResponse response = api.editDocumentDocxGetTableByIndex(reqConfig);
 
         // TODO: test validations
@@ -478,12 +503,13 @@ public class EditDocumentApiTest {
      *
      * Gets the contents of an existing table row in a Word DOCX Document and returns the result.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetTableRowTest() {
+    void editDocumentDocxGetTableRowTest() {
         GetDocxTableRowRequest reqConfig = null;
+
         GetDocxTableRowResponse response = api.editDocumentDocxGetTableRow(reqConfig);
 
         // TODO: test validations
@@ -494,12 +520,13 @@ public class EditDocumentApiTest {
      *
      * Returns all the table objects in an Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxGetTablesTest() {
+    void editDocumentDocxGetTablesTest() {
         GetDocxTablesRequest reqConfig = null;
+
         GetDocxTablesResponse response = api.editDocumentDocxGetTables(reqConfig);
 
         // TODO: test validations
@@ -510,12 +537,13 @@ public class EditDocumentApiTest {
      *
      * Adds a new comment into a Word DOCX document attached to a paragraph and returns the result.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxInsertCommentOnParagraphTest() {
+    void editDocumentDocxInsertCommentOnParagraphTest() {
         DocxInsertCommentOnParagraphRequest reqConfig = null;
+
         InsertDocxCommentOnParagraphResponse response = api.editDocumentDocxInsertCommentOnParagraph(reqConfig);
 
         // TODO: test validations
@@ -526,12 +554,13 @@ public class EditDocumentApiTest {
      *
      * Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxInsertImageTest() {
+    void editDocumentDocxInsertImageTest() {
         DocxInsertImageRequest reqConfig = null;
+
         DocxInsertImageResponse response = api.editDocumentDocxInsertImage(reqConfig);
 
         // TODO: test validations
@@ -542,12 +571,13 @@ public class EditDocumentApiTest {
      *
      * Adds a new paragraph into a DOCX and returns the result.  You can insert at the beginning/end of a document, or before/after an existing object using its Path (location within the document).  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxInsertParagraphTest() {
+    void editDocumentDocxInsertParagraphTest() {
         InsertDocxInsertParagraphRequest reqConfig = null;
+
         InsertDocxInsertParagraphResponse response = api.editDocumentDocxInsertParagraph(reqConfig);
 
         // TODO: test validations
@@ -558,12 +588,13 @@ public class EditDocumentApiTest {
      *
      * Adds a new table into a DOCX and returns the result.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxInsertTableTest() {
+    void editDocumentDocxInsertTableTest() {
         InsertDocxTablesRequest reqConfig = null;
+
         InsertDocxTablesResponse response = api.editDocumentDocxInsertTable(reqConfig);
 
         // TODO: test validations
@@ -574,12 +605,13 @@ public class EditDocumentApiTest {
      *
      * Adds a new table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxInsertTableRowTest() {
+    void editDocumentDocxInsertTableRowTest() {
         InsertDocxTableRowRequest reqConfig = null;
+
         InsertDocxTableRowResponse response = api.editDocumentDocxInsertTableRow(reqConfig);
 
         // TODO: test validations
@@ -590,12 +622,13 @@ public class EditDocumentApiTest {
      *
      * Returns the pages and contents of each page defined in the Word Document (DOCX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxPagesTest() {
+    void editDocumentDocxPagesTest() {
         GetDocxPagesRequest reqConfig = null;
+
         GetDocxPagesResponse response = api.editDocumentDocxPages(reqConfig);
 
         // TODO: test validations
@@ -606,12 +639,13 @@ public class EditDocumentApiTest {
      *
      * Removes all of the comments from a Word Document.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxRemoveAllCommentsTest() {
+    void editDocumentDocxRemoveAllCommentsTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         byte[] response = api.editDocumentDocxRemoveAllComments(inputFile);
 
         // TODO: test validations
@@ -622,12 +656,13 @@ public class EditDocumentApiTest {
      *
      * Remove all headers, or footers, or both from a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxRemoveHeadersAndFootersTest() {
+    void editDocumentDocxRemoveHeadersAndFootersTest() {
         RemoveDocxHeadersAndFootersRequest reqConfig = null;
+
         RemoveDocxHeadersAndFootersResponse response = api.editDocumentDocxRemoveHeadersAndFooters(reqConfig);
 
         // TODO: test validations
@@ -638,12 +673,13 @@ public class EditDocumentApiTest {
      *
      * Delete any object, such as a paragraph, table, image, etc. from a Word Document (DOCX).  Pass in the Path of the object you would like to delete.  You can call other functions such as Get-Tables, Get-Images, Get-Body, etc. to get the paths of the objects in the document.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxRemoveObjectTest() {
+    void editDocumentDocxRemoveObjectTest() {
         DocxRemoveObjectRequest reqConfig = null;
+
         DocxRemoveObjectResponse response = api.editDocumentDocxRemoveObject(reqConfig);
 
         // TODO: test validations
@@ -654,12 +690,13 @@ public class EditDocumentApiTest {
      *
      * Replace all instances of a string in an Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxReplaceTest() {
+    void editDocumentDocxReplaceTest() {
         ReplaceStringRequest reqConfig = null;
+
         byte[] response = api.editDocumentDocxReplace(reqConfig);
 
         // TODO: test validations
@@ -670,12 +707,13 @@ public class EditDocumentApiTest {
      *
      * Replace all instances of multiple strings in an Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxReplaceMultiTest() {
+    void editDocumentDocxReplaceMultiTest() {
         MultiReplaceStringRequest reqConfig = null;
+
         byte[] response = api.editDocumentDocxReplaceMulti(reqConfig);
 
         // TODO: test validations
@@ -686,12 +724,13 @@ public class EditDocumentApiTest {
      *
      * Replace all instances of multiple strings in an Office Word Document (docx).  Returns an edit session URL so that you can chain together multiple edit operations without having to send the entire document contents back and forth multiple times.  Call the Finish Editing API to retrieve the final document once editing is complete.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxReplaceMultiEditSessionTest() {
+    void editDocumentDocxReplaceMultiEditSessionTest() {
         MultiReplaceStringRequest reqConfig = null;
+
         DocumentEditingEditSession response = api.editDocumentDocxReplaceMultiEditSession(reqConfig);
 
         // TODO: test validations
@@ -702,12 +741,13 @@ public class EditDocumentApiTest {
      *
      * Returns the edited Word Document (DOCX) format file with the matching paragraphs replaced as requested.  Replace a paragraph with another object such as an image.  Useful for performing templating operations.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxReplaceParagraphTest() {
+    void editDocumentDocxReplaceParagraphTest() {
         ReplaceDocxParagraphRequest reqConfig = null;
+
         ReplaceDocxParagraphResponse response = api.editDocumentDocxReplaceParagraph(reqConfig);
 
         // TODO: test validations
@@ -718,12 +758,13 @@ public class EditDocumentApiTest {
      *
      * Sets the custom property metadata for the metadata properties in an Office Word Document (docx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxSetCustomMetadataPropertiesTest() {
+    void editDocumentDocxSetCustomMetadataPropertiesTest() {
         DocxSetCustomMetadataPropertiesRequest input = null;
+
         byte[] response = api.editDocumentDocxSetCustomMetadataProperties(input);
 
         // TODO: test validations
@@ -734,12 +775,13 @@ public class EditDocumentApiTest {
      *
      * Set the footer in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxSetFooterTest() {
+    void editDocumentDocxSetFooterTest() {
         DocxSetFooterRequest reqConfig = null;
+
         DocxSetFooterResponse response = api.editDocumentDocxSetFooter(reqConfig);
 
         // TODO: test validations
@@ -750,12 +792,13 @@ public class EditDocumentApiTest {
      *
      * Set the footer in a Word Document (DOCX) to contain a page number.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxSetFooterAddPageNumberTest() {
+    void editDocumentDocxSetFooterAddPageNumberTest() {
         DocxSetFooterAddPageNumberRequest reqConfig = null;
+
         DocxSetFooterResponse response = api.editDocumentDocxSetFooterAddPageNumber(reqConfig);
 
         // TODO: test validations
@@ -766,12 +809,13 @@ public class EditDocumentApiTest {
      *
      * Modifies a Office Word Document (docx) by filling in form fields using the provided values.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxSetFormFieldsTest() {
+    void editDocumentDocxSetFormFieldsTest() {
         DocxSetFormFieldsRequest reqConfig = null;
+
         byte[] response = api.editDocumentDocxSetFormFields(reqConfig);
 
         // TODO: test validations
@@ -782,12 +826,13 @@ public class EditDocumentApiTest {
      *
      * Set the header in a Word Document (DOCX).  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxSetHeaderTest() {
+    void editDocumentDocxSetHeaderTest() {
         DocxSetHeaderRequest reqConfig = null;
+
         DocxSetHeaderResponse response = api.editDocumentDocxSetHeader(reqConfig);
 
         // TODO: test validations
@@ -798,12 +843,13 @@ public class EditDocumentApiTest {
      *
      * Sets the contents of a table cell into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxUpdateTableCellTest() {
+    void editDocumentDocxUpdateTableCellTest() {
         UpdateDocxTableCellRequest reqConfig = null;
+
         UpdateDocxTableCellResponse response = api.editDocumentDocxUpdateTableCell(reqConfig);
 
         // TODO: test validations
@@ -814,12 +860,13 @@ public class EditDocumentApiTest {
      *
      * Sets the contents of a table row into a DOCX Document and returns the result.  Call Finish Editing on the output URL to complete the operation.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentDocxUpdateTableRowTest() {
+    void editDocumentDocxUpdateTableRowTest() {
         UpdateDocxTableRowRequest reqConfig = null;
+
         UpdateDocxTableRowResponse response = api.editDocumentDocxUpdateTableRow(reqConfig);
 
         // TODO: test validations
@@ -830,12 +877,13 @@ public class EditDocumentApiTest {
      *
      * Once done editing a document, download the result.  Begin editing a document by calling begin-editing, then perform operations, then call finish-editing to get the result.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentFinishEditingTest() {
+    void editDocumentFinishEditingTest() {
         FinishEditingRequest reqConfig = null;
+
         byte[] response = api.editDocumentFinishEditing(reqConfig);
 
         // TODO: test validations
@@ -846,12 +894,13 @@ public class EditDocumentApiTest {
      *
      * Edits the input PowerPoint PPTX presentation document to remove the specified slides
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentPptxDeleteSlidesTest() {
+    void editDocumentPptxDeleteSlidesTest() {
         RemovePptxSlidesRequest reqConfig = null;
+
         byte[] response = api.editDocumentPptxDeleteSlides(reqConfig);
 
         // TODO: test validations
@@ -862,12 +911,13 @@ public class EditDocumentApiTest {
      *
      * Returns information about the Macros (e.g. VBA) defined in the PowerPoint Document
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentPptxGetMacroInformationTest() {
+    void editDocumentPptxGetMacroInformationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetMacrosResponse response = api.editDocumentPptxGetMacroInformation(inputFile);
 
         // TODO: test validations
@@ -878,12 +928,13 @@ public class EditDocumentApiTest {
      *
      * Replace all instances of a string in an Office PowerPoint Document (pptx)
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentPptxReplaceTest() {
+    void editDocumentPptxReplaceTest() {
         ReplaceStringRequest reqConfig = null;
+
         byte[] response = api.editDocumentPptxReplace(reqConfig);
 
         // TODO: test validations
@@ -894,12 +945,13 @@ public class EditDocumentApiTest {
      *
      * Appends a row to the end of an Excel Spreadsheet worksheet.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxAppendRowTest() {
+    void editDocumentXlsxAppendRowTest() {
         AppendXlsxRowRequest input = null;
+
         AppendXlsxRowResponse response = api.editDocumentXlsxAppendRow(input);
 
         // TODO: test validations
@@ -910,12 +962,13 @@ public class EditDocumentApiTest {
      *
      * Clears, sets to blank, the contents of a specific cell in an Excel XLSX spreadsheet, worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxClearCellByIndexTest() {
+    void editDocumentXlsxClearCellByIndexTest() {
         ClearXlsxCellRequest input = null;
+
         ClearXlsxCellResponse response = api.editDocumentXlsxClearCellByIndex(input);
 
         // TODO: test validations
@@ -926,12 +979,13 @@ public class EditDocumentApiTest {
      *
      * Clears data from a specific row in the Excel Spreadsheet worksheet, leaving a blank row. Use the Get Rows And Cells API to enumerate available rows in a spreadsheet.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxClearRowTest() {
+    void editDocumentXlsxClearRowTest() {
         ClearXlsxRowRequest input = null;
+
         ClearXlsxRowResponse response = api.editDocumentXlsxClearRow(input);
 
         // TODO: test validations
@@ -942,12 +996,13 @@ public class EditDocumentApiTest {
      *
      * Returns a blank Excel XLSX Spreadsheet (XLSX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxCreateBlankSpreadsheetTest() {
+    void editDocumentXlsxCreateBlankSpreadsheetTest() {
         CreateBlankSpreadsheetRequest input = null;
+
         CreateBlankSpreadsheetResponse response = api.editDocumentXlsxCreateBlankSpreadsheet(input);
 
         // TODO: test validations
@@ -958,12 +1013,13 @@ public class EditDocumentApiTest {
      *
      * Returns a new Excel XLSX Spreadsheet (XLSX) format file populated with column and row data specified as input
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxCreateSpreadsheetFromDataTest() {
+    void editDocumentXlsxCreateSpreadsheetFromDataTest() {
         CreateSpreadsheetFromDataRequest input = null;
+
         CreateSpreadsheetFromDataResponse response = api.editDocumentXlsxCreateSpreadsheetFromData(input);
 
         // TODO: test validations
@@ -974,12 +1030,13 @@ public class EditDocumentApiTest {
      *
      * Edits the input Excel XLSX spreadsheet document to remove the specified worksheet (tab).  Use the Get Worksheets API to enumerate available worksheets in a spreadsheet.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxDeleteWorksheetTest() {
+    void editDocumentXlsxDeleteWorksheetTest() {
         RemoveXlsxWorksheetRequest reqConfig = null;
+
         byte[] response = api.editDocumentXlsxDeleteWorksheet(reqConfig);
 
         // TODO: test validations
@@ -990,12 +1047,13 @@ public class EditDocumentApiTest {
      *
      * Disable the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxDisableSharedWorkbookTest() {
+    void editDocumentXlsxDisableSharedWorkbookTest() {
         DisableSharedWorkbookRequest input = null;
+
         DisableSharedWorkbookResponse response = api.editDocumentXlsxDisableSharedWorkbook(input);
 
         // TODO: test validations
@@ -1006,12 +1064,13 @@ public class EditDocumentApiTest {
      *
      * Enables the Shared Workbook (legacy) mode in an Excel XLSX spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxEnableSharedWorkbookTest() {
+    void editDocumentXlsxEnableSharedWorkbookTest() {
         EnableSharedWorkbookRequest input = null;
+
         EnableSharedWorkbookResponse response = api.editDocumentXlsxEnableSharedWorkbook(input);
 
         // TODO: test validations
@@ -1022,12 +1081,13 @@ public class EditDocumentApiTest {
      *
      * Returns the value of a specific cell based on its identifier (e.g. A1, B22, C33, etc.) in the Excel Spreadsheet worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetCellByIdentifierTest() {
+    void editDocumentXlsxGetCellByIdentifierTest() {
         GetXlsxCellByIdentifierRequest input = null;
+
         GetXlsxCellByIdentifierResponse response = api.editDocumentXlsxGetCellByIdentifier(input);
 
         // TODO: test validations
@@ -1038,12 +1098,13 @@ public class EditDocumentApiTest {
      *
      * Returns the value and definition of a specific cell in a specific row in the Excel Spreadsheet worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetCellByIndexTest() {
+    void editDocumentXlsxGetCellByIndexTest() {
         GetXlsxCellRequest input = null;
+
         GetXlsxCellResponse response = api.editDocumentXlsxGetCellByIndex(input);
 
         // TODO: test validations
@@ -1054,12 +1115,13 @@ public class EditDocumentApiTest {
      *
      * Returns the columns defined in the Excel Spreadsheet worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetColumnsTest() {
+    void editDocumentXlsxGetColumnsTest() {
         GetXlsxColumnsRequest input = null;
+
         GetXlsxColumnsResponse response = api.editDocumentXlsxGetColumns(input);
 
         // TODO: test validations
@@ -1070,12 +1132,13 @@ public class EditDocumentApiTest {
      *
      * Returns the images defined in the Excel Spreadsheet worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetImagesTest() {
+    void editDocumentXlsxGetImagesTest() {
         GetXlsxImagesRequest input = null;
+
         GetXlsxImagesResponse response = api.editDocumentXlsxGetImages(input);
 
         // TODO: test validations
@@ -1086,12 +1149,13 @@ public class EditDocumentApiTest {
      *
      * Returns information about the Macros (e.g. VBA) defined in the Excel Spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetMacroInformationTest() {
+    void editDocumentXlsxGetMacroInformationTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         GetMacrosResponse response = api.editDocumentXlsxGetMacroInformation(inputFile);
 
         // TODO: test validations
@@ -1102,12 +1166,13 @@ public class EditDocumentApiTest {
      *
      * Returns the rows and cells defined in the Excel Spreadsheet worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetRowsAndCellsTest() {
+    void editDocumentXlsxGetRowsAndCellsTest() {
         GetXlsxRowsAndCellsRequest input = null;
+
         GetXlsxRowsAndCellsResponse response = api.editDocumentXlsxGetRowsAndCells(input);
 
         // TODO: test validations
@@ -1118,12 +1183,13 @@ public class EditDocumentApiTest {
      *
      * Returns the specific row and its cells defined in the Excel Spreadsheet worksheet based on the specified path.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetSpecificRowTest() {
+    void editDocumentXlsxGetSpecificRowTest() {
         GetXlsxSpecificRowRequest input = null;
+
         GetXlsxSpecificRowResponse response = api.editDocumentXlsxGetSpecificRow(input);
 
         // TODO: test validations
@@ -1134,12 +1200,13 @@ public class EditDocumentApiTest {
      *
      * Returns the style defined in the Excel Spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetStylesTest() {
+    void editDocumentXlsxGetStylesTest() {
         GetXlsxStylesRequest input = null;
+
         GetXlsxStylesResponse response = api.editDocumentXlsxGetStyles(input);
 
         // TODO: test validations
@@ -1150,12 +1217,13 @@ public class EditDocumentApiTest {
      *
      * Returns the worksheets (tabs) defined in the Excel Spreadsheet (XLSX) format file
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxGetWorksheetsTest() {
+    void editDocumentXlsxGetWorksheetsTest() {
         GetXlsxWorksheetsRequest input = null;
+
         GetXlsxWorksheetsResponse response = api.editDocumentXlsxGetWorksheets(input);
 
         // TODO: test validations
@@ -1166,12 +1234,13 @@ public class EditDocumentApiTest {
      *
      * Inserts a new worksheet into an Excel Spreadsheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxInsertWorksheetTest() {
+    void editDocumentXlsxInsertWorksheetTest() {
         InsertXlsxWorksheetRequest input = null;
+
         InsertXlsxWorksheetResponse response = api.editDocumentXlsxInsertWorksheet(input);
 
         // TODO: test validations
@@ -1182,12 +1251,13 @@ public class EditDocumentApiTest {
      *
      * Edits the input Excel XLSX spreadsheet document to rename a specified worksheet (tab).  Use the Get Worksheets API to enumerate available worksheets in a spreadsheet.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxRenameWorksheetTest() {
+    void editDocumentXlsxRenameWorksheetTest() {
         RenameXlsxWorksheetRequest input = null;
+
         RenameXlsxWorksheetResponse response = api.editDocumentXlsxRenameWorksheet(input);
 
         // TODO: test validations
@@ -1198,12 +1268,13 @@ public class EditDocumentApiTest {
      *
      * Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet using its cell identifier (e.g. A1, B22, C33) in the worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxSetCellByIdentifierTest() {
+    void editDocumentXlsxSetCellByIdentifierTest() {
         SetXlsxCellByIdentifierRequest input = null;
+
         SetXlsxCellByIdentifierResponse response = api.editDocumentXlsxSetCellByIdentifier(input);
 
         // TODO: test validations
@@ -1214,12 +1285,13 @@ public class EditDocumentApiTest {
      *
      * Sets, updates the contents of a specific cell in an Excel XLSX spreadsheet, worksheet
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void editDocumentXlsxSetCellByIndexTest() {
+    void editDocumentXlsxSetCellByIndexTest() {
         SetXlsxCellRequest input = null;
+
         SetXlsxCellResponse response = api.editDocumentXlsxSetCellByIndex(input);
 
         // TODO: test validations

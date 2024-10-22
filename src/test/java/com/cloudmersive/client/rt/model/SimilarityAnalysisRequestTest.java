@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SimilarityAnalysisRequest
  */
-public class SimilarityAnalysisRequestTest {
+class SimilarityAnalysisRequestTest {
     private final SimilarityAnalysisRequest model = new SimilarityAnalysisRequest();
 
     /**
      * Model tests for SimilarityAnalysisRequest
      */
     @Test
-    public void testSimilarityAnalysisRequest() {
+    void testSimilarityAnalysisRequest() {
         // TODO: test SimilarityAnalysisRequest
     }
 
@@ -43,7 +40,7 @@ public class SimilarityAnalysisRequestTest {
      * Test the property 'textToAnalyze1'
      */
     @Test
-    public void textToAnalyze1Test() {
+    void textToAnalyze1Test() {
         // TODO: test textToAnalyze1
     }
 
@@ -51,7 +48,7 @@ public class SimilarityAnalysisRequestTest {
      * Test the property 'textToAnalyze2'
      */
     @Test
-    public void textToAnalyze2Test() {
+    void textToAnalyze2Test() {
         // TODO: test textToAnalyze2
     }
 

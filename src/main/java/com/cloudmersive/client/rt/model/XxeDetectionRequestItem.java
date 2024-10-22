@@ -20,24 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Individual item to detect for XXE
  */
-@ApiModel(description = "Individual item to detect for XXE")
 @JsonPropertyOrder({
   XxeDetectionRequestItem.JSON_PROPERTY_INPUT_TEXT,
   XxeDetectionRequestItem.JSON_PROPERTY_ALLOW_INTERNET_URLS,
   XxeDetectionRequestItem.JSON_PROPERTY_KNOWN_SAFE_URLS,
   XxeDetectionRequestItem.JSON_PROPERTY_KNOWN_UNSAFE_URLS
 })
-@JsonTypeName("XxeDetectionRequestItem")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XxeDetectionRequestItem {
   public static final String JSON_PROPERTY_INPUT_TEXT = "InputText";
   private String inputText;
@@ -46,11 +44,13 @@ public class XxeDetectionRequestItem {
   private Boolean allowInternetUrls;
 
   public static final String JSON_PROPERTY_KNOWN_SAFE_URLS = "KnownSafeUrls";
-  private List<String> knownSafeUrls = null;
+  private List<String> knownSafeUrls = new ArrayList<>();
 
   public static final String JSON_PROPERTY_KNOWN_UNSAFE_URLS = "KnownUnsafeUrls";
-  private List<String> knownUnsafeUrls = null;
+  private List<String> knownUnsafeUrls = new ArrayList<>();
 
+  public XxeDetectionRequestItem() {
+  }
 
   public XxeDetectionRequestItem inputText(String inputText) {
     
@@ -58,12 +58,11 @@ public class XxeDetectionRequestItem {
     return this;
   }
 
-   /**
+  /**
    * Individual input text item to protect from XXE
    * @return inputText
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Individual input text item to protect from XXE")
   @JsonProperty(JSON_PROPERTY_INPUT_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -72,10 +71,11 @@ public class XxeDetectionRequestItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_TEXT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputText(String inputText) {
     this.inputText = inputText;
   }
-
 
   public XxeDetectionRequestItem allowInternetUrls(Boolean allowInternetUrls) {
     
@@ -83,12 +83,11 @@ public class XxeDetectionRequestItem {
     return this;
   }
 
-   /**
+  /**
    * Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false.
    * @return allowInternetUrls
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Set to true to allow Internet-based dependency URLs for DTDs and other XML External Entitites, set to false to block.  Default is false.")
   @JsonProperty(JSON_PROPERTY_ALLOW_INTERNET_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +96,11 @@ public class XxeDetectionRequestItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_INTERNET_URLS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowInternetUrls(Boolean allowInternetUrls) {
     this.allowInternetUrls = allowInternetUrls;
   }
-
 
   public XxeDetectionRequestItem knownSafeUrls(List<String> knownSafeUrls) {
     
@@ -110,18 +110,17 @@ public class XxeDetectionRequestItem {
 
   public XxeDetectionRequestItem addKnownSafeUrlsItem(String knownSafeUrlsItem) {
     if (this.knownSafeUrls == null) {
-      this.knownSafeUrls = new ArrayList<String>();
+      this.knownSafeUrls = new ArrayList<>();
     }
     this.knownSafeUrls.add(knownSafeUrlsItem);
     return this;
   }
 
-   /**
+  /**
    * Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe.
    * @return knownSafeUrls
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Comma separated list of fully-qualified URLs that will automatically be considered safe.")
   @JsonProperty(JSON_PROPERTY_KNOWN_SAFE_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,10 +129,11 @@ public class XxeDetectionRequestItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_KNOWN_SAFE_URLS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKnownSafeUrls(List<String> knownSafeUrls) {
     this.knownSafeUrls = knownSafeUrls;
   }
-
 
   public XxeDetectionRequestItem knownUnsafeUrls(List<String> knownUnsafeUrls) {
     
@@ -143,18 +143,17 @@ public class XxeDetectionRequestItem {
 
   public XxeDetectionRequestItem addKnownUnsafeUrlsItem(String knownUnsafeUrlsItem) {
     if (this.knownUnsafeUrls == null) {
-      this.knownUnsafeUrls = new ArrayList<String>();
+      this.knownUnsafeUrls = new ArrayList<>();
     }
     this.knownUnsafeUrls.add(knownUnsafeUrlsItem);
     return this;
   }
 
-   /**
+  /**
    * Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe.
    * @return knownUnsafeUrls
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Comma separated list of fully-qualified URLs that will automatically be considered unsafe.")
   @JsonProperty(JSON_PROPERTY_KNOWN_UNSAFE_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,10 +162,11 @@ public class XxeDetectionRequestItem {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_KNOWN_UNSAFE_URLS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKnownUnsafeUrls(List<String> knownUnsafeUrls) {
     this.knownUnsafeUrls = knownUnsafeUrls;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -187,7 +187,6 @@ public class XxeDetectionRequestItem {
   public int hashCode() {
     return Objects.hash(inputText, allowInternetUrls, knownSafeUrls, knownUnsafeUrls);
   }
-
 
   @Override
   public String toString() {

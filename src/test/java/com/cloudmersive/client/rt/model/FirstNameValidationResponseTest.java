@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FirstNameValidationResponse
  */
-public class FirstNameValidationResponseTest {
+class FirstNameValidationResponseTest {
     private final FirstNameValidationResponse model = new FirstNameValidationResponse();
 
     /**
      * Model tests for FirstNameValidationResponse
      */
     @Test
-    public void testFirstNameValidationResponse() {
+    void testFirstNameValidationResponse() {
         // TODO: test FirstNameValidationResponse
     }
 
@@ -43,7 +40,7 @@ public class FirstNameValidationResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class FirstNameValidationResponseTest {
      * Test the property 'validationResult'
      */
     @Test
-    public void validationResultTest() {
+    void validationResultTest() {
         // TODO: test validationResult
     }
 

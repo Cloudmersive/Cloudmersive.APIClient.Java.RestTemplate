@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Details of a specific currency
  */
-@ApiModel(description = "Details of a specific currency")
 @JsonPropertyOrder({
   AvailableCurrency.JSON_PROPERTY_IS_O_CURRENCY_CODE,
   AvailableCurrency.JSON_PROPERTY_CURRENCY_SYMBOL,
@@ -37,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   AvailableCurrency.JSON_PROPERTY_COUNTRY_I_S_O_TWO_LETTER_CODE,
   AvailableCurrency.JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER
 })
-@JsonTypeName("AvailableCurrency")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:08.451112300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class AvailableCurrency {
   public static final String JSON_PROPERTY_IS_O_CURRENCY_CODE = "ISOCurrencyCode";
   private String isOCurrencyCode;
@@ -61,6 +58,8 @@ public class AvailableCurrency {
   public static final String JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER = "IsEuropeanUnionMember";
   private Boolean isEuropeanUnionMember;
 
+  public AvailableCurrency() {
+  }
 
   public AvailableCurrency isOCurrencyCode(String isOCurrencyCode) {
     
@@ -68,12 +67,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * ISO 4217 currency three-letter code associated with the country
    * @return isOCurrencyCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "ISO 4217 currency three-letter code associated with the country")
   @JsonProperty(JSON_PROPERTY_IS_O_CURRENCY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,10 +80,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_O_CURRENCY_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsOCurrencyCode(String isOCurrencyCode) {
     this.isOCurrencyCode = isOCurrencyCode;
   }
-
 
   public AvailableCurrency currencySymbol(String currencySymbol) {
     
@@ -93,12 +92,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * Symbol associated with the currency
    * @return currencySymbol
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Symbol associated with the currency")
   @JsonProperty(JSON_PROPERTY_CURRENCY_SYMBOL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,10 +105,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCY_SYMBOL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
   }
-
 
   public AvailableCurrency currencyEnglishName(String currencyEnglishName) {
     
@@ -118,12 +117,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * Full name of the currency
    * @return currencyEnglishName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Full name of the currency")
   @JsonProperty(JSON_PROPERTY_CURRENCY_ENGLISH_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,10 +130,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CURRENCY_ENGLISH_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCurrencyEnglishName(String currencyEnglishName) {
     this.currencyEnglishName = currencyEnglishName;
   }
-
 
   public AvailableCurrency countryName(String countryName) {
     
@@ -143,12 +142,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * Name of the country
    * @return countryName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the country")
   @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,10 +155,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryName(String countryName) {
     this.countryName = countryName;
   }
-
 
   public AvailableCurrency countryThreeLetterCode(String countryThreeLetterCode) {
     
@@ -168,12 +167,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * Three-letter ISO 3166-1 country code
    * @return countryThreeLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Three-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_COUNTRY_THREE_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,10 +180,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_THREE_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryThreeLetterCode(String countryThreeLetterCode) {
     this.countryThreeLetterCode = countryThreeLetterCode;
   }
-
 
   public AvailableCurrency countryISOTwoLetterCode(String countryISOTwoLetterCode) {
     
@@ -193,12 +192,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * Two-letter ISO 3166-1 country code
    * @return countryISOTwoLetterCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Two-letter ISO 3166-1 country code")
   @JsonProperty(JSON_PROPERTY_COUNTRY_I_S_O_TWO_LETTER_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,10 +205,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COUNTRY_I_S_O_TWO_LETTER_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCountryISOTwoLetterCode(String countryISOTwoLetterCode) {
     this.countryISOTwoLetterCode = countryISOTwoLetterCode;
   }
-
 
   public AvailableCurrency isEuropeanUnionMember(Boolean isEuropeanUnionMember) {
     
@@ -218,12 +217,11 @@ public class AvailableCurrency {
     return this;
   }
 
-   /**
+  /**
    * True if this country is currently a member of the European Union (EU), false otherwise
    * @return isEuropeanUnionMember
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if this country is currently a member of the European Union (EU), false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -232,10 +230,11 @@ public class AvailableCurrency {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_EUROPEAN_UNION_MEMBER)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsEuropeanUnionMember(Boolean isEuropeanUnionMember) {
     this.isEuropeanUnionMember = isEuropeanUnionMember;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -259,7 +258,6 @@ public class AvailableCurrency {
   public int hashCode() {
     return Objects.hash(isOCurrencyCode, currencySymbol, currencyEnglishName, countryName, countryThreeLetterCode, countryISOTwoLetterCode, isEuropeanUnionMember);
   }
-
 
   @Override
   public String toString() {

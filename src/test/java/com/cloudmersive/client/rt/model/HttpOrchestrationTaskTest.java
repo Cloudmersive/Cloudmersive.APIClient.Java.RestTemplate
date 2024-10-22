@@ -24,26 +24,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HttpOrchestrationTask
  */
-public class HttpOrchestrationTaskTest {
+class HttpOrchestrationTaskTest {
     private final HttpOrchestrationTask model = new HttpOrchestrationTask();
 
     /**
      * Model tests for HttpOrchestrationTask
      */
     @Test
-    public void testHttpOrchestrationTask() {
+    void testHttpOrchestrationTask() {
         // TODO: test HttpOrchestrationTask
     }
 
@@ -51,7 +49,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'taskName'
      */
     @Test
-    public void taskNameTest() {
+    void taskNameTest() {
         // TODO: test taskName
     }
 
@@ -59,7 +57,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'httpMethod'
      */
     @Test
-    public void httpMethodTest() {
+    void httpMethodTest() {
         // TODO: test httpMethod
     }
 
@@ -67,7 +65,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 
@@ -75,7 +73,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'httpHeaders'
      */
     @Test
-    public void httpHeadersTest() {
+    void httpHeadersTest() {
         // TODO: test httpHeaders
     }
 
@@ -83,7 +81,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'queryParameters'
      */
     @Test
-    public void queryParametersTest() {
+    void queryParametersTest() {
         // TODO: test queryParameters
     }
 
@@ -91,7 +89,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'formDataParameters'
      */
     @Test
-    public void formDataParametersTest() {
+    void formDataParametersTest() {
         // TODO: test formDataParameters
     }
 
@@ -99,7 +97,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'wwwFormUrlEncodedParameters'
      */
     @Test
-    public void wwwFormUrlEncodedParametersTest() {
+    void wwwFormUrlEncodedParametersTest() {
         // TODO: test wwwFormUrlEncodedParameters
     }
 
@@ -107,7 +105,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'rawTextBody'
      */
     @Test
-    public void rawTextBodyTest() {
+    void rawTextBodyTest() {
         // TODO: test rawTextBody
     }
 
@@ -115,7 +113,7 @@ public class HttpOrchestrationTaskTest {
      * Test the property 'rawBinaryBody'
      */
     @Test
-    public void rawBinaryBodyTest() {
+    void rawBinaryBodyTest() {
         // TODO: test rawBinaryBody
     }
 

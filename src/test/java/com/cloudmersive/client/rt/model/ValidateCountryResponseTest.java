@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ValidateCountryResponse
  */
-public class ValidateCountryResponseTest {
+class ValidateCountryResponseTest {
     private final ValidateCountryResponse model = new ValidateCountryResponse();
 
     /**
      * Model tests for ValidateCountryResponse
      */
     @Test
-    public void testValidateCountryResponse() {
+    void testValidateCountryResponse() {
         // TODO: test ValidateCountryResponse
     }
 
@@ -46,7 +44,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'countryFullName'
      */
     @Test
-    public void countryFullNameTest() {
+    void countryFullNameTest() {
         // TODO: test countryFullName
     }
 
@@ -62,7 +60,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'isOTwoLetterCode'
      */
     @Test
-    public void isOTwoLetterCodeTest() {
+    void isOTwoLetterCodeTest() {
         // TODO: test isOTwoLetterCode
     }
 
@@ -70,7 +68,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'fiPSTwoLetterCode'
      */
     @Test
-    public void fiPSTwoLetterCodeTest() {
+    void fiPSTwoLetterCodeTest() {
         // TODO: test fiPSTwoLetterCode
     }
 
@@ -78,7 +76,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'threeLetterCode'
      */
     @Test
-    public void threeLetterCodeTest() {
+    void threeLetterCodeTest() {
         // TODO: test threeLetterCode
     }
 
@@ -86,7 +84,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'isEuropeanUnionMember'
      */
     @Test
-    public void isEuropeanUnionMemberTest() {
+    void isEuropeanUnionMemberTest() {
         // TODO: test isEuropeanUnionMember
     }
 
@@ -94,7 +92,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'timezones'
      */
     @Test
-    public void timezonesTest() {
+    void timezonesTest() {
         // TODO: test timezones
     }
 
@@ -102,7 +100,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'isOCurrencyCode'
      */
     @Test
-    public void isOCurrencyCodeTest() {
+    void isOCurrencyCodeTest() {
         // TODO: test isOCurrencyCode
     }
 
@@ -110,7 +108,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'currencySymbol'
      */
     @Test
-    public void currencySymbolTest() {
+    void currencySymbolTest() {
         // TODO: test currencySymbol
     }
 
@@ -118,7 +116,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'currencyEnglishName'
      */
     @Test
-    public void currencyEnglishNameTest() {
+    void currencyEnglishNameTest() {
         // TODO: test currencyEnglishName
     }
 
@@ -126,7 +124,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'region'
      */
     @Test
-    public void regionTest() {
+    void regionTest() {
         // TODO: test region
     }
 
@@ -134,7 +132,7 @@ public class ValidateCountryResponseTest {
      * Test the property 'subregion'
      */
     @Test
-    public void subregionTest() {
+    void subregionTest() {
         // TODO: test subregion
     }
 

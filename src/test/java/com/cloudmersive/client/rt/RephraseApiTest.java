@@ -15,9 +15,12 @@ package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.RephraseRequest;
 import com.cloudmersive.client.rt.model.RephraseResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +29,8 @@ import java.util.Map;
 /**
  * API tests for RephraseApi
  */
-@Ignore
-public class RephraseApiTest {
+@Disabled
+class RephraseApiTest {
 
     private final RephraseApi api = new RephraseApi();
 
@@ -37,12 +40,13 @@ public class RephraseApiTest {
      *
      * Automatically rephrases or paraphrases input text in English sentence by sentence using advanced Deep Learning and Neural NLP.  Creates multiple reprhasing candidates per input sentence, from 1 to 10 possible rephrasings of the original sentence.  Seeks to preserve original semantic meaning in rephrased output candidates.  Consumes 1-2 API calls per output rephrasing option generated, per sentence.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void rephraseEnglishRephraseSentenceBySentenceTest() {
+    void rephraseEnglishRephraseSentenceBySentenceTest() {
         RephraseRequest input = null;
+
         RephraseResponse response = api.rephraseEnglishRephraseSentenceBySentence(input);
 
         // TODO: test validations

@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to draw one or more rectangles on a base image
  */
-@ApiModel(description = "Request to draw one or more rectangles on a base image")
 @JsonPropertyOrder({
   DrawRectangleRequest.JSON_PROPERTY_BASE_IMAGE_BYTES,
   DrawRectangleRequest.JSON_PROPERTY_BASE_IMAGE_URL,
   DrawRectangleRequest.JSON_PROPERTY_RECTANGLES_TO_DRAW
 })
-@JsonTypeName("DrawRectangleRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DrawRectangleRequest {
   public static final String JSON_PROPERTY_BASE_IMAGE_BYTES = "BaseImageBytes";
   private byte[] baseImageBytes;
@@ -46,8 +44,10 @@ public class DrawRectangleRequest {
   private String baseImageUrl;
 
   public static final String JSON_PROPERTY_RECTANGLES_TO_DRAW = "RectanglesToDraw";
-  private List<DrawRectangleInstance> rectanglesToDraw = null;
+  private List<DrawRectangleInstance> rectanglesToDraw = new ArrayList<>();
 
+  public DrawRectangleRequest() {
+  }
 
   public DrawRectangleRequest baseImageBytes(byte[] baseImageBytes) {
     
@@ -55,12 +55,11 @@ public class DrawRectangleRequest {
     return this;
   }
 
-   /**
+  /**
    * Image to draw rectangles on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL
    * @return baseImageBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image to draw rectangles on, in bytes.  You can also use the BaseImageUrl instead to supply image input as a URL")
   @JsonProperty(JSON_PROPERTY_BASE_IMAGE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class DrawRectangleRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BASE_IMAGE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBaseImageBytes(byte[] baseImageBytes) {
     this.baseImageBytes = baseImageBytes;
   }
-
 
   public DrawRectangleRequest baseImageUrl(String baseImageUrl) {
     
@@ -80,12 +80,11 @@ public class DrawRectangleRequest {
     return this;
   }
 
-   /**
+  /**
    * Image to draw rectangles on, as an HTTP or HTTPS fully-qualified URL
    * @return baseImageUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Image to draw rectangles on, as an HTTP or HTTPS fully-qualified URL")
   @JsonProperty(JSON_PROPERTY_BASE_IMAGE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class DrawRectangleRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BASE_IMAGE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBaseImageUrl(String baseImageUrl) {
     this.baseImageUrl = baseImageUrl;
   }
-
 
   public DrawRectangleRequest rectanglesToDraw(List<DrawRectangleInstance> rectanglesToDraw) {
     
@@ -107,18 +107,17 @@ public class DrawRectangleRequest {
 
   public DrawRectangleRequest addRectanglesToDrawItem(DrawRectangleInstance rectanglesToDrawItem) {
     if (this.rectanglesToDraw == null) {
-      this.rectanglesToDraw = new ArrayList<DrawRectangleInstance>();
+      this.rectanglesToDraw = new ArrayList<>();
     }
     this.rectanglesToDraw.add(rectanglesToDrawItem);
     return this;
   }
 
-   /**
+  /**
    * Rectangles to draw on the image.  Rectangles are drawn in index order.
    * @return rectanglesToDraw
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Rectangles to draw on the image.  Rectangles are drawn in index order.")
   @JsonProperty(JSON_PROPERTY_RECTANGLES_TO_DRAW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class DrawRectangleRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RECTANGLES_TO_DRAW)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setRectanglesToDraw(List<DrawRectangleInstance> rectanglesToDraw) {
     this.rectanglesToDraw = rectanglesToDraw;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class DrawRectangleRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(baseImageBytes), baseImageUrl, rectanglesToDraw);
   }
-
 
   @Override
   public String toString() {

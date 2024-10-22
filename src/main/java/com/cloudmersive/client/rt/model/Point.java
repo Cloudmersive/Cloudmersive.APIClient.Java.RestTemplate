@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Point location in 2D in an image, where 0, 0 represents the top/left corner of the image
  */
-@ApiModel(description = "Point location in 2D in an image, where 0, 0 represents the top/left corner of the image")
 @JsonPropertyOrder({
   Point.JSON_PROPERTY_X,
   Point.JSON_PROPERTY_Y
 })
-@JsonTypeName("Point")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Point {
   public static final String JSON_PROPERTY_X = "X";
   private Integer X;
@@ -41,6 +38,8 @@ public class Point {
   public static final String JSON_PROPERTY_Y = "Y";
   private Integer Y;
 
+  public Point() {
+  }
 
   public Point X(Integer X) {
     
@@ -48,12 +47,11 @@ public class Point {
     return this;
   }
 
-   /**
+  /**
    * X location in 2D in the image, where 0 represents the left edge of the image
    * @return X
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location in 2D in the image, where 0 represents the left edge of the image")
   @JsonProperty(JSON_PROPERTY_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class Point {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setX(Integer X) {
     this.X = X;
   }
-
 
   public Point Y(Integer Y) {
     
@@ -73,12 +72,11 @@ public class Point {
     return this;
   }
 
-   /**
+  /**
    * Y location in 2D in the image, where 0 represents the top edge of the image
    * @return Y
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location in 2D in the image, where 0 represents the top edge of the image")
   @JsonProperty(JSON_PROPERTY_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class Point {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setY(Integer Y) {
     this.Y = Y;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class Point {
   public int hashCode() {
     return Objects.hash(X, Y);
   }
-
 
   @Override
   public String toString() {

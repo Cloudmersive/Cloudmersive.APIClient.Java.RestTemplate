@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for PresentationResult
  */
-public class PresentationResultTest {
+class PresentationResultTest {
     private final PresentationResult model = new PresentationResult();
 
     /**
      * Model tests for PresentationResult
      */
     @Test
-    public void testPresentationResult() {
+    void testPresentationResult() {
         // TODO: test PresentationResult
     }
 
@@ -43,7 +40,7 @@ public class PresentationResultTest {
      * Test the property 'slideNumber'
      */
     @Test
-    public void slideNumberTest() {
+    void slideNumberTest() {
         // TODO: test slideNumber
     }
 
@@ -51,7 +48,7 @@ public class PresentationResultTest {
      * Test the property 'URL'
      */
     @Test
-    public void URLTest() {
+    void URLTest() {
         // TODO: test URL
     }
 
@@ -59,7 +56,7 @@ public class PresentationResultTest {
      * Test the property 'presentationContents'
      */
     @Test
-    public void presentationContentsTest() {
+    void presentationContentsTest() {
         // TODO: test presentationContents
     }
 

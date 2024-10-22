@@ -16,9 +16,12 @@ package com.cloudmersive.client.rt;
 import com.cloudmersive.client.rt.model.DominantColorResult;
 import java.io.File;
 import com.cloudmersive.client.rt.model.ImageMetadata;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -27,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for InfoApi
  */
-@Ignore
-public class InfoApiTest {
+@Disabled
+class InfoApiTest {
 
     private final InfoApi api = new InfoApi();
 
@@ -38,12 +41,13 @@ public class InfoApiTest {
      *
      * Uses advanced image processing to extract the top 5 dominant colors in the image, returned in the order of dominance with the most-dominant color first.  These are the primary perceptual colors used in the image as perceived by a viewer.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void infoGetDominantColorTest() {
+    void infoGetDominantColorTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         DominantColorResult response = api.infoGetDominantColor(imageFile);
 
         // TODO: test validations
@@ -54,12 +58,13 @@ public class InfoApiTest {
      *
      * Returns the metadata information on the image, including file type, EXIF (if available), and resolution.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void infoGetMetadataTest() {
+    void infoGetMetadataTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         ImageMetadata response = api.infoGetMetadata(imageFile);
 
         // TODO: test validations

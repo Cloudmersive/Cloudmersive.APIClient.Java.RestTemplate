@@ -3,11 +3,12 @@
 # DocxContentControl
 
 Content Control instance
+
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**value** | **String** | Text content value in the content control; text entered into the control |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**value** | **String** | Text content value in the content control; text entered into the control |  [optional] |
 
 
 

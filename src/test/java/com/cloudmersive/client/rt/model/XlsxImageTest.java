@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XlsxImage
  */
-public class XlsxImageTest {
+class XlsxImageTest {
     private final XlsxImage model = new XlsxImage();
 
     /**
      * Model tests for XlsxImage
      */
     @Test
-    public void testXlsxImage() {
+    void testXlsxImage() {
         // TODO: test XlsxImage
     }
 
@@ -43,7 +40,7 @@ public class XlsxImageTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -51,7 +48,7 @@ public class XlsxImageTest {
      * Test the property 'imageDataEmbedId'
      */
     @Test
-    public void imageDataEmbedIdTest() {
+    void imageDataEmbedIdTest() {
         // TODO: test imageDataEmbedId
     }
 
@@ -59,7 +56,7 @@ public class XlsxImageTest {
      * Test the property 'imageDataContentType'
      */
     @Test
-    public void imageDataContentTypeTest() {
+    void imageDataContentTypeTest() {
         // TODO: test imageDataContentType
     }
 
@@ -67,7 +64,7 @@ public class XlsxImageTest {
      * Test the property 'imageInternalFileName'
      */
     @Test
-    public void imageInternalFileNameTest() {
+    void imageInternalFileNameTest() {
         // TODO: test imageInternalFileName
     }
 
@@ -75,7 +72,7 @@ public class XlsxImageTest {
      * Test the property 'imageContentsURL'
      */
     @Test
-    public void imageContentsURLTest() {
+    void imageContentsURLTest() {
         // TODO: test imageContentsURL
     }
 

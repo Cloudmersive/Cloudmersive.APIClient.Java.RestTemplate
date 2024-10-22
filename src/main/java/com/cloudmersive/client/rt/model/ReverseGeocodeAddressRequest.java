@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Request to reverse geocode a Street Address
  */
-@ApiModel(description = "Request to reverse geocode a Street Address")
 @JsonPropertyOrder({
   ReverseGeocodeAddressRequest.JSON_PROPERTY_LATITUDE,
   ReverseGeocodeAddressRequest.JSON_PROPERTY_LONGITUDE
 })
-@JsonTypeName("ReverseGeocodeAddressRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ReverseGeocodeAddressRequest {
   public static final String JSON_PROPERTY_LATITUDE = "Latitude";
   private Double latitude;
@@ -41,6 +38,8 @@ public class ReverseGeocodeAddressRequest {
   public static final String JSON_PROPERTY_LONGITUDE = "Longitude";
   private Double longitude;
 
+  public ReverseGeocodeAddressRequest() {
+  }
 
   public ReverseGeocodeAddressRequest latitude(Double latitude) {
     
@@ -48,12 +47,11 @@ public class ReverseGeocodeAddressRequest {
     return this;
   }
 
-   /**
+  /**
    * Latitude coordinate in WGS84 format
    * @return latitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Latitude coordinate in WGS84 format")
   @JsonProperty(JSON_PROPERTY_LATITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class ReverseGeocodeAddressRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LATITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLatitude(Double latitude) {
     this.latitude = latitude;
   }
-
 
   public ReverseGeocodeAddressRequest longitude(Double longitude) {
     
@@ -73,12 +72,11 @@ public class ReverseGeocodeAddressRequest {
     return this;
   }
 
-   /**
+  /**
    * Longitude coordinate in WGS84 format
    * @return longitude
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Longitude coordinate in WGS84 format")
   @JsonProperty(JSON_PROPERTY_LONGITUDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class ReverseGeocodeAddressRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LONGITUDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLongitude(Double longitude) {
     this.longitude = longitude;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class ReverseGeocodeAddressRequest {
   public int hashCode() {
     return Objects.hash(latitude, longitude);
   }
-
 
   @Override
   public String toString() {

@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for CloudStorageVirusScanResult
  */
-public class CloudStorageVirusScanResultTest {
+class CloudStorageVirusScanResultTest {
     private final CloudStorageVirusScanResult model = new CloudStorageVirusScanResult();
 
     /**
      * Model tests for CloudStorageVirusScanResult
      */
     @Test
-    public void testCloudStorageVirusScanResult() {
+    void testCloudStorageVirusScanResult() {
         // TODO: test CloudStorageVirusScanResult
     }
 
@@ -46,7 +44,7 @@ public class CloudStorageVirusScanResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class CloudStorageVirusScanResultTest {
      * Test the property 'cleanResult'
      */
     @Test
-    public void cleanResultTest() {
+    void cleanResultTest() {
         // TODO: test cleanResult
     }
 
@@ -62,7 +60,7 @@ public class CloudStorageVirusScanResultTest {
      * Test the property 'foundViruses'
      */
     @Test
-    public void foundVirusesTest() {
+    void foundVirusesTest() {
         // TODO: test foundViruses
     }
 
@@ -70,7 +68,7 @@ public class CloudStorageVirusScanResultTest {
      * Test the property 'errorDetailedDescription'
      */
     @Test
-    public void errorDetailedDescriptionTest() {
+    void errorDetailedDescriptionTest() {
         // TODO: test errorDetailedDescription
     }
 
@@ -78,7 +76,7 @@ public class CloudStorageVirusScanResultTest {
      * Test the property 'fileSize'
      */
     @Test
-    public void fileSizeTest() {
+    void fileSizeTest() {
         // TODO: test fileSize
     }
 
@@ -86,7 +84,7 @@ public class CloudStorageVirusScanResultTest {
      * Test the property 'containsContentModerationRejection'
      */
     @Test
-    public void containsContentModerationRejectionTest() {
+    void containsContentModerationRejectionTest() {
         // TODO: test containsContentModerationRejection
     }
 

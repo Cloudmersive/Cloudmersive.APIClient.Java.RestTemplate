@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for SqlInjectionDetectionResult
  */
-public class SqlInjectionDetectionResultTest {
+class SqlInjectionDetectionResultTest {
     private final SqlInjectionDetectionResult model = new SqlInjectionDetectionResult();
 
     /**
      * Model tests for SqlInjectionDetectionResult
      */
     @Test
-    public void testSqlInjectionDetectionResult() {
+    void testSqlInjectionDetectionResult() {
         // TODO: test SqlInjectionDetectionResult
     }
 
@@ -43,7 +40,7 @@ public class SqlInjectionDetectionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class SqlInjectionDetectionResultTest {
      * Test the property 'containedSqlInjectionAttack'
      */
     @Test
-    public void containedSqlInjectionAttackTest() {
+    void containedSqlInjectionAttackTest() {
         // TODO: test containedSqlInjectionAttack
     }
 
@@ -59,7 +56,7 @@ public class SqlInjectionDetectionResultTest {
      * Test the property 'originalInput'
      */
     @Test
-    public void originalInputTest() {
+    void originalInputTest() {
         // TODO: test originalInput
     }
 

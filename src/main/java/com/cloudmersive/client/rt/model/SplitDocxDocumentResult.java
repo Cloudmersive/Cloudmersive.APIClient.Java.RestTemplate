@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of splitting a Word document into individual Word DOCX pages
  */
-@ApiModel(description = "The result of splitting a Word document into individual Word DOCX pages")
 @JsonPropertyOrder({
   SplitDocxDocumentResult.JSON_PROPERTY_RESULT_DOCUMENTS,
   SplitDocxDocumentResult.JSON_PROPERTY_SUCCESSFUL
 })
-@JsonTypeName("SplitDocxDocumentResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SplitDocxDocumentResult {
   public static final String JSON_PROPERTY_RESULT_DOCUMENTS = "ResultDocuments";
-  private List<SplitDocumentResult> resultDocuments = null;
+  private List<SplitDocumentResult> resultDocuments = new ArrayList<>();
 
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
+  public SplitDocxDocumentResult() {
+  }
 
   public SplitDocxDocumentResult resultDocuments(List<SplitDocumentResult> resultDocuments) {
     
@@ -53,18 +53,17 @@ public class SplitDocxDocumentResult {
 
   public SplitDocxDocumentResult addResultDocumentsItem(SplitDocumentResult resultDocumentsItem) {
     if (this.resultDocuments == null) {
-      this.resultDocuments = new ArrayList<SplitDocumentResult>();
+      this.resultDocuments = new ArrayList<>();
     }
     this.resultDocuments.add(resultDocumentsItem);
     return this;
   }
 
-   /**
+  /**
    * Get resultDocuments
    * @return resultDocuments
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_RESULT_DOCUMENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -73,10 +72,11 @@ public class SplitDocxDocumentResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RESULT_DOCUMENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setResultDocuments(List<SplitDocumentResult> resultDocuments) {
     this.resultDocuments = resultDocuments;
   }
-
 
   public SplitDocxDocumentResult successful(Boolean successful) {
     
@@ -84,12 +84,11 @@ public class SplitDocxDocumentResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class SplitDocxDocumentResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class SplitDocxDocumentResult {
   public int hashCode() {
     return Objects.hash(resultDocuments, successful);
   }
-
 
   @Override
   public String toString() {

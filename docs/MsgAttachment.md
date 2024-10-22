@@ -3,12 +3,13 @@
 # MsgAttachment
 
 An MSG file attachment
+
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**name** | **String** | Name of the attachment, including file extension |  [optional]
-**content** | **byte[]** | The MSG attachment as a byte[] |  [optional]
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+|**name** | **String** | Name of the attachment, including file extension |  [optional] |
+|**content** | **byte[]** | The MSG attachment as a byte[] |  [optional] |
 
 
 

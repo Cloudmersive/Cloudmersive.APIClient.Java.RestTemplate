@@ -17,9 +17,12 @@ import com.cloudmersive.client.rt.model.CheckSentenceRequest;
 import com.cloudmersive.client.rt.model.CheckSentenceResponse;
 import com.cloudmersive.client.rt.model.CheckWordRequest;
 import com.cloudmersive.client.rt.model.CheckWordResponse;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,8 +31,8 @@ import java.util.Map;
 /**
  * API tests for SpellcheckApi
  */
-@Ignore
-public class SpellcheckApiTest {
+@Disabled
+class SpellcheckApiTest {
 
     private final SpellcheckApi api = new SpellcheckApi();
 
@@ -39,12 +42,13 @@ public class SpellcheckApiTest {
      *
      * Checks whether the sentence is spelled correctly and returns the result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void spellcheckCheckSentenceTest() {
+    void spellcheckCheckSentenceTest() {
         CheckSentenceRequest value = null;
+
         CheckSentenceResponse response = api.spellcheckCheckSentence(value);
 
         // TODO: test validations
@@ -55,12 +59,13 @@ public class SpellcheckApiTest {
      *
      * Find spelling correction suggestions and return result as JSON
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void spellcheckCorrectJsonTest() {
+    void spellcheckCorrectJsonTest() {
         CheckWordRequest value = null;
+
         CheckWordResponse response = api.spellcheckCorrectJson(value);
 
         // TODO: test validations

@@ -20,23 +20,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a get exchange rate operation
  */
-@ApiModel(description = "Result of performing a get exchange rate operation")
 @JsonPropertyOrder({
   ExchangeRateResult.JSON_PROPERTY_EXCHANGE_RATE
 })
-@JsonTypeName("ExchangeRateResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:15.479-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:08.451112300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ExchangeRateResult {
   public static final String JSON_PROPERTY_EXCHANGE_RATE = "ExchangeRate";
   private Double exchangeRate;
 
+  public ExchangeRateResult() {
+  }
 
   public ExchangeRateResult exchangeRate(Double exchangeRate) {
     
@@ -44,12 +43,11 @@ public class ExchangeRateResult {
     return this;
   }
 
-   /**
+  /**
    * The exchange rate from the source to the destination currency
    * @return exchangeRate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The exchange rate from the source to the destination currency")
   @JsonProperty(JSON_PROPERTY_EXCHANGE_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -58,10 +56,11 @@ public class ExchangeRateResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXCHANGE_RATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExchangeRate(Double exchangeRate) {
     this.exchangeRate = exchangeRate;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -79,7 +78,6 @@ public class ExchangeRateResult {
   public int hashCode() {
     return Objects.hash(exchangeRate);
   }
-
 
   @Override
   public String toString() {

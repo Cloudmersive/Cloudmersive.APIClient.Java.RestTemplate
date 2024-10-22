@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of performing a get-page-angle operation
  */
-@ApiModel(description = "Result of performing a get-page-angle operation")
 @JsonPropertyOrder({
   GetPageAngleResult.JSON_PROPERTY_SUCCESSFUL,
   GetPageAngleResult.JSON_PROPERTY_ANGLE
 })
-@JsonTypeName("GetPageAngleResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetPageAngleResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class GetPageAngleResult {
   public static final String JSON_PROPERTY_ANGLE = "Angle";
   private Double angle;
 
+  public GetPageAngleResult() {
+  }
 
   public GetPageAngleResult successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class GetPageAngleResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class GetPageAngleResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetPageAngleResult angle(Double angle) {
     
@@ -73,12 +72,11 @@ public class GetPageAngleResult {
     return this;
   }
 
-   /**
+  /**
    * Angle of the page in radians; 0 represents perfectly horizontal
    * @return angle
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Angle of the page in radians; 0 represents perfectly horizontal")
   @JsonProperty(JSON_PROPERTY_ANGLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class GetPageAngleResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ANGLE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAngle(Double angle) {
     this.angle = angle;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class GetPageAngleResult {
   public int hashCode() {
     return Objects.hash(successful, angle);
   }
-
 
   @Override
   public String toString() {

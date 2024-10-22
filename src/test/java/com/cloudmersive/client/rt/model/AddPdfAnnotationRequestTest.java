@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AddPdfAnnotationRequest
  */
-public class AddPdfAnnotationRequestTest {
+class AddPdfAnnotationRequestTest {
     private final AddPdfAnnotationRequest model = new AddPdfAnnotationRequest();
 
     /**
      * Model tests for AddPdfAnnotationRequest
      */
     @Test
-    public void testAddPdfAnnotationRequest() {
+    void testAddPdfAnnotationRequest() {
         // TODO: test AddPdfAnnotationRequest
     }
 
@@ -46,7 +44,7 @@ public class AddPdfAnnotationRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -54,7 +52,7 @@ public class AddPdfAnnotationRequestTest {
      * Test the property 'annotationsToAdd'
      */
     @Test
-    public void annotationsToAddTest() {
+    void annotationsToAddTest() {
         // TODO: test annotationsToAdd
     }
 

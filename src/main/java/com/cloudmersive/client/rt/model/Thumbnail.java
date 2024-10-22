@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of converting a single document page to a PNG thumbnail
  */
-@ApiModel(description = "Result of converting a single document page to a PNG thumbnail")
 @JsonPropertyOrder({
   Thumbnail.JSON_PROPERTY_INDEX,
   Thumbnail.JSON_PROPERTY_CONTENT
 })
-@JsonTypeName("Thumbnail")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Thumbnail {
   public static final String JSON_PROPERTY_INDEX = "Index";
   private Integer index;
@@ -41,6 +38,8 @@ public class Thumbnail {
   public static final String JSON_PROPERTY_CONTENT = "Content";
   private byte[] content;
 
+  public Thumbnail() {
+  }
 
   public Thumbnail index(Integer index) {
     
@@ -48,12 +47,11 @@ public class Thumbnail {
     return this;
   }
 
-   /**
+  /**
    * Index of this thumbnail
    * @return index
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Index of this thumbnail")
   @JsonProperty(JSON_PROPERTY_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class Thumbnail {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIndex(Integer index) {
     this.index = index;
   }
-
 
   public Thumbnail content(byte[] content) {
     
@@ -73,12 +72,11 @@ public class Thumbnail {
     return this;
   }
 
-   /**
+  /**
    * A PNG thumbnail of the document page
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "A PNG thumbnail of the document page")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class Thumbnail {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(byte[] content) {
     this.content = content;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class Thumbnail {
   public int hashCode() {
     return Objects.hash(index, Arrays.hashCode(content));
   }
-
 
   @Override
   public String toString() {

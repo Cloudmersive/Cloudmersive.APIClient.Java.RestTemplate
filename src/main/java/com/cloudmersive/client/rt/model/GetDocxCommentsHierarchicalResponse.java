@@ -21,33 +21,33 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of getting comments hierarchically from a Word Document DOCX
  */
-@ApiModel(description = "Result of getting comments hierarchically from a Word Document DOCX")
 @JsonPropertyOrder({
   GetDocxCommentsHierarchicalResponse.JSON_PROPERTY_SUCCESSFUL,
   GetDocxCommentsHierarchicalResponse.JSON_PROPERTY_COMMENTS,
   GetDocxCommentsHierarchicalResponse.JSON_PROPERTY_TOP_LEVEL_COMMENT_COUNT
 })
-@JsonTypeName("GetDocxCommentsHierarchicalResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxCommentsHierarchicalResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_COMMENTS = "Comments";
-  private List<DocxTopLevelComment> comments = null;
+  private List<DocxTopLevelComment> comments = new ArrayList<>();
 
   public static final String JSON_PROPERTY_TOP_LEVEL_COMMENT_COUNT = "TopLevelCommentCount";
   private Integer topLevelCommentCount;
 
+  public GetDocxCommentsHierarchicalResponse() {
+  }
 
   public GetDocxCommentsHierarchicalResponse successful(Boolean successful) {
     
@@ -55,12 +55,11 @@ public class GetDocxCommentsHierarchicalResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class GetDocxCommentsHierarchicalResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public GetDocxCommentsHierarchicalResponse comments(List<DocxTopLevelComment> comments) {
     
@@ -82,18 +82,17 @@ public class GetDocxCommentsHierarchicalResponse {
 
   public GetDocxCommentsHierarchicalResponse addCommentsItem(DocxTopLevelComment commentsItem) {
     if (this.comments == null) {
-      this.comments = new ArrayList<DocxTopLevelComment>();
+      this.comments = new ArrayList<>();
     }
     this.comments.add(commentsItem);
     return this;
   }
 
-   /**
+  /**
    * Comments in the document
    * @return comments
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Comments in the document")
   @JsonProperty(JSON_PROPERTY_COMMENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,10 +101,11 @@ public class GetDocxCommentsHierarchicalResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_COMMENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setComments(List<DocxTopLevelComment> comments) {
     this.comments = comments;
   }
-
 
   public GetDocxCommentsHierarchicalResponse topLevelCommentCount(Integer topLevelCommentCount) {
     
@@ -113,12 +113,11 @@ public class GetDocxCommentsHierarchicalResponse {
     return this;
   }
 
-   /**
+  /**
    * The number of comments in the document
    * @return topLevelCommentCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The number of comments in the document")
   @JsonProperty(JSON_PROPERTY_TOP_LEVEL_COMMENT_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class GetDocxCommentsHierarchicalResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TOP_LEVEL_COMMENT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTopLevelCommentCount(Integer topLevelCommentCount) {
     this.topLevelCommentCount = topLevelCommentCount;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class GetDocxCommentsHierarchicalResponse {
   public int hashCode() {
     return Objects.hash(successful, comments, topLevelCommentCount);
   }
-
 
   @Override
   public String toString() {

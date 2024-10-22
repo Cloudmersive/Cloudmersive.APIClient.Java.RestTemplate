@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of spell checking a sentence
  */
-@ApiModel(description = "Result of spell checking a sentence")
 @JsonPropertyOrder({
   CheckSentenceResponse.JSON_PROPERTY_INCORRECT_COUNT,
   CheckSentenceResponse.JSON_PROPERTY_WORDS
 })
-@JsonTypeName("CheckSentenceResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CheckSentenceResponse {
   public static final String JSON_PROPERTY_INCORRECT_COUNT = "IncorrectCount";
   private Integer incorrectCount;
 
   public static final String JSON_PROPERTY_WORDS = "Words";
-  private List<CorrectWordInSentence> words = null;
+  private List<CorrectWordInSentence> words = new ArrayList<>();
 
+  public CheckSentenceResponse() {
+  }
 
   public CheckSentenceResponse incorrectCount(Integer incorrectCount) {
     
@@ -51,12 +51,11 @@ public class CheckSentenceResponse {
     return this;
   }
 
-   /**
+  /**
    * Number of incorrect words
    * @return incorrectCount
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Number of incorrect words")
   @JsonProperty(JSON_PROPERTY_INCORRECT_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class CheckSentenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INCORRECT_COUNT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIncorrectCount(Integer incorrectCount) {
     this.incorrectCount = incorrectCount;
   }
-
 
   public CheckSentenceResponse words(List<CorrectWordInSentence> words) {
     
@@ -78,18 +78,17 @@ public class CheckSentenceResponse {
 
   public CheckSentenceResponse addWordsItem(CorrectWordInSentence wordsItem) {
     if (this.words == null) {
-      this.words = new ArrayList<CorrectWordInSentence>();
+      this.words = new ArrayList<>();
     }
     this.words.add(wordsItem);
     return this;
   }
 
-   /**
+  /**
    * Words in the sentence, both correct and incorrect
    * @return words
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Words in the sentence, both correct and incorrect")
   @JsonProperty(JSON_PROPERTY_WORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class CheckSentenceResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORDS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWords(List<CorrectWordInSentence> words) {
     this.words = words;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class CheckSentenceResponse {
   public int hashCode() {
     return Objects.hash(incorrectCount, words);
   }
-
 
   @Override
   public String toString() {

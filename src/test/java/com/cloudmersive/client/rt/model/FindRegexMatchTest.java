@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for FindRegexMatch
  */
-public class FindRegexMatchTest {
+class FindRegexMatchTest {
     private final FindRegexMatch model = new FindRegexMatch();
 
     /**
      * Model tests for FindRegexMatch
      */
     @Test
-    public void testFindRegexMatch() {
+    void testFindRegexMatch() {
         // TODO: test FindRegexMatch
     }
 
@@ -45,7 +43,7 @@ public class FindRegexMatchTest {
      * Test the property 'characterOffsetStart'
      */
     @Test
-    public void characterOffsetStartTest() {
+    void characterOffsetStartTest() {
         // TODO: test characterOffsetStart
     }
 
@@ -53,7 +51,7 @@ public class FindRegexMatchTest {
      * Test the property 'characterOffsetEnd'
      */
     @Test
-    public void characterOffsetEndTest() {
+    void characterOffsetEndTest() {
         // TODO: test characterOffsetEnd
     }
 
@@ -61,7 +59,7 @@ public class FindRegexMatchTest {
      * Test the property 'containingLine'
      */
     @Test
-    public void containingLineTest() {
+    void containingLineTest() {
         // TODO: test containingLine
     }
 
@@ -69,7 +67,7 @@ public class FindRegexMatchTest {
      * Test the property 'matchValue'
      */
     @Test
-    public void matchValueTest() {
+    void matchValueTest() {
         // TODO: test matchValue
     }
 
@@ -77,7 +75,7 @@ public class FindRegexMatchTest {
      * Test the property 'matchGroups'
      */
     @Test
-    public void matchGroupsTest() {
+    void matchGroupsTest() {
         // TODO: test matchGroups
     }
 

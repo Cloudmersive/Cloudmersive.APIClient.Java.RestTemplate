@@ -20,26 +20,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxBody
  */
-public class DocxBodyTest {
+class DocxBodyTest {
     private final DocxBody model = new DocxBody();
 
     /**
      * Model tests for DocxBody
      */
     @Test
-    public void testDocxBody() {
+    void testDocxBody() {
         // TODO: test DocxBody
     }
 
@@ -47,7 +45,7 @@ public class DocxBodyTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -55,7 +53,7 @@ public class DocxBodyTest {
      * Test the property 'allParagraphs'
      */
     @Test
-    public void allParagraphsTest() {
+    void allParagraphsTest() {
         // TODO: test allParagraphs
     }
 
@@ -63,7 +61,7 @@ public class DocxBodyTest {
      * Test the property 'allTables'
      */
     @Test
-    public void allTablesTest() {
+    void allTablesTest() {
         // TODO: test allTables
     }
 

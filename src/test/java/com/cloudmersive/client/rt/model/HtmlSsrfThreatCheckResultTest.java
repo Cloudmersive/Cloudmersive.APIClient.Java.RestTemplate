@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HtmlSsrfThreatCheckResult
  */
-public class HtmlSsrfThreatCheckResultTest {
+class HtmlSsrfThreatCheckResultTest {
     private final HtmlSsrfThreatCheckResult model = new HtmlSsrfThreatCheckResult();
 
     /**
      * Model tests for HtmlSsrfThreatCheckResult
      */
     @Test
-    public void testHtmlSsrfThreatCheckResult() {
+    void testHtmlSsrfThreatCheckResult() {
         // TODO: test HtmlSsrfThreatCheckResult
     }
 
@@ -46,7 +44,7 @@ public class HtmlSsrfThreatCheckResultTest {
      * Test the property 'isValid'
      */
     @Test
-    public void isValidTest() {
+    void isValidTest() {
         // TODO: test isValid
     }
 
@@ -54,7 +52,7 @@ public class HtmlSsrfThreatCheckResultTest {
      * Test the property 'isThreat'
      */
     @Test
-    public void isThreatTest() {
+    void isThreatTest() {
         // TODO: test isThreat
     }
 
@@ -62,7 +60,7 @@ public class HtmlSsrfThreatCheckResultTest {
      * Test the property 'threatLinks'
      */
     @Test
-    public void threatLinksTest() {
+    void threatLinksTest() {
         // TODO: test threatLinks
     }
 

@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ParseRequest
  */
-public class ParseRequestTest {
+class ParseRequestTest {
     private final ParseRequest model = new ParseRequest();
 
     /**
      * Model tests for ParseRequest
      */
     @Test
-    public void testParseRequest() {
+    void testParseRequest() {
         // TODO: test ParseRequest
     }
 
@@ -43,7 +40,7 @@ public class ParseRequestTest {
      * Test the property 'inputString'
      */
     @Test
-    public void inputStringTest() {
+    void inputStringTest() {
         // TODO: test inputString
     }
 

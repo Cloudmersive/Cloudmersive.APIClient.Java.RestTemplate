@@ -14,9 +14,12 @@
 package com.cloudmersive.client.rt;
 
 import com.cloudmersive.client.rt.model.CreateHandwritingRequest;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +28,8 @@ import java.util.Map;
 /**
  * API tests for TextGenerationApi
  */
-@Ignore
-public class TextGenerationApiTest {
+@Disabled
+class TextGenerationApiTest {
 
     private final TextGenerationApi api = new TextGenerationApi();
 
@@ -36,12 +39,13 @@ public class TextGenerationApiTest {
      *
      * Uses Deep Learning to generate realistic handwriting and returns the result as a PNG image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void textGenerationCreateHandwritingPngTest() {
+    void textGenerationCreateHandwritingPngTest() {
         CreateHandwritingRequest request = null;
+
         Object response = api.textGenerationCreateHandwritingPng(request);
 
         // TODO: test validations

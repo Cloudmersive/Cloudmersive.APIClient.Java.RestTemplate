@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for HtmlTemplateApplicationResponse
  */
-public class HtmlTemplateApplicationResponseTest {
+class HtmlTemplateApplicationResponseTest {
     private final HtmlTemplateApplicationResponse model = new HtmlTemplateApplicationResponse();
 
     /**
      * Model tests for HtmlTemplateApplicationResponse
      */
     @Test
-    public void testHtmlTemplateApplicationResponse() {
+    void testHtmlTemplateApplicationResponse() {
         // TODO: test HtmlTemplateApplicationResponse
     }
 
@@ -43,7 +40,7 @@ public class HtmlTemplateApplicationResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class HtmlTemplateApplicationResponseTest {
      * Test the property 'finalHtml'
      */
     @Test
-    public void finalHtmlTest() {
+    void finalHtmlTest() {
         // TODO: test finalHtml
     }
 

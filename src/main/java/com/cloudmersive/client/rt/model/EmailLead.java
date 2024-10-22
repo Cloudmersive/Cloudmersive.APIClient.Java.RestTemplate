@@ -20,9 +20,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * EmailLead
@@ -30,12 +29,13 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonPropertyOrder({
   EmailLead.JSON_PROPERTY_EMAIL_ADDRESS
 })
-@JsonTypeName("EmailLead")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EmailLead {
   public static final String JSON_PROPERTY_EMAIL_ADDRESS = "EmailAddress";
   private String emailAddress;
 
+  public EmailLead() {
+  }
 
   public EmailLead emailAddress(String emailAddress) {
     
@@ -43,12 +43,11 @@ public class EmailLead {
     return this;
   }
 
-   /**
+  /**
    * Get emailAddress
    * @return emailAddress
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_EMAIL_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -57,10 +56,11 @@ public class EmailLead {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EMAIL_ADDRESS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEmailAddress(String emailAddress) {
     this.emailAddress = emailAddress;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -78,7 +78,6 @@ public class EmailLead {
   public int hashCode() {
     return Objects.hash(emailAddress);
   }
-
 
   @Override
   public String toString() {

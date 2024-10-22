@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of checking a URL for safety threats
  */
-@ApiModel(description = "Result of checking a URL for safety threats")
 @JsonPropertyOrder({
   UrlSafetyCheckResponseFull.JSON_PROPERTY_CLEAN_U_R_L,
   UrlSafetyCheckResponseFull.JSON_PROPERTY_THREAT_TYPE
 })
-@JsonTypeName("UrlSafetyCheckResponseFull")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UrlSafetyCheckResponseFull {
   public static final String JSON_PROPERTY_CLEAN_U_R_L = "CleanURL";
   private Boolean cleanURL;
@@ -41,6 +38,8 @@ public class UrlSafetyCheckResponseFull {
   public static final String JSON_PROPERTY_THREAT_TYPE = "ThreatType";
   private String threatType;
 
+  public UrlSafetyCheckResponseFull() {
+  }
 
   public UrlSafetyCheckResponseFull cleanURL(Boolean cleanURL) {
     
@@ -48,12 +47,11 @@ public class UrlSafetyCheckResponseFull {
     return this;
   }
 
-   /**
+  /**
    * True if the URL is clean, false if it is at risk of containing a safety threat or attack
    * @return cleanURL
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the URL is clean, false if it is at risk of containing a safety threat or attack")
   @JsonProperty(JSON_PROPERTY_CLEAN_U_R_L)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class UrlSafetyCheckResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_U_R_L)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanURL(Boolean cleanURL) {
     this.cleanURL = cleanURL;
   }
-
 
   public UrlSafetyCheckResponseFull threatType(String threatType) {
     
@@ -73,12 +72,11 @@ public class UrlSafetyCheckResponseFull {
     return this;
   }
 
-   /**
+  /**
    * Threat type identified, if any; possible values are \&quot;ForcedDownload\&quot;, \&quot;VirusesAndMalware\&quot;, \&quot;Phishing\&quot;
    * @return threatType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Threat type identified, if any; possible values are \"ForcedDownload\", \"VirusesAndMalware\", \"Phishing\"")
   @JsonProperty(JSON_PROPERTY_THREAT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class UrlSafetyCheckResponseFull {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_THREAT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setThreatType(String threatType) {
     this.threatType = threatType;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class UrlSafetyCheckResponseFull {
   public int hashCode() {
     return Objects.hash(cleanURL, threatType);
   }
-
 
   @Override
   public String toString() {

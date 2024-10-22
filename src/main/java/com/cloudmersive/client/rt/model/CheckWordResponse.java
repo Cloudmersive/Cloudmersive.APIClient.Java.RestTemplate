@@ -20,29 +20,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Spelling correction check result
  */
-@ApiModel(description = "Spelling correction check result")
 @JsonPropertyOrder({
   CheckWordResponse.JSON_PROPERTY_CORRECT,
   CheckWordResponse.JSON_PROPERTY_SUGGESTIONS
 })
-@JsonTypeName("CheckWordResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:00.734-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CheckWordResponse {
   public static final String JSON_PROPERTY_CORRECT = "Correct";
   private Boolean correct;
 
   public static final String JSON_PROPERTY_SUGGESTIONS = "Suggestions";
-  private List<String> suggestions = null;
+  private List<String> suggestions = new ArrayList<>();
 
+  public CheckWordResponse() {
+  }
 
   public CheckWordResponse correct(Boolean correct) {
     
@@ -50,12 +50,11 @@ public class CheckWordResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the word is spelled correctly, false otherwise
    * @return correct
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the word is spelled correctly, false otherwise")
   @JsonProperty(JSON_PROPERTY_CORRECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -64,10 +63,11 @@ public class CheckWordResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CORRECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCorrect(Boolean correct) {
     this.correct = correct;
   }
-
 
   public CheckWordResponse suggestions(List<String> suggestions) {
     
@@ -77,18 +77,17 @@ public class CheckWordResponse {
 
   public CheckWordResponse addSuggestionsItem(String suggestionsItem) {
     if (this.suggestions == null) {
-      this.suggestions = new ArrayList<String>();
+      this.suggestions = new ArrayList<>();
     }
     this.suggestions.add(suggestionsItem);
     return this;
   }
 
-   /**
+  /**
    * Suggested spelling corrections
    * @return suggestions
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Suggested spelling corrections")
   @JsonProperty(JSON_PROPERTY_SUGGESTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,10 +96,11 @@ public class CheckWordResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUGGESTIONS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuggestions(List<String> suggestions) {
     this.suggestions = suggestions;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -119,7 +119,6 @@ public class CheckWordResponse {
   public int hashCode() {
     return Objects.hash(correct, suggestions);
   }
-
 
   @Override
   public String toString() {

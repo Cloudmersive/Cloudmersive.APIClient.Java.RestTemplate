@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Virus positively identified
  */
-@ApiModel(description = "Virus positively identified")
 @JsonPropertyOrder({
   VirusFound.JSON_PROPERTY_FILE_NAME,
   VirusFound.JSON_PROPERTY_VIRUS_NAME
 })
-@JsonTypeName("VirusFound")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VirusFound {
   public static final String JSON_PROPERTY_FILE_NAME = "FileName";
   private String fileName;
@@ -41,6 +38,8 @@ public class VirusFound {
   public static final String JSON_PROPERTY_VIRUS_NAME = "VirusName";
   private String virusName;
 
+  public VirusFound() {
+  }
 
   public VirusFound fileName(String fileName) {
     
@@ -48,12 +47,11 @@ public class VirusFound {
     return this;
   }
 
-   /**
+  /**
    * Name of the file containing the virus
    * @return fileName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the file containing the virus")
   @JsonProperty(JSON_PROPERTY_FILE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class VirusFound {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FILE_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFileName(String fileName) {
     this.fileName = fileName;
   }
-
 
   public VirusFound virusName(String virusName) {
     
@@ -73,12 +72,11 @@ public class VirusFound {
     return this;
   }
 
-   /**
+  /**
    * Name of the virus that was found
    * @return virusName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the virus that was found")
   @JsonProperty(JSON_PROPERTY_VIRUS_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class VirusFound {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_VIRUS_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setVirusName(String virusName) {
     this.virusName = virusName;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class VirusFound {
   public int hashCode() {
     return Objects.hash(fileName, virusName);
   }
-
 
   @Override
   public String toString() {

@@ -20,14 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Identifier validation request, including the input identifier as well as various identifier rules
  */
-@ApiModel(description = "Identifier validation request, including the input identifier as well as various identifier rules")
 @JsonPropertyOrder({
   ValidateIdentifierRequest.JSON_PROPERTY_INPUT,
   ValidateIdentifierRequest.JSON_PROPERTY_ALLOW_WHITESPACE,
@@ -38,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   ValidateIdentifierRequest.JSON_PROPERTY_MAX_LENGTH,
   ValidateIdentifierRequest.JSON_PROPERTY_MIN_LENGTH
 })
-@JsonTypeName("ValidateIdentifierRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateIdentifierRequest {
   public static final String JSON_PROPERTY_INPUT = "Input";
   private String input;
@@ -65,6 +62,8 @@ public class ValidateIdentifierRequest {
   public static final String JSON_PROPERTY_MIN_LENGTH = "MinLength";
   private Integer minLength;
 
+  public ValidateIdentifierRequest() {
+  }
 
   public ValidateIdentifierRequest input(String input) {
     
@@ -72,12 +71,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * Text string identifier input
    * @return input
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Text string identifier input")
   @JsonProperty(JSON_PROPERTY_INPUT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,10 +84,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInput(String input) {
     this.input = input;
   }
-
 
   public ValidateIdentifierRequest allowWhitespace(Boolean allowWhitespace) {
     
@@ -97,12 +96,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * True if whitespace is allowed in the identifier, false otherwise
    * @return allowWhitespace
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if whitespace is allowed in the identifier, false otherwise")
   @JsonProperty(JSON_PROPERTY_ALLOW_WHITESPACE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,10 +109,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_WHITESPACE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowWhitespace(Boolean allowWhitespace) {
     this.allowWhitespace = allowWhitespace;
   }
-
 
   public ValidateIdentifierRequest allowHyphens(Boolean allowHyphens) {
     
@@ -122,12 +121,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * True if hyphens are allowd in the identifier, false otherwise
    * @return allowHyphens
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if hyphens are allowd in the identifier, false otherwise")
   @JsonProperty(JSON_PROPERTY_ALLOW_HYPHENS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -136,10 +134,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_HYPHENS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowHyphens(Boolean allowHyphens) {
     this.allowHyphens = allowHyphens;
   }
-
 
   public ValidateIdentifierRequest allowUnderscore(Boolean allowUnderscore) {
     
@@ -147,12 +146,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * True if underscores are allowed in the identifier, false otherwise
    * @return allowUnderscore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if underscores are allowed in the identifier, false otherwise")
   @JsonProperty(JSON_PROPERTY_ALLOW_UNDERSCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,10 +159,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_UNDERSCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowUnderscore(Boolean allowUnderscore) {
     this.allowUnderscore = allowUnderscore;
   }
-
 
   public ValidateIdentifierRequest allowNumbers(Boolean allowNumbers) {
     
@@ -172,12 +171,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * True if numbers are allowed in the identifier, false otherwise
    * @return allowNumbers
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if numbers are allowed in the identifier, false otherwise")
   @JsonProperty(JSON_PROPERTY_ALLOW_NUMBERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,10 +184,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_NUMBERS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowNumbers(Boolean allowNumbers) {
     this.allowNumbers = allowNumbers;
   }
-
 
   public ValidateIdentifierRequest allowPeriods(Boolean allowPeriods) {
     
@@ -197,12 +196,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * True if periods are allowed in the identifier, false otherwise
    * @return allowPeriods
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if periods are allowed in the identifier, false otherwise")
   @JsonProperty(JSON_PROPERTY_ALLOW_PERIODS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,10 +209,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ALLOW_PERIODS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAllowPeriods(Boolean allowPeriods) {
     this.allowPeriods = allowPeriods;
   }
-
 
   public ValidateIdentifierRequest maxLength(Integer maxLength) {
     
@@ -222,12 +221,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; maximum length, if any, of the identifier
    * @return maxLength
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; maximum length, if any, of the identifier")
   @JsonProperty(JSON_PROPERTY_MAX_LENGTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -236,10 +234,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MAX_LENGTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMaxLength(Integer maxLength) {
     this.maxLength = maxLength;
   }
-
 
   public ValidateIdentifierRequest minLength(Integer minLength) {
     
@@ -247,12 +246,11 @@ public class ValidateIdentifierRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional; minimum length, if any, of the identifier
    * @return minLength
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional; minimum length, if any, of the identifier")
   @JsonProperty(JSON_PROPERTY_MIN_LENGTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -261,10 +259,11 @@ public class ValidateIdentifierRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_MIN_LENGTH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setMinLength(Integer minLength) {
     this.minLength = minLength;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -289,7 +288,6 @@ public class ValidateIdentifierRequest {
   public int hashCode() {
     return Objects.hash(input, allowWhitespace, allowHyphens, allowUnderscore, allowNumbers, allowPeriods, maxLength, minLength);
   }
-
 
   @Override
   public String toString() {

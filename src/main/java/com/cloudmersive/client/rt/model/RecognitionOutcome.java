@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Specific recognition outcome
  */
-@ApiModel(description = "Specific recognition outcome")
 @JsonPropertyOrder({
   RecognitionOutcome.JSON_PROPERTY_CONFIDENCE_SCORE,
   RecognitionOutcome.JSON_PROPERTY_DESCRIPTION
 })
-@JsonTypeName("RecognitionOutcome")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RecognitionOutcome {
   public static final String JSON_PROPERTY_CONFIDENCE_SCORE = "ConfidenceScore";
   private Double confidenceScore;
@@ -41,6 +38,8 @@ public class RecognitionOutcome {
   public static final String JSON_PROPERTY_DESCRIPTION = "Description";
   private String description;
 
+  public RecognitionOutcome() {
+  }
 
   public RecognitionOutcome confidenceScore(Double confidenceScore) {
     
@@ -48,12 +47,11 @@ public class RecognitionOutcome {
     return this;
   }
 
-   /**
+  /**
    * Scores closer to 1 are better than scores closer to 0
    * @return confidenceScore
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Scores closer to 1 are better than scores closer to 0")
   @JsonProperty(JSON_PROPERTY_CONFIDENCE_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class RecognitionOutcome {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONFIDENCE_SCORE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setConfidenceScore(Double confidenceScore) {
     this.confidenceScore = confidenceScore;
   }
-
 
   public RecognitionOutcome description(String description) {
     
@@ -73,12 +72,11 @@ public class RecognitionOutcome {
     return this;
   }
 
-   /**
+  /**
    * English language description of the image
    * @return description
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "English language description of the image")
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class RecognitionOutcome {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDescription(String description) {
     this.description = description;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class RecognitionOutcome {
   public int hashCode() {
     return Objects.hash(confidenceScore, description);
   }
-
 
   @Override
   public String toString() {

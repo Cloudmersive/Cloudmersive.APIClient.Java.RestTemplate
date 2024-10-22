@@ -2,15 +2,15 @@
 
 All URIs are relative to *https://api.cloudmersive.com*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**zipArchiveZipCreate**](ZipArchiveApi.md#zipArchiveZipCreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive
-[**zipArchiveZipCreateAdvanced**](ZipArchiveApi.md#zipArchiveZipCreateAdvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options
-[**zipArchiveZipCreateEncrypted**](ZipArchiveApi.md#zipArchiveZipCreateEncrypted) | **POST** /convert/archive/zip/create/encrypted | Compress files to create a new, encrypted and password-protected zip archive
-[**zipArchiveZipCreateQuarantine**](ZipArchiveApi.md#zipArchiveZipCreateQuarantine) | **POST** /convert/archive/zip/create/quarantine | Create an encrypted zip file to quarantine a dangerous file
-[**zipArchiveZipDecrypt**](ZipArchiveApi.md#zipArchiveZipDecrypt) | **POST** /convert/archive/zip/decrypt | Decrypt and remove password protection on a zip file
-[**zipArchiveZipEncryptAdvanced**](ZipArchiveApi.md#zipArchiveZipEncryptAdvanced) | **POST** /convert/archive/zip/encrypt/advanced | Encrypt and password protect a zip file
-[**zipArchiveZipExtract**](ZipArchiveApi.md#zipArchiveZipExtract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive
+| Method | HTTP request | Description |
+|------------- | ------------- | -------------|
+| [**zipArchiveZipCreate**](ZipArchiveApi.md#zipArchiveZipCreate) | **POST** /convert/archive/zip/create | Compress files to create a new zip archive |
+| [**zipArchiveZipCreateAdvanced**](ZipArchiveApi.md#zipArchiveZipCreateAdvanced) | **POST** /convert/archive/zip/create/advanced | Compress files and folders to create a new zip archive with advanced options |
+| [**zipArchiveZipCreateEncrypted**](ZipArchiveApi.md#zipArchiveZipCreateEncrypted) | **POST** /convert/archive/zip/create/encrypted | Compress files to create a new, encrypted and password-protected zip archive |
+| [**zipArchiveZipCreateQuarantine**](ZipArchiveApi.md#zipArchiveZipCreateQuarantine) | **POST** /convert/archive/zip/create/quarantine | Create an encrypted zip file to quarantine a dangerous file |
+| [**zipArchiveZipDecrypt**](ZipArchiveApi.md#zipArchiveZipDecrypt) | **POST** /convert/archive/zip/decrypt | Decrypt and remove password protection on a zip file |
+| [**zipArchiveZipEncryptAdvanced**](ZipArchiveApi.md#zipArchiveZipEncryptAdvanced) | **POST** /convert/archive/zip/encrypt/advanced | Encrypt and password protect a zip file |
+| [**zipArchiveZipExtract**](ZipArchiveApi.md#zipArchiveZipExtract) | **POST** /convert/archive/zip/extract | Extract, decompress files and folders from a zip archive |
 
 
 
@@ -72,18 +72,18 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile1** | **File**| First input file to perform the operation on. |
- **inputFile2** | **File**| Second input file to perform the operation on. | [optional]
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **inputFile2** | **File**| Second input file to perform the operation on. | [optional] |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -97,6 +97,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -153,9 +154,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **request** | [**CreateZipArchiveRequest**](CreateZipArchiveRequest.md)| Input request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **request** | [**CreateZipArchiveRequest**](CreateZipArchiveRequest.md)| Input request | |
 
 ### Return type
 
@@ -169,6 +170,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -236,20 +238,20 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **password** | **String**| Password to place on the Zip file; the longer the password, the more secure |
- **inputFile1** | **File**| First input file to perform the operation on. |
- **encryptionAlgorithm** | **String**| Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. | [optional]
- **inputFile2** | **File**| Second input file to perform the operation on. | [optional]
- **inputFile3** | **File**| Third input file to perform the operation on. | [optional]
- **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional]
- **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional]
- **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional]
- **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional]
- **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional]
- **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional]
- **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **password** | **String**| Password to place on the Zip file; the longer the password, the more secure | |
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **encryptionAlgorithm** | **String**| Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. | [optional] |
+| **inputFile2** | **File**| Second input file to perform the operation on. | [optional] |
+| **inputFile3** | **File**| Third input file to perform the operation on. | [optional] |
+| **inputFile4** | **File**| Fourth input file to perform the operation on. | [optional] |
+| **inputFile5** | **File**| Fifth input file to perform the operation on. | [optional] |
+| **inputFile6** | **File**| Sixth input file to perform the operation on. | [optional] |
+| **inputFile7** | **File**| Seventh input file to perform the operation on. | [optional] |
+| **inputFile8** | **File**| Eighth input file to perform the operation on. | [optional] |
+| **inputFile9** | **File**| Ninth input file to perform the operation on. | [optional] |
+| **inputFile10** | **File**| Tenth input file to perform the operation on. | [optional] |
 
 ### Return type
 
@@ -263,6 +265,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -321,11 +324,11 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **password** | **String**| Password to place on the Zip file; the longer the password, the more secure |
- **inputFile1** | **File**| First input file to perform the operation on. |
- **encryptionAlgorithm** | **String**| Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. | [optional]
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **password** | **String**| Password to place on the Zip file; the longer the password, the more secure | |
+| **inputFile1** | **File**| First input file to perform the operation on. | |
+| **encryptionAlgorithm** | **String**| Encryption algorithm to use; possible values are AES-256 (recommended), AES-128, and PK-Zip (not recommended; legacy, weak encryption algorithm). Default is AES-256. | [optional] |
 
 ### Return type
 
@@ -339,6 +342,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/octet-stream
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -396,10 +400,10 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **zipPassword** | **String**| Required; Password for the input archive |
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **zipPassword** | **String**| Required; Password for the input archive | |
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -413,6 +417,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -469,9 +474,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **encryptionRequest** | [**ZipEncryptionAdvancedRequest**](ZipEncryptionAdvancedRequest.md)| Encryption request |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **encryptionRequest** | [**ZipEncryptionAdvancedRequest**](ZipEncryptionAdvancedRequest.md)| Encryption request | |
 
 ### Return type
 
@@ -485,6 +490,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -541,9 +547,9 @@ public class Example {
 ### Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **inputFile** | **File**| Input file to perform the operation on. |
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **inputFile** | **File**| Input file to perform the operation on. | |
 
 ### Return type
 
@@ -557,6 +563,7 @@ Name | Type | Description  | Notes
 
 - **Content-Type**: multipart/form-data
 - **Accept**: application/json, text/json, application/xml, text/xml
+
 
 ### HTTP response details
 | Status code | Description | Response headers |

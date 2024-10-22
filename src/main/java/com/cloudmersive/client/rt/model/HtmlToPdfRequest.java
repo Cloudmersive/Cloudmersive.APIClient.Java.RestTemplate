@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Details of the HTML to PDF request
  */
-@ApiModel(description = "Details of the HTML to PDF request")
 @JsonPropertyOrder({
   HtmlToPdfRequest.JSON_PROPERTY_HTML,
   HtmlToPdfRequest.JSON_PROPERTY_EXTRA_LOADING_WAIT,
   HtmlToPdfRequest.JSON_PROPERTY_INCLUDE_BACKGROUND_GRAPHICS,
   HtmlToPdfRequest.JSON_PROPERTY_SCALE_FACTOR
 })
-@JsonTypeName("HtmlToPdfRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HtmlToPdfRequest {
   public static final String JSON_PROPERTY_HTML = "Html";
   private String html;
@@ -49,6 +46,8 @@ public class HtmlToPdfRequest {
   public static final String JSON_PROPERTY_SCALE_FACTOR = "ScaleFactor";
   private Integer scaleFactor;
 
+  public HtmlToPdfRequest() {
+  }
 
   public HtmlToPdfRequest html(String html) {
     
@@ -56,12 +55,11 @@ public class HtmlToPdfRequest {
     return this;
   }
 
-   /**
+  /**
    * HTML to render to PDF
    * @return html
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "HTML to render to PDF")
   @JsonProperty(JSON_PROPERTY_HTML)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class HtmlToPdfRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HTML)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHtml(String html) {
     this.html = html;
   }
-
 
   public HtmlToPdfRequest extraLoadingWait(Integer extraLoadingWait) {
     
@@ -81,12 +80,11 @@ public class HtmlToPdfRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds).
    * @return extraLoadingWait
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Additional number of milliseconds to wait once the web page has finished loading before taking the screenshot.  Can be helpful for highly asynchronous websites. Provide a value of 0 for the default of 5000 milliseconds (5 seconds). Maximum is 30000 milliseconds (30 seconds).")
   @JsonProperty(JSON_PROPERTY_EXTRA_LOADING_WAIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class HtmlToPdfRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_EXTRA_LOADING_WAIT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setExtraLoadingWait(Integer extraLoadingWait) {
     this.extraLoadingWait = extraLoadingWait;
   }
-
 
   public HtmlToPdfRequest includeBackgroundGraphics(Boolean includeBackgroundGraphics) {
     
@@ -106,12 +105,11 @@ public class HtmlToPdfRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.
    * @return includeBackgroundGraphics
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Set to true to include background graphics in the PDF, or false to not include.  Default is true.")
   @JsonProperty(JSON_PROPERTY_INCLUDE_BACKGROUND_GRAPHICS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class HtmlToPdfRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INCLUDE_BACKGROUND_GRAPHICS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIncludeBackgroundGraphics(Boolean includeBackgroundGraphics) {
     this.includeBackgroundGraphics = includeBackgroundGraphics;
   }
-
 
   public HtmlToPdfRequest scaleFactor(Integer scaleFactor) {
     
@@ -131,12 +130,11 @@ public class HtmlToPdfRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.
    * @return scaleFactor
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Set to 100 to scale at 100%, set to 50% to scale down to 50% scale, set to 200% to scale up to 200% scale, etc.  Default is 100%. Maximum is 1000%.")
   @JsonProperty(JSON_PROPERTY_SCALE_FACTOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class HtmlToPdfRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SCALE_FACTOR)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setScaleFactor(Integer scaleFactor) {
     this.scaleFactor = scaleFactor;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class HtmlToPdfRequest {
   public int hashCode() {
     return Objects.hash(html, extraLoadingWait, includeBackgroundGraphics, scaleFactor);
   }
-
 
   @Override
   public String toString() {

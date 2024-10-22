@@ -33,21 +33,26 @@ paths:
       summary: Get a list of available currencies and corresponding countries
       tags:
       - CurrencyExchange
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - application/xml
+      - text/json
+      - text/xml
   /currency/exchange-rates/convert/{source}/to/{destination}:
     post:
       description: Automatically converts the price in the source currency into the
         destination currency using the latest available currency exchange rate data.
       operationId: CurrencyExchange_ConvertCurrency
       parameters:
-      - description: Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc.
+      - description: "Source currency three-digit code (ISO 4217), e.g. USD, EUR,\
+          \ etc."
         in: path
         name: source
         required: true
         schema:
           type: string
-      - description: Destination currency three-digit code (ISO 4217), e.g. USD, EUR,
-          etc.
+      - description: "Destination currency three-digit code (ISO 4217), e.g. USD,\
+          \ EUR, etc."
         in: path
         name: destination
         required: true
@@ -63,7 +68,7 @@ paths:
             schema:
               format: double
               type: number
-        description: Input price, such as 19.99 in source currency
+        description: "Input price, such as 19.99 in source currency"
         required: true
       responses:
         "200":
@@ -87,8 +92,12 @@ paths:
       tags:
       - CurrencyExchange
       x-codegen-request-body-name: sourcePrice
-      x-contentType: application/json
-      x-accepts: application/json
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+      - application/xml
+      - text/json
+      - text/xml
   /currency/exchange-rates/get/{source}/to/{destination}:
     post:
       description: Automatically gets the exchange rate from the source currency into
@@ -96,14 +105,15 @@ paths:
         data.
       operationId: CurrencyExchange_GetExchangeRate
       parameters:
-      - description: Source currency three-digit code (ISO 4217), e.g. USD, EUR, etc.
+      - description: "Source currency three-digit code (ISO 4217), e.g. USD, EUR,\
+          \ etc."
         in: path
         name: source
         required: true
         schema:
           type: string
-      - description: Destination currency three-digit code (ISO 4217), e.g. USD, EUR,
-          etc.
+      - description: "Destination currency three-digit code (ISO 4217), e.g. USD,\
+          \ EUR, etc."
         in: path
         name: destination
         required: true
@@ -131,7 +141,11 @@ paths:
         currency
       tags:
       - CurrencyExchange
-      x-accepts: application/json
+      x-accepts:
+      - application/json
+      - application/xml
+      - text/json
+      - text/xml
 components:
   schemas:
     AvailableCurrencyResponse:
@@ -189,8 +203,8 @@ components:
           description: Two-letter ISO 3166-1 country code
           type: string
         IsEuropeanUnionMember:
-          description: True if this country is currently a member of the European
-            Union (EU), false otherwise
+          description: "True if this country is currently a member of the European\
+            \ Union (EU), false otherwise"
           type: boolean
       type: object
     ConvertedCurrencyResult:
@@ -231,4 +245,5 @@ components:
       in: header
       name: Apikey
       type: apiKey
+x-original-swagger-version: "2.0"
 

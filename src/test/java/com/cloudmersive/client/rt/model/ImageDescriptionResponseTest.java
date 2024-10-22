@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ImageDescriptionResponse
  */
-public class ImageDescriptionResponseTest {
+class ImageDescriptionResponseTest {
     private final ImageDescriptionResponse model = new ImageDescriptionResponse();
 
     /**
      * Model tests for ImageDescriptionResponse
      */
     @Test
-    public void testImageDescriptionResponse() {
+    void testImageDescriptionResponse() {
         // TODO: test ImageDescriptionResponse
     }
 
@@ -44,7 +41,7 @@ public class ImageDescriptionResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -52,7 +49,7 @@ public class ImageDescriptionResponseTest {
      * Test the property 'highconfidence'
      */
     @Test
-    public void highconfidenceTest() {
+    void highconfidenceTest() {
         // TODO: test highconfidence
     }
 
@@ -60,7 +57,7 @@ public class ImageDescriptionResponseTest {
      * Test the property 'bestOutcome'
      */
     @Test
-    public void bestOutcomeTest() {
+    void bestOutcomeTest() {
         // TODO: test bestOutcome
     }
 
@@ -68,7 +65,7 @@ public class ImageDescriptionResponseTest {
      * Test the property 'runnerUpOutcome'
      */
     @Test
-    public void runnerUpOutcomeTest() {
+    void runnerUpOutcomeTest() {
         // TODO: test runnerUpOutcome
     }
 

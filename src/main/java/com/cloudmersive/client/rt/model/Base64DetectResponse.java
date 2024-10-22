@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of base 64 detection
  */
-@ApiModel(description = "Result of base 64 detection")
 @JsonPropertyOrder({
   Base64DetectResponse.JSON_PROPERTY_SUCCESSFUL,
   Base64DetectResponse.JSON_PROPERTY_IS_BASE64_ENCODED
 })
-@JsonTypeName("Base64DetectResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Base64DetectResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -41,6 +38,8 @@ public class Base64DetectResponse {
   public static final String JSON_PROPERTY_IS_BASE64_ENCODED = "IsBase64Encoded";
   private Boolean isBase64Encoded;
 
+  public Base64DetectResponse() {
+  }
 
   public Base64DetectResponse successful(Boolean successful) {
     
@@ -48,12 +47,11 @@ public class Base64DetectResponse {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class Base64DetectResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public Base64DetectResponse isBase64Encoded(Boolean isBase64Encoded) {
     
@@ -73,12 +72,11 @@ public class Base64DetectResponse {
     return this;
   }
 
-   /**
+  /**
    * True if the input string is base 64 encoded, false otherwise
    * @return isBase64Encoded
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the input string is base 64 encoded, false otherwise")
   @JsonProperty(JSON_PROPERTY_IS_BASE64_ENCODED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class Base64DetectResponse {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_IS_BASE64_ENCODED)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setIsBase64Encoded(Boolean isBase64Encoded) {
     this.isBase64Encoded = isBase64Encoded;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class Base64DetectResponse {
   public int hashCode() {
     return Objects.hash(successful, isBase64Encoded);
   }
-
 
   @Override
   public String toString() {

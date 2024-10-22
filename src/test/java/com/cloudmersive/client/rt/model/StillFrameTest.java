@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for StillFrame
  */
-public class StillFrameTest {
+class StillFrameTest {
     private final StillFrame model = new StillFrame();
 
     /**
      * Model tests for StillFrame
      */
     @Test
-    public void testStillFrame() {
+    void testStillFrame() {
         // TODO: test StillFrame
     }
 
@@ -43,7 +40,7 @@ public class StillFrameTest {
      * Test the property 'frameNumber'
      */
     @Test
-    public void frameNumberTest() {
+    void frameNumberTest() {
         // TODO: test frameNumber
     }
 
@@ -51,7 +48,7 @@ public class StillFrameTest {
      * Test the property 'timeStamp'
      */
     @Test
-    public void timeStampTest() {
+    void timeStampTest() {
         // TODO: test timeStamp
     }
 
@@ -59,7 +56,7 @@ public class StillFrameTest {
      * Test the property 'content'
      */
     @Test
-    public void contentTest() {
+    void contentTest() {
         // TODO: test content
     }
 

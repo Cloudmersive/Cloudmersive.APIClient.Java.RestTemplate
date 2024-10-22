@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for LanguageDetectionResponse
  */
-public class LanguageDetectionResponseTest {
+class LanguageDetectionResponseTest {
     private final LanguageDetectionResponse model = new LanguageDetectionResponse();
 
     /**
      * Model tests for LanguageDetectionResponse
      */
     @Test
-    public void testLanguageDetectionResponse() {
+    void testLanguageDetectionResponse() {
         // TODO: test LanguageDetectionResponse
     }
 
@@ -43,7 +40,7 @@ public class LanguageDetectionResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -51,7 +48,7 @@ public class LanguageDetectionResponseTest {
      * Test the property 'detectedLanguageThreeLetterCode'
      */
     @Test
-    public void detectedLanguageThreeLetterCodeTest() {
+    void detectedLanguageThreeLetterCodeTest() {
         // TODO: test detectedLanguageThreeLetterCode
     }
 
@@ -59,7 +56,7 @@ public class LanguageDetectionResponseTest {
      * Test the property 'detectedLanguageFullName'
      */
     @Test
-    public void detectedLanguageFullNameTest() {
+    void detectedLanguageFullNameTest() {
         // TODO: test detectedLanguageFullName
     }
 

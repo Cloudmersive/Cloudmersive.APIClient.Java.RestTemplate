@@ -20,22 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a get DOCX table row request
  */
-@ApiModel(description = "Input to a get DOCX table row request")
 @JsonPropertyOrder({
   GetDocxTableRowRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   GetDocxTableRowRequest.JSON_PROPERTY_INPUT_FILE_URL,
   GetDocxTableRowRequest.JSON_PROPERTY_TABLE_PATH,
   GetDocxTableRowRequest.JSON_PROPERTY_TABLE_ROW_ROW_INDEX
 })
-@JsonTypeName("GetDocxTableRowRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetDocxTableRowRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -49,6 +46,8 @@ public class GetDocxTableRowRequest {
   public static final String JSON_PROPERTY_TABLE_ROW_ROW_INDEX = "TableRowRowIndex";
   private Integer tableRowRowIndex;
 
+  public GetDocxTableRowRequest() {
+  }
 
   public GetDocxTableRowRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -56,12 +55,11 @@ public class GetDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -70,10 +68,11 @@ public class GetDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public GetDocxTableRowRequest inputFileUrl(String inputFileUrl) {
     
@@ -81,12 +80,11 @@ public class GetDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,10 +93,11 @@ public class GetDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public GetDocxTableRowRequest tablePath(String tablePath) {
     
@@ -106,12 +105,11 @@ public class GetDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Path to the table to retrievew the row from
    * @return tablePath
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Path to the table to retrievew the row from")
   @JsonProperty(JSON_PROPERTY_TABLE_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,10 +118,11 @@ public class GetDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTablePath(String tablePath) {
     this.tablePath = tablePath;
   }
-
 
   public GetDocxTableRowRequest tableRowRowIndex(Integer tableRowRowIndex) {
     
@@ -131,12 +130,11 @@ public class GetDocxTableRowRequest {
     return this;
   }
 
-   /**
+  /**
    * 0-based index of the row to retrieve (e.g. 0, 1, 2, ...) in the table
    * @return tableRowRowIndex
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "0-based index of the row to retrieve (e.g. 0, 1, 2, ...) in the table")
   @JsonProperty(JSON_PROPERTY_TABLE_ROW_ROW_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,10 +143,11 @@ public class GetDocxTableRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_ROW_ROW_INDEX)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableRowRowIndex(Integer tableRowRowIndex) {
     this.tableRowRowIndex = tableRowRowIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -169,7 +168,6 @@ public class GetDocxTableRowRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, tablePath, tableRowRowIndex);
   }
-
 
   @Override
   public String toString() {

@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Response from an OCR to words with location operation.  Includes the confience rating and converted text result, along with the locations of the words in the pages.
  */
-@ApiModel(description = "Response from an OCR to words with location operation.  Includes the confience rating and converted text result, along with the locations of the words in the pages.")
 @JsonPropertyOrder({
   PdfToWordsWithLocationResult.JSON_PROPERTY_SUCCESSFUL,
   PdfToWordsWithLocationResult.JSON_PROPERTY_OCR_PAGES
 })
-@JsonTypeName("PdfToWordsWithLocationResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PdfToWordsWithLocationResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_OCR_PAGES = "OcrPages";
-  private List<OcrPageResultWithWordsWithLocation> ocrPages = null;
+  private List<OcrPageResultWithWordsWithLocation> ocrPages = new ArrayList<>();
 
+  public PdfToWordsWithLocationResult() {
+  }
 
   public PdfToWordsWithLocationResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class PdfToWordsWithLocationResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class PdfToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public PdfToWordsWithLocationResult ocrPages(List<OcrPageResultWithWordsWithLocation> ocrPages) {
     
@@ -78,18 +78,17 @@ public class PdfToWordsWithLocationResult {
 
   public PdfToWordsWithLocationResult addOcrPagesItem(OcrPageResultWithWordsWithLocation ocrPagesItem) {
     if (this.ocrPages == null) {
-      this.ocrPages = new ArrayList<OcrPageResultWithWordsWithLocation>();
+      this.ocrPages = new ArrayList<>();
     }
     this.ocrPages.add(ocrPagesItem);
     return this;
   }
 
-   /**
+  /**
    * OCR page results
    * @return ocrPages
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "OCR page results")
   @JsonProperty(JSON_PROPERTY_OCR_PAGES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class PdfToWordsWithLocationResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OCR_PAGES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOcrPages(List<OcrPageResultWithWordsWithLocation> ocrPages) {
     this.ocrPages = ocrPages;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class PdfToWordsWithLocationResult {
   public int hashCode() {
     return Objects.hash(successful, ocrPages);
   }
-
 
   @Override
   public String toString() {

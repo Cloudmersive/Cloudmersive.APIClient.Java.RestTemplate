@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ObjectDetectionResult
  */
-public class ObjectDetectionResultTest {
+class ObjectDetectionResultTest {
     private final ObjectDetectionResult model = new ObjectDetectionResult();
 
     /**
      * Model tests for ObjectDetectionResult
      */
     @Test
-    public void testObjectDetectionResult() {
+    void testObjectDetectionResult() {
         // TODO: test ObjectDetectionResult
     }
 
@@ -46,7 +44,7 @@ public class ObjectDetectionResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -54,7 +52,7 @@ public class ObjectDetectionResultTest {
      * Test the property 'objects'
      */
     @Test
-    public void objectsTest() {
+    void objectsTest() {
         // TODO: test objects
     }
 
@@ -62,7 +60,7 @@ public class ObjectDetectionResultTest {
      * Test the property 'objectCount'
      */
     @Test
-    public void objectCountTest() {
+    void objectCountTest() {
         // TODO: test objectCount
     }
 

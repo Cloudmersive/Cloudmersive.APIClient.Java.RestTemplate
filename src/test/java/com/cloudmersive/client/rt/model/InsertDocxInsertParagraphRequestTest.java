@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for InsertDocxInsertParagraphRequest
  */
-public class InsertDocxInsertParagraphRequestTest {
+class InsertDocxInsertParagraphRequestTest {
     private final InsertDocxInsertParagraphRequest model = new InsertDocxInsertParagraphRequest();
 
     /**
      * Model tests for InsertDocxInsertParagraphRequest
      */
     @Test
-    public void testInsertDocxInsertParagraphRequest() {
+    void testInsertDocxInsertParagraphRequest() {
         // TODO: test InsertDocxInsertParagraphRequest
     }
 
@@ -44,7 +41,7 @@ public class InsertDocxInsertParagraphRequestTest {
      * Test the property 'inputFileBytes'
      */
     @Test
-    public void inputFileBytesTest() {
+    void inputFileBytesTest() {
         // TODO: test inputFileBytes
     }
 
@@ -52,7 +49,7 @@ public class InsertDocxInsertParagraphRequestTest {
      * Test the property 'inputFileUrl'
      */
     @Test
-    public void inputFileUrlTest() {
+    void inputFileUrlTest() {
         // TODO: test inputFileUrl
     }
 
@@ -60,7 +57,7 @@ public class InsertDocxInsertParagraphRequestTest {
      * Test the property 'paragraphToInsert'
      */
     @Test
-    public void paragraphToInsertTest() {
+    void paragraphToInsertTest() {
         // TODO: test paragraphToInsert
     }
 
@@ -68,7 +65,7 @@ public class InsertDocxInsertParagraphRequestTest {
      * Test the property 'insertPlacement'
      */
     @Test
-    public void insertPlacementTest() {
+    void insertPlacementTest() {
         // TODO: test insertPlacement
     }
 
@@ -76,7 +73,7 @@ public class InsertDocxInsertParagraphRequestTest {
      * Test the property 'insertPath'
      */
     @Test
-    public void insertPathTest() {
+    void insertPathTest() {
         // TODO: test insertPath
     }
 

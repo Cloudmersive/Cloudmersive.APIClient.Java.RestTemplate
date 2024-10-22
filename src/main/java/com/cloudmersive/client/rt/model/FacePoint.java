@@ -20,20 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Point location within a face
  */
-@ApiModel(description = "Point location within a face")
 @JsonPropertyOrder({
   FacePoint.JSON_PROPERTY_X,
   FacePoint.JSON_PROPERTY_Y
 })
-@JsonTypeName("FacePoint")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:47.726-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FacePoint {
   public static final String JSON_PROPERTY_X = "X";
   private Integer X;
@@ -41,6 +38,8 @@ public class FacePoint {
   public static final String JSON_PROPERTY_Y = "Y";
   private Integer Y;
 
+  public FacePoint() {
+  }
 
   public FacePoint X(Integer X) {
     
@@ -48,12 +47,11 @@ public class FacePoint {
     return this;
   }
 
-   /**
+  /**
    * X location, where 0 is the left-most pixel
    * @return X
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "X location, where 0 is the left-most pixel")
   @JsonProperty(JSON_PROPERTY_X)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -62,10 +60,11 @@ public class FacePoint {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_X)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setX(Integer X) {
     this.X = X;
   }
-
 
   public FacePoint Y(Integer Y) {
     
@@ -73,12 +72,11 @@ public class FacePoint {
     return this;
   }
 
-   /**
+  /**
    * Y location, where 0 is the top-most pixel
    * @return Y
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Y location, where 0 is the top-most pixel")
   @JsonProperty(JSON_PROPERTY_Y)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,10 +85,11 @@ public class FacePoint {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_Y)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setY(Integer Y) {
     this.Y = Y;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -109,7 +108,6 @@ public class FacePoint {
   public int hashCode() {
     return Objects.hash(X, Y);
   }
-
 
   @Override
   public String toString() {

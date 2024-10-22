@@ -22,29 +22,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * The result of reading a table via OCR from a form
  */
-@ApiModel(description = "The result of reading a table via OCR from a form")
 @JsonPropertyOrder({
   TableResult.JSON_PROPERTY_TABLE_DEFINITION,
   TableResult.JSON_PROPERTY_TABLE_ROWS_RESULT
 })
-@JsonTypeName("TableResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:53:17.009-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class TableResult {
   public static final String JSON_PROPERTY_TABLE_DEFINITION = "TableDefinition";
   private FormTableDefinition tableDefinition;
 
   public static final String JSON_PROPERTY_TABLE_ROWS_RESULT = "TableRowsResult";
-  private List<TableRowResult> tableRowsResult = null;
+  private List<TableRowResult> tableRowsResult = new ArrayList<>();
 
+  public TableResult() {
+  }
 
   public TableResult tableDefinition(FormTableDefinition tableDefinition) {
     
@@ -52,12 +52,11 @@ public class TableResult {
     return this;
   }
 
-   /**
+  /**
    * Get tableDefinition
    * @return tableDefinition
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_TABLE_DEFINITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,10 +65,11 @@ public class TableResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_DEFINITION)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableDefinition(FormTableDefinition tableDefinition) {
     this.tableDefinition = tableDefinition;
   }
-
 
   public TableResult tableRowsResult(List<TableRowResult> tableRowsResult) {
     
@@ -79,18 +79,17 @@ public class TableResult {
 
   public TableResult addTableRowsResultItem(TableRowResult tableRowsResultItem) {
     if (this.tableRowsResult == null) {
-      this.tableRowsResult = new ArrayList<TableRowResult>();
+      this.tableRowsResult = new ArrayList<>();
     }
     this.tableRowsResult.add(tableRowsResultItem);
     return this;
   }
 
-   /**
+  /**
    * Rows of data in the table
    * @return tableRowsResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Rows of data in the table")
   @JsonProperty(JSON_PROPERTY_TABLE_ROWS_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,10 +98,11 @@ public class TableResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_ROWS_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableRowsResult(List<TableRowResult> tableRowsResult) {
     this.tableRowsResult = tableRowsResult;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -121,7 +121,6 @@ public class TableResult {
   public int hashCode() {
     return Objects.hash(tableDefinition, tableRowsResult);
   }
-
 
   @Override
   public String toString() {

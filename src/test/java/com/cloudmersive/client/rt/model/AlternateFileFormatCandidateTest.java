@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for AlternateFileFormatCandidate
  */
-public class AlternateFileFormatCandidateTest {
+class AlternateFileFormatCandidateTest {
     private final AlternateFileFormatCandidate model = new AlternateFileFormatCandidate();
 
     /**
      * Model tests for AlternateFileFormatCandidate
      */
     @Test
-    public void testAlternateFileFormatCandidate() {
+    void testAlternateFileFormatCandidate() {
         // TODO: test AlternateFileFormatCandidate
     }
 
@@ -43,7 +40,7 @@ public class AlternateFileFormatCandidateTest {
      * Test the property 'probability'
      */
     @Test
-    public void probabilityTest() {
+    void probabilityTest() {
         // TODO: test probability
     }
 
@@ -51,7 +48,7 @@ public class AlternateFileFormatCandidateTest {
      * Test the property 'detectedFileExtension'
      */
     @Test
-    public void detectedFileExtensionTest() {
+    void detectedFileExtensionTest() {
         // TODO: test detectedFileExtension
     }
 
@@ -59,7 +56,7 @@ public class AlternateFileFormatCandidateTest {
      * Test the property 'detectedMimeType'
      */
     @Test
-    public void detectedMimeTypeTest() {
+    void detectedMimeTypeTest() {
         // TODO: test detectedMimeType
     }
 

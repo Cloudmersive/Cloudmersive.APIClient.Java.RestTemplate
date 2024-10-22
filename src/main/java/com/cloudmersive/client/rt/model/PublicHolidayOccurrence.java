@@ -20,15 +20,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.threeten.bp.OffsetDateTime;
+import java.time.OffsetDateTime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Public holiday occurrence
  */
-@ApiModel(description = "Public holiday occurrence")
 @JsonPropertyOrder({
   PublicHolidayOccurrence.JSON_PROPERTY_ENGLISH_NAME,
   PublicHolidayOccurrence.JSON_PROPERTY_LOCAL_NAME,
@@ -36,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   PublicHolidayOccurrence.JSON_PROPERTY_HOLIDAY_TYPE,
   PublicHolidayOccurrence.JSON_PROPERTY_NATIONWAIDE
 })
-@JsonTypeName("PublicHolidayOccurrence")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:52:45.902-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PublicHolidayOccurrence {
   public static final String JSON_PROPERTY_ENGLISH_NAME = "EnglishName";
   private String englishName;
@@ -54,6 +51,8 @@ public class PublicHolidayOccurrence {
   public static final String JSON_PROPERTY_NATIONWAIDE = "Nationwaide";
   private Boolean nationwaide;
 
+  public PublicHolidayOccurrence() {
+  }
 
   public PublicHolidayOccurrence englishName(String englishName) {
     
@@ -61,12 +60,11 @@ public class PublicHolidayOccurrence {
     return this;
   }
 
-   /**
+  /**
    * Name of the holiday in English
    * @return englishName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Name of the holiday in English")
   @JsonProperty(JSON_PROPERTY_ENGLISH_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -75,10 +73,11 @@ public class PublicHolidayOccurrence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ENGLISH_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setEnglishName(String englishName) {
     this.englishName = englishName;
   }
-
 
   public PublicHolidayOccurrence localName(String localName) {
     
@@ -86,12 +85,11 @@ public class PublicHolidayOccurrence {
     return this;
   }
 
-   /**
+  /**
    * Local name of the holiday
    * @return localName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Local name of the holiday")
   @JsonProperty(JSON_PROPERTY_LOCAL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,10 +98,11 @@ public class PublicHolidayOccurrence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_LOCAL_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLocalName(String localName) {
     this.localName = localName;
   }
-
 
   public PublicHolidayOccurrence occurrenceDate(OffsetDateTime occurrenceDate) {
     
@@ -111,12 +110,11 @@ public class PublicHolidayOccurrence {
     return this;
   }
 
-   /**
+  /**
    * Date of the holiday (start time)
    * @return occurrenceDate
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Date of the holiday (start time)")
   @JsonProperty(JSON_PROPERTY_OCCURRENCE_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,10 +123,11 @@ public class PublicHolidayOccurrence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_OCCURRENCE_DATE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setOccurrenceDate(OffsetDateTime occurrenceDate) {
     this.occurrenceDate = occurrenceDate;
   }
-
 
   public PublicHolidayOccurrence holidayType(String holidayType) {
     
@@ -136,12 +135,11 @@ public class PublicHolidayOccurrence {
     return this;
   }
 
-   /**
+  /**
    * Type of the holiday; possible values are: Public, Bank, School, Authorities, Optional, Observance
    * @return holidayType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of the holiday; possible values are: Public, Bank, School, Authorities, Optional, Observance")
   @JsonProperty(JSON_PROPERTY_HOLIDAY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,10 +148,11 @@ public class PublicHolidayOccurrence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_HOLIDAY_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setHolidayType(String holidayType) {
     this.holidayType = holidayType;
   }
-
 
   public PublicHolidayOccurrence nationwaide(Boolean nationwaide) {
     
@@ -161,12 +160,11 @@ public class PublicHolidayOccurrence {
     return this;
   }
 
-   /**
+  /**
    * True if the holiday is celebrated in all locales in the country, false otherwise
    * @return nationwaide
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the holiday is celebrated in all locales in the country, false otherwise")
   @JsonProperty(JSON_PROPERTY_NATIONWAIDE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,10 +173,11 @@ public class PublicHolidayOccurrence {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_NATIONWAIDE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setNationwaide(Boolean nationwaide) {
     this.nationwaide = nationwaide;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -200,7 +199,6 @@ public class PublicHolidayOccurrence {
   public int hashCode() {
     return Objects.hash(englishName, localName, occurrenceDate, holidayType, nationwaide);
   }
-
 
   @Override
   public String toString() {

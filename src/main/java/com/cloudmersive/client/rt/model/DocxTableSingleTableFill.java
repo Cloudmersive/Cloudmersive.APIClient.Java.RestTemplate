@@ -21,23 +21,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Single table fill request in a multi-table fill operation
  */
-@ApiModel(description = "Single table fill request in a multi-table fill operation")
 @JsonPropertyOrder({
   DocxTableSingleTableFill.JSON_PROPERTY_TABLE_START_TAG,
   DocxTableSingleTableFill.JSON_PROPERTY_TABLE_END_TAG,
   DocxTableSingleTableFill.JSON_PROPERTY_DATA_TO_FILL_IN
 })
-@JsonTypeName("DocxTableSingleTableFill")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxTableSingleTableFill {
   public static final String JSON_PROPERTY_TABLE_START_TAG = "TableStartTag";
   private String tableStartTag;
@@ -46,8 +44,10 @@ public class DocxTableSingleTableFill {
   private String tableEndTag;
 
   public static final String JSON_PROPERTY_DATA_TO_FILL_IN = "DataToFillIn";
-  private List<DocxTableTableFillTableRow> dataToFillIn = null;
+  private List<DocxTableTableFillTableRow> dataToFillIn = new ArrayList<>();
 
+  public DocxTableSingleTableFill() {
+  }
 
   public DocxTableSingleTableFill tableStartTag(String tableStartTag) {
     
@@ -55,12 +55,11 @@ public class DocxTableSingleTableFill {
     return this;
   }
 
-   /**
+  /**
    * Start tag that delineates the beginning of the table
    * @return tableStartTag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Start tag that delineates the beginning of the table")
   @JsonProperty(JSON_PROPERTY_TABLE_START_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -69,10 +68,11 @@ public class DocxTableSingleTableFill {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_START_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableStartTag(String tableStartTag) {
     this.tableStartTag = tableStartTag;
   }
-
 
   public DocxTableSingleTableFill tableEndTag(String tableEndTag) {
     
@@ -80,12 +80,11 @@ public class DocxTableSingleTableFill {
     return this;
   }
 
-   /**
+  /**
    * End tag that delineates the end of the table
    * @return tableEndTag
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "End tag that delineates the end of the table")
   @JsonProperty(JSON_PROPERTY_TABLE_END_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,10 +93,11 @@ public class DocxTableSingleTableFill {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLE_END_TAG)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTableEndTag(String tableEndTag) {
     this.tableEndTag = tableEndTag;
   }
-
 
   public DocxTableSingleTableFill dataToFillIn(List<DocxTableTableFillTableRow> dataToFillIn) {
     
@@ -107,18 +107,17 @@ public class DocxTableSingleTableFill {
 
   public DocxTableSingleTableFill addDataToFillInItem(DocxTableTableFillTableRow dataToFillInItem) {
     if (this.dataToFillIn == null) {
-      this.dataToFillIn = new ArrayList<DocxTableTableFillTableRow>();
+      this.dataToFillIn = new ArrayList<>();
     }
     this.dataToFillIn.add(dataToFillInItem);
     return this;
   }
 
-   /**
+  /**
    * Data set to populate the table with
    * @return dataToFillIn
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Data set to populate the table with")
   @JsonProperty(JSON_PROPERTY_DATA_TO_FILL_IN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,10 +126,11 @@ public class DocxTableSingleTableFill {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_DATA_TO_FILL_IN)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setDataToFillIn(List<DocxTableTableFillTableRow> dataToFillIn) {
     this.dataToFillIn = dataToFillIn;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -150,7 +150,6 @@ public class DocxTableSingleTableFill {
   public int hashCode() {
     return Objects.hash(tableStartTag, tableEndTag, dataToFillIn);
   }
-
 
   @Override
   public String toString() {

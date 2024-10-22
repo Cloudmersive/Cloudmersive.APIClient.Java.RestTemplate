@@ -18,24 +18,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for ViewerResponse
  */
-public class ViewerResponseTest {
+class ViewerResponseTest {
     private final ViewerResponse model = new ViewerResponse();
 
     /**
      * Model tests for ViewerResponse
      */
     @Test
-    public void testViewerResponse() {
+    void testViewerResponse() {
         // TODO: test ViewerResponse
     }
 
@@ -43,7 +40,7 @@ public class ViewerResponseTest {
      * Test the property 'htmlEmbed'
      */
     @Test
-    public void htmlEmbedTest() {
+    void htmlEmbedTest() {
         // TODO: test htmlEmbed
     }
 
@@ -51,7 +48,7 @@ public class ViewerResponseTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 

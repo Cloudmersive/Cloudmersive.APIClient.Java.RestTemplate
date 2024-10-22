@@ -21,16 +21,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of converting an MSG file to HTML string
  */
-@ApiModel(description = "Result of converting an MSG file to HTML string")
 @JsonPropertyOrder({
   MsgToHtmlResult.JSON_PROPERTY_SUCCESSFUL,
   MsgToHtmlResult.JSON_PROPERTY_CONTENT,
@@ -42,8 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
   MsgToHtmlResult.JSON_PROPERTY_SUBJECT,
   MsgToHtmlResult.JSON_PROPERTY_ATTACHMENTS
 })
-@JsonTypeName("MsgToHtmlResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MsgToHtmlResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;
@@ -70,8 +68,10 @@ public class MsgToHtmlResult {
   private String subject;
 
   public static final String JSON_PROPERTY_ATTACHMENTS = "Attachments";
-  private List<MsgAttachment> attachments = null;
+  private List<MsgAttachment> attachments = new ArrayList<>();
 
+  public MsgToHtmlResult() {
+  }
 
   public MsgToHtmlResult successful(Boolean successful) {
     
@@ -79,12 +79,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * True if the operation was successful, false otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the operation was successful, false otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,10 +92,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public MsgToHtmlResult content(String content) {
     
@@ -104,12 +104,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * An HTML string version of the MSG file
    * @return content
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "An HTML string version of the MSG file")
   @JsonProperty(JSON_PROPERTY_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,10 +117,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CONTENT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setContent(String content) {
     this.content = content;
   }
-
 
   public MsgToHtmlResult body(String body) {
     
@@ -129,12 +129,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The main body of the MSG file&#39;s email as an HTML string
    * @return body
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The main body of the MSG file's email as an HTML string")
   @JsonProperty(JSON_PROPERTY_BODY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -143,10 +142,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_BODY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setBody(String body) {
     this.body = body;
   }
-
 
   public MsgToHtmlResult from(String from) {
     
@@ -154,12 +154,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The From sender of the MSG file&#39;s email
    * @return from
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The From sender of the MSG file's email")
   @JsonProperty(JSON_PROPERTY_FROM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,10 +167,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FROM)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFrom(String from) {
     this.from = from;
   }
-
 
   public MsgToHtmlResult to(String to) {
     
@@ -179,12 +179,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The To recipients of the MSG file&#39;s email
    * @return to
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The To recipients of the MSG file's email")
   @JsonProperty(JSON_PROPERTY_TO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -193,10 +192,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TO)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTo(String to) {
     this.to = to;
   }
-
 
   public MsgToHtmlResult cc(String cc) {
     
@@ -204,12 +204,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The CC recipients of the MSG file&#39;s email
    * @return cc
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The CC recipients of the MSG file's email")
   @JsonProperty(JSON_PROPERTY_CC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -218,10 +217,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CC)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCc(String cc) {
     this.cc = cc;
   }
-
 
   public MsgToHtmlResult receivedTime(String receivedTime) {
     
@@ -229,12 +229,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The time that the MSG file&#39;s email was received
    * @return receivedTime
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The time that the MSG file's email was received")
   @JsonProperty(JSON_PROPERTY_RECEIVED_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -243,10 +242,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_RECEIVED_TIME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setReceivedTime(String receivedTime) {
     this.receivedTime = receivedTime;
   }
-
 
   public MsgToHtmlResult subject(String subject) {
     
@@ -254,12 +254,11 @@ public class MsgToHtmlResult {
     return this;
   }
 
-   /**
+  /**
    * The subject of the MSG file&#39;s email
    * @return subject
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The subject of the MSG file's email")
   @JsonProperty(JSON_PROPERTY_SUBJECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -268,10 +267,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUBJECT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSubject(String subject) {
     this.subject = subject;
   }
-
 
   public MsgToHtmlResult attachments(List<MsgAttachment> attachments) {
     
@@ -281,18 +281,17 @@ public class MsgToHtmlResult {
 
   public MsgToHtmlResult addAttachmentsItem(MsgAttachment attachmentsItem) {
     if (this.attachments == null) {
-      this.attachments = new ArrayList<MsgAttachment>();
+      this.attachments = new ArrayList<>();
     }
     this.attachments.add(attachmentsItem);
     return this;
   }
 
-   /**
+  /**
    * List of all attachments for the MSG file
    * @return attachments
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of all attachments for the MSG file")
   @JsonProperty(JSON_PROPERTY_ATTACHMENTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -301,10 +300,11 @@ public class MsgToHtmlResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_ATTACHMENTS)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setAttachments(List<MsgAttachment> attachments) {
     this.attachments = attachments;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -330,7 +330,6 @@ public class MsgToHtmlResult {
   public int hashCode() {
     return Objects.hash(successful, content, body, from, to, cc, receivedTime, subject, attachments);
   }
-
 
   @Override
   public String toString() {

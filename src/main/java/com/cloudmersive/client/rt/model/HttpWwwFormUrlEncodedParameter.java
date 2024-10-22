@@ -21,21 +21,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Defines an x-www-form-urlencoded parameter
  */
-@ApiModel(description = "Defines an x-www-form-urlencoded parameter")
 @JsonPropertyOrder({
   HttpWwwFormUrlEncodedParameter.JSON_PROPERTY_KEY_NAME,
   HttpWwwFormUrlEncodedParameter.JSON_PROPERTY_KEY_VALUE,
   HttpWwwFormUrlEncodedParameter.JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK
 })
-@JsonTypeName("HttpWwwFormUrlEncodedParameter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:42.299-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:50.430340Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class HttpWwwFormUrlEncodedParameter {
   public static final String JSON_PROPERTY_KEY_NAME = "KeyName";
   private String keyName;
@@ -46,6 +43,8 @@ public class HttpWwwFormUrlEncodedParameter {
   public static final String JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK = "UseOutputFromPreviousTask";
   private TaskOutputReference useOutputFromPreviousTask;
 
+  public HttpWwwFormUrlEncodedParameter() {
+  }
 
   public HttpWwwFormUrlEncodedParameter keyName(String keyName) {
     
@@ -53,12 +52,11 @@ public class HttpWwwFormUrlEncodedParameter {
     return this;
   }
 
-   /**
+  /**
    * Key name of the parameter
    * @return keyName
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Key name of the parameter")
   @JsonProperty(JSON_PROPERTY_KEY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,10 +65,11 @@ public class HttpWwwFormUrlEncodedParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_KEY_NAME)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKeyName(String keyName) {
     this.keyName = keyName;
   }
-
 
   public HttpWwwFormUrlEncodedParameter keyValue(String keyValue) {
     
@@ -78,12 +77,11 @@ public class HttpWwwFormUrlEncodedParameter {
     return this;
   }
 
-   /**
+  /**
    * Key value of the paramer (must be of type text); if set, do not use UseOutputFromPreviousTask
    * @return keyValue
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Key value of the paramer (must be of type text); if set, do not use UseOutputFromPreviousTask")
   @JsonProperty(JSON_PROPERTY_KEY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,10 +90,11 @@ public class HttpWwwFormUrlEncodedParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_KEY_VALUE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setKeyValue(String keyValue) {
     this.keyValue = keyValue;
   }
-
 
   public HttpWwwFormUrlEncodedParameter useOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     
@@ -103,12 +102,11 @@ public class HttpWwwFormUrlEncodedParameter {
     return this;
   }
 
-   /**
+  /**
    * Get useOutputFromPreviousTask
    * @return useOutputFromPreviousTask
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,10 +115,11 @@ public class HttpWwwFormUrlEncodedParameter {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_USE_OUTPUT_FROM_PREVIOUS_TASK)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setUseOutputFromPreviousTask(TaskOutputReference useOutputFromPreviousTask) {
     this.useOutputFromPreviousTask = useOutputFromPreviousTask;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -140,7 +139,6 @@ public class HttpWwwFormUrlEncodedParameter {
   public int hashCode() {
     return Objects.hash(keyName, keyValue, useOutputFromPreviousTask);
   }
-
 
   @Override
   public String toString() {

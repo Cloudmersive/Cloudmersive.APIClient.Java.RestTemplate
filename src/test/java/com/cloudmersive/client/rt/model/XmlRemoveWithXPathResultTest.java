@@ -18,26 +18,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for XmlRemoveWithXPathResult
  */
-public class XmlRemoveWithXPathResultTest {
+class XmlRemoveWithXPathResultTest {
     private final XmlRemoveWithXPathResult model = new XmlRemoveWithXPathResult();
 
     /**
      * Model tests for XmlRemoveWithXPathResult
      */
     @Test
-    public void testXmlRemoveWithXPathResult() {
+    void testXmlRemoveWithXPathResult() {
         // TODO: test XmlRemoveWithXPathResult
     }
 
@@ -45,7 +43,7 @@ public class XmlRemoveWithXPathResultTest {
      * Test the property 'successful'
      */
     @Test
-    public void successfulTest() {
+    void successfulTest() {
         // TODO: test successful
     }
 
@@ -53,7 +51,7 @@ public class XmlRemoveWithXPathResultTest {
      * Test the property 'resultingXmlDocument'
      */
     @Test
-    public void resultingXmlDocumentTest() {
+    void resultingXmlDocumentTest() {
         // TODO: test resultingXmlDocument
     }
 
@@ -61,7 +59,7 @@ public class XmlRemoveWithXPathResultTest {
      * Test the property 'xmlNodesRemoved'
      */
     @Test
-    public void xmlNodesRemovedTest() {
+    void xmlNodesRemovedTest() {
         // TODO: test xmlNodesRemoved
     }
 
@@ -69,7 +67,7 @@ public class XmlRemoveWithXPathResultTest {
      * Test the property 'nodesRemovedCount'
      */
     @Test
-    public void nodesRemovedCountTest() {
+    void nodesRemovedCountTest() {
         // TODO: test nodesRemovedCount
     }
 

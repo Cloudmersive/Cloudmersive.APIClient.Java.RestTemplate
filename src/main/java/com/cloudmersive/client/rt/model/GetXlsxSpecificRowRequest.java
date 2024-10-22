@@ -21,22 +21,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Input to a Get-Specific-Row request
  */
-@ApiModel(description = "Input to a Get-Specific-Row request")
 @JsonPropertyOrder({
   GetXlsxSpecificRowRequest.JSON_PROPERTY_INPUT_FILE_BYTES,
   GetXlsxSpecificRowRequest.JSON_PROPERTY_INPUT_FILE_URL,
   GetXlsxSpecificRowRequest.JSON_PROPERTY_WORKSHEET_TO_QUERY,
   GetXlsxSpecificRowRequest.JSON_PROPERTY_PATH
 })
-@JsonTypeName("GetXlsxSpecificRowRequest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:02.994-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxSpecificRowRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;
@@ -50,6 +47,8 @@ public class GetXlsxSpecificRowRequest {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;
 
+  public GetXlsxSpecificRowRequest() {
+  }
 
   public GetXlsxSpecificRowRequest inputFileBytes(byte[] inputFileBytes) {
     
@@ -57,12 +56,11 @@ public class GetXlsxSpecificRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: Bytes of the input file to operate on
    * @return inputFileBytes
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: Bytes of the input file to operate on")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -71,10 +69,11 @@ public class GetXlsxSpecificRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_BYTES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileBytes(byte[] inputFileBytes) {
     this.inputFileBytes = inputFileBytes;
   }
-
 
   public GetXlsxSpecificRowRequest inputFileUrl(String inputFileUrl) {
     
@@ -82,12 +81,11 @@ public class GetXlsxSpecificRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).
    * @return inputFileUrl
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Optional: URL of a file to operate on as input.  This can be a public URL, or you can also use the begin-editing API to upload a document and pass in the secure URL result from that operation as the URL here (this URL is not public).")
   @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,10 +94,11 @@ public class GetXlsxSpecificRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_INPUT_FILE_URL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setInputFileUrl(String inputFileUrl) {
     this.inputFileUrl = inputFileUrl;
   }
-
 
   public GetXlsxSpecificRowRequest worksheetToQuery(XlsxWorksheet worksheetToQuery) {
     
@@ -107,12 +106,11 @@ public class GetXlsxSpecificRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Get worksheetToQuery
    * @return worksheetToQuery
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
   @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_QUERY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,10 +119,11 @@ public class GetXlsxSpecificRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WORKSHEET_TO_QUERY)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWorksheetToQuery(XlsxWorksheet worksheetToQuery) {
     this.worksheetToQuery = worksheetToQuery;
   }
-
 
   public GetXlsxSpecificRowRequest path(String path) {
     
@@ -132,12 +131,11 @@ public class GetXlsxSpecificRowRequest {
     return this;
   }
 
-   /**
+  /**
    * Required; Full path for the desired row
    * @return path
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Required; Full path for the desired row")
   @JsonProperty(JSON_PROPERTY_PATH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,10 +144,11 @@ public class GetXlsxSpecificRowRequest {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_PATH)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setPath(String path) {
     this.path = path;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -170,7 +169,6 @@ public class GetXlsxSpecificRowRequest {
   public int hashCode() {
     return Objects.hash(Arrays.hashCode(inputFileBytes), inputFileUrl, worksheetToQuery, path);
   }
-
 
   @Override
   public String toString() {

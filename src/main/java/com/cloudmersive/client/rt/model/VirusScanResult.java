@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a virus scan
  */
-@ApiModel(description = "Result of running a virus scan")
 @JsonPropertyOrder({
   VirusScanResult.JSON_PROPERTY_CLEAN_RESULT,
   VirusScanResult.JSON_PROPERTY_FOUND_VIRUSES
 })
-@JsonTypeName("VirusScanResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class VirusScanResult {
   public static final String JSON_PROPERTY_CLEAN_RESULT = "CleanResult";
   private Boolean cleanResult;
 
   public static final String JSON_PROPERTY_FOUND_VIRUSES = "FoundViruses";
-  private List<VirusFound> foundViruses = null;
+  private List<VirusFound> foundViruses = new ArrayList<>();
 
+  public VirusScanResult() {
+  }
 
   public VirusScanResult cleanResult(Boolean cleanResult) {
     
@@ -51,12 +51,11 @@ public class VirusScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained no viruses, false otherwise
    * @return cleanResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained no viruses, false otherwise")
   @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class VirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanResult(Boolean cleanResult) {
     this.cleanResult = cleanResult;
   }
-
 
   public VirusScanResult foundViruses(List<VirusFound> foundViruses) {
     
@@ -78,18 +78,17 @@ public class VirusScanResult {
 
   public VirusScanResult addFoundVirusesItem(VirusFound foundVirusesItem) {
     if (this.foundViruses == null) {
-      this.foundViruses = new ArrayList<VirusFound>();
+      this.foundViruses = new ArrayList<>();
     }
     this.foundViruses.add(foundVirusesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of viruses found, if any
    * @return foundViruses
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of viruses found, if any")
   @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class VirusScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFoundViruses(List<VirusFound> foundViruses) {
     this.foundViruses = foundViruses;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class VirusScanResult {
   public int hashCode() {
     return Objects.hash(cleanResult, foundViruses);
   }
-
 
   @Override
   public String toString() {

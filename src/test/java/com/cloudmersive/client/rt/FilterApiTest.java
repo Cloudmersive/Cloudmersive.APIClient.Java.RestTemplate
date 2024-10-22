@@ -14,9 +14,12 @@
 package com.cloudmersive.client.rt;
 
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,8 +28,8 @@ import java.util.Map;
 /**
  * API tests for FilterApi
  */
-@Ignore
-public class FilterApiTest {
+@Disabled
+class FilterApiTest {
 
     private final FilterApi api = new FilterApi();
 
@@ -36,12 +39,13 @@ public class FilterApiTest {
      *
      * Remove color from the image by converting to a grayscale, black-and-white image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterBlackAndWhiteTest() {
+    void filterBlackAndWhiteTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterBlackAndWhite(imageFile);
 
         // TODO: test validations
@@ -52,12 +56,13 @@ public class FilterApiTest {
      *
      * Remove point noise / despeckle the input image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterDespeckleTest() {
+    void filterDespeckleTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterDespeckle(imageFile);
 
         // TODO: test validations
@@ -68,13 +73,14 @@ public class FilterApiTest {
      *
      * Perform an edge detection operation on the input image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterEdgeDetectTest() {
+    void filterEdgeDetectTest() {
         Integer radius = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterEdgeDetect(radius, imageFile);
 
         // TODO: test validations
@@ -85,14 +91,15 @@ public class FilterApiTest {
      *
      * Perform an emboss operation on the input image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterEmbossTest() {
+    void filterEmbossTest() {
         Integer radius = null;
         Integer sigma = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterEmboss(radius, sigma, imageFile);
 
         // TODO: test validations
@@ -103,14 +110,15 @@ public class FilterApiTest {
      *
      * Perform a gaussian blur on the input image
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterGaussianBlurTest() {
+    void filterGaussianBlurTest() {
         Integer radius = null;
         Integer sigma = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterGaussianBlur(radius, sigma, imageFile);
 
         // TODO: test validations
@@ -121,15 +129,16 @@ public class FilterApiTest {
      *
      * Perform a motion blur on the input image at a specific angle
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterMotionBlurTest() {
+    void filterMotionBlurTest() {
         Integer radius = null;
         Integer sigma = null;
         Integer angle = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterMotionBlur(radius, sigma, angle, imageFile);
 
         // TODO: test validations
@@ -140,13 +149,14 @@ public class FilterApiTest {
      *
      * Reduce the unique number of colors in the image to the specified level
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterPosterizeTest() {
+    void filterPosterizeTest() {
         Integer levels = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterPosterize(levels, imageFile);
 
         // TODO: test validations
@@ -157,13 +167,14 @@ public class FilterApiTest {
      *
      * Swirl distort the image by the specified number of degrees
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void filterSwirlTest() {
+    void filterSwirlTest() {
         Integer degrees = null;
         org.springframework.core.io.Resource imageFile = null;
+
         byte[] response = api.filterSwirl(degrees, imageFile);
 
         // TODO: test validations

@@ -18,9 +18,12 @@ import com.cloudmersive.client.rt.model.VirusScanAdvancedResult;
 import com.cloudmersive.client.rt.model.VirusScanResult;
 import com.cloudmersive.client.rt.model.WebsiteScanRequest;
 import com.cloudmersive.client.rt.model.WebsiteScanResult;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,8 +32,8 @@ import java.util.Map;
 /**
  * API tests for ScanApi
  */
-@Ignore
-public class ScanApiTest {
+@Disabled
+class ScanApiTest {
 
     private final ScanApi api = new ScanApi();
 
@@ -40,12 +43,13 @@ public class ScanApiTest {
      *
      * Scan files and content for viruses. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Wide file format support including Office, PDF, HTML, Flash.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanFileTest() {
+    void scanFileTest() {
         org.springframework.core.io.Resource inputFile = null;
+
         VirusScanResult response = api.scanFile(inputFile);
 
         // TODO: test validations
@@ -56,11 +60,11 @@ public class ScanApiTest {
      *
      * Advanced Scan files with 360-degree Content Protection across Viruses and Malware, executables, invalid files, scripts, and even restrictions on accepted file types with complete content verification. Customize threat rules to your needs. Leverage continuously updated signatures for millions of threats, and advanced high-performance scanning capabilities.  Over 17 million virus and malware signatures.  Continuous cloud-based updates.  Block threats beyond viruses including executables, scripts, invalid files, and more.  Optionally limit input files to a specific set of file types (e.g. PDF and Word Documents only).  Wide file format support including Office, PDF, HTML, Flash, MSG, and a wide range of image file formats.  Zip support including .Zip, .Rar, .DMG, .Tar, and other archive formats.  Multi-threat scanning across viruses, malware, trojans, ransomware, and spyware.  High-speed in-memory scanning delivers subsecond typical response time.
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanFileAdvancedTest() {
+    void scanFileAdvancedTest() {
         org.springframework.core.io.Resource inputFile = null;
         Boolean allowExecutables = null;
         Boolean allowInvalidFiles = null;
@@ -70,8 +74,12 @@ public class ScanApiTest {
         Boolean allowXmlExternalEntities = null;
         Boolean allowInsecureDeserialization = null;
         Boolean allowHtml = null;
+        Boolean allowUnsafeArchives = null;
+        Boolean allowOleEmbeddedObject = null;
+        String options = null;
         String restrictFileTypes = null;
-        VirusScanAdvancedResult response = api.scanFileAdvanced(inputFile, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, restrictFileTypes);
+
+        VirusScanAdvancedResult response = api.scanFileAdvanced(inputFile, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes);
 
         // TODO: test validations
     }
@@ -81,12 +89,13 @@ public class ScanApiTest {
      *
      * Operation includes scanning the content of the URL for various types of malicious content and threats, including viruses and threats (including Phishing).
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void scanWebsiteTest() {
+    void scanWebsiteTest() {
         WebsiteScanRequest input = null;
+
         WebsiteScanResult response = api.scanWebsite(input);
 
         // TODO: test validations

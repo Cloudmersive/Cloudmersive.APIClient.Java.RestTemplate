@@ -21,29 +21,29 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of enumeerating Tables in a SQL Server Backup (.BAK) file
  */
-@ApiModel(description = "Result of enumeerating Tables in a SQL Server Backup (.BAK) file")
 @JsonPropertyOrder({
   MssqlBakEnumerateTablesResult.JSON_PROPERTY_SUCCESSFUL,
   MssqlBakEnumerateTablesResult.JSON_PROPERTY_TABLES
 })
-@JsonTypeName("MssqlBakEnumerateTablesResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:55:05.782-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:03.513337300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class MssqlBakEnumerateTablesResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "successful";
   private Boolean successful;
 
   public static final String JSON_PROPERTY_TABLES = "tables";
-  private List<MssqlTable> tables = null;
+  private List<MssqlTable> tables = new ArrayList<>();
 
+  public MssqlBakEnumerateTablesResult() {
+  }
 
   public MssqlBakEnumerateTablesResult successful(Boolean successful) {
     
@@ -51,12 +51,11 @@ public class MssqlBakEnumerateTablesResult {
     return this;
   }
 
-   /**
+  /**
    * True if successful, False otherwise
    * @return successful
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if successful, False otherwise")
   @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -65,10 +64,11 @@ public class MssqlBakEnumerateTablesResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_SUCCESSFUL)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setSuccessful(Boolean successful) {
     this.successful = successful;
   }
-
 
   public MssqlBakEnumerateTablesResult tables(List<MssqlTable> tables) {
     
@@ -78,18 +78,17 @@ public class MssqlBakEnumerateTablesResult {
 
   public MssqlBakEnumerateTablesResult addTablesItem(MssqlTable tablesItem) {
     if (this.tables == null) {
-      this.tables = new ArrayList<MssqlTable>();
+      this.tables = new ArrayList<>();
     }
     this.tables.add(tablesItem);
     return this;
   }
 
-   /**
+  /**
    * SQL Server Tables in the backup file
    * @return tables
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "SQL Server Tables in the backup file")
   @JsonProperty(JSON_PROPERTY_TABLES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,10 +97,11 @@ public class MssqlBakEnumerateTablesResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_TABLES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setTables(List<MssqlTable> tables) {
     this.tables = tables;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -120,7 +120,6 @@ public class MssqlBakEnumerateTablesResult {
   public int hashCode() {
     return Objects.hash(successful, tables);
   }
-
 
   @Override
   public String toString() {

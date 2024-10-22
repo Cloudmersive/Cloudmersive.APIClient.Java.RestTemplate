@@ -20,26 +20,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxFooter
  */
-public class DocxFooterTest {
+class DocxFooterTest {
     private final DocxFooter model = new DocxFooter();
 
     /**
      * Model tests for DocxFooter
      */
     @Test
-    public void testDocxFooter() {
+    void testDocxFooter() {
         // TODO: test DocxFooter
     }
 
@@ -47,7 +45,7 @@ public class DocxFooterTest {
      * Test the property 'path'
      */
     @Test
-    public void pathTest() {
+    void pathTest() {
         // TODO: test path
     }
 
@@ -55,7 +53,7 @@ public class DocxFooterTest {
      * Test the property 'paragraphs'
      */
     @Test
-    public void paragraphsTest() {
+    void paragraphsTest() {
         // TODO: test paragraphs
     }
 
@@ -63,7 +61,7 @@ public class DocxFooterTest {
      * Test the property 'sectionsWithFooter'
      */
     @Test
-    public void sectionsWithFooterTest() {
+    void sectionsWithFooterTest() {
         // TODO: test sectionsWithFooter
     }
 

@@ -19,26 +19,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for DocxTableTableFillTableRow
  */
-public class DocxTableTableFillTableRowTest {
+class DocxTableTableFillTableRowTest {
     private final DocxTableTableFillTableRow model = new DocxTableTableFillTableRow();
 
     /**
      * Model tests for DocxTableTableFillTableRow
      */
     @Test
-    public void testDocxTableTableFillTableRow() {
+    void testDocxTableTableFillTableRow() {
         // TODO: test DocxTableTableFillTableRow
     }
 
@@ -46,7 +44,7 @@ public class DocxTableTableFillTableRowTest {
      * Test the property 'cells'
      */
     @Test
-    public void cellsTest() {
+    void cellsTest() {
         // TODO: test cells
     }
 

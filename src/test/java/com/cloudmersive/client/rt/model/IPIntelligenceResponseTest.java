@@ -19,24 +19,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
-
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 /**
  * Model tests for IPIntelligenceResponse
  */
-public class IPIntelligenceResponseTest {
+class IPIntelligenceResponseTest {
     private final IPIntelligenceResponse model = new IPIntelligenceResponse();
 
     /**
      * Model tests for IPIntelligenceResponse
      */
     @Test
-    public void testIPIntelligenceResponse() {
+    void testIPIntelligenceResponse() {
         // TODO: test IPIntelligenceResponse
     }
 
@@ -44,7 +41,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'isBot'
      */
     @Test
-    public void isBotTest() {
+    void isBotTest() {
         // TODO: test isBot
     }
 
@@ -52,7 +49,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'isTorNode'
      */
     @Test
-    public void isTorNodeTest() {
+    void isTorNodeTest() {
         // TODO: test isTorNode
     }
 
@@ -60,7 +57,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'isThreat'
      */
     @Test
-    public void isThreatTest() {
+    void isThreatTest() {
         // TODO: test isThreat
     }
 
@@ -68,7 +65,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'isEU'
      */
     @Test
-    public void isEUTest() {
+    void isEUTest() {
         // TODO: test isEU
     }
 
@@ -76,7 +73,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'location'
      */
     @Test
-    public void locationTest() {
+    void locationTest() {
         // TODO: test location
     }
 
@@ -84,7 +81,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'currencyCode'
      */
     @Test
-    public void currencyCodeTest() {
+    void currencyCodeTest() {
         // TODO: test currencyCode
     }
 
@@ -92,7 +89,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'currencyName'
      */
     @Test
-    public void currencyNameTest() {
+    void currencyNameTest() {
         // TODO: test currencyName
     }
 
@@ -100,7 +97,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'regionArea'
      */
     @Test
-    public void regionAreaTest() {
+    void regionAreaTest() {
         // TODO: test regionArea
     }
 
@@ -108,7 +105,7 @@ public class IPIntelligenceResponseTest {
      * Test the property 'subregionArea'
      */
     @Test
-    public void subregionAreaTest() {
+    void subregionAreaTest() {
         // TODO: test subregionArea
     }
 

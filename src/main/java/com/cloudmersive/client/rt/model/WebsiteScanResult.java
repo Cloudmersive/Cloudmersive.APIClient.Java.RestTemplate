@@ -21,24 +21,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Result of running a website scan
  */
-@ApiModel(description = "Result of running a website scan")
 @JsonPropertyOrder({
   WebsiteScanResult.JSON_PROPERTY_CLEAN_RESULT,
   WebsiteScanResult.JSON_PROPERTY_WEBSITE_THREAT_TYPE,
   WebsiteScanResult.JSON_PROPERTY_FOUND_VIRUSES,
   WebsiteScanResult.JSON_PROPERTY_WEBSITE_HTTP_RESPONSE_CODE
 })
-@JsonTypeName("WebsiteScanResult")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-01T10:54:32.056-07:00[America/Los_Angeles]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class WebsiteScanResult {
   public static final String JSON_PROPERTY_CLEAN_RESULT = "CleanResult";
   private Boolean cleanResult;
@@ -53,9 +51,9 @@ public class WebsiteScanResult {
     
     PHISHING("Phishing"),
     
-    FORCEDDOWNLOAD("ForcedDownload"),
+    FORCED_DOWNLOAD("ForcedDownload"),
     
-    UNABLETOCONNECT("UnableToConnect");
+    UNABLE_TO_CONNECT("UnableToConnect");
 
     private String value;
 
@@ -88,11 +86,13 @@ public class WebsiteScanResult {
   private WebsiteThreatTypeEnum websiteThreatType;
 
   public static final String JSON_PROPERTY_FOUND_VIRUSES = "FoundViruses";
-  private List<VirusFound> foundViruses = null;
+  private List<VirusFound> foundViruses = new ArrayList<>();
 
   public static final String JSON_PROPERTY_WEBSITE_HTTP_RESPONSE_CODE = "WebsiteHttpResponseCode";
   private Integer websiteHttpResponseCode;
 
+  public WebsiteScanResult() {
+  }
 
   public WebsiteScanResult cleanResult(Boolean cleanResult) {
     
@@ -100,12 +100,11 @@ public class WebsiteScanResult {
     return this;
   }
 
-   /**
+  /**
    * True if the scan contained no threats, false otherwise
    * @return cleanResult
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "True if the scan contained no threats, false otherwise")
   @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,10 +113,11 @@ public class WebsiteScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_CLEAN_RESULT)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setCleanResult(Boolean cleanResult) {
     this.cleanResult = cleanResult;
   }
-
 
   public WebsiteScanResult websiteThreatType(WebsiteThreatTypeEnum websiteThreatType) {
     
@@ -125,12 +125,11 @@ public class WebsiteScanResult {
     return this;
   }
 
-   /**
+  /**
    * Type of threat returned; can be None, Malware, ForcedDownload or Phishing
    * @return websiteThreatType
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Type of threat returned; can be None, Malware, ForcedDownload or Phishing")
   @JsonProperty(JSON_PROPERTY_WEBSITE_THREAT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,10 +138,11 @@ public class WebsiteScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WEBSITE_THREAT_TYPE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWebsiteThreatType(WebsiteThreatTypeEnum websiteThreatType) {
     this.websiteThreatType = websiteThreatType;
   }
-
 
   public WebsiteScanResult foundViruses(List<VirusFound> foundViruses) {
     
@@ -152,18 +152,17 @@ public class WebsiteScanResult {
 
   public WebsiteScanResult addFoundVirusesItem(VirusFound foundVirusesItem) {
     if (this.foundViruses == null) {
-      this.foundViruses = new ArrayList<VirusFound>();
+      this.foundViruses = new ArrayList<>();
     }
     this.foundViruses.add(foundVirusesItem);
     return this;
   }
 
-   /**
+  /**
    * Array of viruses found, if any
    * @return foundViruses
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of viruses found, if any")
   @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,10 +171,11 @@ public class WebsiteScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_FOUND_VIRUSES)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setFoundViruses(List<VirusFound> foundViruses) {
     this.foundViruses = foundViruses;
   }
-
 
   public WebsiteScanResult websiteHttpResponseCode(Integer websiteHttpResponseCode) {
     
@@ -183,12 +183,11 @@ public class WebsiteScanResult {
     return this;
   }
 
-   /**
+  /**
    * The remote server URL HTTP reasponse code; useful for debugging issues with scanning; typically if the remote server returns a 200 or 300-series code this means a successful response, while a 400 or 500 series code would represent an error returned from the remote server for the provided URL.
    * @return websiteHttpResponseCode
-  **/
+   */
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The remote server URL HTTP reasponse code; useful for debugging issues with scanning; typically if the remote server returns a 200 or 300-series code this means a successful response, while a 400 or 500 series code would represent an error returned from the remote server for the provided URL.")
   @JsonProperty(JSON_PROPERTY_WEBSITE_HTTP_RESPONSE_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,10 +196,11 @@ public class WebsiteScanResult {
   }
 
 
+  @JsonProperty(JSON_PROPERTY_WEBSITE_HTTP_RESPONSE_CODE)
+  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setWebsiteHttpResponseCode(Integer websiteHttpResponseCode) {
     this.websiteHttpResponseCode = websiteHttpResponseCode;
   }
-
 
   @Override
   public boolean equals(Object o) {
@@ -221,7 +221,6 @@ public class WebsiteScanResult {
   public int hashCode() {
     return Objects.hash(cleanResult, websiteThreatType, foundViruses, websiteHttpResponseCode);
   }
-
 
   @Override
   public String toString() {

@@ -13,11 +13,15 @@
 
 package com.cloudmersive.client.rt;
 
+import com.cloudmersive.client.rt.model.BarcodeScanQRAdvancedResult;
 import com.cloudmersive.client.rt.model.BarcodeScanResult;
 import java.io.File;
-import org.junit.Test;
-import org.junit.Ignore;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+import org.springframework.web.client.RestClientException;
 
+import java.time.LocalDate;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +30,8 @@ import java.util.Map;
 /**
  * API tests for BarcodeScanApi
  */
-@Ignore
-public class BarcodeScanApiTest {
+@Disabled
+class BarcodeScanApiTest {
 
     private final BarcodeScanApi api = new BarcodeScanApi();
 
@@ -37,13 +41,32 @@ public class BarcodeScanApiTest {
      *
      * Scan an image or photo of a barcode and return the result.  Supported barcode types include AZTEC, CODABAR, CODE_39, CODE_93, CODE_128, DATA_MATRIX, EAN_8, EAN_13, ITF, MAXICODE, PDF_417, QR_CODE, RSS_14, RSS_EXPANDED, UPC_A, UPC_E, All_1D, UPC_EAN_EXTENSION, MSI, PLESSEY, IMB
      *
-     * @throws ApiException
+     * @throws RestClientException
      *          if the Api call fails
      */
     @Test
-    public void barcodeScanImageTest() {
+    void barcodeScanImageTest() {
         org.springframework.core.io.Resource imageFile = null;
+
         BarcodeScanResult response = api.barcodeScanImage(imageFile);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Advanced AI scan and recognition of an image of one or more QR barcodes
+     *
+     * Scan an image or photo of a QR barcode and return the result.  Uses AI deep learning to read blurry or low resultion QR barcodes.  Supports PNG and JPEG input file formats.
+     *
+     * @throws RestClientException
+     *          if the Api call fails
+     */
+    @Test
+    void barcodeScanImageAdvancedQRTest() {
+        org.springframework.core.io.Resource imageFile = null;
+        String preprocessing = null;
+
+        BarcodeScanQRAdvancedResult response = api.barcodeScanImageAdvancedQR(imageFile, preprocessing);
 
         // TODO: test validations
     }
