@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Point.JSON_PROPERTY_X,
   Point.JSON_PROPERTY_Y
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:02.095460100Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Point {
   public static final String JSON_PROPERTY_X = "X";
   private Integer X;

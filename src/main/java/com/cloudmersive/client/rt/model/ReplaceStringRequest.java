@@ -33,7 +33,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReplaceStringRequest.JSON_PROPERTY_REPLACE_STRING,
   ReplaceStringRequest.JSON_PROPERTY_MATCH_CASE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ReplaceStringRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;

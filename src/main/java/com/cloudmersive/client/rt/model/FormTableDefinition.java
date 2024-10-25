@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FormTableDefinition.JSON_PROPERTY_TARGET_TABLE_HEIGHT_RELATIVE,
   FormTableDefinition.JSON_PROPERTY_TARGET_ROW_HEIGHT_RELATIVE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:02.095460100Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class FormTableDefinition {
   public static final String JSON_PROPERTY_TABLE_I_D = "TableID";
   private String tableID;

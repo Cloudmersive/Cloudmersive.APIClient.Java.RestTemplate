@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CloudStorageVirusFound.JSON_PROPERTY_FILE_NAME,
   CloudStorageVirusFound.JSON_PROPERTY_VIRUS_NAME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:44.714202400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:41.906463200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CloudStorageVirusFound {
   public static final String JSON_PROPERTY_FILE_NAME = "FileName";
   private String fileName;

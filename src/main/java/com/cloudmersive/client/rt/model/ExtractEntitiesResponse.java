@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ExtractEntitiesResponse.JSON_PROPERTY_SUCCESSFUL,
   ExtractEntitiesResponse.JSON_PROPERTY_ENTITIES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:53.174056400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ExtractEntitiesResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

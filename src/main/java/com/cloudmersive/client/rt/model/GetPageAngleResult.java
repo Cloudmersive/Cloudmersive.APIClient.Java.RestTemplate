@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetPageAngleResult.JSON_PROPERTY_SUCCESSFUL,
   GetPageAngleResult.JSON_PROPERTY_ANGLE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:05.887469400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:02.095460100Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetPageAngleResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PosTaggedWord.JSON_PROPERTY_WORD,
   PosTaggedWord.JSON_PROPERTY_TAG
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:53.174056400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class PosTaggedWord {
   public static final String JSON_PROPERTY_WORD = "Word";
   private Object word;

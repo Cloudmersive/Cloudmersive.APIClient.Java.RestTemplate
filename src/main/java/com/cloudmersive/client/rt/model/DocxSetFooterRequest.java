@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DocxSetFooterRequest.JSON_PROPERTY_INPUT_FILE_URL,
   DocxSetFooterRequest.JSON_PROPERTY_FOOTER_TO_APPLY
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DocxSetFooterRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;

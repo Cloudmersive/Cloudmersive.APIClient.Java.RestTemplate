@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetXlsxCellRequest.JSON_PROPERTY_ROW_INDEX,
   GetXlsxCellRequest.JSON_PROPERTY_CELL_INDEX
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxCellRequest {
   public static final String JSON_PROPERTY_INPUT_FILE_BYTES = "InputFileBytes";
   private byte[] inputFileBytes;

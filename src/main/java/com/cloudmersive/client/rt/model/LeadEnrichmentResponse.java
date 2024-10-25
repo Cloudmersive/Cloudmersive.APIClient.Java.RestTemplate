@@ -46,7 +46,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   LeadEnrichmentResponse.JSON_PROPERTY_COMPANY_V_A_T_NUMBER,
   LeadEnrichmentResponse.JSON_PROPERTY_EMPLOYEE_COUNT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class LeadEnrichmentResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

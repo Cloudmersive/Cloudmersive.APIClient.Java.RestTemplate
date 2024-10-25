@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   IsAdminPathResponse.JSON_PROPERTY_IS_ADMIN_PATH_NODE,
   IsAdminPathResponse.JSON_PROPERTY_SUCCESSFUL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class IsAdminPathResponse {
   public static final String JSON_PROPERTY_IS_ADMIN_PATH_NODE = "IsAdminPathNode";
   private Boolean isAdminPathNode;

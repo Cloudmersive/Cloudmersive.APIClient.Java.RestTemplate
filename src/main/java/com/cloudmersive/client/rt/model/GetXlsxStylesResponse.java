@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GetXlsxStylesResponse.JSON_PROPERTY_SUCCESSFUL,
   GetXlsxStylesResponse.JSON_PROPERTY_CELL_STYLES
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GetXlsxStylesResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

@@ -29,7 +29,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   Base64DetectRequest.JSON_PROPERTY_BASE64_CONTENT_TO_DETECT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class Base64DetectRequest {
   public static final String JSON_PROPERTY_BASE64_CONTENT_TO_DETECT = "Base64ContentToDetect";
   private String base64ContentToDetect;

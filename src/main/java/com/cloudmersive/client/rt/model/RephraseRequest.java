@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RephraseRequest.JSON_PROPERTY_TEXT_TO_TRANSLATE,
   RephraseRequest.JSON_PROPERTY_TARGET_REPHRASING_COUNT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:53.174056400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RephraseRequest {
   public static final String JSON_PROPERTY_TEXT_TO_TRANSLATE = "TextToTranslate";
   private String textToTranslate;

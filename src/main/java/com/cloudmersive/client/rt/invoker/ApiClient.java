@@ -72,7 +72,7 @@ import java.time.OffsetDateTime;
 import com.cloudmersive.client.rt.invoker.auth.Authentication;
 import com.cloudmersive.client.rt.invoker.auth.ApiKeyAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:17:08.451112300Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:52:10.524357Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ApiClient extends JavaTimeFormatter {
     public enum CollectionFormat {
         CSV(","), TSV("\t"), SSV(" "), PIPES("|"), MULTI(null);

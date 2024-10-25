@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   XlsxSpreadsheetRow.JSON_PROPERTY_PATH,
   XlsxSpreadsheetRow.JSON_PROPERTY_CELLS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XlsxSpreadsheetRow {
   public static final String JSON_PROPERTY_PATH = "Path";
   private String path;

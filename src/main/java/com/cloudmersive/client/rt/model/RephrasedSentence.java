@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RephrasedSentence.JSON_PROPERTY_ORIGINAL_SENTENCE_TEXT,
   RephrasedSentence.JSON_PROPERTY_REPHRASINGS
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:58.214933200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:53.174056400Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class RephrasedSentence {
   public static final String JSON_PROPERTY_SENTENCE_INDEX = "SentenceIndex";
   private Integer sentenceIndex;

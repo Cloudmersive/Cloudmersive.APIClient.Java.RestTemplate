@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   XssProtectionResult.JSON_PROPERTY_ORIGINAL_INPUT,
   XssProtectionResult.JSON_PROPERTY_NORMALIZED_RESULT
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class XssProtectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

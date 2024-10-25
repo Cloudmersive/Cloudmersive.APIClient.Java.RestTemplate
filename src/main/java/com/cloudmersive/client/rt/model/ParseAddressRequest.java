@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ParseAddressRequest.JSON_PROPERTY_ADDRESS_STRING,
   ParseAddressRequest.JSON_PROPERTY_CAPITALIZATION_MODE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ParseAddressRequest {
   public static final String JSON_PROPERTY_ADDRESS_STRING = "AddressString";
   private String addressString;

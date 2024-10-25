@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CreateHandwritingRequest.JSON_PROPERTY_STROKE_WIDTH,
   CreateHandwritingRequest.JSON_PROPERTY_COLOR
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:15.299595200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class CreateHandwritingRequest {
   public static final String JSON_PROPERTY_TEXT_INPUT = "TextInput";
   private String textInput;

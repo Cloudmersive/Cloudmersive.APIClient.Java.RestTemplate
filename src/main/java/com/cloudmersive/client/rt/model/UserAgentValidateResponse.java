@@ -42,7 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   UserAgentValidateResponse.JSON_PROPERTY_BROWSER_ENGINE_NAME,
   UserAgentValidateResponse.JSON_PROPERTY_BROWSER_ENGINE_VERSION
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class UserAgentValidateResponse {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

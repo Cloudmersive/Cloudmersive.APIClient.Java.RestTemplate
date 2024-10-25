@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ZipDirectory.JSON_PROPERTY_DIRECTORIES_IN_DIRECTORY,
   ZipDirectory.JSON_PROPERTY_FILES_IN_DIRECTORY
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ZipDirectory {
   public static final String JSON_PROPERTY_DIRECTORY_NAME = "DirectoryName";
   private String directoryName;

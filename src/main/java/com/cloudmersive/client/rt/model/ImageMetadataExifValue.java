@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ImageMetadataExifValue.JSON_PROPERTY_DATA_TYPE,
   ImageMetadataExifValue.JSON_PROPERTY_DATA_VALUE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:15.299595200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ImageMetadataExifValue {
   public static final String JSON_PROPERTY_TAG = "Tag";
   private String tag;

@@ -30,7 +30,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   EditPdfBatchJobCreateResult.JSON_PROPERTY_SUCCESSFUL,
   EditPdfBatchJobCreateResult.JSON_PROPERTY_ASYNC_JOB_I_D
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:28.653440600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:24.468928200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class EditPdfBatchJobCreateResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

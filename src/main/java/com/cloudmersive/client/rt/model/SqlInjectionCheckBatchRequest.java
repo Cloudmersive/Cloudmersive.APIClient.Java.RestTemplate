@@ -34,7 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SqlInjectionCheckBatchRequest.JSON_PROPERTY_REQUEST_ITEMS,
   SqlInjectionCheckBatchRequest.JSON_PROPERTY_DETECTION_LEVEL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SqlInjectionCheckBatchRequest {
   public static final String JSON_PROPERTY_REQUEST_ITEMS = "RequestItems";
   private List<SqlInjectionCheckRequestItem> requestItems = new ArrayList<>();

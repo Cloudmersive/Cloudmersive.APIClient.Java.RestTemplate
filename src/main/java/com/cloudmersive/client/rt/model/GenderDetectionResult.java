@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GenderDetectionResult.JSON_PROPERTY_PERSON_WITH_GENDER,
   GenderDetectionResult.JSON_PROPERTY_PEOPLE_IDENTIFIED
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:15.299595200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class GenderDetectionResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

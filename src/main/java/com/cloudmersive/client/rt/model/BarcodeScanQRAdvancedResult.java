@@ -36,7 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BarcodeScanQRAdvancedResult.JSON_PROPERTY_BARCODE_COUNT,
   BarcodeScanQRAdvancedResult.JSON_PROPERTY_ERROR_MESSAGE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:12.746969900Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:09.245123100Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class BarcodeScanQRAdvancedResult {
   public static final String JSON_PROPERTY_SUCCESSFUL = "Successful";
   private Boolean successful;

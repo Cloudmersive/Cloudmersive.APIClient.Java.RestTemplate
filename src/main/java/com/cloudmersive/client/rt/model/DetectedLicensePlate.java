@@ -35,7 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DetectedLicensePlate.JSON_PROPERTY_HEIGHT,
   DetectedLicensePlate.JSON_PROPERTY_LICENSE_PLATE_RECOGNITION_CONFIDENCE_LEVEL
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:16:18.398235Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:51:15.299595200Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class DetectedLicensePlate {
   public static final String JSON_PROPERTY_LICENSE_PLATE_TEXT_BEST_MATCH = "LicensePlateText_BestMatch";
   private String licensePlateTextBestMatch;

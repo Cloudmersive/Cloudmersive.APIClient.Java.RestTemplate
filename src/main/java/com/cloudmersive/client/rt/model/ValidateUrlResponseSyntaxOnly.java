@@ -31,7 +31,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_WELL_FORMED_U_R_L,
   ValidateUrlResponseSyntaxOnly.JSON_PROPERTY_TOP_LEVEL_DOMAIN_NAME
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-22T03:15:48.283468600Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-10-25T20:50:42.486016Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ValidateUrlResponseSyntaxOnly {
   public static final String JSON_PROPERTY_VALID_U_R_L = "ValidURL";
   private Boolean validURL;
