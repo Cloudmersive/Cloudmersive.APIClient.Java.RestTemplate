@@ -25,7 +25,14 @@ Remove-Item –path ./src –recurse -force -ErrorAction Ignore
 (Get-Content ./build.gradle).replace("classpath 'com.android.tools.build:gradle:1.5.+'", "classpath 'com.android.tools.build:gradle:1.5.+'`nclasspath `"org.codehaus.groovy:groovy-all:3.0.17`"  // Set Groovy version here") | Set-Content ./build.gradle
 (Get-Content ./build.gradle).replace('src/main\java', "src/main/java") | Set-Content ./build.gradle
 (Get-Content ./build.gradle).replace('JavaVersion.VERSION_1_8', "JavaVersion.VERSION_17") | Set-Content ./build.gradle
-(Get-Content ./gradle.properties).replace('#target = android', "org.gradle.java.home=C:/Program Files/Java/jdk-17") | Set-Content ./gradle.properties
+
+if (Test-Path "C:\Program Files\Java\jdk-17") {
+    (Get-Content ./gradle.properties).replace('#target = android', "org.gradle.java.home=C:/Program Files/Java/jdk-17") | Set-Content ./gradle.properties
+} else {
+    Write-Host "Java JDK 17 folder not found. Skipping the update."
+}
+
+
 #(Get-Content ./build.gradle).replace("apply plugin: 'maven-publish'", "apply plugin: 'maven-publish'`njava {        toolchain {            languageVersion = JavaLanguageVersion.of(17)        }    }") | Set-Content ./build.gradle
 Add-Content -Path './build.gradle' -Value @'
 tasks.withType(JavaCompile) {
