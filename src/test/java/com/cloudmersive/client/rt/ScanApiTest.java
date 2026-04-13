@@ -65,7 +65,7 @@ class ScanApiTest {
      */
     @Test
     void scanFileAdvancedTest() {
-        org.springframework.core.io.Resource inputFile = null;
+        java.io.File inputFile = null;
         Boolean allowExecutables = null;
         Boolean allowInvalidFiles = null;
         Boolean allowScripts = null;

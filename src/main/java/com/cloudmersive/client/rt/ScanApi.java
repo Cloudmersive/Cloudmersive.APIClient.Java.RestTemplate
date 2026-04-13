@@ -112,8 +112,11 @@ public class ScanApi extends BaseApi {
      * @return VirusScanAdvancedResult
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public VirusScanAdvancedResult scanFileAdvanced(org.springframework.core.io.Resource inputFile, Boolean allowExecutables, Boolean allowInvalidFiles, Boolean allowScripts, Boolean allowPasswordProtectedFiles, Boolean allowMacros, Boolean allowXmlExternalEntities, Boolean allowInsecureDeserialization, Boolean allowHtml, Boolean allowUnsafeArchives, Boolean allowOleEmbeddedObject, String options, String restrictFileTypes) throws RestClientException {
-        return scanFileAdvancedWithHttpInfo(inputFile, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes).getBody();
+    public VirusScanAdvancedResult scanFileAdvanced(File inputFile, Boolean allowExecutables, Boolean allowInvalidFiles, Boolean allowScripts, Boolean allowPasswordProtectedFiles, Boolean allowMacros, Boolean allowXmlExternalEntities, Boolean allowInsecureDeserialization, Boolean allowHtml, Boolean allowUnsafeArchives, Boolean allowOleEmbeddedObject, String options, String restrictFileTypes) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFileAdvanced");
+        }
+        return scanFileAdvancedWithHttpInfo(new FileSystemResource(inputFile), allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes).getBody();
     }
 
     /**
