@@ -2,7 +2,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 
 group = 'com.cloudmersive.rt'
-version = '6.0.2'
+version = '6.0.3'
 
 buildscript {
     repositories {

@@ -44,7 +44,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.cloudmersive.rt</groupId>
   <artifactId>cloudmersive-java-api-client-rt</artifactId>
-  <version>6.0.2</version>
+  <version>6.0.3</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -60,7 +60,7 @@ Add this dependency to your project's build file:
   }
 
   dependencies {
-     implementation "com.cloudmersive.rt:cloudmersive-java-api-client-rt:6.0.2"
+     implementation "com.cloudmersive.rt:cloudmersive-java-api-client-rt:6.0.3"
   }
 ```
 
@@ -74,7 +74,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/cloudmersive-java-api-client-rt-6.0.2.jar`
+- `target/cloudmersive-java-api-client-rt-6.0.3.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
