@@ -4,6 +4,7 @@ import com.cloudmersive.client.rt.invoker.ApiClient;
 import com.cloudmersive.client.rt.invoker.BaseApi;
 
 import java.io.File;
+import java.io.InputStream;
 import com.cloudmersive.client.rt.model.VirusScanAdvancedResult;
 import com.cloudmersive.client.rt.model.VirusScanResult;
 import com.cloudmersive.client.rt.model.WebsiteScanRequest;
@@ -23,7 +24,10 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
@@ -51,6 +55,60 @@ public class ScanApi extends BaseApi {
      */
     public VirusScanResult scanFile(org.springframework.core.io.Resource inputFile) throws RestClientException {
         return scanFileWithHttpInfo(inputFile).getBody();
+    }
+
+    /**
+     * Convenience overload of {@link #scanFile(Resource)} accepting a {@link File}.
+     */
+    public VirusScanResult scanFile(File inputFile) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFile");
+        }
+        return scanFile(new FileSystemResource(inputFile));
+    }
+
+    /**
+     * Convenience overload of {@link #scanFile(Resource)} accepting in-memory bytes and a filename.
+     */
+    public VirusScanResult scanFile(byte[] inputFile, String filename) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFile");
+        }
+        return scanFile(namedByteArrayResource(inputFile, filename));
+    }
+
+    /**
+     * Convenience overload of {@link #scanFile(Resource)} accepting an {@link InputStream}
+     * and a filename. The stream is consumed, not closed.
+     */
+    public VirusScanResult scanFile(InputStream inputFile, String filename) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFile");
+        }
+        return scanFile(namedInputStreamResource(inputFile, filename));
+    }
+
+    private static Resource namedByteArrayResource(byte[] bytes, final String filename) {
+        return new ByteArrayResource(bytes) {
+            @Override
+            public String getFilename() {
+                return filename;
+            }
+        };
+    }
+
+    private static Resource namedInputStreamResource(InputStream stream, final String filename) {
+        return new InputStreamResource(stream) {
+            @Override
+            public String getFilename() {
+                return filename;
+            }
+
+            @Override
+            public long contentLength() {
+                return -1L;
+            }
+        };
     }
 
     /**
@@ -114,6 +172,39 @@ public class ScanApi extends BaseApi {
      */
     public VirusScanAdvancedResult scanFileAdvanced(org.springframework.core.io.Resource inputFile, Boolean allowExecutables, Boolean allowInvalidFiles, Boolean allowScripts, Boolean allowPasswordProtectedFiles, Boolean allowMacros, Boolean allowXmlExternalEntities, Boolean allowInsecureDeserialization, Boolean allowHtml, Boolean allowUnsafeArchives, Boolean allowOleEmbeddedObject, String options, String restrictFileTypes) throws RestClientException {
         return scanFileAdvancedWithHttpInfo(inputFile, allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes).getBody();
+    }
+
+    /**
+     * Convenience overload of {@link #scanFileAdvanced(Resource, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, String, String)}
+     * accepting a {@link File}. The file is wrapped in a {@link FileSystemResource} internally.
+     */
+    public VirusScanAdvancedResult scanFileAdvanced(File inputFile, Boolean allowExecutables, Boolean allowInvalidFiles, Boolean allowScripts, Boolean allowPasswordProtectedFiles, Boolean allowMacros, Boolean allowXmlExternalEntities, Boolean allowInsecureDeserialization, Boolean allowHtml, Boolean allowUnsafeArchives, Boolean allowOleEmbeddedObject, String options, String restrictFileTypes) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFileAdvanced");
+        }
+        return scanFileAdvanced(new FileSystemResource(inputFile), allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes);
+    }
+
+    /**
+     * Convenience overload of {@link #scanFileAdvanced(Resource, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, String, String)}
+     * accepting in-memory bytes and a filename.
+     */
+    public VirusScanAdvancedResult scanFileAdvanced(byte[] inputFile, String filename, Boolean allowExecutables, Boolean allowInvalidFiles, Boolean allowScripts, Boolean allowPasswordProtectedFiles, Boolean allowMacros, Boolean allowXmlExternalEntities, Boolean allowInsecureDeserialization, Boolean allowHtml, Boolean allowUnsafeArchives, Boolean allowOleEmbeddedObject, String options, String restrictFileTypes) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFileAdvanced");
+        }
+        return scanFileAdvanced(namedByteArrayResource(inputFile, filename), allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes);
+    }
+
+    /**
+     * Convenience overload of {@link #scanFileAdvanced(Resource, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, String, String)}
+     * accepting an {@link InputStream} and a filename. The stream is consumed, not closed.
+     */
+    public VirusScanAdvancedResult scanFileAdvanced(InputStream inputFile, String filename, Boolean allowExecutables, Boolean allowInvalidFiles, Boolean allowScripts, Boolean allowPasswordProtectedFiles, Boolean allowMacros, Boolean allowXmlExternalEntities, Boolean allowInsecureDeserialization, Boolean allowHtml, Boolean allowUnsafeArchives, Boolean allowOleEmbeddedObject, String options, String restrictFileTypes) throws RestClientException {
+        if (inputFile == null) {
+            throw new HttpClientErrorException(HttpStatus.BAD_REQUEST, "Missing the required parameter 'inputFile' when calling scanFileAdvanced");
+        }
+        return scanFileAdvanced(namedInputStreamResource(inputFile, filename), allowExecutables, allowInvalidFiles, allowScripts, allowPasswordProtectedFiles, allowMacros, allowXmlExternalEntities, allowInsecureDeserialization, allowHtml, allowUnsafeArchives, allowOleEmbeddedObject, options, restrictFileTypes);
     }
 
     /**
